@@ -1,0 +1,92 @@
+{
+  "dummy_id": "test-dummy-123",
+  "dummy_name": "Test Dummy",
+  "conversations": [
+    {
+      "conversation_id": "conv_2025-09-03_12-33-00_test-dum_test-pro",
+      "timestamp": "2025-09-03T12:33:00.796551",
+      "prompt_id": "test-prompt-456",
+      "prompt_name": "Test Prompt",
+      "generation": 0,
+      "conversation_rounds": 2,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "Hi, I need help with social skills.",
+          "timestamp": "2025-09-03T12:33:00.796551"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "I'd be happy to help you with social skills!",
+          "timestamp": "2025-09-03T12:33:00.796551"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "test-dummy-123",
+        "timestamp": "2025-09-03 12:33:00.796551",
+        "responses": [
+          {
+            "question": "ask_for_help",
+            "score": 3,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "stay_calm",
+            "score": 4,
+            "confidence": 6,
+            "notes": null
+          },
+          {
+            "question": "listen_actively",
+            "score": 5,
+            "confidence": 7,
+            "notes": null
+          }
+        ],
+        "total_score": 12.0,
+        "average_score": 4.0,
+        "improvement_areas": [
+          "confidence",
+          "assertiveness"
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "test-dummy-123",
+        "timestamp": "2025-09-03 12:33:00.796551",
+        "responses": [
+          {
+            "question": "ask_for_help",
+            "score": 5,
+            "confidence": 7,
+            "notes": null
+          },
+          {
+            "question": "stay_calm",
+            "score": 6,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "listen_actively",
+            "score": 7,
+            "confidence": 9,
+            "notes": null
+          }
+        ],
+        "total_score": 18.0,
+        "average_score": 6.0,
+        "improvement_areas": [
+          "confidence"
+        ]
+      },
+      "improvement": 2.0,
+      "reflection_insights": [
+        "Test insight 1",
+        "Test insight 2"
+      ]
+    }
+  ]
+}

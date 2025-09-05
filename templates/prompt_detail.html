@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Results - TRUE GEPA Optimization</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .dummy-result-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .dummy-result-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .performance-metric {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        .improvement-positive { color: #28a745; }
+        .improvement-negative { color: #dc3545; }
+        .improvement-neutral { color: #6c757d; }
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #6c757d;
+        }
+        .prompt-header {
+            background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .conversation-turn {
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .dummy-turn {
+            background-color: #f8f9fa;
+            border-left: 5px solid #007bff;
+        }
+        .ai-turn {
+            background-color: #e7f3ff;
+            border-left: 5px solid #28a745;
+        }
+        .assessment-question {
+            margin-bottom: 12px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 3px solid #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-robot me-2"></i>AI Dummy Analysis Dashboard
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/">
+                    <i class="fas fa-home me-1"></i>Dashboard
+                </a>
+                <a class="nav-link" href="/optimization">
+                    <i class="fas fa-chart-line me-1"></i>TRUE GEPA Results
+                </a>
+                <a class="nav-link" href="/generation/0">
+                    <i class="fas fa-layer-group me-1"></i>Generations
+                </a>
+                <a class="nav-link active" href="#">
+                    <i class="fas fa-puzzle-piece me-1"></i>Prompt Results
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- Prompt Header -->
+        <div class="prompt-header" id="promptHeader">
+            <div class="loading">
+                <i class="fas fa-spinner fa-spin fa-2x mb-3"></i>
+                <p>Loading prompt details...</p>
+            </div>
+        </div>
+
+        <!-- Dummy Results -->
+        <div class="row" id="dummyResultsContainer">
+            <div class="loading">
+                <i class="fas fa-spinner fa-spin fa-2x mb-3"></i>
+                <p>Loading dummy results...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const promptId = window.location.pathname.split('/').pop();
+        
+        // Load prompt data on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadPromptData(promptId);
+        });
+
+        function loadPromptData(promptId) {
+            fetch(`/api/prompt/${promptId}`)
+                .then(response => response.json())
+                .then(data => {
+                    displayPromptHeader(data.prompt);
+                    displayDummyResults(data.results);
+                })
+                .catch(error => {
+                    console.error('Error loading prompt data:', error);
+                    document.getElementById('promptHeader').innerHTML = 
+                        '<div class="text-center text-danger"><i class="fas fa-exclamation-triangle me-2"></i>Error loading prompt data</div>';
+                });
+        }
+
+        function displayPromptHeader(prompt) {
+            const header = document.getElementById('promptHeader');
+            
+            const avgImprovement = prompt.performance_metrics?.avg_improvement || 0;
+            const testCount = prompt.performance_metrics?.test_count || 0;
+
+            header.innerHTML = `
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3><i class="fas fa-puzzle-piece me-2"></i>${prompt.name}</h3>
+                        <p class="mb-2"><strong>Prompt Text:</strong> ${prompt.prompt_text}</p>
+                        <p class="mb-0"><strong>Generation:</strong> ${prompt.generation}</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="performance-metric improvement-positive">
+                                    +${avgImprovement.toFixed(2)}
+                                </div>
+                                <small>Improvement</small>
+                            </div>
+                            <div class="col-6">
+                                <div class="performance-metric">
+                                    ${testCount}
+                                </div>
+                                <small>Tests</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function displayDummyResults(results) {
+            const container = document.getElementById('dummyResultsContainer');
+            
+            if (!results || results.length === 0) {
+                container.innerHTML = `
+                    <div class="col-12 text-center text-muted">
+                        <i class="fas fa-info-circle fa-3x mb-3"></i>
+                        <h5>No dummy results found for this prompt</h5>
+                        <p>This prompt may not have been tested yet.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            let html = '';
+            
+            // Create dummy result cards
+            results.forEach((item, index) => {
+                const result = item.result;
+                const dummy = item.dummy;
+                
+                if (!dummy) return;
+
+                const improvement = result.improvement || 0;
+                const improvementClass = improvement > 0 ? 'improvement-positive' : 
+                                       improvement < 0 ? 'improvement-negative' : 'improvement-neutral';
+                const improvementIcon = improvement > 0 ? 'fa-arrow-up' : 
+                                      improvement < 0 ? 'fa-arrow-down' : 'fa-minus';
+
+                html += `
+                    <div class="col-lg-6 col-md-12 mb-4">
+                        <div class="card dummy-result-card h-100">
+                            <div class="card-header">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="mb-0"><i class="fas fa-user me-2"></i>${dummy.name || 'Unknown'}</h6>
+                                    <span class="badge bg-secondary">${dummy.gender || 'Unknown'}, ${dummy.age || 0}</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <!-- Compact Performance Summary -->
+                                <div class="row text-center mb-3">
+                                    <div class="col-6">
+                                        <div class="performance-metric ${improvementClass}">
+                                            <i class="fas ${improvementIcon} me-1"></i>
+                                            ${improvement > 0 ? '+' : ''}${improvement.toFixed(2)}
+                                        </div>
+                                        <small>Improvement</small>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="performance-metric text-${dummy.social_anxiety?.anxiety_level <= 3 ? 'success' : dummy.social_anxiety?.anxiety_level <= 6 ? 'warning' : 'danger'}">
+                                            ${dummy.social_anxiety?.anxiety_level || 0}/10
+                                        </div>
+                                        <small>Anxiety Level</small>
+                                    </div>
+                                </div>
+
+                                <!-- Expandable Details -->
+                                <div class="accordion" id="accordion${index}">
+                                    <!-- Assessment Details -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#assessment${index}">
+                                                <i class="fas fa-clipboard me-2"></i>Assessment Details
+                                            </button>
+                                        </h2>
+                                        <div id="assessment${index}" class="accordion-collapse collapse" data-bs-parent="#accordion${index}">
+                                            <div class="accordion-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <h6 class="text-primary">Pre-Assessment</h6>
+                                                        <p><strong>Score:</strong> ${(result.pre_score || 0).toFixed(2)}/4.0</p>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <h6 class="text-success">Post-Assessment</h6>
+                                                        <p><strong>Score:</strong> ${(result.post_score || 0).toFixed(2)}/4.0</p>
+                                                    </div>
+                                                </div>
+                                                <div class="text-center">
+                                                    <span class="badge bg-${improvement > 0 ? 'success' : improvement < 0 ? 'danger' : 'secondary'} fs-6">
+                                                        ${improvement > 0 ? 'Improved' : improvement < 0 ? 'Declined' : 'No Change'}: ${improvement > 0 ? '+' : ''}${improvement.toFixed(2)} points
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Conversation Details -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#conversation${index}">
+                                                <i class="fas fa-comments me-2"></i>Conversation Details
+                                            </button>
+                                        </h2>
+                                        <div id="conversation${index}" class="accordion-collapse collapse" data-bs-parent="#accordion${index}">
+                                            <div class="accordion-body">
+                                                ${result.conversation && result.conversation.length > 0 ? `
+                                                    <h6 class="text-primary mb-3"><i class="fas fa-comments me-2"></i>Full Conversation</h6>
+                                                    <div class="conversation-container">
+                                                        ${result.conversation.map((turn, turnIndex) => `
+                                                            <div class="conversation-turn ${turn.speaker === 'dummy' ? 'dummy-turn' : 'ai-turn'}">
+                                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                                    <strong>${turn.speaker === 'dummy' ? dummy.name : 'AI Assistant'}</strong>
+                                                                    <small class="text-muted">Turn ${turnIndex + 1}</small>
+                                                                </div>
+                                                                <p class="mb-0">${turn.content}</p>
+                                                            </div>
+                                                        `).join('')}
+                                                    </div>
+                                                ` : `
+                                                    <p class="text-muted"><i class="fas fa-info-circle me-2"></i>No conversation data available</p>
+                                                `}
+                                                
+                                                ${result.reflection_insights && result.reflection_insights.length > 0 ? `
+                                                    <hr class="my-3">
+                                                    <h6 class="text-success mb-3"><i class="fas fa-lightbulb me-2"></i>Reflection Insights</h6>
+                                                    <ul>
+                                                        ${result.reflection_insights.map(insight => `<li>${insight}</li>`).join('')}
+                                                    </ul>
+                                                ` : ''}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
