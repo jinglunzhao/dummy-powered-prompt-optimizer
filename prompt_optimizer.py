@@ -783,7 +783,7 @@ Respond with ONLY the new prompt text, no explanations.
                     # Validate length - if too long, use simple combination
                     max_parent_length = max(len(parent1.prompt_text), len(parent2.prompt_text))
                     new_length = len(child_prompt_text)
-                    if new_length > max_parent_length * 2.0:  # Allow max 100% increase
+                    if new_length > max_parent_length * 3.0:  # Allow max 200% increase
                         print(f"   ⚠️  Generated prompt too long ({new_length} vs max parent {max_parent_length}), using simple combination")
                         child_prompt_text = f"{parent1.prompt_text} {parent2.prompt_text}"
                     else:
@@ -904,7 +904,7 @@ Respond with ONLY the improved prompt text, no explanations.
                     # Validate length - if too long, use parent prompt
                     original_length = len(parent.prompt_text)
                     new_length = len(mutated_prompt_text)
-                    if new_length > original_length * 2.0:  # Allow max 100% increase
+                    if new_length > original_length * 3.0:  # Allow max 200% increase
                         print(f"   ⚠️  Generated prompt too long ({new_length} vs {original_length}), using parent")
                         mutated_prompt_text = parent.prompt_text
                     else:

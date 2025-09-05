@@ -1,0 +1,76 @@
+{
+  "analysis_results": {
+    "total_attempts": 3,
+    "successful_calls": 2,
+    "failed_calls": 0,
+    "validation_failures": 1,
+    "api_errors": 0,
+    "response_times": [
+      4.805724143981934,
+      3.4063572883605957,
+      4.015111684799194
+    ],
+    "error_types": {},
+    "success_patterns": [
+      {
+        "parent1_length": 95,
+        "parent2_length": 163,
+        "generated_length": 271,
+        "response_time": 4.805724143981934,
+        "generated_text": "You are a supportive peer mentor for college students, focused on helping them improve their social skills and build confidence. Be encouraging, provide practical, actionable advice, and offer guidance that is both supportive and effective for their personal development."
+      },
+      {
+        "parent1_length": 60,
+        "parent2_length": 64,
+        "generated_length": 83,
+        "response_time": 3.4063572883605957,
+        "generated_text": "Be supportive and provide practical, growth-oriented advice that builds confidence."
+      }
+    ],
+    "failure_patterns": [],
+    "success_rate": 66.66666666666666,
+    "avg_response_time": 4.075731039047241
+  },
+  "test_results": [
+    {
+      "test_case_id": 1,
+      "parent1_text": "You are a helpful peer mentor for college students. Be supportive and provide practical advice.",
+      "parent2_text": "You are a supportive AI assistant helping students improve their social skills. Be encouraging, provide practical advice, and help them build confidence gradually.",
+      "result": {
+        "success": true,
+        "generated_text": "You are a supportive peer mentor for college students, focused on helping them improve their social skills and build confidence. Be encouraging, provide practical, actionable advice, and offer guidance that is both supportive and effective for their personal development.",
+        "response_time": 4.805724143981934,
+        "validation": {
+          "is_valid": true,
+          "reason": "All validations passed"
+        }
+      }
+    },
+    {
+      "test_case_id": 2,
+      "parent1_text": "Be supportive and provide practical, growth-oriented advice.",
+      "parent2_text": "Be supportive and provide practical, confidence-building advice.",
+      "result": {
+        "success": true,
+        "generated_text": "Be supportive and provide practical, growth-oriented advice that builds confidence.",
+        "response_time": 3.4063572883605957,
+        "validation": {
+          "is_valid": true,
+          "reason": "All validations passed"
+        }
+      }
+    },
+    {
+      "test_case_id": 3,
+      "parent1_text": "You are a social skills coach who uses storytelling and metaphors to help students.",
+      "parent2_text": "You are a peer mentor who focuses on building emotional intelligence and self-awareness.",
+      "result": {
+        "success": false,
+        "error_type": "validation_failure",
+        "reason": "Response too long: 202 chars vs max 176.0",
+        "response_time": 4.015111684799194
+      }
+    }
+  ],
+  "report": "\n# Crossover Fallback Analysis Report\nGenerated: 2025-09-05 12:06:03\n\n## Summary Statistics\n- Total Attempts: 3\n- Successful Calls: 2 (66.7%)\n- Failed Calls: 0\n- Validation Failures: 1\n- API Errors: 0\n\n## Performance Metrics\n- Average Response Time: 4.08s\n- Response Time Range: 3.41s - 4.81s\n\n## Error Analysis\n\n## Success Patterns\n- Average successful response length: 177 characters\n- Average response time for successful calls: 4.11s\n\n## Recommendations\n- Primary issue: Validation failures. Consider relaxing validation rules.\n"
+}
