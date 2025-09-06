@@ -1,4 +1,3 @@
-from corrected_enhanced_crossover import CorrectedEnhancedCrossover
 #!/usr/bin/env python3
 """
 Prompt Optimizer for AI Social Skills Training Pipeline
@@ -695,36 +694,68 @@ class PromptOptimizer:
         return new_population
     
     def _crossover_prompts(self, parent1: OptimizedPrompt, parent2: OptimizedPrompt) -> OptimizedPrompt:
-        """Create a child prompt using enhanced crossover with performance+diversity balance"""
+        """Create a child prompt by LLM analysis of parent performance and intelligent combination"""
         
-        # Initialize enhanced crossover
-        enhanced_crossover = CorrectedEnhancedCrossover()
+        # Get performance metrics for both parents
+        parent1_metrics = parent1.performance_metrics or {}
+        parent2_metrics = parent2.performance_metrics or {}
         
-        # Analyze parent performance profiles
-        parent1_profile = enhanced_crossover.analyze_parent_performance(
-            parent1.prompt, 
-            parent1.performance_metrics or {}, 
-            parent1.generation
-        )
+        # Extract 20-criteria performance data
+        criteria_names = [
+            "ask_for_help", "stay_calm", "listen_actively", "express_clearly", "show_empathy",
+            "ask_clarifying", "give_constructive", "handle_conflict", "build_confidence", "encourage_participation",
+            "respect_boundaries", "offer_support", "celebrate_success", "address_concerns", "foster_connection",
+            "model_behavior", "provide_feedback", "create_safety", "promote_growth", "maintain_balance"
+        ]
         
-        parent2_profile = enhanced_crossover.analyze_parent_performance(
-            parent2.prompt, 
-            parent2.performance_metrics or {}, 
-            parent2.generation
-        )
+        # Build performance analysis for LLM
+        parent1_strengths = []
+        parent2_strengths = []
         
-        # Get existing prompts for diversity analysis
-        existing_prompts = [p.prompt_text for p in self.all_prompts[-10:]]
+        for criterion in criteria_names:
+            p1_score = parent1_metrics.get(f'improvement_{criterion}', 0)
+            p2_score = parent2_metrics.get(f'improvement_{criterion}', 0)
+            
+            if p1_score > p2_score:
+                parent1_strengths.append(f"{criterion}: {p1_score:.3f}")
+            elif p2_score > p1_score:
+                parent2_strengths.append(f"{criterion}: {p2_score:.3f}")
         
-        # Create enhanced crossover prompt
-        enhanced_prompt = enhanced_crossover.create_performance_diversity_crossover_prompt(
-            parent1_profile, parent2_profile, existing_prompts, diversity_weight=0.7
-        )
+        # Create LLM prompt for crossover analysis
+        print(f"   🤖 Analyzing crossover: {parent1.name} (improvement: {parent1_metrics.get('avg_improvement', 0):.3f}) + {parent2.name} (improvement: {parent2_metrics.get('avg_improvement', 0):.3f})")
+        
+        crossover_prompt = f"""
+You are an expert prompt engineer creating a child prompt by combining the best elements of two parent prompts.
+
+PARENT 1 PROMPT: "{parent1.prompt_text}"
+PARENT 1 STRENGTHS: {', '.join(parent1_strengths) if parent1_strengths else 'No clear strengths identified'}
+PARENT 1 LENGTH: {len(parent1.prompt_text)} characters
+
+PARENT 2 PROMPT: "{parent2.prompt_text}"
+PARENT 2 STRENGTHS: {', '.join(parent2_strengths) if parent2_strengths else 'No clear strengths identified'}
+PARENT 2 LENGTH: {len(parent2.prompt_text)} characters
+
+TASK: Create a new prompt that:
+1. Combines the BEST elements from both parents
+2. Keeps it CONCISE (similar length to parents, max {max(len(parent1.prompt_text), len(parent2.prompt_text))} characters)
+3. Maintains the natural, encouraging tone
+4. Focuses on the most effective elements
+
+EXAMPLES of good combinations:
+- "Be supportive and provide practical, step-by-step advice"
+- "Listen actively and offer encouraging, constructive feedback"
+- "Be patient, supportive and provide clear guidance"
+
+CRITICAL: Keep the child prompt SHORT and focused. Do NOT make it longer than the longer parent.
+
+Respond with ONLY the new prompt text, no explanations.
+"""
         
         try:
+            # Call LLM for crossover
             from config import Config
             
-            print(f"   🚀 Enhanced crossover: {parent1.name} + {parent2.name}")
+            print(f"   🔗 Making LLM crossover API call...")
             response = requests.post(
                 "https://api.deepseek.com/v1/chat/completions",
                 headers={
@@ -733,44 +764,57 @@ class PromptOptimizer:
                 },
                 json={
                     "model": "deepseek-chat",
-                    "messages": [{"role": "user", "content": enhanced_prompt}],
-                    "temperature": 0.9,
+                    "messages": [{"role": "user", "content": crossover_prompt}],
+                    "temperature": 0.7,
                     "max_tokens": 200
                 },
-                timeout=30
+                timeout=30  # Add timeout
             )
+            
+            print(f"   📡 API Response Status: {response.status_code}")
             
             if response.status_code == 200:
                 result = response.json()
+                print(f"   📝 API Response: {result}")
                 if 'choices' in result and len(result['choices']) > 0:
                     child_prompt_text = result['choices'][0]['message']['content'].strip()
-                    print(f"   ✅ Enhanced: {child_prompt_text[:80]}...")
+                    print(f"   ✅ LLM generated: {child_prompt_text[:100]}...")
                     
-                    # Validate length
-                    max_parent_length = max(len(parent1.prompt), len(parent2.prompt))
-                    if len(child_prompt_text) > max_parent_length * 3.0:
-                        child_prompt_text = f"{parent1.prompt} {parent2.prompt}"
+                    # Validate length - if too long, use simple combination
+                    max_parent_length = max(len(parent1.prompt_text), len(parent2.prompt_text))
+                    new_length = len(child_prompt_text)
+                    if new_length > max_parent_length * 3.0:  # Allow max 200% increase
+                        print(f"   ⚠️  Generated prompt too long ({new_length} vs max parent {max_parent_length}), using simple combination")
+                        child_prompt_text = f"{parent1.prompt_text} {parent2.prompt_text}"
+                    else:
+                        print(f"   ✅ Length validation passed: {new_length} chars (max parent: {max_parent_length})")
                 else:
-                    child_prompt_text = f"{parent1.prompt} {parent2.prompt}"
+                    print(f"   ⚠️  No choices in response, using fallback")
+                    child_prompt_text = f"{parent1.prompt_text} {parent2.prompt_text}"
             else:
-                child_prompt_text = f"{parent1.prompt} {parent2.prompt}"
+                print(f"   ❌ API Error: {response.status_code} - {response.text}")
+                # Fallback to simple combination
+                child_prompt_text = f"{parent1.prompt_text} {parent2.prompt_text}"
                 
         except Exception as e:
-            print(f"⚠️  Enhanced crossover failed: {e}")
-            child_prompt_text = f"{parent1.prompt} {parent2.prompt}"
+            print(f"⚠️  LLM crossover failed: {e}")
+            import traceback
+            traceback.print_exc()
+            # Fallback to simple combination
+            child_prompt_text = f"{parent1.prompt_text} {parent2.prompt_text}"
         
         return OptimizedPrompt(
             id=str(uuid.uuid4()),
-            name=f"Enhanced Child of {parent1.name} + {parent2.name}",
+            name=f"LLM Child of {parent1.name} + {parent2.name}",
             prompt_text=child_prompt_text,
-            components=[],
+            components=[],  # No component tracking in LLM approach
             generation=parent1.generation + 1,
             performance_metrics={},
             pareto_rank=0,
             created_at=datetime.now(),
             last_tested=None
         )
-
+    
     def _mutate_prompt(self, parent: OptimizedPrompt) -> OptimizedPrompt:
         """Create a mutated version of a parent prompt using LLM analysis"""
         
