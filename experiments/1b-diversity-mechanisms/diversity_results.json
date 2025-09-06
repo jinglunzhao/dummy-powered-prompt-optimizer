@@ -1,0 +1,94 @@
+{
+  "analysis_results": {
+    "total_tests": 5,
+    "diversity_scores": [
+      0.0,
+      0.972972972972973,
+      0.9568903942305477,
+      0.9171537108237875,
+      0.9045198687706953
+    ],
+    "similarity_matrix": [],
+    "style_distribution": {},
+    "length_variation": {},
+    "semantic_clusters": [],
+    "improvement_correlation": {},
+    "avg_diversity_score": 0.7503073893596006,
+    "avg_similarity_to_parent1": 0.09861781905744754,
+    "avg_similarity_to_parent2": 0.11731035848682907,
+    "success_rate": 1.0
+  },
+  "test_results": [
+    {
+      "test_case_id": 1,
+      "parent1": "You are a helpful peer mentor for college students. Be supportive and provide practical advice.",
+      "parent2": "You are a supportive AI assistant helping students improve their social skills. Be encouraging, provide practical advice, and help them build confidence gradually.",
+      "result": {
+        "success": true,
+        "generated_text": "As your social skills coach, I'll help you design small, manageable challenges to practice in real-world college situations, celebrating each step forward together.",
+        "diversity_score": 0.0,
+        "similarity_to_parent1": 0.05263157894736842,
+        "similarity_to_parent2": 0.09090909090909091,
+        "response_time": 5.092782258987427,
+        "length": 164
+      }
+    },
+    {
+      "test_case_id": 2,
+      "parent1": "Be supportive and provide practical, growth-oriented advice.",
+      "parent2": "Be supportive and provide practical, confidence-building advice.",
+      "result": {
+        "success": true,
+        "generated_text": "Guide me through building authentic social confidence with actionable steps and gentle encouragement.",
+        "diversity_score": 0.972972972972973,
+        "similarity_to_parent1": 0.05,
+        "similarity_to_parent2": 0.16666666666666666,
+        "response_time": 3.742724895477295,
+        "length": 101
+      }
+    },
+    {
+      "test_case_id": 3,
+      "parent1": "You are a social skills coach who uses storytelling and metaphors to help students.",
+      "parent2": "You are a peer mentor who focuses on building emotional intelligence and self-awareness.",
+      "result": {
+        "success": true,
+        "generated_text": "Craft allegorical tales that illuminate emotional patterns, then guide students to map these insights onto their own social interactions for deeper self-awareness.",
+        "diversity_score": 0.9568903942305477,
+        "similarity_to_parent1": 0.08823529411764706,
+        "similarity_to_parent2": 0.08823529411764706,
+        "response_time": 5.284010410308838,
+        "length": 163
+      }
+    },
+    {
+      "test_case_id": 4,
+      "parent1": "Help students develop better communication skills through practice and feedback.",
+      "parent2": "Guide students in building social confidence and overcoming anxiety.",
+      "result": {
+        "success": true,
+        "generated_text": "Navigate social interactions with growing confidence through tailored practice and constructive feedback.",
+        "diversity_score": 0.9171537108237875,
+        "similarity_to_parent1": 0.2222222222222222,
+        "similarity_to_parent2": 0.16666666666666666,
+        "response_time": 3.6988368034362793,
+        "length": 105
+      }
+    },
+    {
+      "test_case_id": 5,
+      "parent1": "Support students in their social skill development journey.",
+      "parent2": "Mentor students to improve their interpersonal relationships and social interactions.",
+      "result": {
+        "success": true,
+        "generated_text": "Navigate the complexities of social dynamics with me as your strategic partner in developing authentic connections and communication mastery.",
+        "diversity_score": 0.9045198687706953,
+        "similarity_to_parent1": 0.08,
+        "similarity_to_parent2": 0.07407407407407407,
+        "response_time": 4.4087159633636475,
+        "length": 141
+      }
+    }
+  ],
+  "report": "\n# Diversity Mechanisms Analysis Report\nGenerated: 2025-09-05 23:25:57\n\n## Summary Statistics\n- Total Tests: 5\n- Success Rate: 100.0%\n- Average Diversity Score: 0.750\n- Average Similarity to Parent 1: 0.099\n- Average Similarity to Parent 2: 0.117\n\n## Diversity Analysis\n- Higher diversity scores indicate more unique prompts\n- Target diversity score: 0.7+ (70% unique)\n- Current average: 0.750\n\n## Recommendations\n- HIGH DIVERSITY: Good diversity achieved. Consider maintaining current approach.\n"
+}

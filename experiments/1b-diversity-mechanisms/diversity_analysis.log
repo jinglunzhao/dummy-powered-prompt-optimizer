@@ -1,0 +1,132 @@
+2025-09-05 23:23:19,841 - INFO - [START] Starting diversity analysis with 5 test cases
+2025-09-05 23:23:19,841 - INFO - 
+============================================================
+2025-09-05 23:23:19,843 - INFO - Test Case 1/5
+2025-09-05 23:23:19,843 - INFO - ============================================================
+2025-09-05 23:23:19,843 - INFO - [DIVERSITY] Testing diversity mechanism #1
+2025-09-05 23:23:19,843 - INFO -    Parent 1: You are a helpful peer mentor for college students...
+2025-09-05 23:23:19,843 - INFO -    Parent 2: You are a supportive AI assistant helping students...
+2025-09-05 23:23:19,843 - INFO -    Existing prompts: 0
+2025-09-05 23:23:19,844 - ERROR -    [ERROR] Exception: No module named 'config'
+2025-09-05 23:23:19,844 - ERROR -    [FAILED] No module named 'config'
+2025-09-05 23:23:19,844 - INFO - 
+============================================================
+2025-09-05 23:23:19,844 - INFO - Test Case 2/5
+2025-09-05 23:23:19,844 - INFO - ============================================================
+2025-09-05 23:23:19,844 - INFO - [DIVERSITY] Testing diversity mechanism #2
+2025-09-05 23:23:19,844 - INFO -    Parent 1: Be supportive and provide practical, growth-orient...
+2025-09-05 23:23:19,845 - INFO -    Parent 2: Be supportive and provide practical, confidence-bu...
+2025-09-05 23:23:19,845 - INFO -    Existing prompts: 0
+2025-09-05 23:23:19,845 - ERROR -    [ERROR] Exception: No module named 'config'
+2025-09-05 23:23:19,845 - ERROR -    [FAILED] No module named 'config'
+2025-09-05 23:23:19,845 - INFO - 
+============================================================
+2025-09-05 23:23:19,845 - INFO - Test Case 3/5
+2025-09-05 23:23:19,845 - INFO - ============================================================
+2025-09-05 23:23:19,845 - INFO - [DIVERSITY] Testing diversity mechanism #3
+2025-09-05 23:23:19,846 - INFO -    Parent 1: You are a social skills coach who uses storytellin...
+2025-09-05 23:23:19,846 - INFO -    Parent 2: You are a peer mentor who focuses on building emot...
+2025-09-05 23:23:19,846 - INFO -    Existing prompts: 0
+2025-09-05 23:23:19,846 - ERROR -    [ERROR] Exception: No module named 'config'
+2025-09-05 23:23:19,846 - ERROR -    [FAILED] No module named 'config'
+2025-09-05 23:23:19,846 - INFO - 
+============================================================
+2025-09-05 23:23:19,846 - INFO - Test Case 4/5
+2025-09-05 23:23:19,846 - INFO - ============================================================
+2025-09-05 23:23:19,846 - INFO - [DIVERSITY] Testing diversity mechanism #4
+2025-09-05 23:23:19,846 - INFO -    Parent 1: Help students develop better communication skills ...
+2025-09-05 23:23:19,847 - INFO -    Parent 2: Guide students in building social confidence and o...
+2025-09-05 23:23:19,847 - INFO -    Existing prompts: 0
+2025-09-05 23:23:19,847 - ERROR -    [ERROR] Exception: No module named 'config'
+2025-09-05 23:23:19,847 - ERROR -    [FAILED] No module named 'config'
+2025-09-05 23:23:19,847 - INFO - 
+============================================================
+2025-09-05 23:23:19,847 - INFO - Test Case 5/5
+2025-09-05 23:23:19,847 - INFO - ============================================================
+2025-09-05 23:23:19,847 - INFO - [DIVERSITY] Testing diversity mechanism #5
+2025-09-05 23:23:19,847 - INFO -    Parent 1: Support students in their social skill development...
+2025-09-05 23:23:19,848 - INFO -    Parent 2: Mentor students to improve their interpersonal rel...
+2025-09-05 23:23:19,848 - INFO -    Existing prompts: 0
+2025-09-05 23:23:19,849 - ERROR -    [ERROR] Exception: No module named 'config'
+2025-09-05 23:23:19,849 - ERROR -    [FAILED] No module named 'config'
+2025-09-05 23:25:35,467 - INFO - [START] Starting diversity analysis with 5 test cases
+2025-09-05 23:25:35,467 - INFO - 
+============================================================
+2025-09-05 23:25:35,467 - INFO - Test Case 1/5
+2025-09-05 23:25:35,467 - INFO - ============================================================
+2025-09-05 23:25:35,467 - INFO - [DIVERSITY] Testing diversity mechanism #1
+2025-09-05 23:25:35,469 - INFO -    Parent 1: You are a helpful peer mentor for college students...
+2025-09-05 23:25:35,469 - INFO -    Parent 2: You are a supportive AI assistant helping students...
+2025-09-05 23:25:35,469 - INFO -    Existing prompts: 0
+2025-09-05 23:25:35,476 - INFO -    [API] Making diversity-enhanced crossover call...
+2025-09-05 23:25:40,560 - INFO -    [TIME] Response time: 5.09s
+2025-09-05 23:25:40,561 - INFO -    [STATUS] Status code: 200
+2025-09-05 23:25:40,561 - INFO -    [SUCCESS] API call successful
+2025-09-05 23:25:40,561 - INFO -    [TEXT] Generated: As your social skills coach, I'll help you design small, manageable challenges to practice in real-w...
+2025-09-05 23:25:40,562 - INFO -    [DIVERSITY] Score: 0.000
+2025-09-05 23:25:40,562 - INFO -    [SIMILARITY] To parent1: 0.053, To parent2: 0.091
+2025-09-05 23:25:40,562 - INFO -    [SUCCESS] Diversity score: 0.000
+2025-09-05 23:25:40,562 - INFO - 
+============================================================
+2025-09-05 23:25:40,562 - INFO - Test Case 2/5
+2025-09-05 23:25:40,562 - INFO - ============================================================
+2025-09-05 23:25:40,562 - INFO - [DIVERSITY] Testing diversity mechanism #2
+2025-09-05 23:25:40,562 - INFO -    Parent 1: Be supportive and provide practical, growth-orient...
+2025-09-05 23:25:40,562 - INFO -    Parent 2: Be supportive and provide practical, confidence-bu...
+2025-09-05 23:25:40,563 - INFO -    Existing prompts: 1
+2025-09-05 23:25:40,563 - INFO -    [API] Making diversity-enhanced crossover call...
+2025-09-05 23:25:44,305 - INFO -    [TIME] Response time: 3.74s
+2025-09-05 23:25:44,306 - INFO -    [STATUS] Status code: 200
+2025-09-05 23:25:44,306 - INFO -    [SUCCESS] API call successful
+2025-09-05 23:25:44,306 - INFO -    [TEXT] Generated: Guide me through building authentic social confidence with actionable steps and gentle encouragement...
+2025-09-05 23:25:44,306 - INFO -    [DIVERSITY] Score: 0.973
+2025-09-05 23:25:44,307 - INFO -    [SIMILARITY] To parent1: 0.050, To parent2: 0.167
+2025-09-05 23:25:44,307 - INFO -    [SUCCESS] Diversity score: 0.973
+2025-09-05 23:25:44,307 - INFO - 
+============================================================
+2025-09-05 23:25:44,307 - INFO - Test Case 3/5
+2025-09-05 23:25:44,307 - INFO - ============================================================
+2025-09-05 23:25:44,307 - INFO - [DIVERSITY] Testing diversity mechanism #3
+2025-09-05 23:25:44,307 - INFO -    Parent 1: You are a social skills coach who uses storytellin...
+2025-09-05 23:25:44,308 - INFO -    Parent 2: You are a peer mentor who focuses on building emot...
+2025-09-05 23:25:44,308 - INFO -    Existing prompts: 2
+2025-09-05 23:25:44,308 - INFO -    [API] Making diversity-enhanced crossover call...
+2025-09-05 23:25:49,591 - INFO -    [TIME] Response time: 5.28s
+2025-09-05 23:25:49,592 - INFO -    [STATUS] Status code: 200
+2025-09-05 23:25:49,592 - INFO -    [SUCCESS] API call successful
+2025-09-05 23:25:49,592 - INFO -    [TEXT] Generated: Craft allegorical tales that illuminate emotional patterns, then guide students to map these insight...
+2025-09-05 23:25:49,592 - INFO -    [DIVERSITY] Score: 0.957
+2025-09-05 23:25:49,592 - INFO -    [SIMILARITY] To parent1: 0.088, To parent2: 0.088
+2025-09-05 23:25:49,592 - INFO -    [SUCCESS] Diversity score: 0.957
+2025-09-05 23:25:49,592 - INFO - 
+============================================================
+2025-09-05 23:25:49,592 - INFO - Test Case 4/5
+2025-09-05 23:25:49,593 - INFO - ============================================================
+2025-09-05 23:25:49,593 - INFO - [DIVERSITY] Testing diversity mechanism #4
+2025-09-05 23:25:49,593 - INFO -    Parent 1: Help students develop better communication skills ...
+2025-09-05 23:25:49,593 - INFO -    Parent 2: Guide students in building social confidence and o...
+2025-09-05 23:25:49,593 - INFO -    Existing prompts: 3
+2025-09-05 23:25:49,593 - INFO -    [API] Making diversity-enhanced crossover call...
+2025-09-05 23:25:53,292 - INFO -    [TIME] Response time: 3.70s
+2025-09-05 23:25:53,292 - INFO -    [STATUS] Status code: 200
+2025-09-05 23:25:53,292 - INFO -    [SUCCESS] API call successful
+2025-09-05 23:25:53,292 - INFO -    [TEXT] Generated: Navigate social interactions with growing confidence through tailored practice and constructive feed...
+2025-09-05 23:25:53,292 - INFO -    [DIVERSITY] Score: 0.917
+2025-09-05 23:25:53,294 - INFO -    [SIMILARITY] To parent1: 0.222, To parent2: 0.167
+2025-09-05 23:25:53,294 - INFO -    [SUCCESS] Diversity score: 0.917
+2025-09-05 23:25:53,294 - INFO - 
+============================================================
+2025-09-05 23:25:53,294 - INFO - Test Case 5/5
+2025-09-05 23:25:53,294 - INFO - ============================================================
+2025-09-05 23:25:53,294 - INFO - [DIVERSITY] Testing diversity mechanism #5
+2025-09-05 23:25:53,294 - INFO -    Parent 1: Support students in their social skill development...
+2025-09-05 23:25:53,294 - INFO -    Parent 2: Mentor students to improve their interpersonal rel...
+2025-09-05 23:25:53,294 - INFO -    Existing prompts: 4
+2025-09-05 23:25:53,294 - INFO -    [API] Making diversity-enhanced crossover call...
+2025-09-05 23:25:57,702 - INFO -    [TIME] Response time: 4.41s
+2025-09-05 23:25:57,702 - INFO -    [STATUS] Status code: 200
+2025-09-05 23:25:57,702 - INFO -    [SUCCESS] API call successful
+2025-09-05 23:25:57,702 - INFO -    [TEXT] Generated: Navigate the complexities of social dynamics with me as your strategic partner in developing authent...
+2025-09-05 23:25:57,703 - INFO -    [DIVERSITY] Score: 0.905
+2025-09-05 23:25:57,703 - INFO -    [SIMILARITY] To parent1: 0.080, To parent2: 0.074
+2025-09-05 23:25:57,703 - INFO -    [SUCCESS] Diversity score: 0.905
