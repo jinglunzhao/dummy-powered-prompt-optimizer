@@ -760,17 +760,17 @@ class PromptOptimizer:
                     print(f"   ✅ Enhanced: {child_prompt_text[:80]}...")
                     
                     # Validate length
-                    max_parent_length = max(len(parent1.prompt), len(parent2.prompt))
+                    max_parent_length = max(len(parent1.prompt_text), len(parent2.prompt_text))
                     if len(child_prompt_text) > max_parent_length * 3.0:
-                        child_prompt_text = f"{parent1.prompt} {parent2.prompt}"
+                        child_prompt_text = f"{parent1.prompt_text} {parent2.prompt_text}"
                 else:
-                    child_prompt_text = f"{parent1.prompt} {parent2.prompt}"
+                    child_prompt_text = f"{parent1.prompt_text} {parent2.prompt_text}"
             else:
-                child_prompt_text = f"{parent1.prompt} {parent2.prompt}"
+                child_prompt_text = f"{parent1.prompt_text} {parent2.prompt_text}"
                 
         except Exception as e:
             print(f"⚠️  Enhanced crossover failed: {e}")
-            child_prompt_text = f"{parent1.prompt} {parent2.prompt}"
+            child_prompt_text = f"{parent1.prompt_text} {parent2.prompt_text}"
         
         return OptimizedPrompt(
             id=str(uuid.uuid4()),
