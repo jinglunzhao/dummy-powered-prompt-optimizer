@@ -669,9 +669,12 @@ class PromptOptimizer:
                 else:
                     # Exploration: Select from full population (including non-frontier)
                     # Ensure we select 2 different prompts
-                    available_prompts = list(set(self.population))  # Remove duplicates
+                    available_prompts = self.population  # Use all prompts
                     if len(available_prompts) >= 2:
                         parent1, parent2 = random.sample(available_prompts, 2)
+                        # Ensure they're different
+                        while parent1.id == parent2.id and len(available_prompts) > 1:
+                            parent2 = random.choice(available_prompts)
                     else:
                         # Fallback: use mutation if not enough diversity
                         parent1 = random.choice(self.population)
