@@ -661,19 +661,32 @@ class PromptOptimizer:
         
         # Generate new prompts through crossover and mutation
         while len(new_population) < target_population_size:
-            if random.random() < self.crossover_rate and len(self.pareto_frontier) >= 2:
+            if random.random() < self.crossover_rate and len(self.population) >= 2:
                 # Crossover: TRUE GEPA balanced selection (80% frontier, 20% exploration)
                 if random.random() < 0.8 and len(self.pareto_frontier) >= 2:
                     # Exploitation: Select from Pareto frontier
                     parent1, parent2 = random.sample(self.pareto_frontier, 2)
                 else:
                     # Exploration: Select from full population (including non-frontier)
-                    parent1 = random.choice(self.pareto_frontier) if self.pareto_frontier else random.choice(self.population)
-                    parent2 = random.choice(self.population)
+                    # Ensure we select 2 different prompts
+                    available_prompts = list(set(self.population))  # Remove duplicates
+                    if len(available_prompts) >= 2:
+                        parent1, parent2 = random.sample(available_prompts, 2)
+                    else:
+                        # Fallback: use mutation if not enough diversity
+                        parent1 = random.choice(self.population)
+                        parent2 = parent1  # Will trigger mutation instead
                 
-                child = self._crossover_prompts(parent1, parent2)
-                child.generation = current_generation
-                print(f"   🔄 LLM Crossover: {parent1.name} + {parent2.name} → {child.name}")
+                # Only do crossover if parents are different
+                if parent1.id != parent2.id:
+                    child = self._crossover_prompts(parent1, parent2)
+                    child.generation = current_generation
+                    print(f"   🔄 LLM Crossover: {parent1.name} + {parent2.name} → {child.name}")
+                else:
+                    # Fall back to mutation if parents are the same
+                    print(f"   🔄 Skipping crossover (same parent), using mutation instead")
+                    child = self._mutate_prompt(parent1)
+                    child.generation = current_generation
             else:
                 # Mutation: TRUE GEPA balanced selection (80% frontier, 20% exploration)
                 if random.random() < 0.8 and self.pareto_frontier:
