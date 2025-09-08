@@ -715,13 +715,13 @@ class PromptOptimizer:
         
         # Analyze parent performance profiles
         parent1_profile = enhanced_crossover.analyze_parent_performance(
-            parent1.prompt, 
+            parent1.prompt_text, 
             parent1.performance_metrics or {}, 
             parent1.generation
         )
         
         parent2_profile = enhanced_crossover.analyze_parent_performance(
-            parent2.prompt, 
+            parent2.prompt_text, 
             parent2.performance_metrics or {}, 
             parent2.generation
         )
