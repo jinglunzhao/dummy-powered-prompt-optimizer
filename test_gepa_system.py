@@ -22,6 +22,7 @@ from prompt_optimizer import PromptOptimizer
 # CharacterGenerator removed - using existing dummies only
 from assessment_system import AssessmentSystem
 from conversation_simulator import ConversationSimulator
+from experiment_manager import create_experiment, save_experiment_result
 
 class DateTimeEncoder(json.JSONEncoder):
     """Custom JSON encoder to handle datetime objects"""
@@ -246,11 +247,23 @@ async def run_gepa_test(config: Dict[str, Any] = None):
         }
     }
     
-    # Save to file with custom encoder
+    # Create experiment with proper versioning
+    experiment_name = f"{config['test_name']} - {config['dummies_count']}d{config['conversation_rounds']}r{config['generations']}g"
+    experiment_description = f"GEPA test with {config['dummies_count']} dummies, {config['conversation_rounds']} rounds, {config['generations']} generations"
+    
+    experiment_id = create_experiment(experiment_name, config, experiment_description)
+    
+    # Save results with proper versioning
+    result_file = save_experiment_result(experiment_id, results, "completed")
+    
+    print(f"\n💾 Results saved to: {result_file}")
+    print(f"🧪 Experiment ID: {experiment_id}")
+    
+    # Also save to the old location for backward compatibility
     with open(config['output_file'], 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=2, ensure_ascii=False, cls=DateTimeEncoder)
     
-    print(f"\n💾 Results saved to: {config['output_file']}")
+    print(f"📁 Also saved to: {config['output_file']} (for backward compatibility)")
     
     # Validation checks
     print("\n🔍 Validation Checks:")
