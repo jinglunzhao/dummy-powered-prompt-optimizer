@@ -155,13 +155,13 @@ class CorrectedEnhancedCrossover:
         
         # Combine both approaches
         crossover_prompt = f"""
-You are an expert prompt engineer creating a child prompt that EXCELLS in both performance and diversity.
+You are an expert prompt engineer creating a SYSTEM PROMPT for social skills coaching that EXCELLS in both performance and diversity.
 
-PARENT 1: "{parent1_profile.prompt_text}"
+PARENT 1 SYSTEM PROMPT: "{parent1_profile.prompt_text}"
 PARENT 1 TOP PERFORMING CRITERIA: {', '.join([f"{criterion}: {score:.3f}" for criterion, score in parent1_profile.top_performing_criteria[:3]])}
 PARENT 1 EFFECTIVE PATTERN: {parent1_profile.performance_pattern['dominant_approach']} approach, {parent1_profile.performance_pattern['contributing_characteristics']}
 
-PARENT 2: "{parent2_profile.prompt_text}"
+PARENT 2 SYSTEM PROMPT: "{parent2_profile.prompt_text}"
 PARENT 2 TOP PERFORMING CRITERIA: {', '.join([f"{criterion}: {score:.3f}" for criterion, score in parent2_profile.top_performing_criteria[:3]])}
 PARENT 2 EFFECTIVE PATTERN: {parent2_profile.performance_pattern['dominant_approach']} approach, {parent2_profile.performance_pattern['contributing_characteristics']}
 
@@ -169,20 +169,21 @@ PARENT 2 EFFECTIVE PATTERN: {parent2_profile.performance_pattern['dominant_appro
 
 {diversity_instructions}
 
-BALANCE REQUIREMENTS:
+SYSTEM PROMPT REQUIREMENTS:
+- MUST start with "You are..." (this is a SYSTEM PROMPT, not a conversation starter)
 - Preserve the ASSESSMENT PERFORMANCE that made both parents successful
 - Create a UNIQUE approach that differs from existing patterns
 - Maintain effectiveness while adding diversity
 - Target length: {max(parent1_profile.length, parent2_profile.length)} characters (±20%)
 
-EXAMPLES of performance-diversity balance:
-- "What social challenges are you facing? Let's work through them together" (preserves questioning + collaboration performance)
-- "I'm your social skills coach - let's build your confidence step by step" (preserves confidence-building performance)
-- "Guide students through social interactions with empathy and practical strategies" (preserves guidance + empathy performance)
+EXAMPLES of proper SYSTEM PROMPTS:
+- "You are a supportive peer mentor for college students. Be encouraging, provide practical advice, and help them build confidence gradually."
+- "You are a social skills coach who uses storytelling and role-playing to help students practice interactions safely."
+- "You are a patient guide who helps students navigate social challenges with empathy and step-by-step strategies."
 
-CRITICAL: The child must maintain the ASSESSMENT IMPROVEMENTS that made parents successful while being semantically unique.
+CRITICAL: Generate a SYSTEM PROMPT (starts with "You are...") that maintains the ASSESSMENT IMPROVEMENTS while being semantically unique.
 
-Respond with ONLY the new prompt text, no explanations.
+Respond with ONLY the system prompt text, no explanations.
 """
         
         return crossover_prompt
