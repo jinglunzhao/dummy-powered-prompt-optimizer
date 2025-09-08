@@ -658,6 +658,7 @@ class PromptOptimizer:
         target_population_size = min(2 ** current_generation, Config.MAX_POPULATION_SIZE)
         
         print(f"   🎯 Target population size: {target_population_size} (2^{current_generation}, capped at {Config.MAX_POPULATION_SIZE})")
+        print(f"   📊 Current population: {len(self.population)}, Pareto frontier: {len(self.pareto_frontier)}")
         
         # Generate new prompts through crossover and mutation
         while len(new_population) < target_population_size:
@@ -665,7 +666,16 @@ class PromptOptimizer:
                 # Crossover: TRUE GEPA balanced selection (80% frontier, 20% exploration)
                 if random.random() < 0.8 and len(self.pareto_frontier) >= 2:
                     # Exploitation: Select from Pareto frontier
-                    parent1, parent2 = random.sample(self.pareto_frontier, 2)
+                    try:
+                        parent1, parent2 = random.sample(self.pareto_frontier, 2)
+                    except ValueError as e:
+                        print(f"   ⚠️  Pareto frontier selection failed: {e}, falling back to population")
+                        # Fallback to population selection
+                        if len(self.population) >= 2:
+                            parent1, parent2 = random.sample(self.population, 2)
+                        else:
+                            parent1 = random.choice(self.population)
+                            parent2 = parent1
                 else:
                     # Exploration: Select from full population (including non-frontier)
                     # Ensure we select 2 different prompts
