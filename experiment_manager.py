@@ -19,6 +19,13 @@ from typing import Dict, Any, List, Optional
 from pathlib import Path
 import uuid
 
+class DateTimeEncoder(json.JSONEncoder):
+    """Custom JSON encoder to handle datetime objects"""
+    def default(self, obj):
+        if isinstance(obj, datetime):
+            return obj.isoformat()
+        return super().default(obj)
+
 class ExperimentManager:
     """Manages experiment results with proper versioning and archiving"""
     
@@ -90,10 +97,10 @@ class ExperimentManager:
         with open(metadata_file, 'w') as f:
             json.dump(metadata, f, indent=2)
         
-        # Save result data
+        # Save result data with custom encoder
         result_file = self.results_dir / metadata["result_file"]
         with open(result_file, 'w') as f:
-            json.dump(result_data, f, indent=2)
+            json.dump(result_data, f, indent=2, cls=DateTimeEncoder)
         
         print(f"💾 Saved experiment result: {result_file}")
         print(f"   📊 Status: {status}")
