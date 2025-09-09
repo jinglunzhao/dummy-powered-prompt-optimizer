@@ -665,8 +665,10 @@ class PromptOptimizer:
         
         # Keep Pareto frontier members (elite preservation)
         for prompt in self.pareto_frontier:
+            # Create elite prompt with genealogy tracking
+            elite_node = genealogy_tracker.create_elite_prompt(prompt.id, current_generation)
             new_prompt = OptimizedPrompt(
-                id=str(uuid.uuid4()),
+                id=elite_node.id,
                 name=f"{prompt.name} (Elite)",
                 prompt_text=prompt.prompt_text,
                 components=prompt.components.copy(),

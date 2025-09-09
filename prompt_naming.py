@@ -74,6 +74,31 @@ class PromptGenealogy:
         
         return node
     
+    def create_elite_prompt(self, parent_id: str, generation: int) -> PromptNode:
+        """Create an elite prompt node (preserved from previous generation)"""
+        parent = self.nodes[parent_id]
+        prompt_id = str(uuid.uuid4())
+        
+        # Generate civilized name for elite
+        gen_count = self.generation_counts[generation]
+        name = f"G{generation}E{gen_count:02d}"
+        
+        node = PromptNode(
+            id=prompt_id,
+            name=name,
+            generation=generation,
+            prompt_type="elite",
+            parent_ids=[parent_id],
+            children_ids=[]
+        )
+        
+        # Update parent-child relationships
+        parent.children_ids.append(prompt_id)
+        self.nodes[prompt_id] = node
+        self.generation_counts[generation] += 1
+        
+        return node
+    
     def create_crossover_prompt(self, parent1_id: str, parent2_id: str, generation: int) -> PromptNode:
         """Create a crossover prompt node"""
         parent1 = self.nodes[parent1_id]
