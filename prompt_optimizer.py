@@ -693,12 +693,18 @@ class PromptOptimizer:
                 # Only do crossover if parents are different
                 if parent1.id != parent2.id:
                     child = self._crossover_prompts(parent1, parent2)
+                    if child is None:
+                        print(f"   ⏭️  Crossover skipped for {parent1.name} + {parent2.name} - quality requirements not met")
+                        continue  # Skip this iteration
                     child.generation = current_generation
                     print(f"   🔄 LLM Crossover: {parent1.name} + {parent2.name} → {child.name}")
                 else:
                     # Fall back to mutation if parents are the same
                     print(f"   🔄 Skipping crossover (same parent), using mutation instead")
                     child = self._mutate_prompt(parent1)
+                    if child is None:
+                        print(f"   ⏭️  Mutation skipped for {parent1.name} - quality requirements not met")
+                        continue  # Skip this iteration
                     child.generation = current_generation
             else:
                 # Mutation: TRUE GEPA balanced selection (80% frontier, 20% exploration)
@@ -710,6 +716,9 @@ class PromptOptimizer:
                     parent = random.choice(self.population)
                 
                 child = self._mutate_prompt(parent)
+                if child is None:
+                    print(f"   ⏭️  Mutation skipped for {parent.name} - quality requirements not met")
+                    continue  # Skip this iteration
                 child.generation = current_generation
                 print(f"   🧬 LLM Mutation: {parent.name} → {child.name}")
             
@@ -721,36 +730,58 @@ class PromptOptimizer:
         return new_population
     
     def _crossover_prompts(self, parent1: OptimizedPrompt, parent2: OptimizedPrompt) -> OptimizedPrompt:
-        """Create a child prompt using enhanced crossover with performance+diversity balance"""
+        """Create a child prompt using simplified crossover focused on performance"""
         
-        # Initialize enhanced crossover
-        enhanced_crossover = CorrectedEnhancedCrossover()
+        # Analyze parent performance
+        parent1_metrics = parent1.performance_metrics or {}
+        parent2_metrics = parent2.performance_metrics or {}
         
-        # Analyze parent performance profiles
-        parent1_profile = enhanced_crossover.analyze_parent_performance(
-            parent1.prompt_text, 
-            parent1.performance_metrics or {}, 
-            parent1.generation
-        )
+        # Get top performing criteria for each parent
+        criteria_names = [
+            "ask_for_help", "stay_calm", "listen_actively", "express_clearly", "show_empathy",
+            "ask_clarifying", "give_constructive", "handle_conflict", "build_confidence", "encourage_participation",
+            "respect_boundaries", "offer_support", "celebrate_success", "address_concerns", "foster_connection",
+            "model_behavior", "provide_feedback", "create_safety", "promote_growth", "maintain_balance"
+        ]
         
-        parent2_profile = enhanced_crossover.analyze_parent_performance(
-            parent2.prompt_text, 
-            parent2.performance_metrics or {}, 
-            parent2.generation
-        )
+        # Get top 3 performing criteria for each parent
+        parent1_scores = [(c, parent1_metrics.get(f'improvement_{c}', 0)) for c in criteria_names]
+        parent2_scores = [(c, parent2_metrics.get(f'improvement_{c}', 0)) for c in criteria_names]
         
-        # Get existing prompts for diversity analysis
-        existing_prompts = [p.prompt_text for p in self.all_prompts[-10:]]
+        parent1_scores.sort(key=lambda x: x[1], reverse=True)
+        parent2_scores.sort(key=lambda x: x[1], reverse=True)
         
-        # Create enhanced crossover prompt
-        enhanced_prompt = enhanced_crossover.create_performance_diversity_crossover_prompt(
-            parent1_profile, parent2_profile, existing_prompts, diversity_weight=0.7
-        )
+        parent1_top = [f"{c}: {s:.3f}" for c, s in parent1_scores[:3]]
+        parent2_top = [f"{c}: {s:.3f}" for c, s in parent2_scores[:3]]
+        
+        # Create simple crossover prompt
+        crossover_prompt = f"""
+You are an expert prompt engineer creating a system prompt that combines the strengths of two parent prompts.
+
+PARENT 1 SYSTEM PROMPT: "{parent1.prompt_text}"
+PARENT 1 TOP STRENGTHS: {', '.join(parent1_top)}
+
+PARENT 2 SYSTEM PROMPT: "{parent2.prompt_text}"
+PARENT 2 TOP STRENGTHS: {', '.join(parent2_top)}
+
+TASK: Create a new system prompt that:
+1. MUST start with "You are..." (system prompt format)
+2. Combines the best strengths from both parents
+3. Improves upon both parents' performance
+4. Is effective for social skills coaching
+5. Can be any length that improves performance
+
+Focus on creating a prompt that is better than both parents by combining their strengths.
+
+Respond with ONLY the new system prompt text, no explanations.
+"""
         
         try:
             from config import Config
             
-            print(f"   🚀 Enhanced crossover: {parent1.name} + {parent2.name}")
+            print(f"   🚀 Simple crossover: {parent1.name} + {parent2.name}")
+            
+            # Call LLM for crossover
             response = requests.post(
                 "https://api.deepseek.com/v1/chat/completions",
                 headers={
@@ -759,38 +790,50 @@ class PromptOptimizer:
                 },
                 json={
                     "model": "deepseek-chat",
-                    "messages": [{"role": "user", "content": enhanced_prompt}],
-                    "temperature": 0.9,
-                    "max_tokens": 200
+                    "messages": [{"role": "user", "content": crossover_prompt}],
+                    "temperature": 0.7,  # Higher temperature for more creative combinations
+                    "max_tokens": 300
                 },
                 timeout=30
             )
+            
+            print(f"   📡 API Response Status: {response.status_code}")
             
             if response.status_code == 200:
                 result = response.json()
                 if 'choices' in result and len(result['choices']) > 0:
                     child_prompt_text = result['choices'][0]['message']['content'].strip()
-                    print(f"   ✅ Enhanced: {child_prompt_text[:80]}...")
+                    print(f"   ✅ LLM generated: {child_prompt_text[:100]}...")
                     
-                    # Validate length
-                    max_parent_length = max(len(parent1.prompt_text), len(parent2.prompt_text))
-                    if len(child_prompt_text) > max_parent_length * 3.0:
-                        child_prompt_text = f"{parent1.prompt_text} {parent2.prompt_text}"
+                    # Validate system prompt format
+                    if not child_prompt_text.strip().lower().startswith("you are"):
+                        print(f"   ❌ Generated prompt not a system prompt: {child_prompt_text[:50]}...")
+                        print(f"   ⏭️  Skipping this crossover - quality requirement not met")
+                        return None
+                    
+                    print(f"   ✅ System prompt format validated: {len(child_prompt_text)} chars")
                 else:
-                    child_prompt_text = f"{parent1.prompt_text} {parent2.prompt_text}"
+                    print(f"   ❌ No choices in response")
+                    print(f"   ⏭️  Skipping this crossover - API response invalid")
+                    return None
             else:
-                child_prompt_text = f"{parent1.prompt_text} {parent2.prompt_text}"
+                print(f"   ❌ API Error: {response.status_code} - {response.text}")
+                print(f"   ⏭️  Skipping this crossover - API call failed")
+                return None
                 
         except Exception as e:
-            print(f"⚠️  Enhanced crossover failed: {e}")
-            child_prompt_text = f"{parent1.prompt_text} {parent2.prompt_text}"
+            print(f"⚠️  LLM crossover failed: {e}")
+            import traceback
+            traceback.print_exc()
+            print(f"   ⏭️  Skipping this crossover - exception occurred")
+            return None
         
         return OptimizedPrompt(
             id=str(uuid.uuid4()),
             name=f"Enhanced Child of {parent1.name} + {parent2.name}",
             prompt_text=child_prompt_text,
             components=[],
-            generation=parent1.generation + 1,
+            generation=0,  # Will be set by caller
             performance_metrics={},
             pareto_rank=0,
             created_at=datetime.now(),
@@ -826,10 +869,9 @@ class PromptOptimizer:
         print(f"   🤖 Analyzing mutation: {parent.name} (improvement: {parent_metrics.get('avg_improvement', 0):.3f})")
         
         mutation_prompt = f"""
-You are an expert prompt engineer making MINIMAL improvements to a social skills coaching prompt.
+You are an expert prompt engineer improving a social skills coaching system prompt.
 
-CURRENT PROMPT: "{parent.prompt_text}"
-CURRENT LENGTH: {len(parent.prompt_text)} characters
+CURRENT SYSTEM PROMPT: "{parent.prompt_text}"
 
 WEAKEST PERFORMING AREAS (need improvement):
 {', '.join(weakest_areas) if weakest_areas else 'No specific weak areas identified'}
@@ -837,21 +879,16 @@ WEAKEST PERFORMING AREAS (need improvement):
 STRONGEST PERFORMING AREAS (maintain these):
 {', '.join(strongest_areas) if strongest_areas else 'No specific strong areas identified'}
 
-TASK: Create an improved version that:
-1. Makes ONLY 1-2 small, targeted changes (add 1-2 words or phrases maximum)
-2. Keeps the SAME length or shorter (under {len(parent.prompt_text)} characters)
-3. Addresses the weakest areas with minimal additions
-4. Preserves the original structure and tone
-5. Does NOT add long explanations or multiple sentences
+TASK: Create an improved system prompt that:
+1. MUST start with "You are..." (system prompt format)
+2. Addresses the weakest performing areas
+3. Preserves the strongest performing areas
+4. Improves overall effectiveness for social skills coaching
+5. Can be any length that improves performance
 
-EXAMPLES of MINIMAL changes:
-- Add "patiently" → "Be supportive and patiently provide practical advice"
-- Add "encouraging" → "Be supportive, encouraging and provide practical advice"
-- Add "step by step" → "Provide practical, step-by-step advice"
+Focus on making meaningful improvements to address the weak areas while maintaining what works.
 
-CRITICAL: The new prompt must be SHORTER or the SAME length as the original. Do NOT make it longer.
-
-Respond with ONLY the improved prompt text, no explanations.
+Respond with ONLY the improved system prompt text, no explanations.
 """
         
         try:
@@ -883,28 +920,28 @@ Respond with ONLY the improved prompt text, no explanations.
                     mutated_prompt_text = result['choices'][0]['message']['content'].strip()
                     print(f"   ✅ LLM generated: {mutated_prompt_text[:100]}...")
                     
-                    # Validate length - if too long, use parent prompt
-                    original_length = len(parent.prompt_text)
-                    new_length = len(mutated_prompt_text)
-                    if new_length > original_length * 3.0:  # Allow max 200% increase
-                        print(f"   ⚠️  Generated prompt too long ({new_length} vs {original_length}), using parent")
-                        mutated_prompt_text = parent.prompt_text
-                    else:
-                        print(f"   ✅ Length validation passed: {new_length} chars (original: {original_length})")
+                    # Validate system prompt format
+                    if not mutated_prompt_text.strip().lower().startswith("you are"):
+                        print(f"   ❌ Generated prompt not a system prompt: {mutated_prompt_text[:50]}...")
+                        print(f"   ⏭️  Skipping this mutation - quality requirement not met")
+                        return None
+                    
+                    print(f"   ✅ System prompt format validated: {len(mutated_prompt_text)} chars")
                 else:
-                    print(f"   ⚠️  No choices in response, using fallback")
-                    mutated_prompt_text = parent.prompt_text
+                    print(f"   ❌ No choices in response")
+                    print(f"   ⏭️  Skipping this mutation - API response invalid")
+                    return None
             else:
                 print(f"   ❌ API Error: {response.status_code} - {response.text}")
-                # Fallback to parent prompt
-                mutated_prompt_text = parent.prompt_text
+                print(f"   ⏭️  Skipping this mutation - API call failed")
+                return None
                 
         except Exception as e:
             print(f"⚠️  LLM mutation failed: {e}")
             import traceback
             traceback.print_exc()
-            # Fallback to parent prompt
-            mutated_prompt_text = parent.prompt_text
+            print(f"   ⏭️  Skipping this mutation - exception occurred")
+            return None
         
         return OptimizedPrompt(
             id=str(uuid.uuid4()),
