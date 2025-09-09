@@ -502,7 +502,14 @@ class PromptOptimizer:
                 component.success_rate = new_success_rate
     
     async def evaluate_population_async(self, dummies: List[AIDummy], sample_size: int = None) -> None:
-        """Evaluate the current population of prompts"""
+        """Evaluate the current population of prompts with parallel processing
+        
+        This method implements two levels of parallelization:
+        1. Prompt-level: All untested prompts are tested concurrently
+        2. Dummy-level: All dummies for each prompt are tested concurrently
+        
+        Uses semaphore for API rate limiting to prevent overwhelming the API.
+        """
         print(f"📊 Evaluating population of {len(self.population)} prompts...")
         
         # Use all dummies if sample_size not specified
@@ -515,9 +522,21 @@ class PromptOptimizer:
         else:
             evaluation_dummies = dummies
         
-        # Test each prompt with sample dummies in parallel
-        for prompt in self.population:
-            if prompt.last_tested is None:  # Only test untested prompts
+        # Filter untested prompts for parallel processing
+        untested_prompts = [p for p in self.population if p.last_tested is None]
+        
+        if not untested_prompts:
+            print("   ✅ All prompts already tested, skipping evaluation")
+            return
+        
+        print(f"   🚀 Running parallel tests for {len(untested_prompts)} prompts...")
+        
+        # Create semaphore to limit concurrent API calls (rate limiting)
+        semaphore = asyncio.Semaphore(3)  # Max 3 concurrent API calls
+        
+        async def test_single_prompt_async(prompt: OptimizedPrompt) -> None:
+            """Test a single prompt with all dummies in parallel"""
+            async with semaphore:  # Rate limiting
                 print(f"   🚀 Running parallel tests for prompt: {prompt.name}")
                 
                 # Create tasks for parallel execution
@@ -545,7 +564,7 @@ class PromptOptimizer:
                             
                 except Exception as e:
                     print(f"   ❌ Error in parallel testing for prompt {prompt.name}: {e}")
-                    continue
+                    return
                 
                 if test_count > 0:
                     # Calculate average metrics
@@ -582,6 +601,10 @@ class PromptOptimizer:
                     
                     print(f"   📈 {prompt.name}: Improvement {avg_improvement:+.2f}")
                     print(f"   🎯 20-criteria optimization ready for Pareto frontier")
+        
+        # Run all prompt tests in parallel
+        prompt_tasks = [test_single_prompt_async(prompt) for prompt in untested_prompts]
+        await asyncio.gather(*prompt_tasks, return_exceptions=True)
         
         # Update Pareto frontier
         self._update_pareto_frontier()
