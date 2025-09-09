@@ -174,6 +174,9 @@ async def run_gepa_test(config: Dict[str, Any] = None):
         print(f"🧬 Final generation: {best_prompt.generation}")
         print(f"📊 Performance: +{best_prompt.performance_metrics.get('avg_improvement', 0):.3f} improvement")
     
+    # Display genealogy tree
+    optimizer.print_genealogy_tree()
+    
     # Get final results
     print("\n🎯 Final Results")
     print("=" * 60)

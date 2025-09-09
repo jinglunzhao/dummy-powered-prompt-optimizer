@@ -1,4 +1,5 @@
 from corrected_enhanced_crossover import CorrectedEnhancedCrossover
+from prompt_naming import get_civilized_name, genealogy_tracker
 #!/usr/bin/env python3
 """
 Prompt Optimizer for AI Social Skills Training Pipeline
@@ -217,9 +218,11 @@ class PromptOptimizer:
         population = []
         
         # Start with the simplest possible prompt (GEPA approach)
+        # Create initial prompt with civilized naming
+        initial_node = genealogy_tracker.create_initial_prompt(self.base_prompt)
         simple_prompt = OptimizedPrompt(
-            id=str(uuid.uuid4()),
-            name="Simple Coach",
+            id=initial_node.id,
+            name=initial_node.name,  # "Genesis"
             prompt_text=self.base_prompt,
             components=[],  # No components initially
             generation=0,
@@ -851,12 +854,14 @@ Respond with ONLY the new system prompt text, no explanations.
             print(f"   ⏭️  Skipping this crossover - exception occurred")
             return None
         
+        # Create crossover with civilized naming
+        crossover_node = genealogy_tracker.create_crossover_prompt(parent1.id, parent2.id, parent1.generation + 1)
         return OptimizedPrompt(
-            id=str(uuid.uuid4()),
-            name=f"Enhanced Child of {parent1.name} + {parent2.name}",
+            id=crossover_node.id,
+            name=crossover_node.name,  # e.g., "G1C01"
             prompt_text=child_prompt_text,
             components=[],
-            generation=0,  # Will be set by caller
+            generation=parent1.generation + 1,
             performance_metrics={},
             pareto_rank=0,
             created_at=datetime.now(),
@@ -966,9 +971,11 @@ Respond with ONLY the improved system prompt text, no explanations.
             print(f"   ⏭️  Skipping this mutation - exception occurred")
             return None
         
+        # Create mutation with civilized naming
+        mutation_node = genealogy_tracker.create_mutation_prompt(parent.id, parent.generation + 1)
         return OptimizedPrompt(
-            id=str(uuid.uuid4()),
-            name=f"LLM Mutation of {parent.name}",
+            id=mutation_node.id,
+            name=mutation_node.name,  # e.g., "G1M01"
             prompt_text=mutated_prompt_text,
             components=[],  # No component tracking in LLM approach
             generation=parent.generation + 1,
@@ -1064,6 +1071,10 @@ Respond with ONLY the improved system prompt text, no explanations.
             json.dump(data, f, indent=2, ensure_ascii=False, default=str)
         
         print(f"💾 Optimization results saved to {filename}")
+    
+    def print_genealogy_tree(self):
+        """Print the prompt genealogy tree"""
+        print("\n" + genealogy_tracker.get_family_tree())
     
     def load_optimization_results(self, filename: str = "data/prompt_optimization_results.json"):
         """Load optimization results from file"""
