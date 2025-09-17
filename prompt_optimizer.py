@@ -405,58 +405,266 @@ class PromptOptimizer:
         # This method is kept for compatibility but returns a neutral score
         return 5.0  # Neutral quality score
     
+    def _generate_conversation_reflection(self, 
+                                         prompt: OptimizedPrompt,
+                                         dummy: AIDummy,
+                                         conversation: Conversation,
+                                         pre_assessment: Assessment,
+                                         post_assessment: Assessment) -> str:
+        """Generate individual conversation reflection using DeepSeek Reasoner"""
+        
+        # Prepare conversation content for analysis
+        conversation_text = ""
+        for turn in conversation.turns:
+            conversation_text += f"{turn.speaker}: {turn.message}\n"
+        
+        # Calculate improvement for context
+        improvement = post_assessment.average_score - pre_assessment.average_score
+        
+        # Create reflection prompt for DeepSeek Reasoner
+        reflection_prompt = f"""
+You are an expert social skills coach analyzing a conversation between a peer mentor (AI) and a student. Provide a concise, actionable reflection.
+
+STUDENT: {dummy.name} (Extraversion: {dummy.personality.extraversion}/10, Anxiety: {dummy.social_anxiety.anxiety_level}/10, Improvement: {improvement:+.2f} points)
+
+SYSTEM PROMPT: "{prompt.prompt_text}"
+
+CONVERSATION:
+{conversation_text}
+
+TASK: Provide a brief, focused reflection (2-3 sentences) covering:
+- What worked well with this student
+- What didn't work or could be improved
+- Key coaching insight for similar students
+
+Be concise and actionable. No templates or verbose analysis.
+"""
+
+        try:
+            from config import Config
+            
+            # Call DeepSeek Reasoner for reflection
+            response = requests.post(
+                "https://api.deepseek.com/v1/chat/completions",
+                headers={
+                    "Authorization": f"Bearer {Config.DEEPSEEK_API_KEY}",
+                    "Content-Type": "application/json"
+                },
+                json={
+                    "model": "deepseek-reasoner",
+                    "messages": [{"role": "user", "content": reflection_prompt}],
+                    "temperature": 0.3,  # Lower temperature for more focused analysis
+                    "max_tokens": 400  # Increased for complete reflections
+                },
+                timeout=30
+            )
+            
+            if response.status_code == 200:
+                result = response.json()
+                if 'choices' in result and len(result['choices']) > 0:
+                    reflection = result['choices'][0]['message']['content'].strip()
+                    print(f"   🧠 Generated conversation reflection: {len(reflection)} chars")
+                    return reflection
+                else:
+                    print(f"   ❌ No reflection generated from DeepSeek Reasoner")
+                    return "No reflection available - API response invalid"
+            else:
+                print(f"   ❌ DeepSeek Reasoner API Error: {response.status_code}")
+                return f"Reflection generation failed - API error {response.status_code}"
+                
+        except Exception as e:
+            print(f"⚠️  DeepSeek Reasoner reflection failed: {e}")
+            return f"Reflection generation failed - {str(e)}"
+
     def _generate_reflection_insights(self, 
                                     prompt: OptimizedPrompt,
                                     dummy: AIDummy,
                                     pre_assessment: Assessment,
                                     post_assessment: Assessment,
                                     conversation: Conversation) -> List[str]:
-        """Generate natural language reflection insights"""
+        """Generate natural language reflection insights using DeepSeek Reasoner only"""
         insights = []
         
-        # Analyze improvement patterns
-        improvement = post_assessment.average_score - pre_assessment.average_score
+        # Generate individual conversation reflection using DeepSeek Reasoner
+        conversation_reflection = self._generate_conversation_reflection(
+            prompt, dummy, conversation, pre_assessment, post_assessment
+        )
         
-        if improvement > 0.5:
-            insights.append("This prompt successfully facilitated significant improvement in social skills")
-        elif improvement > 0:
-            insights.append("This prompt showed moderate effectiveness in improving social skills")
-        else:
-            insights.append("This prompt did not effectively improve social skills")
-        
-        # Analyze personality-specific effectiveness
-        if dummy.personality.extraversion > 7:
-            if improvement > 0.3:
-                insights.append("The prompt worked well with extroverted personalities")
-            else:
-                insights.append("The prompt may need adjustment for extroverted individuals")
-        
-        if dummy.social_anxiety.anxiety_level > 7:
-            if improvement > 0.2:
-                insights.append("The prompt effectively supported high-anxiety individuals")
-            else:
-                insights.append("The prompt may be too overwhelming for high-anxiety individuals")
-        
-        # Analyze conversation flow
-        if conversation.turns and len(conversation.turns) >= 4:
-            insights.append("The conversation maintained good engagement throughout the session")
-        else:
-            insights.append("The conversation may have been too brief or lacked engagement")
-        
-        # Analyze specific areas of improvement
-        pre_responses = {r.question: r.score for r in pre_assessment.responses}
-        post_responses = {r.question: r.score for r in post_assessment.responses}
-        
-        improved_areas = []
-        for question in pre_responses:
-            if question in post_responses:
-                if post_responses[question] > pre_responses[question]:
-                    improved_areas.append(question)
-        
-        if improved_areas:
-            insights.append(f"Specific improvements observed in: {', '.join(improved_areas[:3])}")
+        # Add ONLY the conversation reflection - no template insights
+        insights.append(conversation_reflection)
         
         return insights
+    
+    def _synthesize_prompt_reflection(self, prompt: OptimizedPrompt) -> str:
+        """Synthesize all conversation reflections for a prompt using DeepSeek Reasoner"""
+        
+        # Get all conversations for this prompt
+        conversations = conversation_storage.get_conversations_by_prompt(prompt.id)
+        
+        if not conversations:
+            return "No conversations available for synthesis analysis"
+        
+        # Prepare conversation data for synthesis
+        conversation_summaries = []
+        total_improvement = 0.0
+        conversation_count = 0
+        
+        for conv in conversations:
+            # Extract conversation reflection (first item in reflection_insights)
+            reflection = conv.get('reflection', 'No reflection available')
+            improvement = conv.get('improvement', 0.0)
+            dummy_name = conv.get('dummy_name', 'Unknown')
+            
+            conversation_summaries.append(f"""
+CONVERSATION WITH {dummy_name}:
+- Improvement: {improvement:+.2f} points
+- Reflection: {reflection}
+""")
+            
+            total_improvement += improvement
+            conversation_count += 1
+        
+        avg_improvement = total_improvement / conversation_count if conversation_count > 0 else 0.0
+        
+        # Create synthesis prompt for DeepSeek Reasoner
+        synthesis_prompt = f"""
+You are an expert social skills coach analyzing a peer mentor AI system prompt across multiple conversations. Provide a concise synthesis analysis.
+
+SYSTEM PROMPT: "{prompt.prompt_text}"
+PERFORMANCE: {conversation_count} conversations, {avg_improvement:+.2f} avg improvement, Gen {prompt.generation}
+
+CONVERSATION REFLECTIONS:
+{''.join(conversation_summaries)}
+
+TASK: Provide a focused synthesis (3-4 sentences) covering:
+- Key strengths that work across students
+- Main weaknesses to address
+- Specific improvement recommendations
+- Priority areas for evolution
+
+Be concise and actionable. No verbose analysis.
+"""
+
+        try:
+            from config import Config
+            
+            # Call DeepSeek Reasoner for synthesis
+            response = requests.post(
+                "https://api.deepseek.com/v1/chat/completions",
+                headers={
+                    "Authorization": f"Bearer {Config.DEEPSEEK_API_KEY}",
+                    "Content-Type": "application/json"
+                },
+                json={
+                    "model": "deepseek-reasoner",
+                    "messages": [{"role": "user", "content": synthesis_prompt}],
+                    "temperature": 0.2,  # Very low temperature for focused analysis
+                    "max_tokens": 300  # Reduced for concise responses
+                },
+                timeout=45
+            )
+            
+            if response.status_code == 200:
+                result = response.json()
+                if 'choices' in result and len(result['choices']) > 0:
+                    synthesis = result['choices'][0]['message']['content'].strip()
+                    print(f"   🧠 Generated synthesis analysis: {len(synthesis)} chars")
+                    return synthesis
+                else:
+                    print(f"   ❌ No synthesis generated from DeepSeek Reasoner")
+                    return "No synthesis available - API response invalid"
+            else:
+                print(f"   ❌ DeepSeek Reasoner synthesis API Error: {response.status_code}")
+                return f"Synthesis generation failed - API error {response.status_code}"
+                
+        except Exception as e:
+            print(f"⚠️  DeepSeek Reasoner synthesis failed: {e}")
+            return f"Synthesis generation failed - {str(e)}"
+    
+    def _save_synthesis_analysis(self, prompt: OptimizedPrompt, synthesis: str) -> None:
+        """Save synthesis analysis for a prompt"""
+        try:
+            # Create synthesis analysis directory
+            synthesis_dir = "data/synthesis_analysis"
+            os.makedirs(synthesis_dir, exist_ok=True)
+            
+            synthesis_file = f"{synthesis_dir}/synthesis_analysis_{prompt.id}.json"
+            
+            # Get parent information from genealogy tracker
+            parent_info = []
+            if prompt.id in genealogy_tracker.nodes:
+                node = genealogy_tracker.nodes[prompt.id]
+                parent_info = [genealogy_tracker.nodes[pid].name for pid in node.parent_ids if pid in genealogy_tracker.nodes]
+            
+            synthesis_data = {
+                "prompt_id": prompt.id,
+                "prompt_name": prompt.name,
+                "generation": prompt.generation,
+                "synthesis_analysis": synthesis,
+                "timestamp": datetime.now().isoformat(),
+                "conversation_count": len(conversation_storage.get_conversations_by_prompt(prompt.id)),
+                "parent_names": parent_info,
+                "prompt_type": genealogy_tracker.nodes[prompt.id].prompt_type if prompt.id in genealogy_tracker.nodes else "unknown"
+            }
+            
+            with open(synthesis_file, 'w', encoding='utf-8') as f:
+                json.dump(synthesis_data, f, indent=2, ensure_ascii=False, default=str)
+            
+            print(f"   💾 Saved synthesis analysis: {synthesis_file}")
+            
+        except Exception as e:
+            print(f"⚠️  Failed to save synthesis analysis: {e}")
+    
+    def _save_incremental_results(self) -> None:
+        """Save current optimization results incrementally"""
+        try:
+            from datetime import datetime
+            import json
+            
+            # Create results data
+            results = {
+                "test_config": {
+                    "test_name": "Incremental GEPA Test",
+                    "timestamp": datetime.now().isoformat(),
+                    "generations_completed": len(self.all_prompts),
+                    "population_size": len(self.population),
+                    "pareto_frontier_size": len(self.pareto_frontier)
+                },
+                "optimization": {
+                    "pareto_frontier": [self._prompt_to_dict(p) for p in self.pareto_frontier],
+                    "all_prompts": [self._prompt_to_dict(p) for p in self.all_prompts],
+                    "optimization_history": self.optimization_history
+                },
+                "statistics": {
+                    "total_prompts": len(self.all_prompts),
+                    "pareto_frontier_size": len(self.pareto_frontier),
+                    "total_tests": len(self.optimization_history),
+                    "average_improvement": sum(h.get('improvement', 0) for h in self.optimization_history) / len(self.optimization_history) if self.optimization_history else 0
+                }
+            }
+            
+            # Save to validation results file
+            with open("data/validation_test_results.json", 'w', encoding='utf-8') as f:
+                json.dump(results, f, indent=2, ensure_ascii=False, default=str)
+            
+            print(f"   💾 Incremental save: {len(self.all_prompts)} prompts, {len(self.pareto_frontier)} Pareto solutions")
+            
+        except Exception as e:
+            print(f"⚠️  Failed to save incremental results: {e}")
+    
+    def _prompt_to_dict(self, prompt: OptimizedPrompt) -> dict:
+        """Convert OptimizedPrompt to dictionary for JSON serialization"""
+        return {
+            "id": prompt.id,
+            "name": prompt.name,
+            "prompt_text": prompt.prompt_text,
+            "components": [c.name for c in prompt.components],
+            "generation": prompt.generation,
+            "performance_metrics": prompt.performance_metrics,
+            "pareto_rank": getattr(prompt, 'pareto_rank', None),
+            "created_at": prompt.created_at.isoformat() if hasattr(prompt, 'created_at') else None,
+            "last_tested": prompt.last_tested.isoformat() if hasattr(prompt, 'last_tested') and prompt.last_tested else None
+        }
     
     def _identify_factors(self, 
                           improvement: float, 
@@ -539,7 +747,8 @@ class PromptOptimizer:
         print(f"   🚀 Running parallel tests for {len(untested_prompts)} prompts...")
         
         # Create semaphore to limit concurrent API calls (rate limiting)
-        semaphore = asyncio.Semaphore(3)  # Max 3 concurrent API calls
+        # Increased limit for better server utilization
+        semaphore = asyncio.Semaphore(16)  # Max 16 concurrent API calls
         
         async def test_single_prompt_async(prompt: OptimizedPrompt) -> None:
             """Test a single prompt with all dummies in parallel"""
@@ -609,8 +818,9 @@ class PromptOptimizer:
                     print(f"   📈 {prompt.name}: Improvement {avg_improvement:+.2f}")
                     print(f"   🎯 20-criteria optimization ready for Pareto frontier")
         
-        # Run all prompt tests in parallel
+        # Run all prompt tests in parallel (all at once for maximum efficiency)
         prompt_tasks = [test_single_prompt_async(prompt) for prompt in untested_prompts]
+        print(f"   ⚡ Executing {len(prompt_tasks)} prompt tests in parallel...")
         await asyncio.gather(*prompt_tasks, return_exceptions=True)
         
         # Update Pareto frontier
@@ -684,12 +894,12 @@ class PromptOptimizer:
             )
             new_population.append(new_prompt)
         
-        # TRUE GEPA: Exponential population growth (1 → 2 → 4 → 8 → 16 → 32)
-        # Each generation doubles the population size, but cap at MAX_POPULATION_SIZE
+        # TRUE GEPA: Capped population growth at 8 prompts per generation
+        # Each generation grows to 8 prompts, but cap at MAX_POPULATION_SIZE
         from config import Config
-        target_population_size = min(2 ** current_generation, Config.MAX_POPULATION_SIZE)
+        target_population_size = min(8, Config.MAX_POPULATION_SIZE)
         
-        print(f"   🎯 Target population size: {target_population_size} (2^{current_generation}, capped at {Config.MAX_POPULATION_SIZE})")
+        print(f"   🎯 Target population size: {target_population_size} (capped at 8 per generation, max {Config.MAX_POPULATION_SIZE})")
         print(f"   📊 Current population: {len(self.population)}, Pareto frontier: {len(self.pareto_frontier)}")
         
         # Generate new prompts through crossover and mutation
@@ -756,54 +966,65 @@ class PromptOptimizer:
             
             new_population.append(child)
         
+        # Keep only the top 8 performing prompts for next generation
+        if len(new_population) > 8:
+            # Sort by average improvement and keep top 8
+            new_population.sort(key=lambda p: p.performance_metrics.get('avg_improvement', 0), reverse=True)
+            new_population = new_population[:8]
+            print(f"   🏆 Selected top 8 prompts (capped from {len(new_population) + len(self.population)} total)")
+        
         self.population = new_population
         self.all_prompts.extend(new_population)  # Add all new prompts to history
-        print(f"✅ Population evolved to {len(new_population)} prompts (TRUE GEPA growth: 2^{current_generation}, capped at {Config.MAX_POPULATION_SIZE})")
+        
+        # Save results incrementally
+        self._save_incremental_results()
+        
+        print(f"✅ Population evolved to {len(new_population)} prompts (TRUE GEPA capped at 8 per generation, max {Config.MAX_POPULATION_SIZE})")
         return new_population
     
     def _crossover_prompts(self, parent1: OptimizedPrompt, parent2: OptimizedPrompt) -> OptimizedPrompt:
-        """Create a child prompt using simplified crossover focused on performance"""
+        """Create a child prompt using GEPA synthesis analysis from both parents"""
         
-        # Analyze parent performance
+        # Generate synthesis analysis for both parent prompts
+        print(f"   🧠 Generating synthesis analysis for crossover: {parent1.name} + {parent2.name}")
+        synthesis1 = self._synthesize_prompt_reflection(parent1)
+        synthesis2 = self._synthesize_prompt_reflection(parent2)
+        
+        # Save synthesis analyses
+        self._save_synthesis_analysis(parent1, synthesis1)
+        self._save_synthesis_analysis(parent2, synthesis2)
+        
+        # Get performance metrics for additional context
         parent1_metrics = parent1.performance_metrics or {}
         parent2_metrics = parent2.performance_metrics or {}
+        avg_improvement1 = parent1_metrics.get('avg_improvement', 0.0)
+        avg_improvement2 = parent2_metrics.get('avg_improvement', 0.0)
         
-        # Get top performing criteria for each parent
-        criteria_names = [
-            "ask_for_help", "stay_calm", "listen_actively", "express_clearly", "show_empathy",
-            "ask_clarifying", "give_constructive", "handle_conflict", "build_confidence", "encourage_participation",
-            "respect_boundaries", "offer_support", "celebrate_success", "address_concerns", "foster_connection",
-            "model_behavior", "provide_feedback", "create_safety", "promote_growth", "maintain_balance"
-        ]
+        # Create crossover prompt using synthesis analysis
+        print(f"   🤖 Analyzing crossover with synthesis: {parent1.name} + {parent2.name}")
         
-        # Get top 3 performing criteria for each parent
-        parent1_scores = [(c, parent1_metrics.get(f'improvement_{c}', 0)) for c in criteria_names]
-        parent2_scores = [(c, parent2_metrics.get(f'improvement_{c}', 0)) for c in criteria_names]
-        
-        parent1_scores.sort(key=lambda x: x[1], reverse=True)
-        parent2_scores.sort(key=lambda x: x[1], reverse=True)
-        
-        parent1_top = [f"{c}: {s:.3f}" for c, s in parent1_scores[:3]]
-        parent2_top = [f"{c}: {s:.3f}" for c, s in parent2_scores[:3]]
-        
-        # Create simple crossover prompt
         crossover_prompt = f"""
-You are an expert prompt engineer creating a system prompt that combines the strengths of two parent prompts.
+You are an expert prompt engineer creating a system prompt that combines the strengths of two parent prompts based on comprehensive conversation analysis.
 
 PARENT 1 SYSTEM PROMPT: "{parent1.prompt_text}"
-PARENT 1 TOP STRENGTHS: {', '.join(parent1_top)}
+PARENT 1 PERFORMANCE: {avg_improvement1:+.2f} points improvement
+PARENT 1 SYNTHESIS ANALYSIS (based on actual conversations):
+{synthesis1}
 
 PARENT 2 SYSTEM PROMPT: "{parent2.prompt_text}"
-PARENT 2 TOP STRENGTHS: {', '.join(parent2_top)}
+PARENT 2 PERFORMANCE: {avg_improvement2:+.2f} points improvement
+PARENT 2 SYNTHESIS ANALYSIS (based on actual conversations):
+{synthesis2}
 
 TASK: Create a new system prompt that:
 1. MUST start with "You are..." (system prompt format)
-2. Combines the best strengths from both parents
-3. Improves upon both parents' performance
-4. Is effective for social skills coaching
-5. Can be any length that improves performance
+2. Combines the best strengths identified in both synthesis analyses
+3. Addresses weaknesses from both parents by learning from their conversation performance
+4. Incorporates the most effective techniques from both parents' conversation analysis
+5. Is effective for social skills coaching
+6. Keep it concise but effective (aim for 1-3 sentences, maximum 200 words)
 
-Focus on creating a prompt that is better than both parents by combining their strengths.
+Focus on creating a prompt that is better than both parents by combining their conversation-based insights and addressing their identified weaknesses.
 
 Respond with ONLY the new system prompt text, no explanations.
 """
@@ -875,52 +1096,43 @@ Respond with ONLY the new system prompt text, no explanations.
         )
 
     def _mutate_prompt(self, parent: OptimizedPrompt) -> OptimizedPrompt:
-        """Create a mutated version of a parent prompt using LLM analysis"""
+        """Create a mutated version of a parent prompt using GEPA synthesis analysis"""
         
-        # Get performance metrics for the parent
+        # Generate synthesis analysis for the parent prompt
+        print(f"   🧠 Generating synthesis analysis for mutation: {parent.name}")
+        synthesis_analysis = self._synthesize_prompt_reflection(parent)
+        
+        # Save synthesis analysis
+        self._save_synthesis_analysis(parent, synthesis_analysis)
+        
+        # Get performance metrics for additional context
         parent_metrics = parent.performance_metrics or {}
+        avg_improvement = parent_metrics.get('avg_improvement', 0.0)
         
-        # Extract 20-criteria performance data
-        criteria_names = [
-            "ask_for_help", "stay_calm", "listen_actively", "express_clearly", "show_empathy",
-            "ask_clarifying", "give_constructive", "handle_conflict", "build_confidence", "encourage_participation",
-            "respect_boundaries", "offer_support", "celebrate_success", "address_concerns", "foster_connection",
-            "model_behavior", "provide_feedback", "create_safety", "promote_growth", "maintain_balance"
-        ]
-        
-        # Identify weak areas (lowest performing criteria)
-        criterion_scores = []
-        for criterion in criteria_names:
-            score = parent_metrics.get(f'improvement_{criterion}', 0)
-            criterion_scores.append((criterion, score))
-        
-        # Sort by performance (ascending) to find weakest areas
-        criterion_scores.sort(key=lambda x: x[1])
-        weakest_areas = [f"{criterion}: {score:.3f}" for criterion, score in criterion_scores[:5]]
-        strongest_areas = [f"{criterion}: {score:.3f}" for criterion, score in criterion_scores[-3:]]
-        
-        # Create LLM prompt for mutation analysis
-        print(f"   🤖 Analyzing mutation: {parent.name} (improvement: {parent_metrics.get('avg_improvement', 0):.3f})")
+        # Create LLM prompt for mutation using synthesis analysis
+        print(f"   🤖 Analyzing mutation with synthesis: {parent.name} (improvement: {avg_improvement:.3f})")
         
         mutation_prompt = f"""
-You are an expert prompt engineer improving a social skills coaching system prompt.
+You are an expert prompt engineer improving a social skills coaching system prompt based on comprehensive conversation analysis.
 
 CURRENT SYSTEM PROMPT: "{parent.prompt_text}"
 
-WEAKEST PERFORMING AREAS (need improvement):
-{', '.join(weakest_areas) if weakest_areas else 'No specific weak areas identified'}
+PERFORMANCE CONTEXT:
+- Average improvement: {avg_improvement:+.2f} points
+- Generation: {parent.generation}
 
-STRONGEST PERFORMING AREAS (maintain these):
-{', '.join(strongest_areas) if strongest_areas else 'No specific strong areas identified'}
+SYNTHESIS ANALYSIS (based on actual conversation performance):
+{synthesis_analysis}
 
 TASK: Create an improved system prompt that:
 1. MUST start with "You are..." (system prompt format)
-2. Addresses the weakest performing areas
-3. Preserves the strongest performing areas
-4. Improves overall effectiveness for social skills coaching
-5. Can be any length that improves performance
+2. Addresses the weaknesses identified in the synthesis analysis
+3. Builds upon the strengths identified in the synthesis analysis
+4. Incorporates the specific recommendations from the conversation analysis
+5. Improves overall effectiveness for social skills coaching
+6. Keep it concise but effective (aim for 1-3 sentences, maximum 200 words)
 
-Focus on making meaningful improvements to address the weak areas while maintaining what works.
+Focus on making meaningful improvements based on the actual conversation performance analysis, not just numerical scores.
 
 Respond with ONLY the improved system prompt text, no explanations.
 """
@@ -940,7 +1152,7 @@ Respond with ONLY the improved system prompt text, no explanations.
                     "model": "deepseek-chat",
                     "messages": [{"role": "user", "content": mutation_prompt}],
                     "temperature": 0.6,  # Slightly lower temperature for more focused mutations
-                    "max_tokens": 200
+                    "max_tokens": 300  # Increased for complete responses but still limited
                 },
                 timeout=30  # Add timeout
             )

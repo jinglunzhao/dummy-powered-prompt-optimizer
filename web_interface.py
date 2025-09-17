@@ -360,6 +360,90 @@ def api_conversation_stats():
     stats = conversation_storage.get_conversation_stats()
     return jsonify(stats)
 
+@app.route('/api/prompt/<prompt_id>/synthesis')
+def api_prompt_synthesis(prompt_id):
+    """API endpoint to get synthesis analysis for a specific prompt"""
+    try:
+        synthesis_file = f"data/synthesis_analysis/synthesis_analysis_{prompt_id}.json"
+        
+        if not os.path.exists(synthesis_file):
+            return jsonify({'error': 'Synthesis analysis not found'}), 404
+        
+        with open(synthesis_file, 'r', encoding='utf-8') as f:
+            synthesis_data = json.load(f)
+        
+        return jsonify(synthesis_data)
+        
+    except Exception as e:
+        return jsonify({'error': f'Failed to load synthesis analysis: {str(e)}'}), 500
+
+@app.route('/api/family-tree')
+def api_family_tree():
+    """API endpoint to get family tree data for all prompts from synthesis files only"""
+    try:
+        prompts = []
+        
+        # Load prompts from synthesis files only for consistency
+        synthesis_dir = "data/synthesis_analysis"
+        if not os.path.exists(synthesis_dir):
+            return jsonify({'error': 'Synthesis analysis directory not found'}), 404
+        
+        synthesis_files = [f for f in os.listdir(synthesis_dir) if f.startswith('synthesis_analysis_') and f.endswith('.json')]
+        
+        if not synthesis_files:
+            return jsonify({'error': 'No synthesis analysis files found'}), 404
+        
+        for synthesis_file in synthesis_files:
+            try:
+                with open(os.path.join(synthesis_dir, synthesis_file), 'r', encoding='utf-8') as f:
+                    synthesis_data = json.load(f)
+                
+                prompt_id = synthesis_data.get('prompt_id', '')
+                prompt_name = synthesis_data.get('prompt_name', 'Unknown')
+                generation = synthesis_data.get('generation', 0)
+                
+                # Determine prompt type
+                prompt_type = "genesis"
+                if generation > 0:
+                    if 'M' in prompt_name:
+                        prompt_type = "mutation"
+                    elif 'C' in prompt_name:
+                        prompt_type = "crossover"
+                
+                prompt = {
+                    'id': prompt_id,
+                    'name': prompt_name,
+                    'prompt_text': f"[Synthesis available - {len(synthesis_data.get('synthesis_analysis', ''))} chars]",
+                    'generation': generation,
+                    'performance_metrics': {},
+                    'type': prompt_type,
+                    'created_at': synthesis_data.get('timestamp', ''),
+                    'last_tested': synthesis_data.get('timestamp', ''),
+                    'has_synthesis': True
+                }
+                prompts.append(prompt)
+                    
+            except Exception as e:
+                print(f"Warning: Could not load synthesis file {synthesis_file}: {e}")
+                continue
+        
+        # Sort by generation, then by name
+        prompts.sort(key=lambda x: (x['generation'], x['name']))
+        
+        return jsonify({
+            'prompts': prompts,
+            'total_prompts': len(prompts),
+            'generations': len(set(p['generation'] for p in prompts))
+        })
+        
+    except Exception as e:
+        return jsonify({'error': f'Failed to load family tree data: {str(e)}'}), 500
+
+@app.route('/family-tree')
+def family_tree():
+    """Route to display the family tree page"""
+    return render_template('prompt_family_tree.html')
+
 if __name__ == '__main__':
     # Create templates directory if it doesn't exist
     os.makedirs('templates', exist_ok=True)

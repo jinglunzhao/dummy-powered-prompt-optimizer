@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEPA Prompt Family Tree - Evolution Visualization</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <style>
+        .family-tree-container {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .tree-header {
+            background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .controls {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 5px 15px;
+            border: 1px solid #17a2b8;
+            background: white;
+            color: #17a2b8;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn.active {
+            background: #17a2b8;
+            color: white;
+        }
+        
+        .filter-btn:hover {
+            background: #17a2b8;
+            color: white;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #6c757d;
+        }
+        
+        #tree-svg {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+        
+        .node {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .node:hover {
+            transform: scale(1.05);
+        }
+        
+        .node.genesis {
+            fill: #28a745;
+        }
+        
+        .node.mutation {
+            fill: #ffc107;
+        }
+        
+        .node.crossover {
+            fill: #dc3545;
+        }
+        
+        .node.elite {
+            fill: #6f42c1;
+        }
+        
+        .node-text {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            text-anchor: middle;
+            pointer-events: none;
+            fill: white;
+        }
+        
+        .link {
+            stroke: #999;
+            stroke-opacity: 0.6;
+            stroke-width: 2px;
+        }
+        
+        .link.mutation {
+            stroke: #ffc107;
+            stroke-width: 3px;
+        }
+        
+        .link.crossover {
+            stroke: #dc3545;
+            stroke-width: 3px;
+        }
+        
+        .tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            pointer-events: none;
+            z-index: 1000;
+            max-width: 300px;
+        }
+        
+        .synthesis-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            display: none;
+        }
+        
+        .synthesis-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="family-tree-container">
+        <!-- Header -->
+        <div class="tree-header">
+            <h1><i class="fas fa-sitemap me-2"></i>GEPA Prompt Family Tree</h1>
+            <p class="mb-0">Evolution visualization showing prompt relationships and synthesis analysis</p>
+        </div>
+        
+        <!-- Controls -->
+        <div class="controls">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>Filter by Generation:</h6>
+                    <div class="filter-buttons" id="generationFilters">
+                        <button class="filter-btn active" data-generation="all">All</button>
+                        <button class="filter-btn" data-generation="0">G0</button>
+                        <button class="filter-btn" data-generation="1">G1</button>
+                        <button class="filter-btn" data-generation="2">G2</button>
+                        <button class="filter-btn" data-generation="3">G3</button>
+                        <button class="filter-btn" data-generation="4">G4</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h6>Filter by Type:</h6>
+                    <div class="filter-buttons" id="typeFilters">
+                        <button class="filter-btn active" data-type="all">All</button>
+                        <button class="filter-btn" data-type="genesis">Genesis</button>
+                        <button class="filter-btn" data-type="mutation">Mutations</button>
+                        <button class="filter-btn" data-type="crossover">Crossovers</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Loading -->
+        <div id="loading" class="loading">
+            <i class="fas fa-spinner fa-spin fa-2x mb-3"></i>
+            <p>Loading prompt family tree...</p>
+        </div>
+        
+        <!-- Family Tree SVG -->
+        <div id="familyTree" style="display: none;">
+            <svg id="tree-svg" width="100%" height="800"></svg>
+        </div>
+        
+        <!-- Tooltip -->
+        <div id="tooltip" class="tooltip"></div>
+        
+        <!-- Synthesis Modal -->
+        <div id="synthesisModal" class="synthesis-modal">
+            <div class="synthesis-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5>Synthesis Analysis</h5>
+                    <button type="button" class="btn-close" onclick="closeSynthesisModal()"></button>
+                </div>
+                <div id="synthesisContent">
+                    Loading synthesis analysis...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let allPrompts = [];
+        let filteredPrompts = [];
+        let svg, g, tooltip;
+        let width, height;
+        
+        // Load data on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFamilyTreeData();
+            setupFilters();
+        });
+        
+        // Fallback if D3 fails to load
+        window.addEventListener('load', function() {
+            if (typeof d3 === 'undefined') {
+                console.error('D3.js failed to load, using fallback visualization');
+                displayFallbackTree();
+            }
+        });
+        
+        function loadFamilyTreeData() {
+            fetch('/api/family-tree')
+                .then(response => response.json())
+                .then(data => {
+                    allPrompts = data.prompts || [];
+                    filteredPrompts = [...allPrompts];
+                    initializeTree();
+                    document.getElementById('loading').style.display = 'none';
+                    document.getElementById('familyTree').style.display = 'block';
+                })
+                .catch(error => {
+                    console.error('Error loading family tree data:', error);
+                    document.getElementById('loading').innerHTML = 
+                        '<div class="text-center text-danger"><i class="fas fa-exclamation-triangle me-2"></i>Error loading data</div>';
+                });
+        }
+        
+        function setupFilters() {
+            // Generation filters
+            document.querySelectorAll('#generationFilters .filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('#generationFilters .filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    applyFilters();
+                });
+            });
+            
+            // Type filters
+            document.querySelectorAll('#typeFilters .filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('#typeFilters .filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    applyFilters();
+                });
+            });
+        }
+        
+        function applyFilters() {
+            const selectedGeneration = document.querySelector('#generationFilters .filter-btn.active').dataset.generation;
+            const selectedType = document.querySelector('#typeFilters .filter-btn.active').dataset.type;
+            
+            filteredPrompts = allPrompts.filter(prompt => {
+                const genMatch = selectedGeneration === 'all' || prompt.generation == selectedGeneration;
+                const typeMatch = selectedType === 'all' || getPromptType(prompt) === selectedType;
+                return genMatch && typeMatch;
+            });
+            
+            displayTree();
+        }
+        
+        function getPromptType(prompt) {
+            if (prompt.generation === 0) return 'genesis';
+            if (prompt.name.includes('M')) return 'mutation';
+            if (prompt.name.includes('C')) return 'crossover';
+            if (prompt.name.includes('E')) return 'elite';
+            return 'genesis';
+        }
+        
+        function initializeTree() {
+            // Get container dimensions with proper fallback
+            const container = document.getElementById('tree-svg').parentElement;
+            width = Math.max(container.offsetWidth - 40, 800); // Minimum width of 800
+            height = 800;
+            
+            // Create SVG
+            svg = d3.select('#tree-svg')
+                .attr('width', width)
+                .attr('height', height);
+            
+            // Create main group
+            g = svg.append('g');
+            
+            // Create tooltip
+            tooltip = d3.select('#tooltip');
+            
+            displayTree();
+        }
+        
+        function displayTree() {
+            if (!svg) {
+                console.error('SVG not initialized');
+                return;
+            }
+            
+            // Check if D3 is loaded
+            if (typeof d3 === 'undefined') {
+                g.append('text')
+                    .attr('x', width / 2)
+                    .attr('y', height / 2)
+                    .attr('text-anchor', 'middle')
+                    .text('D3.js failed to load. Please refresh the page.');
+                return;
+            }
+            
+            // Clear previous tree
+            g.selectAll('*').remove();
+            
+            // Build tree data structure
+            const treeData = buildTreeData();
+            
+            if (treeData.length === 0) {
+                g.append('text')
+                    .attr('x', width / 2)
+                    .attr('y', height / 2)
+                    .attr('text-anchor', 'middle')
+                    .text('No prompts found for selected filters');
+                return;
+            }
+            
+            // Create tree layout with proper dimensions
+            const treeWidth = Math.max(width - 100, 700);
+            const treeHeight = Math.max(height - 100, 600);
+            
+            const tree = d3.tree()
+                .size([treeWidth, treeHeight]);
+            
+            const root = d3.hierarchy(treeData[0]);
+            tree(root);
+            
+            // Add links
+            g.selectAll('.link')
+                .data(root.links())
+                .enter().append('path')
+                .attr('class', d => `link ${getLinkType(d.target.data)}`)
+                .attr('d', d3.linkVertical()
+                    .x(d => d.x + 50)
+                    .y(d => d.y + 50))
+                .style('fill', 'none');
+            
+            // Add nodes
+            const node = g.selectAll('.node')
+                .data(root.descendants())
+                .enter().append('g')
+                .attr('class', d => `node ${getPromptType(d.data)}`)
+                .attr('transform', d => `translate(${d.x + 50}, ${d.y + 50})`)
+                .on('click', d => showSynthesis(d.data))
+                .on('mouseover', showTooltip)
+                .on('mouseout', hideTooltip);
+            
+            // Add circles
+            node.append('circle')
+                .attr('r', 20);
+            
+            // Add text
+            node.append('text')
+                .attr('class', 'node-text')
+                .attr('dy', 5)
+                .text(d => d.data.name.length > 15 ? d.data.name.substring(0, 15) + '...' : d.data.name);
+        }
+        
+        function buildTreeData() {
+            // Find root nodes (generation 0)
+            const roots = filteredPrompts.filter(p => p.generation === 0);
+            
+            if (roots.length === 0) return [];
+            
+            // Build tree structure recursively
+            function buildNode(prompt) {
+                const node = {
+                    id: prompt.id,
+                    name: prompt.name,
+                    generation: prompt.generation,
+                    type: getPromptType(prompt),
+                    performance: prompt.performance_metrics || {},
+                    children: []
+                };
+                
+                // Find children (prompts that have this prompt as parent)
+                // For old data without parent_names, use name matching
+                const children = filteredPrompts.filter(p => {
+                    if (p.generation === prompt.generation + 1) {
+                        // If parent_names exists, use it
+                        if (p.parent_names && p.parent_names.length > 0) {
+                            return p.parent_names.includes(prompt.name);
+                        }
+                        // Otherwise, try to match by name pattern (for old data)
+                        return p.name.includes(prompt.name) || 
+                               (prompt.name !== 'Genesis' && p.name.includes('from_' + prompt.name));
+                    }
+                    return false;
+                });
+                
+                children.forEach(child => {
+                    node.children.push(buildNode(child));
+                });
+                
+                return node;
+            }
+            
+            return roots.map(buildNode);
+        }
+        
+        function getLinkType(nodeData) {
+            return nodeData.type || 'genesis';
+        }
+        
+        function showTooltip(event, d) {
+            const performance = d.data.performance || {};
+            const avgImprovement = performance.avg_improvement || 0;
+            const testCount = performance.test_count || 0;
+            
+            tooltip
+                .style('opacity', 1)
+                .html(`
+                    <strong>${d.data.name}</strong><br/>
+                    Generation: ${d.data.generation}<br/>
+                    Type: ${d.data.type}<br/>
+                    Improvement: +${avgImprovement.toFixed(3)}<br/>
+                    Tests: ${testCount}
+                `)
+                .style('left', (event.pageX + 10) + 'px')
+                .style('top', (event.pageY - 10) + 'px');
+        }
+        
+        function hideTooltip() {
+            tooltip.style('opacity', 0);
+        }
+        
+        function showSynthesis(promptData) {
+            const modal = document.getElementById('synthesisModal');
+            const content = document.getElementById('synthesisContent');
+            
+            content.innerHTML = 'Loading synthesis analysis...';
+            modal.style.display = 'block';
+            
+            fetch(`/api/prompt/${promptData.id}/synthesis`)
+                .then(response => response.json())
+                .then(data => {
+                    content.innerHTML = `
+                        <h6>${promptData.name} (G${promptData.generation})</h6>
+                        <div class="mb-3">
+                            <strong>Parent(s):</strong> ${(data.parent_names || []).join(', ') || 'None (Genesis)'}
+                        </div>
+                        <div class="mb-3">
+                            <strong>Synthesis Analysis:</strong>
+                            <div class="mt-2 p-3 bg-light rounded">${data.synthesis_analysis || 'No synthesis analysis available'}</div>
+                        </div>
+                        <div class="text-muted">
+                            <small>Based on ${data.conversation_count || 0} conversations</small>
+                        </div>
+                    `;
+                })
+                .catch(error => {
+                    content.innerHTML = `
+                        <h6>${promptData.name} (G${promptData.generation})</h6>
+                        <div class="text-muted">No synthesis analysis available</div>
+                    `;
+                });
+        }
+        
+        function closeSynthesisModal() {
+            document.getElementById('synthesisModal').style.display = 'none';
+        }
+        
+        function displayFallbackTree() {
+            const container = document.getElementById('familyTree');
+            container.innerHTML = `
+                <div class="alert alert-warning">
+                    <h5><i class="fas fa-exclamation-triangle me-2"></i>D3.js Visualization Unavailable</h5>
+                    <p>D3.js failed to load. Showing simple list view instead.</p>
+                </div>
+                <div class="row" id="fallbackTree">
+                    <!-- Fallback tree will be populated here -->
+                </div>
+            `;
+            
+            // Display prompts in a simple grid
+            const fallbackContainer = document.getElementById('fallbackTree');
+            let html = '';
+            
+            // Group by generation
+            const byGeneration = {};
+            filteredPrompts.forEach(prompt => {
+                if (!byGeneration[prompt.generation]) {
+                    byGeneration[prompt.generation] = [];
+                }
+                byGeneration[prompt.generation].push(prompt);
+            });
+            
+            // Display each generation
+            Object.keys(byGeneration).sort((a, b) => parseInt(a) - parseInt(b)).forEach(gen => {
+                html += `
+                    <div class="col-12 mb-4">
+                        <h4 class="text-center mb-3">Generation ${gen}</h4>
+                        <div class="row">
+                `;
+                
+                byGeneration[gen].forEach(prompt => {
+                    const promptType = getPromptType(prompt);
+                    html += `
+                        <div class="col-md-6 col-lg-4 mb-3">
+                            <div class="card ${promptType}">
+                                <div class="card-body">
+                                    <h6 class="card-title">${prompt.name}</h6>
+                                    <p class="card-text small">${prompt.prompt_text.substring(0, 100)}...</p>
+                                    <button class="btn btn-sm btn-outline-primary" onclick="showSynthesis(${JSON.stringify(prompt).replace(/"/g, '&quot;')})">
+                                        View Synthesis
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                html += `
+                        </div>
+                    </div>
+                `;
+            });
+            
+            fallbackContainer.innerHTML = html;
+        }
+    </script>
+</body>
+</html>

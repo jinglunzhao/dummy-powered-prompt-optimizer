@@ -149,7 +149,23 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- Synthesis Analysis Section -->
+                <div class="card mt-3" id="synthesisCard" style="display: none;">
+                    <div class="card-header" style="background: linear-gradient(135deg, #17a2b8 0%, #138496 100%); color: white; cursor: pointer;" onclick="toggleSynthesisAnalysis()">
+                        <h6 class="mb-0">
+                            <i class="fas fa-brain me-2"></i>Synthesis Analysis
+                            <i class="fas fa-chevron-down float-end" id="synthesisChevron"></i>
+                        </h6>
+                    </div>
+                    <div class="card-body collapse" id="synthesisAnalysisBody" style="background-color: #f8f9fa;">
+                        <p class="mb-0" style="color: #333;">Loading synthesis analysis...</p>
+                    </div>
+                </div>
             `;
+            
+            // Load synthesis analysis
+            loadSynthesisAnalysis(promptId);
         }
 
         function displayDummyResults(results) {
@@ -263,14 +279,27 @@
                                                 ` : `
                                                     <p class="text-muted"><i class="fas fa-info-circle me-2"></i>No conversation data available</p>
                                                 `}
-                                                
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Reflection Details -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reflection${index}">
+                                                <i class="fas fa-brain me-2"></i>Reflection Details
+                                            </button>
+                                        </h2>
+                                        <div id="reflection${index}" class="accordion-collapse collapse" data-bs-parent="#accordion${index}">
+                                            <div class="accordion-body">
                                                 ${result.reflection_insights && result.reflection_insights.length > 0 ? `
-                                                    <hr class="my-3">
                                                     <h6 class="text-success mb-3"><i class="fas fa-lightbulb me-2"></i>Reflection Insights</h6>
                                                     <ul>
                                                         ${result.reflection_insights.map(insight => `<li>${insight}</li>`).join('')}
                                                     </ul>
-                                                ` : ''}
+                                                ` : `
+                                                    <p class="text-muted"><i class="fas fa-info-circle me-2"></i>No reflection insights available</p>
+                                                `}
                                             </div>
                                         </div>
                                     </div>
@@ -282,6 +311,65 @@
             });
 
             container.innerHTML = html;
+        }
+        
+        function loadSynthesisAnalysis(promptId) {
+            console.log('Loading synthesis analysis for prompt:', promptId);
+            fetch(`/api/prompt/${promptId}/synthesis`)
+                .then(response => {
+                    console.log('Synthesis API response status:', response.status);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Synthesis API data received:', data);
+                    if (data && data.synthesis_analysis) {
+                        console.log('Displaying synthesis analysis');
+                        displaySynthesisAnalysis(data);
+                        document.getElementById('synthesisCard').style.display = 'block';
+                    } else {
+                        console.log('No synthesis analysis data available');
+                        document.getElementById('synthesisCard').style.display = 'none';
+                    }
+                })
+                .catch(error => {
+                    console.log('No synthesis analysis available for this prompt:', error);
+                    document.getElementById('synthesisCard').style.display = 'none';
+                });
+        }
+        
+        function displaySynthesisAnalysis(synthesisData) {
+            console.log('Displaying synthesis analysis:', synthesisData);
+            const synthesisBody = document.getElementById('synthesisAnalysisBody');
+            if (synthesisBody) {
+                synthesisBody.innerHTML = `
+                    <p class="mb-0" style="color: #333;">${synthesisData.synthesis_analysis || 'No synthesis analysis available'}</p>
+                    <small class="text-muted mt-2 d-block">
+                        <i class="fas fa-info-circle me-1"></i>
+                        Based on ${synthesisData.conversation_count || 0} conversations
+                    </small>
+                `;
+                console.log('Synthesis analysis displayed successfully');
+            } else {
+                console.error('synthesisAnalysisBody element not found');
+            }
+        }
+        
+        function toggleSynthesisAnalysis() {
+            const synthesisBody = document.getElementById('synthesisAnalysisBody');
+            const chevron = document.getElementById('synthesisChevron');
+            
+            if (synthesisBody.classList.contains('show')) {
+                synthesisBody.classList.remove('show');
+                chevron.classList.remove('fa-chevron-up');
+                chevron.classList.add('fa-chevron-down');
+            } else {
+                synthesisBody.classList.add('show');
+                chevron.classList.remove('fa-chevron-down');
+                chevron.classList.add('fa-chevron-up');
+            }
         }
     </script>
 </body>
