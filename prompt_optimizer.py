@@ -322,6 +322,9 @@ class PromptOptimizer:
             prompt, dummy, pre_assessment, post_assessment, conversation
         )
         
+        # Extract individual conversation reflection (first item in insights)
+        conversation_reflection = reflection_insights[0] if reflection_insights else "No reflection available"
+        
         # Generate natural language explanations (GEPA approach)
         what_worked, what_didnt_work, suggested_improvements = self._generate_natural_language_analysis(
             prompt, dummy, improvement, conversation_quality, reflection_insights
@@ -374,7 +377,8 @@ class PromptOptimizer:
                 pre_assessment=pre_assessment.model_dump() if hasattr(pre_assessment, 'model_dump') else pre_assessment,
                 post_assessment=post_assessment.model_dump() if hasattr(post_assessment, 'model_dump') else post_assessment,
                 improvement=improvement,
-                reflection_insights=reflection_insights
+                reflection_insights=reflection_insights,
+                reflection=conversation_reflection  # Add individual conversation reflection
             )
             print(f"💾 Saved conversation {conversation_id} for {dummy.name}")
         except Exception as e:

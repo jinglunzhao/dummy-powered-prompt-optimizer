@@ -300,27 +300,10 @@ def api_prompt(prompt_id):
     # Get conversations from the new storage system
     conversations = conversation_storage.get_conversations_by_prompt(prompt_id)
     
-    # Get all test results for this prompt (fallback to old system)
+    # Process conversations from new storage system
     prompt_results = []
-    if 'optimization_history' in optimization_data:
-        for result in optimization_data['optimization_history']:
-            if result.get('prompt_id') == prompt_id:
-                # Get dummy details
-                dummy = None
-                for d in data.get('dummies', []):
-                    if d.get('id') == result.get('dummy_id'):
-                        dummy = d
-                        break
-                
-                prompt_results.append({
-                    'result': result,
-                    'dummy': dummy
-                })
-    
-    # If we have conversations from new storage, use those instead
     if conversations:
         print(f"🔍 Found {len(conversations)} conversations from storage for prompt {prompt_id}")
-        prompt_results = []
         for conversation in conversations:
             # Get dummy details
             dummy = None
@@ -336,7 +319,8 @@ def api_prompt(prompt_id):
                     'post_score': conversation.get('post_assessment', {}).get('average_score', 0),
                     'improvement': conversation.get('improvement', 0),
                     'conversation': conversation.get('conversation', []),
-                    'reflection_insights': conversation.get('reflection_insights', [])
+                    'reflection_insights': conversation.get('reflection_insights', []),
+                    'reflection': conversation.get('reflection', '')  # Add individual conversation reflection
                 }
                 print(f"💬 Conversation for {dummy.get('name')}: {len(result['conversation'])} turns")
                 prompt_results.append({

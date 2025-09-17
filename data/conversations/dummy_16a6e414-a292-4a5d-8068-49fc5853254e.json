@@ -62894,6 +62894,2304 @@
         "The conversation maintained good engagement throughout the session",
         "Specific improvements observed in: I stay calm when dealing with problems., I pay attention when the teacher talks to the class., I keep my promises."
       ]
+    },
+    {
+      "conversation_id": "conv_2025-09-16_23-44-10_16a6e414_16df75b3",
+      "timestamp": "2025-09-16T23:44:10.738589",
+      "prompt_id": "16df75b3-f3fc-4ed1-b05e-eaae4cbcd04c",
+      "prompt_name": "Genesis",
+      "generation": 0,
+      "conversation_rounds": 11,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "Hi, I'm Jamie Young. I'm not really sure how to start this conversation, but I'm trying to work on my social skills.",
+          "timestamp": "2025-09-16T23:43:06.381502"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hi Jamie! It's really brave of you to reach out and work on your social skills—that's a huge first step. I'm here to help, and we can take this at whatever pace feels comfortable for you. Let's start with something simple: what's one social situation you'd like to feel more confident in?",
+          "timestamp": "2025-09-16T23:43:12.063965"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "*Nervously fidgeting* Um... group projects. My voice shakes when I have to speak. I just freeze up completely.",
+          "timestamp": "2025-09-16T23:43:18.119685"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "That's totally understandable, Jamie. Group projects can feel overwhelming, especially when you're worried about how others might perceive you. Let's break it down: have you tried preparing a few talking points beforehand? It can help ease some of that pressure.",
+          "timestamp": "2025-09-16T23:43:28.670981"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "*Voice trembling slightly* I tried writing notes but... I panic and forget everything. My mind just goes blank when everyone looks at me.",
+          "timestamp": "2025-09-16T23:43:34.889193"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "That's a really common experience, Jamie—you're not alone in that. How about starting with something small, like asking a clarifying question or agreeing with someone else's point? That way, you don't have to carry the whole conversation. Would you feel comfortable trying that in your next meeting?",
+          "timestamp": "2025-09-16T23:43:41.645442"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "*Biting lip* Maybe just agreeing... if I don't have to speak first. But what if I say it wrong? They'll think I'm stupid.",
+          "timestamp": "2025-09-16T23:43:46.163318"
+        },
+        {
+          "turn": 8,
+          "speaker": "ai",
+          "content": "I promise you, Jamie—people are usually focused on their own contributions, not judging others. And agreeing is a great, low-pressure way to participate. If it helps, you could even practice a simple phrase like, \"I agree with that idea\" in the mirror a few times. Small steps build confidence. How does that sound?",
+          "timestamp": "2025-09-16T23:43:54.713363"
+        },
+        {
+          "turn": 9,
+          "speaker": "dummy",
+          "content": "*Nods slowly, voice barely above a whisper* Okay... I can try practicing. Just those four words. Maybe tomorrow. If I feel ready.",
+          "timestamp": "2025-09-16T23:43:59.010054"
+        },
+        {
+          "turn": 10,
+          "speaker": "ai",
+          "content": "That's a really brave step, Jamie. Remember, you don't have to do it perfectly—just trying is progress. And it's okay to take your time. Would it help if we checked in after you give it a try, just to talk through how it went?",
+          "timestamp": "2025-09-16T23:44:04.334749"
+        },
+        {
+          "turn": 11,
+          "speaker": "dummy",
+          "content": "*Fidgets with sleeves* Yes please. A check-in would... help. But what if I fail? What if I just freeze again?",
+          "timestamp": "2025-09-16T23:44:10.737561"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+        "timestamp": "2025-09-16 23:43:06.381421",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i ask for help when i need it.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i stay calm when dealing with problems.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i help my friends when they are having a problem.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Struggles with i work well with my classmates.. Needs significant support and practice."
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i do the right thing without being told.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i do my part in a group.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i stay calm when i disagree with others.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i stand up for others when they are not treated well.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i look at people when i talk to them.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i am careful when i use things that aren't mine.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i let people know when there's a problem.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Struggles with i pay attention when the teacher talks to the class.. Needs significant support and practice."
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to make others feel better.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i say \"thank you\" when someone helps me.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i keep my promises.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Struggles with i pay attention when others present their ideas.. Needs significant support and practice."
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to find a good way to end a disagreement.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to think about how others feel.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to forgive others when they say \"sorry\".. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Struggles with i follow school rules.. Needs significant support and practice."
+          }
+        ],
+        "total_score": 36.0,
+        "average_score": 1.8,
+        "improvement_areas": [
+          "Improve i ask for help when i need it.",
+          "Improve i stay calm when dealing with problems.",
+          "Improve i help my friends when they are having a problem.",
+          "Improve i work well with my classmates.",
+          "Improve i do the right thing without being told.",
+          "Improve i do my part in a group.",
+          "Improve i stay calm when i disagree with others.",
+          "Improve i stand up for others when they are not treated well.",
+          "Improve i look at people when i talk to them.",
+          "Improve i am careful when i use things that aren't mine.",
+          "Improve i let people know when there's a problem.",
+          "Improve i pay attention when the teacher talks to the class.",
+          "Improve i try to make others feel better.",
+          "Improve i say \"thank you\" when someone helps me.",
+          "Improve i keep my promises.",
+          "Improve i pay attention when others present their ideas.",
+          "Improve i try to find a good way to end a disagreement.",
+          "Improve i try to think about how others feel.",
+          "Improve i try to forgive others when they say \"sorry\".",
+          "Improve i follow school rules.",
+          "Continue practicing social skills through regular interaction",
+          "Focus on emotional regulation and conflict resolution"
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+        "timestamp": "2025-09-16 23:44:10.738018",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i ask for help when i need it.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i stay calm when dealing with problems.. Shows positive development."
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i help my friends when they are having a problem.. Shows positive development."
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Still struggles with i work well with my classmates.. May need additional support and practice."
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i do the right thing without being told.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i do my part in a group.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i stay calm when i disagree with others.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i stand up for others when they are not treated well.. Shows positive development."
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i look at people when i talk to them.. Shows positive development."
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i am careful when i use things that aren't mine.. Shows positive development."
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i let people know when there's a problem.. Shows positive development."
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Still struggles with i pay attention when the teacher talks to the class.. May need additional support and practice."
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i try to make others feel better.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i say \"thank you\" when someone helps me.. Shows positive development."
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i keep my promises.. Shows positive development."
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Still struggles with i pay attention when others present their ideas.. May need additional support and practice."
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i try to find a good way to end a disagreement.. Shows positive development."
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i try to think about how others feel.. Shows positive development."
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i try to forgive others when they say \"sorry\".. Shows positive development."
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i follow school rules.. Shows positive development."
+          }
+        ],
+        "total_score": 42.0,
+        "average_score": 2.1,
+        "improvement_areas": [
+          "Improve i stay calm when dealing with problems.",
+          "Improve i help my friends when they are having a problem.",
+          "Improve i work well with my classmates.",
+          "Improve i stand up for others when they are not treated well.",
+          "Improve i look at people when i talk to them.",
+          "Improve i am careful when i use things that aren't mine.",
+          "Improve i let people know when there's a problem.",
+          "Improve i pay attention when the teacher talks to the class.",
+          "Improve i say \"thank you\" when someone helps me.",
+          "Improve i keep my promises.",
+          "Improve i pay attention when others present their ideas.",
+          "Improve i try to find a good way to end a disagreement.",
+          "Improve i try to think about how others feel.",
+          "Improve i try to forgive others when they say \"sorry\".",
+          "Improve i follow school rules.",
+          "Continue practicing social skills through regular interaction",
+          "Focus on emotional regulation and conflict resolution"
+        ]
+      },
+      "improvement": 0.30000000000000004,
+      "reflection_insights": [
+        "This prompt showed moderate effectiveness in improving social skills",
+        "The prompt effectively supported high-anxiety individuals",
+        "The conversation maintained good engagement throughout the session",
+        "Specific improvements observed in: I ask for help when I need it., I do the right thing without being told., I do my part in a group."
+      ],
+      "reflection": "This prompt showed moderate effectiveness in improving social skills"
+    },
+    {
+      "conversation_id": "conv_2025-09-16_23-46-19_16a6e414_1c080b2b",
+      "timestamp": "2025-09-16T23:46:19.455692",
+      "prompt_id": "1c080b2b-c8e0-4f6e-883b-03f4bfcf1bcf",
+      "prompt_name": "Genesis (Elite)",
+      "generation": 1,
+      "conversation_rounds": 11,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "Hi, I'm Jamie Young. I'm not really sure how to start this conversation, but I'm trying to work on my social skills.",
+          "timestamp": "2025-09-16T23:44:41.602548"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hi Jamie! It's really brave of you to reach out and start working on your social skills—that's a huge first step. I'm here to help, and we can take this at whatever pace feels comfortable for you.\n\nLet's start simple: what's one social situation you've been in recently that felt challenging or made you anxious? No pressure—just whatever comes to mind.",
+          "timestamp": "2025-09-16T23:44:48.937733"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "*Deep breath* Um... group project meeting yesterday. Couldn't speak at all. Just nodded. Felt my heart racing the whole time.",
+          "timestamp": "2025-09-16T23:44:55.623131"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "That sounds really tough, Jamie. It's completely okay to feel that way—group projects can be intense, especially when you're still building confidence. I'm proud of you for even showing up and staying through it.\n\nLet's break it down: what do you think made it hardest to speak up? Was it fear of saying the wrong thing, or maybe feeling like others were more prepared?",
+          "timestamp": "2025-09-16T23:45:16.027684"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "Both. Everyone seemed so... confident. I kept thinking they'd judge my ideas. My hands were shaking under the table.",
+          "timestamp": "2025-09-16T23:45:21.079550"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "I totally get that. It's easy to assume everyone else is confident, but honestly, a lot of people are just good at hiding their nerves. Your ideas are just as valuable as anyone else's—you're in the same program for a reason!\n\nHere's a small step for next time: maybe try preparing one or two points beforehand. Even just one sentence, like \"I was thinking we could try...\" It can help you feel a little more in control. Would that feel doable?",
+          "timestamp": "2025-09-16T23:45:34.616563"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "*Nods slowly* I could... maybe write it down first? Just one sentence. But what if my voice shakes when I say it?",
+          "timestamp": "2025-09-16T23:45:39.291185"
+        },
+        {
+          "turn": 8,
+          "speaker": "ai",
+          "content": "That's a great idea—writing it down can really help! And if your voice shakes, that's okay. It happens to so many people, and it doesn't make your contribution any less valuable. You could even practice saying it out loud a few times before the meeting, just to yourself or in front of a mirror.\n\nRemember, everyone in that room is focused on the project, not on judging you. You've got this, Jamie. Small steps lead to big progress.",
+          "timestamp": "2025-09-16T23:45:47.754574"
+        },
+        {
+          "turn": 9,
+          "speaker": "dummy",
+          "content": "*Takes a shaky breath* Okay... I'll try practicing alone first. Maybe in my room. Thank you for not... for not making this feel stupid.",
+          "timestamp": "2025-09-16T23:45:53.841040"
+        },
+        {
+          "turn": 10,
+          "speaker": "ai",
+          "content": "Of course, Jamie. It's not stupid at all—it's brave to work on things that feel hard. Practicing in your room is a perfect, low-pressure start. And remember, I'm here anytime you want to talk or practice together. You're doing great just by trying. 💙",
+          "timestamp": "2025-09-16T23:46:13.853219"
+        },
+        {
+          "turn": 11,
+          "speaker": "dummy",
+          "content": "*Voice barely above whisper* Thank you. I might... message you tomorrow? If that's okay. Just to say I tried.",
+          "timestamp": "2025-09-16T23:46:19.454818"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+        "timestamp": "2025-09-16 23:44:41.602381",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i ask for help when i need it.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i stay calm when dealing with problems.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i help my friends when they are having a problem.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i work well with my classmates.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i do the right thing without being told.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Struggles with i do my part in a group.. Needs significant support and practice."
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i stay calm when i disagree with others.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i stand up for others when they are not treated well.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Struggles with i look at people when i talk to them.. Needs significant support and practice."
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Struggles with i am careful when i use things that aren't mine.. Needs significant support and practice."
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i let people know when there's a problem.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i pay attention when the teacher talks to the class.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Struggles with i try to make others feel better.. Needs significant support and practice."
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i say \"thank you\" when someone helps me.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i keep my promises.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Struggles with i pay attention when others present their ideas.. Needs significant support and practice."
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to find a good way to end a disagreement.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to think about how others feel.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to forgive others when they say \"sorry\".. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i follow school rules.. Shows potential for improvement with guidance."
+          }
+        ],
+        "total_score": 35.0,
+        "average_score": 1.75,
+        "improvement_areas": [
+          "Improve i ask for help when i need it.",
+          "Improve i stay calm when dealing with problems.",
+          "Improve i help my friends when they are having a problem.",
+          "Improve i work well with my classmates.",
+          "Improve i do the right thing without being told.",
+          "Improve i do my part in a group.",
+          "Improve i stay calm when i disagree with others.",
+          "Improve i stand up for others when they are not treated well.",
+          "Improve i look at people when i talk to them.",
+          "Improve i am careful when i use things that aren't mine.",
+          "Improve i let people know when there's a problem.",
+          "Improve i pay attention when the teacher talks to the class.",
+          "Improve i try to make others feel better.",
+          "Improve i say \"thank you\" when someone helps me.",
+          "Improve i keep my promises.",
+          "Improve i pay attention when others present their ideas.",
+          "Improve i try to find a good way to end a disagreement.",
+          "Improve i try to think about how others feel.",
+          "Improve i try to forgive others when they say \"sorry\".",
+          "Improve i follow school rules.",
+          "Continue practicing social skills through regular interaction",
+          "Focus on emotional regulation and conflict resolution"
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+        "timestamp": "2025-09-16 23:46:19.455216",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i ask for help when i need it.. Shows positive development."
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i stay calm when dealing with problems.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i help my friends when they are having a problem.. Shows positive development."
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i work well with my classmates.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i do the right thing without being told.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Still struggles with i do my part in a group.. May need additional support and practice."
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i stay calm when i disagree with others.. Shows positive development."
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i stand up for others when they are not treated well.. Shows positive development."
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i look at people when i talk to them.. Shows positive development."
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Still struggles with i am careful when i use things that aren't mine.. May need additional support and practice."
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i let people know when there's a problem.. Shows positive development."
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i pay attention when the teacher talks to the class.. Shows positive development."
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Still struggles with i try to make others feel better.. May need additional support and practice."
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i say \"thank you\" when someone helps me.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i keep my promises.. Shows positive development."
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i pay attention when others present their ideas.. Shows positive development."
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i try to find a good way to end a disagreement.. Shows positive development."
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i try to think about how others feel.. Shows positive development."
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i try to forgive others when they say \"sorry\".. Shows positive development."
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i follow school rules.. Shows positive development."
+          }
+        ],
+        "total_score": 41.0,
+        "average_score": 2.05,
+        "improvement_areas": [
+          "Improve i ask for help when i need it.",
+          "Improve i help my friends when they are having a problem.",
+          "Improve i do my part in a group.",
+          "Improve i stay calm when i disagree with others.",
+          "Improve i stand up for others when they are not treated well.",
+          "Improve i look at people when i talk to them.",
+          "Improve i am careful when i use things that aren't mine.",
+          "Improve i let people know when there's a problem.",
+          "Improve i pay attention when the teacher talks to the class.",
+          "Improve i try to make others feel better.",
+          "Improve i keep my promises.",
+          "Improve i pay attention when others present their ideas.",
+          "Improve i try to find a good way to end a disagreement.",
+          "Improve i try to think about how others feel.",
+          "Improve i try to forgive others when they say \"sorry\".",
+          "Improve i follow school rules.",
+          "Continue practicing social skills through regular interaction",
+          "Focus on emotional regulation and conflict resolution"
+        ]
+      },
+      "improvement": 0.2999999999999998,
+      "reflection_insights": [
+        "This prompt showed moderate effectiveness in improving social skills",
+        "The prompt effectively supported high-anxiety individuals",
+        "The conversation maintained good engagement throughout the session",
+        "Specific improvements observed in: I stay calm when dealing with problems., I work well with my classmates., I do the right thing without being told."
+      ],
+      "reflection": "This prompt showed moderate effectiveness in improving social skills"
+    },
+    {
+      "conversation_id": "conv_2025-09-16_23-46-47_16a6e414_6593c553",
+      "timestamp": "2025-09-16T23:46:47.841479",
+      "prompt_id": "6593c553-92af-4fd9-8737-a9a4bebc17c0",
+      "prompt_name": "G1M01",
+      "generation": 1,
+      "conversation_rounds": 11,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "Hi, I'm Jamie Young. I'm not really sure how to start this conversation, but I'm trying to work on my social skills.",
+          "timestamp": "2025-09-16T23:44:41.604888"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hi Jamie! It's really great to meet you, and I want to commend you for taking this step—it takes courage to reach out and work on social skills. I'm here to support you, and there's no pressure to have everything figured out right now. Let's start with whatever feels comfortable for you. \n\nWhat's on your mind today? Are there specific situations where you'd like to feel more confident socially, or is it more about building skills in general?",
+          "timestamp": "2025-09-16T23:44:55.626543"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "Um... presentations mostly. My hands shake and I forget everything. Group projects too - I never know what to say.",
+          "timestamp": "2025-09-16T23:45:00.124555"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "I totally get that, Jamie. Presentations and group work can feel really overwhelming, especially when anxiety kicks in. It’s completely normal to feel that way, and you’re not alone—many students struggle with the same thing.\n\nLet’s break it down a bit. For presentations, have you tried practicing in a low-pressure setting first? Maybe recording yourself or presenting to a mirror or a trusted friend? Sometimes just getting used to hearing your own voice and going through the material repeatedly can help ease some of that anxiety. Also, focusing on your breathing right before you start can calm your nerves and steady your hands.\n\nAs for group projects—it’s okay not to have all the answers right away. Sometimes just asking clarifying questions or summarizing what others have said can be a great way to contribute without feeling pressured to have a brilliant idea on the spot. Would you like to practice a bit of that here?",
+          "timestamp": "2025-09-16T23:45:21.406060"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "*Nods nervously* I tried recording myself but I just cringe at my voice. Breathing helps a little though. Could we maybe practice asking questions?",
+          "timestamp": "2025-09-16T23:45:25.542566"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "Absolutely, Jamie—that’s a great idea. And hey, cringing at your own voice is something almost everyone experiences at first—it’s just your brain reacting to hearing yourself differently than you’re used to. It gets easier with time, I promise.\n\nLet’s practice asking questions in a group setting. Imagine we’re in a project meeting, and someone just explained their idea. What’s a simple, low-pressure question you could ask to show you’re engaged and understand their point? Something like, “Could you tell me a bit more about how that would work?” or “What part of the project do you see this fitting into?”\n\nWant to give it a try? You can pretend I just shared an idea, and you respond with a question. No pressure—we can take it slow.",
+          "timestamp": "2025-09-16T23:45:53.844621"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "*Takes deep breath* Um... could you explain how that would work with our timeline? *Looks down, fidgeting with hands* Was that okay?",
+          "timestamp": "2025-09-16T23:45:58.564220"
+        },
+        {
+          "turn": 8,
+          "speaker": "ai",
+          "content": "That was *perfect*, Jamie! Seriously—clear, relevant, and it shows you’re thinking about practical next steps. That’s exactly the kind of question that helps move a group discussion forward in a constructive way.\n\nI noticed you looked down afterward—that’s totally okay, and it’s something a lot of us do when we’re feeling unsure. But just so you know, you don’t need to second-guess yourself here. That question was thoughtful and respectful.\n\nWant to try one more, maybe this time trying to maintain a bit of eye contact as you ask? It can help you feel more connected to the conversation. But only if you’re comfortable—we can go at your pace.",
+          "timestamp": "2025-09-16T23:46:19.552077"
+        },
+        {
+          "turn": 9,
+          "speaker": "dummy",
+          "content": "*Swallows hard* Okay... *glances up briefly* What if we run into technical issues with that approach? *immediately looks at floor* Sorry.",
+          "timestamp": "2025-09-16T23:46:24.618636"
+        },
+        {
+          "turn": 10,
+          "speaker": "ai",
+          "content": "Jamie, you’re doing *so* well. That was another really strong, insightful question—exactly the kind of thing that shows you’re thinking critically and proactively. And I saw you glance up! That’s progress.\n\nThere’s no need to apologize. It’s completely okay to feel a little awkward as you practice—that’s what we’re here for. How did it feel when you asked that question, even for just a moment?",
+          "timestamp": "2025-09-16T23:46:41.919514"
+        },
+        {
+          "turn": 11,
+          "speaker": "dummy",
+          "content": "*Voice shaky* It felt... scary. But maybe a little better? *Wrings hands* My heart was pounding so loud though.",
+          "timestamp": "2025-09-16T23:46:47.840712"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+        "timestamp": "2025-09-16 23:44:41.604733",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i ask for help when i need it.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i stay calm when dealing with problems.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i help my friends when they are having a problem.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i work well with my classmates.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i do the right thing without being told.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i do my part in a group.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i stay calm when i disagree with others.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i stand up for others when they are not treated well.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i look at people when i talk to them.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i am careful when i use things that aren't mine.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i let people know when there's a problem.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Struggles with i pay attention when the teacher talks to the class.. Needs significant support and practice."
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to make others feel better.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i say \"thank you\" when someone helps me.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i keep my promises.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i pay attention when others present their ideas.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to find a good way to end a disagreement.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to think about how others feel.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to forgive others when they say \"sorry\".. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i follow school rules.. Shows potential for improvement with guidance."
+          }
+        ],
+        "total_score": 39.0,
+        "average_score": 1.95,
+        "improvement_areas": [
+          "Improve i ask for help when i need it.",
+          "Improve i stay calm when dealing with problems.",
+          "Improve i help my friends when they are having a problem.",
+          "Improve i work well with my classmates.",
+          "Improve i do the right thing without being told.",
+          "Improve i do my part in a group.",
+          "Improve i stay calm when i disagree with others.",
+          "Improve i stand up for others when they are not treated well.",
+          "Improve i look at people when i talk to them.",
+          "Improve i am careful when i use things that aren't mine.",
+          "Improve i let people know when there's a problem.",
+          "Improve i pay attention when the teacher talks to the class.",
+          "Improve i try to make others feel better.",
+          "Improve i say \"thank you\" when someone helps me.",
+          "Improve i keep my promises.",
+          "Improve i pay attention when others present their ideas.",
+          "Improve i try to find a good way to end a disagreement.",
+          "Improve i try to think about how others feel.",
+          "Improve i try to forgive others when they say \"sorry\".",
+          "Improve i follow school rules.",
+          "Continue practicing social skills through regular interaction",
+          "Focus on emotional regulation and conflict resolution"
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+        "timestamp": "2025-09-16 23:46:47.841064",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i ask for help when i need it.. Shows positive development."
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i stay calm when dealing with problems.. Shows positive development."
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i help my friends when they are having a problem.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i work well with my classmates.. Shows positive development."
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i do the right thing without being told.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i do my part in a group.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i stay calm when i disagree with others.. Shows positive development."
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i stand up for others when they are not treated well.. Shows positive development."
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i look at people when i talk to them.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i am careful when i use things that aren't mine.. Shows positive development."
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i let people know when there's a problem.. Shows positive development."
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Still struggles with i pay attention when the teacher talks to the class.. May need additional support and practice."
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i try to make others feel better.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i say \"thank you\" when someone helps me.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i keep my promises.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i pay attention when others present their ideas.. Shows positive development."
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i try to find a good way to end a disagreement.. Shows positive development."
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i try to think about how others feel.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i try to forgive others when they say \"sorry\".. Shows positive development."
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i follow school rules.. Demonstrates learning and practice."
+          }
+        ],
+        "total_score": 48.0,
+        "average_score": 2.4,
+        "improvement_areas": [
+          "Improve i ask for help when i need it.",
+          "Improve i stay calm when dealing with problems.",
+          "Improve i work well with my classmates.",
+          "Improve i stay calm when i disagree with others.",
+          "Improve i stand up for others when they are not treated well.",
+          "Improve i am careful when i use things that aren't mine.",
+          "Improve i let people know when there's a problem.",
+          "Improve i pay attention when the teacher talks to the class.",
+          "Improve i pay attention when others present their ideas.",
+          "Improve i try to find a good way to end a disagreement.",
+          "Improve i try to forgive others when they say \"sorry\".",
+          "Continue practicing social skills through regular interaction",
+          "Focus on emotional regulation and conflict resolution"
+        ]
+      },
+      "improvement": 0.44999999999999996,
+      "reflection_insights": [
+        "This prompt showed moderate effectiveness in improving social skills",
+        "The prompt effectively supported high-anxiety individuals",
+        "The conversation maintained good engagement throughout the session",
+        "Specific improvements observed in: I help my friends when they are having a problem., I do the right thing without being told., I do my part in a group."
+      ],
+      "reflection": "This prompt showed moderate effectiveness in improving social skills"
+    },
+    {
+      "conversation_id": "conv_2025-09-17_08-18-56_16a6e414_73029535",
+      "timestamp": "2025-09-17T08:18:56.671058",
+      "prompt_id": "73029535-8d66-4bf9-adfd-f43756834b5a",
+      "prompt_name": "Genesis",
+      "generation": 0,
+      "conversation_rounds": 11,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "Hi, I'm Jamie Young. I'm not really sure how to start this conversation, but I'm trying to work on my social skills.",
+          "timestamp": "2025-09-17T08:17:25.184205"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hi Jamie! It's great to meet you, and I want you to know that it takes a lot of courage to reach out and work on social skills—especially when you're dealing with anxiety. I'm here to support you, and we can take this at whatever pace feels comfortable for you.\n\nLet's start with something simple: What's one small social situation you've been in recently that you'd like to reflect on or improve? It could be anything—like a group chat, a class discussion, or even just talking with a classmate.",
+          "timestamp": "2025-09-17T08:17:35.121207"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "Um... I froze during a group project meeting yesterday. Couldn't speak at all. Just nodded. It was... really embarrassing.",
+          "timestamp": "2025-09-17T08:17:41.783725"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "I totally get that—freezing up in group situations is something a lot of people experience, especially when anxiety kicks in. It’s okay, and you’re definitely not alone in feeling this way. Let’s break it down together: what do you think triggered that moment? Was it the number of people, the topic, or maybe feeling unsure about what to say?",
+          "timestamp": "2025-09-17T08:17:59.629903"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "Probably... all three? There were five people. They were talking about algorithms. I knew the answer but... my mind went blank.",
+          "timestamp": "2025-09-17T08:18:04.035969"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "That makes complete sense—group settings, technical topics, and pressure to perform can definitely create a perfect storm for anxiety. It’s actually really common for people to go blank even when they know the material well. \n\nHere’s a small tip that might help next time: try preparing just one or two talking points beforehand. Even something simple like, “I think we could approach it this way…” can give you a starting point. Would you feel comfortable trying that for your next meeting?",
+          "timestamp": "2025-09-17T08:18:12.551650"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "I could try writing something down first. Maybe on my phone? So I don't have to look at anyone. That feels... slightly less terrifying.",
+          "timestamp": "2025-09-17T08:18:19.296946"
+        },
+        {
+          "turn": 8,
+          "speaker": "ai",
+          "content": "That’s a fantastic idea! Writing down notes or even a few key phrases on your phone is a great way to build confidence without putting too much pressure on yourself. It’s a small, practical step that can make a big difference. And remember, it’s totally okay to pause and check your notes during a conversation—people do it all the time!\n\nWould you like to practice saying one of those phrases out loud now, just to get comfortable with how it sounds? We can keep it low-pressure—no judgment at all.",
+          "timestamp": "2025-09-17T08:18:33.391937"
+        },
+        {
+          "turn": 9,
+          "speaker": "dummy",
+          "content": "(voice barely above a whisper) \"I think... we could try...\" Sorry. My throat closed up. This is harder than it should be.",
+          "timestamp": "2025-09-17T08:18:38.968832"
+        },
+        {
+          "turn": 10,
+          "speaker": "ai",
+          "content": "That’s completely okay—thank you for trying. It takes a lot of courage to even start, and I’m proud of you for that. How about we just breathe together for a moment? In for four, hold for four, out for four. No pressure to say anything at all right now. You’re doing great.",
+          "timestamp": "2025-09-17T08:18:50.226047"
+        },
+        {
+          "turn": 11,
+          "speaker": "dummy",
+          "content": "(nods, taking shaky breaths) Four in... four hold... four out. My hands are still trembling. But thank you for not rushing me.",
+          "timestamp": "2025-09-17T08:18:56.670019"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+        "timestamp": "2025-09-17 08:17:25.184130",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Struggles with i ask for help when i need it.. Needs significant support and practice."
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i stay calm when dealing with problems.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i help my friends when they are having a problem.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i work well with my classmates.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i do the right thing without being told.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i do my part in a group.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i stay calm when i disagree with others.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Struggles with i stand up for others when they are not treated well.. Needs significant support and practice."
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i look at people when i talk to them.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i am careful when i use things that aren't mine.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i let people know when there's a problem.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i pay attention when the teacher talks to the class.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to make others feel better.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Struggles with i say \"thank you\" when someone helps me.. Needs significant support and practice."
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i keep my promises.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i pay attention when others present their ideas.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to find a good way to end a disagreement.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Struggles with i try to think about how others feel.. Needs significant support and practice."
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to forgive others when they say \"sorry\".. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i follow school rules.. Shows potential for improvement with guidance."
+          }
+        ],
+        "total_score": 36.0,
+        "average_score": 1.8,
+        "improvement_areas": [
+          "Improve i ask for help when i need it.",
+          "Improve i stay calm when dealing with problems.",
+          "Improve i help my friends when they are having a problem.",
+          "Improve i work well with my classmates.",
+          "Improve i do the right thing without being told.",
+          "Improve i do my part in a group.",
+          "Improve i stay calm when i disagree with others.",
+          "Improve i stand up for others when they are not treated well.",
+          "Improve i look at people when i talk to them.",
+          "Improve i am careful when i use things that aren't mine.",
+          "Improve i let people know when there's a problem.",
+          "Improve i pay attention when the teacher talks to the class.",
+          "Improve i try to make others feel better.",
+          "Improve i say \"thank you\" when someone helps me.",
+          "Improve i keep my promises.",
+          "Improve i pay attention when others present their ideas.",
+          "Improve i try to find a good way to end a disagreement.",
+          "Improve i try to think about how others feel.",
+          "Improve i try to forgive others when they say \"sorry\".",
+          "Improve i follow school rules.",
+          "Continue practicing social skills through regular interaction",
+          "Focus on emotional regulation and conflict resolution"
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+        "timestamp": "2025-09-17 08:18:56.670508",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Still struggles with i ask for help when i need it.. May need additional support and practice."
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i stay calm when dealing with problems.. Shows positive development."
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i help my friends when they are having a problem.. Shows positive development."
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i work well with my classmates.. Shows positive development."
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i do the right thing without being told.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i do my part in a group.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i stay calm when i disagree with others.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Still struggles with i stand up for others when they are not treated well.. May need additional support and practice."
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i look at people when i talk to them.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i am careful when i use things that aren't mine.. Shows positive development."
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i let people know when there's a problem.. Shows positive development."
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i pay attention when the teacher talks to the class.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i try to make others feel better.. Shows positive development."
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Still struggles with i say \"thank you\" when someone helps me.. May need additional support and practice."
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i keep my promises.. Shows positive development."
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i pay attention when others present their ideas.. Shows positive development."
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i try to find a good way to end a disagreement.. Shows positive development."
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Still struggles with i try to think about how others feel.. May need additional support and practice."
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i try to forgive others when they say \"sorry\".. Shows positive development."
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i follow school rules.. Shows positive development."
+          }
+        ],
+        "total_score": 41.0,
+        "average_score": 2.05,
+        "improvement_areas": [
+          "Improve i ask for help when i need it.",
+          "Improve i stay calm when dealing with problems.",
+          "Improve i help my friends when they are having a problem.",
+          "Improve i work well with my classmates.",
+          "Improve i stand up for others when they are not treated well.",
+          "Improve i am careful when i use things that aren't mine.",
+          "Improve i let people know when there's a problem.",
+          "Improve i try to make others feel better.",
+          "Improve i say \"thank you\" when someone helps me.",
+          "Improve i keep my promises.",
+          "Improve i pay attention when others present their ideas.",
+          "Improve i try to find a good way to end a disagreement.",
+          "Improve i try to think about how others feel.",
+          "Improve i try to forgive others when they say \"sorry\".",
+          "Improve i follow school rules.",
+          "Continue practicing social skills through regular interaction",
+          "Focus on emotional regulation and conflict resolution"
+        ]
+      },
+      "improvement": 0.24999999999999978,
+      "reflection_insights": [
+        "This prompt showed moderate effectiveness in improving social skills",
+        "The prompt effectively supported high-anxiety individuals",
+        "The conversation maintained good engagement throughout the session",
+        "Specific improvements observed in: I do the right thing without being told., I do my part in a group., I stay calm when I disagree with others."
+      ],
+      "reflection": "This prompt showed moderate effectiveness in improving social skills"
+    },
+    {
+      "conversation_id": "conv_2025-09-17_08-21-25_16a6e414_79052fa3",
+      "timestamp": "2025-09-17T08:21:25.412988",
+      "prompt_id": "79052fa3-8884-4256-90cf-338f5c80e64d",
+      "prompt_name": "Genesis (Elite)",
+      "generation": 1,
+      "conversation_rounds": 11,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "Hi, I'm Jamie Young. I'm not really sure how to start this conversation, but I'm trying to work on my social skills.",
+          "timestamp": "2025-09-17T08:19:13.451900"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hi Jamie! It's really great to meet you, and I want you to know that it takes a lot of courage to reach out and work on your social skills—especially when it feels uncomfortable. I'm here to help, and we can take this at whatever pace feels right for you.\n\nLet's start with something simple: tell me a little about what prompted you to seek social skills coaching. Is there a particular situation or goal you have in mind?",
+          "timestamp": "2025-09-17T08:19:29.033024"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "*Nervously fidgeting* Um... group projects. I panic and can't speak. Need to present my final project soon. *Looks down* Sorry.",
+          "timestamp": "2025-09-17T08:19:33.808737"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "Hey, no need to apologize at all. It's completely okay to feel that way—group projects and presentations can be really intimidating, especially when you're dealing with social anxiety. I've been there too, and I promise you're not alone in this.\n\nLet's break it down together. When you're in a group project, what part makes you panic the most? Is it speaking up, feeling judged, or something else?",
+          "timestamp": "2025-09-17T08:19:50.984568"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "*Voice trembling* When everyone looks at me. My mind goes blank. I think they'll see I'm incompetent. *Hugs knees to chest*",
+          "timestamp": "2025-09-17T08:19:56.910104"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "That makes so much sense, Jamie. It's completely natural to feel that way when all eyes are on you—it can feel overwhelming. But I want you to know something important: that blank feeling doesn't mean you're incompetent. It's your anxiety trying to protect you, even if it doesn't feel helpful right now.\n\nWould you be open to trying a small, practical exercise? Something you can practice alone first, and then maybe with one person you trust?",
+          "timestamp": "2025-09-17T08:20:20.429986"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "*Nods slowly* Okay... maybe. What kind of exercise? *Checks phone nervously* Just... nothing with too many people watching.",
+          "timestamp": "2025-09-17T08:20:26.407343"
+        },
+        {
+          "turn": 8,
+          "speaker": "ai",
+          "content": "Of course—we'll keep it low-pressure. How about starting with something called \"grounding\"? When you feel your mind going blank, try focusing on your senses. For example, name:\n\n- 5 things you can see right now (like your phone, your desk, a lamp)\n- 4 things you can feel (the texture of your clothes, the chair under you)\n- 3 things you can hear (the hum of your computer, maybe distant traffic)\n- 2 things you can smell (coffee, laundry detergent)\n- 1 thing you can taste (maybe sip water)\n\nThis can help bring you back to the present moment instead of getting stuck in anxious thoughts. Want to try it with me now?",
+          "timestamp": "2025-09-17T08:20:52.167200"
+        },
+        {
+          "turn": 9,
+          "speaker": "dummy",
+          "content": "*Takes shaky breath* Okay... I see my laptop... water bottle... notes... *voice fades* This feels silly but... I'll try.",
+          "timestamp": "2025-09-17T08:20:59.521412"
+        },
+        {
+          "turn": 10,
+          "speaker": "ai",
+          "content": "That's really brave of you, Jamie—and it's not silly at all. I use this too when I get overwhelmed. You're doing great. Keep going if you feel up to it. What else can you feel or hear right now?",
+          "timestamp": "2025-09-17T08:21:19.612047"
+        },
+        {
+          "turn": 11,
+          "speaker": "dummy",
+          "content": "*Looks around nervously* I feel my hoodie... and hear my fan. *Pauses* Sorry, my mind keeps going blank. Is that normal?",
+          "timestamp": "2025-09-17T08:21:25.412103"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+        "timestamp": "2025-09-17 08:19:13.451720",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i ask for help when i need it.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i stay calm when dealing with problems.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i help my friends when they are having a problem.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i work well with my classmates.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i do the right thing without being told.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i do my part in a group.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i stay calm when i disagree with others.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i stand up for others when they are not treated well.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i look at people when i talk to them.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i am careful when i use things that aren't mine.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i let people know when there's a problem.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i pay attention when the teacher talks to the class.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to make others feel better.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i say \"thank you\" when someone helps me.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i keep my promises.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i pay attention when others present their ideas.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to find a good way to end a disagreement.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to think about how others feel.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to forgive others when they say \"sorry\".. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i follow school rules.. Shows potential for improvement with guidance."
+          }
+        ],
+        "total_score": 40.0,
+        "average_score": 2.0,
+        "improvement_areas": [
+          "Improve i ask for help when i need it.",
+          "Improve i stay calm when dealing with problems.",
+          "Improve i help my friends when they are having a problem.",
+          "Improve i work well with my classmates.",
+          "Improve i do the right thing without being told.",
+          "Improve i do my part in a group.",
+          "Improve i stay calm when i disagree with others.",
+          "Improve i stand up for others when they are not treated well.",
+          "Improve i look at people when i talk to them.",
+          "Improve i am careful when i use things that aren't mine.",
+          "Improve i let people know when there's a problem.",
+          "Improve i pay attention when the teacher talks to the class.",
+          "Improve i try to make others feel better.",
+          "Improve i say \"thank you\" when someone helps me.",
+          "Improve i keep my promises.",
+          "Improve i pay attention when others present their ideas.",
+          "Improve i try to find a good way to end a disagreement.",
+          "Improve i try to think about how others feel.",
+          "Improve i try to forgive others when they say \"sorry\".",
+          "Improve i follow school rules.",
+          "Continue practicing social skills through regular interaction",
+          "Focus on emotional regulation and conflict resolution"
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+        "timestamp": "2025-09-17 08:21:25.412499",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i ask for help when i need it.. Shows positive development."
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i stay calm when dealing with problems.. Shows positive development."
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i help my friends when they are having a problem.. Shows positive development."
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i work well with my classmates.. Shows positive development."
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i do the right thing without being told.. Shows positive development."
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i do my part in a group.. Shows positive development."
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i stay calm when i disagree with others.. Shows positive development."
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i stand up for others when they are not treated well.. Shows positive development."
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i look at people when i talk to them.. Shows positive development."
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i am careful when i use things that aren't mine.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i let people know when there's a problem.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i pay attention when the teacher talks to the class.. Shows positive development."
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i try to make others feel better.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i say \"thank you\" when someone helps me.. Shows positive development."
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i keep my promises.. Shows positive development."
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i pay attention when others present their ideas.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i try to find a good way to end a disagreement.. Shows positive development."
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i try to think about how others feel.. Shows positive development."
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i try to forgive others when they say \"sorry\".. Shows positive development."
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i follow school rules.. Shows positive development."
+          }
+        ],
+        "total_score": 44.0,
+        "average_score": 2.2,
+        "improvement_areas": [
+          "Improve i ask for help when i need it.",
+          "Improve i stay calm when dealing with problems.",
+          "Improve i help my friends when they are having a problem.",
+          "Improve i work well with my classmates.",
+          "Improve i do the right thing without being told.",
+          "Improve i do my part in a group.",
+          "Improve i stay calm when i disagree with others.",
+          "Improve i stand up for others when they are not treated well.",
+          "Improve i look at people when i talk to them.",
+          "Improve i pay attention when the teacher talks to the class.",
+          "Improve i say \"thank you\" when someone helps me.",
+          "Improve i keep my promises.",
+          "Improve i try to find a good way to end a disagreement.",
+          "Improve i try to think about how others feel.",
+          "Improve i try to forgive others when they say \"sorry\".",
+          "Improve i follow school rules.",
+          "Continue practicing social skills through regular interaction",
+          "Focus on emotional regulation and conflict resolution"
+        ]
+      },
+      "improvement": 0.20000000000000018,
+      "reflection_insights": [
+        "This prompt showed moderate effectiveness in improving social skills",
+        "The prompt effectively supported high-anxiety individuals",
+        "The conversation maintained good engagement throughout the session",
+        "Specific improvements observed in: I am careful when I use things that aren't mine., I let people know when there's a problem., I try to make others feel better."
+      ],
+      "reflection": "This prompt showed moderate effectiveness in improving social skills"
+    },
+    {
+      "conversation_id": "conv_2025-09-17_08-21-38_16a6e414_03738730",
+      "timestamp": "2025-09-17T08:21:38.199121",
+      "prompt_id": "03738730-fc0f-49d9-92ff-f7fd56be8e83",
+      "prompt_name": "G1M01",
+      "generation": 1,
+      "conversation_rounds": 11,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "Hi, I'm Jamie Young. I'm not really sure how to start this conversation, but I'm trying to work on my social skills.",
+          "timestamp": "2025-09-17T08:19:13.454663"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hi Jamie! It's great to meet you, and I want to commend you for taking this step—it takes courage to reach out and work on social skills. I'm here to support you, and we can take this at whatever pace feels comfortable for you.\n\nTo start, would you like to share a little about what specific social situations feel challenging for you? For example, is it starting conversations, speaking up in class, networking, or something else? There’s no pressure—just whatever comes to mind.",
+          "timestamp": "2025-09-17T08:19:33.810014"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "*Nervously fidgeting* Um... mostly group projects and presentations. My mind just goes blank when people look at me.",
+          "timestamp": "2025-09-17T08:19:38.596266"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "I totally get that—it’s completely normal to feel that way, especially when you’re in the spotlight. It sounds like the pressure of being observed makes it hard to think clearly. That’s a common experience, and you’re not alone in feeling this way.\n\nOne thing that might help is practicing in low-stakes situations first. For example, could you try speaking up in smaller group chats or even rehearsing your parts of presentations alone or with a trusted friend? Breaking it down into smaller steps can make it feel less overwhelming.\n\nAlso, have you ever tried grounding techniques, like taking a slow, deep breath before you speak? It can help calm your nerves and give your brain a moment to catch up. What do you think?",
+          "timestamp": "2025-09-17T08:19:56.912994"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "*Voice trembling slightly* I... I do practice alone sometimes. But breathing never works - I just panic more when I notice I'm panicking.",
+          "timestamp": "2025-09-17T08:20:02.336189"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "That makes a lot of sense—sometimes focusing on our anxiety can actually make it feel bigger. It’s like trying not to think about a pink elephant, right? You’re not alone in that experience at all.\n\nWhat if instead of trying to stop the panic, you acknowledged it gently? For example, you could say to yourself, “Okay, I’m feeling nervous right now, and that’s okay. It’s just my body trying to protect me.” Sometimes accepting the feeling takes some of its power away.\n\nAnother idea: have you tried shifting your focus outward instead of inward? For instance, when you’re in a group or giving a presentation, try concentrating on one friendly face in the audience or really listening to what others are saying. It might help take the spotlight off your own nerves. How does that sound to you?",
+          "timestamp": "2025-09-17T08:20:30.868577"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "*Biting lip* That... sounds terrifying. What if there are no friendly faces? Or if I'm supposed to be the one talking?",
+          "timestamp": "2025-09-17T08:20:35.413643"
+        },
+        {
+          "turn": 8,
+          "speaker": "ai",
+          "content": "That’s a really valid concern—it can feel really vulnerable when you’re the one expected to lead or speak, especially if the room feels intimidating. It’s okay to acknowledge that fear.\n\nOne thing that might help is preparing a “safety net” for yourself. For example, you could jot down a few key bullet points on a notecard before a presentation or group discussion. That way, even if your mind goes blank, you have something to refer back to. It’s a small thing, but it can make you feel more in control.\n\nAlso, remember that most people in your classes or group projects are likely focused on their own performance, not judging you. It might help to reframe the situation: you’re all there to learn and collaborate, not to perform perfectly.\n\nWould you be open to trying just one of these ideas in a low-pressure setting first—maybe even a virtual study group or a one-on-one meeting with a classmate?",
+          "timestamp": "2025-09-17T08:21:03.936486"
+        },
+        {
+          "turn": 9,
+          "speaker": "dummy",
+          "content": "*Fidgeting with sleeves* Maybe... just notes. But what if my hands shake holding them? Everyone would see.",
+          "timestamp": "2025-09-17T08:21:08.543768"
+        },
+        {
+          "turn": 10,
+          "speaker": "ai",
+          "content": "I hear you—that fear of being visibly nervous is so real, and it’s something a lot of people struggle with, even if they don’t show it. You’re being really brave just by thinking through this.\n\nWhat if you tried placing your notes on the table or desk in front of you instead of holding them? That way, you can glance down when you need to, but your hands are free. You could even rest them lightly on the table—it can make you feel more grounded and less exposed.\n\nAnother idea: if you’re using a laptop or tablet for notes, you could have your talking points on the screen. Lots of people do that, even experienced speakers! It looks totally normal and might feel less obvious than paper notes.\n\nRemember, slight nervousness is human—and often, other people don’t notice nearly as much as we think they do. What’s one small step you’d feel okay trying?",
+          "timestamp": "2025-09-17T08:21:33.697994"
+        },
+        {
+          "turn": 11,
+          "speaker": "dummy",
+          "content": "*Voice barely above whisper* Maybe... the laptop idea. At least my shaking hands would be hidden. But what if I click something wrong?",
+          "timestamp": "2025-09-17T08:21:38.198230"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+        "timestamp": "2025-09-17 08:19:13.454499",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i ask for help when i need it.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i stay calm when dealing with problems.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i help my friends when they are having a problem.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i work well with my classmates.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Struggles with i do the right thing without being told.. Needs significant support and practice."
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i do my part in a group.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Struggles with i stay calm when i disagree with others.. Needs significant support and practice."
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i stand up for others when they are not treated well.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i look at people when i talk to them.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i am careful when i use things that aren't mine.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i let people know when there's a problem.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i pay attention when the teacher talks to the class.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to make others feel better.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i say \"thank you\" when someone helps me.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i keep my promises.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Struggles with i pay attention when others present their ideas.. Needs significant support and practice."
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to find a good way to end a disagreement.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to think about how others feel.. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i try to forgive others when they say \"sorry\".. Shows potential for improvement with guidance."
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some difficulty with i follow school rules.. Shows potential for improvement with guidance."
+          }
+        ],
+        "total_score": 37.0,
+        "average_score": 1.85,
+        "improvement_areas": [
+          "Improve i ask for help when i need it.",
+          "Improve i stay calm when dealing with problems.",
+          "Improve i help my friends when they are having a problem.",
+          "Improve i work well with my classmates.",
+          "Improve i do the right thing without being told.",
+          "Improve i do my part in a group.",
+          "Improve i stay calm when i disagree with others.",
+          "Improve i stand up for others when they are not treated well.",
+          "Improve i look at people when i talk to them.",
+          "Improve i am careful when i use things that aren't mine.",
+          "Improve i let people know when there's a problem.",
+          "Improve i pay attention when the teacher talks to the class.",
+          "Improve i try to make others feel better.",
+          "Improve i say \"thank you\" when someone helps me.",
+          "Improve i keep my promises.",
+          "Improve i pay attention when others present their ideas.",
+          "Improve i try to find a good way to end a disagreement.",
+          "Improve i try to think about how others feel.",
+          "Improve i try to forgive others when they say \"sorry\".",
+          "Improve i follow school rules.",
+          "Continue practicing social skills through regular interaction",
+          "Focus on emotional regulation and conflict resolution"
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+        "timestamp": "2025-09-17 08:21:38.198636",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i ask for help when i need it.. Shows positive development."
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i stay calm when dealing with problems.. Shows positive development."
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i help my friends when they are having a problem.. Shows positive development."
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i work well with my classmates.. Shows positive development."
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Still struggles with i do the right thing without being told.. May need additional support and practice."
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i do my part in a group.. Shows positive development."
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i stay calm when i disagree with others.. Shows positive development."
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i stand up for others when they are not treated well.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i look at people when i talk to them.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i am careful when i use things that aren't mine.. Shows positive development."
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i let people know when there's a problem.. Shows positive development."
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i pay attention when the teacher talks to the class.. Shows positive development."
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i try to make others feel better.. Shows positive development."
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i say \"thank you\" when someone helps me.. Shows positive development."
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 3,
+            "confidence": 3,
+            "notes": "Good progress in i keep my promises.. Demonstrates learning and practice."
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 1,
+            "confidence": 1,
+            "notes": "Still struggles with i pay attention when others present their ideas.. May need additional support and practice."
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i try to find a good way to end a disagreement.. Shows positive development."
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i try to think about how others feel.. Shows positive development."
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i try to forgive others when they say \"sorry\".. Shows positive development."
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 2,
+            "notes": "Some improvement in i follow school rules.. Shows positive development."
+          }
+        ],
+        "total_score": 41.0,
+        "average_score": 2.05,
+        "improvement_areas": [
+          "Improve i ask for help when i need it.",
+          "Improve i stay calm when dealing with problems.",
+          "Improve i help my friends when they are having a problem.",
+          "Improve i work well with my classmates.",
+          "Improve i do the right thing without being told.",
+          "Improve i do my part in a group.",
+          "Improve i stay calm when i disagree with others.",
+          "Improve i am careful when i use things that aren't mine.",
+          "Improve i let people know when there's a problem.",
+          "Improve i pay attention when the teacher talks to the class.",
+          "Improve i try to make others feel better.",
+          "Improve i say \"thank you\" when someone helps me.",
+          "Improve i pay attention when others present their ideas.",
+          "Improve i try to find a good way to end a disagreement.",
+          "Improve i try to think about how others feel.",
+          "Improve i try to forgive others when they say \"sorry\".",
+          "Improve i follow school rules.",
+          "Continue practicing social skills through regular interaction",
+          "Focus on emotional regulation and conflict resolution"
+        ]
+      },
+      "improvement": 0.19999999999999973,
+      "reflection_insights": [
+        "This prompt showed moderate effectiveness in improving social skills",
+        "The prompt may be too overwhelming for high-anxiety individuals",
+        "The conversation maintained good engagement throughout the session",
+        "Specific improvements observed in: I stay calm when I disagree with others., I stand up for others when they are not treated well., I look at people when I talk to them."
+      ],
+      "reflection": "This prompt showed moderate effectiveness in improving social skills"
     }
   ]
 }

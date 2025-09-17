@@ -124,7 +124,7 @@ async def run_gepa_test(config: Dict[str, Any] = None):
     assessment_system = AssessmentSystem()
     conversation_system = ConversationSimulator()
     
-    # Simple starting prompt for TRUE GEPA
+    # Create new prompt for this test run (fresh start)
     initial_prompt = {
         "id": str(uuid.uuid4()),
         "name": "Simple Peer Mentor",
@@ -136,6 +136,7 @@ async def run_gepa_test(config: Dict[str, Any] = None):
             "question_improvements": [0.0] * 20  # 20 assessment questions
         }
     }
+    print(f"🆕 Created new prompt for this test: {initial_prompt['name']} (ID: {initial_prompt['id'][:8]}...)")
     
     print(f"\n🎯 Initial Prompt: {initial_prompt['name']}")
     print(f"📝 Text: {initial_prompt['prompt_text']}")
@@ -148,6 +149,9 @@ async def run_gepa_test(config: Dict[str, Any] = None):
         mutation_rate=config['mutation_rate'],
         crossover_rate=config['crossover_rate']
     )
+    
+    # Store the prompt ID for this test run
+    test_prompt_id = initial_prompt["id"]
     
     # Set up fair comparison
     print("\n🔧 Setting up fair comparison...")
@@ -267,6 +271,15 @@ async def run_gepa_test(config: Dict[str, Any] = None):
         json.dump(results, f, indent=2, ensure_ascii=False, cls=DateTimeEncoder)
     
     print(f"📁 Also saved to: {config['output_file']} (for backward compatibility)")
+    
+    # Update validation_test_results.json with the new test results
+    validation_file = "data/validation_test_results.json"
+    try:
+        with open(validation_file, 'w', encoding='utf-8') as f:
+            json.dump(results, f, indent=2, ensure_ascii=False, cls=DateTimeEncoder)
+        print(f"✅ Updated validation results: {validation_file}")
+    except Exception as e:
+        print(f"⚠️  Failed to update validation results: {e}")
     
     # Validation checks
     print("\n🔍 Validation Checks:")

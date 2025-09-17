@@ -36,7 +36,8 @@ class ConversationStorage:
                          pre_assessment: Dict[str, Any],
                          post_assessment: Dict[str, Any],
                          improvement: float,
-                         reflection_insights: List[str]) -> str:
+                         reflection_insights: List[str],
+                         reflection: str = None) -> str:
         """Save a conversation to the dummy's file"""
         
         # Generate conversation ID
@@ -54,7 +55,8 @@ class ConversationStorage:
             "pre_assessment": pre_assessment,
             "post_assessment": post_assessment,
             "improvement": improvement,
-            "reflection_insights": reflection_insights
+            "reflection_insights": reflection_insights,
+            "reflection": reflection  # Add individual conversation reflection
         }
         
         # Load existing dummy data or create new

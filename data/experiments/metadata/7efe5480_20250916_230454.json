@@ -1,0 +1,22 @@
+{
+  "experiment_id": "7efe5480",
+  "name": "Quick Validation Test - 2d2r2g",
+  "timestamp": "20250916_230454",
+  "description": "GEPA test with 2 dummies, 2 rounds, 2 generations",
+  "config": {
+    "test_name": "Quick Validation Test",
+    "dummies_count": 2,
+    "conversation_rounds": 2,
+    "generations": 2,
+    "population_size": 1,
+    "mutation_rate": 0.3,
+    "crossover_rate": 0.6,
+    "use_real_api": true,
+    "save_detailed_data": false,
+    "output_file": "data/validation_test_results.json"
+  },
+  "status": "completed",
+  "created_at": "2025-09-16T23:04:54.529355",
+  "updated_at": "2025-09-16T23:04:54.530543",
+  "result_file": "result_7efe5480_20250916_230454.json"
+}
