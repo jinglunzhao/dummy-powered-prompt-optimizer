@@ -130,7 +130,8 @@
                     <div class="col-md-8">
                         <h3><i class="fas fa-puzzle-piece me-2"></i>${prompt.name}</h3>
                         <p class="mb-2"><strong>Prompt Text:</strong> ${prompt.prompt_text}</p>
-                        <p class="mb-0"><strong>Generation:</strong> ${prompt.generation}</p>
+                        <p class="mb-2"><strong>Generation:</strong> ${prompt.generation}</p>
+                        <p class="mb-0"><strong>Synthesis Analysis:</strong> <span id="synthesisText">Loading synthesis analysis...</span></p>
                     </div>
                     <div class="col-md-4 text-center">
                         <div class="row">
@@ -149,23 +150,12 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Synthesis Analysis Section -->
-                <div class="card mt-3" id="synthesisCard" style="display: none;">
-                    <div class="card-header" style="background: linear-gradient(135deg, #17a2b8 0%, #138496 100%); color: white; cursor: pointer;" onclick="toggleSynthesisAnalysis()">
-                        <h6 class="mb-0">
-                            <i class="fas fa-brain me-2"></i>Synthesis Analysis
-                            <i class="fas fa-chevron-down float-end" id="synthesisChevron"></i>
-                        </h6>
-                    </div>
-                    <div class="card-body collapse" id="synthesisAnalysisBody" style="background-color: #f8f9fa;">
-                        <p class="mb-0" style="color: #333;">Loading synthesis analysis...</p>
-                    </div>
-                </div>
             `;
             
-            // Load synthesis analysis
-            loadSynthesisAnalysis(prompt.id);
+            // Load synthesis analysis after a short delay to ensure DOM is ready
+            setTimeout(() => {
+                loadSynthesisAnalysis(prompt.id);
+            }, 100);
         }
 
         function displayDummyResults(results) {
@@ -315,6 +305,9 @@
         
         function loadSynthesisAnalysis(promptId) {
             console.log('Loading synthesis analysis for prompt:', promptId);
+            const synthesisText = document.getElementById('synthesisText');
+            console.log('synthesisText element found:', synthesisText);
+            
             fetch(`/api/prompt/${promptId}/synthesis`)
                 .then(response => {
                     console.log('Synthesis API response status:', response.status);
@@ -328,32 +321,29 @@
                     if (data && data.synthesis_analysis) {
                         console.log('Displaying synthesis analysis');
                         displaySynthesisAnalysis(data);
-                        document.getElementById('synthesisCard').style.display = 'block';
                     } else {
                         console.log('No synthesis analysis data available');
-                        document.getElementById('synthesisCard').style.display = 'none';
+                        if (synthesisText) {
+                            synthesisText.innerHTML = 'No synthesis analysis available';
+                        }
                     }
                 })
                 .catch(error => {
                     console.log('No synthesis analysis available for this prompt:', error);
-                    document.getElementById('synthesisCard').style.display = 'none';
+                    if (synthesisText) {
+                        synthesisText.innerHTML = 'No synthesis analysis available';
+                    }
                 });
         }
         
         function displaySynthesisAnalysis(synthesisData) {
             console.log('Displaying synthesis analysis:', synthesisData);
-            const synthesisBody = document.getElementById('synthesisAnalysisBody');
-            if (synthesisBody) {
-                synthesisBody.innerHTML = `
-                    <p class="mb-0" style="color: #333;">${synthesisData.synthesis_analysis || 'No synthesis analysis available'}</p>
-                    <small class="text-muted mt-2 d-block">
-                        <i class="fas fa-info-circle me-1"></i>
-                        Based on ${synthesisData.conversation_count || 0} conversations
-                    </small>
-                `;
+            const synthesisText = document.getElementById('synthesisText');
+            if (synthesisText) {
+                synthesisText.innerHTML = `${synthesisData.synthesis_analysis || 'No synthesis analysis available'} <small class="text-muted">(Based on ${synthesisData.conversation_count || 0} conversations)</small>`;
                 console.log('Synthesis analysis displayed successfully');
             } else {
-                console.error('synthesisAnalysisBody element not found');
+                console.error('synthesisText element not found');
             }
         }
         
