@@ -111,12 +111,46 @@
                 .then(data => {
                     displayPromptHeader(data.prompt);
                     displayDummyResults(data.results);
+                    loadSynthesisAnalysis(promptId);
                 })
                 .catch(error => {
                     console.error('Error loading prompt data:', error);
                     document.getElementById('promptHeader').innerHTML = 
                         '<div class="text-center text-danger"><i class="fas fa-exclamation-triangle me-2"></i>Error loading prompt data</div>';
                 });
+        }
+
+        function loadSynthesisAnalysis(promptId) {
+            fetch(`/api/prompt/${promptId}/synthesis`)
+                .then(response => response.json())
+                .then(data => {
+                    displaySynthesisAnalysis(data);
+                })
+                .catch(error => {
+                    console.error('Error loading synthesis analysis:', error);
+                    // Retry after a short delay to ensure DOM element is available
+                    setTimeout(() => {
+                        const synthesisElement = document.getElementById('synthesisText');
+                        if (synthesisElement) {
+                            synthesisElement.textContent = 'No synthesis analysis available';
+                        }
+                    }, 100);
+                });
+        }
+
+        function displaySynthesisAnalysis(data) {
+            const synthesisElement = document.getElementById('synthesisText');
+            if (!synthesisElement) {
+                // Retry after a short delay if element not found
+                setTimeout(() => displaySynthesisAnalysis(data), 100);
+                return;
+            }
+
+            if (data && data.synthesis_text) {
+                synthesisElement.textContent = data.synthesis_text;
+            } else {
+                synthesisElement.textContent = 'No synthesis analysis available';
+            }
         }
 
         function displayPromptHeader(prompt) {
@@ -131,7 +165,7 @@
                         <h3><i class="fas fa-puzzle-piece me-2"></i>${prompt.name}</h3>
                         <p class="mb-2"><strong>Prompt Text:</strong> ${prompt.prompt_text}</p>
                         <p class="mb-2"><strong>Generation:</strong> ${prompt.generation}</p>
-                        <p class="mb-0"><strong>Synthesis Analysis:</strong> <span id="synthesisText">Loading synthesis analysis...</span></p>
+                        <p class="mb-0"><strong>Synthesis Analysis:</strong> <span id="synthesisText">Loading...</span></p>
                     </div>
                     <div class="col-md-4 text-center">
                         <div class="row">
@@ -151,11 +185,6 @@
                     </div>
                 </div>
             `;
-            
-            // Load synthesis analysis after header is displayed
-            setTimeout(() => {
-                loadSynthesisAnalysis(prompt.id);
-            }, 100);
         }
 
         function displayDummyResults(results) {
@@ -288,7 +317,7 @@
                                                         ${result.reflection_insights.map(insight => `<li>${insight}</li>`).join('')}
                                                     </ul>
                                                 ` : `
-                                                    <p class="text-muted"><i class="fas fa-info-circle me-2"></i>No reflection data available</p>
+                                                    <p class="text-muted"><i class="fas fa-info-circle me-2"></i>No reflection insights available</p>
                                                 `}
                                             </div>
                                         </div>
@@ -301,50 +330,6 @@
             });
 
             container.innerHTML = html;
-        }
-
-        function loadSynthesisAnalysis(promptId) {
-            console.log('Loading synthesis analysis for prompt:', promptId);
-            const synthesisText = document.getElementById('synthesisText');
-            console.log('synthesisText element found:', synthesisText);
-            
-            fetch(`/api/prompt/${promptId}/synthesis`)
-                .then(response => {
-                    console.log('Synthesis API response status:', response.status);
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    console.log('Synthesis API data received:', data);
-                    if (data && data.synthesis_analysis) {
-                        console.log('Displaying synthesis analysis');
-                        displaySynthesisAnalysis(data);
-                    } else {
-                        console.log('No synthesis analysis data available');
-                        if (synthesisText) {
-                            synthesisText.innerHTML = 'No synthesis analysis available';
-                        }
-                    }
-                })
-                .catch(error => {
-                    console.log('No synthesis analysis available for this prompt:', error);
-                    if (synthesisText) {
-                        synthesisText.innerHTML = 'No synthesis analysis available';
-                    }
-                });
-        }
-
-        function displaySynthesisAnalysis(synthesisData) {
-            console.log('Displaying synthesis analysis:', synthesisData);
-            const synthesisText = document.getElementById('synthesisText');
-            if (synthesisText) {
-                synthesisText.innerHTML = `${synthesisData.synthesis_analysis || 'No synthesis analysis available'} <small class="text-muted">(Based on ${synthesisData.conversation_count || 0} conversations)</small>`;
-                console.log('Synthesis analysis displayed successfully');
-            } else {
-                console.error('synthesisText element not found');
-            }
         }
     </script>
 </body>

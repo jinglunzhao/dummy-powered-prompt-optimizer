@@ -313,9 +313,9 @@
             const improvements = labels.map(gen => {
                 const genPrompts = generations[gen];
                 const bestPrompt = genPrompts.reduce((best, current) => {
-                    const bestScore = (best.performance_metrics?.avg_improvement || 0);
-                    const currentScore = (current.performance_metrics?.avg_improvement || 0);
-                    return currentScore > bestScore ? current : best;
+                    const bestScore = (current.performance_metrics?.avg_improvement || 0);
+                    const currentScore = (best.performance_metrics?.avg_improvement || 0);
+                    return bestScore > currentScore ? best : current;
                 });
                 return bestPrompt.performance_metrics?.avg_improvement || 0;
             });
