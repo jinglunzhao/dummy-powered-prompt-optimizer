@@ -22,7 +22,7 @@ from prompt_optimizer import PromptOptimizer
 # CharacterGenerator removed - using existing dummies only
 from assessment_system import AssessmentSystem
 from conversation_simulator import ConversationSimulator
-from experiment_manager import create_experiment, save_experiment_result
+# experiment_manager removed - using direct file operations
 
 class DateTimeEncoder(json.JSONEncoder):
     """Custom JSON encoder to handle datetime objects"""
