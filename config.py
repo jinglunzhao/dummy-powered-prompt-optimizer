@@ -11,10 +11,11 @@ from dotenv import load_dotenv
 class Config:
     """Configuration class for the system"""
     
-    # AI API Configuration (DeepSeek R1)
+    # AI API Configuration (DeepSeek)
     OPENAI_API_KEY = "sk-d64d89acb0904956a4f5e37d512ae950"  # Direct API key
     DEEPSEEK_API_KEY = "sk-d64d89acb0904956a4f5e37d512ae950"  # Same key for DeepSeek API
-    OPENAI_MODEL = "deepseek-reasoner"  # DeepSeek R1 reasoning model
+    OPENAI_MODEL = "deepseek-chat"  # Use regular DeepSeek model for cost efficiency
+    DEEPSEEK_REASONER_MODEL = "deepseek-reasoner"  # R1 model for complex reasoning
     
     # Default System Prompt
     SYSTEM_PROMPT = "You are a supportive AI assistant helping students improve their social skills. Be encouraging, provide practical advice, and help them build confidence gradually."

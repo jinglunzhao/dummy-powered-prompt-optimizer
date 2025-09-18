@@ -450,25 +450,30 @@ Be concise and actionable. No templates or verbose analysis.
                     "Content-Type": "application/json"
                 },
                 json={
-                    "model": "deepseek-reasoner",
+                    "model": Config.DEEPSEEK_REASONER_MODEL,
                     "messages": [{"role": "user", "content": reflection_prompt}],
                     "temperature": 0.3,  # Lower temperature for more focused analysis
                     "max_tokens": 400  # Increased for complete reflections
                 },
-                timeout=30
+                timeout=60  # Increased timeout for R1 model
             )
             
             if response.status_code == 200:
                 result = response.json()
                 if 'choices' in result and len(result['choices']) > 0:
                     reflection = result['choices'][0]['message']['content'].strip()
-                    print(f"   🧠 Generated conversation reflection: {len(reflection)} chars")
+                    print(f"   ✅ Using {Config.DEEPSEEK_REASONER_MODEL}: {len(reflection)} chars")
                     return reflection
                 else:
-                    print(f"   ❌ No reflection generated from DeepSeek Reasoner")
+                    print(f"   ❌ No reflection generated from {Config.DEEPSEEK_REASONER_MODEL}")
                     return "No reflection available - API response invalid"
             else:
-                print(f"   ❌ DeepSeek Reasoner API Error: {response.status_code}")
+                print(f"   ❌ {Config.DEEPSEEK_REASONER_MODEL} API Error: {response.status_code}")
+                try:
+                    error_detail = response.json()
+                    print(f"   📄 Error details: {error_detail}")
+                except:
+                    print(f"   📄 Error text: {response.text}")
                 return f"Reflection generation failed - API error {response.status_code}"
                 
         except Exception as e:
@@ -555,25 +560,30 @@ Be concise and actionable. No verbose analysis.
                     "Content-Type": "application/json"
                 },
                 json={
-                    "model": "deepseek-reasoner",
+                    "model": Config.DEEPSEEK_REASONER_MODEL,
                     "messages": [{"role": "user", "content": synthesis_prompt}],
                     "temperature": 0.2,  # Very low temperature for focused analysis
                     "max_tokens": 300  # Reduced for concise responses
                 },
-                timeout=45
+                timeout=60  # Increased timeout for R1 model
             )
             
             if response.status_code == 200:
                 result = response.json()
                 if 'choices' in result and len(result['choices']) > 0:
                     synthesis = result['choices'][0]['message']['content'].strip()
-                    print(f"   🧠 Generated synthesis analysis: {len(synthesis)} chars")
+                    print(f"   ✅ Using {Config.DEEPSEEK_REASONER_MODEL}: {len(synthesis)} chars")
                     return synthesis
                 else:
-                    print(f"   ❌ No synthesis generated from DeepSeek Reasoner")
+                    print(f"   ❌ No synthesis generated from {Config.DEEPSEEK_REASONER_MODEL}")
                     return "No synthesis available - API response invalid"
             else:
-                print(f"   ❌ DeepSeek Reasoner synthesis API Error: {response.status_code}")
+                print(f"   ❌ {Config.DEEPSEEK_REASONER_MODEL} synthesis API Error: {response.status_code}")
+                try:
+                    error_detail = response.json()
+                    print(f"   📄 Error details: {error_detail}")
+                except:
+                    print(f"   📄 Error text: {response.text}")
                 return f"Synthesis generation failed - API error {response.status_code}"
                 
         except Exception as e:
@@ -1044,7 +1054,7 @@ Respond with ONLY the new system prompt text, no explanations.
                     "Content-Type": "application/json"
                 },
                 json={
-                    "model": "deepseek-chat",
+                    "model": Config.OPENAI_MODEL,  # Use chat model for crossover generation
                     "messages": [{"role": "user", "content": crossover_prompt}],
                     "temperature": 0.7,  # Higher temperature for more creative combinations
                     "max_tokens": 300
@@ -1072,7 +1082,12 @@ Respond with ONLY the new system prompt text, no explanations.
                     print(f"   ⏭️  Skipping this crossover - API response invalid")
                     return None
             else:
-                print(f"   ❌ API Error: {response.status_code} - {response.text}")
+                print(f"   ❌ {Config.OPENAI_MODEL} API Error: {response.status_code}")
+                try:
+                    error_detail = response.json()
+                    print(f"   📄 Error details: {error_detail}")
+                except:
+                    print(f"   📄 Error text: {response.text}")
                 print(f"   ⏭️  Skipping this crossover - API call failed")
                 return None
                 
@@ -1151,7 +1166,7 @@ Respond with ONLY the improved system prompt text, no explanations.
                     "Content-Type": "application/json"
                 },
                 json={
-                    "model": "deepseek-chat",
+                    "model": Config.OPENAI_MODEL,  # Use chat model for mutation generation
                     "messages": [{"role": "user", "content": mutation_prompt}],
                     "temperature": 0.6,  # Slightly lower temperature for more focused mutations
                     "max_tokens": 300  # Increased for complete responses but still limited
@@ -1180,7 +1195,12 @@ Respond with ONLY the improved system prompt text, no explanations.
                     print(f"   ⏭️  Skipping this mutation - API response invalid")
                     return None
             else:
-                print(f"   ❌ API Error: {response.status_code} - {response.text}")
+                print(f"   ❌ {Config.OPENAI_MODEL} API Error: {response.status_code}")
+                try:
+                    error_detail = response.json()
+                    print(f"   📄 Error details: {error_detail}")
+                except:
+                    print(f"   📄 Error text: {response.text}")
                 print(f"   ⏭️  Skipping this mutation - API call failed")
                 return None
                 
