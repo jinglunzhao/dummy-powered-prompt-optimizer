@@ -140,7 +140,9 @@
 
         function displaySynthesisAnalysis(data) {
             const synthesisElement = document.getElementById('synthesisText');
-            if (!synthesisElement) {
+            const previewElement = document.getElementById('synthesisPreview');
+            
+            if (!synthesisElement || !previewElement) {
                 // Retry after a short delay if element not found
                 setTimeout(() => displaySynthesisAnalysis(data), 100);
                 return;
@@ -148,8 +150,24 @@
 
             if (data && data.synthesis_text) {
                 synthesisElement.textContent = data.synthesis_text;
+                previewElement.innerHTML = '<i class="fas fa-chevron-down me-1"></i>Click to view analysis';
             } else {
                 synthesisElement.textContent = 'No synthesis analysis available';
+                previewElement.innerHTML = '<i class="fas fa-exclamation-circle me-1"></i>No analysis available';
+                previewElement.style.cursor = 'default';
+            }
+        }
+
+        function toggleSynthesisAnalysis() {
+            const fullTextDiv = document.getElementById('synthesisFullText');
+            const previewElement = document.getElementById('synthesisPreview');
+            
+            if (fullTextDiv.style.display === 'none') {
+                fullTextDiv.style.display = 'block';
+                previewElement.innerHTML = '<i class="fas fa-chevron-up me-1"></i>Click to hide analysis';
+            } else {
+                fullTextDiv.style.display = 'none';
+                previewElement.innerHTML = '<i class="fas fa-chevron-down me-1"></i>Click to view analysis';
             }
         }
 
@@ -165,7 +183,15 @@
                         <h3><i class="fas fa-puzzle-piece me-2"></i>${prompt.name}</h3>
                         <p class="mb-2"><strong>Prompt Text:</strong> ${prompt.prompt_text}</p>
                         <p class="mb-2"><strong>Generation:</strong> ${prompt.generation}</p>
-                        <p class="mb-0"><strong>Synthesis Analysis:</strong> <span id="synthesisText">Loading...</span></p>
+                        <p class="mb-0">
+                            <strong>Synthesis Analysis:</strong> 
+                            <span id="synthesisPreview" class="text-muted" style="cursor: pointer;" onclick="toggleSynthesisAnalysis()">
+                                <i class="fas fa-chevron-down me-1"></i>Click to view analysis
+                            </span>
+                        </p>
+                        <div id="synthesisFullText" class="mt-2 p-3 bg-light rounded" style="display: none;">
+                            <span id="synthesisText">Loading...</span>
+                        </div>
                     </div>
                     <div class="col-md-4 text-center">
                         <div class="row">
