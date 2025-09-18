@@ -1054,12 +1054,12 @@ Respond with ONLY the new system prompt text, no explanations.
                     "Content-Type": "application/json"
                 },
                 json={
-                    "model": Config.OPENAI_MODEL,  # Use chat model for crossover generation
+                    "model": Config.DEEPSEEK_REASONER_MODEL,  # Use reasoner model for better crossover generation
                     "messages": [{"role": "user", "content": crossover_prompt}],
                     "temperature": 0.7,  # Higher temperature for more creative combinations
                     "max_tokens": 300
                 },
-                timeout=30
+                timeout=60  # Increased timeout for reasoner model
             )
             
             print(f"   📡 API Response Status: {response.status_code}")
@@ -1068,7 +1068,7 @@ Respond with ONLY the new system prompt text, no explanations.
                 result = response.json()
                 if 'choices' in result and len(result['choices']) > 0:
                     child_prompt_text = result['choices'][0]['message']['content'].strip()
-                    print(f"   ✅ LLM generated: {child_prompt_text[:100]}...")
+                    print(f"   ✅ {Config.DEEPSEEK_REASONER_MODEL} generated: {child_prompt_text[:100]}...")
                     
                     # Validate system prompt format
                     if not child_prompt_text.strip().lower().startswith("you are"):
@@ -1082,7 +1082,7 @@ Respond with ONLY the new system prompt text, no explanations.
                     print(f"   ⏭️  Skipping this crossover - API response invalid")
                     return None
             else:
-                print(f"   ❌ {Config.OPENAI_MODEL} API Error: {response.status_code}")
+                print(f"   ❌ {Config.DEEPSEEK_REASONER_MODEL} API Error: {response.status_code}")
                 try:
                     error_detail = response.json()
                     print(f"   📄 Error details: {error_detail}")
@@ -1166,12 +1166,12 @@ Respond with ONLY the improved system prompt text, no explanations.
                     "Content-Type": "application/json"
                 },
                 json={
-                    "model": Config.OPENAI_MODEL,  # Use chat model for mutation generation
+                    "model": Config.DEEPSEEK_REASONER_MODEL,  # Use reasoner model for better mutation generation
                     "messages": [{"role": "user", "content": mutation_prompt}],
                     "temperature": 0.6,  # Slightly lower temperature for more focused mutations
                     "max_tokens": 300  # Increased for complete responses but still limited
                 },
-                timeout=30  # Add timeout
+                timeout=60  # Increased timeout for reasoner model
             )
             
             print(f"   📡 API Response Status: {response.status_code}")
@@ -1181,7 +1181,7 @@ Respond with ONLY the improved system prompt text, no explanations.
                 print(f"   📝 API Response: {result}")
                 if 'choices' in result and len(result['choices']) > 0:
                     mutated_prompt_text = result['choices'][0]['message']['content'].strip()
-                    print(f"   ✅ LLM generated: {mutated_prompt_text[:100]}...")
+                    print(f"   ✅ {Config.DEEPSEEK_REASONER_MODEL} generated: {mutated_prompt_text[:100]}...")
                     
                     # Validate system prompt format
                     if not mutated_prompt_text.strip().lower().startswith("you are"):
@@ -1195,7 +1195,7 @@ Respond with ONLY the improved system prompt text, no explanations.
                     print(f"   ⏭️  Skipping this mutation - API response invalid")
                     return None
             else:
-                print(f"   ❌ {Config.OPENAI_MODEL} API Error: {response.status_code}")
+                print(f"   ❌ {Config.DEEPSEEK_REASONER_MODEL} API Error: {response.status_code}")
                 try:
                     error_detail = response.json()
                     print(f"   📄 Error details: {error_detail}")
