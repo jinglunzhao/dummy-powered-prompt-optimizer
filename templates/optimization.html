@@ -99,16 +99,22 @@
         });
 
         function loadOptimizationResults() {
+            console.log('Loading optimization results...');
             fetch('/api/optimization')
-                .then(response => response.json())
+                .then(response => {
+                    console.log('API response status:', response.status);
+                    return response.json();
+                })
                 .then(data => {
+                    console.log('API data received:', data);
+                    console.log('Data keys:', Object.keys(data));
                     displayGenerationsOverview(data);
                     initializeGenerationChart(data);
                 })
                 .catch(error => {
                     console.error('Error loading optimization results:', error);
                     document.getElementById('generationsContainer').innerHTML = 
-                        '<div class="text-center text-danger"><i class="fas fa-exclamation-triangle me-2"></i>Error loading optimization results</div>';
+                        '<div class="text-center text-danger"><i class="fas fa-exclamation-triangle me-2"></i>Error loading optimization results: ' + error.message + '</div>';
                 });
         }
 
@@ -313,9 +319,9 @@
             const improvements = labels.map(gen => {
                 const genPrompts = generations[gen];
                 const bestPrompt = genPrompts.reduce((best, current) => {
-                    const bestScore = (current.performance_metrics?.avg_improvement || 0);
-                    const currentScore = (best.performance_metrics?.avg_improvement || 0);
-                    return bestScore > currentScore ? best : current;
+                    const bestScore = (best.performance_metrics?.avg_improvement || 0);
+                    const currentScore = (current.performance_metrics?.avg_improvement || 0);
+                    return currentScore > bestScore ? current : best;
                 });
                 return bestPrompt.performance_metrics?.avg_improvement || 0;
             });

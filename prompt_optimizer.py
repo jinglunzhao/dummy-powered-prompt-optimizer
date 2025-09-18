@@ -881,9 +881,11 @@ Be concise and actionable. No verbose analysis.
         for prompt in self.pareto_frontier:
             # Create elite prompt with genealogy tracking
             elite_node = genealogy_tracker.create_elite_prompt(prompt.id, current_generation)
+            # Clean up name to avoid multiple "(Elite)" suffixes
+            base_name = prompt.name.replace(" (Elite)", "").replace("(Elite)", "").strip()
             new_prompt = OptimizedPrompt(
                 id=elite_node.id,
-                name=f"{prompt.name} (Elite)",
+                name=f"{base_name} (Elite)",
                 prompt_text=prompt.prompt_text,
                 components=prompt.components.copy(),
                 generation=current_generation,
@@ -894,12 +896,14 @@ Be concise and actionable. No verbose analysis.
             )
             new_population.append(new_prompt)
         
-        # TRUE GEPA: Capped population growth at 8 prompts per generation
-        # Each generation grows to 8 prompts, but cap at MAX_POPULATION_SIZE
+        # TRUE GEPA: Exponential population growth capped at 8
+        # Pattern: 1 → 2 → 4 → 8 → 8 → 8 → 8...
         from config import Config
-        target_population_size = min(8, Config.MAX_POPULATION_SIZE)
+        exponential_sizes = [1, 2, 4, 8, 8, 8, 8, 8, 8, 8]  # First 10 generations
+        target_population_size = exponential_sizes[min(current_generation, len(exponential_sizes) - 1)]
+        target_population_size = min(target_population_size, Config.MAX_POPULATION_SIZE)
         
-        print(f"   🎯 Target population size: {target_population_size} (capped at 8 per generation, max {Config.MAX_POPULATION_SIZE})")
+        print(f"   🎯 Target population size: {target_population_size} (Gen {current_generation}: exponential growth pattern, max {Config.MAX_POPULATION_SIZE})")
         print(f"   📊 Current population: {len(self.population)}, Pareto frontier: {len(self.pareto_frontier)}")
         
         # Generate new prompts through crossover and mutation

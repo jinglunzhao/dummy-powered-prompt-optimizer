@@ -135,12 +135,15 @@ def index():
     """Main page with dummy selection"""
     data = load_data()
     
-    # Get summary statistics
+    # Get summary statistics from conversation storage
+    from conversation_storage import conversation_storage
+    conversation_stats = conversation_storage.get_conversation_stats()
+    
     total_dummies = len(data['dummies'])
     total_assessments = len(data['assessments'])
-    total_conversations = len(data['conversations'])
+    total_conversations = conversation_stats['total_conversations']
     
-    # Count complete pairs
+    # Count complete pairs from assessments
     complete_pairs = 0
     for i in range(0, len(data['assessments']) - 1, 2):
         if i + 1 < len(data['assessments']):

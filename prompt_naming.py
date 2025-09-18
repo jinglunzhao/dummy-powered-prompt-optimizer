@@ -54,11 +54,13 @@ class PromptGenealogy:
         parent = self.nodes[parent_id]
         prompt_id = str(uuid.uuid4())
         
-        # Generate civilized name with simplified parent indication
+        # Generate elegant name with simplified parent indication
         gen_count = self.generation_counts[generation]
         # Extract just the base name without the full parent chain
         parent_base = parent.name.split('_from_')[0] if '_from_' in parent.name else parent.name
-        name = f"G{generation}M{gen_count:02d}_from_{parent_base}"
+        # Clean up parent name to remove any existing suffixes
+        parent_base = parent_base.replace(" (Elite)", "").replace("(Elite)", "").strip()
+        name = f"G{generation}M{gen_count:02d} from {parent_base}"
         
         node = PromptNode(
             id=prompt_id,
@@ -81,11 +83,13 @@ class PromptGenealogy:
         parent = self.nodes[parent_id]
         prompt_id = str(uuid.uuid4())
         
-        # Generate civilized name for elite with simplified parent indication
+        # Generate elegant name for elite with simplified parent indication
         gen_count = self.generation_counts[generation]
         # Extract just the base name without the full parent chain
         parent_base = parent.name.split('_from_')[0] if '_from_' in parent.name else parent.name
-        name = f"G{generation}E{gen_count:02d}_from_{parent_base}"
+        # Clean up parent name to remove any existing suffixes
+        parent_base = parent_base.replace(" (Elite)", "").replace("(Elite)", "").strip()
+        name = f"G{generation}E{gen_count:02d} from {parent_base}"
         
         node = PromptNode(
             id=prompt_id,
@@ -109,12 +113,15 @@ class PromptGenealogy:
         parent2 = self.nodes[parent2_id]
         prompt_id = str(uuid.uuid4())
         
-        # Generate civilized name with simplified parent indication
+        # Generate elegant name with simplified parent indication
         gen_count = self.generation_counts[generation]
         # Extract just the base names without the full parent chains
         parent1_base = parent1.name.split('_from_')[0] if '_from_' in parent1.name else parent1.name
         parent2_base = parent2.name.split('_from_')[0] if '_from_' in parent2.name else parent2.name
-        name = f"G{generation}C{gen_count:02d}_from_{parent1_base}_and_{parent2_base}"
+        # Clean up parent names to remove any existing suffixes
+        parent1_base = parent1_base.replace(" (Elite)", "").replace("(Elite)", "").strip()
+        parent2_base = parent2_base.replace(" (Elite)", "").replace("(Elite)", "").strip()
+        name = f"G{generation}C{gen_count:02d} from {parent1_base} & {parent2_base}"
         
         node = PromptNode(
             id=prompt_id,
