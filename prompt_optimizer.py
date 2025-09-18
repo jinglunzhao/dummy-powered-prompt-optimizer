@@ -1,4 +1,3 @@
-from corrected_enhanced_crossover import CorrectedEnhancedCrossover
 from prompt_naming import get_civilized_name, genealogy_tracker
 #!/usr/bin/env python3
 """
@@ -881,11 +880,10 @@ Be concise and actionable. No verbose analysis.
         for prompt in self.pareto_frontier:
             # Create elite prompt with genealogy tracking
             elite_node = genealogy_tracker.create_elite_prompt(prompt.id, current_generation)
-            # Clean up name to avoid multiple "(Elite)" suffixes
-            base_name = prompt.name.replace(" (Elite)", "").replace("(Elite)", "").strip()
+            # Use the clean name from genealogy tracker
             new_prompt = OptimizedPrompt(
                 id=elite_node.id,
-                name=f"{base_name} (Elite)",
+                name=elite_node.name,
                 prompt_text=prompt.prompt_text,
                 components=prompt.components.copy(),
                 generation=current_generation,
