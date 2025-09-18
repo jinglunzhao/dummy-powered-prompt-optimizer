@@ -1571,15 +1571,8 @@ if __name__ == '__main__':
 </body>
 </html>'''
 
-    # Write templates to files
-    with open('templates/index.html', 'w', encoding='utf-8') as f:
-        f.write(main_template)
-    
-    with open('templates/dummy_detail.html', 'w', encoding='utf-8') as f:
-        f.write(detail_template)
-    
-    with open('templates/optimization.html', 'w', encoding='utf-8') as f:
-        f.write(optimization_template)
+    # Templates are now stored as separate files and should not be overwritten
+    # This prevents the Flask server from reverting our UI fixes
     
     # Create the generation detail template
     generation_detail_template = '''<!DOCTYPE html>
