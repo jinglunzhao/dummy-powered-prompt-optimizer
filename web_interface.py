@@ -375,6 +375,10 @@ def api_prompt_synthesis(prompt_id):
         with open(synthesis_file, 'r', encoding='utf-8') as f:
             synthesis_data = json.load(f)
         
+        # Ensure the response has the expected field name
+        if 'synthesis_analysis' in synthesis_data and 'synthesis_text' not in synthesis_data:
+            synthesis_data['synthesis_text'] = synthesis_data['synthesis_analysis']
+        
         return jsonify(synthesis_data)
         
     except Exception as e:
