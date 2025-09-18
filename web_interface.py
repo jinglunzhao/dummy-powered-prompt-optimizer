@@ -2028,15 +2028,8 @@ if __name__ == '__main__':
 </body>
 </html>'''
     
-    # Write all templates to files
-    with open('templates/optimization.html', 'w', encoding='utf-8') as f:
-        f.write(optimization_template)
-    
-    with open('templates/generation_detail.html', 'w', encoding='utf-8') as f:
-        f.write(generation_detail_template)
-    
-    with open('templates/prompt_detail.html', 'w', encoding='utf-8') as f:
-        f.write(prompt_detail_template)
+    # Templates are now stored as separate files and should not be overwritten
+    # This prevents the Flask server from reverting our UI fixes
     print("🚀 Starting Flask server...")
     print("📱 Open your browser and go to: http://localhost:5000")
     
