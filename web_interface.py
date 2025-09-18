@@ -417,10 +417,18 @@ def api_family_tree():
                     elif 'C' in prompt_name:
                         prompt_type = "crossover"
                 
+                # Try to get actual prompt text from optimization data
+                prompt_text = synthesis_data.get('prompt_text', '')
+                if not prompt_text:
+                    # Fallback to synthesis analysis if no prompt text
+                    prompt_text = synthesis_data.get('synthesis_analysis', 'No prompt text available')
+                    if len(prompt_text) > 200:
+                        prompt_text = prompt_text[:200] + '...'
+                
                 prompt = {
                     'id': prompt_id,
                     'name': prompt_name,
-                    'prompt_text': f"[Synthesis available - {len(synthesis_data.get('synthesis_analysis', ''))} chars]",
+                    'prompt_text': prompt_text,
                     'generation': generation,
                     'performance_metrics': {},
                     'type': prompt_type,
