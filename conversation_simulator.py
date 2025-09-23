@@ -20,7 +20,7 @@ class ConversationSimulator:
         if not self.api_key:
             raise ValueError("API key is required for conversation simulator")
         
-        print("✅ Conversation Simulator initialized with AI-only mode")
+        print("✅ Conversation Simulator initialized")
     
     async def simulate_conversation_async(self, dummy: AIDummy, 
                                         scenario: str = None,
@@ -38,20 +38,26 @@ class ConversationSimulator:
         )
         
         # Generate initial message based on character's actual concerns
+        print("Starting conversation", end="", flush=True)
         initial_message = await self._generate_character_driven_opening(dummy)
         conversation.add_turn("dummy", initial_message, {
             "character_context": self._get_character_context(dummy)
         })
+        print(" ✓", flush=True)  # Show initial message is ready
         
         # Simulate conversation rounds
         for round_num in range(num_rounds):
             # AI response
+            print(".", end="", flush=True)  # Show progress dot
             ai_response = await self._generate_ai_response_async(conversation, system_prompt_text, dummy)
             conversation.add_turn("ai", ai_response, {"round": round_num + 1})
             
             # Dummy response based on character
+            print(".", end="", flush=True)  # Show progress dot
             dummy_response = await self._generate_character_response_async(conversation, dummy, round_num + 1)
             conversation.add_turn("dummy", dummy_response, {"round": round_num + 1})
+        
+        print()  # New line after conversation progress
         
         # End conversation
         conversation.end_time = datetime.now()
@@ -88,7 +94,7 @@ Start with a natural opening message (1-2 sentences)."""
                 json={
                     "model": "deepseek-chat",
                     "messages": [{"role": "user", "content": prompt}],
-                    "max_tokens": 100,
+                    "max_tokens": 80,
                     "temperature": 0.8
                 }
             ) as response:
@@ -100,7 +106,7 @@ Start with a natural opening message (1-2 sentences)."""
         
         # Prepare conversation history
         messages = [
-            {"role": "system", "content": system_prompt},
+            {"role": "system", "content": system_prompt + "\n\nIMPORTANT: Keep your response concise and under 150 words. Focus on being helpful and encouraging without being overly long."},
             {"role": "user", "content": f"Student Profile: {dummy.get_character_summary()}"}
         ]
         
@@ -119,7 +125,7 @@ Start with a natural opening message (1-2 sentences)."""
                 json={
                     "model": "deepseek-chat",
                     "messages": messages,
-                    "max_tokens": 200,
+                    "max_tokens": 150,
                     "temperature": 0.7
                 }
             ) as response:
@@ -153,7 +159,7 @@ Respond naturally as your character would:
 - Show your communication style
 - Be honest about your feelings and thoughts
 
-Keep your response conversational and authentic (1-2 sentences)."""
+Keep your response conversational and authentic (1-2 sentences). Be concise and natural."""
 
         async with aiohttp.ClientSession() as session:
             async with session.post(
@@ -165,7 +171,7 @@ Keep your response conversational and authentic (1-2 sentences)."""
                 json={
                     "model": "deepseek-chat",
                     "messages": [{"role": "user", "content": prompt}],
-                    "max_tokens": 100,
+                    "max_tokens": 80,
                     "temperature": 0.8
                 }
             ) as response:
