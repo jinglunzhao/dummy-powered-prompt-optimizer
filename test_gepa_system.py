@@ -24,6 +24,23 @@ from assessment_system import AssessmentSystem
 from conversation_simulator import ConversationSimulator
 # experiment_manager removed - using direct file operations
 
+def create_experiment(name, config, description):
+    """Simple experiment ID generator"""
+    return f"exp_{uuid.uuid4().hex[:8]}"
+
+def save_experiment_result(experiment_id, results, status):
+    """Simple experiment result saver"""
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    filename = f"data/experiments/experiment_{experiment_id}_{timestamp}.json"
+    
+    # Create directory if it doesn't exist
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
+    
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(results, f, indent=2, ensure_ascii=False, cls=DateTimeEncoder)
+    
+    return filename
+
 class DateTimeEncoder(json.JSONEncoder):
     """Custom JSON encoder to handle datetime objects"""
     def default(self, obj):
@@ -272,12 +289,35 @@ async def run_gepa_test(config: Dict[str, Any] = None):
     
     print(f"📁 Also saved to: {config['output_file']} (for backward compatibility)")
     
-    # Update validation_test_results.json with the new test results
+    # Update validation_test_results.json with the new test results (keep history)
     validation_file = "data/validation_test_results.json"
+    validation_history_file = "data/validation_test_history.json"
+    
     try:
+        # Load existing history
+        history = []
+        if os.path.exists(validation_history_file):
+            with open(validation_history_file, 'r', encoding='utf-8') as f:
+                history = json.load(f)
+        
+        # Add current test to history
+        history.append({
+            "timestamp": datetime.now().isoformat(),
+            "experiment_id": experiment_id,
+            "config": config,
+            "results": results
+        })
+        
+        # Save updated history
+        with open(validation_history_file, 'w', encoding='utf-8') as f:
+            json.dump(history, f, indent=2, ensure_ascii=False, cls=DateTimeEncoder)
+        
+        # Also save current results to the main file (for backward compatibility)
         with open(validation_file, 'w', encoding='utf-8') as f:
             json.dump(results, f, indent=2, ensure_ascii=False, cls=DateTimeEncoder)
+        
         print(f"✅ Updated validation results: {validation_file}")
+        print(f"📚 Added to history: {validation_history_file} ({len(history)} tests)")
     except Exception as e:
         print(f"⚠️  Failed to update validation results: {e}")
     
@@ -303,6 +343,37 @@ async def run_gepa_test(config: Dict[str, Any] = None):
     print("   http://localhost:5000/optimization")
     
     return results
+
+def view_test_history():
+    """View the history of all test runs"""
+    validation_history_file = "data/validation_test_history.json"
+    
+    if not os.path.exists(validation_history_file):
+        print("📚 No test history found. Run some tests first!")
+        return
+    
+    try:
+        with open(validation_history_file, 'r', encoding='utf-8') as f:
+            history = json.load(f)
+        
+        print(f"📚 Test History ({len(history)} tests)")
+        print("=" * 60)
+        
+        for i, test in enumerate(history):
+            config = test.get('config', {})
+            results = test.get('results', {})
+            stats = results.get('statistics', {})
+            
+            print(f"\n🧪 Test {i+1}: {test.get('timestamp', 'Unknown time')}")
+            print(f"   • Experiment ID: {test.get('experiment_id', 'Unknown')}")
+            print(f"   • Configuration: {config.get('dummies_count', '?')}d {config.get('conversation_rounds', '?')}r {config.get('generations', '?')}g")
+            print(f"   • Duration: {config.get('duration_seconds', 0):.1f}s")
+            print(f"   • API Calls: {stats.get('total_api_calls', 0)}")
+            print(f"   • Pareto Solutions: {stats.get('pareto_frontier_size', 0)}")
+            print(f"   • Avg Improvement: +{stats.get('average_improvement', 0):.3f}")
+            
+    except Exception as e:
+        print(f"❌ Error reading test history: {e}")
 
 def get_preset_configs():
     """Get preset configurations for different test scales"""
@@ -367,8 +438,14 @@ if __name__ == "__main__":
     parser.add_argument("--rounds", type=int, help="Conversation rounds per test")
     parser.add_argument("--generations", type=int, help="Number of generations")
     parser.add_argument("--output", type=str, help="Output file path")
+    parser.add_argument("--history", action="store_true", help="View test history instead of running a test")
     
     args = parser.parse_args()
+    
+    # Handle history command
+    if args.history:
+        view_test_history()
+        exit(0)
     
     # Get preset config
     preset_configs = get_preset_configs()

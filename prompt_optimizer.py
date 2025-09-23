@@ -832,6 +832,18 @@ Be concise and actionable. No verbose analysis.
         print(f"   ⚡ Executing {len(prompt_tasks)} prompt tests in parallel...")
         await asyncio.gather(*prompt_tasks, return_exceptions=True)
         
+        # Generate synthesis analysis for newly tested prompts
+        print(f"   🧠 Generating synthesis analysis for tested prompts...")
+        for prompt in untested_prompts:
+            # Check if prompt has conversations (was successfully tested)
+            conversations = conversation_storage.get_conversations_by_prompt(prompt.id)
+            if conversations:
+                print(f"   🧠 Generating synthesis for {prompt.name} ({len(conversations)} conversations)")
+                synthesis = self._synthesize_prompt_reflection(prompt)
+                self._save_synthesis_analysis(prompt, synthesis)
+            else:
+                print(f"   ⏭️  Skipping {prompt.name} - no conversations available")
+        
         # Update Pareto frontier
         self._update_pareto_frontier()
     
@@ -1100,7 +1112,7 @@ Respond with ONLY the new system prompt text, no explanations.
         
         # Create crossover with civilized naming
         crossover_node = genealogy_tracker.create_crossover_prompt(parent1.id, parent2.id, parent1.generation + 1)
-        return OptimizedPrompt(
+        child_prompt = OptimizedPrompt(
             id=crossover_node.id,
             name=crossover_node.name,  # e.g., "G1C01"
             prompt_text=child_prompt_text,
@@ -1111,6 +1123,10 @@ Respond with ONLY the new system prompt text, no explanations.
             created_at=datetime.now(),
             last_tested=None
         )
+        
+        # Note: Synthesis analysis for this child will be generated after it's tested and has conversations
+        
+        return child_prompt
 
     def _mutate_prompt(self, parent: OptimizedPrompt) -> OptimizedPrompt:
         """Create a mutated version of a parent prompt using GEPA synthesis analysis"""
@@ -1213,7 +1229,7 @@ Respond with ONLY the improved system prompt text, no explanations.
         
         # Create mutation with civilized naming
         mutation_node = genealogy_tracker.create_mutation_prompt(parent.id, parent.generation + 1)
-        return OptimizedPrompt(
+        child_prompt = OptimizedPrompt(
             id=mutation_node.id,
             name=mutation_node.name,  # e.g., "G1M01"
             prompt_text=mutated_prompt_text,
@@ -1224,6 +1240,10 @@ Respond with ONLY the improved system prompt text, no explanations.
             created_at=datetime.now(),
             last_tested=None
         )
+        
+        # Note: Synthesis analysis for this child will be generated after it's tested and has conversations
+        
+        return child_prompt
     
     async def run_optimization_async(self, dummies: List[AIDummy]) -> OptimizedPrompt:
         """Run the complete optimization process"""
