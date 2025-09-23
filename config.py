@@ -67,20 +67,6 @@ class Config:
         "I follow school rules."
     ]
     
-    # Conversation Scenarios
-    CONVERSATION_SCENARIOS = [
-        "Meeting someone new at a party",
-        "Asking for directions from a stranger",
-        "Joining a group conversation",
-        "Giving a presentation at work",
-        "Resolving a conflict with a colleague",
-        "Making small talk with a neighbor",
-        "Asking someone out on a date",
-        "Networking at a professional event",
-        "Handling criticism gracefully",
-        "Expressing disagreement respectfully"
-    ]
-    
     # File Paths
     DATA_DIR = "data"
     DUMMIES_FILE = "ai_dummies.json"
