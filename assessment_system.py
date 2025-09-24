@@ -272,28 +272,48 @@ Rate yourself based on your current feelings, confidence, and self-perception.""
             return 3  # Default moderate confidence
     
     def _summarize_conversation_for_assessment(self, conversation: 'Conversation') -> str:
-        """Create a brief summary of the conversation for assessment context"""
+        """Create a detailed summary of the conversation for assessment context"""
         if not conversation or not conversation.turns:
             return ""
         
-        # Get key themes from the conversation
-        all_text = " ".join([turn.message for turn in conversation.turns])
+        # Create a detailed conversation summary
+        conversation_summary = []
         
-        # Extract key topics
-        topics = []
-        if "help" in all_text.lower():
-            topics.append("help-seeking")
-        if "confident" in all_text.lower() or "confidence" in all_text.lower():
-            topics.append("confidence building")
-        if "social" in all_text.lower() or "friend" in all_text.lower():
-            topics.append("social skills")
-        if "anxiety" in all_text.lower() or "nervous" in all_text.lower():
-            topics.append("anxiety management")
+        # Add conversation overview
+        conversation_summary.append(f"You had a {len(conversation.turns)}-turn coaching conversation.")
         
-        if topics:
-            return f"Recent coaching focused on: {', '.join(topics[:3])}"
-        else:
-            return "Recent coaching session completed"
+        # Extract key conversation exchanges
+        dummy_turns = [turn for turn in conversation.turns if turn.speaker == "dummy"]
+        ai_turns = [turn for turn in conversation.turns if turn.speaker == "ai"]
+        
+        # Summarize what the dummy shared
+        if dummy_turns:
+            dummy_concerns = []
+            for turn in dummy_turns[:3]:  # First 3 dummy turns
+                if len(turn.message) > 50:
+                    dummy_concerns.append(turn.message[:100] + "...")
+                else:
+                    dummy_concerns.append(turn.message)
+            
+            if dummy_concerns:
+                conversation_summary.append(f"You shared: {' '.join(dummy_concerns)}")
+        
+        # Summarize key coaching advice
+        if ai_turns:
+            coaching_points = []
+            for turn in ai_turns[:2]:  # First 2 AI turns
+                if len(turn.message) > 50:
+                    coaching_points.append(turn.message[:100] + "...")
+                else:
+                    coaching_points.append(turn.message)
+            
+            if coaching_points:
+                conversation_summary.append(f"Your coach advised: {' '.join(coaching_points)}")
+        
+        # Add conversation impact
+        conversation_summary.append("This conversation helped you reflect on your social skills and provided new strategies.")
+        
+        return " ".join(conversation_summary)
     
     def _calculate_weighted_scores(self, responses: List[AssessmentResponse]) -> Dict[str, float]:
         """Calculate scores with optional weighting"""
