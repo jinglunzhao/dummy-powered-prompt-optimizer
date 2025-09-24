@@ -140,6 +140,123 @@
             text-align: center;
             margin: 20px 0;
         }
+        
+        /* Conversation History Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 2% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 1000px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            right: 15px;
+            top: 10px;
+        }
+        
+        .close:hover {
+            color: black;
+        }
+        
+        .conversation-header {
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .conversation-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .conversation-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        .conversation-turns {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ecf0f1;
+            border-radius: 5px;
+            padding: 15px;
+        }
+        
+        .turn {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid;
+        }
+        
+        .turn.dummy {
+            background-color: #f8f9fa;
+            border-left-color: #3498db;
+        }
+        
+        .turn.ai {
+            background-color: #f1f3f4;
+            border-left-color: #2ecc71;
+        }
+        
+        .turn-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .turn-speaker {
+            color: #2c3e50;
+        }
+        
+        .turn-round {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        .turn-message {
+            line-height: 1.6;
+            color: #34495e;
+        }
+        
+        .milestone-marker {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 15px 0;
+            text-align: center;
+            font-weight: bold;
+            color: #856404;
+        }
     </style>
 </head>
 <body>
@@ -187,6 +304,16 @@
         
         <div class="stats" id="stats"></div>
     </div>
+    
+    <!-- Conversation History Modal -->
+    <div id="conversation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-content-body">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
 
     <script>
         class ConversationJourneyVisualizer {
@@ -194,6 +321,7 @@
                 this.experiments = [];
                 this.currentExperiment = null;
                 this.chartData = null;
+                this.conversationDetails = null;
                 this.colors = [
                     '#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6',
                     '#1abc9c', '#34495e', '#e67e22', '#95a5a6', '#f1c40f'
@@ -205,6 +333,7 @@
             async init() {
                 await this.loadExperiments();
                 this.setupEventListeners();
+                this.setupModal();
             }
             
             async loadExperiments() {
@@ -252,6 +381,21 @@
                 });
             }
             
+            setupModal() {
+                const modal = document.getElementById('conversation-modal');
+                const closeBtn = document.querySelector('.close');
+                
+                closeBtn.addEventListener('click', () => {
+                    modal.style.display = 'none';
+                });
+                
+                window.addEventListener('click', (event) => {
+                    if (event.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            }
+            
             async onExperimentSelect(filename) {
                 if (!filename) {
                     document.getElementById('dummy-select').innerHTML = 
@@ -292,6 +436,7 @@
                     const experiment = await response.json();
                     
                     this.processExperimentData(experiment);
+                    await this.loadConversationDetails(filename);
                     this.renderChart();
                     this.showLoading(false);
                 } catch (error) {
@@ -321,6 +466,17 @@
                         data: milestones.sort((a, b) => a.round - b.round)
                     };
                 });
+            }
+            
+            async loadConversationDetails(filename) {
+                try {
+                    const response = await fetch(`/api/experiment/${filename}/details`);
+                    const details = await response.json();
+                    this.conversationDetails = details;
+                } catch (error) {
+                    console.log('No conversation details available for this experiment');
+                    this.conversationDetails = null;
+                }
             }
             
             renderChart() {
@@ -376,7 +532,9 @@
                             .attr('fill', 'none')
                             .attr('stroke', this.colors[i % this.colors.length])
                             .attr('stroke-width', 2)
-                            .attr('d', line);
+                            .attr('d', line)
+                            .style('cursor', 'pointer')
+                            .on('click', () => this.showConversationHistory(dummy.name));
                         
                         // Add data points
                         g.selectAll(`.dot-${i}`)
@@ -515,6 +673,72 @@
                 const errorDiv = document.getElementById('error');
                 errorDiv.textContent = message;
                 errorDiv.style.display = 'block';
+            }
+            
+            showConversationHistory(dummyName) {
+                if (!this.conversationDetails) {
+                    alert('No conversation details available for this experiment. Please run experiments with --save-details flag.');
+                    return;
+                }
+                
+                const dummyDetails = this.conversationDetails.find(d => d.dummy_name === dummyName);
+                if (!dummyDetails || !dummyDetails.conversation_details) {
+                    alert('No conversation details available for this dummy.');
+                    return;
+                }
+                
+                const modal = document.getElementById('conversation-modal');
+                const modalBody = document.getElementById('modal-content-body');
+                
+                const conversation = dummyDetails.conversation_details;
+                const milestones = this.currentExperiment.results.find(r => r.dummy_name === dummyName)?.milestone_results || [];
+                
+                let html = `
+                    <div class="conversation-header">
+                        <div class="conversation-title">💬 ${dummyName} - Complete Conversation History</div>
+                        <div class="conversation-meta">
+                            <div><strong>Pre-assessment:</strong> ${conversation.pre_assessment.average_score.toFixed(2)} points</div>
+                            <div><strong>Final Assessment:</strong> ${conversation.final_assessment.average_score.toFixed(2)} points</div>
+                            <div><strong>Total Improvement:</strong> +${dummyDetails.final_improvement.toFixed(3)} points</div>
+                            <div><strong>Conversation Turns:</strong> ${conversation.turns.length}</div>
+                            <div><strong>Duration:</strong> ${(dummyDetails.total_duration_seconds / 60).toFixed(1)} minutes</div>
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-turns">
+                `;
+                
+                let currentRound = 0;
+                conversation.turns.forEach((turn, index) => {
+                    // Check if this is a milestone
+                    const milestone = milestones.find(m => m.conversation_turns === index + 1);
+                    if (milestone) {
+                        html += `
+                            <div class="milestone-marker">
+                                📊 Assessment Milestone: ${milestone.milestone_rounds} rounds → +${milestone.improvement.toFixed(3)} points
+                            </div>
+                        `;
+                    }
+                    
+                    // Determine round number
+                    if (turn.speaker === 'dummy') {
+                        currentRound++;
+                    }
+                    
+                    html += `
+                        <div class="turn ${turn.speaker}">
+                            <div class="turn-header">
+                                <span class="turn-speaker">${turn.speaker === 'ai' ? '🤖 AI Coach' : '👤 ' + dummyName}</span>
+                                <span class="turn-round">Round ${currentRound}</span>
+                            </div>
+                            <div class="turn-message">${turn.message}</div>
+                        </div>
+                    `;
+                });
+                
+                html += '</div>';
+                modalBody.innerHTML = html;
+                modal.style.display = 'block';
             }
         }
         

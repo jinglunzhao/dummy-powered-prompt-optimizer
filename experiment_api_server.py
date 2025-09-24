@@ -85,6 +85,32 @@ def get_experiment(filename):
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+@app.route('/api/experiment/<filename>/details')
+def get_experiment_details(filename):
+    """Get experiment data with conversation details (if available)"""
+    try:
+        file_path = os.path.join('data/experiments', filename)
+        
+        if not os.path.exists(file_path):
+            return jsonify({'error': 'Experiment not found'}), 404
+        
+        with open(file_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        
+        # Filter results to only include those with conversation_details
+        results_with_details = []
+        for result in data.get('results', []):
+            if 'conversation_details' in result:
+                results_with_details.append(result)
+        
+        if not results_with_details:
+            return jsonify({'error': 'No conversation details available for this experiment'}), 404
+        
+        return jsonify(results_with_details)
+    
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
 @app.route('/api/experiment/<filename>/summary')
 def get_experiment_summary(filename):
     """Get experiment summary statistics"""
