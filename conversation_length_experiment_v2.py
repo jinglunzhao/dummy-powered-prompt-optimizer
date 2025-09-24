@@ -180,8 +180,10 @@ class ContinuousConversationExperiment:
                 
                 print(f" [M{dummy_num}:{current_rounds}]", end="", flush=True)
                 
-                # Generate post-assessment at this milestone
-                milestone_assessment = self.assessment_system.generate_post_assessment(dummy, pre_assessment)
+                # Generate post-assessment at this milestone based on conversation content
+                milestone_assessment = self.assessment_system.generate_post_assessment(
+                    dummy, pre_assessment, conversation
+                )
                 improvement = milestone_assessment.average_score - pre_assessment.average_score
                 
                 milestone_results.append({
@@ -202,8 +204,10 @@ class ContinuousConversationExperiment:
         conversation.end_time = datetime.now()
         conversation.duration_seconds = (conversation.end_time - conversation.start_time).total_seconds()
         
-        # Final post-assessment
-        final_assessment = self.assessment_system.generate_post_assessment(dummy, pre_assessment)
+        # Final post-assessment based on complete conversation
+        final_assessment = self.assessment_system.generate_post_assessment(
+            dummy, pre_assessment, conversation
+        )
         final_improvement = final_assessment.average_score - pre_assessment.average_score
         
         print(f"   [{dummy_num}/{total_dummies}] 📊 Final assessment: {final_assessment.average_score:.2f} (+{final_improvement:.3f})")

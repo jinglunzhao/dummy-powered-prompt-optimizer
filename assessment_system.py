@@ -19,18 +19,35 @@ class AssessmentSystem:
     
     def _generate_question_weights(self) -> Dict[str, float]:
         """Generate weights for questions based on importance"""
-        # Questions about core social skills get higher weights
+        # Weight questions based on skill category importance
         weights = {
-            "How comfortable are you starting conversations with strangers?": 1.2,
-            "How well do you maintain eye contact during conversations?": 1.1,
-            "How easily do you express your opinions in group settings?": 1.3,
-            "How comfortable are you with public speaking?": 1.4,
-            "How well do you handle criticism or disagreement?": 1.2,
-            "How easily do you make new friends?": 1.1,
-            "How comfortable are you in large social gatherings?": 1.0,
-            "How well do you read social cues and body language?": 1.1,
-            "How easily do you ask for help when needed?": 1.0,
-            "How comfortable are you with small talk?": 1.0
+            # Communication Skills (higher weight)
+            "I ask for help when I need it.": 1.3,
+            "I let people know when there's a problem.": 1.2,
+            "I pay attention when others present their ideas.": 1.1,
+            "I work well with my classmates.": 1.2,
+            "I look at people when I talk to them.": 1.1,
+            "I pay attention when the teacher talks to the class.": 1.0,
+            
+            # Emotional Regulation (highest weight - critical for social skills)
+            "I stay calm when dealing with problems.": 1.4,
+            "I stay calm when I disagree with others.": 1.4,
+            "I try to find a good way to end a disagreement.": 1.3,
+            
+            # Empathy & Social Support (high weight)
+            "I help my friends when they are having a problem.": 1.2,
+            "I stand up for others when they are not treated well.": 1.3,
+            "I try to make others feel better.": 1.2,
+            "I try to think about how others feel.": 1.3,
+            "I say \"thank you\" when someone helps me.": 1.1,
+            "I try to forgive others when they say \"sorry\".": 1.1,
+            
+            # Responsibility & Cooperation (medium weight)
+            "I do my part in a group.": 1.1,
+            "I do the right thing without being told.": 1.0,
+            "I am careful when I use things that aren't mine.": 1.0,
+            "I keep my promises.": 1.1,
+            "I follow school rules.": 1.0
         }
         return weights
     
@@ -78,24 +95,31 @@ class AssessmentSystem:
         )
     
     def generate_post_assessment(self, dummy: AIDummy, pre_assessment: Assessment, 
+                               conversation: 'Conversation' = None,
                                improvement_factor: float = 0.3) -> Assessment:
-        """Generate a post-intervention assessment showing improvement"""
+        """Generate a post-intervention assessment based on actual conversation content"""
         responses = []
+        
+        # Analyze conversation content if available
+        conversation_analysis = self._analyze_conversation_for_skills(conversation) if conversation else {}
         
         for pre_response in pre_assessment.responses:
             # Start with pre-assessment score
             pre_score = pre_response.score
             
-            # Most scores improve by 0-1 points, some stay the same
-            improvement_chance = random.random()
-            if improvement_chance < 0.7:  # 70% chance of improvement
-                improvement = random.choice([0, 1])  # 0 or 1 point improvement
-                post_score = min(4, pre_score + improvement)
-            else:  # 30% chance of no change
-                post_score = pre_score
+            # Calculate improvement based on conversation analysis
+            improvement = self._calculate_skill_improvement(
+                pre_response.question, 
+                conversation_analysis, 
+                dummy, 
+                improvement_factor
+            )
+            
+            # Apply improvement with realistic constraints
+            post_score = max(1, min(4, int(round(pre_score + improvement))))
             
             # Generate confidence (usually improves with score improvement)
-            confidence = max(1, min(4, int(round(post_score + random.uniform(-0.5, 0.5)))))
+            confidence = max(1, min(4, int(round(post_score + random.uniform(-0.3, 0.3)))))
             
             # Generate notes showing improvement
             notes = self._generate_post_assessment_notes(pre_response.question, post_score, confidence, dummy)
@@ -175,6 +199,98 @@ class AssessmentSystem:
             improvement_areas.append("Focus on emotional regulation and conflict resolution")
         
         return improvement_areas
+    
+    def _analyze_conversation_for_skills(self, conversation: 'Conversation') -> Dict[str, float]:
+        """Analyze conversation content to identify skill development indicators"""
+        if not conversation or not conversation.turns:
+            return {}
+        
+        # Skill indicators based on conversation content
+        skill_indicators = {
+            "help_seeking": 0.0,
+            "emotional_regulation": 0.0,
+            "empathy": 0.0,
+            "communication": 0.0,
+            "responsibility": 0.0
+        }
+        
+        # Analyze dummy responses for skill development
+        dummy_turns = [turn for turn in conversation.turns if turn.speaker == "dummy"]
+        
+        for turn in dummy_turns:
+            message_lower = turn.message.lower()
+            
+            # Help-seeking indicators
+            if any(phrase in message_lower for phrase in ["help", "don't know", "struggling", "difficult", "need"]):
+                skill_indicators["help_seeking"] += 0.2
+            
+            # Emotional regulation indicators
+            if any(phrase in message_lower for phrase in ["calm", "okay", "better", "feel good", "confident"]):
+                skill_indicators["emotional_regulation"] += 0.2
+            elif any(phrase in message_lower for phrase in ["angry", "frustrated", "upset", "stressed"]):
+                skill_indicators["emotional_regulation"] -= 0.1
+            
+            # Empathy indicators
+            if any(phrase in message_lower for phrase in ["understand", "feel", "others", "friends", "help others"]):
+                skill_indicators["empathy"] += 0.2
+            
+            # Communication indicators
+            if any(phrase in message_lower for phrase in ["talk", "say", "express", "tell", "share"]):
+                skill_indicators["communication"] += 0.1
+            
+            # Responsibility indicators
+            if any(phrase in message_lower for phrase in ["try", "practice", "work on", "improve", "learn"]):
+                skill_indicators["responsibility"] += 0.2
+        
+        # Normalize indicators (0.0 to 1.0 scale)
+        for skill in skill_indicators:
+            skill_indicators[skill] = max(0.0, min(1.0, skill_indicators[skill]))
+        
+        return skill_indicators
+    
+    def _calculate_skill_improvement(self, question: str, conversation_analysis: Dict[str, float], 
+                                   dummy: AIDummy, improvement_factor: float) -> float:
+        """Calculate improvement for a specific skill based on conversation analysis"""
+        
+        # Map questions to skill categories
+        skill_mapping = {
+            "I ask for help when I need it.": "help_seeking",
+            "I stay calm when dealing with problems.": "emotional_regulation",
+            "I stay calm when I disagree with others.": "emotional_regulation",
+            "I help my friends when they are having a problem.": "empathy",
+            "I stand up for others when they are not treated well.": "empathy",
+            "I try to make others feel better.": "empathy",
+            "I try to think about how others feel.": "empathy",
+            "I work well with my classmates.": "communication",
+            "I look at people when I talk to them.": "communication",
+            "I let people know when there's a problem.": "communication",
+            "I pay attention when others present their ideas.": "communication",
+            "I do my part in a group.": "responsibility",
+            "I do the right thing without being told.": "responsibility",
+            "I am careful when I use things that aren't mine.": "responsibility",
+            "I keep my promises.": "responsibility",
+            "I follow school rules.": "responsibility",
+            "I say \"thank you\" when someone helps me.": "empathy",
+            "I try to forgive others when they say \"sorry\".": "empathy",
+            "I try to find a good way to end a disagreement.": "emotional_regulation",
+            "I pay attention when the teacher talks to the class.": "communication"
+        }
+        
+        # Get relevant skill from conversation analysis
+        relevant_skill = skill_mapping.get(question, "communication")
+        conversation_improvement = conversation_analysis.get(relevant_skill, 0.0)
+        
+        # Base improvement from conversation (0.0 to 0.5 points)
+        base_improvement = conversation_improvement * 0.5
+        
+        # Add some realistic variation based on dummy's personality
+        personality_modifier = (dummy.personality.conscientiousness - 5) * 0.02  # -0.08 to +0.08
+        
+        # Combine factors
+        total_improvement = base_improvement + personality_modifier + random.uniform(-0.1, 0.1)
+        
+        # Ensure realistic improvement range (-0.2 to +0.8 points)
+        return max(-0.2, min(0.8, total_improvement))
     
     def calculate_improvement_metrics(self, pre: Assessment, post: Assessment) -> Dict[str, Any]:
         """Calculate improvement metrics between pre and post assessments."""

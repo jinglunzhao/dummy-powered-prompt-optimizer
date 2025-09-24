@@ -305,8 +305,8 @@ class PromptOptimizer:
             custom_system_prompt=prompt.prompt_text
         )
         
-        # Generate post-assessment
-        post_assessment = self.assessment_system.generate_post_assessment(dummy, pre_assessment)
+        # Generate post-assessment based on conversation content
+        post_assessment = self.assessment_system.generate_post_assessment(dummy, pre_assessment, conversation)
         
         # Calculate metrics
         pre_score = pre_assessment.average_score
