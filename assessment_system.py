@@ -55,33 +55,15 @@ class AssessmentSystem:
         return weights
     
     async def generate_pre_assessment(self, dummy: AIDummy) -> Assessment:
-        """Generate a pre-intervention self-assessment where the dummy actually answers questions"""
-        responses = []
+        """Generate a pre-intervention self-assessment where the dummy answers all questions at once"""
         
         print(f"📝 {dummy.name} is taking the pre-assessment...")
         
-        for i, question in enumerate(self.questions):
-            print(f"   Question {i+1}/{len(self.questions)}: {question[:50]}...")
-            
-            # Have the dummy answer the question
-            dummy_response = await self._ask_dummy_assessment_question(dummy, question)
-            
-            # Parse the response to get a score (1-4)
-            score = self._parse_dummy_response_to_score(dummy_response, question)
-            
-            # Generate confidence based on response quality
-            confidence = self._generate_confidence_from_response(dummy_response)
-            
-            # Generate notes from the dummy's response
-            notes = self._generate_notes_from_response(dummy_response, question, score)
-            
-            response = AssessmentResponse(
-                question=question,
-                score=score,
-                confidence=confidence,
-                notes=notes
-            )
-            responses.append(response)
+        # Ask all 20 questions in one API call
+        assessment_response = await self._ask_dummy_all_assessment_questions(dummy)
+        
+        # Parse the complete assessment response
+        responses = self._parse_complete_assessment_response(assessment_response, dummy)
         
         # Calculate scores
         scores = self._calculate_weighted_scores(responses)
@@ -102,41 +84,20 @@ class AssessmentSystem:
     async def generate_post_assessment(self, dummy: AIDummy, pre_assessment: Assessment, 
                                      conversation: 'Conversation' = None,
                                      improvement_factor: float = 0.3) -> Assessment:
-        """Generate a post-intervention self-assessment where the dummy answers questions after coaching"""
-        responses = []
+        """Generate a post-intervention self-assessment where the dummy answers all questions at once"""
         
         print(f"📝 {dummy.name} is taking the post-assessment...")
         
         # Analyze conversation content if available for context
         conversation_context = self._summarize_conversation_for_assessment(conversation) if conversation else ""
         
-        for i, pre_response in enumerate(pre_assessment.responses):
-            print(f"   Question {i+1}/{len(pre_assessment.responses)}: {pre_response.question[:50]}...")
-            
-            # Have the dummy answer the question with conversation context
-            dummy_response = await self._ask_dummy_assessment_question(
-                dummy, 
-                pre_response.question, 
-                conversation_context=conversation_context,
-                previous_score=pre_response.score
-            )
-            
-            # Parse the response to get a score (1-4)
-            score = self._parse_dummy_response_to_score(dummy_response, pre_response.question)
-            
-            # Generate confidence based on response quality
-            confidence = self._generate_confidence_from_response(dummy_response)
-            
-            # Generate notes from the dummy's response
-            notes = self._generate_notes_from_response(dummy_response, pre_response.question, score)
-            
-            response = AssessmentResponse(
-                question=pre_response.question,
-                score=score,
-                confidence=confidence,
-                notes=notes
-            )
-            responses.append(response)
+        # Ask all 20 questions in one API call with conversation context
+        assessment_response = await self._ask_dummy_all_assessment_questions(
+            dummy, conversation_context=conversation_context, pre_assessment=pre_assessment
+        )
+        
+        # Parse the complete assessment response
+        responses = self._parse_complete_assessment_response(assessment_response, dummy)
         
         # Calculate new scores
         scores = self._calculate_weighted_scores(responses)
@@ -207,6 +168,125 @@ class AssessmentSystem:
             improvement_areas.append("Focus on emotional regulation and conflict resolution")
         
         return improvement_areas
+    
+    async def _ask_dummy_all_assessment_questions(self, dummy: AIDummy, 
+                                                conversation_context: str = "",
+                                                pre_assessment: Assessment = None) -> str:
+        """Ask the dummy AI to answer all 20 assessment questions in one API call"""
+        
+        # Build context for the assessment
+        context_parts = [
+            f"You are {dummy.name}, a {dummy.major} student.",
+            f"Your personality traits: {', '.join(dummy.personality.get_dominant_traits())}",
+            f"Your social anxiety level: {dummy.social_anxiety.get_anxiety_category()}",
+            f"Your current challenges: {', '.join(dummy.challenges[:3])}"
+        ]
+        
+        if conversation_context:
+            context_parts.append(f"Recent coaching conversation context: {conversation_context}")
+        
+        if pre_assessment:
+            context_parts.append(f"Your previous assessment average: {pre_assessment.average_score:.2f}/4")
+        
+        context = "\n".join(context_parts)
+        
+        # Create the complete assessment prompt
+        questions_text = "\n".join([f"{i+1}. {q}" for i, q in enumerate(self.questions)])
+        
+        prompt = f"""{context}
+
+You are taking a self-assessment about your social skills. Please answer ALL 20 questions honestly based on your character and experiences.
+
+For each question, please provide:
+1. Your self-rating (1=Not True, 2=Somewhat True, 3=Mostly True, 4=Very True)
+2. A brief explanation of why you rated yourself this way
+
+Questions:
+{questions_text}
+
+Please respond in this exact format:
+1. [Rating: X/4] [Brief explanation]
+2. [Rating: X/4] [Brief explanation]
+... (continue for all 20 questions)
+
+Be honest and authentic to your character. Consider your personality, anxiety level, and recent experiences."""
+
+        try:
+            async with aiohttp.ClientSession() as session:
+                response = await session.post(
+                    "https://api.deepseek.com/v1/chat/completions",
+                    headers={
+                        "Authorization": f"Bearer {Config.DEEPSEEK_API_KEY}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "model": Config.OPENAI_MODEL,
+                        "messages": [{"role": "user", "content": prompt}],
+                        "max_tokens": 800,  # Increased for all 20 questions
+                        "temperature": 0.7
+                    },
+                    timeout=aiohttp.ClientTimeout(total=60)  # Increased timeout
+                )
+                
+                if response.status == 200:
+                    data = await response.json()
+                    return data["choices"][0]["message"]["content"].strip()
+                else:
+                    print(f"❌ API error {response.status}: {await response.text()}")
+                    return self._generate_fallback_assessment()
+                    
+        except Exception as e:
+            print(f"❌ Error asking assessment questions: {e}")
+            return self._generate_fallback_assessment()
+    
+    def _parse_complete_assessment_response(self, response: str, dummy: AIDummy) -> List[AssessmentResponse]:
+        """Parse the complete assessment response to extract all 20 scores"""
+        responses = []
+        lines = response.split('\n')
+        
+        for i, question in enumerate(self.questions):
+            # Try to find the corresponding line in the response
+            score = 2  # Default fallback
+            confidence = 3
+            notes = "Default response"
+            
+            # Look for the question number in the response
+            for line in lines:
+                if line.strip().startswith(f"{i+1}.") or f"{i+1}." in line:
+                    # Parse the line for rating
+                    if "rating:" in line.lower():
+                        # Extract rating
+                        import re
+                        rating_match = re.search(r'rating:\s*(\d)/4', line.lower())
+                        if rating_match:
+                            score = int(rating_match.group(1))
+                        else:
+                            # Fallback: look for number
+                            numbers = re.findall(r'\b[1-4]\b', line)
+                            if numbers:
+                                score = int(numbers[0])
+                    
+                    # Generate confidence and notes from the line
+                    confidence = self._generate_confidence_from_response(line)
+                    notes = f"Self-assessment: {line.strip()[:200]}..."
+                    break
+            
+            response_obj = AssessmentResponse(
+                question=question,
+                score=score,
+                confidence=confidence,
+                notes=notes
+            )
+            responses.append(response_obj)
+        
+        return responses
+    
+    def _generate_fallback_assessment(self) -> str:
+        """Generate a fallback assessment when API fails"""
+        fallback = ""
+        for i, question in enumerate(self.questions):
+            fallback += f"{i+1}. Rating: 2/4 I'm not sure about this skill.\n"
+        return fallback
     
     async def _ask_dummy_assessment_question(self, dummy: AIDummy, question: str, 
                                            conversation_context: str = "", 

@@ -160,6 +160,7 @@ class ContinuousConversationExperiment:
         # Track milestone results
         milestone_results = []
         current_milestone_idx = 0
+        assessment_tasks = []  # Store assessment tasks to run in parallel
         
         # Run conversation rounds up to max_rounds
         for round_num in range(max_rounds):
@@ -180,14 +181,27 @@ class ContinuousConversationExperiment:
                 
                 print(f" [M{dummy_num}:{current_rounds}]", end="", flush=True)
                 
-                # Generate post-assessment at this milestone based on conversation content
-                milestone_assessment = await self.assessment_system.generate_post_assessment(
-                    dummy, pre_assessment, conversation
+                # Start assessment in background (don't wait for it)
+                assessment_task = asyncio.create_task(
+                    self.assessment_system.generate_post_assessment(dummy, pre_assessment, conversation)
                 )
+                assessment_tasks.append({
+                    "task": assessment_task,
+                    "rounds": current_rounds,
+                    "index": current_milestone_idx
+                })
+                
+                current_milestone_idx += 1
+        
+        # Wait for all assessment tasks to complete
+        if assessment_tasks:
+            print(f" [A{dummy_num}]", end="", flush=True)
+            for assessment_data in assessment_tasks:
+                milestone_assessment = await assessment_data["task"]
                 improvement = milestone_assessment.average_score - pre_assessment.average_score
                 
                 milestone_results.append({
-                    "milestone_rounds": current_rounds,
+                    "milestone_rounds": assessment_data["rounds"],
                     "pre_score": pre_assessment.average_score,
                     "milestone_score": milestone_assessment.average_score,
                     "improvement": improvement,
@@ -196,7 +210,6 @@ class ContinuousConversationExperiment:
                 })
                 
                 print(f" +{improvement:.3f}", end="", flush=True)
-                current_milestone_idx += 1
         
         print()  # New line after conversation progress
         
