@@ -135,76 +135,46 @@ class AssessmentSystem:
     async def _ask_dummy_all_assessment_questions(self, dummy: AIDummy, 
                                                 conversation_context: str = "",
                                                 pre_assessment: Assessment = None) -> str:
-        """Ask the dummy AI to answer all 20 assessment questions in one API call"""
+        """Ask the dummy AI to answer assessment questions through multi-turn conversation"""
         
-        # Build context for the assessment
-        context_parts = [
-            f"You are {dummy.name}, a {dummy.major} student.",
-            f"Your personality traits: {', '.join(dummy.personality.get_dominant_traits())}",
-            f"Your social anxiety level: {dummy.social_anxiety.get_anxiety_category()}",
-            f"Your current challenges: {', '.join(dummy.challenges[:3])}"
+        # Create a conversation session with the dummy
+        messages = [
+            {
+                "role": "system", 
+                "content": f"""You are {dummy.name}, a {dummy.major} student with these characteristics:
+- Extraversion: {dummy.personality.extraversion}/10
+- Agreeableness: {dummy.personality.agreeableness}/10  
+- Conscientiousness: {dummy.personality.conscientiousness}/10
+- Anxiety Level: {dummy.social_anxiety.anxiety_level}/10
+- Challenges: {', '.join(dummy.challenges[:3])}
+
+You are taking a self-assessment about your social skills. Be honest about your current feelings and self-perception."""
+            }
         ]
         
+        # If this is a post-assessment, add coaching conversation context
         if conversation_context:
-            context_parts.append(f"Recent coaching conversation context: {conversation_context}")
+            messages.append({
+                "role": "assistant",
+                "content": f"I just had a helpful coaching conversation. Here's what happened: {conversation_context}"
+            })
+            messages.append({
+                "role": "user", 
+                "content": "How did that coaching conversation make you feel? Did it change your perspective on your social skills or confidence?"
+            })
         
-        if pre_assessment:
-            context_parts.append(f"Your previous assessment average: {pre_assessment.average_score:.2f}/4")
+        # Start the assessment conversation
+        messages.append({
+            "role": "user",
+            "content": "Now I'd like you to take a self-assessment. I'll ask you about various social skills, and you should rate yourself from 1 (Not True) to 4 (Very True). Let's start with the first few questions:\n\n1. I ask for help when I need it.\n2. I stay calm when dealing with problems.\n3. I help my friends when they are having a problem.\n\nPlease rate yourself honestly on these three questions."
+        })
+
+        # Conduct multi-turn conversation to build self-awareness
+        all_responses = []
         
-        context = "\n".join(context_parts)
-        
-        # Create the complete assessment prompt
-        questions_text = "\n".join([f"{i+1}. {q}" for i, q in enumerate(self.questions)])
-        
-        # Determine base personality influence
-        extraversion_score = dummy.personality.extraversion
-        agreeableness_score = dummy.personality.agreeableness
-        conscientiousness_score = dummy.personality.conscientiousness
-        anxiety_score = dummy.social_anxiety.anxiety_level
-        
-        # Create conversation-aware context
-        if conversation_context:
-            coaching_context = f"""
-
-IMPORTANT: You just had a coaching conversation. Think about how this conversation made you feel and what you learned:
-
-{conversation_context}
-
-Reflect on:
-- Did the coaching make you feel more confident?
-- Did you learn new strategies or perspectives?
-- Do you feel more capable or optimistic about these skills?
-- How has your self-perception changed after this conversation?
-
-Rate yourself based on how you feel NOW, after this coaching experience."""
-        else:
-            coaching_context = """
-
-This is your baseline self-assessment. Be honest about your current abilities and confidence level."""
-        
-        prompt = f"""{context}
-
-You are taking a self-assessment about your social skills. 
-
-YOUR PERSONALITY TRAITS:
-- Extraversion: {extraversion_score}/10 ({'Very outgoing and social' if extraversion_score >= 8 else 'Moderately outgoing' if extraversion_score >= 5 else 'More reserved and quiet'})
-- Agreeableness: {agreeableness_score}/10 ({'Highly cooperative and helpful' if agreeableness_score >= 8 else 'Moderately cooperative' if agreeableness_score >= 5 else 'More independent and competitive'})
-- Conscientiousness: {conscientiousness_score}/10 ({'Very organized and responsible' if conscientiousness_score >= 8 else 'Moderately organized' if conscientiousness_score >= 5 else 'More flexible and spontaneous'})
-- Anxiety Level: {anxiety_score}/10 ({'High anxiety in social situations' if anxiety_score >= 8 else 'Moderate anxiety' if anxiety_score >= 5 else 'Low anxiety and calm'})
-{coaching_context}
-
-Questions:
-{questions_text}
-
-Respond in this format:
-1. [Rating: X/4] [Your honest self-assessment and reasoning]
-2. [Rating: X/4] [Your honest self-assessment and reasoning]
-... (continue for all 20 questions)
-
-Rate yourself based on your current feelings, confidence, and self-perception."""
-
         try:
             async with aiohttp.ClientSession() as session:
+                # First round - get initial self-reflection
                 response = await session.post(
                     "https://api.deepseek.com/v1/chat/completions",
                     headers={
@@ -213,22 +183,86 @@ Rate yourself based on your current feelings, confidence, and self-perception.""
                     },
                     json={
                         "model": Config.DEEPSEEK_REASONER_MODEL,
-                        "messages": [{"role": "user", "content": prompt}],
-                        "max_tokens": 800,  # Increased for all 20 questions
-                        "temperature": 0.1
+                        "messages": messages,
+                        "max_tokens": 300,
+                        "temperature": 0.3  # Higher for more human-like responses
                     },
-                    timeout=aiohttp.ClientTimeout(total=60)  # Increased timeout
+                    timeout=aiohttp.ClientTimeout(total=30)
                 )
                 
                 if response.status == 200:
                     data = await response.json()
-                    return data["choices"][0]["message"]["content"].strip()
+                    dummy_response = data["choices"][0]["message"]["content"].strip()
+                    messages.append({"role": "assistant", "content": dummy_response})
+                    all_responses.append(dummy_response)
+                    
+                    # Second round - continue assessment with more questions
+                    messages.append({
+                        "role": "user",
+                        "content": "Good, thank you for those honest answers. Now let's continue with more questions:\n\n4. I work well with my classmates.\n5. I do the right thing without being told.\n6. I do my part in a group.\n7. I stay calm when I disagree with others.\n8. I stand up for others when they are not treated well.\n\nPlease rate yourself on these questions as well."
+                    })
+                    
+                    response = await session.post(
+                        "https://api.deepseek.com/v1/chat/completions",
+                        headers={
+                            "Authorization": f"Bearer {Config.DEEPSEEK_API_KEY}",
+                            "Content-Type": "application/json"
+                        },
+                        json={
+                            "model": Config.DEEPSEEK_REASONER_MODEL,
+                            "messages": messages,
+                            "max_tokens": 300,
+                            "temperature": 0.3
+                        },
+                        timeout=aiohttp.ClientTimeout(total=30)
+                    )
+                    
+                    if response.status == 200:
+                        data = await response.json()
+                        dummy_response = data["choices"][0]["message"]["content"].strip()
+                        messages.append({"role": "assistant", "content": dummy_response})
+                        all_responses.append(dummy_response)
+                        
+                        # Third round - finish remaining questions
+                        messages.append({
+                            "role": "user",
+                            "content": "Excellent. Let's finish with the remaining questions:\n\n9. I look at people when I talk to them.\n10. I am careful when I use things that aren't mine.\n11. I let people know when there's a problem.\n12. I pay attention when the teacher talks to the class.\n13. I try to make others feel better.\n14. I say \"thank you\" when someone helps me.\n15. I keep my promises.\n16. I pay attention when others present their ideas.\n17. I try to find a good way to end a disagreement.\n18. I try to think about how others feel.\n19. I try to forgive others when they say \"sorry\".\n20. I follow school rules.\n\nPlease rate yourself on these final questions."
+                        })
+                        
+                        response = await session.post(
+                            "https://api.deepseek.com/v1/chat/completions",
+                            headers={
+                                "Authorization": f"Bearer {Config.DEEPSEEK_API_KEY}",
+                                "Content-Type": "application/json"
+                            },
+                            json={
+                                "model": Config.DEEPSEEK_REASONER_MODEL,
+                                "messages": messages,
+                                "max_tokens": 400,
+                                "temperature": 0.3
+                            },
+                            timeout=aiohttp.ClientTimeout(total=30)
+                        )
+                        
+                        if response.status == 200:
+                            data = await response.json()
+                            dummy_response = data["choices"][0]["message"]["content"].strip()
+                            all_responses.append(dummy_response)
+                            
+                            # Combine all responses
+                            return "\n\n".join(all_responses)
+                        else:
+                            print(f"❌ API error in round 3 {response.status}: {await response.text()}")
+                            return self._generate_fallback_assessment()
+                    else:
+                        print(f"❌ API error in round 2 {response.status}: {await response.text()}")
+                        return self._generate_fallback_assessment()
                 else:
-                    print(f"❌ API error {response.status}: {await response.text()}")
+                    print(f"❌ API error in round 1 {response.status}: {await response.text()}")
                     return self._generate_fallback_assessment()
                     
         except Exception as e:
-            print(f"❌ Error asking assessment questions: {e}")
+            print(f"❌ Error in multi-turn assessment: {e}")
             return self._generate_fallback_assessment()
     
     def _parse_complete_assessment_response(self, response: str, dummy: AIDummy) -> List[AssessmentResponse]:
