@@ -220,7 +220,7 @@ Be honest and authentic to your character. Consider your personality, anxiety le
                         "Content-Type": "application/json"
                     },
                     json={
-                        "model": Config.OPENAI_MODEL,
+                        "model": Config.DEEPSEEK_REASONER_MODEL,
                         "messages": [{"role": "user", "content": prompt}],
                         "max_tokens": 800,  # Increased for all 20 questions
                         "temperature": 0.7
@@ -331,7 +331,7 @@ Be honest and authentic to your character. Consider your personality, anxiety le
                         "Content-Type": "application/json"
                     },
                     json={
-                        "model": Config.OPENAI_MODEL,
+                        "model": Config.DEEPSEEK_REASONER_MODEL,
                         "messages": [{"role": "user", "content": prompt}],
                         "max_tokens": 200,
                         "temperature": 0.7
