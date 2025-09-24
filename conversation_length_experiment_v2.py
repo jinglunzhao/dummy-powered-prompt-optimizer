@@ -34,7 +34,8 @@ class ContinuousConversationExperiment:
                            num_dummies: int = 5,
                            max_rounds: int = 20,
                            assessment_milestones: List[int] = None,
-                           base_prompt: str = None) -> Dict[str, Any]:
+                           base_prompt: str = None,
+                           save_conversation_details: bool = False) -> Dict[str, Any]:
         """Run the continuous conversation experiment"""
         
         if assessment_milestones is None:
@@ -48,6 +49,7 @@ class ContinuousConversationExperiment:
         print(f"   • {num_dummies} dummies (same batch for all tests)")
         print(f"   • Max conversation rounds: {max_rounds}")
         print(f"   • Assessment milestones: {assessment_milestones}")
+        print(f"   • Save conversation details: {save_conversation_details}")
         print(f"   • Base prompt: {base_prompt[:50]}...")
         print()
         
@@ -65,7 +67,7 @@ class ContinuousConversationExperiment:
         tasks = []
         for i, dummy in enumerate(dummies):
             task = self._test_continuous_conversation_parallel(
-                dummy, max_rounds, assessment_milestones, base_prompt, i+1, len(dummies)
+                dummy, max_rounds, assessment_milestones, base_prompt, i+1, len(dummies), save_conversation_details
             )
             tasks.append(task)
         
@@ -85,6 +87,7 @@ class ContinuousConversationExperiment:
                 "num_dummies": num_dummies,
                 "max_rounds": max_rounds,
                 "assessment_milestones": assessment_milestones,
+                "save_conversation_details": save_conversation_details,
                 "base_prompt": base_prompt,
                 "dummy_names": [d.name for d in dummies]
             },
@@ -128,7 +131,8 @@ class ContinuousConversationExperiment:
                                                    assessment_milestones: List[int],
                                                    base_prompt: str,
                                                    dummy_num: int,
-                                                   total_dummies: int) -> Dict[str, Any]:
+                                                   total_dummies: int,
+                                                   save_conversation_details: bool = False) -> Dict[str, Any]:
         """Test one dummy with continuous conversation and milestone assessments (parallel version)"""
         
         print(f"   [{dummy_num}/{total_dummies}] Starting continuous conversation for {dummy.name}...")
@@ -205,7 +209,7 @@ class ContinuousConversationExperiment:
         print(f"   [{dummy_num}/{total_dummies}] 📊 Final assessment: {final_assessment.average_score:.2f} (+{final_improvement:.3f})")
         print(f"   [{dummy_num}/{total_dummies}] ⏱️  Total duration: {conversation.duration_seconds:.1f}s")
         
-        return {
+        result = {
             "dummy_name": dummy.name,
             "dummy_id": dummy.id,
             "pre_assessment_score": pre_assessment.average_score,
@@ -222,6 +226,55 @@ class ContinuousConversationExperiment:
                 "total_turns": len(conversation.turns)
             }
         }
+        
+        # Add conversation details if requested
+        if save_conversation_details:
+            result["conversation_details"] = {
+                "turns": [
+                    {
+                        "turn_number": i + 1,
+                        "speaker": turn.speaker,
+                        "message": turn.message,
+                        "timestamp": turn.timestamp.isoformat() if turn.timestamp else None,
+                        "metadata": turn.metadata
+                    }
+                    for i, turn in enumerate(conversation.turns)
+                ],
+                "pre_assessment": {
+                    "dummy_id": pre_assessment.dummy_id,
+                    "timestamp": pre_assessment.timestamp.isoformat(),
+                    "total_score": pre_assessment.total_score,
+                    "average_score": pre_assessment.average_score,
+                    "improvement_areas": pre_assessment.improvement_areas,
+                    "responses": [
+                        {
+                            "question": response.question,
+                            "score": response.score,
+                            "confidence": response.confidence,
+                            "notes": response.notes
+                        }
+                        for response in pre_assessment.responses
+                    ]
+                },
+                "final_assessment": {
+                    "dummy_id": final_assessment.dummy_id,
+                    "timestamp": final_assessment.timestamp.isoformat(),
+                    "total_score": final_assessment.total_score,
+                    "average_score": final_assessment.average_score,
+                    "improvement_areas": final_assessment.improvement_areas,
+                    "responses": [
+                        {
+                            "question": response.question,
+                            "score": response.score,
+                            "confidence": response.confidence,
+                            "notes": response.notes
+                        }
+                        for response in final_assessment.responses
+                    ]
+                }
+            }
+        
+        return result
     
     def _analyze_continuous_results(self, 
                                   results: List[Dict], 
@@ -440,6 +493,7 @@ def main():
     parser.add_argument("--max-rounds", type=int, default=20, help="Maximum conversation rounds (default: 20)")
     parser.add_argument("--milestones", type=str, default="5,10,15,20", help="Assessment milestones (comma-separated, default: 5,10,15,20)")
     parser.add_argument("--prompt", type=str, default=None, help="Custom system prompt to test")
+    parser.add_argument("--save-details", action="store_true", help="Save full conversation details in JSON output (makes files larger)")
     
     args = parser.parse_args()
     
@@ -461,7 +515,8 @@ def main():
                 num_dummies=args.dummies,
                 max_rounds=args.max_rounds,
                 assessment_milestones=assessment_milestones,
-                base_prompt=args.prompt
+                base_prompt=args.prompt,
+                save_conversation_details=args.save_details
             )
             print("\n✅ Continuous conversation experiment completed successfully!")
         except Exception as e:
