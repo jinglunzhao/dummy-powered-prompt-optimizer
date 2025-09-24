@@ -115,44 +115,7 @@ class AssessmentSystem:
             improvement_areas=improvement_areas
         )
     
-    def _calculate_base_score(self, dummy: AIDummy) -> float:
-        """Calculate base score based on personality and anxiety profile."""
-        # Base score starts at 2.0 (middle of 4-point scale)
-        base_score = 2.0
-        
-        # Personality adjustments
-        extraversion_bonus = (dummy.personality.extraversion - 5) * 0.1  # -0.4 to +0.5
-        agreeableness_bonus = (dummy.personality.agreeableness - 5) * 0.1  # -0.4 to +0.5
-        conscientiousness_bonus = (dummy.personality.conscientiousness - 5) * 0.1  # -0.4 to +0.5
-        
-        # Anxiety penalty (higher anxiety = lower base score)
-        anxiety_penalty = (dummy.social_anxiety.anxiety_level - 5) * 0.15  # -0.6 to +0.6
-        
-        # Calculate final base score (clamped between 1.0 and 4.0)
-        final_score = base_score + extraversion_bonus + agreeableness_bonus + conscientiousness_bonus - anxiety_penalty
-        return max(1.0, min(4.0, final_score))
     
-    def _generate_assessment_notes(self, question: str, score: int, confidence: int, dummy: AIDummy) -> str:
-        """Generate assessment notes based on 4-point scale."""
-        if score == 1:
-            return f"Struggles with {question.lower()}. Needs significant support and practice."
-        elif score == 2:
-            return f"Some difficulty with {question.lower()}. Shows potential for improvement with guidance."
-        elif score == 3:
-            return f"Generally good with {question.lower()}. Consistent performance with room for growth."
-        else:  # score == 4
-            return f"Excellent performance with {question.lower()}. Demonstrates strong social skills."
-    
-    def _generate_post_assessment_notes(self, question: str, score: int, confidence: int, dummy: AIDummy) -> str:
-        """Generate post-assessment notes based on 4-point scale."""
-        if score == 1:
-            return f"Still struggles with {question.lower()}. May need additional support and practice."
-        elif score == 2:
-            return f"Some improvement in {question.lower()}. Shows positive development."
-        elif score == 3:
-            return f"Good progress in {question.lower()}. Demonstrates learning and practice."
-        else:  # score == 4
-            return f"Excellent improvement in {question.lower()}. Shows mastery of this skill."
     
     def _identify_improvement_areas(self, responses: List[AssessmentResponse]) -> List[str]:
         """Identify areas for improvement based on 4-point scale."""
@@ -288,98 +251,6 @@ Be honest and authentic to your character. Consider your personality, anxiety le
             fallback += f"{i+1}. Rating: 2/4 I'm not sure about this skill.\n"
         return fallback
     
-    async def _ask_dummy_assessment_question(self, dummy: AIDummy, question: str, 
-                                           conversation_context: str = "", 
-                                           previous_score: int = None) -> str:
-        """Ask the dummy AI to answer an assessment question"""
-        
-        # Build context for the assessment
-        context_parts = [
-            f"You are {dummy.name}, a {dummy.major} student.",
-            f"Your personality traits: {', '.join(dummy.personality.get_dominant_traits())}",
-            f"Your social anxiety level: {dummy.social_anxiety.get_anxiety_category()}",
-            f"Your current challenges: {', '.join(dummy.challenges[:3])}"
-        ]
-        
-        if conversation_context:
-            context_parts.append(f"Recent coaching conversation context: {conversation_context}")
-        
-        if previous_score:
-            context_parts.append(f"Your previous score for this area: {previous_score}/4")
-        
-        context = "\n".join(context_parts)
-        
-        # Create the assessment prompt
-        prompt = f"""{context}
-
-You are taking a self-assessment about your social skills. Please answer this question honestly based on your character and experiences:
-
-"{question}"
-
-Please respond with:
-1. Your self-rating (1=Not True, 2=Somewhat True, 3=Mostly True, 4=Very True)
-2. A brief explanation of why you rated yourself this way
-
-Be honest and authentic to your character. Consider your personality, anxiety level, and recent experiences."""
-
-        try:
-            async with aiohttp.ClientSession() as session:
-                response = await session.post(
-                    "https://api.deepseek.com/v1/chat/completions",
-                    headers={
-                        "Authorization": f"Bearer {Config.DEEPSEEK_API_KEY}",
-                        "Content-Type": "application/json"
-                    },
-                    json={
-                        "model": Config.DEEPSEEK_REASONER_MODEL,
-                        "messages": [{"role": "user", "content": prompt}],
-                        "max_tokens": 200,
-                        "temperature": 0.7
-                    },
-                    timeout=aiohttp.ClientTimeout(total=30)
-                )
-                
-                if response.status == 200:
-                    data = await response.json()
-                    return data["choices"][0]["message"]["content"].strip()
-                else:
-                    print(f"❌ API error {response.status}: {await response.text()}")
-                    return f"I would rate myself as 2/4. I'm not sure about this skill."
-                    
-        except Exception as e:
-            print(f"❌ Error asking assessment question: {e}")
-            return f"I would rate myself as 2/4. I'm not sure about this skill."
-    
-    def _parse_dummy_response_to_score(self, response: str, question: str) -> int:
-        """Parse the dummy's response to extract a 1-4 score"""
-        response_lower = response.lower()
-        
-        # Look for explicit rating numbers
-        if "4" in response_lower or "four" in response_lower or "very true" in response_lower:
-            return 4
-        elif "3" in response_lower or "three" in response_lower or "mostly true" in response_lower:
-            return 3
-        elif "2" in response_lower or "two" in response_lower or "somewhat true" in response_lower:
-            return 2
-        elif "1" in response_lower or "one" in response_lower or "not true" in response_lower:
-            return 1
-        
-        # Fallback: analyze sentiment and keywords
-        positive_words = ["good", "well", "confident", "comfortable", "easy", "strong", "excellent"]
-        negative_words = ["difficult", "hard", "struggle", "uncomfortable", "anxious", "weak", "poor"]
-        
-        positive_count = sum(1 for word in positive_words if word in response_lower)
-        negative_count = sum(1 for word in negative_words if word in response_lower)
-        
-        if positive_count > negative_count and positive_count >= 2:
-            return 4
-        elif positive_count > negative_count:
-            return 3
-        elif negative_count > positive_count and negative_count >= 2:
-            return 1
-        else:
-            return 2
-    
     def _generate_confidence_from_response(self, response: str) -> int:
         """Generate confidence score based on response quality"""
         response_lower = response.lower()
@@ -393,17 +264,6 @@ Be honest and authentic to your character. Consider your personality, anxiety le
             return 2
         else:
             return 3  # Default moderate confidence
-    
-    def _generate_notes_from_response(self, response: str, question: str, score: int) -> str:
-        """Generate assessment notes from the dummy's response"""
-        # Clean up the response for notes
-        cleaned_response = response.replace("I would rate myself as", "").replace("1/4", "").replace("2/4", "").replace("3/4", "").replace("4/4", "").strip()
-        cleaned_response = cleaned_response.replace("Not True", "").replace("Somewhat True", "").replace("Mostly True", "").replace("Very True", "").strip()
-        
-        if cleaned_response:
-            return f"Self-assessment: {cleaned_response[:200]}..."
-        else:
-            return f"Rated {score}/4 on {question.lower()}"
     
     def _summarize_conversation_for_assessment(self, conversation: 'Conversation') -> str:
         """Create a brief summary of the conversation for assessment context"""
@@ -446,97 +306,6 @@ Be honest and authentic to your character. Consider your personality, anxiety le
             "average_score": round(average_score, 2)
         }
     
-    def _analyze_conversation_for_skills(self, conversation: 'Conversation') -> Dict[str, float]:
-        """Analyze conversation content to identify skill development indicators"""
-        if not conversation or not conversation.turns:
-            return {}
-        
-        # Skill indicators based on conversation content
-        skill_indicators = {
-            "help_seeking": 0.0,
-            "emotional_regulation": 0.0,
-            "empathy": 0.0,
-            "communication": 0.0,
-            "responsibility": 0.0
-        }
-        
-        # Analyze dummy responses for skill development
-        dummy_turns = [turn for turn in conversation.turns if turn.speaker == "dummy"]
-        
-        for turn in dummy_turns:
-            message_lower = turn.message.lower()
-            
-            # Help-seeking indicators
-            if any(phrase in message_lower for phrase in ["help", "don't know", "struggling", "difficult", "need"]):
-                skill_indicators["help_seeking"] += 0.2
-            
-            # Emotional regulation indicators
-            if any(phrase in message_lower for phrase in ["calm", "okay", "better", "feel good", "confident"]):
-                skill_indicators["emotional_regulation"] += 0.2
-            elif any(phrase in message_lower for phrase in ["angry", "frustrated", "upset", "stressed"]):
-                skill_indicators["emotional_regulation"] -= 0.1
-            
-            # Empathy indicators
-            if any(phrase in message_lower for phrase in ["understand", "feel", "others", "friends", "help others"]):
-                skill_indicators["empathy"] += 0.2
-            
-            # Communication indicators
-            if any(phrase in message_lower for phrase in ["talk", "say", "express", "tell", "share"]):
-                skill_indicators["communication"] += 0.1
-            
-            # Responsibility indicators
-            if any(phrase in message_lower for phrase in ["try", "practice", "work on", "improve", "learn"]):
-                skill_indicators["responsibility"] += 0.2
-        
-        # Normalize indicators (0.0 to 1.0 scale)
-        for skill in skill_indicators:
-            skill_indicators[skill] = max(0.0, min(1.0, skill_indicators[skill]))
-        
-        return skill_indicators
-    
-    def _calculate_skill_improvement(self, question: str, conversation_analysis: Dict[str, float], 
-                                   dummy: AIDummy, improvement_factor: float) -> float:
-        """Calculate improvement for a specific skill based on conversation analysis"""
-        
-        # Map questions to skill categories
-        skill_mapping = {
-            "I ask for help when I need it.": "help_seeking",
-            "I stay calm when dealing with problems.": "emotional_regulation",
-            "I stay calm when I disagree with others.": "emotional_regulation",
-            "I help my friends when they are having a problem.": "empathy",
-            "I stand up for others when they are not treated well.": "empathy",
-            "I try to make others feel better.": "empathy",
-            "I try to think about how others feel.": "empathy",
-            "I work well with my classmates.": "communication",
-            "I look at people when I talk to them.": "communication",
-            "I let people know when there's a problem.": "communication",
-            "I pay attention when others present their ideas.": "communication",
-            "I do my part in a group.": "responsibility",
-            "I do the right thing without being told.": "responsibility",
-            "I am careful when I use things that aren't mine.": "responsibility",
-            "I keep my promises.": "responsibility",
-            "I follow school rules.": "responsibility",
-            "I say \"thank you\" when someone helps me.": "empathy",
-            "I try to forgive others when they say \"sorry\".": "empathy",
-            "I try to find a good way to end a disagreement.": "emotional_regulation",
-            "I pay attention when the teacher talks to the class.": "communication"
-        }
-        
-        # Get relevant skill from conversation analysis
-        relevant_skill = skill_mapping.get(question, "communication")
-        conversation_improvement = conversation_analysis.get(relevant_skill, 0.0)
-        
-        # Base improvement from conversation (0.0 to 0.5 points)
-        base_improvement = conversation_improvement * 0.5
-        
-        # Add some realistic variation based on dummy's personality
-        personality_modifier = (dummy.personality.conscientiousness - 5) * 0.02  # -0.08 to +0.08
-        
-        # Combine factors
-        total_improvement = base_improvement + personality_modifier + random.uniform(-0.1, 0.1)
-        
-        # Ensure realistic improvement range (-0.2 to +0.8 points)
-        return max(-0.2, min(0.8, total_improvement))
     
     def calculate_improvement_metrics(self, pre: Assessment, post: Assessment) -> Dict[str, Any]:
         """Calculate improvement metrics between pre and post assessments."""
