@@ -162,27 +162,46 @@ class AssessmentSystem:
         conscientiousness_score = dummy.personality.conscientiousness
         anxiety_score = dummy.social_anxiety.anxiety_level
         
+        # Create conversation-aware context
+        if conversation_context:
+            coaching_context = f"""
+
+IMPORTANT: You just had a coaching conversation. Think about how this conversation made you feel and what you learned:
+
+{conversation_context}
+
+Reflect on:
+- Did the coaching make you feel more confident?
+- Did you learn new strategies or perspectives?
+- Do you feel more capable or optimistic about these skills?
+- How has your self-perception changed after this conversation?
+
+Rate yourself based on how you feel NOW, after this coaching experience."""
+        else:
+            coaching_context = """
+
+This is your baseline self-assessment. Be honest about your current abilities and confidence level."""
+        
         prompt = f"""{context}
 
-You are taking a self-assessment about your social skills. Provide consistent ratings based on your personality profile, with potential improvements from coaching.
+You are taking a self-assessment about your social skills. 
 
-SCORING GUIDELINES:
-- Extraversion {extraversion_score}/10: {'High social confidence' if extraversion_score >= 7 else 'Moderate social confidence' if extraversion_score >= 4 else 'Low social confidence'}
-- Agreeableness {agreeableness_score}/10: {'High cooperation' if agreeableness_score >= 7 else 'Moderate cooperation' if agreeableness_score >= 4 else 'Lower cooperation'}
-- Conscientiousness {conscientiousness_score}/10: {'High responsibility' if conscientiousness_score >= 7 else 'Moderate responsibility' if conscientiousness_score >= 4 else 'Lower responsibility'}
-- Anxiety Level {anxiety_score}/10: {'High anxiety' if anxiety_score >= 7 else 'Moderate anxiety' if anxiety_score >= 4 else 'Low anxiety'}
-
-{'COACHING CONTEXT: Recent conversation focused on improving social skills and confidence.' if conversation_context else 'BASELINE ASSESSMENT: No recent coaching conversation.'}
+YOUR PERSONALITY TRAITS:
+- Extraversion: {extraversion_score}/10 ({'Very outgoing and social' if extraversion_score >= 8 else 'Moderately outgoing' if extraversion_score >= 5 else 'More reserved and quiet'})
+- Agreeableness: {agreeableness_score}/10 ({'Highly cooperative and helpful' if agreeableness_score >= 8 else 'Moderately cooperative' if agreeableness_score >= 5 else 'More independent and competitive'})
+- Conscientiousness: {conscientiousness_score}/10 ({'Very organized and responsible' if conscientiousness_score >= 8 else 'Moderately organized' if conscientiousness_score >= 5 else 'More flexible and spontaneous'})
+- Anxiety Level: {anxiety_score}/10 ({'High anxiety in social situations' if anxiety_score >= 8 else 'Moderate anxiety' if anxiety_score >= 5 else 'Low anxiety and calm'})
+{coaching_context}
 
 Questions:
 {questions_text}
 
-Respond in EXACTLY this format:
-1. [Rating: X/4] [Explanation based on personality + coaching impact]
-2. [Rating: X/4] [Explanation based on personality + coaching impact]
+Respond in this format:
+1. [Rating: X/4] [Your honest self-assessment and reasoning]
+2. [Rating: X/4] [Your honest self-assessment and reasoning]
 ... (continue for all 20 questions)
 
-Consider: Base personality traits + {'small improvements from coaching' if conversation_context else 'no coaching yet'}."""
+Rate yourself based on your current feelings, confidence, and self-perception."""
 
         try:
             async with aiohttp.ClientSession() as session:
