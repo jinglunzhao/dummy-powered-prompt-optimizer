@@ -5,6 +5,7 @@ A standalone web interface for visualizing assessment improvement across convers
 ## 🎯 Features
 
 - **Interactive Line Plots**: Visualize how each dummy's assessment scores improve over conversation rounds
+- **Clickable Conversation History**: Click any line to view complete conversation transcript
 - **Multiple View Modes**: 
   - All dummies overlay
   - Individual dummy focus
@@ -54,8 +55,16 @@ Navigate to: http://localhost:5001
 - **X-axis**: Conversation rounds (5, 10, 15, 20, 25, 30)
 - **Y-axis**: Assessment improvement (points)
 - **Interactive**: Hover over data points for details
+- **Clickable**: Click any line to view complete conversation history
 - **Color-coded**: Each dummy gets a unique color
 - **Responsive**: Adapts to different screen sizes
+
+### Conversation History Modal
+- **Complete Transcript**: View full conversation between AI coach and dummy
+- **Milestone Markers**: Highlight assessment points during conversation
+- **Turn-by-turn Display**: See each exchange with speaker identification
+- **Metadata**: Pre/post scores, improvement, duration, total turns
+- **Scrollable**: Handle long conversations with ease
 
 ### Statistics Panel
 - Total number of dummies
@@ -107,6 +116,8 @@ The server provides these endpoints:
 - Compare performance patterns across different conversation lengths
 - Identify optimal conversation durations
 - Analyze individual vs. group performance trends
+- Investigate conversation dynamics by viewing complete transcripts
+- Understand why certain conversation lengths work better
 
 ### Presentation
 - Visualize experiment results for stakeholders
