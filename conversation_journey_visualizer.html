@@ -721,15 +721,26 @@
                     }
                     
                     // Determine round number
-                    if (turn.speaker === 'dummy') {
-                        currentRound++;
+                    let roundNumber;
+                    if (turn.metadata && turn.metadata.round) {
+                        // Use round number from conversation data
+                        roundNumber = turn.metadata.round;
+                    } else if (turn.speaker === 'dummy' && turn.turn_number === 1) {
+                        // Initial dummy message (no round)
+                        roundNumber = 'Opening';
+                    } else {
+                        // Fallback to incrementing counter
+                        if (turn.speaker === 'dummy') {
+                            currentRound++;
+                        }
+                        roundNumber = currentRound;
                     }
                     
                     html += `
                         <div class="turn ${turn.speaker}">
                             <div class="turn-header">
                                 <span class="turn-speaker">${turn.speaker === 'ai' ? '🤖 AI Coach' : '👤 ' + dummyName}</span>
-                                <span class="turn-round">Round ${currentRound}</span>
+                                <span class="turn-round">${roundNumber === 'Opening' ? 'Opening' : 'Round ' + roundNumber}</span>
                             </div>
                             <div class="turn-message">${turn.message}</div>
                         </div>
