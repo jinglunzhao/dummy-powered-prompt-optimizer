@@ -710,8 +710,11 @@
                 
                 let currentRound = 0;
                 conversation.turns.forEach((turn, index) => {
-                    // Check if this is a milestone
-                    const milestone = milestones.find(m => m.conversation_turns === index + 1);
+                    // Check if this is a milestone (display after dummy response completes the round)
+                    let milestone = null;
+                    if (turn.speaker === 'dummy' && turn.metadata && turn.metadata.round) {
+                        milestone = milestones.find(m => m.milestone_rounds === turn.metadata.round);
+                    }
                     if (milestone) {
                         html += `
                             <div class="milestone-marker">

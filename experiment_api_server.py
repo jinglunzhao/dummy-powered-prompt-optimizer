@@ -168,7 +168,7 @@ def health_check():
 if __name__ == '__main__':
     print("🚀 Starting Experiment API Server...")
     print("📊 Serving conversation journey visualizer")
-    print("🌐 Access at: http://localhost:5001")
+    print("🌐 Access at: http://localhost:5002")
     print("📁 Serving experiments from: data/experiments/")
     
-    app.run(host='0.0.0.0', port=5001, debug=True)
+    app.run(host='0.0.0.0', port=5002, debug=True)
