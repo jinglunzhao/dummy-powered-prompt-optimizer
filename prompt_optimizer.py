@@ -295,7 +295,7 @@ class PromptOptimizer:
         print(f"🧪 Testing prompt '{prompt.name}' with {dummy.name}...")
         
         # Generate pre-assessment
-        pre_assessment = self.assessment_system.generate_pre_assessment(dummy)
+        pre_assessment = await self.assessment_system.generate_pre_assessment(dummy)
         
         # Simulate conversation with the prompt
         conversation = await self.conversation_simulator.simulate_conversation_async(
@@ -306,7 +306,7 @@ class PromptOptimizer:
         )
         
         # Generate post-assessment based on conversation content
-        post_assessment = self.assessment_system.generate_post_assessment(dummy, pre_assessment, conversation)
+        post_assessment = await self.assessment_system.generate_post_assessment(dummy, pre_assessment, conversation)
         
         # Calculate metrics
         pre_score = pre_assessment.average_score

@@ -5,6 +5,8 @@ Generates and evaluates social skills assessments
 import random
 import json
 import os
+import asyncio
+import aiohttp
 from typing import List, Dict, Any, Optional
 from datetime import datetime
 from models import AIDummy, Assessment, AssessmentResponse, PersonalityProfile, SocialAnxietyProfile
@@ -13,9 +15,10 @@ from config import Config
 class AssessmentSystem:
     """Manages social skills assessments for AI dummies"""
     
-    def __init__(self):
+    def __init__(self, use_weights: bool = False):
         self.questions = Config.SOCIAL_SKILLS_QUESTIONS
-        self.question_weights = self._generate_question_weights()
+        self.use_weights = use_weights
+        self.question_weights = self._generate_question_weights() if use_weights else {}
     
     def _generate_question_weights(self) -> Dict[str, float]:
         """Generate weights for questions based on importance"""
@@ -51,40 +54,42 @@ class AssessmentSystem:
         }
         return weights
     
-    def generate_pre_assessment(self, dummy: AIDummy) -> Assessment:
-        """Generate a pre-intervention assessment based on dummy's profile"""
+    async def generate_pre_assessment(self, dummy: AIDummy) -> Assessment:
+        """Generate a pre-intervention self-assessment where the dummy actually answers questions"""
         responses = []
         
-        for question in self.questions:
-            # Generate realistic score based on personality and anxiety
-            base_score = self._calculate_base_score(dummy)
+        print(f"📝 {dummy.name} is taking the pre-assessment...")
+        
+        for i, question in enumerate(self.questions):
+            print(f"   Question {i+1}/{len(self.questions)}: {question[:50]}...")
             
-            # Add some realistic variation (±0.5 points)
-            variation = random.uniform(-0.5, 0.5)
-            final_score = base_score + variation
+            # Have the dummy answer the question
+            dummy_response = await self._ask_dummy_assessment_question(dummy, question)
             
-            # Round to nearest whole number and clamp to 1-4 range
-            final_score = max(1, min(4, int(round(final_score))))
+            # Parse the response to get a score (1-4)
+            score = self._parse_dummy_response_to_score(dummy_response, question)
             
-            # Generate confidence score (1-4 scale, higher for higher scores)
-            confidence = max(1, min(4, int(round(final_score + random.uniform(-0.5, 0.5)))))
+            # Generate confidence based on response quality
+            confidence = self._generate_confidence_from_response(dummy_response)
             
-            # Generate notes based on score
-            notes = self._generate_assessment_notes(question, final_score, confidence, dummy)
+            # Generate notes from the dummy's response
+            notes = self._generate_notes_from_response(dummy_response, question, score)
             
             response = AssessmentResponse(
                 question=question,
-                score=final_score,
+                score=score,
                 confidence=confidence,
                 notes=notes
             )
             responses.append(response)
         
         # Calculate scores
-        scores = Assessment.calculate_scores(responses)
+        scores = self._calculate_weighted_scores(responses)
         
         # Identify improvement areas
         improvement_areas = self._identify_improvement_areas(responses)
+        
+        print(f"✅ {dummy.name} completed pre-assessment: {scores['average_score']:.2f} average")
         
         return Assessment(
             dummy_id=dummy.id,
@@ -94,49 +99,52 @@ class AssessmentSystem:
             improvement_areas=improvement_areas
         )
     
-    def generate_post_assessment(self, dummy: AIDummy, pre_assessment: Assessment, 
-                               conversation: 'Conversation' = None,
-                               improvement_factor: float = 0.3) -> Assessment:
-        """Generate a post-intervention assessment based on actual conversation content"""
+    async def generate_post_assessment(self, dummy: AIDummy, pre_assessment: Assessment, 
+                                     conversation: 'Conversation' = None,
+                                     improvement_factor: float = 0.3) -> Assessment:
+        """Generate a post-intervention self-assessment where the dummy answers questions after coaching"""
         responses = []
         
-        # Analyze conversation content if available
-        conversation_analysis = self._analyze_conversation_for_skills(conversation) if conversation else {}
+        print(f"📝 {dummy.name} is taking the post-assessment...")
         
-        for pre_response in pre_assessment.responses:
-            # Start with pre-assessment score
-            pre_score = pre_response.score
+        # Analyze conversation content if available for context
+        conversation_context = self._summarize_conversation_for_assessment(conversation) if conversation else ""
+        
+        for i, pre_response in enumerate(pre_assessment.responses):
+            print(f"   Question {i+1}/{len(pre_assessment.responses)}: {pre_response.question[:50]}...")
             
-            # Calculate improvement based on conversation analysis
-            improvement = self._calculate_skill_improvement(
-                pre_response.question, 
-                conversation_analysis, 
+            # Have the dummy answer the question with conversation context
+            dummy_response = await self._ask_dummy_assessment_question(
                 dummy, 
-                improvement_factor
+                pre_response.question, 
+                conversation_context=conversation_context,
+                previous_score=pre_response.score
             )
             
-            # Apply improvement with realistic constraints
-            post_score = max(1, min(4, int(round(pre_score + improvement))))
+            # Parse the response to get a score (1-4)
+            score = self._parse_dummy_response_to_score(dummy_response, pre_response.question)
             
-            # Generate confidence (usually improves with score improvement)
-            confidence = max(1, min(4, int(round(post_score + random.uniform(-0.3, 0.3)))))
+            # Generate confidence based on response quality
+            confidence = self._generate_confidence_from_response(dummy_response)
             
-            # Generate notes showing improvement
-            notes = self._generate_post_assessment_notes(pre_response.question, post_score, confidence, dummy)
+            # Generate notes from the dummy's response
+            notes = self._generate_notes_from_response(dummy_response, pre_response.question, score)
             
             response = AssessmentResponse(
                 question=pre_response.question,
-                score=post_score,
+                score=score,
                 confidence=confidence,
                 notes=notes
             )
             responses.append(response)
         
         # Calculate new scores
-        scores = Assessment.calculate_scores(responses)
+        scores = self._calculate_weighted_scores(responses)
         
         # Update improvement areas
         improvement_areas = self._identify_improvement_areas(responses)
+        
+        print(f"✅ {dummy.name} completed post-assessment: {scores['average_score']:.2f} average")
         
         return Assessment(
             dummy_id=dummy.id,
@@ -199,6 +207,164 @@ class AssessmentSystem:
             improvement_areas.append("Focus on emotional regulation and conflict resolution")
         
         return improvement_areas
+    
+    async def _ask_dummy_assessment_question(self, dummy: AIDummy, question: str, 
+                                           conversation_context: str = "", 
+                                           previous_score: int = None) -> str:
+        """Ask the dummy AI to answer an assessment question"""
+        
+        # Build context for the assessment
+        context_parts = [
+            f"You are {dummy.name}, a {dummy.major} student.",
+            f"Your personality traits: {', '.join(dummy.personality.get_dominant_traits())}",
+            f"Your social anxiety level: {dummy.social_anxiety.get_anxiety_category()}",
+            f"Your current challenges: {', '.join(dummy.challenges[:3])}"
+        ]
+        
+        if conversation_context:
+            context_parts.append(f"Recent coaching conversation context: {conversation_context}")
+        
+        if previous_score:
+            context_parts.append(f"Your previous score for this area: {previous_score}/4")
+        
+        context = "\n".join(context_parts)
+        
+        # Create the assessment prompt
+        prompt = f"""{context}
+
+You are taking a self-assessment about your social skills. Please answer this question honestly based on your character and experiences:
+
+"{question}"
+
+Please respond with:
+1. Your self-rating (1=Not True, 2=Somewhat True, 3=Mostly True, 4=Very True)
+2. A brief explanation of why you rated yourself this way
+
+Be honest and authentic to your character. Consider your personality, anxiety level, and recent experiences."""
+
+        try:
+            async with aiohttp.ClientSession() as session:
+                response = await session.post(
+                    "https://api.deepseek.com/v1/chat/completions",
+                    headers={
+                        "Authorization": f"Bearer {Config.DEEPSEEK_API_KEY}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "model": Config.OPENAI_MODEL,
+                        "messages": [{"role": "user", "content": prompt}],
+                        "max_tokens": 200,
+                        "temperature": 0.7
+                    },
+                    timeout=aiohttp.ClientTimeout(total=30)
+                )
+                
+                if response.status == 200:
+                    data = await response.json()
+                    return data["choices"][0]["message"]["content"].strip()
+                else:
+                    print(f"❌ API error {response.status}: {await response.text()}")
+                    return f"I would rate myself as 2/4. I'm not sure about this skill."
+                    
+        except Exception as e:
+            print(f"❌ Error asking assessment question: {e}")
+            return f"I would rate myself as 2/4. I'm not sure about this skill."
+    
+    def _parse_dummy_response_to_score(self, response: str, question: str) -> int:
+        """Parse the dummy's response to extract a 1-4 score"""
+        response_lower = response.lower()
+        
+        # Look for explicit rating numbers
+        if "4" in response_lower or "four" in response_lower or "very true" in response_lower:
+            return 4
+        elif "3" in response_lower or "three" in response_lower or "mostly true" in response_lower:
+            return 3
+        elif "2" in response_lower or "two" in response_lower or "somewhat true" in response_lower:
+            return 2
+        elif "1" in response_lower or "one" in response_lower or "not true" in response_lower:
+            return 1
+        
+        # Fallback: analyze sentiment and keywords
+        positive_words = ["good", "well", "confident", "comfortable", "easy", "strong", "excellent"]
+        negative_words = ["difficult", "hard", "struggle", "uncomfortable", "anxious", "weak", "poor"]
+        
+        positive_count = sum(1 for word in positive_words if word in response_lower)
+        negative_count = sum(1 for word in negative_words if word in response_lower)
+        
+        if positive_count > negative_count and positive_count >= 2:
+            return 4
+        elif positive_count > negative_count:
+            return 3
+        elif negative_count > positive_count and negative_count >= 2:
+            return 1
+        else:
+            return 2
+    
+    def _generate_confidence_from_response(self, response: str) -> int:
+        """Generate confidence score based on response quality"""
+        response_lower = response.lower()
+        
+        # Higher confidence indicators
+        if any(word in response_lower for word in ["definitely", "absolutely", "certainly", "always", "never"]):
+            return 4
+        elif any(word in response_lower for word in ["usually", "often", "generally", "pretty"]):
+            return 3
+        elif any(word in response_lower for word in ["sometimes", "maybe", "depends", "varies"]):
+            return 2
+        else:
+            return 3  # Default moderate confidence
+    
+    def _generate_notes_from_response(self, response: str, question: str, score: int) -> str:
+        """Generate assessment notes from the dummy's response"""
+        # Clean up the response for notes
+        cleaned_response = response.replace("I would rate myself as", "").replace("1/4", "").replace("2/4", "").replace("3/4", "").replace("4/4", "").strip()
+        cleaned_response = cleaned_response.replace("Not True", "").replace("Somewhat True", "").replace("Mostly True", "").replace("Very True", "").strip()
+        
+        if cleaned_response:
+            return f"Self-assessment: {cleaned_response[:200]}..."
+        else:
+            return f"Rated {score}/4 on {question.lower()}"
+    
+    def _summarize_conversation_for_assessment(self, conversation: 'Conversation') -> str:
+        """Create a brief summary of the conversation for assessment context"""
+        if not conversation or not conversation.turns:
+            return ""
+        
+        # Get key themes from the conversation
+        all_text = " ".join([turn.message for turn in conversation.turns])
+        
+        # Extract key topics
+        topics = []
+        if "help" in all_text.lower():
+            topics.append("help-seeking")
+        if "confident" in all_text.lower() or "confidence" in all_text.lower():
+            topics.append("confidence building")
+        if "social" in all_text.lower() or "friend" in all_text.lower():
+            topics.append("social skills")
+        if "anxiety" in all_text.lower() or "nervous" in all_text.lower():
+            topics.append("anxiety management")
+        
+        if topics:
+            return f"Recent coaching focused on: {', '.join(topics[:3])}"
+        else:
+            return "Recent coaching session completed"
+    
+    def _calculate_weighted_scores(self, responses: List[AssessmentResponse]) -> Dict[str, float]:
+        """Calculate scores with optional weighting"""
+        total_score = 0
+        total_weight = 0
+        
+        for response in responses:
+            weight = self.question_weights.get(response.question, 1.0) if self.use_weights else 1.0
+            total_score += response.score * weight
+            total_weight += weight
+        
+        average_score = total_score / total_weight if total_weight > 0 else 0
+        
+        return {
+            "total_score": total_score,
+            "average_score": round(average_score, 2)
+        }
     
     def _analyze_conversation_for_skills(self, conversation: 'Conversation') -> Dict[str, float]:
         """Analyze conversation content to identify skill development indicators"""
