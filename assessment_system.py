@@ -156,23 +156,33 @@ class AssessmentSystem:
         # Create the complete assessment prompt
         questions_text = "\n".join([f"{i+1}. {q}" for i, q in enumerate(self.questions)])
         
+        # Determine base personality influence
+        extraversion_score = dummy.personality.extraversion
+        agreeableness_score = dummy.personality.agreeableness
+        conscientiousness_score = dummy.personality.conscientiousness
+        anxiety_score = dummy.social_anxiety.anxiety_level
+        
         prompt = f"""{context}
 
-You are taking a self-assessment about your social skills. Please answer ALL 20 questions honestly based on your character and experiences.
+You are taking a self-assessment about your social skills. Provide consistent ratings based on your personality profile, with potential improvements from coaching.
 
-For each question, please provide:
-1. Your self-rating (1=Not True, 2=Somewhat True, 3=Mostly True, 4=Very True)
-2. A brief explanation of why you rated yourself this way
+SCORING GUIDELINES:
+- Extraversion {extraversion_score}/10: {'High social confidence' if extraversion_score >= 7 else 'Moderate social confidence' if extraversion_score >= 4 else 'Low social confidence'}
+- Agreeableness {agreeableness_score}/10: {'High cooperation' if agreeableness_score >= 7 else 'Moderate cooperation' if agreeableness_score >= 4 else 'Lower cooperation'}
+- Conscientiousness {conscientiousness_score}/10: {'High responsibility' if conscientiousness_score >= 7 else 'Moderate responsibility' if conscientiousness_score >= 4 else 'Lower responsibility'}
+- Anxiety Level {anxiety_score}/10: {'High anxiety' if anxiety_score >= 7 else 'Moderate anxiety' if anxiety_score >= 4 else 'Low anxiety'}
+
+{'COACHING CONTEXT: Recent conversation focused on improving social skills and confidence.' if conversation_context else 'BASELINE ASSESSMENT: No recent coaching conversation.'}
 
 Questions:
 {questions_text}
 
-Please respond in this exact format:
-1. [Rating: X/4] [Brief explanation]
-2. [Rating: X/4] [Brief explanation]
+Respond in EXACTLY this format:
+1. [Rating: X/4] [Explanation based on personality + coaching impact]
+2. [Rating: X/4] [Explanation based on personality + coaching impact]
 ... (continue for all 20 questions)
 
-Be honest and authentic to your character. Consider your personality, anxiety level, and recent experiences."""
+Consider: Base personality traits + {'small improvements from coaching' if conversation_context else 'no coaching yet'}."""
 
         try:
             async with aiohttp.ClientSession() as session:
