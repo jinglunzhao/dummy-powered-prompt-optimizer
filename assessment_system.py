@@ -186,7 +186,7 @@ Be honest and authentic to your character. Consider your personality, anxiety le
                         "model": Config.DEEPSEEK_REASONER_MODEL,
                         "messages": [{"role": "user", "content": prompt}],
                         "max_tokens": 800,  # Increased for all 20 questions
-                        "temperature": 0.7
+                        "temperature": 0.1
                     },
                     timeout=aiohttp.ClientTimeout(total=60)  # Increased timeout
                 )
