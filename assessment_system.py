@@ -164,13 +164,12 @@ CONVERSATION MEMORY: You have been having ongoing conversations about your socia
 
 {conversation_context}
 
-CRITICAL ASSESSMENT RULES: Rate yourself again for each question, following these strict guidelines:
-1. For each question, look at your previous score and the conversation content
-2. If the conversation was relevant to that skill, you may rate yourself 1 point higher (e.g., 2→3, 3→4)
-3. If the conversation was NOT relevant to that skill, maintain your previous score (±0 points)
-4. NEVER rate yourself more than 1 point lower than your previous score
-5. NEVER rate yourself more than 1 point higher than your previous score
-6. Your core personality and baseline abilities remain stable - only coaching-relevant skills should improve slightly
+ASSESSMENT GUIDELINES: Rate yourself again for each question, considering your previous scores as a reference:
+1. If the conversation was relevant to that skill, you may rate yourself slightly higher (0-1 point improvement)
+2. If the conversation was NOT relevant to that skill, maintain your previous score or show small variation (±0-1 points)
+3. Avoid dramatic changes (2+ point decreases) unless there's a very specific reason
+4. Your core personality and baseline abilities remain stable - coaching should cause gradual, realistic improvements
+5. Be honest about your current self-perception while remembering your previous assessment
 
 Remember: You are the same person with the same baseline abilities. Coaching should only cause small, realistic improvements in relevant areas."""
         elif conversation_context:
