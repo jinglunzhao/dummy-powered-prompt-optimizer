@@ -164,13 +164,6 @@ CONVERSATION MEMORY: You have been having ongoing conversations about your socia
 
 {conversation_context}
 
-ASSESSMENT GUIDELINES: Rate yourself again for each question, considering your previous scores as a reference:
-1. If the conversation was relevant to that skill, you may rate yourself slightly higher (0-1 point improvement)
-2. If the conversation was NOT relevant to that skill, maintain your previous score or show small variation (±0-1 points)
-3. Avoid dramatic changes (2+ point decreases) unless there's a very specific reason
-4. Your core personality and baseline abilities remain stable - coaching should cause gradual, realistic improvements
-5. Be honest about your current self-perception while remembering your previous assessment
-
 Remember: You are the same person with the same baseline abilities. Coaching should only cause small, realistic improvements in relevant areas."""
         elif conversation_context:
             memory_context = f"""
