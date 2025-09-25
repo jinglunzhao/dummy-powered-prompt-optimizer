@@ -1,0 +1,54 @@
+{
+  "timestamp": "2025-09-25T20:55:29.857532",
+  "test_type": "parallel_vs_single_assessment",
+  "dummy_name": "Test Dummy",
+  "dummy_id": "test-dummy",
+  "approaches_tested": [
+    "single",
+    "parallel"
+  ],
+  "results": {
+    "single": {
+      "scores": [
+        3.1,
+        2.95,
+        2.65
+      ],
+      "total_scores": [
+        62.0,
+        59.0,
+        53.0
+      ],
+      "statistics": {
+        "mean": 2.9000000000000004,
+        "std": 0.18708286933869714,
+        "min": 2.65,
+        "max": 3.1,
+        "range": 0.4500000000000002,
+        "consistency": "\u2705 GOOD",
+        "api_calls": 3
+      }
+    },
+    "parallel": {
+      "scores": [
+        2.3,
+        2.15,
+        2.3
+      ],
+      "total_scores": [
+        46.0,
+        43.0,
+        46.0
+      ],
+      "statistics": {
+        "mean": 2.2499999999999996,
+        "std": 0.07071067811865471,
+        "min": 2.15,
+        "max": 2.3,
+        "range": 0.1499999999999999,
+        "consistency": "\u2705 EXCELLENT",
+        "api_calls": 60
+      }
+    }
+  }
+}
