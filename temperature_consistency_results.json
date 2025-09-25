@@ -1,0 +1,85 @@
+{
+  "timestamp": "2025-09-25T20:14:49.012119",
+  "test_type": "temperature_consistency",
+  "dummy_name": "Test Dummy",
+  "dummy_id": "test-dummy",
+  "temperatures_tested": [
+    0.3,
+    0.2,
+    0.1
+  ],
+  "results": {
+    "0.3": {
+      "scores": [
+        2.95,
+        2.85,
+        2.85,
+        3.05,
+        2.0
+      ],
+      "total_scores": [
+        59.0,
+        57.0,
+        57.0,
+        61.0,
+        40.0
+      ],
+      "statistics": {
+        "mean": 2.7399999999999998,
+        "std": 0.37735924528226417,
+        "min": 2.0,
+        "max": 3.05,
+        "range": 1.0499999999999998,
+        "consistency": "\u274c POOR"
+      }
+    },
+    "0.2": {
+      "scores": [
+        2.8,
+        2.85,
+        2.8,
+        2.0,
+        3.0
+      ],
+      "total_scores": [
+        56.0,
+        57.0,
+        56.0,
+        40.0,
+        60.0
+      ],
+      "statistics": {
+        "mean": 2.69,
+        "std": 0.352703841770968,
+        "min": 2.0,
+        "max": 3.0,
+        "range": 1.0,
+        "consistency": "\u274c POOR"
+      }
+    },
+    "0.1": {
+      "scores": [
+        2.95,
+        2.8,
+        3.05,
+        2.7,
+        2.0
+      ],
+      "total_scores": [
+        59.0,
+        56.0,
+        61.0,
+        54.0,
+        40.0
+      ],
+      "statistics": {
+        "mean": 2.7,
+        "std": 0.37013511046643494,
+        "min": 2.0,
+        "max": 3.05,
+        "range": 1.0499999999999998,
+        "consistency": "\u274c POOR"
+      }
+    }
+  }
+}
