@@ -146,8 +146,34 @@ class AssessmentSystem:
         conscientiousness_score = dummy.personality.conscientiousness
         anxiety_score = dummy.social_anxiety.anxiety_level
         
-        # Build the conversation memory context
-        if conversation_context:
+        # Build the conversation memory context with previous assessment grounding
+        if conversation_context and pre_assessment:
+            # Create detailed previous assessment reference
+            previous_scores = []
+            for i, response in enumerate(pre_assessment.responses):
+                previous_scores.append(f"{i+1}. {response.question} → {response.score}/4")
+            
+            previous_scores_text = "\n".join(previous_scores)
+            memory_context = f"""
+
+YOUR PREVIOUS ASSESSMENT RESULTS: In your last assessment, you rated yourself as follows:
+{previous_scores_text}
+(Your overall previous average was: {pre_assessment.average_score:.2f}/4)
+
+CONVERSATION MEMORY: You have been having ongoing conversations about your social skills. Here's what you've discussed:
+
+{conversation_context}
+
+CRITICAL ASSESSMENT RULES: Rate yourself again for each question, following these strict guidelines:
+1. For each question, look at your previous score and the conversation content
+2. If the conversation was relevant to that skill, you may rate yourself 1 point higher (e.g., 2→3, 3→4)
+3. If the conversation was NOT relevant to that skill, maintain your previous score (±0 points)
+4. NEVER rate yourself more than 1 point lower than your previous score
+5. NEVER rate yourself more than 1 point higher than your previous score
+6. Your core personality and baseline abilities remain stable - only coaching-relevant skills should improve slightly
+
+Remember: You are the same person with the same baseline abilities. Coaching should only cause small, realistic improvements in relevant areas."""
+        elif conversation_context:
             memory_context = f"""
 
 CONVERSATION MEMORY: You have been having ongoing conversations about your social skills. Here's what you've discussed:
