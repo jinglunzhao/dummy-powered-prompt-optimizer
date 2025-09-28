@@ -32,14 +32,21 @@ from datetime import datetime
 from typing import List, Dict, Any, Tuple
 from models import AIDummy, Conversation, ConversationTurn
 from conversation_simulator import ConversationSimulator
-from assessment_system import AssessmentSystem
 from config import Config
+
+# Try to import assessment system, but make it optional
+try:
+    from assessment_system_v3_quantitative import AssessmentSystem
+    ASSESSMENT_AVAILABLE = True
+except ImportError:
+    ASSESSMENT_AVAILABLE = False
+    print("⚠️  Assessment system not available. Only conversation-only mode will work.")
 
 class ContinuousConversationExperiment:
     """Experiment to test conversation length impact using continuous conversations"""
     
     def __init__(self):
-        self.assessment_system = AssessmentSystem()
+        self.assessment_system = AssessmentSystem() if ASSESSMENT_AVAILABLE else None
         self.conversation_simulator = ConversationSimulator()
         
     async def run_experiment(self, 
@@ -56,6 +63,12 @@ class ContinuousConversationExperiment:
         
         if base_prompt is None:
             base_prompt = "You are a helpful peer mentor for college students. Be supportive and provide practical advice."
+        
+        # Check if assessments are enabled but assessment system is not available
+        if enable_assessments and not ASSESSMENT_AVAILABLE:
+            print("❌ Error: Assessments requested but assessment system is not available.")
+            print("   Run with --no-assessments flag to use conversation-only mode.")
+            return {"error": "Assessment system not available"}
         
         print(f"🧪 Starting Continuous Conversation Length Experiment")
         print(f"📊 Configuration:")
@@ -156,7 +169,7 @@ class ContinuousConversationExperiment:
         
         # Generate initial pre-assessment (only if assessments enabled)
         pre_assessment = None
-        if enable_assessments:
+        if enable_assessments and self.assessment_system:
             pre_assessment = await self.assessment_system.generate_pre_assessment(dummy)
             print(f"   [{dummy_num}/{total_dummies}] 📊 Pre-assessment: {pre_assessment.average_score:.2f}")
         else:
@@ -204,14 +217,15 @@ class ContinuousConversationExperiment:
                 print(f" [M{dummy_num}:{current_rounds}]", end="", flush=True)
                 
                 # Start assessment in background (don't wait for it)
-                assessment_task = asyncio.create_task(
-                    self.assessment_system.generate_post_assessment(dummy, pre_assessment, conversation)
-                )
-                assessment_tasks.append({
-                    "task": assessment_task,
-                    "rounds": current_rounds,
-                    "index": current_milestone_idx
-                })
+                if self.assessment_system:
+                    assessment_task = asyncio.create_task(
+                        self.assessment_system.generate_post_assessment(dummy, pre_assessment, conversation)
+                    )
+                    assessment_tasks.append({
+                        "task": assessment_task,
+                        "rounds": current_rounds,
+                        "index": current_milestone_idx
+                    })
                 
                 current_milestone_idx += 1
         
@@ -242,7 +256,7 @@ class ContinuousConversationExperiment:
         # Final post-assessment based on complete conversation (only if assessments enabled)
         final_assessment = None
         final_improvement = 0
-        if enable_assessments:
+        if enable_assessments and self.assessment_system:
             final_assessment = await self.assessment_system.generate_post_assessment(
                 dummy, pre_assessment, conversation
             )
