@@ -36,7 +36,7 @@ from config import Config
 
 # Try to import assessment system, but make it optional
 try:
-    from assessment_system_v3_quantitative import AssessmentSystemV3 as AssessmentSystem
+    from assessment_system_llm_based import AssessmentSystemLLMBased as AssessmentSystem
     ASSESSMENT_AVAILABLE = True
 except ImportError:
     ASSESSMENT_AVAILABLE = False
@@ -46,7 +46,7 @@ class ContinuousConversationExperiment:
     """Experiment to test conversation length impact using continuous conversations"""
     
     def __init__(self):
-        self.assessment_system = AssessmentSystem() if ASSESSMENT_AVAILABLE else None
+        self.assessment_system = AssessmentSystem(api_key=Config.DEEPSEEK_API_KEY) if ASSESSMENT_AVAILABLE else None
         self.conversation_simulator = ConversationSimulator()
         
     async def run_experiment(self, 
