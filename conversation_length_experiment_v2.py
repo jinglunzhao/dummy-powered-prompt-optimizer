@@ -36,7 +36,7 @@ from config import Config
 
 # Try to import assessment system, but make it optional
 try:
-    from assessment_system_v3_quantitative import AssessmentSystem
+    from assessment_system_v3_quantitative import AssessmentSystemV3 as AssessmentSystem
     ASSESSMENT_AVAILABLE = True
 except ImportError:
     ASSESSMENT_AVAILABLE = False
