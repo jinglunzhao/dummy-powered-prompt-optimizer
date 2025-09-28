@@ -196,3 +196,5 @@ if __name__ == "__main__":
         print("The assessment system shows some inconsistency.")
     else:
         print("\n✅ Assessment system shows good consistency.")
+
+

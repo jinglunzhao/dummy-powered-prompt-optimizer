@@ -96,7 +96,7 @@ class AssessmentSystem:
         Ask dummy all assessment questions using parallel API calls (one per question)
         This approach should provide better consistency than single complex API call
         """
-        print(f"📝 {dummy.name} is taking the parallel assessment...")
+        # print(f"📝 {dummy.name} is taking the parallel assessment...")
         
         # Create individual prompts for each question
         tasks = []
@@ -124,14 +124,54 @@ class AssessmentSystem:
             improvement_areas=improvement_areas
         )
         
-        print(f"✅ {dummy.name} completed parallel assessment: {average_score:.2f} average")
+        # print(f"✅ {dummy.name} completed parallel assessment: {average_score:.2f} average")
         return assessment
 
     async def _ask_single_assessment_question(self, dummy: AIDummy, question: str, conversation_context: str = "", previous_assessment: Optional[Assessment] = None) -> AssessmentResponse:
         """Ask a single assessment question with focused prompt"""
         
-        # Build focused prompt for single question
-        prompt = f"""You are {dummy.name}, a {dummy.age}-year-old {dummy.major} student.
+        # Build focused prompt for single question with conversation-first approach
+        if conversation_context:
+            # Post-assessment: Prioritize conversation impact
+            prompt = f"""You are {dummy.name}, a {dummy.age}-year-old {dummy.major} student.
+
+RECENT COACHING SESSION:
+{conversation_context}
+
+IMPORTANT: Consider how this coaching session has affected your confidence and self-perception. 
+If the coaching was helpful and encouraging, you should feel more confident and rate yourself higher.
+If the coaching was critical or discouraging, you might feel less confident and rate yourself lower.
+
+YOUR PERSONALITY BASELINE:
+- Extraversion: {dummy.personality.extraversion}/10
+- Agreeableness: {dummy.personality.agreeableness}/10  
+- Conscientiousness: {dummy.personality.conscientiousness}/10
+- Neuroticism: {dummy.personality.neuroticism}/10
+- Openness: {dummy.personality.openness}/10
+- Anxiety Level: {dummy.social_anxiety.anxiety_level}/10
+- Challenges: {', '.join(dummy.challenges)}
+- Goals: {', '.join(dummy.goals)}
+
+ASSESSMENT QUESTION: {question}
+
+Please rate yourself on a scale of 1-4 where:
+- 1 = Not true at all
+- 2 = Not very true  
+- 3 = Somewhat true
+- 4 = Very true
+
+Based on how the coaching session affected your confidence and self-perception, provide:
+1. Your rating (1-4)
+2. Your confidence level (1-4)
+3. Brief reasoning for your rating
+
+Format your response as:
+Rating: [1-4]
+Confidence: [1-4]
+Reasoning: [brief explanation]"""
+        else:
+            # Pre-assessment: Focus on personality and baseline
+            prompt = f"""You are {dummy.name}, a {dummy.age}-year-old {dummy.major} student.
 
 PERSONALITY TRAITS:
 - Extraversion: {dummy.personality.extraversion}/10
@@ -164,21 +204,9 @@ Format your response as:
 Rating: [1-4]
 Confidence: [1-4]
 Reasoning: [brief explanation]"""
-
-        # Add conversation context if provided
-        if conversation_context:
-            prompt += f"\n\nRECENT COACHING SESSION:\n{conversation_context}"
-            prompt += "\n\nConsider how this coaching session might have affected your confidence and self-perception."
         
-        # Add previous assessment reference if available
-        if previous_assessment:
-            prompt += f"\n\nPREVIOUS ASSESSMENT RESULTS:\n"
-            prompt += f"Previous average score: {previous_assessment.average_score:.2f}\n"
-            prompt += "Previous responses:\n"
-            for resp in previous_assessment.responses:
-                if resp.question == question:
-                    prompt += f"- {question}: {resp.score}/4 (confidence: {resp.confidence})\n"
-            prompt += "\nUse this as a reference point for your current assessment."
+        # Note: Removed previous assessment anchoring to prevent decline bias
+        # Focus on conversation impact instead of anchoring to previous scores
 
         try:
             async with aiohttp.ClientSession() as session:
@@ -192,7 +220,7 @@ Reasoning: [brief explanation]"""
                         "model": Config.DEEPSEEK_REASONER_MODEL,
                         "messages": [{"role": "user", "content": prompt}],
                         "max_tokens": 200,  # Shorter for single question
-                        "temperature": self.temperature
+                        "temperature": 0.5  # Increased for better conversation responsiveness
                     },
                     timeout=aiohttp.ClientTimeout(total=30)
                 )
@@ -339,7 +367,7 @@ Rate yourself based on your current feelings, confidence, and self-perception.""
                         "model": Config.DEEPSEEK_REASONER_MODEL,
                         "messages": [{"role": "user", "content": prompt}],
                         "max_tokens": 800,
-                        "temperature": self.temperature  # Configurable for consistency testing
+                        "temperature": 0.5  # Increased for better conversation responsiveness  # Configurable for consistency testing
                     },
                     timeout=aiohttp.ClientTimeout(total=60)
                 )

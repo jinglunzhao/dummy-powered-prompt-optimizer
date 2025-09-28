@@ -1,0 +1,471 @@
+{
+  "experiment_info": {
+    "timestamp": "2025-09-24T16:58:46.661688",
+    "experiment_type": "continuous_conversation",
+    "num_dummies": 1,
+    "max_rounds": 6,
+    "assessment_milestones": [
+      3,
+      6
+    ],
+    "save_conversation_details": true,
+    "base_prompt": "You are a helpful peer mentor for college students. Be supportive and provide practical advice.",
+    "dummy_names": [
+      "Gregory Moore"
+    ]
+  },
+  "results": [
+    {
+      "dummy_name": "Gregory Moore",
+      "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+      "pre_assessment_score": 3.5,
+      "final_assessment_score": 3.4,
+      "final_improvement": -0.10000000000000009,
+      "total_conversation_turns": 13,
+      "total_duration_seconds": 139.287715,
+      "milestone_results": [
+        {
+          "milestone_rounds": 3,
+          "pre_score": 3.5,
+          "milestone_score": 3.2,
+          "improvement": -0.2999999999999998,
+          "conversation_turns": 13,
+          "timestamp": "2025-09-24T16:57:18.327021"
+        },
+        {
+          "milestone_rounds": 6,
+          "pre_score": 3.5,
+          "milestone_score": 3.3,
+          "improvement": -0.20000000000000018,
+          "conversation_turns": 13,
+          "timestamp": "2025-09-24T16:58:01.213779"
+        }
+      ],
+      "conversation": {
+        "scenario": "Social skills coaching session",
+        "system_prompt": "You are a helpful peer mentor for college students. Be supportive and provide practical advice.",
+        "start_time": "2025-09-24T16:55:41.926098",
+        "end_time": "2025-09-24T16:58:01.213813",
+        "total_turns": 13
+      },
+      "conversation_details": {
+        "turns": [
+          {
+            "turn_number": 1,
+            "speaker": "dummy",
+            "message": "Hey, thanks for meeting with me. I’ll be honest, I’m kinda stressed—I have a big presentation coming up in my algorithms class, and just thinking about it makes my palms sweat.",
+            "timestamp": "2025-09-24T16:55:48.566565",
+            "metadata": {
+              "character_context": "Personality:\n- Extraversion: 10/10 (Very outgoing)\n- Agreeableness: 1/10 (More competitive)\n- Conscientiousness: 6/10 (Moderately organized)\n- Neuroticism: 8/10 (Very sensitive to stress)\n- Openness: 7/10 (Very creative and curious)\n\nSocial Anxiety:\n- Level: 3/10 (Low)\n- Communication style: Passive\n- Triggers: Networking events, Presentations, Campus social events\n- Social comfort: 4/10\n\nPersonal Details:\n- Major: Computer Science\n- Fears: Choosing the right career path, Social anxiety in large lecture halls, Academic failure and poor grades, Dealing with roommate conflicts\n- Goals: Improve public speaking, Get accepted to graduate school, Publish a paper, Learn a new language\n- Challenges: Financial planning, Finding a mentor, Managing student loans\n- Behaviors: Eats at the dining hall, Participates in study groups, Volunteers for campus events"
+            }
+          },
+          {
+            "turn_number": 2,
+            "speaker": "ai",
+            "message": "Hey Gregory! Totally normal to feel that way before a presentation—even with low social anxiety, big classes can be intimidating. Try practicing in front of a small group of friends first to build confidence. Break your talk into sections and focus on mastering one part at a time. You've got the smarts; now it's about sharing them comfortably. You'll do great!",
+            "timestamp": "2025-09-24T16:55:58.249896",
+            "metadata": {
+              "round": 1
+            }
+          },
+          {
+            "turn_number": 3,
+            "speaker": "dummy",
+            "message": "Yeah, I guess practicing with a few people from my study group could be okay. It's just hard not to think about how one bad presentation could mess up my whole GPA and grad school chances.",
+            "timestamp": "2025-09-24T16:56:04.968197",
+            "metadata": {
+              "round": 1
+            }
+          },
+          {
+            "turn_number": 4,
+            "speaker": "ai",
+            "message": "I hear you—grad school pressure is real! But remember, one presentation won't define your entire academic journey. Professors usually weigh assignments, and showing improvement matters too. Focus on delivering your content clearly rather than perfection. You've come this far because of your hard work; trust that resilience. You got this!",
+            "timestamp": "2025-09-24T16:56:12.398547",
+            "metadata": {
+              "round": 2
+            }
+          },
+          {
+            "turn_number": 5,
+            "speaker": "dummy",
+            "message": "I know you're right, but it's just hard not to feel like every single assignment is a huge part of my final transcript for grad school applications. I'll try to just focus on getting through it clearly.",
+            "timestamp": "2025-09-24T16:56:18.529645",
+            "metadata": {
+              "round": 2
+            }
+          },
+          {
+            "turn_number": 6,
+            "speaker": "ai",
+            "message": "Exactly—clarity over perfection is a great mindset. Grad schools look at growth and overall trends, not just one assignment. You're building skills that matter beyond grades, like resilience and communication. Keep that perspective, take a deep breath, and tackle it one step at a time. You're capable!",
+            "timestamp": "2025-09-24T16:56:26.816536",
+            "metadata": {
+              "round": 3
+            }
+          },
+          {
+            "turn_number": 7,
+            "speaker": "dummy",
+            "message": "I know you're right, it's just hard to believe it sometimes when I'm staring at a bad grade. I'll try to just focus on the next assignment instead of the whole GPA.",
+            "timestamp": "2025-09-24T16:56:33.467684",
+            "metadata": {
+              "round": 3
+            }
+          },
+          {
+            "turn_number": 8,
+            "speaker": "ai",
+            "message": "That's the spirit! Progress over perfection—every assignment is a chance to learn and improve. Reflect briefly on feedback, then channel that energy into your next task. You're building skills that matter more than any single grade. Keep moving forward; you're doing better than you think!",
+            "timestamp": "2025-09-24T16:56:40.699183",
+            "metadata": {
+              "round": 4
+            }
+          },
+          {
+            "turn_number": 9,
+            "speaker": "dummy",
+            "message": "I guess you're right... it's just hard not to obsess over a bad grade when grad school applications are so competitive. I'll try to focus on the next coding assignment instead.",
+            "timestamp": "2025-09-24T16:56:47.599889",
+            "metadata": {
+              "round": 4
+            }
+          },
+          {
+            "turn_number": 10,
+            "speaker": "ai",
+            "message": "Perfect! Channel that energy into your coding project—it's a tangible way to build skills and confidence. Remember, grad schools value growth and persistence, not just flawless transcripts. You're taking proactive steps, and that resilience will shine through. Keep coding and believing in your progress!",
+            "timestamp": "2025-09-24T16:56:55.452741",
+            "metadata": {
+              "round": 5
+            }
+          },
+          {
+            "turn_number": 11,
+            "speaker": "dummy",
+            "message": "Thanks, I guess. I just worry that my project isn't impressive enough compared to what other applicants will have. But I'll keep working on it.",
+            "timestamp": "2025-09-24T16:57:02.753317",
+            "metadata": {
+              "round": 5
+            }
+          },
+          {
+            "turn_number": 12,
+            "speaker": "ai",
+            "message": "Your project doesn't need to be groundbreaking—it needs to show your passion and problem-solving skills. Focus on clear documentation, clean code, and explaining your process thoughtfully. That's what impresses admissions committees. You're on the right track—keep building and refining!",
+            "timestamp": "2025-09-24T16:57:09.971814",
+            "metadata": {
+              "round": 6
+            }
+          },
+          {
+            "turn_number": 13,
+            "speaker": "dummy",
+            "message": "I know you're right, but I just keep worrying my code isn't innovative enough to stand out for grad school applications. I'll try to focus on making the documentation really clear, I guess.",
+            "timestamp": "2025-09-24T16:57:15.824717",
+            "metadata": {
+              "round": 6
+            }
+          }
+        ],
+        "pre_assessment": {
+          "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+          "timestamp": "2025-09-24T16:55:41.926022",
+          "total_score": 70.0,
+          "average_score": 3.5,
+          "improvement_areas": [
+            "Improve i stay calm when dealing with problems.",
+            "Continue practicing social skills through regular interaction",
+            "Focus on emotional regulation and conflict resolution"
+          ],
+          "responses": [
+            {
+              "question": "I ask for help when I need it.",
+              "score": 3,
+              "confidence": 3,
+              "notes": "Self-assessment: 1. [Rating: 3/4] I'm pretty good about asking for help with coding problems or classwork, but I tend to hesitate when it comes to asking for help with bigger things like my student loans or finding a ..."
+            },
+            {
+              "question": "I stay calm when dealing with problems.",
+              "score": 2,
+              "confidence": 3,
+              "notes": "Self-assessment: 2. [Rating: 2/4] I can handle technical problems logically, but my neuroticism means I can get pretty stressed about financial or personal challenges before I calm down enough to deal with them...."
+            },
+            {
+              "question": "I help my friends when they are having a problem.",
+              "score": 4,
+              "confidence": 4,
+              "notes": "Self-assessment: 3. [Rating: 4/4] I'm always there for my friends. If they're having a problem, especially with a project or tech issue, I'll drop what I'm doing to help...."
+            },
+            {
+              "question": "I work well with my classmates.",
+              "score": 4,
+              "confidence": 3,
+              "notes": "Self-assessment: 4. [Rating: 4/4] Group projects are usually great. I'm extraverted and enjoy collaborating, and I'm good at dividing up coding tasks based on everyone's strengths...."
+            },
+            {
+              "question": "I do the right thing without being told.",
+              "score": 3,
+              "confidence": 4,
+              "notes": "Self-assessment: 5. [Rating: 3/4] For the most part, yes. I'll start studying for an exam without being reminded, but I'm not always as proactive as I should be with things like budgeting...."
+            },
+            {
+              "question": "I do my part in a group.",
+              "score": 4,
+              "confidence": 4,
+              "notes": "Self-assessment: 6. [Rating: 4/4] Absolutely. I hate the idea of being the person who doesn't pull their weight. I always make sure my part of the work is done and done well...."
+            },
+            {
+              "question": "I stay calm when I disagree with others.",
+              "score": 3,
+              "confidence": 3,
+              "notes": "Self-assessment: 7. [Rating: 3/4] I'm open to different ideas, so I can usually stay calm. But if it's about a technical approach I'm passionate about, I might get a little too intense in my explanation...."
+            },
+            {
+              "question": "I stand up for others when they are not treated well.",
+              "score": 4,
+              "confidence": 4,
+              "notes": "Self-assessment: 8. [Rating: 4/4] I can't stand seeing someone get treated unfairly, especially in a team setting. I'll definitely speak up, even if it's a little uncomfortable...."
+            },
+            {
+              "question": "I look at people when I talk to them.",
+              "score": 3,
+              "confidence": 2,
+              "notes": "Self-assessment: 9. [Rating: 3/4] I do, but sometimes when I'm trying to explain a complex concept, I might look away at my screen or my notes while I'm thinking...."
+            },
+            {
+              "question": "I am careful when I use things that aren't mine.",
+              "score": 4,
+              "confidence": 3,
+              "notes": "Self-assessment: 10. [Rating: 4/4] I'm super careful, especially with other people's tech. I know how expensive it is and how much of a pain it is to have your stuff broken...."
+            },
+            {
+              "question": "I let people know when there's a problem.",
+              "score": 3,
+              "confidence": 3,
+              "notes": "Self-assessment: 11. [Rating: 3/4] I'll point out a bug in the code or a logic error in a plan immediately. I'm less quick to bring up interpersonal issues or my own financial worries...."
+            },
+            {
+              "question": "I pay attention when the teacher talks to the class.",
+              "score": 3,
+              "confidence": 4,
+              "notes": "Self-assessment: 12. [Rating: 3/4] I pay attention, but my mind can wander to a problem I'm trying to solve in my own code. I'm engaged, but not always 100% focused...."
+            },
+            {
+              "question": "I try to make others feel better.",
+              "score": 4,
+              "confidence": 3,
+              "notes": "Self-assessment: 13. [Rating: 4/4] I really try to be encouraging. If a friend is stressed about an exam or a project, I'll try to hype them up or offer to study together...."
+            },
+            {
+              "question": "I say \"thank you\" when someone helps me.",
+              "score": 4,
+              "confidence": 4,
+              "notes": "Self-assessment: 14. [Rating: 4/4] Always. It's just basic decency, and I genuinely appreciate it when people take time to help me out...."
+            },
+            {
+              "question": "I keep my promises.",
+              "score": 4,
+              "confidence": 3,
+              "notes": "Self-assessment: 15. [Rating: 4/4] If I say I'm going to do something, I do it. My word is important to me, whether it's meeting a project deadline or showing up to hang out...."
+            },
+            {
+              "question": "I pay attention when others present their ideas.",
+              "score": 4,
+              "confidence": 3,
+              "notes": "Self-assessment: 16. [Rating: 4/4] I'm genuinely interested in other people's ideas, especially creative solutions to CS problems. I love a good brainstorming session...."
+            },
+            {
+              "question": "I try to find a good way to end a disagreement.",
+              "score": 3,
+              "confidence": 3,
+              "notes": "Self-assessment: 17. [Rating: 3/4] I'm good at finding a technical compromise, like merging two pieces of code. For more personal disagreements, I'm still learning the best approach...."
+            },
+            {
+              "question": "I try to think about how others feel.",
+              "score": 3,
+              "confidence": 3,
+              "notes": "Self-assessment: 18. [Rating: 3/4] I try, but I'll admit I can be a bit wrapped up in my own stress about loans and grades. It's something I have to consciously remind myself to do...."
+            },
+            {
+              "question": "I try to forgive others when they say \"sorry\".",
+              "score": 4,
+              "confidence": 4,
+              "notes": "Self-assessment: 19. [Rating: 4/4] Definitely. I believe people deserve a second chance, and if someone is genuinely sorry, there's no point in holding a grudge...."
+            },
+            {
+              "question": "I follow school rules.",
+              "score": 4,
+              "confidence": 3,
+              "notes": "Self-assessment: 20. [Rating: 4..."
+            }
+          ]
+        },
+        "final_assessment": {
+          "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+          "timestamp": "2025-09-24T16:58:46.661442",
+          "total_score": 68.0,
+          "average_score": 3.4,
+          "improvement_areas": [
+            "Improve i stay calm when dealing with problems.",
+            "Improve i stay calm when i disagree with others.",
+            "Continue practicing social skills through regular interaction",
+            "Focus on emotional regulation and conflict resolution"
+          ],
+          "responses": [
+            {
+              "question": "I ask for help when I need it.",
+              "score": 3,
+              "confidence": 2,
+              "notes": "Self-assessment: 1. [Rating: 3/4] [I'm getting better at asking for help, especially after the coaching on confidence, but I still hesitate sometimes if I think I should be able to figure it out on my own.]..."
+            },
+            {
+              "question": "I stay calm when dealing with problems.",
+              "score": 2,
+              "confidence": 3,
+              "notes": "Self-assessment: 2. [Rating: 2/4] [My neuroticism means my first reaction to a problem is often a spike of anxiety. I'm working on managing it, but \"staying calm\" is a skill I'm actively developing.]..."
+            },
+            {
+              "question": "I help my friends when they are having a problem.",
+              "score": 4,
+              "confidence": 4,
+              "notes": "Self-assessment: 3. [Rating: 4/4] [I'm always there for my friends. If they have a problem, especially a technical one, I'm the first person they call and I'm happy to help.]..."
+            },
+            {
+              "question": "I work well with my classmates.",
+              "score": 4,
+              "confidence": 3,
+              "notes": "Self-assessment: 4. [Rating: 4/4] [Group projects in CS are my jam. I love collaborating on code and problem-solving with my classmates; it's where I feel most in my element.]..."
+            },
+            {
+              "question": "I do the right thing without being told.",
+              "score": 3,
+              "confidence": 3,
+              "notes": "Self-assessment: 5. [Rating: 3/4] [I'm generally responsible, but I sometimes need a nudge on non-academic stuff, like administrative tasks, because I'm so focused on my coursework.]..."
+            },
+            {
+              "question": "I do my part in a group.",
+              "score": 4,
+              "confidence": 4,
+              "notes": "Self-assessment: 6. [Rating: 4/4] [In group work, I always make sure I pull my weight, often even taking on the more complex coding tasks because I enjoy the challenge.]..."
+            },
+            {
+              "question": "I stay calm when I disagree with others.",
+              "score": 2,
+              "confidence": 3,
+              "notes": "Self-assessment: 7. [Rating: 2/4] [Disagreements make me a bit tense. I can stay outwardly calm, but internally I get flustered, especially if it's about a topic I'm passionate about.]..."
+            },
+            {
+              "question": "I stand up for others when they are not treated well.",
+              "score": 3,
+              "confidence": 4,
+              "notes": "Self-assessment: 8. [Rating: 3/4] [I will definitely speak up if I see someone being treated unfairly, but I might not be the very first person to do so in a large group setting.]..."
+            },
+            {
+              "question": "I look at people when I talk to them.",
+              "score": 3,
+              "confidence": 3,
+              "notes": "Self-assessment: 9. [Rating: 3/4] [I make a conscious effort to maintain eye contact. It doesn't come completely naturally to me, but I know it's important for communication.]..."
+            },
+            {
+              "question": "I am careful when I use things that aren't mine.",
+              "score": 4,
+              "confidence": 3,
+              "notes": "Self-assessment: 10. [Rating: 4/4] [I'm extremely careful with other people's property, especially tech like laptops or consoles. I know how expensive and important they are.]..."
+            },
+            {
+              "question": "I let people know when there's a problem.",
+              "score": 3,
+              "confidence": 2,
+              "notes": "Self-assessment: 11. [Rating: 3/4] [I'm good at identifying problems, but articulating them to others, especially authority figures, can sometimes trigger my anxiety.]..."
+            },
+            {
+              "question": "I pay attention when the teacher talks to the class.",
+              "score": 4,
+              "confidence": 3,
+              "notes": "Self-assessment: 12. [Rating: 4/4] [I'm a focused student. When the professor is lecturing, especially on CS topics, I'm locked in and taking notes.]..."
+            },
+            {
+              "question": "I try to make others feel better.",
+              "score": 3,
+              "confidence": 3,
+              "notes": "Self-assessment: 13. [Rating: 3/4] [I try to be empathetic. If a friend is down, I'll listen and try to cheer them up, usually by suggesting we hang out or play games.]..."
+            },
+            {
+              "question": "I say \"thank you\" when someone helps me.",
+              "score": 4,
+              "confidence": 4,
+              "notes": "Self-assessment: 14. [Rating: 4/4] [This is basic manners. I always express gratitude, and I genuinely mean it when someone helps me out.]..."
+            },
+            {
+              "question": "I keep my promises.",
+              "score": 4,
+              "confidence": 3,
+              "notes": "Self-assessment: 15. [Rating: 4/4] [If I give you my word, I'll keep it. Being reliable is really important to me, both academically and socially.]..."
+            },
+            {
+              "question": "I pay attention when others present their ideas.",
+              "score": 4,
+              "confidence": 3,
+              "notes": "Self-assessment: 16. [Rating: 4/4] [I'm genuinely interested in other people's ideas, especially if they're presenting a project or a solution to a coding problem.]..."
+            },
+            {
+              "question": "I try to find a good way to end a disagreement.",
+              "score": 3,
+              "confidence": 2,
+              "notes": "Self-assessment: 17. [Rating: 3/4] [I prefer harmony, so I actively look for compromises. My approach is more logical (\"what's the most efficient solution?\") than emotional sometimes.]..."
+            },
+            {
+              "question": "I try to think about how others feel.",
+              "score": 3,
+              "confidence": 3,
+              "notes": "Self-assessment: 18. [Rating: 3/4] [I do try to see things from other perspectives, but I'll admit I can get so caught up in my own logic that I occasionally miss the emotional subtext.]..."
+            },
+            {
+              "question": "I try to forgive others when they say \"sorry\".",
+              "score": 4,
+              "confidence": 3,
+              "notes": "Self-assessment: 19. [Rating: 4/4] [I'm not one to hold a grudge. If someone apologizes sincerely, I forgive them easily and move on.]..."
+            },
+            {
+              "question": "I follow school rules.",
+              "score": 4,
+              "confidence": 3,
+              "notes": "Self-assessment: 20. [Rating: 4/4] [I'm a rule-follower by nature. It just makes life easier and less stressful to know what the boundaries are.]..."
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "analysis": {
+    "milestone_analysis": {
+      "3": {
+        "improvements": [
+          -0.2999999999999998
+        ],
+        "avg_improvement": -0.2999999999999998,
+        "dummy_count": 1
+      },
+      "6": {
+        "improvements": [
+          -0.20000000000000018
+        ],
+        "avg_improvement": -0.20000000000000018,
+        "dummy_count": 1
+      }
+    },
+    "assessment_milestones": [
+      3,
+      6
+    ],
+    "improvements": [
+      -0.2999999999999998,
+      -0.20000000000000018
+    ],
+    "trend": "increasing",
+    "total_change": 0.09999999999999964,
+    "best_milestone": 6,
+    "best_improvement": -0.20000000000000018
+  }
+}

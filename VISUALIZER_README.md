@@ -178,3 +178,4 @@ This visualizer is designed to work alongside the main `web_interface.py` withou
 ## 📝 License
 
 Part of the edu_chatbot project. See main project license for details.
+
