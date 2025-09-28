@@ -110,10 +110,9 @@ Start with a natural opening message (1-2 sentences)."""
             {"role": "user", "content": f"Student Profile: {dummy.get_character_summary()}"}
         ]
         
-        # Add conversation history
+        # Add conversation history - DeepSeek API only uses "system" and "user" roles
         for turn in conversation.turns[-6:]:  # Last 6 turns for context
-            role = "assistant" if turn.speaker == "ai" else "user"
-            messages.append({"role": role, "content": turn.message})
+            messages.append({"role": "user", "content": turn.message})
         
         async with aiohttp.ClientSession() as session:
             async with session.post(
@@ -135,32 +134,18 @@ Start with a natural opening message (1-2 sentences)."""
     async def _generate_character_response_async(self, conversation: Conversation, dummy: AIDummy, round_num: int) -> str:
         """Generate character-authentic response based on dummy's profile"""
         
-        # Get the last AI message
-        last_ai_message = None
-        for turn in reversed(conversation.turns):
-            if turn.speaker == "ai":
-                last_ai_message = turn.message
-                break
-        
-        if not last_ai_message:
-            return "Thank you for your help. I'm not sure what to say next."
-        
         character_context = self._get_character_context(dummy)
         
-        prompt = f"""You are {dummy.name}, responding authentically to your social skills coach.
-
-{character_context}
-
-Your coach just said: "{last_ai_message}"
-
-Respond naturally as your character would:
-- Stay true to your personality traits and anxiety level
-- Express your real fears, goals, and challenges
-- Show your communication style
-- Be honest about your feelings and thoughts
-
-Keep your response conversational and authentic (1-2 sentences). Be concise and natural."""
-
+        # Prepare conversation history (same as AI - last 6 turns for context)
+        messages = [
+            {"role": "system", "content": f"You are {dummy.name}, responding authentically to your social skills coach.\n\n{character_context}\n\nRespond naturally as your character would:\n- Stay true to your personality traits and anxiety level\n- Express your real fears, goals, and challenges\n- Show your communication style\n- Be honest about your feelings and thoughts\n\nKeep your response conversational and authentic (1-2 sentences). Be concise and natural."},
+            {"role": "user", "content": f"Student Profile: {dummy.get_character_summary()}"}
+        ]
+        
+        # Add conversation history - DeepSeek API only uses "system" and "user" roles
+        for turn in conversation.turns[-6:]:  # Last 6 turns for context
+            messages.append({"role": "user", "content": turn.message})
+        
         async with aiohttp.ClientSession() as session:
             async with session.post(
                 "https://api.deepseek.com/v1/chat/completions",
@@ -170,7 +155,7 @@ Keep your response conversational and authentic (1-2 sentences). Be concise and 
                 },
                 json={
                     "model": "deepseek-chat",
-                    "messages": [{"role": "user", "content": prompt}],
+                    "messages": messages,
                     "max_tokens": 80,
                     "temperature": 0.8
                 }

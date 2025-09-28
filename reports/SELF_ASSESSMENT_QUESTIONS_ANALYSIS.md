@@ -91,3 +91,4 @@
 - **Pre-coaching**: Lower scores due to social anxiety and inexperience
 - **Post-coaching**: Higher scores reflecting increased confidence and skills
 - **Conversation quality**: Should directly correlate with improvement patterns
+
