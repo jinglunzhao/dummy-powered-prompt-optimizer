@@ -9,6 +9,18 @@ different conversation milestones (5, 10, 15, 20 rounds).
 
 This approach is more realistic as it simulates actual coaching sessions where
 progress is measured over time within the same conversation.
+
+NEW FEATURE: Assessment Toggle
+-------------------------------
+Use --no-assessments flag to run conversation-only mode, focusing purely on 
+conversation quality without any assessment scoring. This is useful for:
+- Testing conversation flow and naturalness
+- Evaluating prompt effectiveness without assessment bias
+- Faster iteration on conversation design
+- Debugging conversation simulator behavior
+
+Example usage:
+  python conversation_length_experiment_v2.py --no-assessments --dummies 3 --max-rounds 15
 """
 
 import json
@@ -35,7 +47,8 @@ class ContinuousConversationExperiment:
                            max_rounds: int = 20,
                            assessment_milestones: List[int] = None,
                            base_prompt: str = None,
-                           save_conversation_details: bool = False) -> Dict[str, Any]:
+                           save_conversation_details: bool = False,
+                           enable_assessments: bool = True) -> Dict[str, Any]:
         """Run the continuous conversation experiment"""
         
         if assessment_milestones is None:
@@ -48,7 +61,9 @@ class ContinuousConversationExperiment:
         print(f"📊 Configuration:")
         print(f"   • {num_dummies} dummies (same batch for all tests)")
         print(f"   • Max conversation rounds: {max_rounds}")
-        print(f"   • Assessment milestones: {assessment_milestones}")
+        print(f"   • Enable assessments: {enable_assessments}")
+        if enable_assessments:
+            print(f"   • Assessment milestones: {assessment_milestones}")
         print(f"   • Save conversation details: {save_conversation_details}")
         print(f"   • Base prompt: {base_prompt[:50]}...")
         print()
@@ -67,7 +82,7 @@ class ContinuousConversationExperiment:
         tasks = []
         for i, dummy in enumerate(dummies):
             task = self._test_continuous_conversation_parallel(
-                dummy, max_rounds, assessment_milestones, base_prompt, i+1, len(dummies), save_conversation_details
+                dummy, max_rounds, assessment_milestones, base_prompt, i+1, len(dummies), save_conversation_details, enable_assessments
             )
             tasks.append(task)
         
@@ -76,8 +91,8 @@ class ContinuousConversationExperiment:
         
         print(f"✅ All {len(dummies)} dummy tests completed in parallel!")
         
-        # Analyze results across all dummies
-        analysis = self._analyze_continuous_results(results, assessment_milestones)
+        # Analyze results across all dummies (only if assessments enabled)
+        analysis = self._analyze_continuous_results(results, assessment_milestones) if enable_assessments else {}
         
         # Save results
         experiment_data = {
@@ -86,7 +101,8 @@ class ContinuousConversationExperiment:
                 "experiment_type": "continuous_conversation",
                 "num_dummies": num_dummies,
                 "max_rounds": max_rounds,
-                "assessment_milestones": assessment_milestones,
+                "enable_assessments": enable_assessments,
+                "assessment_milestones": assessment_milestones if enable_assessments else None,
                 "save_conversation_details": save_conversation_details,
                 "base_prompt": base_prompt,
                 "dummy_names": [d.name for d in dummies]
@@ -132,14 +148,19 @@ class ContinuousConversationExperiment:
                                                    base_prompt: str,
                                                    dummy_num: int,
                                                    total_dummies: int,
-                                                   save_conversation_details: bool = False) -> Dict[str, Any]:
+                                                   save_conversation_details: bool = False,
+                                                   enable_assessments: bool = True) -> Dict[str, Any]:
         """Test one dummy with continuous conversation and milestone assessments (parallel version)"""
         
         print(f"   [{dummy_num}/{total_dummies}] Starting continuous conversation for {dummy.name}...")
         
-        # Generate initial pre-assessment
-        pre_assessment = await self.assessment_system.generate_pre_assessment(dummy)
-        print(f"   [{dummy_num}/{total_dummies}] 📊 Pre-assessment: {pre_assessment.average_score:.2f}")
+        # Generate initial pre-assessment (only if assessments enabled)
+        pre_assessment = None
+        if enable_assessments:
+            pre_assessment = await self.assessment_system.generate_pre_assessment(dummy)
+            print(f"   [{dummy_num}/{total_dummies}] 📊 Pre-assessment: {pre_assessment.average_score:.2f}")
+        else:
+            print(f"   [{dummy_num}/{total_dummies}] 💬 Conversation mode (assessments disabled)")
         
         # Create conversation
         conversation = Conversation(
@@ -174,9 +195,10 @@ class ContinuousConversationExperiment:
             dummy_response = await self._generate_character_response_async(conversation, dummy, round_num + 1)
             conversation.add_turn("dummy", dummy_response, {"round": round_num + 1})
             
-            # Check if we've reached a milestone
+            # Check if we've reached a milestone (only if assessments enabled)
             current_rounds = round_num + 1
-            if (current_milestone_idx < len(assessment_milestones) and 
+            if (enable_assessments and 
+                current_milestone_idx < len(assessment_milestones) and 
                 current_rounds == assessment_milestones[current_milestone_idx]):
                 
                 print(f" [M{dummy_num}:{current_rounds}]", end="", flush=True)
@@ -193,8 +215,8 @@ class ContinuousConversationExperiment:
                 
                 current_milestone_idx += 1
         
-        # Wait for all assessment tasks to complete
-        if assessment_tasks:
+        # Wait for all assessment tasks to complete (only if assessments enabled)
+        if enable_assessments and assessment_tasks:
             print(f" [A{dummy_num}]", end="", flush=True)
             for assessment_data in assessment_tasks:
                 milestone_assessment = await assessment_data["task"]
@@ -217,20 +239,25 @@ class ContinuousConversationExperiment:
         conversation.end_time = datetime.now()
         conversation.duration_seconds = (conversation.end_time - conversation.start_time).total_seconds()
         
-        # Final post-assessment based on complete conversation
-        final_assessment = await self.assessment_system.generate_post_assessment(
-            dummy, pre_assessment, conversation
-        )
-        final_improvement = final_assessment.average_score - pre_assessment.average_score
+        # Final post-assessment based on complete conversation (only if assessments enabled)
+        final_assessment = None
+        final_improvement = 0
+        if enable_assessments:
+            final_assessment = await self.assessment_system.generate_post_assessment(
+                dummy, pre_assessment, conversation
+            )
+            final_improvement = final_assessment.average_score - pre_assessment.average_score
+            print(f"   [{dummy_num}/{total_dummies}] 📊 Final assessment: {final_assessment.average_score:.2f} (+{final_improvement:.3f})")
+        else:
+            print(f"   [{dummy_num}/{total_dummies}] 💬 Conversation completed")
         
-        print(f"   [{dummy_num}/{total_dummies}] 📊 Final assessment: {final_assessment.average_score:.2f} (+{final_improvement:.3f})")
         print(f"   [{dummy_num}/{total_dummies}] ⏱️  Total duration: {conversation.duration_seconds:.1f}s")
         
         result = {
             "dummy_name": dummy.name,
             "dummy_id": dummy.id,
-            "pre_assessment_score": pre_assessment.average_score,
-            "final_assessment_score": final_assessment.average_score,
+            "pre_assessment_score": pre_assessment.average_score if pre_assessment else None,
+            "final_assessment_score": final_assessment.average_score if final_assessment else None,
             "final_improvement": final_improvement,
             "total_conversation_turns": len(conversation.turns),
             "total_duration_seconds": conversation.duration_seconds,
@@ -272,7 +299,7 @@ class ContinuousConversationExperiment:
                         }
                         for response in pre_assessment.responses
                     ]
-                },
+                } if pre_assessment else None,
                 "final_assessment": {
                     "dummy_id": final_assessment.dummy_id,
                     "timestamp": final_assessment.timestamp.isoformat(),
@@ -288,7 +315,7 @@ class ContinuousConversationExperiment:
                         }
                         for response in final_assessment.responses
                     ]
-                }
+                } if final_assessment else None
             }
         
         return result
@@ -511,6 +538,7 @@ def main():
     parser.add_argument("--milestones", type=str, default="5,10,15,20", help="Assessment milestones (comma-separated, default: 5,10,15,20)")
     parser.add_argument("--prompt", type=str, default=None, help="Custom system prompt to test")
     parser.add_argument("--save-details", action="store_true", help="Save full conversation details in JSON output (makes files larger)")
+    parser.add_argument("--no-assessments", action="store_true", help="Disable assessments and focus on conversation quality only")
     
     args = parser.parse_args()
     
@@ -533,7 +561,8 @@ def main():
                 max_rounds=args.max_rounds,
                 assessment_milestones=assessment_milestones,
                 base_prompt=args.prompt,
-                save_conversation_details=args.save_details
+                save_conversation_details=args.save_details,
+                enable_assessments=not args.no_assessments
             )
             print("\n✅ Continuous conversation experiment completed successfully!")
         except Exception as e:
