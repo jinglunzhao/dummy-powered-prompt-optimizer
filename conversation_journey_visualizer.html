@@ -257,6 +257,27 @@
             font-weight: bold;
             color: #856404;
         }
+        
+        .dummy-name {
+            transition: color 0.2s ease;
+        }
+        
+        .dummy-name:hover {
+            color: #2980b9 !important;
+        }
+        
+        .tooltip {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            pointer-events: none;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
     </style>
 </head>
 <body>
@@ -299,6 +320,10 @@
         <div id="error" class="error" style="display: none;"></div>
         
         <div id="chart-container"></div>
+        
+        <div style="text-align: center; margin: 15px 0; color: #7f8c8d; font-size: 0.9em;">
+            💡 <strong>Interactive Features:</strong> Click on lines, data points, or dummy names to view conversation details
+        </div>
         
         <div class="legend" id="legend"></div>
         
@@ -536,7 +561,7 @@
                             .style('cursor', 'pointer')
                             .on('click', () => this.showConversationHistory(dummy.name));
                         
-                        // Add data points
+                        // Add data points with click handlers
                         g.selectAll(`.dot-${i}`)
                             .data(dummy.data)
                             .enter().append('circle')
@@ -546,7 +571,32 @@
                             .attr('r', 4)
                             .attr('fill', this.colors[i % this.colors.length])
                             .attr('stroke', 'white')
-                            .attr('stroke-width', 2);
+                            .attr('stroke-width', 2)
+                            .style('cursor', 'pointer')
+                            .on('click', (event, d) => this.showConversationHistoryAtRound(dummy.name, d.round))
+                            .on('mouseover', function(event, d) {
+                                // Show tooltip
+                                d3.select(this)
+                                    .attr('r', 6)
+                                    .style('opacity', 0.8);
+                                
+                                // Create tooltip
+                                const tooltip = d3.select('body').append('div')
+                                    .attr('class', 'tooltip')
+                                    .style('opacity', 1)
+                                    .style('left', (event.pageX + 10) + 'px')
+                                    .style('top', (event.pageY - 10) + 'px')
+                                    .html(`Round ${d.round}<br/>Improvement: +${d.improvement.toFixed(3)} points`);
+                            })
+                            .on('mouseout', function(event, d) {
+                                // Hide tooltip
+                                d3.select(this)
+                                    .attr('r', 4)
+                                    .style('opacity', 1);
+                                
+                                // Remove tooltip
+                                d3.selectAll('.tooltip').remove();
+                            });
                     });
                 }
                 
@@ -633,7 +683,8 @@
                         item.className = 'legend-item';
                         item.innerHTML = `
                             <div class="legend-color" style="background-color: ${this.colors[i % this.colors.length]};"></div>
-                            <span>${dummy.name}</span>
+                            <span class="dummy-name" style="cursor: pointer; color: #3498db; text-decoration: underline;" 
+                                  onclick="visualizer.showConversationHistory('${dummy.name}')">${dummy.name}</span>
                         `;
                         legend.appendChild(item);
                     });
@@ -675,7 +726,7 @@
                 errorDiv.style.display = 'block';
             }
             
-            showConversationHistory(dummyName) {
+            showConversationHistory(dummyName, maxRound = null) {
                 if (!this.conversationDetails) {
                     alert('No conversation details available for this experiment. Please run experiments with --save-details flag.');
                     return;
@@ -693,23 +744,35 @@
                 const conversation = dummyDetails.conversation_details;
                 const milestones = this.currentExperiment.results.find(r => r.dummy_name === dummyName)?.milestone_results || [];
                 
+                // Filter turns if maxRound is specified
+                let displayTurns = conversation.turns;
+                if (maxRound !== null) {
+                    // Find turns up to the specified round
+                    displayTurns = conversation.turns.filter(turn => {
+                        return !turn.metadata || !turn.metadata.round || turn.metadata.round <= maxRound;
+                    });
+                }
+                
+                const title = maxRound !== null ? 
+                    `💬 ${dummyName} - Conversation History (Up to Round ${maxRound})` :
+                    `💬 ${dummyName} - Complete Conversation History`;
+                
                 let html = `
                     <div class="conversation-header">
-                        <div class="conversation-title">💬 ${dummyName} - Complete Conversation History</div>
+                        <div class="conversation-title">${title}</div>
                         <div class="conversation-meta">
-                            <div><strong>Pre-assessment:</strong> ${conversation.pre_assessment.average_score.toFixed(2)} points</div>
-                            <div><strong>Final Assessment:</strong> ${conversation.final_assessment.average_score.toFixed(2)} points</div>
-                            <div><strong>Total Improvement:</strong> +${dummyDetails.final_improvement.toFixed(3)} points</div>
-                            <div><strong>Conversation Turns:</strong> ${conversation.turns.length}</div>
-                            <div><strong>Duration:</strong> ${(dummyDetails.total_duration_seconds / 60).toFixed(1)} minutes</div>
+                            <div><strong>Pre-assessment:</strong> ${conversation.pre_assessment ? conversation.pre_assessment.average_score.toFixed(2) : 'N/A'} points</div>
+                            <div><strong>Final Assessment:</strong> ${conversation.final_assessment ? conversation.final_assessment.average_score.toFixed(2) : 'N/A'} points</div>
+                            <div><strong>Total Improvement:</strong> ${dummyDetails.final_improvement ? '+' + dummyDetails.final_improvement.toFixed(3) : 'N/A'} points</div>
+                            <div><strong>Conversation Turns:</strong> ${displayTurns.length}</div>
+                            <div><strong>Duration:</strong> ${dummyDetails.total_duration_seconds ? (dummyDetails.total_duration_seconds / 60).toFixed(1) : 'N/A'} minutes</div>
                         </div>
                     </div>
                     
                     <div class="conversation-turns">
                 `;
                 
-                let currentRound = 0;
-                conversation.turns.forEach((turn, index) => {
+                displayTurns.forEach((turn, index) => {
                     // Check if this is a milestone (display after dummy response completes the round)
                     let milestone = null;
                     if (turn.speaker === 'dummy' && turn.metadata && turn.metadata.round) {
@@ -738,11 +801,16 @@
                 modalBody.innerHTML = html;
                 modal.style.display = 'block';
             }
+            
+            showConversationHistoryAtRound(dummyName, round) {
+                this.showConversationHistory(dummyName, round);
+            }
         }
         
         // Initialize the visualizer when the page loads
+        let visualizer;
         document.addEventListener('DOMContentLoaded', () => {
-            new ConversationJourneyVisualizer();
+            visualizer = new ConversationJourneyVisualizer();
         });
     </script>
 </body>
