@@ -114,6 +114,8 @@ IMPORTANT INSTRUCTIONS:
 3. Responses should reflect genuine self-reflection, not external assessment
 4. Maintain personality consistency while allowing for growth from coaching
 5. Each question should receive exactly one integer score from 1-4
+6. For POST-COACHING assessments: Compare against baseline scores to determine if coaching helped
+7. Small improvements (0.5-1 point increase) are realistic; dramatic changes are unlikely
 
 RESPONSE FORMAT:
 For each of the 20 questions, provide only the numeric score (1-4) followed by a brief explanation (1-2 sentences) of why the student would rate themselves that way.
@@ -198,13 +200,13 @@ BASELINE ASSESSMENT REFERENCE:
 POST-COACHING ASSESSMENT:
 This is {dummy.name}'s self-assessment after having coaching conversations. The coaching may have influenced their self-perception, confidence, and awareness of their social skills.
 
-Please help them evaluate themselves honestly, considering:
-1. Their baseline personality and typical behaviors
-2. How the coaching conversation might have affected their self-awareness
-3. Any insights, encouragement, or strategies they received
-4. How they might feel more confident or aware of their abilities now
+EVALUATION GUIDELINES:
+1. Compare each question against the baseline score provided above
+2. Consider realistic improvements: 0.5-1 point increases are normal, dramatic changes are unlikely
+3. Think about how the coaching conversation specifically addressed each skill area
+4. Maintain consistency with their personality traits while allowing for growth
 
-Rate each of the 20 social skills questions from 1-4 based on how {dummy.name} would assess themselves after this coaching experience."""
+Rate each of the 20 social skills questions from 1-4 based on how {dummy.name} would assess themselves after this coaching experience. Consider whether coaching helped them improve from their baseline scores."""
 
     def _get_personality_description(self, personality: PersonalityProfile) -> str:
         """Create personality description for LLM context"""
@@ -246,40 +248,23 @@ Rate each of the 20 social skills questions from 1-4 based on how {dummy.name} w
         return summary
 
     def _get_baseline_scores_summary(self, pre_assessment: Assessment) -> str:
-        """Get baseline scores summary for reference"""
-        low_scores = [r for r in pre_assessment.responses if r.score <= 2]
-        high_scores = [r for r in pre_assessment.responses if r.score >= 3]
-        
+        """Get baseline scores for each question for precise reference"""
         summary = f"Baseline average score: {pre_assessment.average_score:.2f}/4.0\n\n"
+        summary += "BASELINE SCORES FOR EACH QUESTION:\n"
+        summary += "For each question below, consider the baseline score when evaluating improvement:\n\n"
         
-        if low_scores:
-            summary += "Areas rated lower (1-2):\n"
-            for response in low_scores[:3]:
-                summary += f"- {response.question}: {response.score}/4\n"
-        
-        if high_scores:
-            summary += "\nAreas rated higher (3-4):\n"
-            for response in high_scores[:3]:
-                summary += f"- {response.question}: {response.score}/4\n"
+        for i, question in enumerate(self.questions, 1):
+            # Find the baseline score for this question
+            baseline_response = next((r for r in pre_assessment.responses if r.question == question), None)
+            baseline_score = baseline_response.score if baseline_response else 2
+            
+            summary += f"{i}. {question} (Baseline: {baseline_score}/4)\n"
         
         return summary
 
     async def _get_llm_assessment(self, system_prompt: str, user_prompt: str, dummy: AIDummy) -> str:
         """Get assessment from LLM"""
         try:
-            # Print complete prompts for debugging
-            print(f"\n{'='*80}")
-            print(f"🔍 ASSESSMENT PROMPT FOR {dummy.name.upper()}")
-            print(f"{'='*80}")
-            print(f"\n📋 SYSTEM PROMPT:")
-            print(f"{'─'*40}")
-            print(system_prompt)
-            print(f"\n👤 USER PROMPT:")
-            print(f"{'─'*40}")
-            print(user_prompt)
-            print(f"\n📤 SENDING TO DEEPSEEK API...")
-            print(f"{'='*80}\n")
-            
             async with aiohttp.ClientSession() as session:
                 async with session.post(
                     "https://api.deepseek.com/v1/chat/completions",
@@ -298,16 +283,7 @@ Rate each of the 20 social skills questions from 1-4 based on how {dummy.name} w
                     }
                 ) as response:
                     result = await response.json()
-                    llm_response = result['choices'][0]['message']['content'].strip()
-                    
-                    # Print LLM response
-                    print(f"\n{'='*80}")
-                    print(f"🤖 LLM RESPONSE FOR {dummy.name.upper()}")
-                    print(f"{'='*80}")
-                    print(llm_response)
-                    print(f"\n{'='*80}\n")
-                    
-                    return llm_response
+                    return result['choices'][0]['message']['content'].strip()
         except Exception as e:
             print(f"❌ Error getting LLM assessment: {e}")
             # Fallback to default scores
