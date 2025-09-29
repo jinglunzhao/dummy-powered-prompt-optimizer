@@ -598,6 +598,11 @@
                                 d3.selectAll('.tooltip').remove();
                             });
                     });
+                    
+                    // Always render average line in "All Dummies" mode
+                    if (viewMode === 'all') {
+                        this.renderAverageLine(g, this.chartData, xScale, yScale, line);
+                    }
                 }
                 
                 // Add axes
@@ -649,7 +654,8 @@
                     .datum(averageData)
                     .attr('fill', 'none')
                     .attr('stroke', '#e74c3c')
-                    .attr('stroke-width', 3)
+                    .attr('stroke-width', 4)
+                    .attr('stroke-dasharray', '10,5')
                     .attr('d', line);
                 
                 // Add data points
@@ -688,6 +694,17 @@
                         `;
                         legend.appendChild(item);
                     });
+                    
+                    // Add average line to legend in "All Dummies" mode
+                    if (viewMode === 'all') {
+                        const averageItem = document.createElement('div');
+                        averageItem.className = 'legend-item';
+                        averageItem.innerHTML = `
+                            <div class="legend-color" style="background-color: #e74c3c; border: 2px dashed #e74c3c; width: 15px; height: 3px;"></div>
+                            <span style="font-weight: bold;">Average Performance</span>
+                        `;
+                        legend.appendChild(averageItem);
+                    }
                 }
             }
             
