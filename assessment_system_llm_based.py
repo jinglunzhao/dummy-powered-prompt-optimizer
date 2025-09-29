@@ -55,7 +55,7 @@ class AssessmentSystemLLMBased:
     
     async def generate_pre_assessment(self, dummy: AIDummy) -> Assessment:
         """Generate baseline assessment using LLM to simulate dummy's self-assessment"""
-        print(f"📝 {dummy.name} is taking the baseline assessment...")
+        # print(f"📝 {dummy.name} is taking the baseline assessment...")
         
         # Create system prompt for assessment method
         system_prompt = self._create_assessment_system_prompt()
@@ -79,7 +79,7 @@ class AssessmentSystemLLMBased:
         if not conversation:
             return await self.generate_pre_assessment(dummy)
         
-        print(f"📝 {dummy.name} is taking the post-conversation assessment...")
+        # print(f"📝 {dummy.name} is taking the post-conversation assessment...")
         
         # Create system prompt for assessment method
         system_prompt = self._create_assessment_system_prompt()
@@ -93,7 +93,7 @@ class AssessmentSystemLLMBased:
         # Parse and create assessment object
         assessment = self._parse_assessment_response(assessment_data, dummy, "post")
         
-        print(f"✅ {dummy.name} completed post-conversation assessment: {assessment.average_score:.2f} average")
+        # print(f"✅ {dummy.name} completed post-conversation assessment: {assessment.average_score:.2f} average")
         return assessment
     
     def _create_assessment_system_prompt(self) -> str:
@@ -267,6 +267,19 @@ Rate each of the 20 social skills questions from 1-4 based on how {dummy.name} w
     async def _get_llm_assessment(self, system_prompt: str, user_prompt: str, dummy: AIDummy) -> str:
         """Get assessment from LLM"""
         try:
+            # Print complete prompts for debugging
+            print(f"\n{'='*80}")
+            print(f"🔍 ASSESSMENT PROMPT FOR {dummy.name.upper()}")
+            print(f"{'='*80}")
+            print(f"\n📋 SYSTEM PROMPT:")
+            print(f"{'─'*40}")
+            print(system_prompt)
+            print(f"\n👤 USER PROMPT:")
+            print(f"{'─'*40}")
+            print(user_prompt)
+            print(f"\n📤 SENDING TO DEEPSEEK API...")
+            print(f"{'='*80}\n")
+            
             async with aiohttp.ClientSession() as session:
                 async with session.post(
                     "https://api.deepseek.com/v1/chat/completions",
@@ -285,7 +298,16 @@ Rate each of the 20 social skills questions from 1-4 based on how {dummy.name} w
                     }
                 ) as response:
                     result = await response.json()
-                    return result['choices'][0]['message']['content'].strip()
+                    llm_response = result['choices'][0]['message']['content'].strip()
+                    
+                    # Print LLM response
+                    print(f"\n{'='*80}")
+                    print(f"🤖 LLM RESPONSE FOR {dummy.name.upper()}")
+                    print(f"{'='*80}")
+                    print(llm_response)
+                    print(f"\n{'='*80}\n")
+                    
+                    return llm_response
         except Exception as e:
             print(f"❌ Error getting LLM assessment: {e}")
             # Fallback to default scores
