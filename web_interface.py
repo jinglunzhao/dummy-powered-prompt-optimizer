@@ -1517,19 +1517,6 @@ if __name__ == '__main__':
                 return bestPrompt.performance_metrics?.avg_improvement || 0;
             });
 
-            // Calculate average performance across all dummies for each generation
-            const averageImprovements = labels.map(gen => {
-                const genPrompts = generations[gen];
-                if (genPrompts.length === 0) return 0;
-                
-                // Calculate average improvement across all prompts in this generation
-                const totalImprovement = genPrompts.reduce((sum, prompt) => {
-                    return sum + (prompt.performance_metrics?.avg_improvement || 0);
-                }, 0);
-                
-                return totalImprovement / genPrompts.length;
-            });
-
             new Chart(ctx, {
                 type: 'line',
                 data: {
@@ -1544,18 +1531,6 @@ if __name__ == '__main__':
                         pointBorderColor: '#fff',
                         pointBorderWidth: 2,
                         pointRadius: 6
-                    }, {
-                        label: 'Average Performance (all dummies)',
-                        data: averageImprovements,
-                        borderColor: '#dc3545',
-                        backgroundColor: 'rgba(220, 53, 69, 0.1)',
-                        borderWidth: 4,
-                        borderDash: [10, 5],
-                        pointBackgroundColor: '#dc3545',
-                        pointBorderColor: '#fff',
-                        pointBorderWidth: 2,
-                        pointRadius: 5,
-                        fill: false
                     }]
                 },
                 options: {
@@ -1563,15 +1538,7 @@ if __name__ == '__main__':
                     plugins: {
                         title: {
                             display: true,
-                            text: 'Performance Evolution Across Generations (Best vs Average)'
-                        },
-                        legend: {
-                            display: true,
-                            position: 'top',
-                            labels: {
-                                usePointStyle: true,
-                                padding: 20
-                            }
+                            text: 'Performance Evolution Across Generations'
                         }
                     },
                     scales: {
