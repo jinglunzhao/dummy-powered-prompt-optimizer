@@ -1535,16 +1535,6 @@ if __name__ == '__main__':
                 data: {
                     labels: labels.map(gen => `Generation ${gen}`),
                     datasets: [{
-                        label: 'Best Improvement (points)',
-                        data: improvements,
-                        borderColor: '#28a745',
-                        backgroundColor: 'rgba(40, 167, 69, 0.1)',
-                        borderWidth: 3,
-                        pointBackgroundColor: '#28a745',
-                        pointBorderColor: '#fff',
-                        pointBorderWidth: 2,
-                        pointRadius: 6
-                    }, {
                         label: 'Average Performance (all dummies)',
                         data: averageImprovements,
                         borderColor: '#dc3545',
@@ -1563,7 +1553,7 @@ if __name__ == '__main__':
                     plugins: {
                         title: {
                             display: true,
-                            text: 'Performance Evolution Across Generations (Best vs Average)'
+                            text: 'Average Performance Across Generations'
                         },
                         legend: {
                             display: true,
