@@ -273,7 +273,7 @@ Rate each of the 20 social skills questions from 1-4 based on how {dummy.name} w
                         "Content-Type": "application/json"
                     },
                     json={
-                        "model": "deepseek-reasoner",
+                        "model": "deepseek-chat",
                         "messages": [
                             {"role": "system", "content": system_prompt},
                             {"role": "user", "content": user_prompt}

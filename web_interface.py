@@ -3,7 +3,7 @@
 Web Interface for AI Dummy Analysis
 Interactive web application to explore dummy personalities, assessments, and conversations
 """
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, send_from_directory
 import json
 import os
 from typing import List, Dict, Any
@@ -237,6 +237,66 @@ def prompt_detail(prompt_id):
     """Detailed view of a specific prompt with all dummy results"""
     data = load_data()
     return render_template('prompt_detail.html', data=data, prompt_id=prompt_id)
+
+@app.route('/api/gepa_experiments')
+def api_gepa_experiments():
+    """API endpoint to list available GEPA experiments"""
+    import glob
+    from datetime import datetime
+    
+    experiments = []
+    experiment_files = glob.glob('data/experiments/gepa_optimization_exp_*.json')
+    
+    for file_path in experiment_files:
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            
+            exp_info = data.get('test_config', {})
+            timestamp = exp_info.get('timestamp', '')
+            
+            try:
+                if timestamp:
+                    dt = datetime.fromisoformat(timestamp.replace('Z', '+00:00'))
+                    date_str = dt.strftime('%Y-%m-%d %H:%M')
+                else:
+                    date_str = 'Unknown'
+            except:
+                date_str = 'Unknown'
+            
+            experiments.append({
+                'filename': os.path.basename(file_path),
+                'name': f"GEPA {exp_info.get('test_name', 'Experiment')} ({exp_info.get('dummies_count', '?')}d {exp_info.get('conversation_rounds', '?')}r {exp_info.get('generations', '?')}g)",
+                'date': date_str,
+                'generations': exp_info.get('generations', 0),
+                'dummies_count': exp_info.get('dummies_count', 0),
+                'conversation_rounds': exp_info.get('conversation_rounds', 0),
+                'population_size': exp_info.get('population_size', 0),
+                'test_name': exp_info.get('test_name', 'Unknown')
+            })
+        except Exception as e:
+            print(f"Error processing {file_path}: {e}")
+            continue
+    
+    experiments.sort(key=lambda x: x['date'], reverse=True)
+    return jsonify(experiments)
+
+@app.route('/api/gepa_experiment/<filename>')
+def api_gepa_experiment(filename):
+    """API endpoint to load a specific GEPA experiment"""
+    try:
+        file_path = os.path.join('data/experiments', filename)
+        
+        if not os.path.exists(file_path):
+            return jsonify({'error': 'Experiment not found'}), 404
+        
+        with open(file_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        
+        return jsonify(data)
+    
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 @app.route('/api/optimization')
 def api_optimization():

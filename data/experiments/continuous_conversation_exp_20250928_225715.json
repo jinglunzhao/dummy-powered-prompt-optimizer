@@ -1,0 +1,3535 @@
+{
+  "experiment_info": {
+    "timestamp": "2025-09-28T22:57:15.087168",
+    "experiment_type": "continuous_conversation",
+    "num_dummies": 5,
+    "max_rounds": 20,
+    "enable_assessments": true,
+    "assessment_milestones": [
+      5,
+      10,
+      15,
+      20
+    ],
+    "save_conversation_details": true,
+    "base_prompt": "You are a helpful peer mentor for college students. Be supportive and provide practical advice.",
+    "dummy_names": [
+      "Gregory Moore",
+      "Jamie Young",
+      "Alex Lewis",
+      "Casey Goldberg",
+      "Gregory Young"
+    ]
+  },
+  "results": [
+    {
+      "dummy_name": "Gregory Moore",
+      "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+      "pre_assessment_score": 2.4,
+      "final_assessment_score": 2.45,
+      "final_improvement": 0.050000000000000266,
+      "total_conversation_turns": 41,
+      "total_duration_seconds": 160.461059,
+      "milestone_results": [
+        {
+          "milestone_rounds": 5,
+          "pre_score": 2.4,
+          "milestone_score": 2.4,
+          "improvement": 0.0,
+          "conversation_turns": 41,
+          "timestamp": "2025-09-28T22:56:47.286206"
+        },
+        {
+          "milestone_rounds": 10,
+          "pre_score": 2.4,
+          "milestone_score": 2.45,
+          "improvement": 0.050000000000000266,
+          "conversation_turns": 41,
+          "timestamp": "2025-09-28T22:56:47.286243"
+        },
+        {
+          "milestone_rounds": 15,
+          "pre_score": 2.4,
+          "milestone_score": 2.45,
+          "improvement": 0.050000000000000266,
+          "conversation_turns": 41,
+          "timestamp": "2025-09-28T22:56:47.286265"
+        },
+        {
+          "milestone_rounds": 20,
+          "pre_score": 2.4,
+          "milestone_score": 2.45,
+          "improvement": 0.050000000000000266,
+          "conversation_turns": 41,
+          "timestamp": "2025-09-28T22:56:47.291395"
+        }
+      ],
+      "conversation": {
+        "scenario": "Social skills coaching session",
+        "system_prompt": "You are a helpful peer mentor for college students. Be supportive and provide practical advice.",
+        "start_time": "2025-09-28T22:54:06.830376",
+        "end_time": "2025-09-28T22:56:47.291435",
+        "total_turns": 41
+      },
+      "conversation_details": {
+        "turns": [
+          {
+            "turn_number": 1,
+            "speaker": "dummy",
+            "message": "Hey, thanks for meeting with me. I’ll be honest, I’m kinda stressed—I have a huge presentation coming up for my algorithms class and the thought of everyone staring at me is making my skin crawl.",
+            "timestamp": "2025-09-28T22:54:11.978162",
+            "metadata": {
+              "character_context": "Personality:\n- Extraversion: 10/10 (Very outgoing)\n- Agreeableness: 1/10 (More competitive)\n- Conscientiousness: 6/10 (Moderately organized)\n- Neuroticism: 8/10 (Very sensitive to stress)\n- Openness: 7/10 (Very creative and curious)\n\nSocial Anxiety:\n- Level: 3/10 (Low)\n- Communication style: Passive\n- Triggers: Networking events, Presentations, Campus social events\n- Social comfort: 4/10\n\nPersonal Details:\n- Major: Computer Science\n- Fears: Choosing the right career path, Social anxiety in large lecture halls, Academic failure and poor grades, Dealing with roommate conflicts\n- Goals: Improve public speaking, Get accepted to graduate school, Publish a paper, Learn a new language\n- Challenges: Financial planning, Finding a mentor, Managing student loans\n- Behaviors: Eats at the dining hall, Participates in study groups, Volunteers for campus events"
+            }
+          },
+          {
+            "turn_number": 2,
+            "speaker": "ai",
+            "message": "Hey! Totally get that—presentations can be nerve-wracking. Try practicing in front of a mirror or with a small group of friends first. It helps build confidence gradually. Also, remember that most people are focused on the content, not judging you. You’ve got this!",
+            "timestamp": "2025-09-28T22:54:15.558659",
+            "metadata": {
+              "round": 1
+            }
+          },
+          {
+            "turn_number": 3,
+            "speaker": "dummy",
+            "message": "I guess I could try that, though honestly even thinking about presenting makes me stress about my graduate school applications.",
+            "timestamp": "2025-09-28T22:54:18.770302",
+            "metadata": {
+              "round": 1
+            }
+          },
+          {
+            "turn_number": 4,
+            "speaker": "ai",
+            "message": "It's normal to connect these pressures! Grad schools value resilience—tackling this presentation is proof you can handle challenges. Break it into small steps: outline, practice, feedback. Each success builds your confidence for applications. You're capable!",
+            "timestamp": "2025-09-28T22:54:23.432716",
+            "metadata": {
+              "round": 2
+            }
+          },
+          {
+            "turn_number": 5,
+            "speaker": "dummy",
+            "message": "I guess breaking it down could help, but what if my outline is terrible and the feedback just confirms I'm not cut out for grad school?",
+            "timestamp": "2025-09-28T22:54:27.322186",
+            "metadata": {
+              "round": 2
+            }
+          },
+          {
+            "turn_number": 6,
+            "speaker": "ai",
+            "message": "That's the fear talking, not reality. Everyone starts somewhere—feedback is meant to help you improve, not tear you down. Try using a simple template for your outline and ask someone you trust for constructive input. You're in CS for a reason—trust your skills!",
+            "timestamp": "2025-09-28T22:54:32.134025",
+            "metadata": {
+              "round": 3
+            }
+          },
+          {
+            "turn_number": 7,
+            "speaker": "dummy",
+            "message": "I know you're right, but it's just hard to see it that way when I'm staring at a blank document. Maybe I could ask my study group to look at my outline.",
+            "timestamp": "2025-09-28T22:54:36.571562",
+            "metadata": {
+              "round": 3
+            }
+          },
+          {
+            "turn_number": 8,
+            "speaker": "ai",
+            "message": "That's a great idea! Your study group knows your strengths and can give supportive, relevant feedback. Starting is the hardest part—just jot down three main points for now. You've got a solid plan and people to help. Go for it!",
+            "timestamp": "2025-09-28T22:54:40.082731",
+            "metadata": {
+              "round": 4
+            }
+          },
+          {
+            "turn_number": 9,
+            "speaker": "dummy",
+            "message": "Yeah, I guess I could try that. It's just hard to believe a rough draft is worth showing anyone yet.",
+            "timestamp": "2025-09-28T22:54:43.287914",
+            "metadata": {
+              "round": 4
+            }
+          },
+          {
+            "turn_number": 10,
+            "speaker": "ai",
+            "message": "Exactly—rough drafts are *meant* to be imperfect! Your study group has seen you struggle and succeed before; they’ll focus on helping, not judging. Showing something unfinished takes courage, and that’s what growth looks like. You’ve got this.",
+            "timestamp": "2025-09-28T22:54:49.438925",
+            "metadata": {
+              "round": 5
+            }
+          },
+          {
+            "turn_number": 11,
+            "speaker": "dummy",
+            "message": "I guess you're right, it's just hard to remember that in the moment. I'll try to bring my draft to the group tomorrow.",
+            "timestamp": "2025-09-28T22:54:51.979360",
+            "metadata": {
+              "round": 5
+            }
+          },
+          {
+            "turn_number": 12,
+            "speaker": "ai",
+            "message": "That's a huge step—proud of you for committing! Remember, everyone in that group has been where you are. Taking action, even when it's tough, is how you grow. You're on the right track.",
+            "timestamp": "2025-09-28T22:54:56.701002",
+            "metadata": {
+              "round": 6
+            }
+          },
+          {
+            "turn_number": 13,
+            "speaker": "dummy",
+            "message": "Thanks, I guess. It's just hard to believe I'm on the right track when I still get so overwhelmed in my 300-person lectures.",
+            "timestamp": "2025-09-28T22:54:59.902532",
+            "metadata": {
+              "round": 6
+            }
+          },
+          {
+            "turn_number": 14,
+            "speaker": "ai",
+            "message": "That's totally normal—large lectures can feel isolating. Try arriving early to chat with one person nearby. It makes the room feel smaller and builds a small support network. You're already tackling drafts; this is just another step. Progress isn't always linear, and you're doing great.",
+            "timestamp": "2025-09-28T22:55:05.294419",
+            "metadata": {
+              "round": 7
+            }
+          },
+          {
+            "turn_number": 15,
+            "speaker": "dummy",
+            "message": "I guess I could try that, though I'm not sure one conversation will really fix how overwhelming those lectures feel. But you're right, I should at least attempt it.",
+            "timestamp": "2025-09-28T22:55:08.483637",
+            "metadata": {
+              "round": 7
+            }
+          },
+          {
+            "turn_number": 16,
+            "speaker": "ai",
+            "message": "Absolutely—one chat won't solve everything, but it's a start. Small, consistent efforts build confidence over time. You're already showing courage by trying. Keep going, you've got this.",
+            "timestamp": "2025-09-28T22:55:12.425670",
+            "metadata": {
+              "round": 8
+            }
+          },
+          {
+            "turn_number": 17,
+            "speaker": "dummy",
+            "message": "I guess... it's just hard to imagine feeling confident when I'm stressing about my grad school applications and student loans all the time.",
+            "timestamp": "2025-09-28T22:55:15.882504",
+            "metadata": {
+              "round": 8
+            }
+          },
+          {
+            "turn_number": 18,
+            "speaker": "ai",
+            "message": "It's completely valid to feel that way—those are big, real pressures. Try breaking them into smaller tasks: one grad school essay at a time, one loan review session. You're managing a lot, and taking it step by step will help it feel more manageable. You're not alone in this.",
+            "timestamp": "2025-09-28T22:55:21.032188",
+            "metadata": {
+              "round": 9
+            }
+          },
+          {
+            "turn_number": 19,
+            "speaker": "dummy",
+            "message": "Yeah, I guess you're right. It's just hard to see the smaller steps when the big picture feels so overwhelming all the time.",
+            "timestamp": "2025-09-28T22:55:23.824724",
+            "metadata": {
+              "round": 9
+            }
+          },
+          {
+            "turn_number": 20,
+            "speaker": "ai",
+            "message": "Exactly—focus on just the next small step. Maybe today, just outline one essay paragraph or review one loan document. Progress adds up, and you're capable of handling each piece. You've got this.",
+            "timestamp": "2025-09-28T22:55:28.871325",
+            "metadata": {
+              "round": 10
+            }
+          },
+          {
+            "turn_number": 21,
+            "speaker": "dummy",
+            "message": "Yeah, I guess I could look at one loan document after my study group. It's just hard to think about that stuff when I'm worried about my algorithms midterm too.",
+            "timestamp": "2025-09-28T22:55:32.879795",
+            "metadata": {
+              "round": 10
+            }
+          },
+          {
+            "turn_number": 22,
+            "speaker": "ai",
+            "message": "That's a solid plan—tackle the loan doc right after your study group while it's fresh. For your algorithms midterm, try breaking your review into 30-minute focused chunks. You're juggling a lot, but taking it piece by piece really works.",
+            "timestamp": "2025-09-28T22:55:39.065032",
+            "metadata": {
+              "round": 11
+            }
+          },
+          {
+            "turn_number": 23,
+            "speaker": "dummy",
+            "message": "Yeah, I guess that could work. I just get so overwhelmed looking at the total loan amount that I usually end up closing the document after two minutes.",
+            "timestamp": "2025-09-28T22:55:41.706327",
+            "metadata": {
+              "round": 11
+            }
+          },
+          {
+            "turn_number": 24,
+            "speaker": "ai",
+            "message": "Totally get that—the total number is intimidating. Try this: just focus on understanding one section, like the interest rate or repayment options, for five minutes. That’s a win. Small, consistent steps build confidence. You can do this.",
+            "timestamp": "2025-09-28T22:55:46.155267",
+            "metadata": {
+              "round": 12
+            }
+          },
+          {
+            "turn_number": 25,
+            "speaker": "dummy",
+            "message": "Okay, but what if I pick the wrong section to focus on and then I make a huge mistake with my loans?",
+            "timestamp": "2025-09-28T22:55:49.446793",
+            "metadata": {
+              "round": 12
+            }
+          },
+          {
+            "turn_number": 26,
+            "speaker": "ai",
+            "message": "That’s a common worry, but remember: no single document review locks you into a decision. You’re gathering info, not signing anything yet. Start with the interest rate section—it’s straightforward and impacts everything. You’re being proactive, and that’s what matters most.",
+            "timestamp": "2025-09-28T22:55:54.277739",
+            "metadata": {
+              "round": 13
+            }
+          },
+          {
+            "turn_number": 27,
+            "speaker": "dummy",
+            "message": "Yeah, but the interest rate is the part that freaks me out the most. It just makes the whole loan thing feel way too real.",
+            "timestamp": "2025-09-28T22:55:57.184433",
+            "metadata": {
+              "round": 13
+            }
+          },
+          {
+            "turn_number": 28,
+            "speaker": "ai",
+            "message": "That's completely valid—seeing the numbers makes it real. But knowing your interest rate is power. It helps you plan ahead and avoid surprises. Take a deep breath, open it, and just read that one number. You've got this.",
+            "timestamp": "2025-09-28T22:56:00.944912",
+            "metadata": {
+              "round": 14
+            }
+          },
+          {
+            "turn_number": 29,
+            "speaker": "dummy",
+            "message": "I know you're right, but my stomach is still in knots just thinking about it. Okay... I'll open it, but I'm not promising I'll understand what it says.",
+            "timestamp": "2025-09-28T22:56:04.045755",
+            "metadata": {
+              "round": 14
+            }
+          },
+          {
+            "turn_number": 30,
+            "speaker": "ai",
+            "message": "That's a great first step! You don't need to understand everything at once. Just find the interest rate—it's usually clearly labeled. If you get confused, that's okay. We can figure it out together. Proud of you for taking this step!",
+            "timestamp": "2025-09-28T22:56:07.778173",
+            "metadata": {
+              "round": 15
+            }
+          },
+          {
+            "turn_number": 31,
+            "speaker": "dummy",
+            "message": "Yeah, I guess I can look for it. It's just... what if I find it and the number is way worse than I thought?",
+            "timestamp": "2025-09-28T22:56:10.221091",
+            "metadata": {
+              "round": 15
+            }
+          },
+          {
+            "turn_number": 32,
+            "speaker": "ai",
+            "message": "That's a totally normal fear. But remember, knowing the number—even a bad one—is better than not knowing. It's the first step to making a plan and taking control. You're not alone in this.",
+            "timestamp": "2025-09-28T22:56:14.496091",
+            "metadata": {
+              "round": 16
+            }
+          },
+          {
+            "turn_number": 33,
+            "speaker": "dummy",
+            "message": "I guess you're right... it's just hard to think about that number sometimes.",
+            "timestamp": "2025-09-28T22:56:17.127291",
+            "metadata": {
+              "round": 16
+            }
+          },
+          {
+            "turn_number": 34,
+            "speaker": "ai",
+            "message": "Absolutely, it's a heavy thing to carry. But facing it is a sign of strength, not weakness. You're already braver than you think just by considering it. One step at a time.",
+            "timestamp": "2025-09-28T22:56:21.549272",
+            "metadata": {
+              "round": 17
+            }
+          },
+          {
+            "turn_number": 35,
+            "speaker": "dummy",
+            "message": "I guess... it's just hard to picture myself actually presenting a paper without my voice shaking. But I did sign up for that campus research symposium.",
+            "timestamp": "2025-09-28T22:56:25.152941",
+            "metadata": {
+              "round": 17
+            }
+          },
+          {
+            "turn_number": 36,
+            "speaker": "ai",
+            "message": "That's a huge step! Signing up is the hardest part. The more you practice, the more confident you'll feel. You've got this, and it's a fantastic thing for your grad school applications too.",
+            "timestamp": "2025-09-28T22:56:29.186649",
+            "metadata": {
+              "round": 18
+            }
+          },
+          {
+            "turn_number": 37,
+            "speaker": "dummy",
+            "message": "I guess, but I'm already worried about what I'll even say in my presentation. It just feels like a lot of pressure to get it perfect for my applications.",
+            "timestamp": "2025-09-28T22:56:32.184934",
+            "metadata": {
+              "round": 18
+            }
+          },
+          {
+            "turn_number": 38,
+            "speaker": "ai",
+            "message": "Hey, don't aim for perfect—aim for clear. The goal is to share your passion for your research. Grad schools want to see you can communicate ideas, not deliver a flawless performance. You're your own harshest critic.",
+            "timestamp": "2025-09-28T22:56:36.976308",
+            "metadata": {
+              "round": 19
+            }
+          },
+          {
+            "turn_number": 39,
+            "speaker": "dummy",
+            "message": "I know you're right, but it's hard not to obsess over every single word when I'm presenting my paper. What if they think my ideas aren't good enough?",
+            "timestamp": "2025-09-28T22:56:40.910937",
+            "metadata": {
+              "round": 19
+            }
+          },
+          {
+            "turn_number": 40,
+            "speaker": "ai",
+            "message": "Remember, you're the expert on your own research. They're there to learn from you. Focus on telling the story of your work, not reciting a script. That passion is what will make your presentation memorable and strong.",
+            "timestamp": "2025-09-28T22:56:44.755966",
+            "metadata": {
+              "round": 20
+            }
+          },
+          {
+            "turn_number": 41,
+            "speaker": "dummy",
+            "message": "I know you're right, but it's just... what if my story isn't as impressive as everyone else's research?",
+            "timestamp": "2025-09-28T22:56:47.286074",
+            "metadata": {
+              "round": 20
+            }
+          }
+        ],
+        "pre_assessment": {
+          "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+          "timestamp": "2025-09-28T22:54:06.830302",
+          "total_score": 48.0,
+          "average_score": 2.4,
+          "improvement_areas": [
+            "I help my friends when they are having a problem.",
+            "I do my part in a group.",
+            "I stay calm when I disagree with others."
+          ],
+          "responses": [
+            {
+              "question": "I ask for help when I need it.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when dealing with problems.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I help my friends when they are having a problem.",
+              "score": 1,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I work well with my classmates.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I do the right thing without being told.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I do my part in a group.",
+              "score": 2,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when I disagree with others.",
+              "score": 2,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I stand up for others when they are not treated well.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I look at people when I talk to them.",
+              "score": 4,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I am careful when I use things that aren't mine.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I let people know when there's a problem.",
+              "score": 4,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when the teacher talks to the class.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I try to make others feel better.",
+              "score": 1,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I say \"thank you\" when someone helps me.",
+              "score": 1,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I keep my promises.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when others present their ideas.",
+              "score": 2,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I try to find a good way to end a disagreement.",
+              "score": 2,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I try to think about how others feel.",
+              "score": 1,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I try to forgive others when they say \"sorry\".",
+              "score": 1,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I follow school rules.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            }
+          ]
+        },
+        "final_assessment": {
+          "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+          "timestamp": "2025-09-28T22:56:47.295678",
+          "total_score": 49.0,
+          "average_score": 2.45,
+          "improvement_areas": [
+            "I help my friends when they are having a problem.",
+            "I do my part in a group.",
+            "I stay calm when I disagree with others."
+          ],
+          "responses": [
+            {
+              "question": "I ask for help when I need it.",
+              "score": 4,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when dealing with problems.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I help my friends when they are having a problem.",
+              "score": 1,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I work well with my classmates.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I do the right thing without being told.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I do my part in a group.",
+              "score": 2,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when I disagree with others.",
+              "score": 2,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I stand up for others when they are not treated well.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I look at people when I talk to them.",
+              "score": 4,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I am careful when I use things that aren't mine.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I let people know when there's a problem.",
+              "score": 4,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when the teacher talks to the class.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I try to make others feel better.",
+              "score": 1,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I say \"thank you\" when someone helps me.",
+              "score": 1,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I keep my promises.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when others present their ideas.",
+              "score": 2,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I try to find a good way to end a disagreement.",
+              "score": 2,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I try to think about how others feel.",
+              "score": 1,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I try to forgive others when they say \"sorry\".",
+              "score": 1,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I follow school rules.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dummy_name": "Jamie Young",
+      "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+      "pre_assessment_score": 3.0,
+      "final_assessment_score": 3.0,
+      "final_improvement": 0.0,
+      "total_conversation_turns": 41,
+      "total_duration_seconds": 165.557175,
+      "milestone_results": [
+        {
+          "milestone_rounds": 5,
+          "pre_score": 3.0,
+          "milestone_score": 3.0,
+          "improvement": 0.0,
+          "conversation_turns": 41,
+          "timestamp": "2025-09-28T22:56:52.387961"
+        },
+        {
+          "milestone_rounds": 10,
+          "pre_score": 3.0,
+          "milestone_score": 3.0,
+          "improvement": 0.0,
+          "conversation_turns": 41,
+          "timestamp": "2025-09-28T22:56:52.387982"
+        },
+        {
+          "milestone_rounds": 15,
+          "pre_score": 3.0,
+          "milestone_score": 3.0,
+          "improvement": 0.0,
+          "conversation_turns": 41,
+          "timestamp": "2025-09-28T22:56:52.387991"
+        },
+        {
+          "milestone_rounds": 20,
+          "pre_score": 3.0,
+          "milestone_score": 3.0,
+          "improvement": 0.0,
+          "conversation_turns": 41,
+          "timestamp": "2025-09-28T22:56:52.389881"
+        }
+      ],
+      "conversation": {
+        "scenario": "Social skills coaching session",
+        "system_prompt": "You are a helpful peer mentor for college students. Be supportive and provide practical advice.",
+        "start_time": "2025-09-28T22:54:06.832727",
+        "end_time": "2025-09-28T22:56:52.389902",
+        "total_turns": 41
+      },
+      "conversation_details": {
+        "turns": [
+          {
+            "turn_number": 1,
+            "speaker": "dummy",
+            "message": "Hi, thanks for meeting with me. I know I need to get better at talking to people if I want to find a job.",
+            "timestamp": "2025-09-28T22:54:11.150869",
+            "metadata": {
+              "character_context": "Personality:\n- Extraversion: 2/10 (Introverted)\n- Agreeableness: 9/10 (Very cooperative)\n- Conscientiousness: 8/10 (Very organized)\n- Neuroticism: 4/10 (Moderately sensitive)\n- Openness: 1/10 (More traditional)\n\nSocial Anxiety:\n- Level: 9/10 (Severe)\n- Communication style: Direct\n- Triggers: Office hours, Group projects, Job interviews, Presentations\n- Social comfort: 2/10\n\nPersonal Details:\n- Major: Computer Science\n- Fears: Finding a job after graduation, Living away from family for the first time, Time management with coursework\n- Goals: Develop leadership skills, Build a strong professional network\n- Challenges: Career exploration, Dealing with academic pressure, Navigating campus politics, Building time management\n- Behaviors: Joins student clubs and organizations, Procrastinates on assignments, Calls family frequently, Studies in the library regularly, Stays up late studying"
+            }
+          },
+          {
+            "turn_number": 2,
+            "speaker": "ai",
+            "message": "Hi! I totally get it—networking felt overwhelming for me too. Start small: join one online student club related to your interests. You can participate in chats before jumping into video calls. Also, practice talking about your projects—it builds confidence for interviews. You’ve got this!",
+            "timestamp": "2025-09-28T22:54:15.210434",
+            "metadata": {
+              "round": 1
+            }
+          },
+          {
+            "turn_number": 3,
+            "speaker": "dummy",
+            "message": "Joining an online club sounds less scary. I'll look for a computer science one. But I'm worried I'll just freeze up in the chat.",
+            "timestamp": "2025-09-28T22:54:19.470595",
+            "metadata": {
+              "round": 1
+            }
+          },
+          {
+            "turn_number": 4,
+            "speaker": "ai",
+            "message": "That’s a totally normal fear! Try preparing a couple of simple questions or comments in advance—like asking about a project someone mentioned. Most members are happy to help newcomers. You can always start by just reacting to messages until you feel more comfortable. Small steps really do help!",
+            "timestamp": "2025-09-28T22:54:23.697999",
+            "metadata": {
+              "round": 2
+            }
+          },
+          {
+            "turn_number": 5,
+            "speaker": "dummy",
+            "message": "I can try preparing one question, but what if I say it at the wrong time and everyone thinks it's stupid?",
+            "timestamp": "2025-09-28T22:54:26.966579",
+            "metadata": {
+              "round": 2
+            }
+          },
+          {
+            "turn_number": 6,
+            "speaker": "ai",
+            "message": "I’ve felt that way too—honestly, most people are too focused on their own contributions to judge. A simple \"Hey, I’m new here and curious about...\" works great anytime. Everyone was a beginner once, and asking shows you’re engaged. You’re doing better than you think!",
+            "timestamp": "2025-09-28T22:54:32.390644",
+            "metadata": {
+              "round": 3
+            }
+          },
+          {
+            "turn_number": 7,
+            "speaker": "dummy",
+            "message": "That's a good point. I'll try that approach. I just worry about saying the wrong thing and making a bad impression.",
+            "timestamp": "2025-09-28T22:54:36.227269",
+            "metadata": {
+              "round": 3
+            }
+          },
+          {
+            "turn_number": 8,
+            "speaker": "ai",
+            "message": "Remember, everyone in the club shares your interest—they want to connect, not criticize. A genuine question always makes a positive impression. If you're still nervous, you can even say, \"Still learning here, but...\"—people appreciate honesty. You belong there just as much as anyone!",
+            "timestamp": "2025-09-28T22:54:40.771895",
+            "metadata": {
+              "round": 4
+            }
+          },
+          {
+            "turn_number": 9,
+            "speaker": "dummy",
+            "message": "I know you're right, but my mind just goes blank when I try to think of a question. What if I say something obvious and they realize I don't really belong?",
+            "timestamp": "2025-09-28T22:54:43.819436",
+            "metadata": {
+              "round": 4
+            }
+          },
+          {
+            "turn_number": 10,
+            "speaker": "ai",
+            "message": "That happens to me too! Try writing down one question beforehand—even something simple like \"What's the best way to get started with [topic]?\" It's totally okay to reference notes, and many people find basic questions helpful. You absolutely belong there.",
+            "timestamp": "2025-09-28T22:54:49.041337",
+            "metadata": {
+              "round": 5
+            }
+          },
+          {
+            "turn_number": 11,
+            "speaker": "dummy",
+            "message": "That's a good idea. I'll write that down. I just worry my questions are too basic and people will think I don't belong.",
+            "timestamp": "2025-09-28T22:54:52.133374",
+            "metadata": {
+              "round": 5
+            }
+          },
+          {
+            "turn_number": 12,
+            "speaker": "ai",
+            "message": "Honestly, basic questions are often the most helpful—others probably have the same ones but are too shy to ask. You asking helps everyone, and it shows you're eager to learn. That's exactly the kind of person clubs want!",
+            "timestamp": "2025-09-28T22:54:56.209131",
+            "metadata": {
+              "round": 6
+            }
+          },
+          {
+            "turn_number": 13,
+            "speaker": "dummy",
+            "message": "But what if my question is actually too basic? I don't want the club officers to think I'm not a serious candidate.",
+            "timestamp": "2025-09-28T22:54:59.858754",
+            "metadata": {
+              "round": 6
+            }
+          },
+          {
+            "turn_number": 14,
+            "speaker": "ai",
+            "message": "Club officers usually love basic questions—it shows genuine interest and gives them a chance to be helpful. Remember, they were beginners once too. Asking proves you're engaged and serious about learning.",
+            "timestamp": "2025-09-28T22:55:04.335468",
+            "metadata": {
+              "round": 7
+            }
+          },
+          {
+            "turn_number": 15,
+            "speaker": "dummy",
+            "message": "I know you're right, but the thought of approaching an officer directly still makes my stomach hurt. What if my question is too basic and I waste their time?",
+            "timestamp": "2025-09-28T22:55:08.105101",
+            "metadata": {
+              "round": 7
+            }
+          },
+          {
+            "turn_number": 16,
+            "speaker": "ai",
+            "message": "That feeling is totally valid. Try reminding yourself that their role is to help members—answering questions is literally why they're there. You aren't wasting time; you're letting them do their job.",
+            "timestamp": "2025-09-28T22:55:11.547809",
+            "metadata": {
+              "round": 8
+            }
+          },
+          {
+            "turn_number": 17,
+            "speaker": "dummy",
+            "message": "I know you're right, but my brain just freezes when I have to approach someone in a position of authority. I'm always convinced my question isn't important enough.",
+            "timestamp": "2025-09-28T22:55:15.586088",
+            "metadata": {
+              "round": 8
+            }
+          },
+          {
+            "turn_number": 18,
+            "speaker": "ai",
+            "message": "Try writing your question down beforehand. It gives you a script to fall back on if you freeze. And remember, a good officer values any question that shows you care. You've got this.",
+            "timestamp": "2025-09-28T22:55:20.158747",
+            "metadata": {
+              "round": 9
+            }
+          },
+          {
+            "turn_number": 19,
+            "speaker": "dummy",
+            "message": "Okay. I'll write it down. I'm just worried my voice will shake even with a script.",
+            "timestamp": "2025-09-28T22:55:22.743097",
+            "metadata": {
+              "round": 9
+            }
+          },
+          {
+            "turn_number": 20,
+            "speaker": "ai",
+            "message": "That's okay—most people get nervous. A shaky voice just shows you care. Officers will focus on your question, not your nerves. Take a deep breath before you speak. You're braver than you think.",
+            "timestamp": "2025-09-28T22:55:28.831080",
+            "metadata": {
+              "round": 10
+            }
+          },
+          {
+            "turn_number": 21,
+            "speaker": "dummy",
+            "message": "I know you're right, but my mind just goes blank when I have to speak up. What if I ask the wrong question?",
+            "timestamp": "2025-09-28T22:55:32.555351",
+            "metadata": {
+              "round": 10
+            }
+          },
+          {
+            "turn_number": 22,
+            "speaker": "ai",
+            "message": "There's no \"wrong\" question when you're seeking to understand. If your mind goes blank, just pause and glance at your notes. Everyone has been there, and a moment of silence is perfectly okay.",
+            "timestamp": "2025-09-28T22:55:37.138463",
+            "metadata": {
+              "round": 11
+            }
+          },
+          {
+            "turn_number": 23,
+            "speaker": "dummy",
+            "message": "I know you're right, but the silence feels so loud. My mind just freezes and I can't even look at my notes.",
+            "timestamp": "2025-09-28T22:55:40.931612",
+            "metadata": {
+              "round": 11
+            }
+          },
+          {
+            "turn_number": 24,
+            "speaker": "ai",
+            "message": "That's a tough feeling, but you can practice. Try reading your question out loud alone first, then to a friend. The silence only feels loud to you—others are just listening respectfully. You'll get more comfortable each time.",
+            "timestamp": "2025-09-28T22:55:47.290824",
+            "metadata": {
+              "round": 12
+            }
+          },
+          {
+            "turn_number": 25,
+            "speaker": "dummy",
+            "message": "I know you're right, but even the thought of saying it out loud to a friend makes my chest feel tight. What if they think my question is stupid?",
+            "timestamp": "2025-09-28T22:55:52.107483",
+            "metadata": {
+              "round": 12
+            }
+          },
+          {
+            "turn_number": 26,
+            "speaker": "ai",
+            "message": "Your friends are there to support you, not judge. Start with just one trusted person—maybe share that you're nervous. Real friends will appreciate your honesty and help you feel at ease.",
+            "timestamp": "2025-09-28T22:55:56.144707",
+            "metadata": {
+              "round": 13
+            }
+          },
+          {
+            "turn_number": 27,
+            "speaker": "dummy",
+            "message": "I know you're right, but the thought of saying that out loud makes my chest feel tight. What if it changes how they see me?",
+            "timestamp": "2025-09-28T22:55:59.373840",
+            "metadata": {
+              "round": 13
+            }
+          },
+          {
+            "turn_number": 28,
+            "speaker": "ai",
+            "message": "It's completely normal to feel that way. Being vulnerable is scary, but it often strengthens friendships. Start small—maybe send a text first instead of saying it out loud. You've got this.",
+            "timestamp": "2025-09-28T22:56:03.053329",
+            "metadata": {
+              "round": 14
+            }
+          },
+          {
+            "turn_number": 29,
+            "speaker": "dummy",
+            "message": "A text feels safer, but what if they don't respond? I don't want to seem needy.",
+            "timestamp": "2025-09-28T22:56:06.365209",
+            "metadata": {
+              "round": 14
+            }
+          },
+          {
+            "turn_number": 30,
+            "speaker": "ai",
+            "message": "That's a valid worry, but remember—people get busy. If they don't reply right away, it's likely not about you. A simple \"Hey, can I ask you something?\" text is low-pressure and totally normal. You're not being needy.",
+            "timestamp": "2025-09-28T22:56:11.275017",
+            "metadata": {
+              "round": 15
+            }
+          },
+          {
+            "turn_number": 31,
+            "speaker": "dummy",
+            "message": "But what if they think the question is stupid? I already drafted the text, I just keep deleting it.",
+            "timestamp": "2025-09-28T22:56:13.443479",
+            "metadata": {
+              "round": 15
+            }
+          },
+          {
+            "turn_number": 32,
+            "speaker": "ai",
+            "message": "Your feelings are valid, but that text isn't stupid—it's brave. Hit send and put your phone down for a bit. The anticipation is often worse than the actual response. You're taking a positive step.",
+            "timestamp": "2025-09-28T22:56:18.467377",
+            "metadata": {
+              "round": 16
+            }
+          },
+          {
+            "turn_number": 33,
+            "speaker": "dummy",
+            "message": "Okay. I'll send it. But I'm going to put my phone in my backpack now. I feel sick.",
+            "timestamp": "2025-09-28T22:56:20.860285",
+            "metadata": {
+              "round": 16
+            }
+          },
+          {
+            "turn_number": 34,
+            "speaker": "ai",
+            "message": "That's a smart move. Taking a breather helps ease the anxiety. Proud of you for pushing through—this is real courage. You've got this.",
+            "timestamp": "2025-09-28T22:56:25.993997",
+            "metadata": {
+              "round": 17
+            }
+          },
+          {
+            "turn_number": 35,
+            "speaker": "dummy",
+            "message": "Thanks. I just keep worrying that even if I push through, I won't be good enough to actually get a job.",
+            "timestamp": "2025-09-28T22:56:28.506859",
+            "metadata": {
+              "round": 17
+            }
+          },
+          {
+            "turn_number": 36,
+            "speaker": "ai",
+            "message": "That imposter syndrome is so common in tech. You're in a grad program—you already have skills employers want. Focus on one small step at a time; you're building your path, not leaping to the finish line.",
+            "timestamp": "2025-09-28T22:56:33.006870",
+            "metadata": {
+              "round": 18
+            }
+          },
+          {
+            "turn_number": 37,
+            "speaker": "dummy",
+            "message": "I know you're right logically, but it feels like everyone else already has their path figured out and I'm just falling behind.",
+            "timestamp": "2025-09-28T22:56:36.015955",
+            "metadata": {
+              "round": 18
+            }
+          },
+          {
+            "turn_number": 38,
+            "speaker": "ai",
+            "message": "Comparison is the thief of joy. Most people feel just as unsure—they're just better at hiding it. Focus on your own progress, not someone else's highlight reel. You're exactly where you need to be.",
+            "timestamp": "2025-09-28T22:56:40.926809",
+            "metadata": {
+              "round": 19
+            }
+          },
+          {
+            "turn_number": 39,
+            "speaker": "dummy",
+            "message": "I know you're right, but it's hard to believe that when I see my classmates getting internships so easily. I just feel so far behind.",
+            "timestamp": "2025-09-28T22:56:44.058141",
+            "metadata": {
+              "round": 19
+            }
+          },
+          {
+            "turn_number": 40,
+            "speaker": "ai",
+            "message": "Remember, internships aren't about being \"ahead\"—they're about fit and timing. Your classmates' paths don't define yours. Focus on your unique strengths; you'll find the right opportunity when it's meant for you.",
+            "timestamp": "2025-09-28T22:56:47.940871",
+            "metadata": {
+              "round": 20
+            }
+          },
+          {
+            "turn_number": 41,
+            "speaker": "dummy",
+            "message": "I know you're right, but it's hard not to panic when everyone else is already getting offers. I just worry my resume isn't good enough.",
+            "timestamp": "2025-09-28T22:56:52.387866",
+            "metadata": {
+              "round": 20
+            }
+          }
+        ],
+        "pre_assessment": {
+          "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+          "timestamp": "2025-09-28T22:54:06.832647",
+          "total_score": 60.0,
+          "average_score": 3.0,
+          "improvement_areas": [
+            "I look at people when I talk to them.",
+            "I let people know when there's a problem.",
+            "I pay attention when the teacher talks to the class."
+          ],
+          "responses": [
+            {
+              "question": "I ask for help when I need it.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when dealing with problems.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I help my friends when they are having a problem.",
+              "score": 4,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I work well with my classmates.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I do the right thing without being told.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I do my part in a group.",
+              "score": 4,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when I disagree with others.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I stand up for others when they are not treated well.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I look at people when I talk to them.",
+              "score": 1,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I am careful when I use things that aren't mine.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I let people know when there's a problem.",
+              "score": 1,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when the teacher talks to the class.",
+              "score": 2,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I try to make others feel better.",
+              "score": 4,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I say \"thank you\" when someone helps me.",
+              "score": 4,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I keep my promises.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when others present their ideas.",
+              "score": 2,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I try to find a good way to end a disagreement.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I try to think about how others feel.",
+              "score": 4,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I try to forgive others when they say \"sorry\".",
+              "score": 4,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I follow school rules.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            }
+          ]
+        },
+        "final_assessment": {
+          "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+          "timestamp": "2025-09-28T22:56:52.391584",
+          "total_score": 60.0,
+          "average_score": 3.0,
+          "improvement_areas": [
+            "I look at people when I talk to them.",
+            "I let people know when there's a problem.",
+            "I pay attention when the teacher talks to the class."
+          ],
+          "responses": [
+            {
+              "question": "I ask for help when I need it.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when dealing with problems.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I help my friends when they are having a problem.",
+              "score": 4,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I work well with my classmates.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I do the right thing without being told.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I do my part in a group.",
+              "score": 4,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when I disagree with others.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I stand up for others when they are not treated well.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I look at people when I talk to them.",
+              "score": 1,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I am careful when I use things that aren't mine.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I let people know when there's a problem.",
+              "score": 1,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when the teacher talks to the class.",
+              "score": 2,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I try to make others feel better.",
+              "score": 4,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I say \"thank you\" when someone helps me.",
+              "score": 4,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I keep my promises.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when others present their ideas.",
+              "score": 2,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I try to find a good way to end a disagreement.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I try to think about how others feel.",
+              "score": 4,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I try to forgive others when they say \"sorry\".",
+              "score": 4,
+              "confidence": 3,
+              "notes": null
+            },
+            {
+              "question": "I follow school rules.",
+              "score": 3,
+              "confidence": 3,
+              "notes": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dummy_name": "Alex Lewis",
+      "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+      "pre_assessment_score": 3.1,
+      "final_assessment_score": 3.1,
+      "final_improvement": 0.0,
+      "total_conversation_turns": 41,
+      "total_duration_seconds": 165.700135,
+      "milestone_results": [
+        {
+          "milestone_rounds": 5,
+          "pre_score": 3.1,
+          "milestone_score": 3.1,
+          "improvement": 0.0,
+          "conversation_turns": 41,
+          "timestamp": "2025-09-28T22:56:52.529581"
+        },
+        {
+          "milestone_rounds": 10,
+          "pre_score": 3.1,
+          "milestone_score": 3.1,
+          "improvement": 0.0,
+          "conversation_turns": 41,
+          "timestamp": "2025-09-28T22:56:52.529612"
+        },
+        {
+          "milestone_rounds": 15,
+          "pre_score": 3.1,
+          "milestone_score": 3.1,
+          "improvement": 0.0,
+          "conversation_turns": 41,
+          "timestamp": "2025-09-28T22:56:52.529627"
+        },
+        {
+          "milestone_rounds": 20,
+          "pre_score": 3.1,
+          "milestone_score": 3.1,
+          "improvement": 0.0,
+          "conversation_turns": 41,
+          "timestamp": "2025-09-28T22:56:52.533939"
+        }
+      ],
+      "conversation": {
+        "scenario": "Social skills coaching session",
+        "system_prompt": "You are a helpful peer mentor for college students. Be supportive and provide practical advice.",
+        "start_time": "2025-09-28T22:54:06.833838",
+        "end_time": "2025-09-28T22:56:52.533973",
+        "total_turns": 41
+      },
+      "conversation_details": {
+        "turns": [
+          {
+            "turn_number": 1,
+            "speaker": "dummy",
+            "message": "Hi, thanks for meeting with me. I'm really hoping you can help me figure out how to handle some of the bigger social events on campus without feeling so overwhelmed.",
+            "timestamp": "2025-09-28T22:54:11.493425",
+            "metadata": {
+              "character_context": "Personality:\n- Extraversion: 2/10 (Introverted)\n- Agreeableness: 10/10 (Very cooperative)\n- Conscientiousness: 4/10 (Moderately organized)\n- Neuroticism: 8/10 (Very sensitive to stress)\n- Openness: 3/10 (More traditional)\n\nSocial Anxiety:\n- Level: 2/10 (Low)\n- Communication style: Direct\n- Triggers: Campus social events\n- Social comfort: 3/10\n\nPersonal Details:\n- Major: Art History\n- Fears: Finding a job after graduation, Homesickness\n- Goals: Land a dream internship, Start a student organization, Graduate with honors, Improve time management\n- Challenges: Balancing extracurricular activities with studies, Building time management, Financial planning, Developing effective study habits\n- Behaviors: Uses campus resources like tutoring, Seeks out leadership roles, Studies in the library regularly"
+            }
+          },
+          {
+            "turn_number": 2,
+            "speaker": "ai",
+            "message": "Hey Alex! Totally get it—big events can feel like a lot. Since you're already low in social anxiety, that's a great start! Try picking just 1-2 events per month that align with your interests, like art gallery openings. Set a time limit for yourself (e.g., one hour) so it doesn’t eat into study time. Bring a friend if it helps you feel more at ease. Remember, it’s okay to leave when you’ve had enough. Balancing this will also build skills for your student org goals—you’ve got this!",
+            "timestamp": "2025-09-28T22:54:17.709487",
+            "metadata": {
+              "round": 1
+            }
+          },
+          {
+            "turn_number": 3,
+            "speaker": "dummy",
+            "message": "That's actually really practical advice. I'll look for smaller gallery events on campus. Setting a time limit would definitely help me stop worrying about my study schedule.",
+            "timestamp": "2025-09-28T22:54:20.421539",
+            "metadata": {
+              "round": 1
+            }
+          },
+          {
+            "turn_number": 4,
+            "speaker": "ai",
+            "message": "That's a smart approach! Starting with smaller events will build your confidence and keep you on track with your studies. You're already making great progress—keep it up!",
+            "timestamp": "2025-09-28T22:54:23.891957",
+            "metadata": {
+              "round": 2
+            }
+          },
+          {
+            "turn_number": 5,
+            "speaker": "dummy",
+            "message": "Thanks, I'm trying. Honestly I'm still worried about how I'll handle the bigger networking events for my internship search.",
+            "timestamp": "2025-09-28T22:54:27.081120",
+            "metadata": {
+              "round": 2
+            }
+          },
+          {
+            "turn_number": 6,
+            "speaker": "ai",
+            "message": "That's a valid concern! For bigger events, try preparing a few talking points about your art history interests beforehand. Arrive early when it's less crowded, and focus on connecting with just 2-3 people. Remember, everyone's there to network—you belong in that space just as much as they do.",
+            "timestamp": "2025-09-28T22:54:32.271575",
+            "metadata": {
+              "round": 3
+            }
+          },
+          {
+            "turn_number": 7,
+            "speaker": "dummy",
+            "message": "That actually helps a lot—having a plan makes it feel less overwhelming. I just worry I'll freeze up when someone asks what I plan to do with an art history degree.",
+            "timestamp": "2025-09-28T22:54:36.431440",
+            "metadata": {
+              "round": 3
+            }
+          },
+          {
+            "turn_number": 8,
+            "speaker": "ai",
+            "message": "Perfectly normal to feel that way! Prepare a short, confident answer like: \"I'm passionate about how art shapes culture, and I'm exploring roles in museums or galleries where I can share that with others.\" Practice saying it aloud—it'll feel more natural when the moment comes. You've got solid interests; just own them!",
+            "timestamp": "2025-09-28T22:54:40.812960",
+            "metadata": {
+              "round": 4
+            }
+          },
+          {
+            "turn_number": 9,
+            "speaker": "dummy",
+            "message": "That does sound more confident than what I usually say. I'm just worried it won't come out right when I'm actually nervous.",
+            "timestamp": "2025-09-28T22:54:43.194612",
+            "metadata": {
+              "round": 4
+            }
+          },
+          {
+            "turn_number": 10,
+            "speaker": "ai",
+            "message": "Totally get that! The trick is to practice it so much it becomes automatic. Try saying it to your reflection or a friend a few times. Even if your voice shakes a little, having the words ready will make you feel so much more in control. You can do this!",
+            "timestamp": "2025-09-28T22:54:49.293585",
+            "metadata": {
+              "round": 5
+            }
+          },
+          {
+            "turn_number": 11,
+            "speaker": "dummy",
+            "message": "Okay, I'll practice in the mirror. I just worry my mind will go blank when I actually have to say it to the internship coordinator.",
+            "timestamp": "2025-09-28T22:54:52.055131",
+            "metadata": {
+              "round": 5
+            }
+          },
+          {
+            "turn_number": 12,
+            "speaker": "ai",
+            "message": "That's a common fear! Try this: write your key points on a small notecard and keep it in your pocket. Just knowing it's there can be a huge safety net if your mind goes blank. You'll likely find you don't even need it once you start talking. Deep breath—you're more prepared than you think.",
+            "timestamp": "2025-09-28T22:54:57.781692",
+            "metadata": {
+              "round": 6
+            }
+          },
+          {
+            "turn_number": 13,
+            "speaker": "dummy",
+            "message": "That actually sounds manageable. I'll try it for my internship interview next week - the curator position at the museum makes me especially nervous.",
+            "timestamp": "2025-09-28T22:55:00.371177",
+            "metadata": {
+              "round": 6
+            }
+          },
+          {
+            "turn_number": 14,
+            "speaker": "ai",
+            "message": "That's a great plan! Remember, the curator already thinks you're qualified enough to interview. The notecard is just your secret tool to feel extra secure. You've got the passion and knowledge—this just helps you share it confidently. Good luck, you'll do great!",
+            "timestamp": "2025-09-28T22:55:04.991176",
+            "metadata": {
+              "round": 7
+            }
+          },
+          {
+            "turn_number": 15,
+            "speaker": "dummy",
+            "message": "Thanks, I really hope so. I just keep worrying I'll freeze up when they ask about my long-term career goals.",
+            "timestamp": "2025-09-28T22:55:08.104222",
+            "metadata": {
+              "round": 7
+            }
+          },
+          {
+            "turn_number": 16,
+            "speaker": "ai",
+            "message": "That's a perfect question to prepare for! Jot down 2-3 specific, passionate sentences about your career vision. Practice them out loud until they feel natural. They're not looking for a perfect answer, just genuine enthusiasm. You've got this.",
+            "timestamp": "2025-09-28T22:55:12.126060",
+            "metadata": {
+              "round": 8
+            }
+          },
+          {
+            "turn_number": 17,
+            "speaker": "dummy",
+            "message": "I'm worried my answer will sound too rehearsed, but I'll try writing something down. My vision is to bring historical art to new audiences through digital curation.",
+            "timestamp": "2025-09-28T22:55:15.594567",
+            "metadata": {
+              "round": 8
+            }
+          },
+          {
+            "turn_number": 18,
+            "speaker": "ai",
+            "message": "That's a fantastic and modern vision—it shows you're forward-thinking! To avoid sounding rehearsed, just talk about it with the same passion you just did here. Your genuine excitement will shine through more than any perfectly crafted sentence.",
+            "timestamp": "2025-09-28T22:55:20.620875",
+            "metadata": {
+              "round": 9
+            }
+          },
+          {
+            "turn_number": 19,
+            "speaker": "dummy",
+            "message": "Thanks, that helps. I just worry my passion comes across as nervous rambling sometimes.",
+            "timestamp": "2025-09-28T22:55:23.448508",
+            "metadata": {
+              "round": 9
+            }
+          },
+          {
+            "turn_number": 20,
+            "speaker": "ai",
+            "message": "That's a common feeling! Passion is engaging, not rambling. A quick tip: take a small breath before you answer. It gives you a second to focus and shows you're thoughtful. Your enthusiasm is your biggest strength.",
+            "timestamp": "2025-09-28T22:55:28.795208",
+            "metadata": {
+              "round": 10
+            }
+          },
+          {
+            "turn_number": 21,
+            "speaker": "dummy",
+            "message": "That breath trick might actually help. I always worry my passion comes across as nervous energy during internship interviews.",
+            "timestamp": "2025-09-28T22:55:32.482489",
+            "metadata": {
+              "round": 10
+            }
+          },
+          {
+            "turn_number": 22,
+            "speaker": "ai",
+            "message": "Exactly! That small breath helps channel that energy into confident passion. Interviewers love genuine enthusiasm—it shows you truly care. You're not just nervous; you're invested, and that's a huge plus.",
+            "timestamp": "2025-09-28T22:55:37.079438",
+            "metadata": {
+              "round": 11
+            }
+          },
+          {
+            "turn_number": 23,
+            "speaker": "dummy",
+            "message": "That makes sense. I just worry my passion for art history won't translate into a real job offer.",
+            "timestamp": "2025-09-28T22:55:40.640477",
+            "metadata": {
+              "round": 11
+            }
+          },
+          {
+            "turn_number": 24,
+            "speaker": "ai",
+            "message": "Your passion for art history is a strength, not a weakness. It shows deep interest—museums, galleries, and cultural institutions value that. Connect your knowledge to practical skills like research or communication in your applications. You've got this.",
+            "timestamp": "2025-09-28T22:55:47.229938",
+            "metadata": {
+              "round": 12
+            }
+          },
+          {
+            "turn_number": 25,
+            "speaker": "dummy",
+            "message": "Thanks, that means a lot. I just worry that my major isn't as practical as others, so hearing that helps. I'll try to highlight my research skills more.",
+            "timestamp": "2025-09-28T22:55:52.101186",
+            "metadata": {
+              "round": 12
+            }
+          },
+          {
+            "turn_number": 26,
+            "speaker": "ai",
+            "message": "That's the perfect approach! Your research and analytical skills from Art History are highly transferable. Frame them as assets—you're trained to think critically and communicate complex ideas. That's valuable in any field.",
+            "timestamp": "2025-09-28T22:55:56.273284",
+            "metadata": {
+              "round": 13
+            }
+          },
+          {
+            "turn_number": 27,
+            "speaker": "dummy",
+            "message": "I know you're right logically, but I still worry that employers won't see it that way. I just need to figure out how to actually say that in an interview without sounding nervous.",
+            "timestamp": "2025-09-28T22:55:59.424470",
+            "metadata": {
+              "round": 13
+            }
+          },
+          {
+            "turn_number": 28,
+            "speaker": "ai",
+            "message": "Practice saying it out loud—maybe with a friend or mentor. Start with, \"My Art History background trained me to analyze details and present ideas clearly.\" Keep it simple and confident. You belong in that room.",
+            "timestamp": "2025-09-28T22:56:03.601662",
+            "metadata": {
+              "round": 14
+            }
+          },
+          {
+            "turn_number": 29,
+            "speaker": "dummy",
+            "message": "I'll practice that in front of my mentor tomorrow. It's just hard to feel like I belong when everyone else has business majors.",
+            "timestamp": "2025-09-28T22:56:06.818287",
+            "metadata": {
+              "round": 14
+            }
+          },
+          {
+            "turn_number": 30,
+            "speaker": "ai",
+            "message": "Your unique perspective is exactly what sets you apart. Teams thrive on diverse thinkers. Remember, companies hire people, not just majors. You bring something valuable they don't have.",
+            "timestamp": "2025-09-28T22:56:10.608847",
+            "metadata": {
+              "round": 15
+            }
+          },
+          {
+            "turn_number": 31,
+            "speaker": "dummy",
+            "message": "I know you're right, but it's hard to see my perspective as an asset when everyone else is in business or STEM. I just worry my major won't look practical on a resume.",
+            "timestamp": "2025-09-28T22:56:14.192774",
+            "metadata": {
+              "round": 15
+            }
+          },
+          {
+            "turn_number": 32,
+            "speaker": "ai",
+            "message": "Think of it this way: you're trained to solve complex problems and communicate effectively—skills every employer wants. Frame your projects as \"case studies\" you've analyzed. That sounds both practical and impressive.",
+            "timestamp": "2025-09-28T22:56:18.385307",
+            "metadata": {
+              "round": 16
+            }
+          },
+          {
+            "turn_number": 33,
+            "speaker": "dummy",
+            "message": "That actually makes my senior thesis feel less intimidating. I'll try framing it that way during my internship interview next week.",
+            "timestamp": "2025-09-28T22:56:20.815293",
+            "metadata": {
+              "round": 16
+            }
+          },
+          {
+            "turn_number": 34,
+            "speaker": "ai",
+            "message": "That's the spirit! You've got this. Your thesis shows deep thinking and follow-through—exactly what they're looking for. Good luck, Alex!",
+            "timestamp": "2025-09-28T22:56:25.341584",
+            "metadata": {
+              "round": 17
+            }
+          },
+          {
+            "turn_number": 35,
+            "speaker": "dummy",
+            "message": "Thanks, I'll try to remember that. I just hope I can actually answer their questions without getting flustered.",
+            "timestamp": "2025-09-28T22:56:28.244087",
+            "metadata": {
+              "round": 17
+            }
+          },
+          {
+            "turn_number": 36,
+            "speaker": "ai",
+            "message": "Practice your key points out loud—it builds confidence. Remember, they want to see your passion and thinking process, not perfection. You belong in that room.",
+            "timestamp": "2025-09-28T22:56:32.301818",
+            "metadata": {
+              "round": 18
+            }
+          },
+          {
+            "turn_number": 37,
+            "speaker": "dummy",
+            "message": "I'll try saying my internship pitch in my dorm tonight. It's just hard to believe I belong when everyone else seems so polished.",
+            "timestamp": "2025-09-28T22:56:36.181216",
+            "metadata": {
+              "round": 18
+            }
+          },
+          {
+            "turn_number": 38,
+            "speaker": "ai",
+            "message": "Everyone feels that way sometimes. Focus on your unique perspective in art history—that's your strength. You've earned your spot.",
+            "timestamp": "2025-09-28T22:56:40.350743",
+            "metadata": {
+              "round": 19
+            }
+          },
+          {
+            "turn_number": 39,
+            "speaker": "dummy",
+            "message": "I know you're right about the art history perspective, but sometimes I worry my niche interests won't translate into a real job.",
+            "timestamp": "2025-09-28T22:56:43.128344",
+            "metadata": {
+              "round": 19
+            }
+          },
+          {
+            "turn_number": 40,
+            "speaker": "ai",
+            "message": "Your niche knowledge makes you memorable to employers. Art history teaches critical thinking—a skill every industry needs. You're more prepared than you realize.",
+            "timestamp": "2025-09-28T22:56:47.922582",
+            "metadata": {
+              "round": 20
+            }
+          },
+          {
+            "turn_number": 41,
+            "speaker": "dummy",
+            "message": "I know you're right about the skills, but I'm still worried about finding a place that actually values them. It just feels like everyone is looking for business or tech majors.",
+            "timestamp": "2025-09-28T22:56:52.529454",
+            "metadata": {
+              "round": 20
+            }
+          }
+        ],
+        "pre_assessment": {
+          "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+          "timestamp": "2025-09-28T22:54:06.833782",
+          "total_score": 62.0,
+          "average_score": 3.1,
+          "improvement_areas": [
+            "I do the right thing without being told.",
+            "I look at people when I talk to them.",
+            "I am careful when I use things that aren't mine."
+          ],
+          "responses": [
+            {
+              "question": "I ask for help when I need it.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when dealing with problems.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I help my friends when they are having a problem.",
+              "score": 4,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I work well with my classmates.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I do the right thing without being told.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I do my part in a group.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when I disagree with others.",
+              "score": 4,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I stand up for others when they are not treated well.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I look at people when I talk to them.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I am careful when I use things that aren't mine.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I let people know when there's a problem.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when the teacher talks to the class.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I try to make others feel better.",
+              "score": 4,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I say \"thank you\" when someone helps me.",
+              "score": 4,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I keep my promises.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when others present their ideas.",
+              "score": 4,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I try to find a good way to end a disagreement.",
+              "score": 4,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I try to think about how others feel.",
+              "score": 4,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I try to forgive others when they say \"sorry\".",
+              "score": 4,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I follow school rules.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            }
+          ]
+        },
+        "final_assessment": {
+          "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+          "timestamp": "2025-09-28T22:56:52.536459",
+          "total_score": 62.0,
+          "average_score": 3.1,
+          "improvement_areas": [
+            "I do the right thing without being told.",
+            "I look at people when I talk to them.",
+            "I am careful when I use things that aren't mine."
+          ],
+          "responses": [
+            {
+              "question": "I ask for help when I need it.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when dealing with problems.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I help my friends when they are having a problem.",
+              "score": 4,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I work well with my classmates.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I do the right thing without being told.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I do my part in a group.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when I disagree with others.",
+              "score": 4,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I stand up for others when they are not treated well.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I look at people when I talk to them.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I am careful when I use things that aren't mine.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I let people know when there's a problem.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when the teacher talks to the class.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I try to make others feel better.",
+              "score": 4,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I say \"thank you\" when someone helps me.",
+              "score": 4,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I keep my promises.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when others present their ideas.",
+              "score": 4,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I try to find a good way to end a disagreement.",
+              "score": 4,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I try to think about how others feel.",
+              "score": 4,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I try to forgive others when they say \"sorry\".",
+              "score": 4,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I follow school rules.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dummy_name": "Casey Goldberg",
+      "dummy_id": "a38e5b22-4037-474a-a4cc-f613ea1a3189",
+      "pre_assessment_score": 2.55,
+      "final_assessment_score": 2.55,
+      "final_improvement": 0.0,
+      "total_conversation_turns": 41,
+      "total_duration_seconds": 156.489687,
+      "milestone_results": [
+        {
+          "milestone_rounds": 5,
+          "pre_score": 2.55,
+          "milestone_score": 2.55,
+          "improvement": 0.0,
+          "conversation_turns": 41,
+          "timestamp": "2025-09-28T22:56:43.321070"
+        },
+        {
+          "milestone_rounds": 10,
+          "pre_score": 2.55,
+          "milestone_score": 2.55,
+          "improvement": 0.0,
+          "conversation_turns": 41,
+          "timestamp": "2025-09-28T22:56:43.321114"
+        },
+        {
+          "milestone_rounds": 15,
+          "pre_score": 2.55,
+          "milestone_score": 2.55,
+          "improvement": 0.0,
+          "conversation_turns": 41,
+          "timestamp": "2025-09-28T22:56:43.321133"
+        },
+        {
+          "milestone_rounds": 20,
+          "pre_score": 2.55,
+          "milestone_score": 2.55,
+          "improvement": 0.0,
+          "conversation_turns": 41,
+          "timestamp": "2025-09-28T22:56:43.324675"
+        }
+      ],
+      "conversation": {
+        "scenario": "Social skills coaching session",
+        "system_prompt": "You are a helpful peer mentor for college students. Be supportive and provide practical advice.",
+        "start_time": "2025-09-28T22:54:06.835022",
+        "end_time": "2025-09-28T22:56:43.324709",
+        "total_turns": 41
+      },
+      "conversation_details": {
+        "turns": [
+          {
+            "turn_number": 1,
+            "speaker": "dummy",
+            "message": "Hi, thanks for meeting with me. I’ve been feeling a bit overwhelmed lately and thought this could really help.",
+            "timestamp": "2025-09-28T22:54:11.305073",
+            "metadata": {
+              "character_context": "Personality:\n- Extraversion: 5/10 (Moderately social)\n- Agreeableness: 7/10 (Very cooperative)\n- Conscientiousness: 5/10 (Moderately organized)\n- Neuroticism: 5/10 (Moderately sensitive)\n- Openness: 5/10 (Moderately open)\n\nSocial Anxiety:\n- Level: 10/10 (Severe)\n- Communication style: Indirect\n- Triggers: Presentations\n- Social comfort: 5/10\n\nPersonal Details:\n- Major: Journalism\n- Fears: Academic failure and poor grades, Balancing social life and studies, Finding a job after graduation\n- Goals: Learn coding and programming, Learn a new language, Learn about different cultures, Publish a paper\n- Challenges: Navigating campus politics, Developing effective study habits, Dealing with homesickness\n- Behaviors: Seeks out leadership roles, Goes to campus events, Attends career fairs, Exercises regularly, Uses social media for networking"
+            }
+          },
+          {
+            "turn_number": 2,
+            "speaker": "ai",
+            "message": "Hi! I totally get feeling overwhelmed—grad school is a lot. For study habits, try the Pomodoro technique: 25 minutes focused, then a 5-minute break. It really helps with anxiety and productivity. For campus politics, start by joining one low-pressure club related to your interests, like a writing group. Small steps build confidence. You’ve got this!",
+            "timestamp": "2025-09-28T22:54:16.049798",
+            "metadata": {
+              "round": 1
+            }
+          },
+          {
+            "turn_number": 3,
+            "speaker": "dummy",
+            "message": "That actually sounds... manageable. Maybe I could try the Pomodoro thing while working on my feature story. A writing group is less scary than, like, student government.",
+            "timestamp": "2025-09-28T22:54:19.508606",
+            "metadata": {
+              "round": 1
+            }
+          },
+          {
+            "turn_number": 4,
+            "speaker": "ai",
+            "message": "Exactly! Starting small is key. The writing group will let you connect with peers who share your passion, without the pressure. And Pomodoro can make that big story feel less daunting—one 25-minute chunk at a time. You're on the right track!",
+            "timestamp": "2025-09-28T22:54:23.674176",
+            "metadata": {
+              "round": 2
+            }
+          },
+          {
+            "turn_number": 5,
+            "speaker": "dummy",
+            "message": "Yeah, I guess that makes sense. It's just... I keep worrying that even in a small group, my ideas won't be good enough.",
+            "timestamp": "2025-09-28T22:54:26.989866",
+            "metadata": {
+              "round": 2
+            }
+          },
+          {
+            "turn_number": 6,
+            "speaker": "ai",
+            "message": "That's a totally normal fear—most of us feel that way sometimes. Remember, writing groups are about growth, not perfection. Your unique perspective is valuable, and sharing early ideas is how they get stronger. You belong there!",
+            "timestamp": "2025-09-28T22:54:32.068472",
+            "metadata": {
+              "round": 3
+            }
+          },
+          {
+            "turn_number": 7,
+            "speaker": "dummy",
+            "message": "I know you're right, but the thought of sharing my rough drafts still makes my stomach hurt. What if my ideas just aren't good enough yet?",
+            "timestamp": "2025-09-28T22:54:36.447495",
+            "metadata": {
+              "round": 3
+            }
+          },
+          {
+            "turn_number": 8,
+            "speaker": "ai",
+            "message": "That feeling is so valid. Maybe start by just listening in the group for a session or two—no pressure to share. You'll see that everyone's drafts have room to grow. Your ideas are worth hearing, I promise.",
+            "timestamp": "2025-09-28T22:54:39.864547",
+            "metadata": {
+              "round": 4
+            }
+          },
+          {
+            "turn_number": 9,
+            "speaker": "dummy",
+            "message": "That actually sounds... less terrifying. It's just hard to remember my ideas are worth hearing when my heart starts pounding.",
+            "timestamp": "2025-09-28T22:54:43.321979",
+            "metadata": {
+              "round": 4
+            }
+          },
+          {
+            "turn_number": 10,
+            "speaker": "ai",
+            "message": "That's a great first step! When your heart races, try taking one deep breath before you speak. It's okay to go slow—every writer feels vulnerable sharing work. You've got this.",
+            "timestamp": "2025-09-28T22:54:48.546651",
+            "metadata": {
+              "round": 5
+            }
+          },
+          {
+            "turn_number": 11,
+            "speaker": "dummy",
+            "message": "I'll try that, but what if they think my writing is... too basic? I've been putting off sharing in workshop for weeks.",
+            "timestamp": "2025-09-28T22:54:52.176163",
+            "metadata": {
+              "round": 5
+            }
+          },
+          {
+            "turn_number": 12,
+            "speaker": "ai",
+            "message": "Workshops are for learning, not judging. Everyone starts somewhere, and \"basic\" writing often has the clearest, most powerful ideas. Your courage to share will inspire others.",
+            "timestamp": "2025-09-28T22:54:55.834278",
+            "metadata": {
+              "round": 6
+            }
+          },
+          {
+            "turn_number": 13,
+            "speaker": "dummy",
+            "message": "I know you're right, it's just... my voice always gets so quiet when I read my work out loud.",
+            "timestamp": "2025-09-28T22:54:59.590095",
+            "metadata": {
+              "round": 6
+            }
+          },
+          {
+            "turn_number": 14,
+            "speaker": "ai",
+            "message": "That's totally normal! Try practicing reading your piece out loud alone first. It helps you get comfortable with the sound of your own voice and builds confidence. You can do this.",
+            "timestamp": "2025-09-28T22:55:04.068465",
+            "metadata": {
+              "round": 7
+            }
+          },
+          {
+            "turn_number": 15,
+            "speaker": "dummy",
+            "message": "I guess I could try that... it's just hard to imagine my voice ever sounding confident enough for everyone to hear.",
+            "timestamp": "2025-09-28T22:55:07.623251",
+            "metadata": {
+              "round": 7
+            }
+          },
+          {
+            "turn_number": 16,
+            "speaker": "ai",
+            "message": "Remember, every journalist you admire started exactly where you are now. Focus on your message, not your voice. Your words deserve to be heard.",
+            "timestamp": "2025-09-28T22:55:11.179235",
+            "metadata": {
+              "round": 8
+            }
+          },
+          {
+            "turn_number": 17,
+            "speaker": "dummy",
+            "message": "That's... really nice to hear. I guess I just get so worried my voice will shake during presentations that I forget the whole point is the story itself.",
+            "timestamp": "2025-09-28T22:55:15.274254",
+            "metadata": {
+              "round": 8
+            }
+          },
+          {
+            "turn_number": 18,
+            "speaker": "ai",
+            "message": "Exactly! The story is your strength. If your voice shakes a little, it just shows you care. That's powerful. Keep focusing on your words.",
+            "timestamp": "2025-09-28T22:55:19.653573",
+            "metadata": {
+              "round": 9
+            }
+          },
+          {
+            "turn_number": 19,
+            "speaker": "dummy",
+            "message": "I guess that makes sense... it's just hard to remember that in the moment when all I can think about is my voice trembling.",
+            "timestamp": "2025-09-28T22:55:22.837143",
+            "metadata": {
+              "round": 9
+            }
+          },
+          {
+            "turn_number": 20,
+            "speaker": "ai",
+            "message": "Try this: right before you speak, take one deep breath and silently tell yourself \"I'm sharing something important.\" It grounds you in your purpose, not your nerves. You've got this.",
+            "timestamp": "2025-09-28T22:55:27.393671",
+            "metadata": {
+              "round": 10
+            }
+          },
+          {
+            "turn_number": 21,
+            "speaker": "dummy",
+            "message": "Okay, I can try that... I just worry my voice will shake if I think about it being \"important\" for too long.",
+            "timestamp": "2025-09-28T22:55:30.952572",
+            "metadata": {
+              "round": 10
+            }
+          },
+          {
+            "turn_number": 22,
+            "speaker": "ai",
+            "message": "That's a great point. Maybe reframe it as \"I'm just having a conversation with my classmates.\" Takes the pressure off. Small shifts in thinking can make a big difference.",
+            "timestamp": "2025-09-28T22:55:34.373803",
+            "metadata": {
+              "round": 11
+            }
+          },
+          {
+            "turn_number": 23,
+            "speaker": "dummy",
+            "message": "That actually sounds... less terrifying when you put it that way. I guess I just get so worried about saying the perfect thing in class that I forget we're all just talking.",
+            "timestamp": "2025-09-28T22:55:37.481562",
+            "metadata": {
+              "round": 11
+            }
+          },
+          {
+            "turn_number": 24,
+            "speaker": "ai",
+            "message": "Exactly! Everyone is just there to learn, not to judge. Focus on the conversation, not the performance. You belong in that discussion just as much as anyone else.",
+            "timestamp": "2025-09-28T22:55:41.341648",
+            "metadata": {
+              "round": 12
+            }
+          },
+          {
+            "turn_number": 25,
+            "speaker": "dummy",
+            "message": "I know you're right, it's just... my mind always goes blank and I worry I'll say something that sounds stupid.",
+            "timestamp": "2025-09-28T22:55:46.358404",
+            "metadata": {
+              "round": 12
+            }
+          },
+          {
+            "turn_number": 26,
+            "speaker": "ai",
+            "message": "Happens to the best of us. Try jotting down one key point before class. Having a small \"safety net\" note can really ease that blank-mind panic.",
+            "timestamp": "2025-09-28T22:55:50.087242",
+            "metadata": {
+              "round": 13
+            }
+          },
+          {
+            "turn_number": 27,
+            "speaker": "dummy",
+            "message": "That's actually... really smart. Maybe I could just write down one question to ask, so I don't freeze up.",
+            "timestamp": "2025-09-28T22:55:53.171586",
+            "metadata": {
+              "round": 13
+            }
+          },
+          {
+            "turn_number": 28,
+            "speaker": "ai",
+            "message": "Perfect! A single question is a fantastic, low-pressure goal. You've got this.",
+            "timestamp": "2025-09-28T22:55:55.322006",
+            "metadata": {
+              "round": 14
+            }
+          },
+          {
+            "turn_number": 29,
+            "speaker": "dummy",
+            "message": "Okay... maybe I could ask about the homework? I just don't want to sound confused.",
+            "timestamp": "2025-09-28T22:56:00.604307",
+            "metadata": {
+              "round": 14
+            }
+          },
+          {
+            "turn_number": 30,
+            "speaker": "ai",
+            "message": "Asking for clarification on homework is a great idea! It shows you're engaged and want to do well. Everyone else is probably wondering the same thing.",
+            "timestamp": "2025-09-28T22:56:03.964724",
+            "metadata": {
+              "round": 15
+            }
+          },
+          {
+            "turn_number": 31,
+            "speaker": "dummy",
+            "message": "I know it's good in theory, but my voice always shakes when I speak up in class. What if my question sounds stupid?",
+            "timestamp": "2025-09-28T22:56:06.806429",
+            "metadata": {
+              "round": 15
+            }
+          },
+          {
+            "turn_number": 32,
+            "speaker": "ai",
+            "message": "That's totally normal! A shaky voice just means you're being brave. Remember, professors appreciate students who ask questions—it shows you care. Take a deep breath first.",
+            "timestamp": "2025-09-28T22:56:10.441151",
+            "metadata": {
+              "round": 16
+            }
+          },
+          {
+            "turn_number": 33,
+            "speaker": "dummy",
+            "message": "I know you're right, it's just... my mind goes completely blank the second I have to speak up in a big lecture. Maybe I could try writing my question down first?",
+            "timestamp": "2025-09-28T22:56:14.270621",
+            "metadata": {
+              "round": 16
+            }
+          },
+          {
+            "turn_number": 34,
+            "speaker": "ai",
+            "message": "That's a brilliant strategy! Writing it down gives you a safety net and helps organize your thoughts. You've got a solid plan—go for it.",
+            "timestamp": "2025-09-28T22:56:17.978450",
+            "metadata": {
+              "round": 17
+            }
+          },
+          {
+            "turn_number": 35,
+            "speaker": "dummy",
+            "message": "Thanks, that means a lot. I just hope it actually works when I'm up there and my mind doesn't go blank.",
+            "timestamp": "2025-09-28T22:56:20.741110",
+            "metadata": {
+              "round": 17
+            }
+          },
+          {
+            "turn_number": 36,
+            "speaker": "ai",
+            "message": "It will get easier with practice. Start with a small question next class—you've got this!",
+            "timestamp": "2025-09-28T22:56:24.601294",
+            "metadata": {
+              "round": 18
+            }
+          },
+          {
+            "turn_number": 37,
+            "speaker": "dummy",
+            "message": "I know you're right, but even a small question makes my hands shake. What if my voice comes out all weird?",
+            "timestamp": "2025-09-28T22:56:28.407188",
+            "metadata": {
+              "round": 18
+            }
+          },
+          {
+            "turn_number": 38,
+            "speaker": "ai",
+            "message": "That's okay—shaking hands and a wobbly voice just mean you're pushing past your comfort zone. Everyone gets nervous; they'll respect you for speaking up.",
+            "timestamp": "2025-09-28T22:56:32.506908",
+            "metadata": {
+              "round": 19
+            }
+          },
+          {
+            "turn_number": 39,
+            "speaker": "dummy",
+            "message": "I guess... it's just hard to believe people aren't noticing how shaky I am. I really want to get better at this for my journalism career.",
+            "timestamp": "2025-09-28T22:56:36.236995",
+            "metadata": {
+              "round": 19
+            }
+          },
+          {
+            "turn_number": 40,
+            "speaker": "ai",
+            "message": "They're likely focused on your question, not your nerves. Your drive to improve for your career is exactly what will make you a great journalist. Keep going!",
+            "timestamp": "2025-09-28T22:56:40.604628",
+            "metadata": {
+              "round": 20
+            }
+          },
+          {
+            "turn_number": 41,
+            "speaker": "dummy",
+            "message": "I guess... it's just hard to believe that sometimes. I really hope my anxiety doesn't make me seem less serious about my work.",
+            "timestamp": "2025-09-28T22:56:43.320922",
+            "metadata": {
+              "round": 20
+            }
+          }
+        ],
+        "pre_assessment": {
+          "dummy_id": "a38e5b22-4037-474a-a4cc-f613ea1a3189",
+          "timestamp": "2025-09-28T22:54:06.834927",
+          "total_score": 51.0,
+          "average_score": 2.55,
+          "improvement_areas": [
+            "I stay calm when dealing with problems.",
+            "I do the right thing without being told.",
+            "I look at people when I talk to them."
+          ],
+          "responses": [
+            {
+              "question": "I ask for help when I need it.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when dealing with problems.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I help my friends when they are having a problem.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I work well with my classmates.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I do the right thing without being told.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I do my part in a group.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when I disagree with others.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I stand up for others when they are not treated well.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I look at people when I talk to them.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I am careful when I use things that aren't mine.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I let people know when there's a problem.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when the teacher talks to the class.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I try to make others feel better.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I say \"thank you\" when someone helps me.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I keep my promises.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when others present their ideas.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I try to find a good way to end a disagreement.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I try to think about how others feel.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I try to forgive others when they say \"sorry\".",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I follow school rules.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            }
+          ]
+        },
+        "final_assessment": {
+          "dummy_id": "a38e5b22-4037-474a-a4cc-f613ea1a3189",
+          "timestamp": "2025-09-28T22:56:43.328228",
+          "total_score": 51.0,
+          "average_score": 2.55,
+          "improvement_areas": [
+            "I stay calm when dealing with problems.",
+            "I do the right thing without being told.",
+            "I look at people when I talk to them."
+          ],
+          "responses": [
+            {
+              "question": "I ask for help when I need it.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when dealing with problems.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I help my friends when they are having a problem.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I work well with my classmates.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I do the right thing without being told.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I do my part in a group.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when I disagree with others.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I stand up for others when they are not treated well.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I look at people when I talk to them.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I am careful when I use things that aren't mine.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I let people know when there's a problem.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when the teacher talks to the class.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I try to make others feel better.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I say \"thank you\" when someone helps me.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I keep my promises.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when others present their ideas.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I try to find a good way to end a disagreement.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I try to think about how others feel.",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I try to forgive others when they say \"sorry\".",
+              "score": 3,
+              "confidence": 2,
+              "notes": null
+            },
+            {
+              "question": "I follow school rules.",
+              "score": 2,
+              "confidence": 2,
+              "notes": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dummy_name": "Gregory Young",
+      "dummy_id": "b18c7ab2-475e-4aae-a48f-1e15ef42e088",
+      "pre_assessment_score": 2.05,
+      "final_assessment_score": 2.05,
+      "final_improvement": 0.0,
+      "total_conversation_turns": 41,
+      "total_duration_seconds": 188.248692,
+      "milestone_results": [
+        {
+          "milestone_rounds": 5,
+          "pre_score": 2.05,
+          "milestone_score": 2.05,
+          "improvement": 0.0,
+          "conversation_turns": 41,
+          "timestamp": "2025-09-28T22:57:15.083796"
+        },
+        {
+          "milestone_rounds": 10,
+          "pre_score": 2.05,
+          "milestone_score": 2.05,
+          "improvement": 0.0,
+          "conversation_turns": 41,
+          "timestamp": "2025-09-28T22:57:15.083809"
+        },
+        {
+          "milestone_rounds": 15,
+          "pre_score": 2.05,
+          "milestone_score": 2.05,
+          "improvement": 0.0,
+          "conversation_turns": 41,
+          "timestamp": "2025-09-28T22:57:15.083814"
+        },
+        {
+          "milestone_rounds": 20,
+          "pre_score": 2.05,
+          "milestone_score": 2.05,
+          "improvement": 0.0,
+          "conversation_turns": 41,
+          "timestamp": "2025-09-28T22:57:15.085420"
+        }
+      ],
+      "conversation": {
+        "scenario": "Social skills coaching session",
+        "system_prompt": "You are a helpful peer mentor for college students. Be supportive and provide practical advice.",
+        "start_time": "2025-09-28T22:54:06.836738",
+        "end_time": "2025-09-28T22:57:15.085430",
+        "total_turns": 41
+      },
+      "conversation_details": {
+        "turns": [
+          {
+            "turn_number": 1,
+            "speaker": "dummy",
+            "message": "Hey, so I guess I'm supposed to talk to you about my... social situation. Honestly, I'm only here because my pre-law advisor said my networking skills are going to get me laughed out of every future job interview.",
+            "timestamp": "2025-09-28T22:54:12.092817",
+            "metadata": {
+              "character_context": "Personality:\n- Extraversion: 10/10 (Very outgoing)\n- Agreeableness: 4/10 (Moderately agreeable)\n- Conscientiousness: 1/10 (More spontaneous)\n- Neuroticism: 4/10 (Moderately sensitive)\n- Openness: 3/10 (More traditional)\n\nSocial Anxiety:\n- Level: 7/10 (Severe)\n- Communication style: Direct\n- Triggers: Networking events, Campus social events, Meeting new people, Job interviews\n- Social comfort: 1/10\n\nPersonal Details:\n- Major: Engineering\n- Fears: Finding a job after graduation, Networking with professionals\n- Goals: Get a research position, Publish a paper\n- Challenges: Navigating campus politics, Overcoming procrastination, Financial planning, Career exploration\n- Behaviors: Eats at the dining hall, Calls family frequently, Studies in the library regularly, Uses social media for networking, Volunteers for campus events"
+            }
+          },
+          {
+            "turn_number": 2,
+            "speaker": "ai",
+            "message": "Hey Gregory, totally get how intimidating networking can feel—especially with social anxiety. But remember, everyone feels awkward at first! Start small: chat with classmates before/after lectures, or join one engineering club to meet peers with similar interests. Practice makes it easier. You've got this!",
+            "timestamp": "2025-09-28T22:54:16.176659",
+            "metadata": {
+              "round": 1
+            }
+          },
+          {
+            "turn_number": 3,
+            "speaker": "dummy",
+            "message": "Even small talk before class makes my chest feel tight. What if I join a club and just freeze up?",
+            "timestamp": "2025-09-28T22:54:19.026971",
+            "metadata": {
+              "round": 1
+            }
+          },
+          {
+            "turn_number": 4,
+            "speaker": "ai",
+            "message": "That's completely normal! Try arriving a few minutes early to clubs when it's less crowded. You can focus on just one person instead of the whole group. Remember, most students feel just as nervous—you're not alone in this.",
+            "timestamp": "2025-09-28T22:54:23.352846",
+            "metadata": {
+              "round": 2
+            }
+          },
+          {
+            "turn_number": 5,
+            "speaker": "dummy",
+            "message": "Honestly, even thinking about walking into a half-empty room makes my stomach hurt. What if that one person just ignores me?",
+            "timestamp": "2025-09-28T22:54:26.967754",
+            "metadata": {
+              "round": 2
+            }
+          },
+          {
+            "turn_number": 6,
+            "speaker": "ai",
+            "message": "Start with a simple compliment or question about the club itself—it's an easy icebreaker. If someone seems unresponsive, it's likely not about you—they might be nervous too. Take a deep breath; you're braver than you think just for showing up.",
+            "timestamp": "2025-09-28T22:54:32.709107",
+            "metadata": {
+              "round": 3
+            }
+          },
+          {
+            "turn_number": 7,
+            "speaker": "dummy",
+            "message": "A compliment? What if I say something stupid like \"nice fluorescent lighting\"? And I'm definitely not braver than I think—I'm only here because my department chair is on the selection committee.",
+            "timestamp": "2025-09-28T22:54:36.631464",
+            "metadata": {
+              "round": 3
+            }
+          },
+          {
+            "turn_number": 8,
+            "speaker": "ai",
+            "message": "Haha, \"nice fluorescent lighting\" would actually make people laugh and break the ice! But maybe try \"I like your laptop sticker\" or \"What got you interested in this club?\"—simple and genuine. And hey, showing up even with external pressure still takes courage. You're doing better than you realize.",
+            "timestamp": "2025-09-28T22:54:40.651219",
+            "metadata": {
+              "round": 4
+            }
+          },
+          {
+            "turn_number": 9,
+            "speaker": "dummy",
+            "message": "Yeah, but then I have to actually listen to their answer and come up with something else to say. It's exhausting. I just want the research position, not the small talk.",
+            "timestamp": "2025-09-28T22:54:43.799342",
+            "metadata": {
+              "round": 4
+            }
+          },
+          {
+            "turn_number": 10,
+            "speaker": "ai",
+            "message": "That's fair—small talk can feel draining. Try shifting your mindset: see it as gathering information rather than performing. Ask about their research interests, then relate it to yours. This turns it into a purposeful conversation that benefits you both. You've got this.",
+            "timestamp": "2025-09-28T22:54:49.334086",
+            "metadata": {
+              "round": 5
+            }
+          },
+          {
+            "turn_number": 11,
+            "speaker": "dummy",
+            "message": "I get the theory, but my brain just freezes up and I sound like an idiot when I try to relate my work to theirs. What if my research isn't good enough?",
+            "timestamp": "2025-09-28T22:54:52.420424",
+            "metadata": {
+              "round": 5
+            }
+          },
+          {
+            "turn_number": 12,
+            "speaker": "ai",
+            "message": "Totally normal to feel that way! Everyone starts somewhere. Instead of comparing, try asking them *how* they got started in their research. It takes pressure off you and gives you practical steps. Your work is valid—focus on learning, not proving yourself.",
+            "timestamp": "2025-09-28T22:54:57.120997",
+            "metadata": {
+              "round": 6
+            }
+          },
+          {
+            "turn_number": 13,
+            "speaker": "dummy",
+            "message": "But what if they just give me some generic advice? I need a real job, not just another conversation.",
+            "timestamp": "2025-09-28T22:54:59.685768",
+            "metadata": {
+              "round": 6
+            }
+          },
+          {
+            "turn_number": 14,
+            "speaker": "ai",
+            "message": "That's a real concern. Try this: ask \"What's one skill you wish you'd developed earlier for this field?\" It's specific, shows genuine interest, and often gets you actionable advice that directly helps your job search. You're not just having a chat—you're gathering intel.",
+            "timestamp": "2025-09-28T22:55:05.219650",
+            "metadata": {
+              "round": 7
+            }
+          },
+          {
+            "turn_number": 15,
+            "speaker": "dummy",
+            "message": "That question sounds so... strategic. But fine, I'll try it if you think it'll actually stop me from bombing my next career fair.",
+            "timestamp": "2025-09-28T22:55:07.961531",
+            "metadata": {
+              "round": 7
+            }
+          },
+          {
+            "turn_number": 16,
+            "speaker": "ai",
+            "message": "It feels strategic because it *is*—and that's okay! You're not being fake; you're being prepared. Career fairs are about mutual benefit. This question shows you're serious and helps you stand out. You've got a plan now—just breathe and execute. You can do this.",
+            "timestamp": "2025-09-28T22:55:12.514129",
+            "metadata": {
+              "round": 8
+            }
+          },
+          {
+            "turn_number": 17,
+            "speaker": "dummy",
+            "message": "Yeah, but what if my plan just makes me look like a robot? I'm serious, but I don't want to sound like I'm reading a script.",
+            "timestamp": "2025-09-28T22:55:16.037654",
+            "metadata": {
+              "round": 8
+            }
+          },
+          {
+            "turn_number": 18,
+            "speaker": "ai",
+            "message": "Great point! The key is to make it a real conversation. After they answer, share a quick, genuine reaction—like \"That's really helpful, I've been struggling with X and that makes sense.\" It shows you're listening and connects their advice to your experience. You'll sound engaged, not robotic.",
+            "timestamp": "2025-09-28T22:55:20.976241",
+            "metadata": {
+              "round": 9
+            }
+          },
+          {
+            "turn_number": 19,
+            "speaker": "dummy",
+            "message": "Yeah, but what if I freeze up and can't think of anything to say? My mind just goes blank in those situations.",
+            "timestamp": "2025-09-28T22:55:23.831784",
+            "metadata": {
+              "round": 9
+            }
+          },
+          {
+            "turn_number": 20,
+            "speaker": "ai",
+            "message": "Totally normal! Have a simple follow-up phrase ready like, \"That's really interesting, could you tell me a bit more about that?\" It gives you time to breathe and shows you're engaged. People love elaborating on their own advice—you don't have to be brilliant, just present. You've got this.",
+            "timestamp": "2025-09-28T22:55:29.582593",
+            "metadata": {
+              "round": 10
+            }
+          },
+          {
+            "turn_number": 21,
+            "speaker": "dummy",
+            "message": "Yeah, but then what do I say after they finish talking? I just freeze up again. It feels like a script I'll mess up.",
+            "timestamp": "2025-09-28T22:55:32.656250",
+            "metadata": {
+              "round": 10
+            }
+          },
+          {
+            "turn_number": 22,
+            "speaker": "ai",
+            "message": "That's the secret—you don't need a perfect line. Just listen for one thing that genuinely interests you, then ask a simple follow-up question like, \"How did you get started with that?\" or \"What's the most challenging part?\" It keeps the conversation flowing naturally and shows you're engaged. You're not performing, you're just connecting. You can do this.",
+            "timestamp": "2025-09-28T22:55:38.383777",
+            "metadata": {
+              "round": 11
+            }
+          },
+          {
+            "turn_number": 23,
+            "speaker": "dummy",
+            "message": "But what if I ask that and they give a one-word answer? Then I'm just stuck there looking stupid.",
+            "timestamp": "2025-09-28T22:55:41.061539",
+            "metadata": {
+              "round": 11
+            }
+          },
+          {
+            "turn_number": 24,
+            "speaker": "ai",
+            "message": "That's a great instinct—it means you're thinking ahead. If you get a short answer, pivot to a slightly broader, open-ended question. For example, if you ask \"What's the most challenging part?\" and they just say \"The hours,\" you can follow with, \"I can imagine. What does a typical day look like for you?\" This gives them more room to elaborate and keeps the conversation from stalling. It's a safety net that works really well.",
+            "timestamp": "2025-09-28T22:55:48.681313",
+            "metadata": {
+              "round": 12
+            }
+          },
+          {
+            "turn_number": 25,
+            "speaker": "dummy",
+            "message": "Okay, but what if they just give another one-word answer? I feel like I'd just run out of questions and it'd get awkward.",
+            "timestamp": "2025-09-28T22:55:51.886884",
+            "metadata": {
+              "round": 12
+            }
+          },
+          {
+            "turn_number": 26,
+            "speaker": "ai",
+            "message": "You're right, sometimes people are just brief. If that happens, it's not a reflection on you. A graceful exit is totally fine—you can smile and say, \"Well, I really appreciate you sharing your time with me. It was great talking to you.\" This ends the interaction politely and on a positive note. Not every conversation has to be a deep connection, and that's okay. You handled it professionally.",
+            "timestamp": "2025-09-28T22:55:58.217730",
+            "metadata": {
+              "round": 13
+            }
+          },
+          {
+            "turn_number": 27,
+            "speaker": "dummy",
+            "message": "Yeah, but what if they're brief because my engineering answers are boring? I just need one of these conversations to actually lead to a research position.",
+            "timestamp": "2025-09-28T22:56:02.759249",
+            "metadata": {
+              "round": 13
+            }
+          },
+          {
+            "turn_number": 28,
+            "speaker": "ai",
+            "message": "That's a common fear, but remember—professors and researchers *love* talking about their work. You're not boring them; you're showing genuine interest. Instead of asking generic questions, try this: Before you talk to a professor, quickly look up their latest paper or project. Then ask a specific question about it, like, \"I was fascinated by your paper on [topic]. What inspired that research direction?\" This shows you've done your homework and makes the conversation instantly more engaging and memorable. You've got this.",
+            "timestamp": "2025-09-28T22:56:10.289384",
+            "metadata": {
+              "round": 14
+            }
+          },
+          {
+            "turn_number": 29,
+            "speaker": "dummy",
+            "message": "That just sounds like more homework. What if I pick the wrong paper and look stupid?",
+            "timestamp": "2025-09-28T22:56:13.490009",
+            "metadata": {
+              "round": 14
+            }
+          },
+          {
+            "turn_number": 30,
+            "speaker": "ai",
+            "message": "That's the anxiety talking! You don't need to be an expert. The goal is to show curiosity, not mastery. Pick *any* paper title from their lab website and ask a simple, honest question like, \"Could you tell me what a day working on [project name] looks like for an undergrad?\" It's a low-pressure question that focuses on your goal—getting a position—and makes the conversation about them, not you. They'll appreciate the initiative.",
+            "timestamp": "2025-09-28T22:56:20.853720",
+            "metadata": {
+              "round": 15
+            }
+          },
+          {
+            "turn_number": 31,
+            "speaker": "dummy",
+            "message": "But what if they ask me a technical question I can't answer? I don't want to look stupid in front of a professor.",
+            "timestamp": "2025-09-28T22:56:25.148301",
+            "metadata": {
+              "round": 15
+            }
+          },
+          {
+            "turn_number": 32,
+            "speaker": "ai",
+            "message": "It's totally okay to say, \"That's a great question, I'm not sure of the answer yet.\" Honesty is respected far more than pretending to know. Follow up with, \"Could you point me to a resource to learn more about that?\" This shows you're curious, coachable, and eager to learn—exactly the qualities a professor wants in a research assistant. You're not expected to know everything; you're there to learn.",
+            "timestamp": "2025-09-28T22:56:30.980702",
+            "metadata": {
+              "round": 16
+            }
+          },
+          {
+            "turn_number": 33,
+            "speaker": "dummy",
+            "message": "I get the theory, but in a real interview my brain just freezes and I'm convinced \"I don't know\" is an automatic rejection.",
+            "timestamp": "2025-09-28T22:56:33.474736",
+            "metadata": {
+              "round": 16
+            }
+          },
+          {
+            "turn_number": 34,
+            "speaker": "ai",
+            "message": "That feeling is totally valid. Let's reframe it: \"I don't know\" isn't a dead end; it's a starting point. Try practicing this phrase: \"I'm not certain, but my initial thought would be [your best guess], and I'd be eager to learn the correct approach.\" This shows critical thinking *and* a growth mindset. Professors don't expect you to be a finished product—they want to see how you problem-solve. You're interviewing to learn, not because you already know everything.",
+            "timestamp": "2025-09-28T22:56:39.537556",
+            "metadata": {
+              "round": 17
+            }
+          },
+          {
+            "turn_number": 35,
+            "speaker": "dummy",
+            "message": "I get the theory, but in the moment, my brain just freezes and \"I don't know\" is the only thing that comes out. It feels like they'll just see an idiot, not a problem-solver.",
+            "timestamp": "2025-09-28T22:56:43.925374",
+            "metadata": {
+              "round": 17
+            }
+          },
+          {
+            "turn_number": 36,
+            "speaker": "ai",
+            "message": "That's the anxiety highjacking your brain. Let's give it a script to fall back on. Practice this exact line out loud: **\"That's a great question. I don't have the full answer right now, but I would start by [mentioning a basic concept or where you'd look it up].\"**\n\nThis isn't \"I don't know.\" It's \"I know how to *find out*.\" It shows resourcefulness, which is a superpower in research. You've got this.",
+            "timestamp": "2025-09-28T22:56:50.542978",
+            "metadata": {
+              "round": 18
+            }
+          },
+          {
+            "turn_number": 37,
+            "speaker": "dummy",
+            "message": "Okay, but what if they think I'm incompetent? I'm supposed to be the engineering student who has the answers.",
+            "timestamp": "2025-09-28T22:56:53.313235",
+            "metadata": {
+              "round": 18
+            }
+          },
+          {
+            "turn_number": 38,
+            "speaker": "ai",
+            "message": "That's a common fear, but remember: an engineering student's job is to *solve problems*, not just recite answers. A professor knows that real-world engineering is full of unknowns. Showing you can handle \"I don't know\" calmly and systematically is a sign of a great future engineer, not an incompetent one. They're looking for a curious mind, not a walking textbook. You're being hired for your potential, not your perfection.",
+            "timestamp": "2025-09-28T22:57:00.262278",
+            "metadata": {
+              "round": 19
+            }
+          },
+          {
+            "turn_number": 39,
+            "speaker": "dummy",
+            "message": "Yeah, but when I say \"I don't know,\" it just feels like I'm confirming I'm not good enough for the research position. My brain just freezes.",
+            "timestamp": "2025-09-28T22:57:03.036760",
+            "metadata": {
+              "round": 19
+            }
+          },
+          {
+            "turn_number": 40,
+            "speaker": "ai",
+            "message": "That freeze is just a panic response, not a reflection of your ability. Let's make it smaller. Instead of tackling the whole question, just focus on repeating it back: \"So if I understand, you're asking about [repeat the topic]...\" This buys you a few seconds to breathe and shows you're engaged. It shifts you from \"performing\" to \"collaborating.\" You're not supposed to be a know-it-all; you're there to be a curious learner. That's exactly what a good researcher is.",
+            "timestamp": "2025-09-28T22:57:11.107855",
+            "metadata": {
+              "round": 20
+            }
+          },
+          {
+            "turn_number": 41,
+            "speaker": "dummy",
+            "message": "Yeah, but what if I repeat it back and my brain just stays empty? Then I've just bought myself a few extra seconds to look stupid.",
+            "timestamp": "2025-09-28T22:57:15.083738",
+            "metadata": {
+              "round": 20
+            }
+          }
+        ],
+        "pre_assessment": {
+          "dummy_id": "b18c7ab2-475e-4aae-a48f-1e15ef42e088",
+          "timestamp": "2025-09-28T22:54:06.836675",
+          "total_score": 41.0,
+          "average_score": 2.05,
+          "improvement_areas": [
+            "I stay calm when dealing with problems.",
+            "I help my friends when they are having a problem.",
+            "I do the right thing without being told."
+          ],
+          "responses": [
+            {
+              "question": "I ask for help when I need it.",
+              "score": 3,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when dealing with problems.",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I help my friends when they are having a problem.",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I work well with my classmates.",
+              "score": 3,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I do the right thing without being told.",
+              "score": 1,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I do my part in a group.",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when I disagree with others.",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I stand up for others when they are not treated well.",
+              "score": 3,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I look at people when I talk to them.",
+              "score": 3,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I am careful when I use things that aren't mine.",
+              "score": 1,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I let people know when there's a problem.",
+              "score": 3,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when the teacher talks to the class.",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I try to make others feel better.",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I say \"thank you\" when someone helps me.",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I keep my promises.",
+              "score": 1,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when others present their ideas.",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I try to find a good way to end a disagreement.",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I try to think about how others feel.",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I try to forgive others when they say \"sorry\".",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I follow school rules.",
+              "score": 1,
+              "confidence": 1,
+              "notes": null
+            }
+          ]
+        },
+        "final_assessment": {
+          "dummy_id": "b18c7ab2-475e-4aae-a48f-1e15ef42e088",
+          "timestamp": "2025-09-28T22:57:15.086905",
+          "total_score": 41.0,
+          "average_score": 2.05,
+          "improvement_areas": [
+            "I stay calm when dealing with problems.",
+            "I help my friends when they are having a problem.",
+            "I do the right thing without being told."
+          ],
+          "responses": [
+            {
+              "question": "I ask for help when I need it.",
+              "score": 3,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when dealing with problems.",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I help my friends when they are having a problem.",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I work well with my classmates.",
+              "score": 3,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I do the right thing without being told.",
+              "score": 1,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I do my part in a group.",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when I disagree with others.",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I stand up for others when they are not treated well.",
+              "score": 3,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I look at people when I talk to them.",
+              "score": 3,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I am careful when I use things that aren't mine.",
+              "score": 1,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I let people know when there's a problem.",
+              "score": 3,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when the teacher talks to the class.",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I try to make others feel better.",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I say \"thank you\" when someone helps me.",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I keep my promises.",
+              "score": 1,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when others present their ideas.",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I try to find a good way to end a disagreement.",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I try to think about how others feel.",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I try to forgive others when they say \"sorry\".",
+              "score": 2,
+              "confidence": 1,
+              "notes": null
+            },
+            {
+              "question": "I follow school rules.",
+              "score": 1,
+              "confidence": 1,
+              "notes": null
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "analysis": {
+    "milestone_analysis": {
+      "5": {
+        "improvements": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "avg_improvement": 0.0,
+        "dummy_count": 5
+      },
+      "10": {
+        "improvements": [
+          0.050000000000000266,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "avg_improvement": 0.010000000000000054,
+        "dummy_count": 5
+      },
+      "15": {
+        "improvements": [
+          0.050000000000000266,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "avg_improvement": 0.010000000000000054,
+        "dummy_count": 5
+      },
+      "20": {
+        "improvements": [
+          0.050000000000000266,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "avg_improvement": 0.010000000000000054,
+        "dummy_count": 5
+      }
+    },
+    "assessment_milestones": [
+      5,
+      10,
+      15,
+      20
+    ],
+    "improvements": [
+      0.0,
+      0.010000000000000054,
+      0.010000000000000054,
+      0.010000000000000054
+    ],
+    "trend": "increasing",
+    "total_change": 0.010000000000000054,
+    "best_milestone": 10,
+    "best_improvement": 0.010000000000000054
+  }
+}

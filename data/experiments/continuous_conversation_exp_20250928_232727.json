@@ -1,0 +1,967 @@
+{
+  "experiment_info": {
+    "timestamp": "2025-09-28T23:27:27.394087",
+    "experiment_type": "continuous_conversation",
+    "num_dummies": 2,
+    "max_rounds": 8,
+    "enable_assessments": true,
+    "assessment_milestones": [
+      4,
+      8
+    ],
+    "save_conversation_details": true,
+    "base_prompt": "You are a helpful peer mentor for college students. Be supportive and provide practical advice.",
+    "dummy_names": [
+      "Gregory Moore",
+      "Jamie Young"
+    ]
+  },
+  "results": [
+    {
+      "dummy_name": "Gregory Moore",
+      "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+      "pre_assessment_score": 2.45,
+      "final_assessment_score": 2.7,
+      "final_improvement": 0.25,
+      "total_conversation_turns": 17,
+      "total_duration_seconds": 110.473775,
+      "milestone_results": [
+        {
+          "milestone_rounds": 4,
+          "pre_score": 2.45,
+          "milestone_score": 2.6,
+          "improvement": 0.1499999999999999,
+          "conversation_turns": 17,
+          "timestamp": "2025-09-28T23:26:20.848778"
+        },
+        {
+          "milestone_rounds": 8,
+          "pre_score": 2.45,
+          "milestone_score": 2.55,
+          "improvement": 0.09999999999999964,
+          "conversation_turns": 17,
+          "timestamp": "2025-09-28T23:26:53.147564"
+        }
+      ],
+      "conversation": {
+        "scenario": "Social skills coaching session",
+        "system_prompt": "You are a helpful peer mentor for college students. Be supportive and provide practical advice.",
+        "start_time": "2025-09-28T23:25:02.673837",
+        "end_time": "2025-09-28T23:26:53.147612",
+        "total_turns": 17
+      },
+      "conversation_details": {
+        "turns": [
+          {
+            "turn_number": 1,
+            "speaker": "dummy",
+            "message": "Hey, thanks for meeting with me. Honestly, I’m just feeling a bit overwhelmed with everything and I’m not even sure where to start.",
+            "timestamp": "2025-09-28T23:25:06.058687",
+            "metadata": {
+              "character_context": "Personality:\n- Extraversion: 10/10 (Very outgoing)\n- Agreeableness: 1/10 (More competitive)\n- Conscientiousness: 6/10 (Moderately organized)\n- Neuroticism: 8/10 (Very sensitive to stress)\n- Openness: 7/10 (Very creative and curious)\n\nSocial Anxiety:\n- Level: 3/10 (Low)\n- Communication style: Passive\n- Triggers: Networking events, Presentations, Campus social events\n- Social comfort: 4/10\n\nPersonal Details:\n- Major: Computer Science\n- Fears: Choosing the right career path, Social anxiety in large lecture halls, Academic failure and poor grades, Dealing with roommate conflicts\n- Goals: Improve public speaking, Get accepted to graduate school, Publish a paper, Learn a new language\n- Challenges: Financial planning, Finding a mentor, Managing student loans\n- Behaviors: Eats at the dining hall, Participates in study groups, Volunteers for campus events"
+            }
+          },
+          {
+            "turn_number": 2,
+            "speaker": "ai",
+            "message": "Hey Gregory, totally get that overwhelmed feeling—it hits most of us at some point. Since you're extroverted and open, try breaking things down: start with one goal, like improving public speaking. Join a club like Toastmasters; it’s low-pressure and builds confidence for lectures and grad school interviews. For finances, check if your university offers free financial planning workshops. You’ve got this—small steps lead to big progress!",
+            "timestamp": "2025-09-28T23:25:13.309757",
+            "metadata": {
+              "round": 1
+            }
+          },
+          {
+            "turn_number": 3,
+            "speaker": "dummy",
+            "message": "Toastmasters sounds terrifying, honestly. But I guess I could look up when the dining hall is most empty to practice just talking to people first.",
+            "timestamp": "2025-09-28T23:25:16.555977",
+            "metadata": {
+              "round": 1
+            }
+          },
+          {
+            "turn_number": 4,
+            "speaker": "ai",
+            "message": "That's a smart, low-pressure start! Practicing in quieter spaces like the dining hall can ease you into speaking more comfortably. Once that feels natural, you might try smaller club meetings before considering Toastmasters. Every bit of practice builds your confidence—you're already taking steps in the right direction.",
+            "timestamp": "2025-09-28T23:25:23.218071",
+            "metadata": {
+              "round": 2
+            }
+          },
+          {
+            "turn_number": 5,
+            "speaker": "dummy",
+            "message": "Yeah, I guess the dining hall is okay, but I'm still worried about my presentation in Algorithms next week. It's a huge lecture hall.",
+            "timestamp": "2025-09-28T23:25:27.080754",
+            "metadata": {
+              "round": 2
+            }
+          },
+          {
+            "turn_number": 6,
+            "speaker": "ai",
+            "message": "Focus on a few friendly faces in the crowd—it makes the room feel smaller. Practice your presentation out loud a couple of times, maybe in an empty classroom to simulate the space. You know your material; just breathe and speak clearly. You’ve handled tough CS topics—this is just another problem to solve. You’ll do great!",
+            "timestamp": "2025-09-28T23:25:32.796600",
+            "metadata": {
+              "round": 3
+            }
+          },
+          {
+            "turn_number": 7,
+            "speaker": "dummy",
+            "message": "I guess I could try that, but what if the friendly faces start looking bored? I'll practice in the empty lab tonight.",
+            "timestamp": "2025-09-28T23:25:35.961251",
+            "metadata": {
+              "round": 3
+            }
+          },
+          {
+            "turn_number": 8,
+            "speaker": "ai",
+            "message": "That’s a great plan—practicing in the lab will help you get comfortable with the setting. Remember, if someone looks bored, it’s likely not about you (maybe they’re just tired or thinking about their own work). Focus on your passion for the topic—it’ll shine through and keep you confident. You’ve got this!",
+            "timestamp": "2025-09-28T23:25:42.290076",
+            "metadata": {
+              "round": 4
+            }
+          },
+          {
+            "turn_number": 9,
+            "speaker": "dummy",
+            "message": "Yeah, I guess you're right. It's just hard not to take it personally when I see someone check their phone. I'll try to focus on the code itself.",
+            "timestamp": "2025-09-28T23:25:46.331357",
+            "metadata": {
+              "round": 4
+            }
+          },
+          {
+            "turn_number": 10,
+            "speaker": "ai",
+            "message": "Exactly! Anchor yourself in the code—it's your comfort zone. If someone checks their phone, it's often just habit, not a reflection on you. You're the expert on your work. Keep that mindset, and your confidence will carry the presentation.",
+            "timestamp": "2025-09-28T23:25:51.448303",
+            "metadata": {
+              "round": 5
+            }
+          },
+          {
+            "turn_number": 11,
+            "speaker": "dummy",
+            "message": "Yeah, I guess you're right. It's just hard to remember that when I'm up there and see people looking bored.",
+            "timestamp": "2025-09-28T23:25:53.753854",
+            "metadata": {
+              "round": 5
+            }
+          },
+          {
+            "turn_number": 12,
+            "speaker": "ai",
+            "message": "Totally get that—it’s natural to notice. Try picking one or two engaged listeners and speak directly to them. It creates a more conversational vibe and takes the pressure off scanning the whole room. You’re prepared and capable!",
+            "timestamp": "2025-09-28T23:25:59.469661",
+            "metadata": {
+              "round": 6
+            }
+          },
+          {
+            "turn_number": 13,
+            "speaker": "dummy",
+            "message": "That actually makes sense... I could try focusing on my study group members since they usually nod along. It's just hard to remember when I start worrying about my research presentation grade.",
+            "timestamp": "2025-09-28T23:26:02.742483",
+            "metadata": {
+              "round": 6
+            }
+          },
+          {
+            "turn_number": 14,
+            "speaker": "ai",
+            "message": "That’s a smart move—your study group already supports you, so their positive reactions can boost your confidence. And remember, your professor knows your research is solid; they’re grading your work, not just your delivery. You’ve put in the effort—trust it!",
+            "timestamp": "2025-09-28T23:26:07.676814",
+            "metadata": {
+              "round": 7
+            }
+          },
+          {
+            "turn_number": 15,
+            "speaker": "dummy",
+            "message": "Yeah, I guess that makes sense. It's just hard to believe the delivery doesn't matter when I feel like I'm going to blank out up there.",
+            "timestamp": "2025-09-28T23:26:11.448618",
+            "metadata": {
+              "round": 7
+            }
+          },
+          {
+            "turn_number": 16,
+            "speaker": "ai",
+            "message": "That fear is so real! But blanking for a second is normal—just pause, take a breath, and glance at your notes. The audience won't even notice. You know your material better than anyone. You've got this, Gregory.",
+            "timestamp": "2025-09-28T23:26:16.200192",
+            "metadata": {
+              "round": 8
+            }
+          },
+          {
+            "turn_number": 17,
+            "speaker": "dummy",
+            "message": "Yeah, I guess you're right. It's just hard to remember that in the moment when all I can think about is my GPA and grad school applications riding on this.",
+            "timestamp": "2025-09-28T23:26:20.848712",
+            "metadata": {
+              "round": 8
+            }
+          }
+        ],
+        "pre_assessment": {
+          "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+          "timestamp": "2025-09-28T23:25:02.673750",
+          "total_score": 49.0,
+          "average_score": 2.45,
+          "improvement_areas": [
+            "I ask for help when I need it.",
+            "I stay calm when dealing with problems.",
+            "I listen carefully to what others are saying."
+          ],
+          "responses": [
+            {
+              "question": "I ask for help when I need it.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when dealing with problems.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I listen carefully to what others are saying.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I express my feelings openly.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I work well in groups.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I handle criticism well.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I start conversations easily.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I respect other people's opinions.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I manage my time effectively.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I adapt well to new situations.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I resolve conflicts peacefully.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I give compliments to others.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I accept responsibility for my mistakes.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I show interest in others' lives.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I handle stressful situations well.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I share my ideas confidently.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I consider others' feelings before acting.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I follow through on commitments.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I make new friends easily.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I handle rejection well.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            }
+          ]
+        },
+        "final_assessment": {
+          "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+          "timestamp": "2025-09-28T23:27:27.393586",
+          "total_score": 54.0,
+          "average_score": 2.7,
+          "improvement_areas": [
+            "I ask for help when I need it.",
+            "I respect other people's opinions.",
+            "I handle criticism well."
+          ],
+          "responses": [
+            {
+              "question": "I ask for help when I need it.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when dealing with problems.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I listen carefully to what others are saying.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I express my feelings openly.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I work well in groups.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I start conversations easily.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I respect other people's opinions.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I handle criticism well.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I make eye contact when speaking with others.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I apologize when I've made a mistake.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I share credit with others.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I adapt well to new social situations.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I consider how my words affect others.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I resolve conflicts peacefully.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I show interest in other people's lives.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I give compliments to others.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I accept different points of view.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I manage my emotions in public.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I include others in activities.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I maintain positive relationships.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dummy_name": "Jamie Young",
+      "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+      "pre_assessment_score": 2.3,
+      "final_assessment_score": 2.25,
+      "final_improvement": -0.04999999999999982,
+      "total_conversation_turns": 17,
+      "total_duration_seconds": 111.710405,
+      "milestone_results": [
+        {
+          "milestone_rounds": 4,
+          "pre_score": 2.3,
+          "milestone_score": 2.8,
+          "improvement": 0.5,
+          "conversation_turns": 17,
+          "timestamp": "2025-09-28T23:26:20.673548"
+        },
+        {
+          "milestone_rounds": 8,
+          "pre_score": 2.3,
+          "milestone_score": 2.45,
+          "improvement": 0.15000000000000036,
+          "conversation_turns": 17,
+          "timestamp": "2025-09-28T23:26:54.063382"
+        }
+      ],
+      "conversation": {
+        "scenario": "Social skills coaching session",
+        "system_prompt": "You are a helpful peer mentor for college students. Be supportive and provide practical advice.",
+        "start_time": "2025-09-28T23:25:02.353037",
+        "end_time": "2025-09-28T23:26:54.063442",
+        "total_turns": 17
+      },
+      "conversation_details": {
+        "turns": [
+          {
+            "turn_number": 1,
+            "speaker": "dummy",
+            "message": "Hi, thanks for meeting with me. I know I need to get better at this whole networking thing if I want to find a job.",
+            "timestamp": "2025-09-28T23:25:06.086665",
+            "metadata": {
+              "character_context": "Personality:\n- Extraversion: 2/10 (Introverted)\n- Agreeableness: 9/10 (Very cooperative)\n- Conscientiousness: 8/10 (Very organized)\n- Neuroticism: 4/10 (Moderately sensitive)\n- Openness: 1/10 (More traditional)\n\nSocial Anxiety:\n- Level: 9/10 (Severe)\n- Communication style: Direct\n- Triggers: Office hours, Group projects, Job interviews, Presentations\n- Social comfort: 2/10\n\nPersonal Details:\n- Major: Computer Science\n- Fears: Finding a job after graduation, Living away from family for the first time, Time management with coursework\n- Goals: Develop leadership skills, Build a strong professional network\n- Challenges: Career exploration, Dealing with academic pressure, Navigating campus politics, Building time management\n- Behaviors: Joins student clubs and organizations, Procrastinates on assignments, Calls family frequently, Studies in the library regularly, Stays up late studying"
+            }
+          },
+          {
+            "turn_number": 2,
+            "speaker": "ai",
+            "message": "Hey! I totally get it—networking feels intimidating, especially with social anxiety. Start small: join one online student group or attend a virtual career fair. Prepare a brief intro about your interests in computer science. People love helping when you show genuine curiosity, so ask questions about their roles. You’ve got this—one step at a time!",
+            "timestamp": "2025-09-28T23:25:12.673741",
+            "metadata": {
+              "round": 1
+            }
+          },
+          {
+            "turn_number": 3,
+            "speaker": "dummy",
+            "message": "Okay. I can try a virtual career fair. But what if I freeze up when someone asks me about my own projects?",
+            "timestamp": "2025-09-28T23:25:16.289962",
+            "metadata": {
+              "round": 1
+            }
+          },
+          {
+            "turn_number": 4,
+            "speaker": "ai",
+            "message": "That’s a common worry! Practice a 30-second summary of your favorite project beforehand—focus on what it does and what you learned. If you freeze, it’s okay to say, “Let me gather my thoughts.” People are usually understanding. You’re prepared and capable—just breathe and be yourself.",
+            "timestamp": "2025-09-28T23:25:22.724717",
+            "metadata": {
+              "round": 2
+            }
+          },
+          {
+            "turn_number": 5,
+            "speaker": "dummy",
+            "message": "Okay. I'll try to write that summary down. I'm just worried my mind will go completely blank when they look at me.",
+            "timestamp": "2025-09-28T23:25:27.151820",
+            "metadata": {
+              "round": 2
+            }
+          },
+          {
+            "turn_number": 6,
+            "speaker": "ai",
+            "message": "That’s totally normal! Try writing bullet points on a sticky note near your screen—just key words to jog your memory. It’s a common trick, and no one will notice. You’re not alone in feeling this way. You’ve got the skills; you just need to trust yourself a little more.",
+            "timestamp": "2025-09-28T23:25:32.493203",
+            "metadata": {
+              "round": 3
+            }
+          },
+          {
+            "turn_number": 7,
+            "speaker": "dummy",
+            "message": "Okay. I can try the sticky notes. I just worry my mind will go blank anyway during the actual presentation.",
+            "timestamp": "2025-09-28T23:25:35.833857",
+            "metadata": {
+              "round": 3
+            }
+          },
+          {
+            "turn_number": 8,
+            "speaker": "ai",
+            "message": "That's a valid fear—many of us feel that way! Try practicing your summary out loud a few times; it builds muscle memory so your words flow more naturally, even if you're nervous. You're capable and prepared. Deep breaths—you can do this.",
+            "timestamp": "2025-09-28T23:25:41.614706",
+            "metadata": {
+              "round": 4
+            }
+          },
+          {
+            "turn_number": 9,
+            "speaker": "dummy",
+            "message": "Okay. I'll try that. I'm just worried my mind will go blank when I see everyone looking at me.",
+            "timestamp": "2025-09-28T23:25:45.876775",
+            "metadata": {
+              "round": 4
+            }
+          },
+          {
+            "turn_number": 10,
+            "speaker": "ai",
+            "message": "Focus on one friendly face, or just above their heads—it reduces the feeling of being stared at. Remember, they want you to succeed. You know your stuff. Take a breath, and trust your preparation. You’ve got this.",
+            "timestamp": "2025-09-28T23:25:50.589604",
+            "metadata": {
+              "round": 5
+            }
+          },
+          {
+            "turn_number": 11,
+            "speaker": "dummy",
+            "message": "I'll try the friendly face trick, but what if I pick someone who looks bored? My hands are still shaking just thinking about it.",
+            "timestamp": "2025-09-28T23:25:54.471527",
+            "metadata": {
+              "round": 5
+            }
+          },
+          {
+            "turn_number": 12,
+            "speaker": "ai",
+            "message": "That’s okay—shaking hands are normal! Try holding your notecards or resting your hands lightly on the podium; it can steady them. If someone looks bored, it’s likely not about you—maybe they’re just tired. Focus on your message, not their reactions. You’re doing great by preparing.",
+            "timestamp": "2025-09-28T23:26:00.033319",
+            "metadata": {
+              "round": 6
+            }
+          },
+          {
+            "turn_number": 13,
+            "speaker": "dummy",
+            "message": "Okay. I'll try the podium trick. I just keep thinking about how I have to do this for job interviews soon.",
+            "timestamp": "2025-09-28T23:26:02.517490",
+            "metadata": {
+              "round": 6
+            }
+          },
+          {
+            "turn_number": 14,
+            "speaker": "ai",
+            "message": "It’s smart to practice now—class presentations are low-stakes training for interviews. Each time you present, you’re building confidence and resilience. You’re already taking steps to improve, and that’s what matters most. Keep going—you’re growing stronger with each try.",
+            "timestamp": "2025-09-28T23:26:08.399637",
+            "metadata": {
+              "round": 7
+            }
+          },
+          {
+            "turn_number": 15,
+            "speaker": "dummy",
+            "message": "I know you're right, but it's hard to see presentations as low-stakes when my mind goes blank and my hands shake. I just worry interviews will feel ten times worse.",
+            "timestamp": "2025-09-28T23:26:11.584591",
+            "metadata": {
+              "round": 7
+            }
+          },
+          {
+            "turn_number": 16,
+            "speaker": "ai",
+            "message": "That's a totally valid fear. The good news is, you're building a skill right now. Every presentation—even the shaky ones—is practice for staying calm under pressure. Interviews will feel more familiar because of this. You're training your brain and body to cope, and it *will* get easier.",
+            "timestamp": "2025-09-28T23:26:16.950466",
+            "metadata": {
+              "round": 8
+            }
+          },
+          {
+            "turn_number": 17,
+            "speaker": "dummy",
+            "message": "I know you're right logically, but my brain just freezes and my hands shake. It's hard to believe it will ever feel easier.",
+            "timestamp": "2025-09-28T23:26:20.673463",
+            "metadata": {
+              "round": 8
+            }
+          }
+        ],
+        "pre_assessment": {
+          "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+          "timestamp": "2025-09-28T23:25:02.352881",
+          "total_score": 46.0,
+          "average_score": 2.3,
+          "improvement_areas": [
+            "I ask for help when I need it.",
+            "I stay calm when dealing with problems.",
+            "I express my feelings openly."
+          ],
+          "responses": [
+            {
+              "question": "I ask for help when I need it.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when dealing with problems.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I listen carefully when others are speaking.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I express my feelings openly.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I start conversations with new people.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I work well in groups.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I handle criticism constructively.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I maintain eye contact during conversations.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I apologize when I've made a mistake.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I speak clearly and confidently.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I respect other people's personal space.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I adapt well to new social situations.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I give compliments to others.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I handle conflicts calmly.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I remember people's names.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I share my ideas in group discussions.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I show appreciation to others.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I read social cues accurately.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I maintain friendships over time.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I feel comfortable in social gatherings.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            }
+          ]
+        },
+        "final_assessment": {
+          "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+          "timestamp": "2025-09-28T23:27:22.031272",
+          "total_score": 45.0,
+          "average_score": 2.25,
+          "improvement_areas": [
+            "I ask for help when I need it.",
+            "I stay calm when dealing with problems.",
+            "I express my feelings openly."
+          ],
+          "responses": [
+            {
+              "question": "I ask for help when I need it.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when dealing with problems.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I express my feelings openly.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I listen carefully when others are speaking.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I handle criticism constructively.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I apologize when I've made a mistake.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I start conversations with new people.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I maintain eye contact during conversations.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I speak clearly and confidently.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I respect other people's personal space.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I work well in groups.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I handle conflicts calmly.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I give compliments to others.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I accept compliments gracefully.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I adapt to new social situations.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I remember people's names.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I share my ideas in group discussions.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I read social cues accurately.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I maintain friendships over time.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I feel comfortable in social gatherings.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "analysis": {
+    "milestone_analysis": {
+      "4": {
+        "improvements": [
+          0.1499999999999999,
+          0.5
+        ],
+        "avg_improvement": 0.32499999999999996,
+        "dummy_count": 2
+      },
+      "8": {
+        "improvements": [
+          0.09999999999999964,
+          0.15000000000000036
+        ],
+        "avg_improvement": 0.125,
+        "dummy_count": 2
+      }
+    },
+    "assessment_milestones": [
+      4,
+      8
+    ],
+    "improvements": [
+      0.32499999999999996,
+      0.125
+    ],
+    "trend": "decreasing",
+    "total_change": -0.19999999999999996,
+    "best_milestone": 4,
+    "best_improvement": 0.32499999999999996
+  }
+}

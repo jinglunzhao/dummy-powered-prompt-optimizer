@@ -18,7 +18,7 @@ from dataclasses import dataclass, asdict
 from dotenv import load_dotenv
 
 from models import AIDummy, Assessment, Conversation
-from assessment_system import AssessmentSystem
+from assessment_system_llm_based import AssessmentSystemLLMBased as AssessmentSystem
 from conversation_simulator import ConversationSimulator
 from conversation_storage import conversation_storage
 
@@ -100,7 +100,8 @@ class PromptOptimizer:
         self.optimization_history: List[OptimizationResult] = []
         
         # Initialize assessment and conversation systems
-        self.assessment_system = AssessmentSystem()
+        from config import Config
+        self.assessment_system = AssessmentSystem(api_key=Config.DEEPSEEK_API_KEY)
         self.conversation_simulator = ConversationSimulator()
         
         # Pareto frontier tracking

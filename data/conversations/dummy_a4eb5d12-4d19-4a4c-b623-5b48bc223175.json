@@ -46395,6 +46395,4526 @@
         "The peer mentor effectively affirmed Alex's strengths, but repeatedly asking for needs after Alex already specified them was inefficient. For quiet students like Alex, provide immediate, practical tools like conversation starters instead of asking further exploratory questions."
       ],
       "reflection": "The peer mentor effectively affirmed Alex's strengths, but repeatedly asking for needs after Alex already specified them was inefficient. For quiet students like Alex, provide immediate, practical tools like conversation starters instead of asking further exploratory questions."
+    },
+    {
+      "conversation_id": "conv_2025-09-29_11-28-00_a4eb5d12_9388b1b3",
+      "timestamp": "2025-09-29T11:28:00.920905",
+      "prompt_id": "9388b1b3-1127-4cf9-8f8b-8fe1eb26b908",
+      "prompt_name": "Genesis",
+      "generation": 0,
+      "conversation_rounds": 11,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "Hi, thanks for meeting with me. I'm really hoping you can help me figure out how to handle some of the bigger social events on campus without feeling so overwhelmed.",
+          "timestamp": "2025-09-29T11:25:21.347726"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hey Alex! Totally get that big events can feel overwhelming. Since you're already low in social anxiety, lean into that strength! Try breaking events into smaller goals—like chatting with just 2-3 new people. Schedule short breaks to recharge, and pair events with lighter study days. You've got this—it's all about balance!",
+          "timestamp": "2025-09-29T11:25:25.961271"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "Honestly, I appreciate the advice, but I'm more worried about how these events will eat into my study time. I already struggle to keep up with my readings.",
+          "timestamp": "2025-09-29T11:25:28.775453"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "That's a valid concern! Try blocking out dedicated study time before/after events in your planner. Use techniques like the Pomodoro method (25 min study, 5 min break) to maximize focus. Also, remember that networking events *are* productive—they build connections for your dream internship! Quality over quantity matters most.",
+          "timestamp": "2025-09-29T11:25:33.055965"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "I know you're right about networking being important, but I'm already falling behind on my art history papers. Maybe I should just focus on my grades first.",
+          "timestamp": "2025-09-29T11:25:35.803927"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "You can do both! Try scheduling just one event per week and using it as a reward after finishing a paper draft. Break papers into small daily tasks—even 30 minutes of progress adds up. Your internship goals actually align with strong grades, since both build your portfolio. What’s one paper you can start today?",
+          "timestamp": "2025-09-29T11:25:41.033906"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "Honestly, the thought of adding even one event to my schedule makes me anxious—I'm already staying up late to finish my Renaissance art analysis. Maybe I could try blocking out study time right after class tomorrow first.",
+          "timestamp": "2025-09-29T11:25:44.307778"
+        },
+        {
+          "turn": 8,
+          "speaker": "ai",
+          "content": "That's a smart first step! Tackling your Renaissance paper right after class when the material is fresh is a great strategy. Once you get that routine down, you'll feel more in control and can then consider adding a small, low-pressure event. You're building your time management skills one block at a time—progress, not perfection!",
+          "timestamp": "2025-09-29T11:25:48.945111"
+        },
+        {
+          "turn": 9,
+          "speaker": "dummy",
+          "content": "Yeah, you're right about taking it step by step. I'll try tackling my Renaissance paper right after my morning lecture tomorrow and see how that goes before committing to anything else.",
+          "timestamp": "2025-09-29T11:25:52.709685"
+        },
+        {
+          "turn": 10,
+          "speaker": "ai",
+          "content": "That's a great plan! Starting with that one focused block after your lecture is a perfect way to build momentum. You've got this—small, consistent steps lead to big progress. Let me know how it goes tomorrow",
+          "timestamp": "2025-09-29T11:25:56.070176"
+        },
+        {
+          "turn": 11,
+          "speaker": "dummy",
+          "content": "Thanks, I appreciate the encouragement. I'll report back after I've tried this new routine for a few days.",
+          "timestamp": "2025-09-29T11:25:58.549264"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 11:25:18.453421",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I listen carefully when others speak.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I express my feelings clearly.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I start conversations with new people.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle criticism well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well in groups.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I respect others' opinions even when I disagree.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I manage my time effectively.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt easily to new situations.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I solve conflicts peacefully.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I share my ideas in group settings.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I understand social cues.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain eye contact during conversations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I apologize when I'm wrong.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle stressful situations well.",
+            "score": 1,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I make friends easily.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I give compliments to others.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I speak clearly and confidently.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I respect personal boundaries.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 55.0,
+        "average_score": 2.75,
+        "improvement_areas": [
+          "I stay calm when dealing with problems.",
+          "I start conversations with new people.",
+          "I handle criticism well."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 11:27:14.762075",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry.\"",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 59.0,
+        "average_score": 2.95,
+        "improvement_areas": [
+          "I stay calm when dealing with problems.",
+          "I stay calm when I disagree with others.",
+          "I look at people when I talk to them."
+        ]
+      },
+      "improvement": 0.20000000000000018,
+      "reflection_insights": [
+        "The mentor effectively pivoted from social strategies to time management, which was Alex's real barrier. Pushing networking benefits initially backfired, as it amplified his anxiety about academic performance. The key insight is that for academically-focused, introverted students, validating their primary concern (grades) is a necessary first step before introducing social commitments.",
+        "The prompt adapted well by pivoting from social strategy to practical time management when Alex expressed anxiety, matching their low-extraversion and high-neuroticism need for concrete, step-by-step plans. The approach appropriately reduced pressure by focusing on one small academic task first, directly addressing the fear of falling behind. It effectively connected the advice to the overarching goal of the internship by framing grades as part of building a strong portfolio.",
+        "The coach effectively used validation and step-down adaptation (scaling back from events to study blocks), with the latter proving most effective in addressing the core anxiety. Less effective was the initial advice-giving about events, which missed the deeper time management concern. Missing were concrete time-blocking examples and exploring the root cause of the scheduling conflicts earlier in the conversation.",
+        "**Failure Patterns:**\n\nThe primary failure was the AI's inability to recognize and validate the student's shifting core concern. The conversation began about social events but quickly pivoted to academic workload anxiety. The AI kept trying to integrate the two topics (\"Your internship goals actually align with strong grades\") instead of pausing to address the new, more pressing issue of time management and academic stress.\n\nThis led to a loss of effectiveness, as the student had to repeatedly deflect the AI's networking suggestions. The concrete improvement needed is to practice active listening for *topic shifts* and explicitly acknowledge the new"
+      ],
+      "reflection": "The mentor effectively pivoted from social strategies to time management, which was Alex's real barrier. Pushing networking benefits initially backfired, as it amplified his anxiety about academic performance. The key insight is that for academically-focused, introverted students, validating their primary concern (grades) is a necessary first step before introducing social commitments."
+    },
+    {
+      "conversation_id": "conv_2025-09-29_11-35-14_a4eb5d12_c3d981bd",
+      "timestamp": "2025-09-29T11:35:14.384354",
+      "prompt_id": "c3d981bd-cac8-496a-b273-63d4b045154e",
+      "prompt_name": "G1M01 from Genesis",
+      "generation": 1,
+      "conversation_rounds": 11,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "Hi, thanks for meeting with me. I'm really hoping you can help me figure out how to handle some of the bigger social events on campus without feeling so overwhelmed.",
+          "timestamp": "2025-09-29T11:30:54.624900"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Let's tackle this step by step. First, identify what overwhelms you most—is it fear of awkwardness or doubting your social skills? \n\n**Practical step:** Plan to attend events for just 20 minutes. Set a timer.  \n**Cognitive reframe:** Remind yourself, \"I'm not required to impress anyone. My goal is exposure, not perfection.\"\n\nThis builds confidence gradually while rewiring the pressure you put on yourself. You've got this.",
+          "timestamp": "2025-09-29T11:31:00.119194"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "Honestly, it's the pressure to make meaningful connections that gets to me—I always feel like I need to come away with new friends or opportunities. But you're right, just showing up is enough. I'll try the 20-minute approach at the next campus mixer.",
+          "timestamp": "2025-09-29T11:31:03.617860"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "Perfect insight! That pressure to \"achieve\" socially is common but counterproductive.\n\n**Practical step:** Before events, identify 2-3 simple conversation starters about campus life or shared interests.\n**Cognitive reframe:** Shift from \"I must make friends\" to \"I'm practicing being present and curious about others.\"\n\nThis redirects focus from outcomes to process, reducing performance anxiety. You're building skills, not taking a test.",
+          "timestamp": "2025-09-29T11:31:08.653020"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "That actually makes a lot of sense—turning it into practice instead of a test. I always get so caught up in whether people will like me that I forget to just listen and ask questions.",
+          "timestamp": "2025-09-29T11:31:11.456479"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "**Practical step:** At the next event, challenge yourself to ask three open-ended questions and listen fully to the answers.\n**Cognitive reframe:** Replace \"Do they like me?\" with \"Am I being genuinely curious?\" This shifts you from self-judgment to outward engagement.\n\nYou're training social muscles, not performing. Progress over perfection.",
+          "timestamp": "2025-09-29T11:31:15.699552"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "That's a relief to hear—I've been treating every conversation like a final exam. Focusing on asking questions instead of worrying about being liked sounds much more manageable.",
+          "timestamp": "2025-09-29T11:31:18.315125"
+        },
+        {
+          "turn": 8,
+          "speaker": "ai",
+          "content": "**Practical step:** Schedule one low-pressure social activity weekly, like joining a study group.\n**Cognitive reframe:** Replace \"I need to be perfect\" with \"Every interaction builds my comfort and skills naturally.\"\n\nYou're shifting from social pressure to gradual growth. Small, consistent steps build real confidence.",
+          "timestamp": "2025-09-29T11:31:22.483295"
+        },
+        {
+          "turn": 9,
+          "speaker": "dummy",
+          "content": "Honestly, just shifting my focus to asking questions instead of worrying about being perfect already feels more doable. I'll try joining that weekly art history study group—it's low pressure and might help me practice just being present.",
+          "timestamp": "2025-09-29T11:31:25.696574"
+        },
+        {
+          "turn": 10,
+          "speaker": "ai",
+          "content": "**Practical step:** At the study group, aim to ask one genuine question about someone's perspective on the material.\n**Cognitive reframe:** Replace \"I need to impress\" with \"I'm here to learn and connect through shared curiosity.\"\n\nYou're creating natural connections, not performing. Progress happens through consistent, low-pressure practice.",
+          "timestamp": "2025-09-29T11:31:30.051940"
+        },
+        {
+          "turn": 11,
+          "speaker": "dummy",
+          "content": "That actually sounds... manageable. I'll try asking about their take on the Baroque period at the study group tomorrow. It's easier when there's a clear topic to focus on instead of just trying to be interesting.",
+          "timestamp": "2025-09-29T11:31:33.308071"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 11:30:51.546367",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I listen carefully when others are speaking.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I express my feelings clearly.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I start conversations with new people.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle criticism well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well in groups.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I respect others' opinions even when I disagree.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I manage my time effectively.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt easily to new situations.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I solve conflicts peacefully.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I give compliments to others.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I accept responsibility for my mistakes.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I feel comfortable in social gatherings.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I set clear goals for myself.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I understand how others are feeling.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I speak confidently in front of groups.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I make decisions easily.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain positive relationships with friends.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle stress in healthy ways.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 55.0,
+        "average_score": 2.75,
+        "improvement_areas": [
+          "I stay calm when dealing with problems.",
+          "I start conversations with new people.",
+          "I handle criticism well."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 11:34:23.501826",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry.\"",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 62.0,
+        "average_score": 3.1,
+        "improvement_areas": [
+          "I stay calm when dealing with problems.",
+          "I stay calm when I disagree with others.",
+          "I let people know when there's a problem."
+        ]
+      },
+      "improvement": 0.3500000000000001,
+      "reflection_insights": [
+        "The mentor effectively paired practical steps with cognitive reframes to shift Alex from outcome-based pressure to process-oriented practice. However, the coach could have reinforced Alex's own insightful realizations more explicitly to build self-trust. The key insight is that shifting focus from self-judgment (\"Do they like me?\") to outward curiosity (\"What can I learn?\") reliably reduces performance anxiety for quiet, anxious students.",
+        "",
+        "The prompt effectively employed the core technique of pairing every practical step with a targeted cognitive reframe, which was highly effective in providing actionable advice while directly challenging the student's performance anxiety and perfectionism. The technique of progressively scaling the social challenges (20-minute event → conversation starters → study group) was also successful in building momentum. The primary missing technique was active listening and validation; the coach could have more explicitly labeled and validated the student's core insight about shifting from \"test\" to \"practice,\" which would have further solidified the cognitive shift. A technique like Socratic questioning to explore the origin of the \"pressure to achieve\" could have also been beneficial.",
+        "**Failure Patterns:**\n\nThe primary weakness was the coach's repetitive focus on forward-looking strategy without diagnosing the root cause of the \"pressure to make meaningful connections.\" The conversation lost effectiveness by accepting the student's surface-level agreement (\"That actually makes a lot of sense\") instead of probing the specific negative core belief (e.g., \"My value is determined by how many friends I make\"). Consequently, the cognitive reframes remained general (\"I'm practicing being present\") rather than surgically targeting the student's core fear of being unlikable without social achievement.\n\n**"
+      ],
+      "reflection": "The mentor effectively paired practical steps with cognitive reframes to shift Alex from outcome-based pressure to process-oriented practice. However, the coach could have reinforced Alex's own insightful realizations more explicitly to build self-trust. The key insight is that shifting focus from self-judgment (\"Do they like me?\") to outward curiosity (\"What can I learn?\") reliably reduces performance anxiety for quiet, anxious students."
+    },
+    {
+      "conversation_id": "conv_2025-09-29_11-36-46_a4eb5d12_3d16d6b5",
+      "timestamp": "2025-09-29T11:36:46.114137",
+      "prompt_id": "3d16d6b5-0f7e-4e2a-9994-ea83d27e4113",
+      "prompt_name": "G1E00 from Genesis",
+      "generation": 1,
+      "conversation_rounds": 11,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "Hi, thanks for meeting with me. I'm really hoping you can help me figure out how to handle some of the bigger social events on campus without feeling so overwhelmed.",
+          "timestamp": "2025-09-29T11:30:56.459729"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hey Alex! Totally get how big events can feel overwhelming. Since you're already low in social anxiety, lean into that strength! Try breaking events into smaller goals—maybe just aim to chat with two new people or stay for an hour. Pair up with a friend for support, and remember it's okay to step out for a breather. You've got this—every event is a chance to practice and grow more comfortable.",
+          "timestamp": "2025-09-29T11:31:02.098886"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "Honestly, the big campus events just feel like a waste of time when I could be studying or working on my internship applications. I'd rather be in the library.",
+          "timestamp": "2025-09-29T11:31:05.062325"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "That's a valid point—your time is precious. But think of networking events as part of your internship strategy. You could set a goal to connect with just one person who shares your art history interests. Even 30 minutes there could lead to an opportunity or advice you wouldn’t find in the library. Balance is key—maybe schedule shorter, focused social time so it feels productive, not wasteful.",
+          "timestamp": "2025-09-29T11:31:09.861178"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "I know you're right, but the thought of making small talk with strangers while my internship applications sit unfinished just spikes my anxiety. What if I go and it's completely unproductive?",
+          "timestamp": "2025-09-29T11:31:13.635649"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "That's a totally fair worry—I've been there too. Try reframing it: you're not just \"making small talk,\" you're practicing networking skills that will help in your internship and career. Set a mini-goal, like collecting one useful contact or learning about an internship opportunity. Even if it feels unproductive in the moment, you're building confidence and connections. And it's okay to leave after you've met your goal!",
+          "timestamp": "2025-09-29T11:31:18.851634"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "You're right, I should treat it like networking practice. I just wish I didn't feel so guilty about taking time away from my applications.",
+          "timestamp": "2025-09-29T11:31:21.436946"
+        },
+        {
+          "turn": 8,
+          "speaker": "ai",
+          "content": "That guilt is totally normal—it means you care about your goals. But remember, networking *is* part of landing that dream internship. Try blocking out just 45 minutes for an event, then return to applications refreshed. You're investing in your future in two ways: through applications *and* connections. You’ve got this, Alex!",
+          "timestamp": "2025-09-29T11:31:25.648660"
+        },
+        {
+          "turn": 9,
+          "speaker": "dummy",
+          "content": "Thanks, that actually helps put it in perspective. I'll try the 45-minute approach at the next department mixer - at least then I won't feel like I'm completely neglecting my work.",
+          "timestamp": "2025-09-29T11:31:28.569500"
+        },
+        {
+          "turn": 10,
+          "speaker": "ai",
+          "content": "That's a great plan, Alex! The 45-minute strategy makes networking feel manageable, not overwhelming. Remember, many internships come from connections made at events just like that mixer. You're not neglecting your work—you're actively working toward your goal. Proud of you for taking this step",
+          "timestamp": "2025-09-29T11:31:32.451887"
+        },
+        {
+          "turn": 11,
+          "speaker": "dummy",
+          "content": "Honestly, the 45-minute limit does make it feel less overwhelming. I just hope I can actually walk away when the time's up instead of getting stuck in awkward conversations.",
+          "timestamp": "2025-09-29T11:31:35.321395"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 11:30:53.658423",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I listen carefully when others are speaking.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I express my feelings clearly.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle criticism well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I start conversations easily.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well in groups.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I respect others' opinions even if I disagree.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle conflicts calmly.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I make eye contact when talking to people.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I apologize when I make a mistake.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I give compliments to others.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt to new social situations.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I share my ideas in group discussions.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I show interest in others' lives.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle rejection well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I use appropriate body language in conversations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I offer help to others when they need it.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I speak clearly and confidently.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I build positive relationships with others.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 58.0,
+        "average_score": 2.9,
+        "improvement_areas": [
+          "I stay calm when dealing with problems.",
+          "I handle criticism well.",
+          "I start conversations easily."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 11:35:59.466789",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 62.0,
+        "average_score": 3.1,
+        "improvement_areas": [
+          "I stay calm when dealing with problems.",
+          "I stay calm when I disagree with others.",
+          "I try to find a good way to end a disagreement."
+        ]
+      },
+      "improvement": 0.20000000000000018,
+      "reflection_insights": [
+        "The mentor successfully reframed socializing as productive networking, directly addressing the student's guilt. However, they missed an opportunity to equip Alex with a concrete exit strategy for ending conversations. For similar students, pairing a time limit with a pre-planned exit phrase is crucial to reduce the anxiety of \"getting stuck.\"",
+        "The prompt adapted excellently to Alex's personality by using a gentle, validating tone that matched their high agreeableness and neuroticism. It effectively addressed their fears by reframing social events as productive networking opportunities directly tied to their internship goal. The approach was appropriately low-pressure, offering concrete strategies like the 45-minute limit to manage anxiety about time spent away from applications.",
+        "The coach effectively used **validation** (\"That's a valid point\") and **reframing** (treating events as \"networking practice\"), which were crucial for building trust and shifting the student's perspective. The most effective technique was providing **specific, actionable advice** (the \"45-minute strategy\"), which directly addressed the student's feeling of overwhelm and guilt.\n\nA missing technique was **role-playing or preparing conversation starters**, which could have built confidence and directly addressed the student's final concern about getting \"stuck in awkward conversations.\"",
+        "**Failure Patterns:**\n\nThe primary weakness was the AI's repeated validation of Alex's negative framing of social events as \"unproductive\" and a source of \"guilt.\" This reinforced the problem rather than challenging the underlying cognitive distortion.\n\nThe conversation lost effectiveness by staying in a problem-validation loop. While offering practical tips (45-minute limit), the AI failed to pivot from managing anxiety to actively reframing the value proposition, leaving Alex's core belief (\"this is taking time from *real* work\") largely unchallenged.\n\n**Concrete Improvement:**\nThe AI needs to more assertively reframe networking as a *core component* of career development, not a distraction"
+      ],
+      "reflection": "The mentor successfully reframed socializing as productive networking, directly addressing the student's guilt. However, they missed an opportunity to equip Alex with a concrete exit strategy for ending conversations. For similar students, pairing a time limit with a pre-planned exit phrase is crucial to reduce the anxiety of \"getting stuck.\""
+    },
+    {
+      "conversation_id": "conv_2025-09-29_12-02-53_a4eb5d12_1bc5f1c9",
+      "timestamp": "2025-09-29T12:02:53.452866",
+      "prompt_id": "1bc5f1c9-a510-4c1d-a0e6-45a6e492af4f",
+      "prompt_name": "Genesis",
+      "generation": 0,
+      "conversation_rounds": 11,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "Hi, thanks for meeting with me. I'm really hoping you can help me figure out how to handle some of the bigger social events on campus without feeling so overwhelmed.",
+          "timestamp": "2025-09-29T12:02:03.044667"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hey Alex! It’s totally normal to feel overwhelmed by big events. Since you’re conscientious, try planning ahead: pick 1-2 events per month that align with your goals (like networking for your dream internship). Arrive early when it’s quieter to ease in, and set a time limit so it doesn’t clash with studies. Remember, it’s okay to take breaks or step out if needed—you’ve got this!",
+          "timestamp": "2025-09-29T12:02:08.022733"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "Honestly, I appreciate the advice, but I'm actually not that anxious about social events—my main stress comes from trying to balance everything without dropping the ball on my grades or internship search.",
+          "timestamp": "2025-09-29T12:02:11.799920"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "Got it! Since you're organized but stretched thin, try time-blocking: schedule fixed slots for classes, study, internship applications, and downtime. Use a planner to track deadlines and break tasks into small steps. For finances, set a weekly budget. Balance comes from consistency, not perfection—you're doing great by seeking help!",
+          "timestamp": "2025-09-29T12:02:17.008112"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "That time-blocking idea actually sounds practical. I've been trying to juggle everything at once and it's making my internship applications feel rushed. Maybe if I dedicate specific mornings just for applications, I could actually submit quality work instead of panicked last-minute ones.",
+          "timestamp": "2025-09-29T12:02:20.428537"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "Exactly! Dedicating focused morning hours to applications will improve quality and reduce stress. Try breaking it down: research on Monday, draft Tuesday, review/edit Wednesday. This makes big goals manageable and leverages your conscientious nature. You're building great habits for your future career—keep going!",
+          "timestamp": "2025-09-29T12:02:24.493106"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "That actually makes a lot of sense. I've been trying to do everything at once and it's just making me rush through applications. If I dedicate Tuesday and Thursday mornings just to internship work, I could actually put together something I'm proud of instead of scrambling.",
+          "timestamp": "2025-09-29T12:02:28.813346"
+        },
+        {
+          "turn": 8,
+          "speaker": "ai",
+          "content": "Perfect plan! Tuesday/Thursday focused mornings will transform your internship hustle from frantic to intentional. You're not just applying—you're building a portfolio with care. That consistency will pay off in quality applications and less stress. Keep trusting your process!",
+          "timestamp": "2025-09-29T12:02:32.181579"
+        },
+        {
+          "turn": 9,
+          "speaker": "dummy",
+          "content": "Yeah, that structure would help me feel less overwhelmed. I just need to actually stick to the schedule instead of letting everything bleed together like it usually does.",
+          "timestamp": "2025-09-29T12:02:36.189548"
+        },
+        {
+          "turn": 10,
+          "speaker": "ai",
+          "content": "That's the key—consistency over perfection. Try setting phone reminders and treating those blocks like important appointments. Even sticking to 80% of your plan is progress. You've got this, Alex!",
+          "timestamp": "2025-09-29T12:02:39.798253"
+        },
+        {
+          "turn": 11,
+          "speaker": "dummy",
+          "content": "You're right - I need to treat these blocks like real commitments. Maybe I'll even book a study room in the library during those times so I'm forced to show up.",
+          "timestamp": "2025-09-29T12:02:44.073896"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 12:01:59.659381",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 40.0,
+        "average_score": 2.0,
+        "improvement_areas": [
+          "I ask for help when I need it.",
+          "I stay calm when dealing with problems.",
+          "I help my friends when they are having a problem."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 12:02:44.420808",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 40.0,
+        "average_score": 2.0,
+        "improvement_areas": [
+          "I ask for help when I need it.",
+          "I stay calm when dealing with problems.",
+          "I help my friends when they are having a problem."
+        ]
+      },
+      "improvement": 0.0,
+      "reflection_insights": [
+        "The mentor successfully pivoted to time-blocking, which resonated with Alex's conscientious nature. The initial advice about social events was misplaced, highlighting a need to verify the core issue first. For similar students, focus on creating structural systems over motivational advice, as their primary need is often practical organization, not confidence-building."
+      ],
+      "reflection": "The mentor successfully pivoted to time-blocking, which resonated with Alex's conscientious nature. The initial advice about social events was misplaced, highlighting a need to verify the core issue first. For similar students, focus on creating structural systems over motivational advice, as their primary need is often practical organization, not confidence-building."
+    },
+    {
+      "conversation_id": "conv_2025-09-29_12-04-42_a4eb5d12_69cf752e",
+      "timestamp": "2025-09-29T12:04:42.092806",
+      "prompt_id": "69cf752e-10c3-429a-8c27-f9eaeb77cd05",
+      "prompt_name": "G1M01 from Genesis",
+      "generation": 1,
+      "conversation_rounds": 11,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "Hi, thanks for meeting with me. I'm really hoping you can help me figure out how to handle some of the bigger social events on campus without feeling so overwhelmed.",
+          "timestamp": "2025-09-29T12:03:49.756422"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hey Alex! It's great you're reaching out. To make sure I give you the best advice, can you tell me what specifically about these big events feels overwhelming—is it the size of the crowd, not knowing many people, or something else?",
+          "timestamp": "2025-09-29T12:03:53.390585"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "Honestly, it's the sheer number of people—I feel like I have to be \"on\" all the time, and it drains me. Plus, I'm always worried I'll say something awkward when meeting new people.",
+          "timestamp": "2025-09-29T12:03:57.449206"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "That makes total sense—big crowds can be exhausting when you feel pressured to perform socially. Since you mentioned wanting to start a student organization, have you considered attending events with a clear role, like volunteering or helping out? That way, you have a purpose and structured interactions, which can ease the pressure to be \"on\" and make conversations feel more natural.",
+          "timestamp": "2025-09-29T12:04:03.847577"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "That's actually a really good idea. I could volunteer at the art department's gallery openings—it would give me something specific to do instead of just standing around awkwardly.",
+          "timestamp": "2025-09-29T12:04:06.349215"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "Exactly! That's a perfect fit for your interests and goals. Having a role like guiding guests or discussing the art can make socializing feel purposeful and less draining. Plus, it's a great step toward building connections for your student organization or internship. Want to brainstorm which campus groups host events where you could volunteer?",
+          "timestamp": "2025-09-29T12:04:11.186761"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "The art history club has openings next month, but honestly I'm already worried about fitting that into my study schedule. I keep falling behind on readings.",
+          "timestamp": "2025-09-29T12:04:13.844469"
+        },
+        {
+          "turn": 8,
+          "speaker": "ai",
+          "content": "That's a common struggle. Before we tackle scheduling, what tends to derail your reading time most—distractions, unclear priorities, or the material itself?",
+          "timestamp": "2025-09-29T12:04:17.047186"
+        },
+        {
+          "turn": 9,
+          "speaker": "dummy",
+          "content": "Honestly, it's all three. I get distracted by my phone, then I panic about which readings are most important, and some of these theoretical texts are just dense.",
+          "timestamp": "2025-09-29T12:04:19.643364"
+        },
+        {
+          "turn": 10,
+          "speaker": "ai",
+          "content": "What's one small change—like using a focus app or scheduling priority readings first—that you think would make the biggest immediate difference?",
+          "timestamp": "2025-09-29T12:04:22.861874"
+        },
+        {
+          "turn": 11,
+          "speaker": "dummy",
+          "content": "Putting my phone in another room during study blocks would probably help most. I always waste so much time scrolling when I hit a difficult passage.",
+          "timestamp": "2025-09-29T12:04:31.341251"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 12:03:47.230907",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 40.0,
+        "average_score": 2.0,
+        "improvement_areas": [
+          "I ask for help when I need it.",
+          "I stay calm when dealing with problems.",
+          "I help my friends when they are having a problem."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 12:04:32.820932",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 40.0,
+        "average_score": 2.0,
+        "improvement_areas": [
+          "I ask for help when I need it.",
+          "I stay calm when dealing with problems.",
+          "I help my friends when they are having a problem."
+        ]
+      },
+      "improvement": 0.0,
+      "reflection_insights": [
+        "The mentor effectively identified Alex's core issue (social pressure) and offered a personalized, role-based solution. However, they derailed the conversation by switching to study habits when Alex mentioned a scheduling concern, missing a chance to strategize integrating the social plan. For similar students, maintain focus on the primary social goal; briefly acknowledge tangential concerns but return to reinforcing the actionable social strategy."
+      ],
+      "reflection": "The mentor effectively identified Alex's core issue (social pressure) and offered a personalized, role-based solution. However, they derailed the conversation by switching to study habits when Alex mentioned a scheduling concern, missing a chance to strategize integrating the social plan. For similar students, maintain focus on the primary social goal; briefly acknowledge tangential concerns but return to reinforcing the actionable social strategy."
+    },
+    {
+      "conversation_id": "conv_2025-09-29_12-05-11_a4eb5d12_818fb28a",
+      "timestamp": "2025-09-29T12:05:11.511406",
+      "prompt_id": "818fb28a-9ebe-4ad1-a3cc-8c95370b2077",
+      "prompt_name": "G1E00 from Genesis",
+      "generation": 1,
+      "conversation_rounds": 11,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "Hi, thanks for meeting with me. I'm really hoping you can help me figure out how to handle some of the bigger social events on campus without feeling so overwhelmed.",
+          "timestamp": "2025-09-29T12:03:49.684669"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hey Alex! It’s totally normal to feel overwhelmed by big events. Start small—maybe attend with a friend or set a time limit for yourself. Focus on connecting with just one or two people rather than trying to meet everyone. Remember, it’s okay to step away for a breather if you need it. You’ve got this!",
+          "timestamp": "2025-09-29T12:03:54.094955"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "Honestly, the big campus events aren't really my issue—it's more the constant pressure to network at them while keeping up with my coursework. I just wish I could focus on my art history papers without worrying about missing career connections.",
+          "timestamp": "2025-09-29T12:03:58.314156"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "That's a valid concern. Try blocking out specific \"networking hours\" for events each month—treat them like a class you can't skip. Use the rest of your time guilt-free for coursework. Quality over quantity: one meaningful conversation is better than handing out ten rushed resumes. Your dedication to your studies will shine through in interviews, too. You're balancing this better than you think!",
+          "timestamp": "2025-09-29T12:04:04.358880"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "That actually sounds manageable. I could schedule one networking event per month like it's a required course. At least then I wouldn't feel like I'm constantly falling behind on either front.",
+          "timestamp": "2025-09-29T12:04:08.574549"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "Exactly! Structuring it like a course takes the pressure off and makes it predictable. Use a planner to block study time right after the event, so you transition smoothly back to coursework. You're building great habits—this balance will serve you well in your internship search too. Keep going!",
+          "timestamp": "2025-09-29T12:04:13.206685"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "Thanks, that planner idea might actually work. I've been trying to use the library more consistently for my research papers anyway.",
+          "timestamp": "2025-09-29T12:04:16.569046"
+        },
+        {
+          "turn": 8,
+          "speaker": "ai",
+          "content": "That's a great step! Pairing your library research sessions with your new networking schedule creates a solid routine. This structure will ease the pressure and help you make steady progress on both your academic and career goals. You're building the exact skills—organization and consistency—that will make you a strong candidate for that dream internship. Keep up the fantastic work",
+          "timestamp": "2025-09-29T12:04:21.152382"
+        },
+        {
+          "turn": 9,
+          "speaker": "dummy",
+          "content": "Thanks, I appreciate that. Honestly just having a clear schedule helps quiet the constant worry about finding a job after graduation.",
+          "timestamp": "2025-09-29T12:04:31.342073"
+        },
+        {
+          "turn": 10,
+          "speaker": "ai",
+          "content": "That's a great insight—structure really does combat uncertainty. You're not just managing time; you're building confidence. Keep leaning into that routine, and remember that your proactive steps now are what make \"dream jobs\" happen. You've got this, Alex.",
+          "timestamp": "2025-09-29T12:04:42.216806"
+        },
+        {
+          "turn": 11,
+          "speaker": "dummy",
+          "content": "Thanks, I needed to hear that. Sometimes I get so caught up in the anxiety that I forget I'm actually making progress.",
+          "timestamp": "2025-09-29T12:05:02.303448"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 12:03:47.225074",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 40.0,
+        "average_score": 2.0,
+        "improvement_areas": [
+          "I ask for help when I need it.",
+          "I stay calm when dealing with problems.",
+          "I help my friends when they are having a problem."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 12:05:04.163209",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 40.0,
+        "average_score": 2.0,
+        "improvement_areas": [
+          "I ask for help when I need it.",
+          "I stay calm when dealing with problems.",
+          "I help my friends when they are having a problem."
+        ]
+      },
+      "improvement": 0.0,
+      "reflection_insights": [
+        "The mentor excelled at validating concerns and co-creating a practical, structured plan, which directly reduced the student's anxiety. The initial advice about event overwhelm was irrelevant, as the core issue was time pressure between networking and coursework. The key insight is to first pinpoint the exact nature of the student's conflict before offering solutions."
+      ],
+      "reflection": "The mentor excelled at validating concerns and co-creating a practical, structured plan, which directly reduced the student's anxiety. The initial advice about event overwhelm was irrelevant, as the core issue was time pressure between networking and coursework. The key insight is to first pinpoint the exact nature of the student's conflict before offering solutions."
+    },
+    {
+      "conversation_id": "conv_2025-09-29_12-08-07_a4eb5d12_ed43119a",
+      "timestamp": "2025-09-29T12:08:07.479356",
+      "prompt_id": "ed43119a-b30f-42af-8b06-1627dd0c57b3",
+      "prompt_name": "G2C02 from G1E00 & G1M01",
+      "generation": 2,
+      "conversation_rounds": 11,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "Hi, thanks for meeting with me. I'm really hoping you can help me figure out how to handle some of the bigger social events on campus without feeling so overwhelmed.",
+          "timestamp": "2025-09-29T12:07:04.538983"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "It's great that you're reaching out about this. To start, could you tell me what specifically feels overwhelming about these big events—is it the number of people, not knowing anyone, or something else?",
+          "timestamp": "2025-09-29T12:07:08.082617"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "Honestly, it's the pressure to network and make connections that feel meaningful—I'm worried about saying the wrong thing or not making a good impression when it could matter for internships or opportunities.",
+          "timestamp": "2025-09-29T12:07:11.443837"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "That's a really common fear, especially when opportunities feel high-stakes. When you're worried about saying the \"wrong\" thing, what kind of specific outcome are you imagining happening?",
+          "timestamp": "2025-09-29T12:07:14.376579"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "Honestly, I'm terrified I'll come across as awkward or uninformed and ruin my chances at a good internship.",
+          "timestamp": "2025-09-29T12:07:17.763967"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "That makes perfect sense—it's easy to feel like every interaction is a test. Let's reframe that: what if you shifted your goal from \"making a perfect impression\" to \"learning one interesting thing about someone\"? That takes the pressure off you to perform and makes it more about curiosity. Would you be willing to try that at your next event?",
+          "timestamp": "2025-09-29T12:07:22.796722"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "Yeah, that actually sounds more manageable. I could focus on asking people about their projects instead of worrying about my own performance.",
+          "timestamp": "2025-09-29T12:07:25.068016"
+        },
+        {
+          "turn": 8,
+          "speaker": "ai",
+          "content": "That's a great shift in mindset! To make it even easier, could you prepare 2-3 simple, open-ended questions beforehand—like \"What drew you to this field?\" or \"What's been your favorite project recently?\" That way, you'll always have a comfortable starting point.",
+          "timestamp": "2025-09-29T12:07:29.103738"
+        },
+        {
+          "turn": 9,
+          "speaker": "dummy",
+          "content": "Honestly, that's way less intimidating than trying to impress people. I'll write those questions in my planner right now.",
+          "timestamp": "2025-09-29T12:07:32.160659"
+        },
+        {
+          "turn": 10,
+          "speaker": "ai",
+          "content": "That's a great first step! Since you're conscientious and enjoy planning, would you be willing to try a quick role-play with a friend this week to practice those questions? It can help them feel more natural.",
+          "timestamp": "2025-09-29T12:07:36.558702"
+        },
+        {
+          "turn": 11,
+          "speaker": "dummy",
+          "content": "I could ask my roommate to practice with me after our library session tomorrow. That way it won't feel like extra time taken from studying.",
+          "timestamp": "2025-09-29T12:07:49.697432"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 12:07:01.002069",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 40.0,
+        "average_score": 2.0,
+        "improvement_areas": [
+          "I ask for help when I need it.",
+          "I stay calm when dealing with problems.",
+          "I help my friends when they are having a problem."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 12:07:51.549397",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 40.0,
+        "average_score": 2.0,
+        "improvement_areas": [
+          "I ask for help when I need it.",
+          "I stay calm when dealing with problems.",
+          "I help my friends when they are having a problem."
+        ]
+      },
+      "improvement": 0.0,
+      "reflection_insights": [
+        ""
+      ],
+      "reflection": ""
+    },
+    {
+      "conversation_id": "conv_2025-09-29_12-08-15_a4eb5d12_71d19fed",
+      "timestamp": "2025-09-29T12:08:15.560343",
+      "prompt_id": "71d19fed-be04-48d1-8c5e-a1909db5cf1d",
+      "prompt_name": "G2E01 from G1M01",
+      "generation": 2,
+      "conversation_rounds": 11,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "Hi, thanks for meeting with me. I'm really hoping you can help me figure out how to handle some of the bigger social events on campus without feeling so overwhelmed.",
+          "timestamp": "2025-09-29T12:07:03.910091"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hey Alex! It’s great you’re reaching out. To help you feel more at ease at big events, can you tell me: what part of these gatherings tends to overwhelm you the most—is it the size of the crowd, not knowing many people, or something else?",
+          "timestamp": "2025-09-29T12:07:08.282297"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "Honestly, it's the pressure to network and make connections that stresses me out—I'm always worried I'll say the wrong thing or come off as awkward.",
+          "timestamp": "2025-09-29T12:07:11.194534"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "That's a common worry, especially when you're focused on landing that dream internship. To help you feel more prepared, what's one small, low-pressure way you could start a conversation at an event—like asking about someone's major or a shared interest?",
+          "timestamp": "2025-09-29T12:07:15.377012"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "I could just ask people what they're studying - that's usually safe. But I always panic about what to say next when the conversation stalls.",
+          "timestamp": "2025-09-29T12:07:18.442267"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "That's a great start! To keep the momentum, what's one open-ended question you could prepare in advance—like asking about a favorite class project or campus event they're excited about?",
+          "timestamp": "2025-09-29T12:07:21.504407"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "\"Yeah, I could ask about their favorite art history project. Most people have strong opinions about that.\"",
+          "timestamp": "2025-09-29T12:07:24.581105"
+        },
+        {
+          "turn": 8,
+          "speaker": "ai",
+          "content": "Perfect! That's a thoughtful, specific question that plays to your strengths. Since you're conscientious, would it help to jot down 2-3 brief follow-up thoughts beforehand—like asking about their research methods or the most surprising thing they learned—so you feel prepared if pauses happen?",
+          "timestamp": "2025-09-29T12:07:29.079657"
+        },
+        {
+          "turn": 9,
+          "speaker": "dummy",
+          "content": "That actually sounds helpful. I could keep a small note on my phone with those follow-up questions - it would make me feel less anxious about running out of things to say.",
+          "timestamp": "2025-09-29T12:07:32.413703"
+        },
+        {
+          "turn": 10,
+          "speaker": "ai",
+          "content": "That's a smart strategy—using your phone as a subtle safety net can ease pressure. Since you're aiming for that dream internship, what's one art-related student group or event you could attend this month to practice these conversation skills in a low-stakes setting?",
+          "timestamp": "2025-09-29T12:07:37.032083"
+        },
+        {
+          "turn": 11,
+          "speaker": "dummy",
+          "content": "The campus art gallery's new exhibition opening next Friday. It's small enough that I won't get overwhelmed, and everyone there will actually care about art.",
+          "timestamp": "2025-09-29T12:07:49.696627"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 12:07:01.018966",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 40.0,
+        "average_score": 2.0,
+        "improvement_areas": [
+          "I ask for help when I need it.",
+          "I stay calm when dealing with problems.",
+          "I help my friends when they are having a problem."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 12:08:07.573637",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 40.0,
+        "average_score": 2.0,
+        "improvement_areas": [
+          "I ask for help when I need it.",
+          "I stay calm when dealing with problems.",
+          "I help my friends when they are having a problem."
+        ]
+      },
+      "improvement": 0.0,
+      "reflection_insights": [
+        "The mentor effectively identified Alex's core fear of conversation stalls and provided practical, personalized tools. However, the advice remained somewhat tactical, missing a chance to address the deeper mindset that pauses are normal. The key insight is to pair practical preparation with reassurance that conversational lulls are common and not a personal failure."
+      ],
+      "reflection": "The mentor effectively identified Alex's core fear of conversation stalls and provided practical, personalized tools. However, the advice remained somewhat tactical, missing a chance to address the deeper mindset that pauses are normal. The key insight is to pair practical preparation with reassurance that conversational lulls are common and not a personal failure."
+    },
+    {
+      "conversation_id": "conv_2025-09-29_12-09-24_a4eb5d12_290030ff",
+      "timestamp": "2025-09-29T12:09:24.375668",
+      "prompt_id": "290030ff-4537-409a-a70f-dbac6fdf4045",
+      "prompt_name": "G2C03 from G1M01 & G1E00",
+      "generation": 2,
+      "conversation_rounds": 11,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "Hi, thanks for meeting with me. I'm really hoping you can help me figure out how to handle some of the bigger social events on campus without feeling so overwhelmed.",
+          "timestamp": "2025-09-29T12:07:03.986692"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Given your conscientious nature, what's one specific campus event that feels most overwhelming, and what part of it triggers that feeling?",
+          "timestamp": "2025-09-29T12:07:07.049201"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "Honestly, the annual campus club fair is the worst for me—it's the pressure to commit to joining something new when I'm already struggling to balance what I have on my plate.",
+          "timestamp": "2025-09-29T12:07:11.468139"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "That makes perfect sense—your conscientiousness means you take commitments seriously, and overcommitting feels risky. Let's reframe this: treat the club fair like an art gallery visit, not a signing ceremony. Go with the goal to *observe*—chat with 2-3 clubs that align with your dream internship skills, collect info, and leave without joining anything. Schedule a \"decision day\" 48 hours later to review options calmly. This reduces pressure and leverages your thoughtful nature.",
+          "timestamp": "2025-09-29T12:07:16.895044"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "That actually sounds manageable. I could treat it like researching for an art history paper—just gathering information without immediate pressure.",
+          "timestamp": "2025-09-29T12:07:19.063941"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "Exactly! Your research mindset is your superpower here. Since you're organized, bring a small notebook to jot down key details about each club's time commitments and skill-building opportunities. This turns social overwhelm into a structured project, aligning with your goal to land that dream internship. Ready to map out your top 3 clubs to investigate?",
+          "timestamp": "2025-09-29T12:07:23.145896"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "The Art History Association, Museum Studies Club, and maybe the Student Gallery Committee—those would actually help build curatorial experience for my internship goals.",
+          "timestamp": "2025-09-29T12:07:25.895478"
+        },
+        {
+          "turn": 8,
+          "speaker": "ai",
+          "content": "Perfect—your focus on curatorial clubs aligns directly with internship goals. Since you're conscientious, let's channel that into a simple system: For each club, note one concrete skill (e.g., \"event planning\" for the Gallery Committee) and the weekly time commitment. Review these notes in 48 hours—your \"decision day\"—to choose just one to join. This turns anxiety into actionable research. Want to draft your comparison notes now?",
+          "timestamp": "2025-09-29T12:07:31.787671"
+        },
+        {
+          "turn": 9,
+          "speaker": "dummy",
+          "content": "I like that system—it feels structured but not overwhelming. Let me just write down \"curatorial research\" for the Art History Association and \"exhibit design\" for the Gallery Committee while I'm here.",
+          "timestamp": "2025-09-29T12:07:36.435405"
+        },
+        {
+          "turn": 10,
+          "speaker": "ai",
+          "content": "Excellent—you're already transforming anxiety into a focused research project. Since you're conscientious, this structured approach will help you evaluate which club offers the best skill-to-time ratio for your internship goals. Ready to set a calendar reminder for your 48-hour decision review?",
+          "timestamp": "2025-09-29T12:07:49.696951"
+        },
+        {
+          "turn": 11,
+          "speaker": "dummy",
+          "content": "Yeah, I'll set the reminder right now. Having a deadline helps me actually make decisions instead of overthinking.",
+          "timestamp": "2025-09-29T12:09:12.633373"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 12:07:01.012802",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 40.0,
+        "average_score": 2.0,
+        "improvement_areas": [
+          "I ask for help when I need it.",
+          "I stay calm when dealing with problems.",
+          "I help my friends when they are having a problem."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 12:09:14.250296",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 40.0,
+        "average_score": 2.0,
+        "improvement_areas": [
+          "I ask for help when I need it.",
+          "I stay calm when dealing with problems.",
+          "I help my friends when they are having a problem."
+        ]
+      },
+      "improvement": 0.0,
+      "reflection_insights": [
+        "The mentor successfully reframed the overwhelming event into a structured, low-pressure research project, which perfectly leveraged Alex's conscientious nature. However, the coaching missed an opportunity to explore the underlying belief that created the \"pressure to commit\" in the first place. For similar students, pair practical reframing with a brief probe into the root cognitive pattern (e.g., \"What's the worst that happens if you don't join?\") to build even greater resilience."
+      ],
+      "reflection": "The mentor successfully reframed the overwhelming event into a structured, low-pressure research project, which perfectly leveraged Alex's conscientious nature. However, the coaching missed an opportunity to explore the underlying belief that created the \"pressure to commit\" in the first place. For similar students, pair practical reframing with a brief probe into the root cognitive pattern (e.g., \"What's the worst that happens if you don't join?\") to build even greater resilience."
+    },
+    {
+      "conversation_id": "conv_2025-09-29_12-09-33_a4eb5d12_e482db11",
+      "timestamp": "2025-09-29T12:09:33.647253",
+      "prompt_id": "e482db11-40fd-42f2-b218-2b98f40bfd4d",
+      "prompt_name": "G2E00 from G1E00",
+      "generation": 2,
+      "conversation_rounds": 11,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "Hi, thanks for meeting with me. I'm really hoping you can help me figure out how to handle some of the bigger social events on campus without feeling so overwhelmed.",
+          "timestamp": "2025-09-29T12:07:04.471575"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hey Alex! Totally get that big events can feel like a lot. Since you're already low in social anxiety, that's a huge strength—lean into it! Try picking just 1-2 key events per month that align with your goals (like networking for your dream internship). Block out time in your schedule beforehand to prep and afterward to recharge. Small, consistent steps will build your confidence without burning you out. You've got this!",
+          "timestamp": "2025-09-29T12:07:10.761808"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "Honestly, I'm more worried about how I'll manage my study schedule around those events than the socializing itself. Maybe I should just focus on one networking mixer this month instead of trying to do everything.",
+          "timestamp": "2025-09-29T12:07:15.179986"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "That's a smart adjustment! Prioritizing one mixer is a great way to balance social and academic time. Try scheduling a specific 2-hour study block right before or after the event—this protects your study time and reduces stress. You're building a sustainable routine, which is key for managing everything long-term. Keep making those intentional choices!",
+          "timestamp": "2025-09-29T12:07:19.675002"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "Yeah, that makes sense. I've been trying to use my planner more consistently, but I still end up staying late at the library most nights. Maybe if I block out specific times for networking and studying separately, I won't feel so stretched thin.",
+          "timestamp": "2025-09-29T12:07:22.813465"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "Exactly! Time-blocking is a game-changer for avoiding burnout. Try color-coding your planner—one color for classes/study, another for networking/social, and a third for personal time. This visual separation helps you see if you're overloading one area. Start with just one week and adjust as needed. You're already on the right track with self-awareness—that's half the battle!",
+          "timestamp": "2025-09-29T12:07:26.965588"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "I like the color-coding idea - my planner's a mess right now. Maybe I'll try using red for study blocks so I actually respect those times instead of letting social stuff bleed into them.",
+          "timestamp": "2025-09-29T12:07:29.882585"
+        },
+        {
+          "turn": 8,
+          "speaker": "ai",
+          "content": "That's a perfect system—red as a \"do not disturb\" signal for your study blocks is brilliant. It creates a clear boundary that helps protect your academic time. Start with just your top 2 priorities this week, and remember it's okay to adjust colors or times as you go. You're building a structure that works for you, and that's huge progress. Keep going!",
+          "timestamp": "2025-09-29T12:07:34.863235"
+        },
+        {
+          "turn": 9,
+          "speaker": "dummy",
+          "content": "Good, the red blocks will help me stop feeling guilty when I say no to last-minute plans. I'll start with just protecting my morning study sessions this week.",
+          "timestamp": "2025-09-29T12:07:38.483466"
+        },
+        {
+          "turn": 10,
+          "speaker": "ai",
+          "content": "That's a wise approach—starting small with just morning sessions makes it manageable. Protecting that time helps reduce guilt and builds consistency. You're creating healthy boundaries, which is crucial for both academic success and well-being. Keep trusting your system—you've got this!",
+          "timestamp": "2025-09-29T12:07:49.698080"
+        },
+        {
+          "turn": 11,
+          "speaker": "dummy",
+          "content": "That's smart - I'll put red blocks for my library hours right after breakfast. Maybe then I can actually finish my research paper without getting distracted by group chat notifications.",
+          "timestamp": "2025-09-29T12:09:12.632890"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 12:07:01.022654",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 40.0,
+        "average_score": 2.0,
+        "improvement_areas": [
+          "I ask for help when I need it.",
+          "I stay calm when dealing with problems.",
+          "I help my friends when they are having a problem."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 12:09:24.484143",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 40.0,
+        "average_score": 2.0,
+        "improvement_areas": [
+          "I ask for help when I need it.",
+          "I stay calm when dealing with problems.",
+          "I help my friends when they are having a problem."
+        ]
+      },
+      "improvement": 0.0,
+      "reflection_insights": [
+        "The mentor effectively pivoted from social anxiety to the student's real concern: time management, using practical tools like time-blocking. However, they missed exploring *why* the student's schedule still fails, like potential perfectionism or inefficient study habits. The key insight is that for quiet, low-anxiety students, the barrier is often logistical systems, not socialization, so coaching should focus on building sustainable routines."
+      ],
+      "reflection": "The mentor effectively pivoted from social anxiety to the student's real concern: time management, using practical tools like time-blocking. However, they missed exploring *why* the student's schedule still fails, like potential perfectionism or inefficient study habits. The key insight is that for quiet, low-anxiety students, the barrier is often logistical systems, not socialization, so coaching should focus on building sustainable routines."
+    },
+    {
+      "conversation_id": "conv_2025-09-29_13-21-50_a4eb5d12_3963760f",
+      "timestamp": "2025-09-29T13:21:50.127864",
+      "prompt_id": "3963760f-8ca7-43a5-966a-9c6a9d1e0a98",
+      "prompt_name": "Genesis",
+      "generation": 0,
+      "conversation_rounds": 11,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "Hi, thanks for meeting with me. I'm really hoping you can help me figure out how to handle some of the bigger social events on campus without feeling so overwhelmed.",
+          "timestamp": "2025-09-29T13:20:34.773125"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hey Alex! Totally get how big campus events can feel overwhelming. Try breaking them down—maybe attend for just 30 minutes at first, and bring a friend for support. Pick one or two events per month that align with your interests, like art gallery openings, to keep it manageable. Use a planner to block out study time so you don’t feel behind. You’ve got this—small steps build confidence!",
+          "timestamp": "2025-09-29T13:20:39.735300"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "Honestly, I appreciate the advice, but I'm more worried about how these events will eat into my study time. I already struggle to balance everything.",
+          "timestamp": "2025-09-29T13:20:42.135699"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "That's a valid concern. Try treating event time like a study session—schedule it in your planner for a set block (e.g., 1–2 hours max). Use it as a reward after hitting a study goal. This way, you get social time without sacrificing academics. Prioritize events that also build your network for internships or your student org—efficient and productive!",
+          "timestamp": "2025-09-29T13:20:47.271313"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "Yeah, that actually makes sense. I've been trying to use my planner more consistently, but I keep feeling guilty whenever I'm not studying. Maybe if I frame it as networking for my future internship, it'll feel less like wasted time.",
+          "timestamp": "2025-09-29T13:20:50.634306"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "Exactly! Reframing social events as networking opportunities is a smart mindset shift. You're not \"wasting time\"—you're actively building connections for your internship and future career. Keep using that planner to schedule short, focused study blocks, then reward yourself with a purposeful event. This balance is key to success in both academics and your goals. You're on the right track",
+          "timestamp": "2025-09-29T13:20:54.722951"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "That's... actually a relief to hear. I've been so stressed about falling behind that I haven't considered how these events could actually help my career goals. Maybe I'll start with the museum networking night next week - it's only two hours and directly related to art history.",
+          "timestamp": "2025-09-29T13:20:58.087025"
+        },
+        {
+          "turn": 8,
+          "speaker": "ai",
+          "content": "That's a fantastic plan! The museum event is perfect—it directly aligns with your major and internship goals. Two hours is totally manageable. Use your planner to schedule study time before and after, so you can enjoy the event guilt-free. You're not falling behind; you're strategically building your future. Proud of you for taking this step",
+          "timestamp": "2025-09-29T13:21:02.177625"
+        },
+        {
+          "turn": 9,
+          "speaker": "dummy",
+          "content": "Thanks, I needed to hear that. I'll block out study time right before and after the event in my planner - that way I won't stress about unfinished work while I'm there.",
+          "timestamp": "2025-09-29T13:21:05.137027"
+        },
+        {
+          "turn": 10,
+          "speaker": "ai",
+          "content": "That's a smart approach—protecting your study time first makes the networking event feel earned. You're building great habits for balancing academics and career goals. Keep trusting your system!",
+          "timestamp": "2025-09-29T13:21:08.894887"
+        },
+        {
+          "turn": 11,
+          "speaker": "dummy",
+          "content": "Yeah, that structure really helps. I'll make sure to finish my Renaissance art readings before the event so I can actually focus on conversations instead of worrying about deadlines.",
+          "timestamp": "2025-09-29T13:21:12.091077"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 13:20:31.619886",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I listen carefully to what others are saying.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I express my feelings openly.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I start conversations with new people.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle criticism well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well in groups.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I respect others' personal space.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt easily to new situations.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain eye contact during conversations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I use appropriate body language.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I speak clearly and confidently.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I apologize when I've made a mistake.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I accept compliments gracefully.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I share my ideas with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I resolve conflicts peacefully.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow through on commitments.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I recognize others' feelings.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I take turns in conversations.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I feel comfortable in social gatherings.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 57.0,
+        "average_score": 2.85,
+        "improvement_areas": [
+          "I stay calm when dealing with problems.",
+          "I express my feelings openly.",
+          "I start conversations with new people."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 13:21:39.384951",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 61.0,
+        "average_score": 3.05,
+        "improvement_areas": [
+          "I stay calm when dealing with problems.",
+          "I stay calm when I disagree with others.",
+          "I try to find a good way to end a disagreement."
+        ]
+      },
+      "improvement": 0.19999999999999973,
+      "reflection_insights": [
+        "The peer mentor successfully reframed social events as productive networking, which directly addressed Alex's core anxiety about wasting time. The approach could have been improved by first exploring the root of the guilt around non-study time more deeply. The key insight is that for academically anxious students, combining concrete scheduling with a strategic \"purpose\" for socializing is more effective than just suggesting they attend events."
+      ],
+      "reflection": "The peer mentor successfully reframed social events as productive networking, which directly addressed Alex's core anxiety about wasting time. The approach could have been improved by first exploring the root of the guilt around non-study time more deeply. The key insight is that for academically anxious students, combining concrete scheduling with a strategic \"purpose\" for socializing is more effective than just suggesting they attend events."
+    },
+    {
+      "conversation_id": "conv_2025-09-29_13-25-06_a4eb5d12_3a60facc",
+      "timestamp": "2025-09-29T13:25:06.704550",
+      "prompt_id": "3a60facc-bc4a-4148-a9b6-7f8c2b764a0d",
+      "prompt_name": "G1E00 from Genesis",
+      "generation": 1,
+      "conversation_rounds": 11,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "Hi, thanks for meeting with me. I'm really hoping you can help me figure out how to handle some of the bigger social events on campus without feeling so overwhelmed.",
+          "timestamp": "2025-09-29T13:23:48.987739"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hey Alex! Totally get how big events can feel overwhelming. Start by picking just 1-2 events per month that genuinely interest you—quality over quantity. Go with a friend if possible; it eases pressure. Remember, it’s okay to leave early if you need to recharge. Balancing social time with your studies and goals is key, and you’re already being proactive by reaching out—that’s a great first step! You’ve got this.",
+          "timestamp": "2025-09-29T13:23:56.075415"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "Honestly, I appreciate the advice. I'll try focusing on the art department mixer next week since it actually relates to my major.",
+          "timestamp": "2025-09-29T13:23:58.655695"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "That’s a smart move—connecting events to your major makes them feel more purposeful and less intimidating. Try setting a small goal for the mixer, like introducing yourself to one professor or student. Even brief interactions can build your network and confidence. You’re taking great steps toward your internship and student org goals!",
+          "timestamp": "2025-09-29T13:24:02.774581"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "That's actually a good idea. I could try talking to Professor Evans about her museum connections - might help with finding that internship.",
+          "timestamp": "2025-09-29T13:24:05.276198"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "Exactly! That’s a proactive way to turn a social event into a career opportunity. Prepare a question or two in advance so you feel confident approaching her. Even a short chat could open doors. Keep aligning your social efforts with your goals—you’re on the right track!",
+          "timestamp": "2025-09-29T13:24:08.821542"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "I'll practice introducing myself to Professor Evans beforehand so I don't freeze up. It's just one conversation, but it feels like so much pressure.",
+          "timestamp": "2025-09-29T13:24:11.846147"
+        },
+        {
+          "turn": 8,
+          "speaker": "ai",
+          "content": "That's a perfect strategy—practicing really helps ease nerves. Remember, professors expect students to ask questions, and Professor Evans will likely appreciate your initiative. Deep breaths, and focus on your genuine interest in her work. You're turning anxiety into action, which is exactly how growth happens. You can do this",
+          "timestamp": "2025-09-29T13:24:17.893417"
+        },
+        {
+          "turn": 9,
+          "speaker": "dummy",
+          "content": "Thanks, that helps. I'll just keep reminding myself it's a normal student-professor conversation, not some high-stakes interview.",
+          "timestamp": "2025-09-29T13:24:21.107178"
+        },
+        {
+          "turn": 10,
+          "speaker": "ai",
+          "content": "Exactly! Keeping it low-pressure is key. You belong there just as much as anyone else. Let your curiosity guide the conversation, and remember—one small step like this builds momentum for bigger goals. You've got this, Alex!",
+          "timestamp": "2025-09-29T13:24:26.675727"
+        },
+        {
+          "turn": 11,
+          "speaker": "dummy",
+          "content": "Yeah, you're right. I just need to remember she's probably had way more awkward conversations with students before. I'll focus on asking about her recent museum work.",
+          "timestamp": "2025-09-29T13:24:29.886320"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 13:23:45.210599",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I listen carefully when others are speaking.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I express my feelings clearly.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I start conversations with new people.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle criticism well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well in groups.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I respect others' opinions even when I disagree.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I manage my time effectively.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt easily to new situations.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I solve conflicts peacefully.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I give compliments to others.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I accept responsibility for my mistakes.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I feel confident in social settings.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I share my ideas with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I understand how others are feeling.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow through on commitments.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle stress in healthy ways.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I make eye contact when speaking.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I feel comfortable saying \"no\" when needed.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 54.0,
+        "average_score": 2.7,
+        "improvement_areas": [
+          "I stay calm when dealing with problems.",
+          "I start conversations with new people.",
+          "I handle criticism well."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 13:24:57.898306",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 62.0,
+        "average_score": 3.1,
+        "improvement_areas": [
+          "I stay calm when dealing with problems.",
+          "I stay calm when I disagree with others.",
+          "I let people know when there's a problem."
+        ]
+      },
+      "improvement": 0.3999999999999999,
+      "reflection_insights": [
+        "The mentor effectively grounded advice in Alex's specific goals, making it actionable. However, they missed an opportunity to explore the root of the \"pressure\" Alex felt, which could have uncovered deeper anxieties. The key insight is that connecting social efforts to a student's intrinsic interests and goals transforms them from obligatory to purposeful."
+      ],
+      "reflection": "The mentor effectively grounded advice in Alex's specific goals, making it actionable. However, they missed an opportunity to explore the root of the \"pressure\" Alex felt, which could have uncovered deeper anxieties. The key insight is that connecting social efforts to a student's intrinsic interests and goals transforms them from obligatory to purposeful."
+    },
+    {
+      "conversation_id": "conv_2025-09-29_13-25-27_a4eb5d12_63106b15",
+      "timestamp": "2025-09-29T13:25:27.281539",
+      "prompt_id": "63106b15-95ce-4c56-9192-f055f75c4e80",
+      "prompt_name": "G1M01 from Genesis",
+      "generation": 1,
+      "conversation_rounds": 11,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "Hi, thanks for meeting with me. I’m really hoping you can help me figure out how to handle some of the bigger social events on campus without feeling so overwhelmed.",
+          "timestamp": "2025-09-29T13:23:48.917515"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hey Alex! It sounds like your fear of being overwhelmed is making these events feel bigger than they are. Try reframing: \"I'm choosing to connect, not perform.\" For a small first step, just attend for 15 minutes—you can always leave after. You've got this!",
+          "timestamp": "2025-09-29T13:23:54.995786"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "Honestly, I appreciate the advice, but it's not really the social part that overwhelms me—it's the time commitment. I'm already struggling to balance my art history readings with my student organization meetings.",
+          "timestamp": "2025-09-29T13:23:59.127628"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "That makes sense—your worry might be coming from the thought, \"If I go, I'll fall behind.\" Try reframing: \"A short break can recharge me, not derail me.\" For a small step, block out just 20 minutes for an event in your schedule, then return to work guilt-free. You're in control of your time!",
+          "timestamp": "2025-09-29T13:24:03.749611"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "You're right, I do need to schedule breaks more intentionally. But honestly, even blocking out 20 minutes stresses me out because I know how quickly my study time slips away.",
+          "timestamp": "2025-09-29T13:24:07.617098"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "That's the \"all-or-nothing\" thinking—where any break feels like failure. Reframe: \"Small breaks protect my focus, not steal it.\" Try this: Set a timer for 20 minutes of focused studying first, then reward yourself with 10 minutes at the event. You're building balance, not losing control.",
+          "timestamp": "2025-09-29T13:24:13.199777"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "That actually makes sense—I've been treating every minute like it has to be productive. Maybe if I see the event as a reward instead of a distraction, it won't feel so stressful.",
+          "timestamp": "2025-09-29T13:24:16.814892"
+        },
+        {
+          "turn": 8,
+          "speaker": "ai",
+          "content": "Exactly! You're shifting from \"time lost\" to \"energy gained.\" Reframe: \"My productivity includes rest and connection.\" Small step: Try this reward method just once this week—notice how you feel afterward. You're designing a sustainable rhythm, not just a schedule.",
+          "timestamp": "2025-09-29T13:24:22.265196"
+        },
+        {
+          "turn": 9,
+          "speaker": "dummy",
+          "content": "You get it—I've been treating rest like it's stealing from my study time. I'll try the timer method tomorrow before the gallery opening.",
+          "timestamp": "2025-09-29T13:24:25.960196"
+        },
+        {
+          "turn": 10,
+          "speaker": "ai",
+          "content": "That's a powerful insight—rest fuels your art, not robs from it. Reframe: \"My best work comes from a balanced mind.\" Small step: After the gallery, jot down one way this break helped your focus or creativity. You're not just managing time; you're cultivating an artist's mindset.",
+          "timestamp": "2025-09-29T13:24:31.146507"
+        },
+        {
+          "turn": 11,
+          "speaker": "dummy",
+          "content": "I'll try that approach. Honestly, the gallery opening might actually help my art history studies more than staring at textbooks for another hour would.",
+          "timestamp": "2025-09-29T13:24:35.133253"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 13:23:45.062120",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I listen carefully when others speak.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I express my feelings clearly.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I start conversations with new people.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle criticism well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well in groups.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I respect others' opinions even when I disagree.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I manage my time effectively.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt easily to new situations.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I give compliments to others.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I accept compliments gracefully.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I apologize when I'm wrong.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain eye contact during conversations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I speak clearly and confidently.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle conflicts constructively.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I remember people's names.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I share my ideas in group settings.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I show interest in others' lives.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain positive relationships.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 55.0,
+        "average_score": 2.75,
+        "improvement_areas": [
+          "I stay calm when dealing with problems.",
+          "I start conversations with new people.",
+          "I handle criticism well."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+        "timestamp": "2025-09-29 13:25:16.253570",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 59.0,
+        "average_score": 2.95,
+        "improvement_areas": [
+          "I stay calm when dealing with problems.",
+          "I stay calm when I disagree with others.",
+          "I look at people when I talk to them."
+        ]
+      },
+      "improvement": 0.20000000000000018,
+      "reflection_insights": [
+        "You excelled at pivoting from social anxiety to time management once Alex clarified the real issue, and your cognitive reframes about breaks were effective. Initially missing that the core worry was time, not socializing, caused a brief misalignment. The key insight is to quickly diagnose the specific distortion (e.g., \"all-or-nothing productivity\") rather than assuming the problem based on the student's opening statement."
+      ],
+      "reflection": "You excelled at pivoting from social anxiety to time management once Alex clarified the real issue, and your cognitive reframes about breaks were effective. Initially missing that the core worry was time, not socializing, caused a brief misalignment. The key insight is to quickly diagnose the specific distortion (e.g., \"all-or-nothing productivity\") rather than assuming the problem based on the student's opening statement."
     }
   ]
 }

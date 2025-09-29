@@ -20,7 +20,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from config import Config
 from prompt_optimizer import PromptOptimizer
 # CharacterGenerator removed - using existing dummies only
-from assessment_system import AssessmentSystem
+from assessment_system_llm_based import AssessmentSystemLLMBased as AssessmentSystem
 from conversation_simulator import ConversationSimulator
 # experiment_manager removed - using direct file operations
 
@@ -138,7 +138,7 @@ async def run_gepa_test(config: Dict[str, Any] = None):
     print(f"✅ Converted {len(ai_dummies)} dummies to AIDummy objects")
     
     # Initialize systems
-    assessment_system = AssessmentSystem()
+    assessment_system = AssessmentSystem(api_key=Config.DEEPSEEK_API_KEY)
     conversation_system = ConversationSimulator()
     
     # Create new prompt for this test run (fresh start)

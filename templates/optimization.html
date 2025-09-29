@@ -76,6 +76,37 @@
             <p class="mb-0">AI Dummies • Test Runs • Component Discovery</p>
         </div>
 
+        <!-- Experiment Selection -->
+        <div class="row mb-4">
+            <div class="col-md-8 mx-auto">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-flask me-2"></i>Select GEPA Experiment</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <select id="experiment-select" class="form-select">
+                                    <option value="">Loading experiments...</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <button id="load-experiment-btn" class="btn btn-success w-100" disabled>
+                                    <i class="fas fa-play me-2"></i>Load Experiment
+                                </button>
+                            </div>
+                        </div>
+                        <div id="experiment-info" class="mt-3" style="display: none;">
+                            <small class="text-muted">
+                                <i class="fas fa-info-circle me-1"></i>
+                                <span id="experiment-details"></span>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Best Results Chart -->
         <div class="chart-container">
             <h5 class="text-center mb-3"><i class="fas fa-chart-line me-2"></i>Best Performance by Generation</h5>
@@ -95,8 +126,106 @@
     <script>
         // Load optimization results on page load
         document.addEventListener('DOMContentLoaded', function() {
+            loadExperimentList();
             loadOptimizationResults();
         });
+
+        // Experiment selection functionality
+        function loadExperimentList() {
+            fetch('/api/gepa_experiments')
+                .then(response => response.json())
+                .then(experiments => {
+                    const select = document.getElementById('experiment-select');
+                    select.innerHTML = '<option value="">Select a GEPA experiment...</option>';
+                    
+                    experiments.forEach(exp => {
+                        const option = document.createElement('option');
+                        option.value = exp.filename;
+                        option.textContent = `${exp.name} (${exp.date})`;
+                        select.appendChild(option);
+                    });
+                    
+                    if (experiments.length > 0) {
+                        // Auto-select the first (most recent) experiment
+                        select.value = experiments[0].filename;
+                        updateExperimentInfo(experiments[0]);
+                        document.getElementById('load-experiment-btn').disabled = false;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading experiment list:', error);
+                    document.getElementById('experiment-select').innerHTML = 
+                        '<option value="">Error loading experiments</option>';
+                });
+        }
+
+        function updateExperimentInfo(experiment) {
+            const details = document.getElementById('experiment-details');
+            const info = document.getElementById('experiment-info');
+            
+            details.textContent = `${experiment.test_name} • ${experiment.dummies_count} dummies • ${experiment.conversation_rounds} rounds • ${experiment.generations} generations`;
+            info.style.display = 'block';
+        }
+
+        function loadSelectedExperiment() {
+            const select = document.getElementById('experiment-select');
+            const filename = select.value;
+            
+            if (!filename) {
+                alert('Please select an experiment to load.');
+                return;
+            }
+            
+            // Show loading state
+            document.getElementById('generationsContainer').innerHTML = `
+                <div class="text-center">
+                    <i class="fas fa-spinner fa-spin fa-2x mb-3"></i>
+                    <p>Loading experiment data...</p>
+                </div>
+            `;
+            
+            fetch(`/api/gepa_experiment/${filename}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Update the page title with experiment info
+                    const expInfo = data.test_config || {};
+                    document.querySelector('.generation-header h2').innerHTML = 
+                        `<i class="fas fa-brain me-2"></i>GEPA Experiment: ${expInfo.test_name || 'Unknown'}`;
+                    document.querySelector('.generation-header p').textContent = 
+                        `${expInfo.dummies_count || '?'} Dummies • ${expInfo.conversation_rounds || '?'} Rounds • ${expInfo.generations || '?'} Generations`;
+                    
+                    // Display the optimization data
+                    const optimizationData = data.optimization || data;
+                    displayGenerationsOverview(optimizationData);
+                    initializeGenerationChart(optimizationData);
+                })
+                .catch(error => {
+                    console.error('Error loading experiment:', error);
+                    document.getElementById('generationsContainer').innerHTML = 
+                        '<div class="text-center text-danger"><i class="fas fa-exclamation-triangle me-2"></i>Error loading experiment data: ' + error.message + '</div>';
+                });
+        }
+
+        // Event listeners
+        document.getElementById('experiment-select').addEventListener('change', function() {
+            const selectedOption = this.options[this.selectedIndex];
+            const loadBtn = document.getElementById('load-experiment-btn');
+            
+            if (this.value) {
+                loadBtn.disabled = false;
+                // You could add experiment info display here if needed
+            } else {
+                loadBtn.disabled = true;
+                document.getElementById('experiment-info').style.display = 'none';
+            }
+        });
+
+        document.getElementById('load-experiment-btn').addEventListener('click', loadSelectedExperiment);
 
         function loadOptimizationResults() {
             fetch('/api/optimization')
@@ -298,6 +427,12 @@
 
             const ctx = document.getElementById('generationChart');
             if (!ctx) return;
+            
+            // Destroy existing chart if it exists
+            if (window.generationChartInstance) {
+                window.generationChartInstance.destroy();
+                window.generationChartInstance = null;
+            }
 
             // Group by generation and find best performance
             const generations = {};
@@ -320,7 +455,7 @@
                 return bestPrompt.performance_metrics?.avg_improvement || 0;
             });
 
-            new Chart(ctx, {
+            window.generationChartInstance = new Chart(ctx, {
                 type: 'line',
                 data: {
                     labels: labels.map(gen => `Generation ${gen}`),
