@@ -48,6 +48,11 @@ class OptimizedPrompt:
     pareto_rank: int
     created_at: datetime
     last_tested: Optional[datetime]
+    # Reference-based inheritance fields
+    ancestor_conversations: Optional[str] = None  # Reference to ancestor's conversation data
+    ancestor_synthesis: Optional[str] = None      # Reference to ancestor's synthesis analysis
+    is_elite_inherited: bool = False              # Flag to indicate inheritance
+    ancestor_id: Optional[str] = None             # ID of the ancestor prompt
 
 @dataclass
 class OptimizationResult:
@@ -103,6 +108,9 @@ class PromptOptimizer:
         from config import Config
         self.assessment_system = AssessmentSystem(api_key=Config.DEEPSEEK_API_KEY)
         self.conversation_simulator = ConversationSimulator()
+        
+        # Baseline assessment cache - one per dummy across all prompt tests
+        self.baseline_assessments: Dict[str, Assessment] = {}
         
         # Pareto frontier tracking
         self.pareto_frontier: List[OptimizedPrompt] = []
@@ -295,8 +303,14 @@ class PromptOptimizer:
         """Test a specific prompt with a specific dummy"""
         print(f"🧪 Testing prompt '{prompt.name}' with {dummy.name}...")
         
-        # Generate pre-assessment
-        pre_assessment = await self.assessment_system.generate_pre_assessment(dummy)
+        # Use cached baseline assessment or generate new one
+        if dummy.id not in self.baseline_assessments:
+            print(f"📝 Generating baseline assessment for {dummy.name} (first time)...")
+            pre_assessment = await self.assessment_system.generate_pre_assessment(dummy)
+            self.baseline_assessments[dummy.id] = pre_assessment
+        else:
+            print(f"📋 Using cached baseline assessment for {dummy.name}")
+            pre_assessment = self.baseline_assessments[dummy.id]
         
         # Simulate conversation with the prompt
         conversation = await self.conversation_simulator.simulate_conversation_async(
@@ -564,7 +578,7 @@ Be concise and actionable. No verbose analysis.
                     "model": Config.DEEPSEEK_REASONER_MODEL,
                     "messages": [{"role": "user", "content": synthesis_prompt}],
                     "temperature": 0.2,  # Very low temperature for focused analysis
-                    "max_tokens": 300  # Reduced for concise responses
+                    "max_tokens": 1200  # Increased for mutation to ensure complete response  # Reduced for concise responses
                 },
                 timeout=60  # Increased timeout for R1 model
             )
@@ -625,6 +639,65 @@ Be concise and actionable. No verbose analysis.
         except Exception as e:
             print(f"⚠️  Failed to save synthesis analysis: {e}")
     
+    def get_conversation_data(self, prompt: OptimizedPrompt) -> List[Dict[str, Any]]:
+        """Get conversation data for a prompt, handling inheritance"""
+        if prompt.is_elite_inherited and prompt.ancestor_conversations:
+            # Load from ancestor's data using pattern matching
+            try:
+                conversations = conversation_storage.get_conversations_by_prompt(prompt.ancestor_id)
+                print(f"   📂 Loaded {len(conversations)} conversations from ancestor {prompt.ancestor_id}")
+                return conversations
+            except Exception as e:
+                print(f"   ⚠️  Failed to load ancestor conversations: {e}")
+                return []
+        else:
+            # Load from own data
+            try:
+                conversations = conversation_storage.get_conversations_by_prompt(prompt.id)
+                return conversations
+            except Exception as e:
+                print(f"   ⚠️  Failed to load own conversations: {e}")
+                return []
+    
+    def get_synthesis_analysis(self, prompt: OptimizedPrompt) -> str:
+        """Get synthesis analysis for a prompt, handling inheritance"""
+        if prompt.is_elite_inherited and prompt.ancestor_synthesis:
+            # Load from ancestor's synthesis file
+            try:
+                synthesis_file = f"data/synthesis_analysis/synthesis_analysis_{prompt.ancestor_id}.json"
+                if os.path.exists(synthesis_file):
+                    with open(synthesis_file, 'r', encoding='utf-8') as f:
+                        data = json.load(f)
+                    synthesis = data.get('synthesis_analysis', 'No synthesis available')
+                    print(f"   📂 Loaded synthesis from ancestor {prompt.ancestor_id}")
+                    return synthesis
+                else:
+                    print(f"   ⚠️  Ancestor synthesis file not found: {synthesis_file}")
+                    return "No synthesis available - ancestor file not found"
+            except Exception as e:
+                print(f"   ⚠️  Failed to load ancestor synthesis: {e}")
+                return f"Synthesis loading failed - {str(e)}"
+        else:
+            # Generate synthesis from own conversations
+            return self._synthesize_prompt_reflection(prompt)
+    
+    def get_display_info(self, prompt: OptimizedPrompt) -> Dict[str, Any]:
+        """Get complete display information for a prompt, handling inheritance"""
+        conversations = self.get_conversation_data(prompt)
+        synthesis = self.get_synthesis_analysis(prompt)
+        
+        return {
+            "prompt": prompt,
+            "conversations": conversations,
+            "synthesis": synthesis,
+            "inheritance_info": {
+                "is_inherited": prompt.is_elite_inherited,
+                "ancestor_id": prompt.ancestor_id,
+                "conversation_count": len(conversations),
+                "inheritance_type": "ancestor_reference" if prompt.is_elite_inherited else "own_data"
+            }
+        }
+
     def _save_incremental_results(self) -> None:
         """Save current optimization results incrementally"""
         try:
@@ -649,7 +722,7 @@ Be concise and actionable. No verbose analysis.
                     "total_prompts": len(self.all_prompts),
                     "pareto_frontier_size": len(self.pareto_frontier),
                     "total_tests": len(self.optimization_history),
-                    "average_improvement": sum(h.get('improvement', 0) for h in self.optimization_history) / len(self.optimization_history) if self.optimization_history else 0
+                    "average_improvement": sum(getattr(h, 'improvement', 0) if hasattr(h, 'improvement') else h.get('improvement', 0) if isinstance(h, dict) else 0 for h in self.optimization_history) / len(self.optimization_history) if self.optimization_history else 0
                 }
             }
             
@@ -673,7 +746,12 @@ Be concise and actionable. No verbose analysis.
             "performance_metrics": prompt.performance_metrics,
             "pareto_rank": getattr(prompt, 'pareto_rank', None),
             "created_at": prompt.created_at.isoformat() if hasattr(prompt, 'created_at') else None,
-            "last_tested": prompt.last_tested.isoformat() if hasattr(prompt, 'last_tested') and prompt.last_tested else None
+            "last_tested": prompt.last_tested.isoformat() if hasattr(prompt, 'last_tested') and prompt.last_tested else None,
+            # Inheritance fields - use actual values from the prompt object
+            "ancestor_conversations": prompt.ancestor_conversations,
+            "ancestor_synthesis": prompt.ancestor_synthesis,
+            "is_elite_inherited": prompt.is_elite_inherited,
+            "ancestor_id": prompt.ancestor_id
         }
     
     def _identify_factors(self, 
@@ -833,17 +911,31 @@ Be concise and actionable. No verbose analysis.
         print(f"   ⚡ Executing {len(prompt_tasks)} prompt tests in parallel...")
         await asyncio.gather(*prompt_tasks, return_exceptions=True)
         
-        # Generate synthesis analysis for newly tested prompts
+        # Generate synthesis analysis for newly tested prompts in parallel
         print(f"   🧠 Generating synthesis analysis for tested prompts...")
-        for prompt in untested_prompts:
-            # Check if prompt has conversations (was successfully tested)
+        
+        async def generate_synthesis_for_prompt(prompt):
+            """Generate synthesis analysis for a single prompt"""
             conversations = conversation_storage.get_conversations_by_prompt(prompt.id)
             if conversations:
                 print(f"   🧠 Generating synthesis for {prompt.name} ({len(conversations)} conversations)")
                 synthesis = self._synthesize_prompt_reflection(prompt)
                 self._save_synthesis_analysis(prompt, synthesis)
+                return f"✅ {prompt.name}"
             else:
                 print(f"   ⏭️  Skipping {prompt.name} - no conversations available")
+                return f"⏭️ {prompt.name}"
+        
+        # Run all synthesis analyses in parallel
+        synthesis_tasks = [generate_synthesis_for_prompt(prompt) for prompt in untested_prompts]
+        synthesis_results = await asyncio.gather(*synthesis_tasks, return_exceptions=True)
+        
+        # Log results
+        for result in synthesis_results:
+            if isinstance(result, str):
+                print(f"   {result}")
+            else:
+                print(f"   ❌ Synthesis error: {result}")
         
         # Update Pareto frontier
         self._update_pareto_frontier()
@@ -899,22 +991,55 @@ Be concise and actionable. No verbose analysis.
         
         new_population = []
         
-        # Keep Pareto frontier members (elite preservation)
+        # Keep Pareto frontier members (elite preservation with reference-based inheritance)
         for prompt in self.pareto_frontier:
             # Create elite prompt with genealogy tracking
             elite_node = genealogy_tracker.create_elite_prompt(prompt.id, current_generation)
-            # Use the clean name from genealogy tracker
-            new_prompt = OptimizedPrompt(
-                id=elite_node.id,
-                name=elite_node.name,
-                prompt_text=prompt.prompt_text,
-                components=prompt.components.copy(),
-                generation=current_generation,
-                performance_metrics={},
-                pareto_rank=0,
-                created_at=datetime.now(),
-                last_tested=None
-            )
+            
+            # Determine if this is an inherited elite or a new elite
+            # Elite prompts from previous generations should inherit their ancestor's data
+            is_inherited = prompt.is_elite_inherited or (prompt.generation < current_generation)
+            
+            if is_inherited:
+                # This is an inherited elite - use references to ancestor data
+                ancestor_id = prompt.ancestor_id or prompt.id
+                new_prompt = OptimizedPrompt(
+                    id=elite_node.id,
+                    name=elite_node.name,
+                    prompt_text=prompt.prompt_text,
+                    components=prompt.components.copy(),
+                    generation=current_generation,
+                    performance_metrics=prompt.performance_metrics.copy(),  # Preserve performance metrics
+                    pareto_rank=0,
+                    created_at=datetime.now(),
+                    last_tested=prompt.last_tested,  # Preserve test status to avoid retesting
+                    # Reference-based inheritance
+                    ancestor_conversations=f"conv_{ancestor_id}_*",  # Pattern matching for conversations
+                    ancestor_synthesis=f"synthesis_{ancestor_id}",   # Reference to synthesis file
+                    is_elite_inherited=True,
+                    ancestor_id=ancestor_id
+                )
+                print(f"   🔗 Elite inherited: {prompt.name} → {new_prompt.name} (refs {ancestor_id})")
+            else:
+                # This is a new elite - use own data
+                new_prompt = OptimizedPrompt(
+                    id=elite_node.id,
+                    name=elite_node.name,
+                    prompt_text=prompt.prompt_text,
+                    components=prompt.components.copy(),
+                    generation=current_generation,
+                    performance_metrics=prompt.performance_metrics.copy(),  # Preserve performance metrics
+                    pareto_rank=0,
+                    created_at=datetime.now(),
+                    last_tested=prompt.last_tested,  # Preserve test status to avoid retesting
+                    # No inheritance - use own data
+                    ancestor_conversations=None,
+                    ancestor_synthesis=None,
+                    is_elite_inherited=False,
+                    ancestor_id=None
+                )
+                print(f"   🏆 Elite preserved: {prompt.name} → {new_prompt.name}")
+            
             new_population.append(new_prompt)
         
         # TRUE GEPA: Exponential population growth capped at 8
@@ -1029,29 +1154,18 @@ Be concise and actionable. No verbose analysis.
         print(f"   🤖 Analyzing crossover with synthesis: {parent1.name} + {parent2.name}")
         
         crossover_prompt = f"""
-You are an expert prompt engineer creating a system prompt that combines the strengths of two parent prompts based on comprehensive conversation analysis.
+Combine these two system prompts into one better prompt:
 
-PARENT 1 SYSTEM PROMPT: "{parent1.prompt_text}"
-PARENT 1 PERFORMANCE: {avg_improvement1:+.2f} points improvement
-PARENT 1 SYNTHESIS ANALYSIS (based on actual conversations):
-{synthesis1}
+PROMPT 1: "{parent1.prompt_text}"
+PROMPT 2: "{parent2.prompt_text}"
 
-PARENT 2 SYSTEM PROMPT: "{parent2.prompt_text}"
-PARENT 2 PERFORMANCE: {avg_improvement2:+.2f} points improvement
-PARENT 2 SYNTHESIS ANALYSIS (based on actual conversations):
-{synthesis2}
+Create a new system prompt that:
+1. MUST start with "You are..."
+2. Combines the best parts of both prompts
+3. Is effective for social skills coaching
+4. Keep it concise (1-3 sentences)
 
-TASK: Create a new system prompt that:
-1. MUST start with "You are..." (system prompt format)
-2. Combines the best strengths identified in both synthesis analyses
-3. Addresses weaknesses from both parents by learning from their conversation performance
-4. Incorporates the most effective techniques from both parents' conversation analysis
-5. Is effective for social skills coaching
-6. Keep it concise but effective (aim for 1-3 sentences, maximum 200 words)
-
-Focus on creating a prompt that is better than both parents by combining their conversation-based insights and addressing their identified weaknesses.
-
-Respond with ONLY the new system prompt text, no explanations.
+CRITICAL: Respond with ONLY the system prompt text that starts with "You are...". No explanations.
 """
         
         try:
@@ -1070,7 +1184,7 @@ Respond with ONLY the new system prompt text, no explanations.
                     "model": Config.DEEPSEEK_REASONER_MODEL,  # Use reasoner model for better crossover generation
                     "messages": [{"role": "user", "content": crossover_prompt}],
                     "temperature": 0.7,  # Higher temperature for more creative combinations
-                    "max_tokens": 300
+                    "max_tokens": 1200  # Increased for crossover to ensure complete response
                 },
                 timeout=60  # Increased timeout for reasoner model
             )
@@ -1080,12 +1194,19 @@ Respond with ONLY the new system prompt text, no explanations.
             if response.status_code == 200:
                 result = response.json()
                 if 'choices' in result and len(result['choices']) > 0:
-                    child_prompt_text = result['choices'][0]['message']['content'].strip()
+                    message = result['choices'][0]['message']
+                    # DeepSeek Reasoner returns actual response in 'content' field
+                    child_prompt_text = message.get('content', '').strip()
+                    
+                    # If content is empty, fall back to reasoning_content (shouldn't happen with proper token limits)
+                    if not child_prompt_text and 'reasoning_content' in message:
+                        child_prompt_text = message['reasoning_content'].strip()
+                    
                     print(f"   ✅ {Config.DEEPSEEK_REASONER_MODEL} generated: {child_prompt_text[:100]}...")
                     
                     # Validate system prompt format
-                    if not child_prompt_text.strip().lower().startswith("you are"):
-                        print(f"   ❌ Generated prompt not a system prompt: {child_prompt_text[:50]}...")
+                    if not child_prompt_text.strip().lower().startswith("you are") or len(child_prompt_text.strip()) < 20:
+                        print(f"   ❌ Generated prompt not a system prompt or too short: {child_prompt_text[:50]}...")
                         print(f"   ⏭️  Skipping this crossover - quality requirement not met")
                         return None
                     
@@ -1129,7 +1250,7 @@ Respond with ONLY the new system prompt text, no explanations.
         
         return child_prompt
 
-    def _mutate_prompt(self, parent: OptimizedPrompt) -> OptimizedPrompt:
+    def _mutate_prompt(self, parent: OptimizedPrompt, max_retries: int = 3) -> OptimizedPrompt:
         """Create a mutated version of a parent prompt using GEPA synthesis analysis"""
         
         # Generate synthesis analysis for the parent prompt
@@ -1168,7 +1289,7 @@ TASK: Create an improved system prompt that:
 
 Focus on making meaningful improvements based on the actual conversation performance analysis, not just numerical scores.
 
-Respond with ONLY the improved system prompt text, no explanations.
+CRITICAL: Your response must be ONLY the system prompt text that starts with "You are...". Do not include any reasoning, analysis, or explanations. Just the prompt text.
 """
         
         try:
@@ -1186,7 +1307,7 @@ Respond with ONLY the improved system prompt text, no explanations.
                     "model": Config.DEEPSEEK_REASONER_MODEL,  # Use reasoner model for better mutation generation
                     "messages": [{"role": "user", "content": mutation_prompt}],
                     "temperature": 0.6,  # Slightly lower temperature for more focused mutations
-                    "max_tokens": 300  # Increased for complete responses but still limited
+                    "max_tokens": 1200  # Increased for mutation to ensure complete response  # Increased for complete responses but still limited
                 },
                 timeout=60  # Increased timeout for reasoner model
             )
@@ -1195,14 +1316,22 @@ Respond with ONLY the improved system prompt text, no explanations.
             
             if response.status_code == 200:
                 result = response.json()
-                print(f"   📝 API Response: {result}")
+                # print(f"   📝 API Response: {result}")
                 if 'choices' in result and len(result['choices']) > 0:
-                    mutated_prompt_text = result['choices'][0]['message']['content'].strip()
+                    message = result['choices'][0]['message']
+                    # DeepSeek Reasoner returns actual response in 'content' field
+                    mutated_prompt_text = message.get('content', '').strip()
+                    
+                    # If content is empty, fall back to reasoning_content (shouldn't happen with proper token limits)
+                    if not mutated_prompt_text and 'reasoning_content' in message:
+                        mutated_prompt_text = message['reasoning_content'].strip()
+                    
+                    
                     print(f"   ✅ {Config.DEEPSEEK_REASONER_MODEL} generated: {mutated_prompt_text[:100]}...")
                     
                     # Validate system prompt format
-                    if not mutated_prompt_text.strip().lower().startswith("you are"):
-                        print(f"   ❌ Generated prompt not a system prompt: {mutated_prompt_text[:50]}...")
+                    if not mutated_prompt_text.strip().lower().startswith("you are") or len(mutated_prompt_text.strip()) < 20:
+                        print(f"   ❌ Generated prompt not a system prompt or too short: {mutated_prompt_text[:50]}...")
                         print(f"   ⏭️  Skipping this mutation - quality requirement not met")
                         return None
                     

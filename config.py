@@ -26,6 +26,9 @@ class Config:
     MAX_TOKENS_PER_RESPONSE = 300  # Increased for DeepSeek R1 reasoning
     MAX_POPULATION_SIZE = 20  # Maximum number of prompts per generation
     
+    # Feature Toggles
+    ENABLE_PERSONALITY_EVOLUTION = False  # Toggle for dummy personality evolution during conversations
+    
     # Character Generation Parameters
     PERSONALITY_DIMENSIONS = {
         "extraversion": {"min": 1, "max": 10, "description": "Outgoing vs. Reserved"},

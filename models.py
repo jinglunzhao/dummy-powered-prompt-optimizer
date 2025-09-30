@@ -44,6 +44,44 @@ class SocialAnxietyProfile(BaseModel):
         else:
             return "severe"
 
+class PersonalityEvolution(BaseModel):
+    """
+    Track personality changes over time
+    
+    Note: This is a framework for future implementation. The current focus should be on
+    evolving fears, challenges, behaviors, and anxiety triggers rather than Big Five 
+    personality traits, as the latter are more stable and harder to change.
+    
+    Future enhancements should include:
+    - Conversation memory tracking
+    - Fear/challenge/behavior evolution
+    - Anxiety trigger modification
+    - Conversation history integration
+    """
+    original_personality: PersonalityProfile
+    current_personality: PersonalityProfile
+    evolution_history: List[Dict[str, Any]] = Field(default_factory=list)
+    last_updated: datetime = Field(default_factory=datetime.now)
+    
+    def evolve_personality(self, changes: Dict[str, float], reason: str) -> None:
+        """Apply personality changes with tracking"""
+        # Store current state in history
+        self.evolution_history.append({
+            "timestamp": datetime.now(),
+            "previous_personality": self.current_personality.dict(),
+            "changes": changes,
+            "reason": reason
+        })
+        
+        # Apply changes (clamped to valid ranges)
+        for trait, change in changes.items():
+            if hasattr(self.current_personality, trait):
+                current_value = getattr(self.current_personality, trait)
+                new_value = max(1, min(10, current_value + change))
+                setattr(self.current_personality, trait, int(new_value))
+        
+        self.last_updated = datetime.now()
+
 class AIDummy(BaseModel):
     """AI Dummy character for social skills testing"""
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
@@ -61,9 +99,17 @@ class AIDummy(BaseModel):
     behaviors: List[str]
     created_at: datetime = Field(default_factory=datetime.now)
     
+    # Personality evolution system (optional)
+    personality_evolution: Optional[PersonalityEvolution] = None
+    
     def get_character_summary(self) -> str:
         """Get a concise character summary for AI interactions"""
-        dominant_traits = self.personality.get_dominant_traits()
+        # Use evolved personality if available and enabled, otherwise use original
+        personality_to_use = self.personality
+        if self.personality_evolution and self._is_personality_evolution_enabled():
+            personality_to_use = self.personality_evolution.current_personality
+        
+        dominant_traits = personality_to_use.get_dominant_traits()
         anxiety_category = self.social_anxiety.get_anxiety_category()
         
         return f"""You are {self.name}, a {self.age}-year-old {self.student_type} studying {self.major} at {self.university}. 
@@ -71,6 +117,45 @@ class AIDummy(BaseModel):
         You experience {anxiety_category} social anxiety and struggle with {', '.join(self.challenges)}. 
         Your main fears include {', '.join(self.fears[:2])}. 
         You want to improve your {', '.join(self.goals[:2])}."""
+    
+    def _is_personality_evolution_enabled(self) -> bool:
+        """Check if personality evolution is enabled in config"""
+        try:
+            from config import Config
+            return Config.ENABLE_PERSONALITY_EVOLUTION
+        except ImportError:
+            return False
+    
+    def initialize_personality_evolution(self) -> None:
+        """Initialize personality evolution tracking"""
+        if not self._is_personality_evolution_enabled():
+            return  # Skip initialization if disabled
+        
+        if not self.personality_evolution:
+            self.personality_evolution = PersonalityEvolution(
+                original_personality=self.personality,
+                current_personality=self.personality
+            )
+    
+    def evolve_from_conversation(self, conversation_insights: Dict[str, Any]) -> None:
+        """Evolve personality based on conversation insights"""
+        if not self._is_personality_evolution_enabled():
+            return  # Skip evolution if disabled
+        
+        if not self.personality_evolution:
+            self.initialize_personality_evolution()
+        
+        # Example evolution logic (can be enhanced with LLM analysis)
+        changes = {}
+        reason = conversation_insights.get("reason", "Conversation-based growth")
+        
+        # Simple example: if conversation was successful, increase confidence-related traits
+        if conversation_insights.get("success", False):
+            changes["extraversion"] = 0.2  # Slight increase in social confidence
+            changes["neuroticism"] = -0.1  # Slight decrease in anxiety
+        
+        if changes:
+            self.personality_evolution.evolve_personality(changes, reason)
 
 class AssessmentResponse(BaseModel):
     """Response to a social skills assessment question"""

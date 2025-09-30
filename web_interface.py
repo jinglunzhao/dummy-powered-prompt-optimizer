@@ -360,8 +360,19 @@ def api_prompt(prompt_id):
     if not prompt:
         return jsonify({'error': 'Prompt not found'}), 404
     
-    # Get conversations from the new storage system
-    conversations = conversation_storage.get_conversations_by_prompt(prompt_id)
+    # Get conversations using inheritance system if available
+    conversations = []
+    
+    # Check if this is an inherited elite prompt
+    if prompt.get('is_elite_inherited') and prompt.get('ancestor_id'):
+        # Use ancestor's conversation data
+        ancestor_id = prompt.get('ancestor_id')
+        conversations = conversation_storage.get_conversations_by_prompt(ancestor_id)
+        print(f"🔗 Using ancestor conversations for {prompt_id} from {ancestor_id}: {len(conversations)} found")
+    else:
+        # Use own conversation data
+        conversations = conversation_storage.get_conversations_by_prompt(prompt_id)
+        print(f"📂 Using own conversations for {prompt_id}: {len(conversations)} found")
     
     # Process conversations from new storage system
     prompt_results = []
@@ -393,10 +404,22 @@ def api_prompt(prompt_id):
     else:
         print(f"❌ No conversations found for prompt {prompt_id}")
     
+    # Add inheritance information to the response
+    inheritance_info = None
+    if prompt.get('is_elite_inherited'):
+        inheritance_info = {
+            'is_inherited': True,
+            'ancestor_id': prompt.get('ancestor_id'),
+            'conversation_count': len(conversations),
+            'inheritance_type': 'ancestor_reference'
+        }
+        print(f"🔗 Prompt {prompt_id} inherits data from {prompt.get('ancestor_id')}")
+    
     return jsonify({
         'prompt': prompt,
         'results': prompt_results,
-        'total_results': len(prompt_results)
+        'total_results': len(prompt_results),
+        'inheritance_info': inheritance_info
     })
 
 @app.route('/api/conversation/<conversation_id>')
@@ -427,7 +450,30 @@ def api_conversation_stats():
 def api_prompt_synthesis(prompt_id):
     """API endpoint to get synthesis analysis for a specific prompt"""
     try:
-        synthesis_file = f"data/synthesis_analysis/synthesis_analysis_{prompt_id}.json"
+        data = load_data()
+        optimization_data = data.get('optimization', {})
+        
+        # Find the prompt to check inheritance
+        prompt = None
+        if 'all_prompts' in optimization_data:
+            for p in optimization_data['all_prompts']:
+                if p.get('id') == prompt_id:
+                    prompt = p
+                    break
+        
+        if not prompt and 'pareto_frontier' in optimization_data:
+            for p in optimization_data['pareto_frontier']:
+                if p.get('id') == prompt_id:
+                    prompt = p
+                    break
+        
+        # Determine which synthesis file to load
+        synthesis_prompt_id = prompt_id
+        if prompt and prompt.get('is_elite_inherited') and prompt.get('ancestor_id'):
+            synthesis_prompt_id = prompt.get('ancestor_id')
+            print(f"🔗 Using ancestor synthesis for {prompt_id} from {synthesis_prompt_id}")
+        
+        synthesis_file = f"data/synthesis_analysis/synthesis_analysis_{synthesis_prompt_id}.json"
         
         if not os.path.exists(synthesis_file):
             return jsonify({'error': 'Synthesis analysis not found'}), 404
@@ -438,6 +484,14 @@ def api_prompt_synthesis(prompt_id):
         # Ensure the response has the expected field name
         if 'synthesis_analysis' in synthesis_data and 'synthesis_text' not in synthesis_data:
             synthesis_data['synthesis_text'] = synthesis_data['synthesis_analysis']
+        
+        # Add inheritance info if applicable
+        if prompt and prompt.get('is_elite_inherited'):
+            synthesis_data['inheritance_info'] = {
+                'is_inherited': True,
+                'ancestor_id': prompt.get('ancestor_id'),
+                'inheritance_type': 'ancestor_reference'
+            }
         
         return jsonify(synthesis_data)
         
