@@ -1132,7 +1132,7 @@ Be concise and actionable. No verbose analysis.
         print(f"✅ Population evolved to {len(new_population)} prompts (TRUE GEPA capped at 8 per generation, max {Config.MAX_POPULATION_SIZE})")
         return new_population
     
-    def _crossover_prompts(self, parent1: OptimizedPrompt, parent2: OptimizedPrompt) -> OptimizedPrompt:
+    def _crossover_prompts(self, parent1: OptimizedPrompt, parent2: OptimizedPrompt, max_retries: int = 3) -> OptimizedPrompt:
         """Create a child prompt using GEPA synthesis analysis from both parents"""
         
         # Generate synthesis analysis for both parent prompts
@@ -1170,13 +1170,15 @@ CRITICAL: Your response must be ONLY the system prompt text starting with "You a
 Example format: "You are a helpful social skills coach who..."
 """
         
-        try:
-            from config import Config
-            
-            print(f"   🚀 Simple crossover: {parent1.name} + {parent2.name}")
-            
-            # Call LLM for crossover
-            response = requests.post(
+        # Try crossover with retries
+        for attempt in range(max_retries):
+            try:
+                from config import Config
+                
+                print(f"   🚀 Simple crossover: {parent1.name} + {parent2.name} (attempt {attempt + 1}/{max_retries})")
+                
+                # Call LLM for crossover
+                response = requests.post(
                 "https://api.deepseek.com/v1/chat/completions",
                 headers={
                     "Authorization": f"Bearer {Config.DEEPSEEK_API_KEY}",
@@ -1206,30 +1208,28 @@ Example format: "You are a helpful social skills coach who..."
                     
                     print(f"   ✅ {Config.DEEPSEEK_REASONER_MODEL} generated: {child_prompt_text[:100]}...")
                     
-                    # Clean and validate system prompt format
+                    # Validate system prompt format - must start with "You are"
                     child_prompt_text = child_prompt_text.strip()
                     
-                    # Try to extract system prompt if it's embedded in reasoning
-                    if not child_prompt_text.lower().startswith("you are"):
-                        # Look for "You are" pattern in the text
-                        import re
-                        you_are_match = re.search(r'(you are[^.]*\.)', child_prompt_text.lower())
-                        if you_are_match:
-                            # Extract from the match position
-                            start_pos = child_prompt_text.lower().find(you_are_match.group(1))
-                            child_prompt_text = child_prompt_text[start_pos:].strip()
-                    
-                    # Validate system prompt format
                     if not child_prompt_text.lower().startswith("you are") or len(child_prompt_text) < 20:
                         print(f"   ❌ Generated prompt not a system prompt or too short: {child_prompt_text[:50]}...")
-                        print(f"   ⏭️  Skipping this crossover - quality requirement not met")
-                        return None
+                        if attempt < max_retries - 1:
+                            print(f"   🔄 Retrying crossover (attempt {attempt + 2}/{max_retries})...")
+                            continue
+                        else:
+                            print(f"   ⏭️  Skipping this crossover - DeepSeek Reasoner didn't follow format instructions after {max_retries} attempts")
+                            return None
                     
                     print(f"   ✅ System prompt format validated: {len(child_prompt_text)} chars")
+                    break  # Success - exit retry loop
                 else:
                     print(f"   ❌ No choices in response")
-                    print(f"   ⏭️  Skipping this crossover - API response invalid")
-                    return None
+                    if attempt < max_retries - 1:
+                        print(f"   🔄 Retrying crossover (attempt {attempt + 2}/{max_retries})...")
+                        continue
+                    else:
+                        print(f"   ⏭️  Skipping this crossover - API response invalid after {max_retries} attempts")
+                        return None
             else:
                 print(f"   ❌ {Config.DEEPSEEK_REASONER_MODEL} API Error: {response.status_code}")
                 try:
@@ -1237,14 +1237,26 @@ Example format: "You are a helpful social skills coach who..."
                     print(f"   📄 Error details: {error_detail}")
                 except:
                     print(f"   📄 Error text: {response.text}")
-                print(f"   ⏭️  Skipping this crossover - API call failed")
-                return None
+                if attempt < max_retries - 1:
+                    print(f"   🔄 Retrying crossover (attempt {attempt + 2}/{max_retries})...")
+                    continue
+                else:
+                    print(f"   ⏭️  Skipping this crossover - API call failed after {max_retries} attempts")
+                    return None
                 
-        except Exception as e:
-            print(f"⚠️  LLM crossover failed: {e}")
-            import traceback
-            traceback.print_exc()
-            print(f"   ⏭️  Skipping this crossover - exception occurred")
+            except Exception as e:
+                print(f"⚠️  LLM crossover failed (attempt {attempt + 1}): {e}")
+                if attempt < max_retries - 1:
+                    print(f"   🔄 Retrying crossover (attempt {attempt + 2}/{max_retries})...")
+                    continue
+                else:
+                    print(f"   ⏭️  Skipping this crossover - exception occurred after {max_retries} attempts")
+                    import traceback
+                    traceback.print_exc()
+                    return None
+        else:
+            # This should not happen due to the break statement above, but just in case
+            print(f"   ⏭️  Skipping this crossover - unexpected retry loop exit")
             return None
         
         # Create crossover with civilized naming
@@ -1309,12 +1321,14 @@ CRITICAL: Your response must be ONLY the system prompt text starting with "You a
 Example format: "You are a helpful social skills coach who..."
 """
         
-        try:
-            # Call LLM for mutation
-            from config import Config
-            
-            print(f"   🔗 Making LLM mutation API call...")
-            response = requests.post(
+        # Try mutation with retries
+        for attempt in range(max_retries):
+            try:
+                # Call LLM for mutation
+                from config import Config
+                
+                print(f"   🔗 Making LLM mutation API call (attempt {attempt + 1}/{max_retries})...")
+                response = requests.post(
                 "https://api.deepseek.com/v1/chat/completions",
                 headers={
                     "Authorization": f"Bearer {Config.DEEPSEEK_API_KEY}",
@@ -1346,30 +1360,28 @@ Example format: "You are a helpful social skills coach who..."
                     
                     print(f"   ✅ {Config.DEEPSEEK_REASONER_MODEL} generated: {mutated_prompt_text[:100]}...")
                     
-                    # Clean and validate system prompt format
+                    # Validate system prompt format - must start with "You are"
                     mutated_prompt_text = mutated_prompt_text.strip()
                     
-                    # Try to extract system prompt if it's embedded in reasoning
-                    if not mutated_prompt_text.lower().startswith("you are"):
-                        # Look for "You are" pattern in the text
-                        import re
-                        you_are_match = re.search(r'(you are[^.]*\.)', mutated_prompt_text.lower())
-                        if you_are_match:
-                            # Extract from the match position
-                            start_pos = mutated_prompt_text.lower().find(you_are_match.group(1))
-                            mutated_prompt_text = mutated_prompt_text[start_pos:].strip()
-                    
-                    # Validate system prompt format
                     if not mutated_prompt_text.lower().startswith("you are") or len(mutated_prompt_text) < 20:
                         print(f"   ❌ Generated prompt not a system prompt or too short: {mutated_prompt_text[:50]}...")
-                        print(f"   ⏭️  Skipping this mutation - quality requirement not met")
-                        return None
+                        if attempt < max_retries - 1:
+                            print(f"   🔄 Retrying mutation (attempt {attempt + 2}/{max_retries})...")
+                            continue
+                        else:
+                            print(f"   ⏭️  Skipping this mutation - DeepSeek Reasoner didn't follow format instructions after {max_retries} attempts")
+                            return None
                     
                     print(f"   ✅ System prompt format validated: {len(mutated_prompt_text)} chars")
+                    break  # Success - exit retry loop
                 else:
                     print(f"   ❌ No choices in response")
-                    print(f"   ⏭️  Skipping this mutation - API response invalid")
-                    return None
+                    if attempt < max_retries - 1:
+                        print(f"   🔄 Retrying mutation (attempt {attempt + 2}/{max_retries})...")
+                        continue
+                    else:
+                        print(f"   ⏭️  Skipping this mutation - API response invalid after {max_retries} attempts")
+                        return None
             else:
                 print(f"   ❌ {Config.DEEPSEEK_REASONER_MODEL} API Error: {response.status_code}")
                 try:
@@ -1377,14 +1389,26 @@ Example format: "You are a helpful social skills coach who..."
                     print(f"   📄 Error details: {error_detail}")
                 except:
                     print(f"   📄 Error text: {response.text}")
-                print(f"   ⏭️  Skipping this mutation - API call failed")
-                return None
+                if attempt < max_retries - 1:
+                    print(f"   🔄 Retrying mutation (attempt {attempt + 2}/{max_retries})...")
+                    continue
+                else:
+                    print(f"   ⏭️  Skipping this mutation - API call failed after {max_retries} attempts")
+                    return None
                 
-        except Exception as e:
-            print(f"⚠️  LLM mutation failed: {e}")
-            import traceback
-            traceback.print_exc()
-            print(f"   ⏭️  Skipping this mutation - exception occurred")
+            except Exception as e:
+                print(f"⚠️  LLM mutation failed (attempt {attempt + 1}): {e}")
+                if attempt < max_retries - 1:
+                    print(f"   🔄 Retrying mutation (attempt {attempt + 2}/{max_retries})...")
+                    continue
+                else:
+                    print(f"   ⏭️  Skipping this mutation - exception occurred after {max_retries} attempts")
+                    import traceback
+                    traceback.print_exc()
+                    return None
+        else:
+            # This should not happen due to the break statement above, but just in case
+            print(f"   ⏭️  Skipping this mutation - unexpected retry loop exit")
             return None
         
         # Create mutation with civilized naming
