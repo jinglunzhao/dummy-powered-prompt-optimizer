@@ -1193,57 +1193,57 @@ Example format: "You are a helpful social skills coach who..."
                 timeout=60  # Increased timeout for reasoner model
             )
             
-            print(f"   📡 API Response Status: {response.status_code}")
-            
-            if response.status_code == 200:
-                result = response.json()
-                if 'choices' in result and len(result['choices']) > 0:
-                    message = result['choices'][0]['message']
-                    # DeepSeek Reasoner returns actual response in 'content' field
-                    child_prompt_text = message.get('content', '').strip()
-                    
-                    # If content is empty, fall back to reasoning_content (shouldn't happen with proper token limits)
-                    if not child_prompt_text and 'reasoning_content' in message:
-                        child_prompt_text = message['reasoning_content'].strip()
-                    
-                    print(f"   ✅ {Config.DEEPSEEK_REASONER_MODEL} generated: {child_prompt_text[:100]}...")
-                    
-                    # Validate system prompt format - must start with "You are"
-                    child_prompt_text = child_prompt_text.strip()
-                    
-                    if not child_prompt_text.lower().startswith("you are") or len(child_prompt_text) < 20:
-                        print(f"   ❌ Generated prompt not a system prompt or too short: {child_prompt_text[:50]}...")
+                print(f"   📡 API Response Status: {response.status_code}")
+                
+                if response.status_code == 200:
+                    result = response.json()
+                    if 'choices' in result and len(result['choices']) > 0:
+                        message = result['choices'][0]['message']
+                        # DeepSeek Reasoner returns actual response in 'content' field
+                        child_prompt_text = message.get('content', '').strip()
+                        
+                        # If content is empty, fall back to reasoning_content (shouldn't happen with proper token limits)
+                        if not child_prompt_text and 'reasoning_content' in message:
+                            child_prompt_text = message['reasoning_content'].strip()
+                        
+                        print(f"   ✅ {Config.DEEPSEEK_REASONER_MODEL} generated: {child_prompt_text[:100]}...")
+                        
+                        # Validate system prompt format - must start with "You are"
+                        child_prompt_text = child_prompt_text.strip()
+                        
+                        if not child_prompt_text.lower().startswith("you are") or len(child_prompt_text) < 20:
+                            print(f"   ❌ Generated prompt not a system prompt or too short: {child_prompt_text[:50]}...")
+                            if attempt < max_retries - 1:
+                                print(f"   🔄 Retrying crossover (attempt {attempt + 2}/{max_retries})...")
+                                continue
+                            else:
+                                print(f"   ⏭️  Skipping this crossover - DeepSeek Reasoner didn't follow format instructions after {max_retries} attempts")
+                                return None
+                        
+                        print(f"   ✅ System prompt format validated: {len(child_prompt_text)} chars")
+                        break  # Success - exit retry loop
+                    else:
+                        print(f"   ❌ No choices in response")
                         if attempt < max_retries - 1:
                             print(f"   🔄 Retrying crossover (attempt {attempt + 2}/{max_retries})...")
                             continue
                         else:
-                            print(f"   ⏭️  Skipping this crossover - DeepSeek Reasoner didn't follow format instructions after {max_retries} attempts")
+                            print(f"   ⏭️  Skipping this crossover - API response invalid after {max_retries} attempts")
                             return None
-                    
-                    print(f"   ✅ System prompt format validated: {len(child_prompt_text)} chars")
-                    break  # Success - exit retry loop
                 else:
-                    print(f"   ❌ No choices in response")
+                    print(f"   ❌ {Config.DEEPSEEK_REASONER_MODEL} API Error: {response.status_code}")
+                    try:
+                        error_detail = response.json()
+                        print(f"   📄 Error details: {error_detail}")
+                    except:
+                        print(f"   📄 Error text: {response.text}")
                     if attempt < max_retries - 1:
                         print(f"   🔄 Retrying crossover (attempt {attempt + 2}/{max_retries})...")
                         continue
                     else:
-                        print(f"   ⏭️  Skipping this crossover - API response invalid after {max_retries} attempts")
+                        print(f"   ⏭️  Skipping this crossover - API call failed after {max_retries} attempts")
                         return None
-            else:
-                print(f"   ❌ {Config.DEEPSEEK_REASONER_MODEL} API Error: {response.status_code}")
-                try:
-                    error_detail = response.json()
-                    print(f"   📄 Error details: {error_detail}")
-                except:
-                    print(f"   📄 Error text: {response.text}")
-                if attempt < max_retries - 1:
-                    print(f"   🔄 Retrying crossover (attempt {attempt + 2}/{max_retries})...")
-                    continue
-                else:
-                    print(f"   ⏭️  Skipping this crossover - API call failed after {max_retries} attempts")
-                    return None
-                
+                    
             except Exception as e:
                 print(f"⚠️  LLM crossover failed (attempt {attempt + 1}): {e}")
                 if attempt < max_retries - 1:
@@ -1343,59 +1343,59 @@ Example format: "You are a helpful social skills coach who..."
                 timeout=60  # Increased timeout for reasoner model
             )
             
-            print(f"   📡 API Response Status: {response.status_code}")
-            
-            if response.status_code == 200:
-                result = response.json()
-                # print(f"   📝 API Response: {result}")
-                if 'choices' in result and len(result['choices']) > 0:
-                    message = result['choices'][0]['message']
-                    # DeepSeek Reasoner returns actual response in 'content' field
-                    mutated_prompt_text = message.get('content', '').strip()
-                    
-                    # If content is empty, fall back to reasoning_content (shouldn't happen with proper token limits)
-                    if not mutated_prompt_text and 'reasoning_content' in message:
-                        mutated_prompt_text = message['reasoning_content'].strip()
-                    
-                    
-                    print(f"   ✅ {Config.DEEPSEEK_REASONER_MODEL} generated: {mutated_prompt_text[:100]}...")
-                    
-                    # Validate system prompt format - must start with "You are"
-                    mutated_prompt_text = mutated_prompt_text.strip()
-                    
-                    if not mutated_prompt_text.lower().startswith("you are") or len(mutated_prompt_text) < 20:
-                        print(f"   ❌ Generated prompt not a system prompt or too short: {mutated_prompt_text[:50]}...")
+                print(f"   📡 API Response Status: {response.status_code}")
+                
+                if response.status_code == 200:
+                    result = response.json()
+                    # print(f"   📝 API Response: {result}")
+                    if 'choices' in result and len(result['choices']) > 0:
+                        message = result['choices'][0]['message']
+                        # DeepSeek Reasoner returns actual response in 'content' field
+                        mutated_prompt_text = message.get('content', '').strip()
+                        
+                        # If content is empty, fall back to reasoning_content (shouldn't happen with proper token limits)
+                        if not mutated_prompt_text and 'reasoning_content' in message:
+                            mutated_prompt_text = message['reasoning_content'].strip()
+                        
+                        
+                        print(f"   ✅ {Config.DEEPSEEK_REASONER_MODEL} generated: {mutated_prompt_text[:100]}...")
+                        
+                        # Validate system prompt format - must start with "You are"
+                        mutated_prompt_text = mutated_prompt_text.strip()
+                        
+                        if not mutated_prompt_text.lower().startswith("you are") or len(mutated_prompt_text) < 20:
+                            print(f"   ❌ Generated prompt not a system prompt or too short: {mutated_prompt_text[:50]}...")
+                            if attempt < max_retries - 1:
+                                print(f"   🔄 Retrying mutation (attempt {attempt + 2}/{max_retries})...")
+                                continue
+                            else:
+                                print(f"   ⏭️  Skipping this mutation - DeepSeek Reasoner didn't follow format instructions after {max_retries} attempts")
+                                return None
+                        
+                        print(f"   ✅ System prompt format validated: {len(mutated_prompt_text)} chars")
+                        break  # Success - exit retry loop
+                    else:
+                        print(f"   ❌ No choices in response")
                         if attempt < max_retries - 1:
                             print(f"   🔄 Retrying mutation (attempt {attempt + 2}/{max_retries})...")
                             continue
                         else:
-                            print(f"   ⏭️  Skipping this mutation - DeepSeek Reasoner didn't follow format instructions after {max_retries} attempts")
+                            print(f"   ⏭️  Skipping this mutation - API response invalid after {max_retries} attempts")
                             return None
-                    
-                    print(f"   ✅ System prompt format validated: {len(mutated_prompt_text)} chars")
-                    break  # Success - exit retry loop
                 else:
-                    print(f"   ❌ No choices in response")
+                    print(f"   ❌ {Config.DEEPSEEK_REASONER_MODEL} API Error: {response.status_code}")
+                    try:
+                        error_detail = response.json()
+                        print(f"   📄 Error details: {error_detail}")
+                    except:
+                        print(f"   📄 Error text: {response.text}")
                     if attempt < max_retries - 1:
                         print(f"   🔄 Retrying mutation (attempt {attempt + 2}/{max_retries})...")
                         continue
                     else:
-                        print(f"   ⏭️  Skipping this mutation - API response invalid after {max_retries} attempts")
+                        print(f"   ⏭️  Skipping this mutation - API call failed after {max_retries} attempts")
                         return None
-            else:
-                print(f"   ❌ {Config.DEEPSEEK_REASONER_MODEL} API Error: {response.status_code}")
-                try:
-                    error_detail = response.json()
-                    print(f"   📄 Error details: {error_detail}")
-                except:
-                    print(f"   📄 Error text: {response.text}")
-                if attempt < max_retries - 1:
-                    print(f"   🔄 Retrying mutation (attempt {attempt + 2}/{max_retries})...")
-                    continue
-                else:
-                    print(f"   ⏭️  Skipping this mutation - API call failed after {max_retries} attempts")
-                    return None
-                
+                    
             except Exception as e:
                 print(f"⚠️  LLM mutation failed (attempt {attempt + 1}): {e}")
                 if attempt < max_retries - 1:
