@@ -1160,12 +1160,14 @@ PROMPT 1: "{parent1.prompt_text}"
 PROMPT 2: "{parent2.prompt_text}"
 
 Create a new system prompt that:
-1. MUST start with "You are..."
+1. MUST start with "You are..." (exactly these words)
 2. Combines the best parts of both prompts
 3. Is effective for social skills coaching
 4. Keep it concise (1-3 sentences)
 
-CRITICAL: Respond with ONLY the system prompt text that starts with "You are...". No explanations.
+CRITICAL: Your response must be ONLY the system prompt text starting with "You are...". Do not include any reasoning, analysis, explanations, or other text. Just the prompt.
+
+Example format: "You are a helpful social skills coach who..."
 """
         
         try:
@@ -1204,8 +1206,21 @@ CRITICAL: Respond with ONLY the system prompt text that starts with "You are..."
                     
                     print(f"   ✅ {Config.DEEPSEEK_REASONER_MODEL} generated: {child_prompt_text[:100]}...")
                     
+                    # Clean and validate system prompt format
+                    child_prompt_text = child_prompt_text.strip()
+                    
+                    # Try to extract system prompt if it's embedded in reasoning
+                    if not child_prompt_text.lower().startswith("you are"):
+                        # Look for "You are" pattern in the text
+                        import re
+                        you_are_match = re.search(r'(you are[^.]*\.)', child_prompt_text.lower())
+                        if you_are_match:
+                            # Extract from the match position
+                            start_pos = child_prompt_text.lower().find(you_are_match.group(1))
+                            child_prompt_text = child_prompt_text[start_pos:].strip()
+                    
                     # Validate system prompt format
-                    if not child_prompt_text.strip().lower().startswith("you are") or len(child_prompt_text.strip()) < 20:
+                    if not child_prompt_text.lower().startswith("you are") or len(child_prompt_text) < 20:
                         print(f"   ❌ Generated prompt not a system prompt or too short: {child_prompt_text[:50]}...")
                         print(f"   ⏭️  Skipping this crossover - quality requirement not met")
                         return None
@@ -1289,7 +1304,9 @@ TASK: Create an improved system prompt that:
 
 Focus on making meaningful improvements based on the actual conversation performance analysis, not just numerical scores.
 
-CRITICAL: Your response must be ONLY the system prompt text that starts with "You are...". Do not include any reasoning, analysis, or explanations. Just the prompt text.
+CRITICAL: Your response must be ONLY the system prompt text starting with "You are..." (exactly these words). Do not include any reasoning, analysis, explanations, or other text. Just the prompt.
+
+Example format: "You are a helpful social skills coach who..."
 """
         
         try:
@@ -1329,8 +1346,21 @@ CRITICAL: Your response must be ONLY the system prompt text that starts with "Yo
                     
                     print(f"   ✅ {Config.DEEPSEEK_REASONER_MODEL} generated: {mutated_prompt_text[:100]}...")
                     
+                    # Clean and validate system prompt format
+                    mutated_prompt_text = mutated_prompt_text.strip()
+                    
+                    # Try to extract system prompt if it's embedded in reasoning
+                    if not mutated_prompt_text.lower().startswith("you are"):
+                        # Look for "You are" pattern in the text
+                        import re
+                        you_are_match = re.search(r'(you are[^.]*\.)', mutated_prompt_text.lower())
+                        if you_are_match:
+                            # Extract from the match position
+                            start_pos = mutated_prompt_text.lower().find(you_are_match.group(1))
+                            mutated_prompt_text = mutated_prompt_text[start_pos:].strip()
+                    
                     # Validate system prompt format
-                    if not mutated_prompt_text.strip().lower().startswith("you are") or len(mutated_prompt_text.strip()) < 20:
+                    if not mutated_prompt_text.lower().startswith("you are") or len(mutated_prompt_text) < 20:
                         print(f"   ❌ Generated prompt not a system prompt or too short: {mutated_prompt_text[:50]}...")
                         print(f"   ⏭️  Skipping this mutation - quality requirement not met")
                         return None
