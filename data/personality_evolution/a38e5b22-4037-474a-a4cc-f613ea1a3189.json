@@ -1,0 +1,318 @@
+{
+  "dummy_id": "a38e5b22-4037-474a-a4cc-f613ea1a3189",
+  "dummy_name": "Casey Goldberg",
+  "current_experiment_id": "conversation_length_with_evolution",
+  "current_prompt_id": "conversation_length_test",
+  "created_at": "2025-10-01T23:40:20.280732",
+  "last_updated": "2025-10-02T00:06:34.580971",
+  "conversation_profile": {
+    "original_fears": [
+      "Academic failure and poor grades",
+      "Balancing social life and studies",
+      "Finding a job after graduation"
+    ],
+    "original_challenges": [
+      "Navigating campus politics",
+      "Developing effective study habits",
+      "Dealing with homesickness"
+    ],
+    "original_behaviors": [
+      "Seeks out leadership roles",
+      "Goes to campus events",
+      "Attends career fairs",
+      "Exercises regularly",
+      "Uses social media for networking"
+    ],
+    "original_anxiety_triggers": [
+      "Presentations"
+    ],
+    "original_social_anxiety_level": 10,
+    "original_big_five": {
+      "extraversion": 5,
+      "agreeableness": 7,
+      "conscientiousness": 5,
+      "neuroticism": 5,
+      "openness": 5
+    },
+    "current_fears": [
+      "Falling behind in coursework while learning Python for data journalism",
+      "Managing mom's frequent check-in texts while completing ethics paper deadlines",
+      "Finding a job after graduation"
+    ],
+    "current_challenges": [
+      "Navigating campus politics",
+      "Implementing Pomodoro technique for Python coding while juggling ethics paper deadlines",
+      "Scheduling video calls with family without disrupting study sessions"
+    ],
+    "current_behaviors": [
+      "Seeks out leadership roles",
+      "Goes to campus events",
+      "Attends career fairs",
+      "Exercises regularly",
+      "Uses social media for networking"
+    ],
+    "current_anxiety_triggers": [
+      "Presentations"
+    ],
+    "current_social_anxiety_level": 8,
+    "current_big_five": {
+      "extraversion": 5,
+      "agreeableness": 7,
+      "conscientiousness": 5,
+      "neuroticism": 5,
+      "openness": 5
+    },
+    "evolution_stages": [
+      {
+        "stage_number": 1,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251001_234041",
+        "conversation_summary": "Casey discussed anxiety about balancing coursework with learning Python for data journalism, specifically starting with election data analysis. The coach provided a step-by-step plan and accountability, leading Casey to commit to small actions after finishing an ethics paper.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "fear of falling behind in journalism coursework while learning Python for data journalism"
+        },
+        "challenges_materialized": {
+          "Developing effective study habits": "prioritizing completion of a media ethics paper before starting Python tutorial"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "bookmarking a Python for journalists tutorial online for skill development"
+        },
+        "triggers_specified": {},
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 8.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.85,
+        "improvement_score": 0.3500000000000001,
+        "timestamp": "2025-10-01T23:42:44.749825"
+      },
+      {
+        "stage_number": 2,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251001_234041",
+        "conversation_summary": "The coach helped Casey break down Python learning into manageable steps for election data analysis while prioritizing an ethics paper. Casey implemented structured planning with phone reminders and completed 302 words of the paper, though perfectionism emerged during categorization. Accountability was established for next-day follow-up on Python progress.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "Falling behind in coursework due to time spent learning Python for data journalism",
+          "Balancing social life and studies": "Scheduling Python learning versus ethics paper completion and bedtime"
+        },
+        "challenges_materialized": {
+          "Developing effective study habits": "Prioritizing ethics paper over Python tutorial and choosing between tracking word count versus time spent"
+        },
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 8.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.3999999999999999,
+        "timestamp": "2025-10-01T23:45:26.637975"
+      },
+      {
+        "stage_number": 3,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251001_234041",
+        "conversation_summary": "The coach helped Casey develop a step-by-step plan to start learning Python for data journalism by analyzing election data, while managing anxiety around starting and balancing it with an ethics paper. Casey progressed on the paper using word count goals and took structured breaks.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "Messing up Python code while analyzing election data, wasting time",
+          "Balancing social life and studies": "Deciding whether to do Python before dinner (energy) or after (planned)"
+        },
+        "challenges_materialized": {
+          "Developing effective study habits": "Choosing whether to track progress on the ethics paper by word count or time spent"
+        },
+        "behaviors_detailed": {
+          "Seeks out leadership roles": "Taking initiative to analyze election data for political journalism class",
+          "Exercises regularly": "Performing shoulder rolls with audible cracks and stretching during the fountain break"
+        },
+        "triggers_specified": {
+          "Presentations": "Questioning if a paragraph in the ethics paper belonged to ethics or media law (categorization anxiety), the timer dinging signaling work start"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 8.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.5,
+        "timestamp": "2025-10-01T23:46:51.586530"
+      },
+      {
+        "stage_number": 4,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251001_234041",
+        "conversation_summary": "The coach helped Casey develop a step-by-step plan to learn Python for data journalism using election data, starting small to reduce overwhelm. They then addressed anxiety during the ethics paper by implementing structured breaks, progress tracking, and coping strategies like deep breathing, leading to task completion and reduced panic.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "fear of falling behind in journalism coursework while learning Python for data journalism due to time mismanagement or coding mistakes"
+        },
+        "challenges_materialized": {
+          "Developing effective study habits": "overcoming indecision in tracking progress (word count vs. time spent) and managing perfectionism during the ethics paper writing"
+        },
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 8.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.3999999999999999,
+        "timestamp": "2025-10-01T23:49:37.250040"
+      },
+      {
+        "stage_number": 5,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251001_234041",
+        "conversation_summary": "The discussion focused on helping Casey manage anxiety around learning Python for data journalism while balancing academic work, particularly an ethics paper. The coach provided step-by-step strategies for time management, perfectionism, and homesickness, and Casey responded by implementing tools like timers, mini-milestones, and a rubber duck for debugging, showing reduced anxiety through focused action.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "Fear of making errors in Python coding while learning for data journalism, wasting time and causing falling behind in journalism coursework like the media ethics paper",
+          "Balancing social life and studies": "Fear of not managing time effectively between learning Python and completing academic tasks, such as debating whether to code before or after dinner while handling the ethics paper deadline"
+        },
+        "challenges_materialized": {
+          "Developing effective study habits": "Struggling to choose between tracking word count or time spent on assignments like the media ethics paper and implementing consistent routines for learning Python",
+          "Dealing with homesickness": "Managing escalating text messages from mother (e.g., from '?' to urgent demands) and establishing scheduled video calls to maintain connection without disrupting studies"
+        },
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 8.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.3999999999999999,
+        "timestamp": "2025-10-01T23:53:05.218050"
+      },
+      {
+        "stage_number": 6,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251001_234041",
+        "conversation_summary": "Coached Casey through Python initiation anxiety and ethics paper perfectionism using step-by-step breakdowns, timers, and rubber duck debugging. Casey progressed from paralysis to actionable plans, implementing accountability systems and structured task sequencing.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "Fear of falling behind in coursework when learning Python and making coding mistakes that waste time",
+          "Balancing social life and studies": "Fear that learning Python after dinner would compromise energy for studies"
+        },
+        "challenges_materialized": {
+          "Developing effective study habits": "Indecision about tracking words versus time for ethics paper and setting incorrect timers",
+          "Dealing with homesickness": "Managing mother's escalating texts demanding proof-of-life during study sessions"
+        },
+        "behaviors_detailed": {
+          "Seeks out leadership roles": "Assigning Mr. Quackers rubber duck as coding project manager with defined roles",
+          "Uses social media for networking": "Bookmarking Python tutorials for journalists but delaying initiation"
+        },
+        "triggers_specified": {
+          "Presentations": "Explaining code to rubber duck during debugging sessions"
+        },
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 9.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.3999999999999999,
+        "timestamp": "2025-10-01T23:56:02.091151"
+      },
+      {
+        "stage_number": 7,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251001_234041",
+        "conversation_summary": "The coach and Casey focused on strategies for balancing Python learning with journalism coursework, specifically starting with election data analysis and managing the ethics paper. They addressed perfectionism and time management using step-by-step plans, timers, and accountability, with Casey responding by implementing actions like setting reminders and using a rubber duck for debugging, showing reduced anxiety.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "Falling behind in journalism coursework due to time spent on Python coding and fear of messing up code while analyzing election data",
+          "Balancing social life and studies": "Juggling completion of the media ethics paper with learning Python, specifically worrying about energy levels before or after dinner"
+        },
+        "challenges_materialized": {
+          "Developing effective study habits": "Implementing step-by-step Python tutorials for election data analysis and tracking ethics paper progress using word count metrics",
+          "Dealing with homesickness": "Managing frequent anxious texts from mom during study sessions and scheduling video calls to avoid disruptions"
+        },
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 8.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.3999999999999999,
+        "timestamp": "2025-10-01T23:59:09.245581"
+      },
+      {
+        "stage_number": 8,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251001_234041",
+        "conversation_summary": "The coach assisted Casey in creating step-by-step strategies to start learning Python for data journalism while managing an ethics paper deadline, using timers, breaks, and a rubber duck for debugging. Casey initially showed high anxiety with nervous habits but became more proactive by setting specific mini-goals and seeking accountability, leading to reduced stress.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "fear of messing up Python code while analyzing election data for political journalism class, leading to wasted time and poor results"
+        },
+        "challenges_materialized": {
+          "Developing effective study habits": "difficulty in tracking progress for ethics paper (choosing between word count or time spent) and starting Python tutorials without overcomplicating schedules",
+          "Dealing with homesickness": "managing frequent anxious texts and calls from mom that disrupt study sessions, requiring scheduled check-ins"
+        },
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 8.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.5,
+        "timestamp": "2025-10-02T00:01:32.881344"
+      },
+      {
+        "stage_number": 9,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251001_234041",
+        "conversation_summary": "The conversation focused on breaking down Casey's Python learning and ethics paper tasks into manageable steps, addressing perfectionism and distractions (like a demanding rubber duck and mom's texts). Casey adopted structured plans and accountability, leading to reduced anxiety and progress on tasks.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "Messing up Python code while analyzing election data and wasting time that should be spent on coursework",
+          "Balancing social life and studies": "Choosing between finishing media ethics paper and starting Python tutorial after dinner"
+        },
+        "challenges_materialized": {
+          "Developing effective study habits": "Tracking progress using word count versus time spent on ethics paper",
+          "Dealing with homesickness": "Managing frequent check-in demands from mom without disrupting study focus"
+        },
+        "behaviors_detailed": {
+          "Seeks out leadership roles": "Assigning Mr. Quackers rubber duck as 'Senior Fact-Checking Editor' for debugging assistance"
+        },
+        "triggers_specified": {
+          "Presentations": "Explaining Python code to rubber duck during debugging sessions"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 8.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.0,
+        "improvement_score": 0.5,
+        "timestamp": "2025-10-02T00:04:00.797270"
+      },
+      {
+        "stage_number": 10,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251001_234041",
+        "conversation_summary": "The coach helped Casey break down learning Python and completing an ethics paper into manageable steps, using rubber duck debugging and structured scheduling. They developed strategies for starting small with coding (election data analysis) and tracking progress on coursework while managing family communication and anxiety through humor and boundaries.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "Falling behind in coursework while learning Python for data journalism",
+          "Balancing social life and studies": "Managing mom's frequent check-in texts while completing ethics paper deadlines"
+        },
+        "challenges_materialized": {
+          "Developing effective study habits": "Implementing Pomodoro technique for Python coding while juggling ethics paper deadlines",
+          "Dealing with homesickness": "Scheduling video calls with family without disrupting study sessions"
+        },
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 8.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.85,
+        "improvement_score": 0.050000000000000266,
+        "timestamp": "2025-10-02T00:06:34.580499"
+      }
+    ],
+    "current_stage": 10
+  }
+}

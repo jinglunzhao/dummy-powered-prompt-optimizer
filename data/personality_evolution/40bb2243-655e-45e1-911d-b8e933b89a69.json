@@ -1,0 +1,334 @@
+{
+  "dummy_id": "40bb2243-655e-45e1-911d-b8e933b89a69",
+  "dummy_name": "Sarah Brooks",
+  "current_experiment_id": "conversation_length_with_evolution",
+  "current_prompt_id": "conversation_length_test",
+  "created_at": "2025-10-01T23:40:20.283991",
+  "last_updated": "2025-10-02T00:03:24.807147",
+  "conversation_profile": {
+    "original_fears": [
+      "Choosing the right career path",
+      "Social anxiety in large lecture halls"
+    ],
+    "original_challenges": [
+      "Preparing for presentations",
+      "Developing effective study habits",
+      "Overcoming procrastination",
+      "Making friends in a new environment"
+    ],
+    "original_behaviors": [
+      "Exercises regularly",
+      "Uses social media for networking",
+      "Stays up late studying"
+    ],
+    "original_anxiety_triggers": [
+      "Networking events",
+      "Campus social events",
+      "Office hours"
+    ],
+    "original_social_anxiety_level": 8,
+    "original_big_five": {
+      "extraversion": 3,
+      "agreeableness": 8,
+      "conscientiousness": 4,
+      "neuroticism": 8,
+      "openness": 5
+    },
+    "current_fears": [
+      "Worrying that sharing math insights makes her sound like she's showing off",
+      "Freezing when classmates turn to look during class contributions"
+    ],
+    "current_challenges": [
+      "Writing down word-for-word comments in notebook margins before class",
+      "Developing effective study habits",
+      "Committing to solve just one math problem before bed",
+      "Texting a study group to split pizza while working on Fourier transforms"
+    ],
+    "current_behaviors": [
+      "Exercises regularly",
+      "Texting study group members to arrange meetups",
+      "Working on Fourier transform problem sets late at night"
+    ],
+    "current_anxiety_triggers": [
+      "Meeting the coach for coffee to discuss class participation attempts",
+      "Attending study group sessions involving pizza and math work",
+      "Office hours"
+    ],
+    "current_social_anxiety_level": 7,
+    "current_big_five": {
+      "extraversion": 3,
+      "agreeableness": 8,
+      "conscientiousness": 4,
+      "neuroticism": 8,
+      "openness": 5
+    },
+    "evolution_stages": [
+      {
+        "stage_number": 1,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_40bb2243-655e-45e1-911d-b8e933b89a69_20251001_234041",
+        "conversation_summary": "The coach helped Sarah practice speaking in class by preparing comments on math topics like Fourier transforms and eigenvalues. Sarah expressed fears of judgment and freezing, but with support, she delivered her thoughts and received positive feedback, slightly boosting her confidence.",
+        "fears_materialized": {
+          "Social anxiety in large lecture halls": "Fear of judgment when speaking in class, such as worrying that sharing enthusiasm about Fourier transforms sounds like showing off or freezing when imagining all students turning to look"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "Writing down specific comments in advance for class contributions, e.g., preparing a statement about Fourier transforms or eigenvalues to deliver when speaking"
+        },
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.65,
+        "improvement_score": 0.1499999999999999,
+        "timestamp": "2025-10-01T23:42:50.316749"
+      },
+      {
+        "stage_number": 2,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_40bb2243-655e-45e1-911d-b8e933b89a69_20251001_234041",
+        "conversation_summary": "Sarah practiced delivering prepared comments about math concepts (Fourier transforms, eigenvalues) in class, developed strategies like writing analogies in notebook margins, and progressed from near-silence to sharing creative insights, ending with slightly increased confidence to contribute in future lectures.",
+        "fears_materialized": {
+          "Social anxiety in large lecture halls": "Fear of blanking out when everyone turns to look after speaking in class",
+          "Choosing the right career path": "Fear that professors won't value her contributions or analogies"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "Preparing and delivering a specific comment about Fourier transforms in math class",
+          "Making friends in a new environment": "Sharing personal insights like 'eigenvalues are like DNA of matrices' to connect with peers"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Writing math analogies in notebook margins to prepare for class contributions",
+          "Stays up late studying": "Clutching notebook tightly and tracing equations when nervous"
+        },
+        "triggers_specified": {
+          "Networking events": "Speaking during math lectures where professors might evaluate her",
+          "Campus social events": "Classmates turning to look at her after she speaks in class",
+          "Office hours": "Sharing creative analogies like 'prime numbers are atoms of mathematics' with professors"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 6.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.0,
+        "improvement_score": 0.5,
+        "timestamp": "2025-10-01T23:44:16.117462"
+      },
+      {
+        "stage_number": 3,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_40bb2243-655e-45e1-911d-b8e933b89a69_20251001_234041",
+        "conversation_summary": "The coach and Sarah practiced strategies for speaking in class, focusing on preparing and sharing math analogies like Fourier transforms and eigenvalues. Sarah engaged in role-play, showed reduced anxiety through small smiles and agreement to a coffee meeting, and planned to use notebook notes for real class attempts.",
+        "fears_materialized": {
+          "Social anxiety in large lecture halls": "fear of speaking up in class and freezing when imagining everyone turning to look"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "preparing specific comments about math topics like Fourier transforms and writing them in notebook",
+          "Making friends in a new environment": "initiating a coffee meeting with the coach as a low-pressure social step"
+        },
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.15,
+        "improvement_score": 0.6499999999999999,
+        "timestamp": "2025-10-01T23:47:08.524814"
+      },
+      {
+        "stage_number": 4,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_40bb2243-655e-45e1-911d-b8e933b89a69_20251001_234041",
+        "conversation_summary": "The coach helped Sarah practice speaking in class through role-play and preparing comments on math concepts, and Sarah responded by gradually participating, using strategies like writing notes and committing to try speaking in her calculus section.",
+        "fears_materialized": {
+          "Social anxiety in large lecture halls": "fear of freezing when speaking in class due to imagined peers turning to look"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "preparing and delivering specific comments about math concepts like Fourier transforms in class discussions"
+        },
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.3999999999999999,
+        "timestamp": "2025-10-01T23:49:52.171510"
+      },
+      {
+        "stage_number": 5,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_40bb2243-655e-45e1-911d-b8e933b89a69_20251001_234041",
+        "conversation_summary": "Sarah practiced strategies for speaking in class, including preparing comments on math concepts like Fourier transforms and role-playing with the coach, which helped her gain confidence; she later applied this by texting a study group for a pizza session, showing reduced anxiety and increased engagement.",
+        "fears_materialized": {
+          "Social anxiety in large lecture halls": "Fear of everyone turning to look at her when speaking in class, causing her mind to go blank while sharing insights on math concepts like Fourier transforms"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "Preparing written comments for class participation, such as on Fourier transforms or eigenvalues, to reduce anxiety",
+          "Making friends in a new environment": "Texting a study group to propose a pizza study session for Fourier transforms homework"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Working on math problem sets late at night before bed, specifically Fourier transforms, despite anxiety"
+        },
+        "triggers_specified": {},
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 6.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.95,
+        "improvement_score": 0.4500000000000002,
+        "timestamp": "2025-10-01T23:52:42.360578"
+      },
+      {
+        "stage_number": 6,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_40bb2243-655e-45e1-911d-b8e933b89a69_20251001_234041",
+        "conversation_summary": "The coach guided Sarah in practicing class participation through role-playing math contributions, building confidence to share insights on topics like Fourier transforms. Sarah progressed from nervous introductions to planning social interactions, such as texting a study group for pizza, demonstrating reduced anxiety.",
+        "fears_materialized": {
+          "Social anxiety in large lecture halls": "Fear of freezing up or sounding like showing off when speaking in class about math concepts like Fourier transforms or eigenvalues"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "Preparing and delivering comments in calculus class on topics like Fourier transforms",
+          "Making friends in a new environment": "Texting a study group to arrange pizza meetings for math collaboration"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Working on math problem sets late at night, such as Fourier transforms, and tackling one problem before bed"
+        },
+        "triggers_specified": {
+          "Campus social events": "Participating in informal gatherings like study group pizza sessions or coffee meetups with peers"
+        },
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 7.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.3999999999999999,
+        "timestamp": "2025-10-01T23:54:55.816800"
+      },
+      {
+        "stage_number": 7,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_40bb2243-655e-45e1-911d-b8e933b89a69_20251001_234041",
+        "conversation_summary": "Sarah practiced strategies for speaking in class, such as preparing and sharing math analogies like eigenvalues as 'matrix DNA,' and later initiated contact with a study group. She showed increased confidence through role-playing and taking small actions, though some anxiety remained.",
+        "fears_materialized": {
+          "Social anxiety in large lecture halls": "fear of freezing up when sharing a prepared comment in class, e.g., discussing Fourier transforms, and worrying about being judged"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "writing specific comments in notebook margins before class to share, such as analogies for eigenvalues",
+          "Making friends in a new environment": "texting a study group to initiate a pizza session for collaborative study"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "working on math problems late at night, e.g., solving Fourier transforms before bed"
+        },
+        "triggers_specified": {
+          "Campus social events": "participating in class discussions or study group meetups where social interaction is required"
+        },
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 7.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.5,
+        "timestamp": "2025-10-01T23:57:36.991640"
+      },
+      {
+        "stage_number": 8,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_40bb2243-655e-45e1-911d-b8e933b89a69_20251001_234041",
+        "conversation_summary": "Sarah practiced sharing math insights (Fourier transforms, eigenvalues, prime numbers) in a safe coaching environment, developed concrete strategies like writing comments in notebook margins, initiated social contact by arranging coffee and texting a study group, and gained confidence through playful metaphors and encouragement.",
+        "fears_materialized": {
+          "Social anxiety in large lecture halls": "Freezing up when attempting to share thoughts on Fourier transforms during class"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "Writing and delivering a pre-prepared comment about Fourier transforms in class",
+          "Overcoming procrastination": "Texting a study group to arrange pizza while working on Fourier transforms",
+          "Making friends in a new environment": "Asking the coach for coffee and initiating contact with a study group"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Working on Fourier transform problem sets late at night before bed"
+        },
+        "triggers_specified": {
+          "Networking events": "Meeting the coach for coffee to discuss progress",
+          "Campus social events": "Attending a pizza study session with peers",
+          "Office hours": "Visiting professors during office hours (implied by llama professors offering them)"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 6.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.05,
+        "improvement_score": 0.5499999999999998,
+        "timestamp": "2025-10-01T23:59:15.650185"
+      },
+      {
+        "stage_number": 9,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_40bb2243-655e-45e1-911d-b8e933b89a69_20251001_234041",
+        "conversation_summary": "The coach helped Sarah practice speaking in class by preparing specific math analogies, leading to reduced anxiety and her initiating a study group meeting over text.",
+        "fears_materialized": {
+          "Social anxiety in large lecture halls": "Fear of speaking in class when sharing prepared comments on math topics like Fourier transforms or eigenvalues, worrying about sounding pretentious or freezing in front of others"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "Practicing specific class contributions by writing analogies in notebook margins, such as 'eigenvalues are like DNA of matrices'",
+          "Making friends in a new environment": "Texting a study group to arrange a pizza meeting while discussing Fourier transforms, despite nervousness about social rejection"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Working on math problem sets late at night, specifically tackling one Fourier transform problem before bed"
+        },
+        "triggers_specified": {
+          "Campus social events": "Attending or initiating study group meetings, such as gathering for pizza to work on math homework"
+        },
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 7.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.0,
+        "improvement_score": 0.5,
+        "timestamp": "2025-10-02T00:01:55.055720"
+      },
+      {
+        "stage_number": 10,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_40bb2243-655e-45e1-911d-b8e933b89a69_20251001_234041",
+        "conversation_summary": "Sarah practiced sharing math insights using prepared analogies (e.g., eigenvalues as matrix DNA), planned to contribute in calculus class with written comments, initiated contact with a study group via text, and scheduled a low-pressure coffee meeting with the coach to discuss progress.",
+        "fears_materialized": {
+          "Social anxiety in large lecture halls": "Freezing when classmates turn to look during class contributions",
+          "Choosing the right career path": "Worrying that sharing math insights makes her sound like she's showing off"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "Writing down word-for-word comments in notebook margins before class",
+          "Making friends in a new environment": "Texting a study group to split pizza while working on Fourier transforms",
+          "Overcoming procrastination": "Committing to solve just one math problem before bed"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Texting study group members to arrange meetups",
+          "Stays up late studying": "Working on Fourier transform problem sets late at night"
+        },
+        "triggers_specified": {
+          "Networking events": "Meeting the coach for coffee to discuss class participation attempts",
+          "Campus social events": "Attending study group sessions involving pizza and math work"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.8,
+        "improvement_score": 0.8499999999999999,
+        "timestamp": "2025-10-02T00:03:24.806563"
+      }
+    ],
+    "current_stage": 10
+  }
+}

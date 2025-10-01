@@ -283,13 +283,13 @@ Rate each of the 20 social skills questions from 1-4 based on how {dummy.name} w
         try:
             async with aiohttp.ClientSession() as session:
                 async with session.post(
-                    "https://api.deepseek.com/v1/chat/completions",
+                    "https://api.lkeap.cloud.tencent.com/v1/chat/completions",
                     headers={
                         "Authorization": f"Bearer {self.api_key}",
                         "Content-Type": "application/json"
                     },
                     json={
-                        "model": "deepseek-chat",
+                        "model": "deepseek-v3-0324",
                         "messages": [
                             {"role": "system", "content": system_prompt},
                             {"role": "user", "content": user_prompt}

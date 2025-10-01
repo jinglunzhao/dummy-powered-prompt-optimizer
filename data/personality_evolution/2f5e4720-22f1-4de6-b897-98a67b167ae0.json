@@ -3,8 +3,8 @@
   "dummy_name": "Gregory Moore",
   "current_experiment_id": "conversation_length_with_evolution",
   "current_prompt_id": "conversation_length_test",
-  "created_at": "2025-10-01T19:20:39.837896",
-  "last_updated": "2025-10-01T19:22:11.003994",
+  "created_at": "2025-10-01T23:40:20.271132",
+  "last_updated": "2025-10-02T00:01:44.696850",
   "conversation_profile": {
     "original_fears": [
       "Choosing the right career path",
@@ -36,24 +36,24 @@
       "openness": 7
     },
     "current_fears": [
-      "fear of not being good enough for grad school mentorship",
-      "fear of professors thinking I'm not good enough when approaching them",
-      "stress about upcoming algorithms midterm affecting other decisions",
+      "Deciding between AI and cybersecurity for grad school applications using a color-coded spreadsheet",
+      "Presenting research in the CS building lecture hall with fear of awkward pauses or technical glitches",
+      "Academic failure and poor grades",
       "Dealing with roommate conflicts"
     ],
     "current_challenges": [
       "Financial planning",
-      "specifically approaching Dr. Chen about machine learning research for grad school guidance",
-      "breaking down into small steps like setting a monthly budget"
+      "Approaching professors like Professor Chen to discuss research versus industry career choices and ask specific questions",
+      "Managing student loans"
     ],
     "current_behaviors": [
       "Eats at the dining hall",
-      "drafting emails multiple times before sending to ensure perfection",
-      "planning to attend office hours with specific questions about professor's research"
+      "Participates in study groups",
+      "Volunteers for campus events"
     ],
     "current_anxiety_triggers": [
-      "approaching professors during office hours for mentorship",
-      "drafting and sending emails to professors about research interests",
+      "Networking with professors during office hours or at campus events like coffee meetups",
+      "Delivering research presentations in computer science classes with triggers like audience eye contact or unexpected silences",
       "Campus social events"
     ],
     "current_social_anxiety_level": 2,
@@ -70,33 +70,293 @@
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "471b1978-2eff-4bb9-bccb-42aa7e7023c3",
-        "conversation_summary": "Gregory discussed his fear of approaching professors for mentorship and developed a concrete plan to email Dr. Chen about specific machine learning research, moving from avoidance to actionable steps while managing midterm stress.",
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_20251001_234044",
+        "conversation_summary": "Discussed grad school choices between AI/cybersecurity, strategies to approach professors, and preparation for a mentorship meeting. Gregory shifted from initial stress to enthusiastic engagement, planning specific actions like wearing conversation-starting clothing and utilizing campus resources.",
         "fears_materialized": {
-          "Choosing the right career path": "fear of not being good enough for grad school mentorship",
-          "Social anxiety in large lecture halls": "fear of professors thinking I'm not good enough when approaching them",
-          "Academic failure and poor grades": "stress about upcoming algorithms midterm affecting other decisions"
+          "Choosing the right career path": "Deciding between AI vs cybersecurity graduate programs",
+          "Social anxiety in large lecture halls": "Presenting in large lecture halls this semester",
+          "Academic failure and poor grades": "Worry about grad school applications and program choices"
         },
         "challenges_materialized": {
-          "Finding a mentor": "specifically approaching Dr. Chen about machine learning research for grad school guidance",
-          "Managing student loans": "breaking down into small steps like setting a monthly budget"
+          "Finding a mentor": "Approaching professors (e.g., Professor Chen) to discuss research vs industry career paths",
+          "Managing student loans": "Not materialized in conversation"
         },
         "behaviors_detailed": {
-          "Participates in study groups": "drafting emails multiple times before sending to ensure perfection",
-          "Volunteers for campus events": "planning to attend office hours with specific questions about professor's research"
+          "Volunteers for campus events": "Wears themed shirts (binary shirt) to initiate academic conversations",
+          "Participates in study groups": "Creates detailed spreadsheets comparing graduate programs"
         },
         "triggers_specified": {
-          "Networking events": "approaching professors during office hours for mentorship",
-          "Presentations": "drafting and sending emails to professors about research interests"
+          "Networking events": "Campus coffee meetups with professors/mentors",
+          "Presentations": "Lecture hall presentations specifically"
+        },
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 2.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.85,
+        "improvement_score": 0.3500000000000001,
+        "timestamp": "2025-10-01T23:41:49.926959"
+      },
+      {
+        "stage_number": 2,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_20251001_234044",
+        "conversation_summary": "They planned a meeting to address Gregory's grad school choice between AI/cybersecurity, with strategies for approaching professors and attending networking events. Gregory showed increasing enthusiasm through preparation (spreadsheets, question drafting) and humor, while addressing presentation fears. The coach provided concrete steps to transform anxiety into actionable plans.",
+        "fears_materialized": {
+          "Choosing the right career path": "Deciding between AI and cybersecurity for grad school applications",
+          "Social anxiety in large lecture halls": "Presenting research in CS building lecture halls"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Approaching professors in AI/cybersecurity fields during office hours"
+        },
+        "behaviors_detailed": {},
+        "triggers_specified": {
+          "Networking events": "Attending department networking events for grad school connections",
+          "Presentations": "Delivering research presentations in computer science classes"
+        },
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 2.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.85,
+        "improvement_score": 0.3500000000000001,
+        "timestamp": "2025-10-01T23:44:29.612114"
+      },
+      {
+        "stage_number": 3,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_20251001_234044",
+        "conversation_summary": "The coach helped Gregory address grad school indecision (AI vs cybersecurity) by planning professor outreach, networking preparation, and presentation skills. Gregory responded with increasing enthusiasm, creating action items and demonstrating growing confidence through specific preparation behaviors.",
+        "fears_materialized": {
+          "Choosing the right career path": "Deciding between AI and cybersecurity for grad school applications",
+          "Social anxiety in large lecture halls": "Presenting research in the CS building lecture hall"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Reaching out to professors like Professor Chen in AI/cybersecurity fields"
+        },
+        "behaviors_detailed": {},
+        "triggers_specified": {
+          "Presentations": "Delivering research presentations in CS building lecture halls",
+          "Networking events": "Attending department networking events to discuss grad school interests"
+        },
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 2.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.85,
+        "improvement_score": 0.3500000000000001,
+        "timestamp": "2025-10-01T23:47:20.473460"
+      },
+      {
+        "stage_number": 4,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_20251001_234044",
+        "conversation_summary": "The discussion focused on Gregory's grad school application anxieties, specifically choosing between AI and cybersecurity, finding mentors, and managing presentation fears, with Gregory responding enthusiastically through humor, preparation, and scheduled meetings to build confidence.",
+        "fears_materialized": {
+          "Choosing the right career path": "stressing over selecting between AI and cybersecurity for grad school applications",
+          "Social anxiety in large lecture halls": "fear of presenting research in large lecture halls, as mentioned with Professor Chen"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "identifying and approaching professors like Professor Chen for mentorship on AI vs cybersecurity career paths"
+        },
+        "behaviors_detailed": {},
+        "triggers_specified": {
+          "Networking events": "attending campus networking events to discuss AI/cybersecurity interests with professors",
+          "Presentations": "delivering presentations in academic settings, such as lecture halls or to faculty members"
+        },
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 2.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.7,
+        "improvement_score": 0.20000000000000018,
+        "timestamp": "2025-10-01T23:49:49.154743"
+      },
+      {
+        "stage_number": 5,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_20251001_234044",
+        "conversation_summary": "The coach prepped Gregory for a grad school presentation and mentor outreach, using tech humor and actionable strategies. Gregory responded with enthusiastic engagement, using self-deprecating humor to navigate nerves while adopting concrete tools like elevator pitch hooks and eye contact techniques.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "Panicking about presentation mistakes ('blue screen' or 'segfault') in front of Professor Chen",
+          "Dealing with roommate conflicts": "Not mentioned in conversation",
+          "Choosing the right career path": "Overanalyzing whether to lead with neural networks or encryption vulnerabilities in his elevator pitch",
+          "Social anxiety in large lecture halls": "Fear of awkward audience eye contact and judgment during presentations"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Struggling to formulate specific, non-basic questions for professors (e.g., debating if 'favorite programming language' is appropriate)",
+          "Financial planning": "Not mentioned in conversation",
+          "Managing student loans": "Not mentioned in conversation"
+        },
+        "behaviors_detailed": {
+          "Eats at the dining hall": "Not mentioned in conversation",
+          "Participates in study groups": "Not mentioned in conversation",
+          "Volunteers for campus events": "Preparing intensely with color-coded spreadsheets and obsessive Googling for grad school decisions"
+        },
+        "triggers_specified": {
+          "Presentations": "Delivering research presentations in lecture halls, particularly fearing technical mishaps ('blue screen') and audience scrutiny",
+          "Networking events": "Initiating conversations with professors during informal campus interactions (e.g., after class or at events)",
+          "Campus social events": "Not specifically mentioned beyond networking contexts"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 2.5,
-        "pre_assessment_score": 2.45,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.5,
+        "timestamp": "2025-10-01T23:51:24.073834"
+      },
+      {
+        "stage_number": 6,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_20251001_234044",
+        "conversation_summary": "Discussed grad school choices between AI/cybersecurity and strategies for approaching professors. Coached through presentation anxiety for Professor Chen using tech metaphors, resulting in increased confidence and specific action plans.",
+        "fears_materialized": {
+          "Choosing the right career path": "Deciding between AI or cybersecurity for grad school applications",
+          "Presentations": "Presenting research to Professor Chen in a CS department setting",
+          "Academic failure and poor grades": "Fearing a 'blue screen' or 'segfault' during a presentation"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Identifying and approaching specific professors (like Professor Chen) in AI/cybersecurity fields",
+          "Managing student loans": "Not discussed in conversation"
+        },
+        "behaviors_detailed": {
+          "Eats at the dining hall": "Not discussed in conversation",
+          "Participates in study groups": "Not discussed in conversation",
+          "Volunteers for campus events": "Preparing to attend a CS networking event this month"
+        },
+        "triggers_specified": {
+          "Networking events": "CS department networking events with professors",
+          "Presentations": "Delivering research presentations to faculty like Professor Chen",
+          "Campus social events": "CS department gatherings or professor office hours"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.6,
+        "improvement_score": 0.10000000000000009,
+        "timestamp": "2025-10-01T23:52:40.702731"
+      },
+      {
+        "stage_number": 7,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_20251001_234044",
+        "conversation_summary": "Discussed grad school choices between AI/cybersecurity and presentation preparation for Professor Chen; used tech humor to reframe anxieties, leading to enthusiastic planning and reduced anxiety through concrete strategies.",
+        "fears_materialized": {
+          "Choosing the right career path": "Deciding between AI and cybersecurity graduate programs",
+          "Social anxiety in large lecture halls": "Presenting research to Professor Chen and peers in CS department settings",
+          "Academic failure and poor grades": "Bombing presentations or receiving critical feedback ('downvotes') from professors",
+          "Dealing with roommate conflicts": "Not discussed in conversation"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Approaching specific professors (like Professor Chen) to discuss research vs industry career paths",
+          "Financial planning": "Not discussed in conversation",
+          "Managing student loans": "Not discussed in conversation",
+          "Networking initiation": "Starting conversations with classmates wearing headphones before lectures"
+        },
+        "behaviors_detailed": {
+          "Eats at the dining hall": "Not discussed in conversation",
+          "Participates in study groups": "Preparing specific questions about research/industry paths for professor meetings",
+          "Volunteers for campus events": "Attending networking events while wearing tech-themed clothing (binary shirt) as conversation starter"
+        },
+        "triggers_specified": {
+          "Networking events": "Campus tech networking events requiring elevator pitches about graduate interests",
+          "Presentations": "CS department research presentations, especially to Professor Chen",
+          "Campus social events": "Lecture hall interactions involving audience eye contact during talks"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.5,
         "post_assessment_score": 2.9,
-        "improvement_score": 0.44999999999999973,
-        "timestamp": "2025-10-01T19:22:11.003536"
+        "improvement_score": 0.3999999999999999,
+        "timestamp": "2025-10-01T23:54:01.190265"
+      },
+      {
+        "stage_number": 8,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_20251001_234044",
+        "conversation_summary": "Discussed grad school applications (AI vs. cybersecurity), presentation preparation for Professor Chen, and networking strategies. Gregory responded with enthusiastic engagement, using technical humor and proactive planning while acknowledging lingering nerves.",
+        "fears_materialized": {
+          "Choosing the right career path": "Deciding between AI and cybersecurity for grad school applications while obsessively comparing programs via spreadsheets",
+          "Social anxiety in large lecture halls": "Presenting research in computer science lecture halls, specifically fearing mistakes like segfaulting in front of Professor Chen"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Approaching professors (e.g., Professor Chen) at networking events or after class to discuss research vs. industry career paths"
+        },
+        "behaviors_detailed": {},
+        "triggers_specified": {
+          "Networking events": "Interacting with professors at campus events while wearing conversation-starting items like binary-print shirts",
+          "Presentations": "Delivering research presentations in computer science lecture halls, particularly when professors are in attendance"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 2.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.85,
+        "improvement_score": 0.3500000000000001,
+        "timestamp": "2025-10-01T23:56:34.146905"
+      },
+      {
+        "stage_number": 9,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_20251001_234044",
+        "conversation_summary": "Discussed grad school choices between AI/cybersecurity, strategies for networking with professors, and managing presentation anxiety. Gregory responded with enthusiastic preparation using spreadsheets and humor, showing increased confidence through actionable plans and tech metaphors.",
+        "fears_materialized": {
+          "Choosing the right career path": "Stressing about choosing between AI and cybersecurity for grad school, manifested through obsessive spreadsheet comparisons and fear of making the wrong choice",
+          "Social anxiety in large lecture halls": "Fear of presenting research in class settings (especially to Professor Chen), worrying about technical mistakes or awkward pauses during delivery"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Approaching professors during office hours or after class to ask about research vs. industry career paths and build mentorship"
+        },
+        "behaviors_detailed": {},
+        "triggers_specified": {
+          "Networking events": "Initiating conversations with professors during office hours or classmates wearing headphones in casual settings",
+          "Presentations": "Delivering research presentations in class (particularly to Professor Chen) with fears of blanking, awkward pauses, or technical errors"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 2.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.65,
+        "improvement_score": 0.1499999999999999,
+        "timestamp": "2025-10-01T23:59:37.527948"
+      },
+      {
+        "stage_number": 10,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_20251001_234044",
+        "conversation_summary": "The discussion centered on Gregory's anxiety about grad school choices between AI and cybersecurity, strategies for presentations and networking, and preparing to approach professors for mentorship. Gregory responded with initial nervousness but grew more confident, using tech humor and eagerness to apply concrete advice like practicing elevator pitches and power poses.",
+        "fears_materialized": {
+          "Choosing the right career path": "Deciding between AI and cybersecurity for grad school applications using a color-coded spreadsheet",
+          "Social anxiety in large lecture halls": "Presenting research in the CS building lecture hall with fear of awkward pauses or technical glitches"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Approaching professors like Professor Chen to discuss research versus industry career choices and ask specific questions"
+        },
+        "behaviors_detailed": {},
+        "triggers_specified": {
+          "Networking events": "Networking with professors during office hours or at campus events like coffee meetups",
+          "Presentations": "Delivering research presentations in computer science classes with triggers like audience eye contact or unexpected silences"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 2.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.75,
+        "improvement_score": 0.75,
+        "timestamp": "2025-10-02T00:01:44.696571"
       }
     ],
-    "current_stage": 1
+    "current_stage": 10
   }
 }

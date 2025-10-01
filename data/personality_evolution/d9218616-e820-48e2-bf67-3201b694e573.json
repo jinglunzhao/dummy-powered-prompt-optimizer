@@ -1,0 +1,365 @@
+{
+  "dummy_id": "d9218616-e820-48e2-bf67-3201b694e573",
+  "dummy_name": "Lisa Lee",
+  "current_experiment_id": "conversation_length_with_evolution",
+  "current_prompt_id": "conversation_length_test",
+  "created_at": "2025-10-01T23:40:20.282319",
+  "last_updated": "2025-10-01T23:57:27.611592",
+  "conversation_profile": {
+    "original_fears": [
+      "Dealing with roommate conflicts",
+      "Finding a job after graduation"
+    ],
+    "original_challenges": [
+      "Managing student loans",
+      "Preparing for presentations",
+      "Career exploration"
+    ],
+    "original_behaviors": [
+      "Uses social media for networking",
+      "Goes to campus events",
+      "Participates in study groups",
+      "Attends professor office hours"
+    ],
+    "original_anxiety_triggers": [
+      "Office hours",
+      "Presentations",
+      "Fraternity/Sorority events",
+      "Group projects"
+    ],
+    "original_social_anxiety_level": 2,
+    "original_big_five": {
+      "extraversion": 6,
+      "agreeableness": 5,
+      "conscientiousness": 5,
+      "neuroticism": 1,
+      "openness": 3
+    },
+    "current_fears": [
+      "Dealing with roommate conflicts",
+      "Bringing up student loan repayment during salary negotiations with potential employers without sounding awkward"
+    ],
+    "current_challenges": [
+      "Negotiating student loan repayment options as part of compensation packages in job offers",
+      "Practicing and refining an elevator pitch for job interviews to achieve a confident and authentic delivery in startup settings",
+      "Conducting informational interviews with alumni in tech startups to discuss career paths and compensation strategies"
+    ],
+    "current_behaviors": [
+      "Messaging alumni on LinkedIn for coffee chats using tailored scripts about loan negotiations and career pivots",
+      "Attending career fairs to network with recruiters while wearing professional attire like a blazer to boost confidence",
+      "Participates in study groups",
+      "Attends professor office hours"
+    ],
+    "current_anxiety_triggers": [
+      "Office hours",
+      "Delivering elevator pitches during job interviews or networking events, fearing stiffness or inauthenticity",
+      "Fraternity/Sorority events",
+      "Group projects"
+    ],
+    "current_social_anxiety_level": 1,
+    "current_big_five": {
+      "extraversion": 6,
+      "agreeableness": 5,
+      "conscientiousness": 5,
+      "neuroticism": 1,
+      "openness": 3
+    },
+    "evolution_stages": [
+      {
+        "stage_number": 1,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_d9218616-e820-48e2-bf67-3201b694e573_20251001_234041",
+        "conversation_summary": "Lisa and the coach planned elevator pitch practice using internship metrics, discussed targeting tech startups, and strategized loan repayment negotiations. Lisa showed enthusiasm by preparing materials and planning professional attire for sessions.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Delivering an elevator pitch to recruiters at tech startups",
+          "Dealing with roommate conflicts": ""
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "Practicing and refining an elevator pitch for job interviews",
+          "Career exploration": "Targeting tech startups in the city for job applications",
+          "Managing student loans": "Discussing loan repayment options during salary negotiations"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Researching startup benefits packages online",
+          "Goes to campus events": "Attending career center sessions for pitch practice",
+          "Attends professor office hours": "Bringing internship metrics/reports to coaching sessions",
+          "Participates in study groups": ""
+        },
+        "triggers_specified": {
+          "Office hours": "Preparing materials for career center appointments",
+          "Presentations": "Role-playing elevator pitches in coaching sessions",
+          "Group projects": "Negotiating salary/benefits in job discussions",
+          "Fraternity/Sorority events": ""
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.8,
+        "improvement_score": 0.2999999999999998,
+        "timestamp": "2025-10-01T23:41:35.053936"
+      },
+      {
+        "stage_number": 2,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_d9218616-e820-48e2-bf67-3201b694e573_20251001_234041",
+        "conversation_summary": "The coach and Lisa discussed job preparation strategies, including elevator pitch practice, targeting tech startups, and handling loan repayment in salary negotiations. Lisa responded with enthusiasm, planning to bring internship metrics, wear a blazer for confidence, and showed reduced anxiety through excited engagement.",
+        "fears_materialized": {
+          "Finding a job after graduation": "fear of awkwardly discussing student loan repayment during salary negotiations or failing to impress in elevator pitches"
+        },
+        "challenges_materialized": {
+          "Managing student loans": "discussing loan repayment options during job salary negotiations",
+          "Preparing for presentations": "practicing and refining elevator pitches for job interviews",
+          "Career exploration": "targeting tech startups for job applications and conducting informational interviews with alumni"
+        },
+        "behaviors_detailed": {},
+        "triggers_specified": {
+          "Presentations": "delivering elevator pitches in job interview scenarios"
+        },
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 1.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.8,
+        "improvement_score": 0.2999999999999998,
+        "timestamp": "2025-10-01T23:43:50.076506"
+      },
+      {
+        "stage_number": 3,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_d9218616-e820-48e2-bf67-3201b694e573_20251001_234041",
+        "conversation_summary": "Discussed strategies for job search targeting tech startups, specifically practicing an authentic elevator pitch and navigating salary negotiations including student loan repayment. Lisa responded with increased confidence, adopting specific tactics like wearing a blazer and practicing power poses.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Negotiating salary/benefits with tech startups and specifically bringing up student loan repayment assistance"
+        },
+        "challenges_materialized": {
+          "Managing student loans": "Discussing student loan repayment options during salary negotiations with potential employers",
+          "Preparing for presentations": "Practicing an authentic elevator pitch for startup recruiters, specifically avoiding stiffness"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Researching typical startup benefits packages for negotiation preparation",
+          "Goes to campus events": "Attending career center sessions for elevator pitch practice (implied by coach suggestion)",
+          "Participates in study groups": "Preparing internship metrics and reports to showcase results (implied by bringing notes)"
+        },
+        "triggers_specified": {
+          "Presentations": "Practicing elevator pitches in front of a mirror and feeling they sound stiff/inauthentic"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 0.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.05,
+        "improvement_score": 0.5499999999999998,
+        "timestamp": "2025-10-01T23:45:06.955511"
+      },
+      {
+        "stage_number": 4,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_d9218616-e820-48e2-bf67-3201b694e573_20251001_234041",
+        "conversation_summary": "Discussed strategies for job searching at tech startups, including negotiating student loan repayment during salary talks and refining elevator pitches. Lisa responded with increased confidence, planning to attend career fairs and practice pitches using specific metrics from her internships.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Negotiating student loan repayment during salary talks at tech startups without sounding awkward"
+        },
+        "challenges_materialized": {
+          "Managing student loans": "Bringing up loan repayment options during salary negotiations at tech startups",
+          "Preparing for presentations": "Practicing elevator pitches for startup recruiters at career fairs",
+          "Career exploration": "Targeting tech startups for job search and conducting informational interviews with alumni"
+        },
+        "behaviors_detailed": {
+          "Goes to campus events": "Attending career fairs to network with tech startup recruiters while wearing professional attire",
+          "Uses social media for networking": "Researching startup benefits packages and company cultures online before events"
+        },
+        "triggers_specified": {
+          "Presentations": "Delivering elevator pitches to recruiters at career fairs"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.2,
+        "improvement_score": 0.7000000000000002,
+        "timestamp": "2025-10-01T23:47:19.852130"
+      },
+      {
+        "stage_number": 5,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_d9218616-e820-48e2-bf67-3201b694e573_20251001_234041",
+        "conversation_summary": "The session focused on job preparation strategies, including elevator pitch refinement, negotiating student loan repayment, and networking with startups. Lisa responded enthusiastically, practiced pitches, messaged an alum for a coffee chat, and showed increased confidence.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Bringing up student loan repayment during salary negotiations without sounding awkward"
+        },
+        "challenges_materialized": {
+          "Managing student loans": "Negotiating student loan repayment benefits during job offers",
+          "Preparing for presentations": "Refining elevator pitches for job interviews to sound authentic in startup culture",
+          "Career exploration": "Targeting tech startups and setting up informational interviews with alumni"
+        },
+        "behaviors_detailed": {},
+        "triggers_specified": {
+          "Presentations": "Delivering elevator pitches during job interviews or career fairs"
+        },
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 1.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.3999999999999999,
+        "timestamp": "2025-10-01T23:49:51.801458"
+      },
+      {
+        "stage_number": 6,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_d9218616-e820-48e2-bf67-3201b694e573_20251001_234041",
+        "conversation_summary": "Discussed job search strategies for tech startups, including refining an authentic elevator pitch with coffee-themed hooks and tactfully negotiating student loan repayment during salary talks. Lisa responded enthusiastically, immediately implementing advice by scheduling alumni meetings and practicing pitches with increased confidence.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Bringing up student loan repayment during salary negotiations at tech startups without sounding awkward"
+        },
+        "challenges_materialized": {
+          "Managing student loans": "Discussing loan repayment options during salary negotiations",
+          "Preparing for presentations": "Refining an elevator pitch for startup recruiters to sound confident and approachable",
+          "Career exploration": "Targeting tech startups and conducting informational interviews with alumni like Sarah Chen"
+        },
+        "behaviors_detailed": {
+          "Goes to campus events": "Attending career fairs wearing a blazer to make professional first impressions",
+          "Preparing for presentations": "Practicing elevator pitches while holding coffee and recording self for conversational tone",
+          "Career exploration": "Researching startup benefits packages and messaging alumni for coffee chats"
+        },
+        "triggers_specified": {
+          "Presentations": "Role-playing elevator pitches for startup recruiters",
+          "Office hours": "Preparing questions about career pivots for informational interviews"
+        },
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 1.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.8,
+        "improvement_score": 0.2999999999999998,
+        "timestamp": "2025-10-01T23:51:14.346199"
+      },
+      {
+        "stage_number": 7,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_d9218616-e820-48e2-bf67-3201b694e573_20251001_234041",
+        "conversation_summary": "Discussed job search strategies for tech startups, focusing on elevator pitch refinement and negotiating student loan repayment in compensation packages. Lisa responded proactively by researching startups, practicing pitches, and initiating alumni outreach.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Discussing student loan repayment during salary negotiations with tech startups"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Targeting tech startups and preparing elevator pitches tailored to their culture",
+          "Preparing for presentations": "Practicing elevator pitches to sound authentic for startup recruiters",
+          "Managing student loans": "Negotiating loan repayment options within startup compensation packages"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Messaging alumni like Sarah Chen for coffee chats to build industry connections"
+        },
+        "triggers_specified": {
+          "Presentations": "Practicing elevator pitches for startup recruiters at career fairs"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 0.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.8,
+        "improvement_score": 0.2999999999999998,
+        "timestamp": "2025-10-01T23:52:32.141881"
+      },
+      {
+        "stage_number": 8,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_d9218616-e820-48e2-bf67-3201b694e573_20251001_234041",
+        "conversation_summary": "Discussed job search strategies for tech startups, including elevator pitch refinement and negotiating student loan repayment in compensation packages. Lisa enthusiastically implemented advice by crafting outreach scripts and practicing pitches, transforming nervousness into confident action.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Bringing up student loan repayment during salary negotiations at tech startups"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "Practicing elevator pitches for startup recruiters while holding coffee",
+          "Career exploration": "Targeting tech startups in the city and conducting alumni informational interviews",
+          "Managing student loans": "Negotiating student loan repayment options within compensation packages"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Messaging alumni on LinkedIn with tailored outreach scripts about loan negotiations"
+        },
+        "triggers_specified": {
+          "Presentations": "Delivering elevator pitches at tech startup career fairs"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 0.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.8,
+        "improvement_score": 0.2999999999999998,
+        "timestamp": "2025-10-01T23:54:02.382296"
+      },
+      {
+        "stage_number": 9,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_d9218616-e820-48e2-bf67-3201b694e573_20251001_234041",
+        "conversation_summary": "Discussed job search strategies for tech startups, practiced elevator pitches, and developed negotiation tactics for student loan repayment. Lisa shifted from nervousness to confident enthusiasm, taking immediate action on alumni outreach.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Negotiating student loan repayment during tech startup salary talks",
+          "Dealing with roommate conflicts": "Using 'I' statements to address specific frustrations with roommates"
+        },
+        "challenges_materialized": {
+          "Managing student loans": "Bringing up loan repayment options during compensation discussions with startups",
+          "Preparing for presentations": "Practicing elevator pitches for tech recruiters while holding coffee",
+          "Career exploration": "Conducting informational interviews with startup alumni about career pivots"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Messaging alumni via LinkedIn DMs to request coffee chats",
+          "Attends professor office hours": "Meeting with professors to discuss loan repayment strategies",
+          "Goes to campus events": "Wearing a blazer to career fairs to boost confidence"
+        },
+        "triggers_specified": {
+          "Office hours": "Preparing for professor meetings about financial aid options",
+          "Presentations": "Practicing elevator pitches with career center staff",
+          "Group projects": "Role-playing salary negotiations as collaborative discussions"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.8,
+        "improvement_score": 0.2999999999999998,
+        "timestamp": "2025-10-01T23:55:23.772507"
+      },
+      {
+        "stage_number": 10,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_d9218616-e820-48e2-bf67-3201b694e573_20251001_234041",
+        "conversation_summary": "Discussed job search strategies for tech startups, including elevator pitch refinement, salary negotiation with student loan repayment focus, and alumni networking. Lisa responded with enthusiasm, taking immediate action on outreach and practice, and showed increased confidence.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Bringing up student loan repayment during salary negotiations with potential employers without sounding awkward"
+        },
+        "challenges_materialized": {
+          "Managing student loans": "Negotiating student loan repayment options as part of compensation packages in job offers",
+          "Preparing for presentations": "Practicing and refining an elevator pitch for job interviews to achieve a confident and authentic delivery in startup settings",
+          "Career exploration": "Conducting informational interviews with alumni in tech startups to discuss career paths and compensation strategies"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Messaging alumni on LinkedIn for coffee chats using tailored scripts about loan negotiations and career pivots",
+          "Goes to campus events": "Attending career fairs to network with recruiters while wearing professional attire like a blazer to boost confidence"
+        },
+        "triggers_specified": {
+          "Presentations": "Delivering elevator pitches during job interviews or networking events, fearing stiffness or inauthenticity"
+        },
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 1.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.0,
+        "improvement_score": -0.04999999999999982,
+        "timestamp": "2025-10-01T23:57:27.611063"
+      }
+    ],
+    "current_stage": 10
+  }
+}

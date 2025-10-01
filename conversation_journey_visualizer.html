@@ -960,17 +960,37 @@
                     return;
                 }
                 
-                // Find evolution stage for this round
                 const evolutionTimeline = dummyData.conversation_details.personality_evolution_timeline;
-                const stage = evolutionTimeline.find(s => s.stage_number <= round) || evolutionTimeline[evolutionTimeline.length - 1];
+                const milestoneResults = dummyData.milestone_results || [];
                 
-                if (!stage) {
+                // Find the milestone that corresponds to this round
+                const milestone = milestoneResults.find(m => m.milestone_rounds === round);
+                
+                if (!milestone) {
+                    // If this is not a milestone round, find the most recent milestone
+                    const recentMilestones = milestoneResults.filter(m => m.milestone_rounds <= round);
+                    if (recentMilestones.length > 0) {
+                        const recentMilestone = recentMilestones[recentMilestones.length - 1];
+                        // Find the evolution stage index that corresponds to this milestone
+                        const milestoneIndex = milestoneResults.indexOf(recentMilestone);
+                        if (milestoneIndex >= 0 && milestoneIndex < evolutionTimeline.length) {
+                            const stage = evolutionTimeline[milestoneIndex];
+                            this.showEvolutionDetails(dummyName, [stage]);
+                            return;
+                        }
+                    }
                     alert('No evolution data available for this round.');
                     return;
                 }
                 
-                // Show evolution details modal
-                this.showEvolutionDetails(dummyName, [stage]);
+                // Find the evolution stage index that corresponds to this milestone
+                const milestoneIndex = milestoneResults.indexOf(milestone);
+                if (milestoneIndex >= 0 && milestoneIndex < evolutionTimeline.length) {
+                    const stage = evolutionTimeline[milestoneIndex];
+                    this.showEvolutionDetails(dummyName, [stage]);
+                } else {
+                    alert('No evolution data available for this milestone.');
+                }
             }
         }
         

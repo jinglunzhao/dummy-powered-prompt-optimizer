@@ -11,11 +11,12 @@ from dotenv import load_dotenv
 class Config:
     """Configuration class for the system"""
     
-    # AI API Configuration (DeepSeek)
-    OPENAI_API_KEY = "sk-d64d89acb0904956a4f5e37d512ae950"  # Direct API key
-    DEEPSEEK_API_KEY = "sk-d64d89acb0904956a4f5e37d512ae950"  # Same key for DeepSeek API
-    OPENAI_MODEL = "deepseek-chat"  # Use for conversations (cheaper, direct responses)
-    DEEPSEEK_REASONER_MODEL = "deepseek-reasoner"  # Use for prompt generation, reflections, synthesis (better reasoning)
+    # AI API Configuration (Tencent Cloud DeepSeek)
+    OPENAI_API_KEY = "sk-EKV0G4P8IEDWAGfq3bYd4ogNnutUOKatDpDAmxnKoiYhQnhb"  # Tencent Cloud DeepSeek API key
+    DEEPSEEK_API_KEY = "sk-EKV0G4P8IEDWAGfq3bYd4ogNnutUOKatDpDAmxnKoiYhQnhb"  # Same key for DeepSeek API
+    OPENAI_MODEL = "deepseek-v3-0324"  # Use for conversations (Tencent Cloud DeepSeek V3)
+    DEEPSEEK_REASONER_MODEL = "deepseek-r1-0528"  # Use for prompt generation, reflections, synthesis (Tencent Cloud DeepSeek R1)
+    TENCENT_BASE_URL = "https://api.lkeap.cloud.tencent.com/v1"  # Tencent Cloud DeepSeek base URL
     
     # Default System Prompt
     SYSTEM_PROMPT = "You are a supportive AI assistant helping students improve their social skills. Be encouraging, provide practical advice, and help them build confidence gradually."

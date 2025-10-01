@@ -23,7 +23,7 @@ class ConversationSimulator:
         print("✅ Conversation Simulator initialized")
     
     async def simulate_conversation_async(self, dummy: AIDummy, 
-                                        scenario: str = None,
+                                        scenario: str = None, 
                                         num_rounds: int = 5,
                                         custom_system_prompt: str = None) -> Conversation:
         """Simulate a character-driven conversation between dummy and AI"""
@@ -86,13 +86,13 @@ Start with a natural opening message (1-2 sentences)."""
 
         async with aiohttp.ClientSession() as session:
             async with session.post(
-                "https://api.deepseek.com/v1/chat/completions",
+                "https://api.lkeap.cloud.tencent.com/v1/chat/completions",
                 headers={
                     "Authorization": f"Bearer {self.api_key}",
                     "Content-Type": "application/json"
                 },
                 json={
-                    "model": "deepseek-chat",
+                    "model": "deepseek-v3-0324",
                     "messages": [{"role": "user", "content": prompt}],
                     "max_tokens": 80,
                     "temperature": 0.8
@@ -116,13 +116,13 @@ Start with a natural opening message (1-2 sentences)."""
         
         async with aiohttp.ClientSession() as session:
             async with session.post(
-                "https://api.deepseek.com/v1/chat/completions",
+                "https://api.lkeap.cloud.tencent.com/v1/chat/completions",
                 headers={
                     "Authorization": f"Bearer {self.api_key}",
                     "Content-Type": "application/json"
                 },
                 json={
-                    "model": "deepseek-chat",
+                    "model": "deepseek-v3-0324",
                     "messages": messages,
                     "max_tokens": 150,
                     "temperature": 0.7
@@ -144,17 +144,17 @@ Start with a natural opening message (1-2 sentences)."""
         
         # Add conversation history - DeepSeek API only uses "system" and "user" roles
         for turn in conversation.turns[-6:]:  # Last 6 turns for context
-            messages.append({"role": "user", "content": turn.message})
+                messages.append({"role": "user", "content": turn.message})
         
         async with aiohttp.ClientSession() as session:
             async with session.post(
-                "https://api.deepseek.com/v1/chat/completions",
+                "https://api.lkeap.cloud.tencent.com/v1/chat/completions",
                 headers={
                     "Authorization": f"Bearer {self.api_key}",
                     "Content-Type": "application/json"
                 },
                 json={
-                    "model": "deepseek-chat",
+                    "model": "deepseek-v3-0324",
                     "messages": messages,
                     "max_tokens": 80,
                     "temperature": 0.8
@@ -216,9 +216,9 @@ def main():
         conversation = await simulator.simulate_conversation_async(dummy, num_rounds=3)
         
         print(f"\nConversation with {len(conversation.turns)} turns:")
-        for turn in conversation.turns:
-            speaker = "AI Coach" if turn.speaker == "ai" else dummy.name
-            print(f"{speaker}: {turn.message}")
+    for turn in conversation.turns:
+        speaker = "AI Coach" if turn.speaker == "ai" else dummy.name
+        print(f"{speaker}: {turn.message}")
     
     asyncio.run(test_conversation())
     print("\nClean conversation simulation test complete!")

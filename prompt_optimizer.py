@@ -492,7 +492,7 @@ Be concise and actionable. No templates or verbose analysis.
             
             # Call DeepSeek Reasoner for reflection
             response = requests.post(
-                "https://api.deepseek.com/v1/chat/completions",
+                "https://api.lkeap.cloud.tencent.com/v1/chat/completions",
                 headers={
                     "Authorization": f"Bearer {Config.DEEPSEEK_API_KEY}",
                     "Content-Type": "application/json"
@@ -602,7 +602,7 @@ Be concise and actionable. No verbose analysis.
             
             # Call DeepSeek Reasoner for synthesis
             response = requests.post(
-                "https://api.deepseek.com/v1/chat/completions",
+                "https://api.lkeap.cloud.tencent.com/v1/chat/completions",
                 headers={
                     "Authorization": f"Bearer {Config.DEEPSEEK_API_KEY}",
                     "Content-Type": "application/json"
@@ -1212,7 +1212,7 @@ Example format: "You are a helpful social skills coach who..."
                 
                 # Call LLM for crossover
                 response = requests.post(
-                "https://api.deepseek.com/v1/chat/completions",
+                "https://api.lkeap.cloud.tencent.com/v1/chat/completions",
                 headers={
                     "Authorization": f"Bearer {Config.DEEPSEEK_API_KEY}",
                     "Content-Type": "application/json"
@@ -1362,7 +1362,7 @@ Example format: "You are a helpful social skills coach who..."
                 
                 print(f"   🔗 Making LLM mutation API call (attempt {attempt + 1}/{max_retries})...")
                 response = requests.post(
-                "https://api.deepseek.com/v1/chat/completions",
+                "https://api.lkeap.cloud.tencent.com/v1/chat/completions",
                 headers={
                     "Authorization": f"Bearer {Config.DEEPSEEK_API_KEY}",
                     "Content-Type": "application/json"

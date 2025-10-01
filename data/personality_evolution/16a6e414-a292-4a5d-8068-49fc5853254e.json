@@ -3,8 +3,8 @@
   "dummy_name": "Jamie Young",
   "current_experiment_id": "conversation_length_with_evolution",
   "current_prompt_id": "conversation_length_test",
-  "created_at": "2025-10-01T19:20:39.840586",
-  "last_updated": "2025-10-01T19:22:11.401689",
+  "created_at": "2025-10-01T23:40:20.275434",
+  "last_updated": "2025-10-01T23:59:59.453110",
   "conversation_profile": {
     "original_fears": [
       "Finding a job after graduation",
@@ -39,30 +39,30 @@
       "openness": 1
     },
     "current_fears": [
-      "A recruiter from a big tech company looking at LinkedIn profile and thinking it's not good enough",
-      "Not mentioned in conversation",
-      "Not mentioned in conversation"
+      "Fear of sending LinkedIn messages to professionals due to concerns about messages being perceived as stupid or receiving no response",
+      "Anxiety about separation, leading to calls to mom after study sessions for reassurance",
+      "Fear of being unable to focus for short periods like 10 or 25 minutes on algorithms assignments"
     ],
     "current_challenges": [
-      "Updating LinkedIn profile to appear competitive to tech recruiters",
-      "Not mentioned in conversation",
-      "Not mentioned in conversation",
-      "Breaking job searching into 15-minute daily tasks"
+      "Connecting with alumni on LinkedIn to seek career advice and share experiences",
+      "Managing stress from algorithms assignments by breaking them into smaller tasks like reading problem statements or outlining solutions",
+      "Navigating campus politics",
+      "Implementing Pomodoro technique with 10-minute focused sessions using a timer app"
     ],
     "current_behaviors": [
-      "Not mentioned in conversation",
-      "Putting off meeting with coach about job search help",
-      "Not mentioned in conversation",
-      "Not mentioned in conversation",
-      "Not mentioned in conversation"
+      "Joins student clubs and organizations",
+      "Delaying algorithms work by avoiding Pomodoro app use and attempting to complete entire assignments in one go",
+      "Calling mom immediately after study milestones like finishing note-taking for emotional support",
+      "Studies in the library regularly",
+      "Stays up late studying"
     ],
     "current_anxiety_triggers": [
-      "Not mentioned in conversation",
-      "Not mentioned in conversation",
-      "The moment a recruiter scrolls past application",
-      "Not mentioned in conversation"
+      "Office hours",
+      "Group projects",
+      "Anxiety triggered by composing and sending LinkedIn messages to professionals",
+      "Presentations"
     ],
-    "current_social_anxiety_level": 9,
+    "current_social_anxiety_level": 7,
     "current_big_five": {
       "extraversion": 2,
       "agreeableness": 9,
@@ -76,40 +76,312 @@
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "e4e0c067-e848-4f6a-ad25-05317cfb7892",
-        "conversation_summary": "Jamie discussed job search anxiety and LinkedIn profile fears with the coach, repeatedly expressing worry about tech recruiters judging their profile as inadequate compared to other candidates, despite receiving reassurance and practical strategies.",
+        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_20251001_234039",
+        "conversation_summary": "The coach helped Jamie break down networking and time management into small steps, focusing on LinkedIn outreach and starting assignments with 10-minute sessions. Jamie showed reduced anxiety by agreeing to try the approach and initiating a timer for reading the problem statement.",
         "fears_materialized": {
-          "Finding a job after graduation": "A recruiter from a big tech company looking at LinkedIn profile and thinking it's not good enough",
-          "Living away from family for the first time": "Not mentioned in conversation",
-          "Time management with coursework": "Not mentioned in conversation"
+          "Finding a job after graduation": "fear of sending LinkedIn messages to professionals and being ignored or judged",
+          "Time management with coursework": "fear of not being able to focus for 25 minutes on an assignment"
         },
         "challenges_materialized": {
-          "Career exploration": "Updating LinkedIn profile to appear competitive to tech recruiters",
-          "Dealing with academic pressure": "Not mentioned in conversation",
-          "Navigating campus politics": "Not mentioned in conversation",
-          "Building time management": "Breaking job searching into 15-minute daily tasks"
+          "Career exploration": "connecting with alumni on LinkedIn to discuss career paths",
+          "Dealing with academic pressure": "starting with 10-minute sessions on algorithms assignment to reduce overwhelm",
+          "Building time management": "implementing Pomodoro technique with short work intervals"
         },
         "behaviors_detailed": {
-          "Joins student clubs and organizations": "Not mentioned in conversation",
-          "Procrastinates on assignments": "Putting off meeting with coach about job search help",
-          "Calls family frequently": "Not mentioned in conversation",
-          "Studies in the library regularly": "Not mentioned in conversation",
-          "Stays up late studying": "Not mentioned in conversation"
+          "Procrastinates on assignments": "avoiding Pomodoro app due to perfectionist mindset of completing entire assignment in one sitting"
         },
         "triggers_specified": {
-          "Office hours": "Not mentioned in conversation",
-          "Group projects": "Not mentioned in conversation",
-          "Job interviews": "The moment a recruiter scrolls past application",
-          "Presentations": "Not mentioned in conversation"
+          "Job interviews": "sending LinkedIn messages to professionals for networking"
         },
-        "anxiety_change": 0.0,
-        "new_anxiety_level": 9.0,
-        "pre_assessment_score": 2.3,
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 8.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.3,
+        "improvement_score": 0.7999999999999998,
+        "timestamp": "2025-10-01T23:42:11.323225"
+      },
+      {
+        "stage_number": 2,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_20251001_234039",
+        "conversation_summary": "The coach helped Jamie break down networking and an algorithms assignment into manageable steps. Jamie started with the assignment, using a modified Pomodoro technique (10-minute chunks) to read the problem and take notes, which reduced initial panic. By the end, Jamie made progress on the assignment and planned to call mom for a break.",
+        "fears_materialized": {
+          "Finding a job after graduation": "fear of sending LinkedIn messages to professionals (alumni) due to worry about message being stupid or not getting a response",
+          "Time management with coursework": "fear of not being able to focus for 25 minutes on an algorithms assignment and feeling pressure to complete entire assignment in one sitting"
+        },
+        "challenges_materialized": {
+          "Career exploration": "reaching out to professionals on LinkedIn for career advice",
+          "Dealing with academic pressure": "starting and making progress on an algorithms assignment without getting overwhelmed by perfectionism",
+          "Building time management": "using the Pomodoro technique effectively and breaking assignments into small, manageable chunks"
+        },
+        "behaviors_detailed": {
+          "Procrastinates on assignments": "avoids using Pomodoro app due to belief that assignments must be completed in one sitting",
+          "Calls family frequently": "calls mom after study sessions to share progress and recharge"
+        },
+        "triggers_specified": {
+          "Job interviews": "sending LinkedIn messages to professionals for networking purposes"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.4,
+        "improvement_score": 0.8999999999999999,
+        "timestamp": "2025-10-01T23:44:42.691388"
+      },
+      {
+        "stage_number": 3,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_20251001_234039",
+        "conversation_summary": "The coach helped Jamie break networking and an algorithms assignment into manageable steps. Jamie started with the Pomodoro technique, progressed from reading the problem to outlining a solution in small timed chunks, and planned a break to call mom. Jamie showed reduced anxiety and increased confidence by the end.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Fear of professionals thinking LinkedIn outreach messages are stupid or not responding at all",
+          "Living away from family for the first time": "Nervousness about calling mom during a break, seeking comfort",
+          "Time management with coursework": "Feeling paralyzed by needing to finish entire assignments in one sitting, unable to start"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Connecting with 1-2 alumni per week on LinkedIn to ask about their career path",
+          "Dealing with academic pressure": "Starting an algorithms assignment by breaking it into 10-minute focused chunks",
+          "Building time management": "Implementing the Pomodoro technique with a visible timer and specific workspace setup"
+        },
+        "behaviors_detailed": {
+          "Joins student clubs and organizations": "Not discussed in this conversation",
+          "Procrastinates on assignments": "Avoiding using Pomodoro app due to belief work must be completed in one go",
+          "Calls family frequently": "Planning to call mom during a timed break after making progress on an assignment",
+          "Studies in the library regularly": "Not discussed in this conversation",
+          "Stays up late studying": "Not discussed in this conversation"
+        },
+        "triggers_specified": {
+          "Office hours": "Fear of crafting and sending messages to professionals on LinkedIn",
+          "Group projects": "Not discussed in this conversation",
+          "Job interviews": "LinkedIn outreach as a precursor step to job interviews",
+          "Presentations": "Not discussed in this conversation"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.4,
+        "improvement_score": 0.8999999999999999,
+        "timestamp": "2025-10-01T23:46:03.956958"
+      },
+      {
+        "stage_number": 4,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_20251001_234039",
+        "conversation_summary": "Coach guided Jamie through breaking networking and algorithms work into small steps; Jamie implemented timed study sessions, completed assignment components, and eventually sent a LinkedIn message while showing reduced anxiety through incremental progress.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Fear of sending LinkedIn messages to professionals due to potential judgment or non-response",
+          "Living away from family for the first time": "Anxiety about separation causing reliance on calling Mom for comfort after study sessions",
+          "Time management with coursework": "Overwhelm with algorithms assignment leading to avoidance until broken into 10-minute chunks"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Crafting and sending LinkedIn messages to alumni while fearing perceived stupidity",
+          "Dealing with academic pressure": "Starting algorithms assignment by reading problem statements in timed intervals to avoid paralysis",
+          "Building time management": "Implementing Pomodoro technique with 10-minute work sessions for coding assignments"
+        },
+        "behaviors_detailed": {
+          "Procrastinates on assignments": "Avoiding algorithms work by fixating on networking fears despite having Pomodoro app",
+          "Calls family frequently": "Contacting Mom during study breaks to share coding progress and seek reassurance"
+        },
+        "triggers_specified": {},
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.35,
+        "improvement_score": 0.8500000000000001,
+        "timestamp": "2025-10-01T23:49:04.832570"
+      },
+      {
+        "stage_number": 5,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_20251001_234039",
+        "conversation_summary": "The coach helped Jamie break down networking and academic tasks into manageable steps. Jamie successfully implemented short Pomodoro sessions for an algorithms assignment and sent LinkedIn messages to alumni, demonstrating reduced anxiety through tangible progress.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Fear of sending LinkedIn messages to alumni due to potential negative judgment or non-response",
+          "Time management with coursework": "Fear of starting algorithms assignment due to feeling overwhelmed by completing it all at once"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Connecting with alumni on LinkedIn for career advice",
+          "Dealing with academic pressure": "Breaking algorithms assignment into 10-minute focused chunks",
+          "Building time management": "Implementing Pomodoro technique with 10-minute work intervals"
+        },
+        "behaviors_detailed": {
+          "Procrastinates on assignments": "Delaying algorithms assignment by discussing networking fears instead of working",
+          "Calls family frequently": "Contacting mom immediately after completing study milestones for emotional support"
+        },
+        "triggers_specified": {
+          "Job interviews": "Sending LinkedIn messages to professionals and awaiting responses"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.3,
+        "improvement_score": 0.7999999999999998,
+        "timestamp": "2025-10-01T23:51:05.948142"
+      },
+      {
+        "stage_number": 6,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_20251001_234039",
+        "conversation_summary": "The coach helped Jamie break down networking and academic tasks into manageable steps. Jamie successfully used timed work intervals for an algorithms assignment and sent a LinkedIn message to an alumnus, ending with reduced anxiety and concrete plans for small daily actions.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Fear of rejection when reaching out to professionals on LinkedIn",
+          "Time management with coursework": "Fear of not being able to focus for 25 minutes on an algorithms assignment"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Connecting with alumni on LinkedIn to learn about their career paths",
+          "Dealing with academic pressure": "Breaking down an algorithms assignment into small steps like reading the problem or outlining solutions",
+          "Building time management": "Using Pomodoro technique in 10-minute intervals for assignments"
+        },
+        "behaviors_detailed": {
+          "Procrastinates on assignments": "Avoids starting algorithms assignment by insisting it must be completed in one sitting",
+          "Calls family frequently": "Calls Mom immediately after completing stressful tasks like sending LinkedIn messages"
+        },
+        "triggers_specified": {},
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.45,
+        "improvement_score": 0.9500000000000002,
+        "timestamp": "2025-10-01T23:53:28.624591"
+      },
+      {
+        "stage_number": 7,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_20251001_234039",
+        "conversation_summary": "The coach assisted Jamie in addressing networking fears and academic procrastination by breaking tasks into small, manageable steps. Jamie started with time management techniques, gained confidence through small wins, and successfully sent LinkedIn messages, showing reduced anxiety and increased determination.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Sending LinkedIn messages to professionals and fearing they will think the message is stupid or not respond",
+          "Living away from family for the first time": "Calling mom immediately after stressful events like networking for reassurance",
+          "Time management with coursework": "Unable to focus for even 25 minutes on assignments, leading to procrastination"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Connecting with alumni on LinkedIn and crafting messages without overthinking",
+          "Dealing with academic pressure": "Breaking down an algorithms assignment into 10-minute chunks to manage overwhelm",
+          "Building time management": "Implementing the Pomodoro technique with short focus sessions to avoid procrastination"
+        },
+        "behaviors_detailed": {
+          "Procrastinates on assignments": "Avoiding starting work by not using Pomodoro apps, believing assignments must be finished in one sitting",
+          "Calls family frequently": "Contacting mom right after anxiety-inducing activities like sending networking messages for emotional support"
+        },
+        "triggers_specified": {
+          "Job interviews": "Crafting and sending messages on LinkedIn for networking purposes"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.3,
+        "improvement_score": 0.7999999999999998,
+        "timestamp": "2025-10-01T23:55:38.092286"
+      },
+      {
+        "stage_number": 8,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_20251001_234039",
+        "conversation_summary": "The coach guided Jamie through breaking down LinkedIn outreach and an algorithms assignment into micro-steps, using modified Pomodoro technique. Jamie successfully sent a LinkedIn message and made concrete progress on the assignment, showing reduced anxiety through small victories.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Fear that professionals will think LinkedIn outreach messages are stupid or won't respond at all",
+          "Living away from family for the first time": "Needing to call mom immediately after completing stressful tasks like sending LinkedIn messages",
+          "Time management with coursework": "Inability to start algorithms assignment without feeling overwhelmed by its entirety"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Drafting and sending LinkedIn messages to alumni for career advice",
+          "Dealing with academic pressure": "Starting and making progress on the specific algorithms assignment",
+          "Building time management": "Implementing Pomodoro technique in 10-minute chunks for the algorithms assignment"
+        },
+        "behaviors_detailed": {
+          "Procrastinates on assignments": "Avoiding algorithms homework by fixating on networking anxieties instead",
+          "Calls family frequently": "Calling mom immediately after sending LinkedIn message to seek reassurance",
+          "Studies in the library regularly": "Using Pomodoro app specifically for algorithm assignment (though previously unused)"
+        },
+        "triggers_specified": {
+          "Office hours": "Crafting professional messages to alumni on LinkedIn",
+          "Job interviews": "Sending LinkedIn connection requests to professionals",
+          "Presentations": "Not explicitly discussed in this segment"
+        },
+        "anxiety_change": -2.0,
+        "new_anxiety_level": 7.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.25,
+        "improvement_score": 0.75,
+        "timestamp": "2025-10-01T23:56:49.504528"
+      },
+      {
+        "stage_number": 9,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_20251001_234039",
+        "conversation_summary": "Coached Jamie through breaking assignments into 10-minute Pomodoro chunks and drafting alumni LinkedIn messages, resulting in successful algorithm progress and message sends with reduced panic.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Sending LinkedIn messages to alumni professionals and fearing they'll think the message is stupid or won't respond",
+          "Living away from family for the first time": "Calling mom for reassurance after completing challenging tasks like coding assignments"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Connecting with 1-2 alumni per week on LinkedIn to discuss career paths",
+          "Building time management": "Starting assignments with 10-minute Pomodoro chunks instead of attempting to finish entire projects in one sitting"
+        },
+        "behaviors_detailed": {
+          "Procrastinates on assignments": "Avoiding Pomodoro app despite having it installed, believing assignments must be completed in one continuous session",
+          "Calls family frequently": "Contacting mom immediately after small victories (e.g., understanding algorithm structure) for emotional support",
+          "Studies in library regularly": "Reading problem statements first and writing pseudocode in bullet points during timed sessions"
+        },
+        "triggers_specified": {
+          "Job interviews": "Drafting/sending LinkedIn messages to professionals and awaiting responses",
+          "Presentations": "Planning what to share about progress during calls with mom"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
         "post_assessment_score": 2.95,
-        "improvement_score": 0.6500000000000004,
-        "timestamp": "2025-10-01T19:22:11.401192"
+        "improvement_score": 0.4500000000000002,
+        "timestamp": "2025-10-01T23:58:04.513107"
+      },
+      {
+        "stage_number": 10,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_20251001_234039",
+        "conversation_summary": "The coach helped Jamie break down networking and time management into small steps, such as sending LinkedIn messages and using short Pomodoro sessions for an algorithms assignment. Jamie progressed from initial paralysis to completing reading, note-taking, and sending a message, showing increased confidence and reduced anxiety.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Fear of sending LinkedIn messages to professionals due to concerns about messages being perceived as stupid or receiving no response",
+          "Living away from family for the first time": "Anxiety about separation, leading to calls to mom after study sessions for reassurance",
+          "Time management with coursework": "Fear of being unable to focus for short periods like 10 or 25 minutes on algorithms assignments"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Connecting with alumni on LinkedIn to seek career advice and share experiences",
+          "Dealing with academic pressure": "Managing stress from algorithms assignments by breaking them into smaller tasks like reading problem statements or outlining solutions",
+          "Building time management": "Implementing Pomodoro technique with 10-minute focused sessions using a timer app"
+        },
+        "behaviors_detailed": {
+          "Procrastinates on assignments": "Delaying algorithms work by avoiding Pomodoro app use and attempting to complete entire assignments in one go",
+          "Calls family frequently": "Calling mom immediately after study milestones like finishing note-taking for emotional support"
+        },
+        "triggers_specified": {
+          "Job interviews": "Anxiety triggered by composing and sending LinkedIn messages to professionals"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.3,
+        "improvement_score": 1.4499999999999997,
+        "timestamp": "2025-10-01T23:59:59.452584"
       }
     ],
-    "current_stage": 1
+    "current_stage": 10
   }
 }

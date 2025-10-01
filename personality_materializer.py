@@ -42,13 +42,13 @@ class PersonalityMaterializer:
             # Call DeepSeek Reasoner for materialization
             async with aiohttp.ClientSession() as session:
                 async with session.post(
-                    "https://api.deepseek.com/v1/chat/completions",
+                    "https://api.lkeap.cloud.tencent.com/v1/chat/completions",
                     headers={
                         "Authorization": f"Bearer {self.api_key}",
                         "Content-Type": "application/json"
                     },
                     json={
-                        "model": "deepseek-chat",
+                        "model": "deepseek-r1-0528",
                         "messages": [{"role": "user", "content": materialization_prompt}],
                         "temperature": 0.3,  # Low temperature for focused analysis
                         "max_tokens": 2000   # Enough for detailed materialization
@@ -62,8 +62,8 @@ class PersonalityMaterializer:
                         
                         if 'choices' in result and len(result['choices']) > 0:
                             message = result['choices'][0]['message']
-                            # DeepSeek Reasoner puts the actual response in 'reasoning_content' or 'content'
-                            materialization_text = (message.get('reasoning_content') or message.get('content') or '').strip()
+                            # DeepSeek Reasoner puts the actual JSON response in 'content', reasoning in 'reasoning_content'
+                            materialization_text = (message.get('content') or message.get('reasoning_content') or '').strip()
                             print(f"📝 Materialization text: {len(materialization_text)} chars")
                             print(f"📄 Text preview: {materialization_text[:200]}...")
                             
@@ -178,33 +178,79 @@ RESPONSE FORMAT (JSON ONLY):
 
 CRITICAL INSTRUCTIONS:
 1. Your response must be ONLY the JSON object above - no explanations, no reasoning, no additional text
-2. Only materialize traits that were actually discussed or emerged in the conversation
-3. Keep the same core meaning but make it more specific and concrete
-4. If a trait wasn't mentioned, don't include it in the materialization
-5. Focus on making abstract concepts more tangible, not changing them completely
-6. Start your response with {{ and end with }} - nothing else
+2. Do NOT include any reasoning process or step-by-step analysis
+3. Do NOT include any text before or after the JSON
+4. Only materialize traits that were actually discussed or emerged in the conversation
+5. Keep the same core meaning but make it more specific and concrete
+6. If a trait wasn't mentioned, don't include it in the materialization
+7. Focus on making abstract concepts more tangible, not changing them completely
+8. Start your response with {{ and end with }} - nothing else
 """
     
     def _parse_materialization_response(self, response_text: str) -> Dict[str, Any]:
         """Parse the materialization response from LLM"""
         try:
-            # Try to extract JSON from the response
+            # Try multiple extraction methods for robust parsing
+            json_text = None
+            
+            # Method 1: Look for JSON code block
             if "```json" in response_text:
-                # Extract JSON from code block
                 start = response_text.find("```json") + 7
                 end = response_text.find("```", start)
-                json_text = response_text[start:end].strip()
-            elif "{" in response_text and "}" in response_text:
-                # Extract JSON from response
+                if end > start:
+                    json_text = response_text[start:end].strip()
+                    print("🔍 Found JSON in code block")
+            
+            # Method 2: Look for the last complete JSON object (for reasoner model)
+            if not json_text:
+                # Find all potential JSON objects
+                json_candidates = []
+                start = 0
+                while True:
+                    start = response_text.find("{", start)
+                    if start == -1:
+                        break
+                    
+                    # Try to find the matching closing brace
+                    brace_count = 0
+                    end = start
+                    for i, char in enumerate(response_text[start:], start):
+                        if char == "{":
+                            brace_count += 1
+                        elif char == "}":
+                            brace_count -= 1
+                            if brace_count == 0:
+                                end = i + 1
+                                break
+                    
+                    if brace_count == 0:  # Found complete JSON
+                        candidate = response_text[start:end]
+                        json_candidates.append(candidate)
+                    
+                    start += 1
+                
+                if json_candidates:
+                    # Use the longest candidate (most likely to be complete)
+                    json_text = max(json_candidates, key=len)
+                    print(f"🔍 Found {len(json_candidates)} JSON candidates, using longest one")
+            
+            # Method 3: Simple fallback - find first { to last }
+            if not json_text and "{" in response_text and "}" in response_text:
                 start = response_text.find("{")
                 end = response_text.rfind("}") + 1
                 json_text = response_text[start:end]
-            else:
+                print("🔍 Using simple JSON extraction")
+            
+            if not json_text:
                 print(f"⚠️  Could not find JSON in materialization response")
                 return self._create_fallback_materialization()
             
+            # Clean up the JSON text
+            json_text = json_text.strip()
+            
             # Parse JSON
             materialization_data = json.loads(json_text)
+            print(f"✅ Successfully parsed JSON with {len(materialization_data)} fields")
             
             # Validate required fields
             required_fields = ["fears_materialized", "challenges_materialized", "behaviors_detailed", "triggers_specified", "conversation_summary"]
@@ -222,7 +268,7 @@ CRITICAL INSTRUCTIONS:
             
         except json.JSONDecodeError as e:
             print(f"⚠️  Failed to parse materialization JSON: {e}")
-            print(f"Response text: {response_text[:200]}...")
+            print(f"JSON text preview: {json_text[:300] if json_text else 'None'}...")
             return self._create_fallback_materialization()
         except Exception as e:
             print(f"⚠️  Error parsing materialization response: {e}")

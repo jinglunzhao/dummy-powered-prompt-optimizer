@@ -1,0 +1,370 @@
+{
+  "dummy_id": "b5e2f556-e08f-4387-bd90-d5b3903397a1",
+  "dummy_name": "Lisa Wilson",
+  "current_experiment_id": "conversation_length_with_evolution",
+  "current_prompt_id": "conversation_length_test",
+  "created_at": "2025-10-01T23:40:20.283327",
+  "last_updated": "2025-10-02T00:01:34.723402",
+  "conversation_profile": {
+    "original_fears": [
+      "Choosing the right career path",
+      "Dealing with roommate conflicts"
+    ],
+    "original_challenges": [
+      "Preparing for presentations",
+      "Adjusting to college workload",
+      "Navigating campus politics",
+      "Managing student loans"
+    ],
+    "original_behaviors": [
+      "Participates in study groups",
+      "Procrastinates on assignments",
+      "Stays up late studying",
+      "Goes to campus events"
+    ],
+    "original_anxiety_triggers": [
+      "Presentations",
+      "Networking events",
+      "Fraternity/Sorority events",
+      "Office hours"
+    ],
+    "original_social_anxiety_level": 8,
+    "original_big_five": {
+      "extraversion": 4,
+      "agreeableness": 10,
+      "conscientiousness": 1,
+      "neuroticism": 1,
+      "openness": 9
+    },
+    "current_fears": [
+      "fear of starting a media literacy student org or applying to study abroad in Barcelona due to wasting time and money",
+      "Dealing with roommate conflicts"
+    ],
+    "current_challenges": [
+      "fearing judgment when practicing presentations with friends or delivering them in class, such as opening with 'Who here's been catfished?'",
+      "Adjusting to college workload",
+      "finding a partner for a media literacy club amidst existing campus cliques, like approaching a quiet classmate in journalism",
+      "Managing student loans"
+    ],
+    "current_behaviors": [
+      "Participates in study groups",
+      "delaying sending an email to the study abroad advisor about Barcelona programs and scholarships",
+      "Stays up late studying",
+      "planning to attend the student org fair to start a media literacy club with events like 'Operation Guac and Roll'"
+    ],
+    "current_anxiety_triggers": [
+      "practicing with friends or delivering presentations in class settings",
+      "sorority events or student org fairs requiring interactions",
+      "networking with sorority girls during events like the Panhellenic council",
+      "Office hours"
+    ],
+    "current_social_anxiety_level": 7,
+    "current_big_five": {
+      "extraversion": 4,
+      "agreeableness": 10,
+      "conscientiousness": 1,
+      "neuroticism": 1,
+      "openness": 9
+    },
+    "evolution_stages": [
+      {
+        "stage_number": 1,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_b5e2f556-e08f-4387-bd90-d5b3903397a1_20251001_234042",
+        "conversation_summary": "The coach guided Lisa to confront her anxieties about presentations, starting a student organization, and studying abroad, leading her to send an inquiry email about Barcelona programs and plan a discussion with a classmate for the media literacy group, resulting in actionable steps despite initial resistance.",
+        "fears_materialized": {
+          "Fear of choosing incorrectly": "selecting an unsuitable study abroad program in Barcelona or a media literacy student organization",
+          "Fear of social judgment": "peers criticizing her presentation during practice sessions with friends"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "rehearsing presentations with classmates and fearing negative feedback",
+          "Navigating campus politics": "finding a partner for a media literacy student organization amid existing social cliques"
+        },
+        "behaviors_detailed": {
+          "Procrastinates on assignments": "delaying drafting and sending an email to a study abroad advisor about Barcelona programs and scholarships",
+          "Stays up late studying": "pulling all-nighters to avoid preparing for presentations"
+        },
+        "triggers_specified": {
+          "Presentations": "practicing presentations with peers and anticipating feedback"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.3,
+        "improvement_score": 0.7999999999999998,
+        "timestamp": "2025-10-01T23:43:13.732463"
+      },
+      {
+        "stage_number": 2,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_b5e2f556-e08f-4387-bd90-d5b3903397a1_20251001_234042",
+        "conversation_summary": "The coach guided Lisa through her anxieties about presentations, study abroad, and starting a student organization by suggesting small, actionable steps like emailing advisors and initiating collaborations. Lisa initially resisted but took concrete actions, such as sending a study abroad inquiry for Barcelona and planning to discuss a media literacy group with a classmate, showing reduced hesitation and slight confidence improvement.",
+        "fears_materialized": {
+          "Choosing the right career path": "fear of selecting the wrong study abroad program or student organization and wasting time/money"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "practicing presentations with friends and fearing their negative feedback",
+          "Navigating campus politics": "approaching a classmate to collaborate on a media literacy student organization amidst existing cliques"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "pulling all-nighters specifically to prepare for or avoid presentations"
+        },
+        "triggers_specified": {
+          "Presentations": "practicing presentations with peers and anticipating judgment during feedback sessions"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.0,
+        "improvement_score": 0.5,
+        "timestamp": "2025-10-01T23:45:33.922008"
+      },
+      {
+        "stage_number": 3,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_b5e2f556-e08f-4387-bd90-d5b3903397a1_20251001_234042",
+        "conversation_summary": "The coach helped Lisa address her fears about starting a student organization and applying for study abroad by breaking tasks into small steps, leading Lisa to email an advisor about Barcelona programs and plan to approach a classmate about a media literacy group, showing progress through initial resistance and eventual action.",
+        "fears_materialized": {
+          "Choosing the right career path": "Fear of selecting the wrong student organization or study abroad program in Barcelona and wasting time and money"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "Practicing presentations with friends and fearing their negative judgment on content",
+          "Navigating campus politics": "Finding a partner for starting a media literacy student organization amidst established social cliques"
+        },
+        "behaviors_detailed": {
+          "Procrastinates on assignments": "Delaying actions like drafting emails or starting presentations until pressured by the coach",
+          "Stays up late studying": "Taking all-nighters to avoid preparing for presentations"
+        },
+        "triggers_specified": {
+          "Presentations": "Practicing or giving class presentations with peers",
+          "Office hours": "Visiting advisors in the international programs office for study abroad inquiries"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.15,
+        "improvement_score": 0.6499999999999999,
+        "timestamp": "2025-10-01T23:47:13.941071"
+      },
+      {
+        "stage_number": 4,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_b5e2f556-e08f-4387-bd90-d5b3903397a1_20251001_234042",
+        "conversation_summary": "The coach encouraged Lisa to address her anxiety about presentations, starting a student organization, and study abroad by taking small actions like emailing about Barcelona programs and discussing a media literacy group with a classmate. Lisa resisted initially but sent the email and planned the conversation, showing progress through sarcastic yet compliant engagement.",
+        "fears_materialized": {
+          "Choosing the right career path": "fear of selecting the wrong student organization or study abroad program in Barcelona and wasting time and money"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "practicing presentations with friends and fearing they will think it's bad",
+          "Navigating campus politics": "finding a partner for a media literacy student organization when others are in established cliques"
+        },
+        "behaviors_detailed": {
+          "Procrastinates on assignments": "delaying sending emails about study abroad or initiating conversations about student orgs",
+          "Stays up late studying": "pulling all-nighters to avoid preparing for presentations"
+        },
+        "triggers_specified": {
+          "Presentations": "preparing for and delivering class presentations, especially dreading peer judgment during practice sessions"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.15,
+        "improvement_score": 0.6499999999999999,
+        "timestamp": "2025-10-01T23:49:30.684340"
+      },
+      {
+        "stage_number": 5,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_b5e2f556-e08f-4387-bd90-d5b3903397a1_20251001_234042",
+        "conversation_summary": "The coach guided Lisa to overcome anxiety about presentations, starting a student org, and study abroad by suggesting small steps like emailing advisors and talking to classmates. Lisa responded with initial resistance but took action by sending an email about Barcelona programs and planning to discuss a media literacy org with a quiet peer, showing reduced avoidance.",
+        "fears_materialized": {
+          "Choosing the right career path": "fear of selecting the wrong student organization or study abroad program in Barcelona and wasting time and money"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "practicing presentations with friends and fearing negative feedback on content",
+          "Navigating campus politics": "finding a partner for a media literacy student org amidst existing social cliques"
+        },
+        "behaviors_detailed": {
+          "Participates in study groups": "practicing presentations with 1-2 friends from communications classes",
+          "Procrastinates on assignments": "delaying sending emails to study abroad advisors or initiating conversations about org ideas",
+          "Stays up late studying": "pulling all-nighters to avoid preparing for presentations"
+        },
+        "triggers_specified": {
+          "Presentations": "practicing and delivering class presentations, including fear of stumbling or bombing"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.2,
+        "improvement_score": 0.7000000000000002,
+        "timestamp": "2025-10-01T23:51:36.283806"
+      },
+      {
+        "stage_number": 6,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_b5e2f556-e08f-4387-bd90-d5b3903397a1_20251001_234042",
+        "conversation_summary": "The conversation focused on Lisa overcoming her fears by taking small steps, such as emailing about study abroad in Barcelona, practicing presentations, and planning to start a media literacy student organization. She successfully delivered a presentation and showed increased confidence, though she still used sarcasm as a defense mechanism.",
+        "fears_materialized": {
+          "Choosing the right career path": "Fear of wasting time and money by choosing the wrong student organization or study abroad program, specifically for a media literacy group or Barcelona semester"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "Practicing presentations with peers and fearing negative feedback during mutual feedback sessions",
+          "Navigating campus politics": "Finding a partner for a student organization amidst existing social cliques, like approaching the quiet girl in journalism class"
+        },
+        "behaviors_detailed": {
+          "Procrastinates on assignments": "Delaying action on tasks like sending emails about study abroad programs until pressured",
+          "Goes to campus events": "Attending and actively participating in events like the student organization fair to promote a media literacy group"
+        },
+        "triggers_specified": {
+          "Presentations": "Delivering a presentation in class on media literacy with fear of bombing",
+          "Networking events": "Engaging with sorority girls at the student organization fair to discuss media literacy"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.5,
+        "timestamp": "2025-10-01T23:53:40.133113"
+      },
+      {
+        "stage_number": 7,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_b5e2f556-e08f-4387-bd90-d5b3903397a1_20251001_234042",
+        "conversation_summary": "The discussion centered on Lisa's fears about presentations, starting a student organization, and study abroad; she took steps like emailing about Barcelona programs and talking to a classmate, successfully delivered a presentation, and planned to launch a media literacy group, demonstrating reduced anxiety and proactive behavior.",
+        "fears_materialized": {
+          "Choosing the right career path": "Fear of wasting time and money by selecting the wrong study abroad program in Barcelona or starting an ineffective media literacy student organization"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "Fearing negative feedback from peers during practice sessions for class presentations",
+          "Navigating campus politics": "Attempting to find a partner for a student organization amidst established social cliques like those in journalism class"
+        },
+        "behaviors_detailed": {
+          "Procrastinates on assignments": "Delaying actions such as sending emails to study abroad advisors or initiating a student organization",
+          "Goes to campus events": "Attending the student organization fair to promote a media literacy group and network with attendees"
+        },
+        "triggers_specified": {
+          "Presentations": "Delivering class presentations, such as the media literacy one she practiced and presented",
+          "Networking events": "Interacting with others at the student organization fair, particularly with sorority members",
+          "Fraternity/Sorority events": "Engaging with sorority members during campus events like the organization fair"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.15,
+        "improvement_score": 0.6499999999999999,
+        "timestamp": "2025-10-01T23:55:44.481661"
+      },
+      {
+        "stage_number": 8,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_b5e2f556-e08f-4387-bd90-d5b3903397a1_20251001_234042",
+        "conversation_summary": "Lisa progressed from resisting action on presentations, study abroad, and starting a media literacy org to sending the Spain inquiry email, successfully delivering her presentation, and planning concrete recruitment steps for the org with reduced sarcasm and increased vulnerability.",
+        "fears_materialized": {
+          "Choosing the right career path": "Committing to study abroad in Barcelona or starting a media literacy student org",
+          "Dealing with roommate conflicts": "Not discussed in conversation"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "Practicing presentation with classmates and fearing their negative judgment",
+          "Adjusting to college workload": "Pulling all-nighters to avoid starting assignments",
+          "Navigating campus politics": "Finding collaborators amid established cliques for student org",
+          "Managing student loans": "Not discussed in conversation"
+        },
+        "behaviors_detailed": {
+          "Participates in study groups": "Mentioning media literacy org idea to quiet classmate in journalism class",
+          "Procrastinates on assignments": "Delaying email to study abroad advisor until pressured",
+          "Stays up late studying": "Referencing 3am study sessions before presentations",
+          "Goes to campus events": "Planning to attend student org fair with strategy to recruit members"
+        },
+        "triggers_specified": {
+          "Presentations": "Actual classroom presentation requiring Q&A with peers",
+          "Networking events": "Sorority interactions at student organization fair",
+          "Fraternity/Sorority events": "Not specifically detailed beyond networking context",
+          "Office hours": "Not discussed in conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.15,
+        "improvement_score": 0.6499999999999999,
+        "timestamp": "2025-10-01T23:57:17.158304"
+      },
+      {
+        "stage_number": 9,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_b5e2f556-e08f-4387-bd90-d5b3903397a1_20251001_234042",
+        "conversation_summary": "Lisa addressed her fears around presentations and starting new initiatives like study abroad and a student club. She took concrete steps, such as emailing an advisor and delivering a successful presentation, with coaching support, leading to reduced anxiety through small actions.",
+        "fears_materialized": {
+          "Choosing the right career path": "fear of selecting the wrong study abroad program in Barcelona and wasting time/money on scholarships"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "practicing a media literacy presentation with friends and fearing negative feedback",
+          "Navigating campus politics": "finding a partner for a media literacy student org amidst existing cliques"
+        },
+        "behaviors_detailed": {
+          "Procrastinates on assignments": "delaying emailing the study abroad advisor about Barcelona programs",
+          "Goes to campus events": "attending the student org fair to start a media literacy club"
+        },
+        "triggers_specified": {
+          "Presentations": "delivering a class presentation on media literacy",
+          "Networking events": "recruiting members at the student org fair",
+          "Fraternity/Sorority events": "interacting with sorority girls during club activities"
+        },
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 7.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.2,
+        "improvement_score": 0.7000000000000002,
+        "timestamp": "2025-10-01T23:59:17.150626"
+      },
+      {
+        "stage_number": 10,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_b5e2f556-e08f-4387-bd90-d5b3903397a1_20251001_234042",
+        "conversation_summary": "The coach helped Lisa address her anxiety about presentations and initiating projects like a media literacy club and study abroad application. Lisa initially resisted but took concrete actions, such as sending an email about Barcelona and planning to recruit a partner, showing reduced anxiety and proactive engagement.",
+        "fears_materialized": {
+          "Choosing the right career path": "fear of starting a media literacy student org or applying to study abroad in Barcelona due to wasting time and money"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "fearing judgment when practicing presentations with friends or delivering them in class, such as opening with 'Who here's been catfished?'",
+          "Navigating campus politics": "finding a partner for a media literacy club amidst existing campus cliques, like approaching a quiet classmate in journalism"
+        },
+        "behaviors_detailed": {
+          "Procrastinates on assignments": "delaying sending an email to the study abroad advisor about Barcelona programs and scholarships",
+          "Goes to campus events": "planning to attend the student org fair to start a media literacy club with events like 'Operation Guac and Roll'"
+        },
+        "triggers_specified": {
+          "Presentations": "practicing with friends or delivering presentations in class settings",
+          "Networking events": "sorority events or student org fairs requiring interactions",
+          "Fraternity/Sorority events": "networking with sorority girls during events like the Panhellenic council"
+        },
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 7.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.85,
+        "improvement_score": 0.0,
+        "timestamp": "2025-10-02T00:01:34.722845"
+      }
+    ],
+    "current_stage": 10
+  }
+}

@@ -1,0 +1,348 @@
+{
+  "dummy_id": "fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc",
+  "dummy_name": "Lisa Smith",
+  "current_experiment_id": "conversation_length_with_evolution",
+  "current_prompt_id": "conversation_length_test",
+  "created_at": "2025-10-01T23:40:20.284410",
+  "last_updated": "2025-10-02T00:01:45.404683",
+  "conversation_profile": {
+    "original_fears": [
+      "Time management with coursework",
+      "Student loan debt and financial stress",
+      "Academic failure and poor grades",
+      "Choosing the right career path"
+    ],
+    "original_challenges": [
+      "Dealing with homesickness",
+      "Managing student loans"
+    ],
+    "original_behaviors": [
+      "Stays up late studying",
+      "Eats at the dining hall",
+      "Procrastinates on assignments"
+    ],
+    "original_anxiety_triggers": [
+      "Large lecture halls"
+    ],
+    "original_social_anxiety_level": 6,
+    "original_big_five": {
+      "extraversion": 6,
+      "agreeableness": 2,
+      "conscientiousness": 8,
+      "neuroticism": 2,
+      "openness": 10
+    },
+    "current_fears": [
+      "Time management with coursework",
+      "Student loan debt and financial stress",
+      "Panic over completing 50-page curriculum analysis by midnight",
+      "Desperation for concrete research opportunities with faculty instead of 'busywork'"
+    ],
+    "current_challenges": [
+      "Missing home during 2am grading sessions",
+      "Threatened ramen-only diet if networking fails"
+    ],
+    "current_behaviors": [
+      "Grading papers at 2am and pulling all-nighters for assignments",
+      "Eats at the dining hall",
+      "Starting 50-page curriculum analysis dangerously close to deadline"
+    ],
+    "current_anxiety_triggers": [
+      "Anxiety about approaching professors after colloquiums"
+    ],
+    "current_social_anxiety_level": 5,
+    "current_big_five": {
+      "extraversion": 6,
+      "agreeableness": 2,
+      "conscientiousness": 8,
+      "neuroticism": 2,
+      "openness": 10
+    },
+    "evolution_stages": [
+      {
+        "stage_number": 1,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_20251001_234041",
+        "conversation_summary": "The coach adapted to Lisa's direct style by providing actionable steps for networking with professors. Lisa drafted and sent an email to a professor for a research opportunity with the coach's assistance. She then turned her attention to completing a 50-page curriculum analysis due by midnight.",
+        "fears_materialized": {
+          "Time management with coursework": "Juggling lesson plans, grading, and a 50-page curriculum analysis due by midnight",
+          "Academic failure and poor grades": "Failing to complete the 50-page curriculum analysis by the deadline due to procrastination",
+          "Choosing the right career path": "Not securing a research position and facing financial hardship (ramen-only diet)"
+        },
+        "challenges_materialized": {
+          "Dealing with homesickness": "Missing home while grading papers at 2am"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Grading papers until 2am and working on assignments until midnight",
+          "Procrastinates on assignments": "Starting a 50-page curriculum analysis at the last minute (due by midnight)"
+        },
+        "triggers_specified": {},
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 5.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.5,
+        "timestamp": "2025-10-01T23:43:12.086526"
+      },
+      {
+        "stage_number": 2,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_20251001_234041",
+        "conversation_summary": "Discussed research opportunity outreach and time management strategies; Lisa implemented direct email approach to Dr. Chen while managing deadline pressure through structured work intervals and humor.",
+        "fears_materialized": {
+          "Time management with coursework": "Overwhelmed by 50-page curriculum analysis due by midnight",
+          "Academic failure and poor grades": "Fear of ramen-only diet if research opportunity fails",
+          "Choosing the right career path": "Fear that Dr. Chen's ghosting will derail research career"
+        },
+        "challenges_materialized": {
+          "Dealing with homesickness": "Missing home during 2am grading sessions"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Working until 2am grading papers and until midnight on curriculum analysis",
+          "Procrastinates on assignments": "Starting 50-page curriculum analysis the day it's due"
+        },
+        "triggers_specified": {},
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 5.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.5,
+        "timestamp": "2025-10-01T23:45:52.631593"
+      },
+      {
+        "stage_number": 3,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_20251001_234041",
+        "conversation_summary": "The coach shifted from generic advice to concrete networking strategies (cold emailing Dr. Chen, attending colloquiums), which Lisa actively engaged with while simultaneously managing her overwhelming workload and deadline stress for a major assignment.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "Not finishing the 50-page curriculum analysis by midnight",
+          "Choosing the right career path": "Failing to secure a research position with faculty like Dr. Chen, leading to financial hardship"
+        },
+        "challenges_materialized": {
+          "Dealing with homesickness": "Missing home while grading papers alone at 2am",
+          "Managing student loans": "Facing a future 'ramen-only diet' if career efforts fail"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Pulling all-nighters to complete assignments like the curriculum analysis",
+          "Procrastinates on assignments": "Starting the 50-page curriculum analysis at the last minute before its midnight deadline"
+        },
+        "triggers_specified": {},
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 5.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.05,
+        "improvement_score": 0.5499999999999998,
+        "timestamp": "2025-10-01T23:47:22.064156"
+      },
+      {
+        "stage_number": 4,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_20251001_234041",
+        "conversation_summary": "Discussed research opportunity outreach strategies and time management for pressing assignments. Lisa engaged actively with direct, actionable advice - emailing Dr. Chen and working on her analysis - while using humor about highlighters and library ambushes to manage stress.",
+        "fears_materialized": {
+          "Time management with coursework": "Overwhelmed by volume of lesson plans, grading, and a 50-page curriculum analysis due at midnight",
+          "Academic failure and poor grades": "Fear of failing to complete curriculum analysis on time or secure research position with Dr. Chen",
+          "Choosing the right career path": "Fear of missing concrete research opportunities with education faculty like Dr. Chen"
+        },
+        "challenges_materialized": {
+          "Dealing with homesickness": "Missing home while grading papers at 2am"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Working until midnight on curriculum analysis and grading papers at 2am",
+          "Procrastinates on assignments": "Delaying 50-page curriculum analysis until deadline day"
+        },
+        "triggers_specified": {},
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 5.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.5,
+        "timestamp": "2025-10-01T23:49:53.834408"
+      },
+      {
+        "stage_number": 5,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_20251001_234041",
+        "conversation_summary": "The coach provided direct strategies for networking and time management, which Lisa initially resisted but embraced, leading her to email Dr. Chen and tackle her curriculum analysis with renewed focus.",
+        "fears_materialized": {
+          "Time management with coursework": "Overwhelmed by the volume of assignments, such as a 50-page curriculum analysis due at midnight",
+          "Student loan debt and financial stress": "Fear of resorting to a ramen-only diet if networking for career opportunities fails",
+          "Academic failure and poor grades": "Anxiety about completing high-stakes tasks like the curriculum analysis on time",
+          "Choosing the right career path": "Concern about securing research positions and making faculty connections, such as with Dr. Chen"
+        },
+        "challenges_materialized": {
+          "Dealing with homesickness": "Feeling homesick during late-night study sessions, like at 2am while grading papers",
+          "Managing student loans": "Navigating financial stress by exploring TA positions for tuition waivers"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Working late into the night on assignments, such as grading papers at 2am or writing near deadlines",
+          "Procrastinates on assignments": "Delaying starting high-stakes tasks like the 50-page curriculum analysis until the last minute"
+        },
+        "triggers_specified": {},
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 5.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.05,
+        "improvement_score": 0.5499999999999998,
+        "timestamp": "2025-10-01T23:52:32.854750"
+      },
+      {
+        "stage_number": 6,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_20251001_234041",
+        "conversation_summary": "The coach provided concrete networking strategies for research positions and time management techniques, which Lisa initially resisted but embraced after receiving direct action steps. She sent outreach emails to professors while balancing academic deadlines, engaging in collaborative banter about contingency plans and self-care.",
+        "fears_materialized": {
+          "Time management with coursework": "Overwhelmed by 50-page curriculum analysis deadline and late-night grading volume",
+          "Student loan debt and financial stress": "Fear of resorting to ramen-only diet if research position efforts fail",
+          "Academic failure and poor grades": "Anxiety about completing high-stakes assignments like curriculum analysis by midnight",
+          "Choosing the right career path": "Urgency in securing research position through professor outreach (e.g., Dr. Chen)"
+        },
+        "challenges_materialized": {
+          "Dealing with homesickness": "Missing home during 2am grading sessions"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Working until 2am grading papers and writing curriculum analysis",
+          "Procrastinates on assignments": "Delaying 50-page curriculum analysis until last minute despite planner use"
+        },
+        "triggers_specified": {},
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 5.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.05,
+        "improvement_score": 0.5499999999999998,
+        "timestamp": "2025-10-01T23:55:00.352828"
+      },
+      {
+        "stage_number": 7,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_20251001_234041",
+        "conversation_summary": "Discussed research position strategies with professors and time management for curriculum analysis; student progressed from skeptical to engaged with actionable plans including email outreach and library networking tactics.",
+        "fears_materialized": {
+          "Time management with coursework": "Completing 50-page curriculum analysis by midnight",
+          "Student loan debt and financial stress": "Ramen-only diet if research position search fails",
+          "Academic failure and poor grades": "Not finishing curriculum analysis or getting poor evaluation",
+          "Choosing the right career path": "Securing research position with professors like Dr. Chen"
+        },
+        "challenges_materialized": {
+          "Dealing with homesickness": "Missing home during 2am grading sessions",
+          "Managing student loans": "Ramen-based budgeting concerns"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Grading papers at 2am",
+          "Procrastinates on assignments": "Starting 50-page curriculum analysis near deadline"
+        },
+        "triggers_specified": {
+          "Large lecture halls": "Approaching professors like Dr. Chen after colloquiums"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 5.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.1,
+        "improvement_score": 0.6000000000000001,
+        "timestamp": "2025-10-01T23:56:34.580450"
+      },
+      {
+        "stage_number": 8,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_20251001_234041",
+        "conversation_summary": "The discussion focused on Lisa's academic workload, procrastination, and career anxieties, with the coach providing strategies for time management, networking, and stress relief. Lisa responded positively to direct, actionable advice, engaging in email drafting and planning, which reduced her anxiety by the end.",
+        "fears_materialized": {
+          "Time management with coursework": "Overwhelmed by completing a 50-page curriculum analysis due at midnight",
+          "Student loan debt and financial stress": "Fearing a ramen-only diet due to budget constraints from loans",
+          "Academic failure and poor grades": "Stressing over finishing the curriculum analysis to maintain GPA",
+          "Choosing the right career path": "Anxiety about networking with professors like Dr. Chen for research opportunities"
+        },
+        "challenges_materialized": {
+          "Dealing with homesickness": "Experiencing homesickness while grading papers late at night",
+          "Managing student loans": "Struggling with financial constraints leading to reliance on cheap meals like ramen"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Working until 2am or later on grading papers and assignments",
+          "Procrastinates on assignments": "Delaying work on the 50-page curriculum analysis until the deadline approaches"
+        },
+        "triggers_specified": {},
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 5.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.5,
+        "timestamp": "2025-10-01T23:58:46.906294"
+      },
+      {
+        "stage_number": 9,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_20251001_234041",
+        "conversation_summary": "Discussed research position strategies and time management techniques; Lisa progressed from skeptical to engaged, collaboratively drafting emails while balancing academic pressures through humor and actionable steps.",
+        "fears_materialized": {
+          "Time management with coursework": "Overwhelmed by 50-page curriculum analysis deadline",
+          "Student loan debt and financial stress": "Ramen-only diet concerns due to budget constraints",
+          "Academic failure and poor grades": "Panic about completing curriculum analysis by midnight",
+          "Choosing the right career path": "Fear of professors ghosting research opportunity emails"
+        },
+        "challenges_materialized": {
+          "Dealing with homesickness": "Missing home during 2am grading sessions",
+          "Managing student loans": "Ramen as primary meal due to financial strain"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Aggressive late-night typing sessions with Red Bull",
+          "Procrastinates on assignments": "Delaying curriculum analysis until last minute"
+        },
+        "triggers_specified": {},
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 5.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.5,
+        "timestamp": "2025-10-02T00:00:13.204832"
+      },
+      {
+        "stage_number": 10,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_20251001_234041",
+        "conversation_summary": "Coached Lisa through research networking strategies and deadline management; she progressed from dismissive to engaged, implementing direct email tactics while balancing academic pressures through humor and structured sprints.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "Panic over completing 50-page curriculum analysis by midnight",
+          "Choosing the right career path": "Desperation for concrete research opportunities with faculty instead of 'busywork'"
+        },
+        "challenges_materialized": {
+          "Managing student loans": "Threatened ramen-only diet if networking fails",
+          "Dealing with homesickness": "Missing home during 2am grading sessions"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Grading papers at 2am and pulling all-nighters for assignments",
+          "Procrastinates on assignments": "Starting 50-page curriculum analysis dangerously close to deadline"
+        },
+        "triggers_specified": {
+          "Large lecture halls": "Anxiety about approaching professors after colloquiums"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 5.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.8999999999999999,
+        "timestamp": "2025-10-02T00:01:45.404251"
+      }
+    ],
+    "current_stage": 10
+  }
+}

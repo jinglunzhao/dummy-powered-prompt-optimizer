@@ -1,0 +1,352 @@
+{
+  "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+  "dummy_name": "Alex Lewis",
+  "current_experiment_id": "conversation_length_with_evolution",
+  "current_prompt_id": "conversation_length_test",
+  "created_at": "2025-10-01T23:40:20.278604",
+  "last_updated": "2025-10-02T00:01:54.434508",
+  "conversation_profile": {
+    "original_fears": [
+      "Finding a job after graduation",
+      "Homesickness"
+    ],
+    "original_challenges": [
+      "Balancing extracurricular activities with studies",
+      "Building time management",
+      "Financial planning",
+      "Developing effective study habits"
+    ],
+    "original_behaviors": [
+      "Uses campus resources like tutoring",
+      "Seeks out leadership roles",
+      "Studies in the library regularly"
+    ],
+    "original_anxiety_triggers": [
+      "Campus social events"
+    ],
+    "original_social_anxiety_level": 2,
+    "original_big_five": {
+      "extraversion": 2,
+      "agreeableness": 10,
+      "conscientiousness": 4,
+      "neuroticism": 8,
+      "openness": 3
+    },
+    "current_fears": [
+      "Fear of rejection or sounding unprofessional when emailing internship inquiries to professionals like Ms. Johnson",
+      "Homesickness"
+    ],
+    "current_challenges": [
+      "Balancing extracurricular activities with studies",
+      "Setting timers for focused work sessions (e.g., 20 minutes drafting) and breaks to avoid overediting",
+      "Financial planning",
+      "Overcoming perfectionism when drafting emails or assignments by limiting revisions"
+    ],
+    "current_behaviors": [
+      "Consulting the career center for resume reviews and internship opportunities",
+      "Serving as Art History Society president and organizing events like museum career panels",
+      "Studying art conservation techniques in the library while using timers to maintain focus"
+    ],
+    "current_anxiety_triggers": [
+      "Drafting and sending professional emails for internship applications"
+    ],
+    "current_social_anxiety_level": 1,
+    "current_big_five": {
+      "extraversion": 2,
+      "agreeableness": 10,
+      "conscientiousness": 4,
+      "neuroticism": 8,
+      "openness": 3
+    },
+    "evolution_stages": [
+      {
+        "stage_number": 1,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251001_234046",
+        "conversation_summary": "Alex sought guidance on securing an art history internship, specifically drafting professional emails to museums. The coach provided concrete strategies for email composition and relevance assessment of experiences. Alex progressed from nervous email drafting to confident inclusion of specific academic work and leadership roles.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Securing a summer internship and drafting professional outreach emails to museums"
+        },
+        "challenges_materialized": {
+          "Building time management": "Prioritizing internship search tasks",
+          "Financial planning": "Not discussed",
+          "Developing effective study habits": "Not discussed",
+          "Balancing extracurricular activities with studies": "Deciding whether to include student organization leadership in internship communications"
+        },
+        "behaviors_detailed": {
+          "Uses campus resources like tutoring": "Using career center templates for email drafting",
+          "Seeks out leadership roles": "Mentioning Art History Society founder role in internship communications",
+          "Studies in the library regularly": "Studying art history textbook in library during conversation"
+        },
+        "triggers_specified": {
+          "Campus social events": "Not discussed"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.15,
+        "improvement_score": 0.6499999999999999,
+        "timestamp": "2025-10-01T23:41:55.942093"
+      },
+      {
+        "stage_number": 2,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251001_234046",
+        "conversation_summary": "The coach guided Alex through drafting a professional internship inquiry email for museums, addressing specific concerns about tone and content organization. Alex progressed from nervous second-guessing to structured writing, then transitioned to academic work after setting email boundaries. The session concluded with Alex expressing gratitude and refocusing on art conservation studies.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Anxiety about drafting internship inquiry emails, specifically worrying about sounding too eager, unprofessional, or inadequately knowledgeable when contacting museum professionals"
+        },
+        "challenges_materialized": {
+          "Building time management": "Struggling with over-editing internship emails to the point of delaying academic work like art conservation readings",
+          "Balancing extracurricular activities with studies": "Deciding whether to include Art History Society leadership in internship applications without compromising study time"
+        },
+        "behaviors_detailed": {
+          "Uses campus resources like tutoring": "Consulting career center email templates and planning to submit drafts for professional feedback",
+          "Seeks out leadership roles": "Serving as Art History Society president and organizing museum career panels with institutional speakers",
+          "Studies in the library regularly": "Reviewing art history textbooks and conservation readings during coaching sessions in the library"
+        },
+        "triggers_specified": {},
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.2,
+        "improvement_score": 0.7000000000000002,
+        "timestamp": "2025-10-01T23:44:31.917578"
+      },
+      {
+        "stage_number": 3,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251001_234046",
+        "conversation_summary": "Alex sought help drafting an internship inquiry email, addressing fears of unprofessionalism and overthinking; with coach guidance, he revised the email, sent it, and shifted focus to studies using time management techniques.",
+        "fears_materialized": {
+          "Finding a job after graduation": "securing an art history internship for next summer"
+        },
+        "challenges_materialized": {
+          "Building time management": "setting a 30-minute timer to stop email edits and switch to studying",
+          "Developing effective study habits": "prioritizing art conservation readings over perfectionism in email drafting"
+        },
+        "behaviors_detailed": {
+          "Uses campus resources like tutoring": "consulting career services for internship application feedback",
+          "Seeks out leadership roles": "serving as Art History Society president and organizing a museum careers panel",
+          "Studies in the library regularly": "reading art conservation textbooks in the library"
+        },
+        "triggers_specified": {},
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 1.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.05,
+        "improvement_score": 0.5499999999999998,
+        "timestamp": "2025-10-01T23:46:54.378528"
+      },
+      {
+        "stage_number": 4,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251001_234046",
+        "conversation_summary": "Alex worked with the AI Coach to draft and refine an internship inquiry email, overcoming anxiety about professionalism and overthinking. After sending the email, Alex shifted focus to art conservation studies using timed sessions, demonstrating improved confidence and time management.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Stressing about securing an internship for next summer and drafting professional emails to museums"
+        },
+        "challenges_materialized": {
+          "Balancing extracurricular activities with studies": "Including Art History Society leadership in internship applications while managing art conservation readings",
+          "Building time management": "Setting a 30-minute timer to limit email editing and switch to studying",
+          "Developing effective study habits": "Avoiding distractions by focusing on art conservation textbooks after sending emails"
+        },
+        "behaviors_detailed": {
+          "Uses campus resources like tutoring": "Consulting the career center for internship help and using their email templates",
+          "Seeks out leadership roles": "Serving as Art History Society president and coordinating a museum careers panel",
+          "Studies in the library regularly": "Reading art conservation textbooks and taking notes in the library"
+        },
+        "triggers_specified": {},
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 1.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.25,
+        "improvement_score": 0.75,
+        "timestamp": "2025-10-01T23:49:06.176449"
+      },
+      {
+        "stage_number": 5,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251001_234046",
+        "conversation_summary": "The coach guided Alex in drafting an internship email, addressing fears of imperfection and overthinking. Alex implemented suggestions, sent the email, and used timers to shift focus to art conservation studies, showing reduced anxiety.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Drafting and sending internship inquiry emails to professionals like Ms. Johnson at museums"
+        },
+        "challenges_materialized": {
+          "Balancing extracurricular activities with studies": "Coordinating Art History Society events while managing art conservation coursework",
+          "Building time management": "Setting a 20-minute timer for drafting student org proposals to avoid overthinking",
+          "Developing effective study habits": "Struggling to focus on conservation readings instead of over-editing internship emails"
+        },
+        "behaviors_detailed": {
+          "Uses campus resources like tutoring": "Drafting internship emails using career center templates and sending for review",
+          "Seeks out leadership roles": "Serving as Art History Society president and organizing museum career panels",
+          "Studies in the library regularly": "Reading art conservation textbooks and notes in the library setting"
+        },
+        "triggers_specified": {},
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.15,
+        "improvement_score": 0.6499999999999999,
+        "timestamp": "2025-10-01T23:51:17.533001"
+      },
+      {
+        "stage_number": 6,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251001_234046",
+        "conversation_summary": "The coach guided Alex in drafting an internship inquiry email, addressing fears of unprofessionalism and overthinking. Alex adopted strategies like timers and specific drafting techniques, successfully sent the email, and shifted focus to studies with increased confidence.",
+        "fears_materialized": {
+          "Finding a job after graduation": "fear of drafting and sending internship inquiry emails due to worries about sounding unprofessional or too eager"
+        },
+        "challenges_materialized": {
+          "Balancing extracurricular activities with studies": "managing Art History Society responsibilities (e.g., organizing museum career panels) alongside academic work like art conservation readings",
+          "Building time management": "implementing timer-based rules (e.g., 30-minute limits) to prevent over-editing emails and prioritize tasks",
+          "Developing effective study habits": "transitioning from email drafting to focused textbook reading to avoid procrastination and maintain productivity"
+        },
+        "behaviors_detailed": {
+          "Uses campus resources like tutoring": "booking appointments with the career center for resume reviews and internship guidance",
+          "Seeks out leadership roles": "founding and serving as president of the Art History Society, including coordinating professional events like museum career panels",
+          "Studies in the library regularly": "reading art history and conservation textbooks in the library setting to focus on academics"
+        },
+        "triggers_specified": {
+          "Campus social events": "professional interactions such as drafting and sending emails for internship opportunities"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.25,
+        "improvement_score": 0.75,
+        "timestamp": "2025-10-01T23:53:36.376725"
+      },
+      {
+        "stage_number": 7,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251001_234046",
+        "conversation_summary": "The coach guided Alex through drafting and sending a professional internship inquiry email, addressing overthinking and anxiety. Alex responded by sending the email, using timers to manage time, and returning to studies with increased confidence and focus.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Fear of sending unprofessional internship inquiry emails to museums like the Guggenheim, worrying about sounding too eager or mediocre"
+        },
+        "challenges_materialized": {
+          "Balancing extracurricular activities with studies": "Coordinating Art History Society events while managing art conservation coursework readings",
+          "Building time management": "Implementing timer-based rules (e.g., 30-minute limits) to prevent over-editing emails and prioritize studying",
+          "Developing effective study habits": "Struggling to avoid procrastination by over-perfecting application drafts instead of completing conservation readings"
+        },
+        "behaviors_detailed": {
+          "Uses campus resources like tutoring": "Accessing career center services for resume reviews, internship templates, and application feedback",
+          "Seeks out leadership roles": "Serving as Art History Society president and organizing museum career panels with institutional speakers",
+          "Studies in the library regularly": "Engaging in focused study sessions for art history and conservation texts in the library setting"
+        },
+        "triggers_specified": {
+          "Campus social events": "Not discussed; anxiety emerged in professional communication contexts instead"
+        },
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 1.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.15,
+        "improvement_score": 0.6499999999999999,
+        "timestamp": "2025-10-01T23:56:34.338176"
+      },
+      {
+        "stage_number": 8,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251001_234046",
+        "conversation_summary": "The coach guided Alex through drafting an internship inquiry email, addressing fears of imperfection and overthinking. Alex progressed from nervous second-guessing to sending the email and implementing time management strategies like focused work timers.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Stressing over drafting a professional internship inquiry email to museums like the Guggenheim, worrying about sounding too eager or unprofessional"
+        },
+        "challenges_materialized": {
+          "Building time management": "Struggling to stop over-editing internship emails instead of focusing on art conservation studies",
+          "Developing effective study habits": "Procrastinating on academic work by obsessively polishing application materials"
+        },
+        "behaviors_detailed": {
+          "Uses campus resources like tutoring": "Utilizing career center email templates and seeking appointment for resume review",
+          "Seeks out leadership roles": "Detailing coordination of Art History Society's museum careers panel during email drafting"
+        },
+        "triggers_specified": {
+          "Campus social events": "Planning and executing student organization events like museum career panels"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 0.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.35,
+        "improvement_score": 0.8500000000000001,
+        "timestamp": "2025-10-01T23:58:03.852561"
+      },
+      {
+        "stage_number": 9,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251001_234046",
+        "conversation_summary": "Discussed internship application strategies and email drafting for museums, with Alex progressing from nervous second-guessing to confidently sending applications while balancing academic work using timers and structured approaches.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Fear of drafting and sending internship inquiry emails to museums like the Guggenheim due to sounding unprofessional or overeager"
+        },
+        "challenges_materialized": {
+          "Building time management": "Struggling to stop over-editing internship emails instead of studying art conservation",
+          "Developing effective study habits": "Balancing internship applications with academic work like conservation chemistry readings"
+        },
+        "behaviors_detailed": {
+          "Seeks out leadership roles": "Referencing presidency of Art History Society where they coordinated museum career panels",
+          "Uses campus resources like tutoring": "Drafting internship emails using career center templates and requesting coach feedback"
+        },
+        "triggers_specified": {
+          "Campus social events": "Not discussed in conversation",
+          "Emailing professionals": "Drafting internship inquiries to museum staff like Ms. Johnson"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 0.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.15,
+        "improvement_score": 0.6499999999999999,
+        "timestamp": "2025-10-01T23:59:27.390029"
+      },
+      {
+        "stage_number": 10,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251001_234046",
+        "conversation_summary": "Alex worked with the coach to draft and send an internship email, addressing perfectionism and anxiety through specific strategies like timer-setting. He showed initial nervousness but gained confidence, eventually sending the email and shifting focus to studying.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Fear of rejection or sounding unprofessional when emailing internship inquiries to professionals like Ms. Johnson"
+        },
+        "challenges_materialized": {
+          "Building time management": "Setting timers for focused work sessions (e.g., 20 minutes drafting) and breaks to avoid overediting",
+          "Developing effective study habits": "Overcoming perfectionism when drafting emails or assignments by limiting revisions"
+        },
+        "behaviors_detailed": {
+          "Uses campus resources like tutoring": "Consulting the career center for resume reviews and internship opportunities",
+          "Seeks out leadership roles": "Serving as Art History Society president and organizing events like museum career panels",
+          "Studies in the library regularly": "Studying art conservation techniques in the library while using timers to maintain focus"
+        },
+        "triggers_specified": {
+          "Campus social events": "Drafting and sending professional emails for internship applications"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.2,
+        "improvement_score": 0.3500000000000001,
+        "timestamp": "2025-10-02T00:01:54.434013"
+      }
+    ],
+    "current_stage": 10
+  }
+}

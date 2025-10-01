@@ -422,13 +422,13 @@ Start with a natural opening message (1-2 sentences)."""
 
         async with aiohttp.ClientSession() as session:
             async with session.post(
-                "https://api.deepseek.com/v1/chat/completions",
+                "https://api.lkeap.cloud.tencent.com/v1/chat/completions",
                 headers={
                     "Authorization": f"Bearer {self.conversation_simulator.api_key}",
                     "Content-Type": "application/json"
                 },
                 json={
-                    "model": "deepseek-chat",
+                    "model": "deepseek-v3-0324",
                     "messages": [{"role": "user", "content": prompt}],
                     "max_tokens": 80,
                     "temperature": 0.8
@@ -453,13 +453,13 @@ Start with a natural opening message (1-2 sentences)."""
         
         async with aiohttp.ClientSession() as session:
             async with session.post(
-                "https://api.deepseek.com/v1/chat/completions",
+                "https://api.lkeap.cloud.tencent.com/v1/chat/completions",
                 headers={
                     "Authorization": f"Bearer {self.conversation_simulator.api_key}",
                     "Content-Type": "application/json"
                 },
                 json={
-                    "model": "deepseek-chat",
+                    "model": "deepseek-v3-0324",
                     "messages": messages,
                     "max_tokens": 150,
                     "temperature": 0.7
@@ -499,13 +499,13 @@ Keep your response conversational and authentic (1-2 sentences). Be concise and 
 
         async with aiohttp.ClientSession() as session:
             async with session.post(
-                "https://api.deepseek.com/v1/chat/completions",
+                "https://api.lkeap.cloud.tencent.com/v1/chat/completions",
                 headers={
                     "Authorization": f"Bearer {self.conversation_simulator.api_key}",
                     "Content-Type": "application/json"
                 },
                 json={
-                    "model": "deepseek-chat",
+                    "model": "deepseek-v3-0324",
                     "messages": [{"role": "user", "content": prompt}],
                     "max_tokens": 80,
                     "temperature": 0.8
