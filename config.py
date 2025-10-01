@@ -27,7 +27,7 @@ class Config:
     MAX_POPULATION_SIZE = 20  # Maximum number of prompts per generation
     
     # Feature Toggles
-    ENABLE_PERSONALITY_EVOLUTION = False  # Toggle for dummy personality evolution during conversations
+    ENABLE_PERSONALITY_EVOLUTION = True  # Toggle for dummy personality evolution during conversations
     
     # Character Generation Parameters
     PERSONALITY_DIMENSIONS = {

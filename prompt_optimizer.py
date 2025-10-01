@@ -21,6 +21,8 @@ from models import AIDummy, Assessment, Conversation
 from assessment_system_llm_based import AssessmentSystemLLMBased as AssessmentSystem
 from conversation_simulator import ConversationSimulator
 from conversation_storage import conversation_storage
+from personality_evolution_storage import personality_evolution_storage
+from personality_materializer import personality_materializer
 
 # Load environment variables
 # load_dotenv()  # Disabled to avoid encoding issues
@@ -303,6 +305,13 @@ class PromptOptimizer:
         """Test a specific prompt with a specific dummy"""
         print(f"🧪 Testing prompt '{prompt.name}' with {dummy.name}...")
         
+        # Initialize personality evolution for this dummy if enabled
+        dummy.initialize_personality_evolution()
+        
+        # Start new prompt test - reset personality for fair comparison
+        experiment_id = f"gepa_exp_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+        dummy.start_new_prompt_test(experiment_id, prompt.id, prompt.name)
+        
         # Use cached baseline assessment or generate new one
         if dummy.id not in self.baseline_assessments:
             print(f"📝 Generating baseline assessment for {dummy.name} (first time)...")
@@ -320,8 +329,32 @@ class PromptOptimizer:
             custom_system_prompt=prompt.prompt_text
         )
         
-        # Generate post-assessment based on conversation content
+        # Materialize personality traits based on conversation
+        evolution_stage = await personality_materializer.materialize_personality_from_conversation(
+            dummy=dummy,
+            conversation=conversation,
+            prompt_id=prompt.id,
+            prompt_name=prompt.name,
+            generation=prompt.generation,
+            pre_assessment_score=pre_assessment.average_score,
+            post_assessment_score=0.0  # Will be updated after assessment
+        )
+        
+        # Add evolution stage to dummy if materialization succeeded
+        if evolution_stage:
+            dummy.add_evolution_stage(evolution_stage)
+            # Save personality evolution data
+            personality_evolution_storage.save_personality_evolution(dummy)
+        
+        # Generate post-assessment using evolved personality
         post_assessment = await self.assessment_system.generate_post_assessment(dummy, pre_assessment, conversation)
+        
+        # Update evolution stage with final assessment scores
+        if evolution_stage:
+            evolution_stage.post_assessment_score = post_assessment.average_score
+            evolution_stage.improvement_score = post_assessment.average_score - pre_assessment.average_score
+            # Save updated evolution data
+            personality_evolution_storage.save_personality_evolution(dummy)
         
         # Calculate metrics
         pre_score = pre_assessment.average_score

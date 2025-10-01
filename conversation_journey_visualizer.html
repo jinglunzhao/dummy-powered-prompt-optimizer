@@ -488,18 +488,28 @@
                     
                     return {
                         name: result.dummy_name,
-                        data: milestones.sort((a, b) => a.round - b.round)
+                        data: milestones.sort((a, b) => a.round - b.round),
+                        // Include evolution data if available
+                        personality_evolution: result.personality_evolution,
+                        conversation_details: result.conversation_details
                     };
                 });
             }
             
             async loadConversationDetails(filename) {
                 try {
+                    // For new experiment format, conversation details are already in the main experiment data
+                    if (this.currentExperiment && this.currentExperiment.results) {
+                        console.log('Conversation details loaded from experiment results');
+                        return;
+                    }
+                    
+                    // Fallback to old format
                     const response = await fetch(`/api/experiment/${filename}/details`);
                     const details = await response.json();
                     this.conversationDetails = details;
                 } catch (error) {
-                    console.log('No conversation details available for this experiment');
+                    console.log('No separate conversation details available for this experiment');
                     this.conversationDetails = null;
                 }
             }
@@ -507,6 +517,7 @@
             renderChart() {
                 const container = document.getElementById('chart-container');
                 container.innerHTML = '';
+                
                 
                 const viewMode = document.getElementById('view-mode').value;
                 const selectedDummy = document.getElementById('dummy-select').value;
@@ -573,7 +584,7 @@
                             .attr('stroke', 'white')
                             .attr('stroke-width', 2)
                             .style('cursor', 'pointer')
-                            .on('click', (event, d) => this.showConversationHistoryAtRound(dummy.name, d.round))
+                            .on('click', (event, d) => this.showPersonalityEvolutionAtRound(dummy.name, d.round))
                             .on('mouseover', function(event, d) {
                                 // Show tooltip
                                 d3.select(this)
@@ -586,7 +597,7 @@
                                     .style('opacity', 1)
                                     .style('left', (event.pageX + 10) + 'px')
                                     .style('top', (event.pageY - 10) + 'px')
-                                    .html(`Round ${d.round}<br/>Improvement: +${d.improvement.toFixed(3)} points`);
+                                    .html(`Round ${d.round}<br/>Improvement: +${d.improvement.toFixed(3)} points<br/>Click to see personality evolution`);
                             })
                             .on('mouseout', function(event, d) {
                                 // Hide tooltip
@@ -597,7 +608,31 @@
                                 // Remove tooltip
                                 d3.selectAll('.tooltip').remove();
                             });
+                        
+                        // Add evolution markers at the end of conversation (final data point)
+                        const finalPoint = dummy.data[dummy.data.length - 1];
+                        if (finalPoint && dummy.conversation_details && dummy.conversation_details.personality_evolution_timeline) {
+                            const evolutionCircle = g.append('circle')
+                                .attr('cx', xScale(finalPoint.round))
+                                .attr('cy', yScale(finalPoint.improvement))
+                                .attr('r', 8)
+                                .attr('fill', this.colors[i % this.colors.length])
+                                .attr('stroke', 'white')
+                                .attr('stroke-width', 3)
+                                .style('cursor', 'pointer')
+                                .on('click', () => this.showEvolutionDetails(dummy.name, dummy.conversation_details.personality_evolution_timeline));
+                            
+                            // Add evolution icon
+                            g.append('text')
+                                .attr('x', xScale(finalPoint.round))
+                                .attr('y', yScale(finalPoint.improvement) - 15)
+                                .attr('text-anchor', 'middle')
+                                .attr('font-size', '12px')
+                                .attr('fill', this.colors[i % this.colors.length])
+                                .text('🧬');
+                        }
                     });
+                    
                     
                     // Always render average line in "All Dummies" mode
                     if (viewMode === 'all') {
@@ -628,6 +663,92 @@
                 
                 this.renderLegend(displayData, viewMode);
                 this.renderStats(displayData);
+            }
+            
+            
+            
+            showEvolutionDetails(dummyName, evolutionTimeline) {
+                const modal = document.getElementById('conversation-modal');
+                const modalBody = document.getElementById('modal-content-body');
+                
+                // Get dummy data for additional context
+                const dummyData = this.currentExperiment?.results?.find(r => r.dummy_name === dummyName);
+                const evolution = dummyData?.personality_evolution;
+                
+                let html = `
+                    <div class="conversation-header">
+                        <div class="conversation-title">🧬 ${dummyName} - Personality Evolution Details</div>
+                        <div class="conversation-meta">
+                            <div><strong>Evolution Stages:</strong> ${evolutionTimeline.length}</div>
+                            <div><strong>Assessment Improvement:</strong> +${dummyData?.final_improvement?.toFixed(3) || 'N/A'} points</div>
+                            <div><strong>Final Anxiety Level:</strong> ${evolution?.final_anxiety_level || 'N/A'}/10</div>
+                            <div><strong>Materialized Traits:</strong> ${evolution?.materialized_fears || 0} fears, ${evolution?.materialized_challenges || 0} challenges</div>
+                            <div><strong>Last Updated:</strong> ${new Date(evolutionTimeline[evolutionTimeline.length - 1]?.timestamp || Date.now()).toLocaleString()}</div>
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-turns">
+                `;
+                
+                evolutionTimeline.forEach((stage, index) => {
+                    html += `
+                        <div class="turn ai" style="border-left-color: #28a745;">
+                            <div class="turn-header">
+                                <span class="turn-speaker">🧬 Evolution Stage ${stage.stage_number}</span>
+                                <span class="turn-round">${stage.prompt_name}</span>
+                            </div>
+                            <div class="turn-message">
+                                <strong>Conversation Summary:</strong><br>
+                                ${stage.conversation_summary}<br><br>
+                                
+                                <strong>Anxiety Level:</strong> ${stage.anxiety_level}/10<br>
+                                <strong>Improvement Score:</strong> +${stage.improvement_score.toFixed(3)}<br><br>
+                                
+                                <strong>Materialized Traits:</strong><br>
+                    `;
+                    
+                    // Add materialized traits
+                    const traits = stage.materialized_traits;
+                    if (traits.fears && Object.keys(traits.fears).length > 0) {
+                        html += '<strong>Fears:</strong><br>';
+                        Object.entries(traits.fears).forEach(([original, evolved]) => {
+                            html += `<em>${original}</em> → <span style="color: #28a745;">${evolved}</span><br>`;
+                        });
+                        html += '<br>';
+                    }
+                    
+                    if (traits.challenges && Object.keys(traits.challenges).length > 0) {
+                        html += '<strong>Challenges:</strong><br>';
+                        Object.entries(traits.challenges).forEach(([original, evolved]) => {
+                            html += `<em>${original}</em> → <span style="color: #17a2b8;">${evolved}</span><br>`;
+                        });
+                        html += '<br>';
+                    }
+                    
+                    if (traits.behaviors && Object.keys(traits.behaviors).length > 0) {
+                        html += '<strong>Behaviors:</strong><br>';
+                        Object.entries(traits.behaviors).forEach(([original, evolved]) => {
+                            html += `<em>${original}</em> → <span style="color: #ffc107;">${evolved}</span><br>`;
+                        });
+                        html += '<br>';
+                    }
+                    
+                    if (traits.triggers && Object.keys(traits.triggers).length > 0) {
+                        html += '<strong>Triggers:</strong><br>';
+                        Object.entries(traits.triggers).forEach(([original, evolved]) => {
+                            html += `<em>${original}</em> → <span style="color: #dc3545;">${evolved}</span><br>`;
+                        });
+                    }
+                    
+                    html += `
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                html += '</div>';
+                modalBody.innerHTML = html;
+                modal.style.display = 'block';
             }
             
             renderAverageLine(g, data, xScale, yScale, line) {
@@ -744,12 +865,14 @@
             }
             
             showConversationHistory(dummyName, maxRound = null) {
-                if (!this.conversationDetails) {
-                    alert('No conversation details available for this experiment. Please run experiments with --save-details flag.');
-                    return;
+                // First try to get conversation details from current experiment results
+                let dummyDetails = this.currentExperiment?.results?.find(r => r.dummy_name === dummyName);
+                
+                // Fallback to old conversationDetails format
+                if (!dummyDetails && this.conversationDetails) {
+                    dummyDetails = this.conversationDetails.find(d => d.dummy_name === dummyName);
                 }
                 
-                const dummyDetails = this.conversationDetails.find(d => d.dummy_name === dummyName);
                 if (!dummyDetails || !dummyDetails.conversation_details) {
                     alert('No conversation details available for this dummy.');
                     return;
@@ -758,8 +881,14 @@
                 const modal = document.getElementById('conversation-modal');
                 const modalBody = document.getElementById('modal-content-body');
                 
-                const conversation = dummyDetails.conversation_details;
+                const conversation = dummyDetails.conversation_details.conversation;
                 const milestones = this.currentExperiment.results.find(r => r.dummy_name === dummyName)?.milestone_results || [];
+                
+                // Check if conversation and turns exist
+                if (!conversation || !conversation.turns) {
+                    alert('No conversation turns available for this dummy.');
+                    return;
+                }
                 
                 // Filter turns if maxRound is specified
                 let displayTurns = conversation.turns;
@@ -778,8 +907,8 @@
                     <div class="conversation-header">
                         <div class="conversation-title">${title}</div>
                         <div class="conversation-meta">
-                            <div><strong>Pre-assessment:</strong> ${conversation.pre_assessment ? conversation.pre_assessment.average_score.toFixed(2) : 'N/A'} points</div>
-                            <div><strong>Final Assessment:</strong> ${conversation.final_assessment ? conversation.final_assessment.average_score.toFixed(2) : 'N/A'} points</div>
+                            <div><strong>Pre-assessment:</strong> ${dummyDetails.pre_assessment_score ? dummyDetails.pre_assessment_score.toFixed(2) : (dummyDetails.conversation_details.pre_assessment ? dummyDetails.conversation_details.pre_assessment.average_score.toFixed(2) : 'N/A')} points</div>
+                            <div><strong>Final Assessment:</strong> ${dummyDetails.final_assessment_score ? dummyDetails.final_assessment_score.toFixed(2) : (dummyDetails.conversation_details.post_assessment ? dummyDetails.conversation_details.post_assessment.average_score.toFixed(2) : 'N/A')} points</div>
                             <div><strong>Total Improvement:</strong> ${dummyDetails.final_improvement ? '+' + dummyDetails.final_improvement.toFixed(3) : 'N/A'} points</div>
                             <div><strong>Conversation Turns:</strong> ${displayTurns.length}</div>
                             <div><strong>Duration:</strong> ${dummyDetails.total_duration_seconds ? (dummyDetails.total_duration_seconds / 60).toFixed(1) : 'N/A'} minutes</div>
@@ -790,6 +919,16 @@
                 `;
                 
                 displayTurns.forEach((turn, index) => {
+                    html += `
+                        <div class="turn ${turn.speaker}">
+                            <div class="turn-header">
+                                <span class="turn-speaker">${turn.speaker === 'ai' ? '🤖 AI Coach' : '👤 ' + dummyName}</span>
+                                <span class="turn-round">Turn ${index + 1}</span>
+                            </div>
+                            <div class="turn-message">${turn.message}</div>
+                        </div>
+                    `;
+                    
                     // Check if this is a milestone (display after dummy response completes the round)
                     let milestone = null;
                     if (turn.speaker === 'dummy' && turn.metadata && turn.metadata.round) {
@@ -797,21 +936,11 @@
                     }
                     if (milestone) {
                         html += `
-                            <div class="milestone-marker">
+                            <div class="milestone-marker" onclick="visualizer.showPersonalityEvolutionAtRound('${dummyName}', ${milestone.milestone_rounds})" style="cursor: pointer;">
                                 📊 Assessment Milestone: ${milestone.milestone_rounds} rounds → +${milestone.improvement.toFixed(3)} points
                             </div>
                         `;
                     }
-                    
-                    html += `
-                        <div class="turn ${turn.speaker}">
-                            <div class="turn-header">
-                                <span class="turn-speaker">${turn.speaker === 'ai' ? '🤖 AI Coach' : '👤 ' + dummyName}</span>
-                                <span class="turn-round">Turn ${turn.turn_number}</span>
-                            </div>
-                            <div class="turn-message">${turn.message}</div>
-                        </div>
-                    `;
                 });
                 
                 html += '</div>';
@@ -821,6 +950,27 @@
             
             showConversationHistoryAtRound(dummyName, round) {
                 this.showConversationHistory(dummyName, round);
+            }
+            
+            showPersonalityEvolutionAtRound(dummyName, round) {
+                // Get dummy data
+                const dummyData = this.currentExperiment?.results?.find(r => r.dummy_name === dummyName);
+                if (!dummyData || !dummyData.conversation_details?.personality_evolution_timeline) {
+                    alert('No personality evolution data available for this dummy at this round.');
+                    return;
+                }
+                
+                // Find evolution stage for this round
+                const evolutionTimeline = dummyData.conversation_details.personality_evolution_timeline;
+                const stage = evolutionTimeline.find(s => s.stage_number <= round) || evolutionTimeline[evolutionTimeline.length - 1];
+                
+                if (!stage) {
+                    alert('No evolution data available for this round.');
+                    return;
+                }
+                
+                // Show evolution details modal
+                this.showEvolutionDetails(dummyName, [stage]);
             }
         }
         

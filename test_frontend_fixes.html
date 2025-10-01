@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Frontend Fixes</title>
+</head>
+<body>
+    <h1>Frontend Fixes Test</h1>
+    
+    <h2>1. Test Conversation Journey Visualizer</h2>
+    <p><a href="http://localhost:5002" target="_blank">Open Conversation Journey Visualizer</a></p>
+    <p><strong>Instructions:</strong></p>
+    <ul>
+        <li>Select the latest experiment "(2 dummies, 6 rounds) (with Evolution)"</li>
+        <li>Try different view modes: "All Dummies", "Individual Dummy", "Personality Evolution"</li>
+        <li>Click on lines and data points to see conversation details</li>
+        <li>In "Personality Evolution" mode, click the 🧬 markers to see evolution details</li>
+    </ul>
+    
+    <h2>2. Test API Endpoints</h2>
+    <p><a href="http://localhost:5002/api/experiments" target="_blank">List Experiments API</a></p>
+    <p><a href="http://localhost:5002/api/experiment/continuous_conversation_with_evolution_exp_20251001_192241.json" target="_blank">Latest Experiment Data API</a></p>
+    
+    <h2>3. Expected Features</h2>
+    <ul>
+        <li><strong>Different Curves:</strong> Gregory Moore (+0.45) and Jamie Young (+0.65) should show different improvement curves</li>
+        <li><strong>Conversation Details:</strong> Clicking on lines/nodes should show full conversation with turns, assessments, and evolution data</li>
+        <li><strong>Evolution Overview:</strong> In "Personality Evolution" mode, should show evolution info panel with anxiety changes and materialized traits</li>
+        <li><strong>Evolution Details:</strong> Clicking 🧬 markers should show detailed personality evolution with materialized fears, challenges, behaviors, and triggers</li>
+    </ul>
+    
+    <h2>4. Test Personality Evolution Dashboard</h2>
+    <p><a href="http://localhost:5000/evolution" target="_blank">Open Personality Evolution Dashboard</a></p>
+    <p><strong>Instructions:</strong></p>
+    <ul>
+        <li>Should show evolution statistics overview</li>
+        <li>Click on dummy cards to see evolution timeline</li>
+        <li>Should display materialized traits and anxiety changes</li>
+    </ul>
+    
+    <script>
+        // Test API connectivity
+        async function testAPI() {
+            try {
+                const response = await fetch('http://localhost:5002/api/experiments');
+                const data = await response.json();
+                console.log('✅ API Test Passed:', data.length, 'experiments found');
+                
+                if (data.length > 0) {
+                    const latestExp = data[0];
+                    console.log('✅ Latest Experiment:', latestExp.name);
+                    console.log('✅ Personality Evolution Enabled:', latestExp.personality_evolution_enabled);
+                }
+            } catch (error) {
+                console.error('❌ API Test Failed:', error);
+            }
+        }
+        
+        // Run test when page loads
+        testAPI();
+    </script>
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Evolution Dashboard - AI Dummy Analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .evolution-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+        .evolution-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .stage-card {
+            border-left: 4px solid #28a745;
+            margin-bottom: 15px;
+        }
+        .stage-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .trait-evolution {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        .original-trait {
+            color: #6c757d;
+            font-style: italic;
+        }
+        .evolved-trait {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .anxiety-level {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #6c757d;
+        }
+        .evolution-header {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .timeline-container {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-robot me-2"></i>AI Dummy Analysis Dashboard
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/">
+                    <i class="fas fa-home me-1"></i>Dashboard
+                </a>
+                <a class="nav-link" href="/optimization">
+                    <i class="fas fa-chart-line me-1"></i>GEPA Results
+                </a>
+                <a class="nav-link active" href="/evolution">
+                    <i class="fas fa-brain me-1"></i>Personality Evolution
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- Header -->
+        <div class="evolution-header text-center">
+            <h2><i class="fas fa-brain me-2"></i>Personality Evolution Dashboard</h2>
+            <p class="mb-0">Track how AI dummies' personalities evolve through conversations</p>
+            <p class="mb-0">Materialization of abstract traits into concrete, tangible situations</p>
+        </div>
+
+        <!-- Evolution Overview -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5><i class="fas fa-chart-bar me-2"></i>Evolution Overview</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row text-center" id="evolutionStats">
+                            <div class="loading">
+                                <i class="fas fa-spinner fa-spin fa-2x mb-3"></i>
+                                <p>Loading evolution statistics...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dummy Selection -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5><i class="fas fa-users me-2"></i>Select Dummy to View Evolution</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row" id="dummySelection">
+                            <div class="loading">
+                                <i class="fas fa-spinner fa-spin fa-2x mb-3"></i>
+                                <p>Loading dummies...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Evolution Timeline -->
+        <div class="row" id="evolutionTimelineContainer" style="display: none;">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5><i class="fas fa-timeline me-2"></i>Evolution Timeline</h5>
+                        <button class="btn btn-outline-secondary btn-sm" onclick="hideEvolutionTimeline()">
+                            <i class="fas fa-times me-1"></i>Close
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <div id="selectedDummyInfo" class="mb-4"></div>
+                        <div class="timeline-container" id="timelineContent">
+                            <div class="loading">
+                                <i class="fas fa-spinner fa-spin fa-2x mb-3"></i>
+                                <p>Loading evolution timeline...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let selectedDummyId = null;
+
+        // Load evolution data on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadEvolutionData();
+        });
+
+        function loadEvolutionData() {
+            // Load all evolution data
+            fetch('/api/evolution/all')
+                .then(response => response.json())
+                .then(data => {
+                    displayEvolutionStats(data);
+                    displayDummySelection(data);
+                })
+                .catch(error => {
+                    console.error('Error loading evolution data:', error);
+                    document.getElementById('evolutionStats').innerHTML = 
+                        '<div class="text-center text-danger">Error loading evolution data</div>';
+                });
+        }
+
+        function displayEvolutionStats(data) {
+            const statsContainer = document.getElementById('evolutionStats');
+            const evolutionData = data.evolution_data || {};
+            
+            const totalDummies = Object.keys(evolutionData).length;
+            let totalStages = 0;
+            let totalAnxietyReduction = 0;
+            let dummiesWithEvolution = 0;
+
+            Object.values(evolutionData).forEach(dummy => {
+                totalStages += dummy.total_stages || 0;
+                if (dummy.total_stages > 0) {
+                    dummiesWithEvolution++;
+                    // Calculate anxiety reduction from timeline
+                    if (dummy.timeline && dummy.timeline.length > 0) {
+                        const firstStage = dummy.timeline[0];
+                        const lastStage = dummy.timeline[dummy.timeline.length - 1];
+                        const anxietyChange = (firstStage.anxiety_level || 0) - (lastStage.anxiety_level || 0);
+                        totalAnxietyReduction += Math.max(0, anxietyChange);
+                    }
+                }
+            });
+
+            const avgStagesPerDummy = totalDummies > 0 ? (totalStages / totalDummies).toFixed(1) : 0;
+            const avgAnxietyReduction = dummiesWithEvolution > 0 ? (totalAnxietyReduction / dummiesWithEvolution).toFixed(1) : 0;
+
+            statsContainer.innerHTML = `
+                <div class="col-md-3">
+                    <div class="border rounded p-3">
+                        <h3 class="text-primary">${totalDummies}</h3>
+                        <p class="mb-0">Total Dummies</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="border rounded p-3">
+                        <h3 class="text-success">${dummiesWithEvolution}</h3>
+                        <p class="mb-0">With Evolution</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="border rounded p-3">
+                        <h3 class="text-info">${totalStages}</h3>
+                        <p class="mb-0">Total Stages</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="border rounded p-3">
+                        <h3 class="text-warning">${avgAnxietyReduction}</h3>
+                        <p class="mb-0">Avg Anxiety ↓</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function displayDummySelection(data) {
+            const selectionContainer = document.getElementById('dummySelection');
+            const evolutionData = data.evolution_data || {};
+            
+            if (Object.keys(evolutionData).length === 0) {
+                selectionContainer.innerHTML = `
+                    <div class="col-12 text-center text-muted">
+                        <i class="fas fa-info-circle fa-3x mb-3"></i>
+                        <h5>No personality evolution data available</h5>
+                        <p>Enable personality evolution and run experiments to see evolution data here.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            let html = '';
+            Object.entries(evolutionData).forEach(([dummyId, dummyData]) => {
+                const hasEvolution = dummyData.total_stages > 0;
+                const badgeClass = hasEvolution ? 'bg-success' : 'bg-secondary';
+                const cardClass = hasEvolution ? 'evolution-card' : '';
+                
+                html += `
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="card ${cardClass} h-100" ${hasEvolution ? `onclick="viewDummyEvolution('${dummyId}')"` : ''}>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h6 class="mb-0">${dummyData.dummy_name}</h6>
+                                    <span class="badge ${badgeClass}">
+                                        ${hasEvolution ? 'Evolved' : 'No Evolution'}
+                                    </span>
+                                </div>
+                                <div class="mb-2">
+                                    <small class="text-muted">
+                                        <i class="fas fa-layer-group me-1"></i>
+                                        ${dummyData.total_stages} evolution stages
+                                    </small>
+                                </div>
+                                ${hasEvolution ? `
+                                    <div class="text-center">
+                                        <button class="btn btn-outline-success btn-sm">
+                                            <i class="fas fa-eye me-1"></i>View Evolution
+                                        </button>
+                                    </div>
+                                ` : `
+                                    <div class="text-center">
+                                        <small class="text-muted">No evolution data available</small>
+                                    </div>
+                                `}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            selectionContainer.innerHTML = html;
+        }
+
+        function viewDummyEvolution(dummyId) {
+            selectedDummyId = dummyId;
+            
+            // Show timeline container
+            document.getElementById('evolutionTimelineContainer').style.display = 'block';
+            
+            // Scroll to timeline
+            document.getElementById('evolutionTimelineContainer').scrollIntoView({ behavior: 'smooth' });
+            
+            // Load timeline data
+            loadDummyEvolutionTimeline(dummyId);
+        }
+
+        function loadDummyEvolutionTimeline(dummyId) {
+            const timelineContent = document.getElementById('timelineContent');
+            timelineContent.innerHTML = `
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin fa-2x mb-3"></i>
+                    <p>Loading evolution timeline...</p>
+                </div>
+            `;
+
+            fetch(`/api/dummy/${dummyId}/evolution`)
+                .then(response => response.json())
+                .then(data => {
+                    displayEvolutionTimeline(data);
+                })
+                .catch(error => {
+                    console.error('Error loading evolution timeline:', error);
+                    timelineContent.innerHTML = 
+                        '<div class="text-center text-danger">Error loading evolution timeline</div>';
+                });
+        }
+
+        function displayEvolutionTimeline(data) {
+            const timelineContent = document.getElementById('timelineContent');
+            const selectedDummyInfo = document.getElementById('selectedDummyInfo');
+            
+            if (!data.timeline || data.timeline.length === 0) {
+                timelineContent.innerHTML = `
+                    <div class="text-center text-muted">
+                        <i class="fas fa-info-circle fa-3x mb-3"></i>
+                        <h5>No evolution stages found</h5>
+                        <p>This dummy has not evolved through any conversations yet.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Display dummy info
+            selectedDummyInfo.innerHTML = `
+                <div class="alert alert-info">
+                    <h6 class="mb-1"><i class="fas fa-user me-2"></i>Evolution Timeline for ${data.dummy_id}</h6>
+                    <p class="mb-0">${data.total_stages} evolution stages tracked</p>
+                </div>
+            `;
+
+            // Display timeline stages
+            let html = '';
+            data.timeline.forEach((stage, index) => {
+                const anxietyChange = stage.anxiety_level - 8.0; // Assuming starting anxiety of 8
+                const anxietyChangeClass = anxietyChange < 0 ? 'text-success' : anxietyChange > 0 ? 'text-danger' : 'text-muted';
+                const anxietyChangeIcon = anxietyChange < 0 ? 'fa-arrow-down' : anxietyChange > 0 ? 'fa-arrow-up' : 'fa-minus';
+
+                html += `
+                    <div class="card stage-card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h6 class="card-title">
+                                        <i class="fas fa-layer-group me-2"></i>
+                                        Stage ${stage.stage_number}: ${stage.prompt_name}
+                                    </h6>
+                                    <p class="card-text">
+                                        <strong>Generation:</strong> ${stage.generation} | 
+                                        <strong>Prompt:</strong> ${stage.prompt_name}
+                                    </p>
+                                    <p class="card-text">
+                                        <strong>Conversation Summary:</strong><br>
+                                        <em>${stage.conversation_summary}</em>
+                                    </p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-center">
+                                        <div class="anxiety-level ${anxietyChangeClass} mb-2">
+                                            <i class="fas ${anxietyChangeIcon} me-1"></i>
+                                            ${stage.anxiety_level}/10
+                                        </div>
+                                        <small class="text-muted">Anxiety Level</small>
+                                        <div class="mt-2">
+                                            <span class="badge bg-${stage.improvement_score > 0 ? 'success' : 'secondary'}">
+                                                ${stage.improvement_score > 0 ? '+' : ''}${stage.improvement_score.toFixed(2)} improvement
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Materialized Traits -->
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <h6 class="text-success"><i class="fas fa-heart me-2"></i>Fears Materialized</h6>
+                                    ${Object.entries(stage.materialized_traits.fears || {}).map(([original, evolved]) => `
+                                        <div class="trait-evolution">
+                                            <div class="original-trait">${original}</div>
+                                            <div class="evolved-trait">→ ${evolved}</div>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-info"><i class="fas fa-target me-2"></i>Challenges Materialized</h6>
+                                    ${Object.entries(stage.materialized_traits.challenges || {}).map(([original, evolved]) => `
+                                        <div class="trait-evolution">
+                                            <div class="original-trait">${original}</div>
+                                            <div class="evolved-trait">→ ${evolved}</div>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-2">
+                                <div class="col-md-6">
+                                    <h6 class="text-warning"><i class="fas fa-user-cog me-2"></i>Behaviors Detailed</h6>
+                                    ${Object.entries(stage.materialized_traits.behaviors || {}).map(([original, evolved]) => `
+                                        <div class="trait-evolution">
+                                            <div class="original-trait">${original}</div>
+                                            <div class="evolved-trait">→ ${evolved}</div>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-danger"><i class="fas fa-exclamation-triangle me-2"></i>Triggers Specified</h6>
+                                    ${Object.entries(stage.materialized_traits.triggers || {}).map(([original, evolved]) => `
+                                        <div class="trait-evolution">
+                                            <div class="original-trait">${original}</div>
+                                            <div class="evolved-trait">→ ${evolved}</div>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                            
+                            <div class="mt-2">
+                                <small class="text-muted">
+                                    <i class="fas fa-clock me-1"></i>
+                                    ${new Date(stage.timestamp).toLocaleString()}
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            timelineContent.innerHTML = html;
+        }
+
+        function hideEvolutionTimeline() {
+            document.getElementById('evolutionTimelineContainer').style.display = 'none';
+            selectedDummyId = null;
+        }
+    </script>
+</body>
+</html>

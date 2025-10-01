@@ -9,6 +9,7 @@ import os
 from typing import List, Dict, Any
 from collections import defaultdict
 from conversation_storage import conversation_storage
+from personality_evolution_storage import personality_evolution_storage
 
 app = Flask(__name__)
 
@@ -572,6 +573,36 @@ def api_family_tree():
 def family_tree():
     """Route to display the family tree page"""
     return render_template('prompt_family_tree.html')
+
+@app.route('/api/dummy/<dummy_id>/evolution')
+def api_dummy_evolution(dummy_id):
+    """API endpoint to get personality evolution timeline for a specific dummy"""
+    try:
+        evolution_timeline = personality_evolution_storage.get_dummy_evolution_timeline(dummy_id)
+        return jsonify({
+            'dummy_id': dummy_id,
+            'timeline': evolution_timeline,
+            'total_stages': len(evolution_timeline)
+        })
+    except Exception as e:
+        return jsonify({'error': f'Failed to load evolution data: {str(e)}'}), 500
+
+@app.route('/api/evolution/all')
+def api_all_evolution_data():
+    """API endpoint to get all personality evolution data for web interface"""
+    try:
+        all_evolution_data = personality_evolution_storage.get_all_evolution_data()
+        return jsonify({
+            'evolution_data': all_evolution_data,
+            'total_dummies': len(all_evolution_data)
+        })
+    except Exception as e:
+        return jsonify({'error': f'Failed to load all evolution data: {str(e)}'}), 500
+
+@app.route('/evolution')
+def evolution_dashboard():
+    """Personality evolution dashboard page"""
+    return render_template('personality_evolution.html')
 
 if __name__ == '__main__':
     # Create templates directory if it doesn't exist

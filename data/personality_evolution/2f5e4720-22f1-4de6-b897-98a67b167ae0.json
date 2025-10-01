@@ -1,0 +1,102 @@
+{
+  "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+  "dummy_name": "Gregory Moore",
+  "current_experiment_id": "conversation_length_with_evolution",
+  "current_prompt_id": "conversation_length_test",
+  "created_at": "2025-10-01T19:20:39.837896",
+  "last_updated": "2025-10-01T19:22:11.003994",
+  "conversation_profile": {
+    "original_fears": [
+      "Choosing the right career path",
+      "Social anxiety in large lecture halls",
+      "Academic failure and poor grades",
+      "Dealing with roommate conflicts"
+    ],
+    "original_challenges": [
+      "Financial planning",
+      "Finding a mentor",
+      "Managing student loans"
+    ],
+    "original_behaviors": [
+      "Eats at the dining hall",
+      "Participates in study groups",
+      "Volunteers for campus events"
+    ],
+    "original_anxiety_triggers": [
+      "Networking events",
+      "Presentations",
+      "Campus social events"
+    ],
+    "original_social_anxiety_level": 3,
+    "original_big_five": {
+      "extraversion": 10,
+      "agreeableness": 1,
+      "conscientiousness": 6,
+      "neuroticism": 8,
+      "openness": 7
+    },
+    "current_fears": [
+      "fear of not being good enough for grad school mentorship",
+      "fear of professors thinking I'm not good enough when approaching them",
+      "stress about upcoming algorithms midterm affecting other decisions",
+      "Dealing with roommate conflicts"
+    ],
+    "current_challenges": [
+      "Financial planning",
+      "specifically approaching Dr. Chen about machine learning research for grad school guidance",
+      "breaking down into small steps like setting a monthly budget"
+    ],
+    "current_behaviors": [
+      "Eats at the dining hall",
+      "drafting emails multiple times before sending to ensure perfection",
+      "planning to attend office hours with specific questions about professor's research"
+    ],
+    "current_anxiety_triggers": [
+      "approaching professors during office hours for mentorship",
+      "drafting and sending emails to professors about research interests",
+      "Campus social events"
+    ],
+    "current_social_anxiety_level": 2,
+    "current_big_five": {
+      "extraversion": 10,
+      "agreeableness": 1,
+      "conscientiousness": 6,
+      "neuroticism": 8,
+      "openness": 7
+    },
+    "evolution_stages": [
+      {
+        "stage_number": 1,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "471b1978-2eff-4bb9-bccb-42aa7e7023c3",
+        "conversation_summary": "Gregory discussed his fear of approaching professors for mentorship and developed a concrete plan to email Dr. Chen about specific machine learning research, moving from avoidance to actionable steps while managing midterm stress.",
+        "fears_materialized": {
+          "Choosing the right career path": "fear of not being good enough for grad school mentorship",
+          "Social anxiety in large lecture halls": "fear of professors thinking I'm not good enough when approaching them",
+          "Academic failure and poor grades": "stress about upcoming algorithms midterm affecting other decisions"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "specifically approaching Dr. Chen about machine learning research for grad school guidance",
+          "Managing student loans": "breaking down into small steps like setting a monthly budget"
+        },
+        "behaviors_detailed": {
+          "Participates in study groups": "drafting emails multiple times before sending to ensure perfection",
+          "Volunteers for campus events": "planning to attend office hours with specific questions about professor's research"
+        },
+        "triggers_specified": {
+          "Networking events": "approaching professors during office hours for mentorship",
+          "Presentations": "drafting and sending emails to professors about research interests"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 2.5,
+        "pre_assessment_score": 2.45,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.44999999999999973,
+        "timestamp": "2025-10-01T19:22:11.003536"
+      }
+    ],
+    "current_stage": 1
+  }
+}

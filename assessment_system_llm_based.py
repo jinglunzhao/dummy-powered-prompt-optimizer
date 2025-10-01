@@ -132,9 +132,12 @@ Explanation: I've learned some strategies to stay calm, though I still get stres
     def _create_baseline_user_prompt(self, dummy: AIDummy) -> str:
         """Create user prompt for baseline assessment with dummy profile"""
         
-        # Get personality description
-        personality_desc = self._get_personality_description(dummy.personality)
-        anxiety_desc = self._get_anxiety_description(dummy.social_anxiety)
+        # Get current profile (evolved or original)
+        current_profile = dummy.get_current_profile_for_assessment()
+        
+        # Get personality description using current profile
+        personality_desc = self._get_personality_description(current_profile["big_five"])
+        anxiety_desc = self._get_anxiety_description_evolved(current_profile)
         
         return f"""STUDENT PROFILE:
 Name: {dummy.name}
@@ -149,10 +152,10 @@ SOCIAL ANXIETY:
 {anxiety_desc}
 
 PERSONAL DETAILS:
-- Fears: {', '.join(dummy.fears)}
+- Fears: {', '.join(current_profile["fears"])}
 - Goals: {', '.join(dummy.goals)}
-- Challenges: {', '.join(dummy.challenges)}
-- Behaviors: {', '.join(dummy.behaviors)}
+- Challenges: {', '.join(current_profile["challenges"])}
+- Behaviors: {', '.join(current_profile["behaviors"])}
 
 BASELINE ASSESSMENT:
 This is {dummy.name}'s initial self-assessment before any coaching conversations. Please help them evaluate themselves honestly based on their current personality traits, anxiety level, and typical behaviors.
@@ -163,9 +166,12 @@ Rate each of the 20 social skills questions from 1-4 based on how {dummy.name} w
                                             pre_assessment: Assessment) -> str:
         """Create user prompt for post-conversation assessment with conversation history"""
         
-        # Get personality description
-        personality_desc = self._get_personality_description(dummy.personality)
-        anxiety_desc = self._get_anxiety_description(dummy.social_anxiety)
+        # Get current evolved profile
+        current_profile = dummy.get_current_profile_for_assessment()
+        
+        # Get personality description using evolved profile
+        personality_desc = self._get_personality_description(current_profile["big_five"])
+        anxiety_desc = self._get_anxiety_description_evolved(current_profile)
         
         # Summarize conversation
         conversation_summary = self._summarize_conversation(conversation)
@@ -179,17 +185,17 @@ Age: {dummy.age}
 Major: {dummy.major}
 University: {dummy.university}
 
-PERSONALITY TRAITS:
+PERSONALITY TRAITS (CURRENT EVOLVED STATE):
 {personality_desc}
 
-SOCIAL ANXIETY:
+SOCIAL ANXIETY (CURRENT EVOLVED STATE):
 {anxiety_desc}
 
-PERSONAL DETAILS:
-- Fears: {', '.join(dummy.fears)}
+PERSONAL DETAILS (CURRENT EVOLVED STATE):
+- Fears: {', '.join(current_profile["fears"])}
 - Goals: {', '.join(dummy.goals)}
-- Challenges: {', '.join(dummy.challenges)}
-- Behaviors: {', '.join(dummy.behaviors)}
+- Challenges: {', '.join(current_profile["challenges"])}
+- Behaviors: {', '.join(current_profile["behaviors"])}
 
 COACHING CONVERSATION SUMMARY:
 {conversation_summary}
@@ -198,13 +204,14 @@ BASELINE ASSESSMENT REFERENCE:
 {baseline_scores}
 
 POST-COACHING ASSESSMENT:
-This is {dummy.name}'s self-assessment after having coaching conversations. The coaching may have influenced their self-perception, confidence, and awareness of their social skills.
+This is {dummy.name}'s self-assessment after having coaching conversations. The coaching has materialized their abstract fears and challenges into concrete situations, which may have influenced their self-perception, confidence, and awareness of their social skills.
 
 EVALUATION GUIDELINES:
 1. Compare each question against the baseline score provided above
 2. Consider realistic improvements: 0.5-1 point increases are normal, dramatic changes are unlikely
 3. Think about how the coaching conversation specifically addressed each skill area
-4. Maintain consistency with their personality traits while allowing for growth
+4. Consider how materialized fears/challenges may have changed their self-assessment
+5. Maintain consistency with their evolved personality traits while allowing for growth
 
 Rate each of the 20 social skills questions from 1-4 based on how {dummy.name} would assess themselves after this coaching experience. Consider whether coaching helped them improve from their baseline scores."""
 
@@ -222,6 +229,15 @@ Rate each of the 20 social skills questions from 1-4 based on how {dummy.name} w
 - Communication Style: {anxiety.communication_style}
 - Triggers: {', '.join(anxiety.triggers)}
 - Social Comfort: {anxiety.social_comfort}/10"""
+    
+    def _get_anxiety_description_evolved(self, current_profile: Dict[str, Any]) -> str:
+        """Create anxiety description for evolved personality profile"""
+        anxiety_level = current_profile["social_anxiety_level"]
+        triggers = current_profile["anxiety_triggers"]
+        
+        return f"""- Anxiety Level: {anxiety_level}/10 ({'Severe social anxiety' if anxiety_level >= 7 else 'Moderate social anxiety' if anxiety_level >= 5 else 'Low social anxiety'})
+- Triggers: {', '.join(triggers)}
+- Note: This reflects the current evolved state after conversations"""
 
     def _summarize_conversation(self, conversation: Conversation) -> str:
         """Summarize the conversation for LLM context"""

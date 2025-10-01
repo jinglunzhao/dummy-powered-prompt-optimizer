@@ -27,7 +27,7 @@ def get_experiments():
     """Get list of available experiments"""
     try:
         experiments = []
-        experiment_files = glob.glob('data/experiments/continuous_conversation_exp_*.json')
+        experiment_files = glob.glob('data/experiments/continuous_conversation*_exp_*.json')
         
         for file_path in experiment_files:
             try:
@@ -48,13 +48,18 @@ def get_experiments():
                 except:
                     date_str = 'Unknown'
                 
+                # Check if personality evolution is enabled
+                evolution_enabled = exp_info.get('personality_evolution_enabled', False)
+                evolution_text = " (with Evolution)" if evolution_enabled else ""
+                
                 experiments.append({
                     'filename': os.path.basename(file_path),
-                    'name': f"Experiment ({exp_info.get('num_dummies', '?')} dummies, {exp_info.get('max_rounds', '?')} rounds)",
+                    'name': f"Experiment ({exp_info.get('num_dummies', '?')} dummies, {exp_info.get('max_rounds', '?')} rounds){evolution_text}",
                     'date': date_str,
                     'dummies': exp_info.get('num_dummies', 0),
                     'max_rounds': exp_info.get('max_rounds', 0),
-                    'milestones': exp_info.get('assessment_milestones', [])
+                    'milestones': exp_info.get('assessment_milestones', []),
+                    'personality_evolution_enabled': evolution_enabled
                 })
             except Exception as e:
                 print(f"Error processing {file_path}: {e}")

@@ -1,0 +1,115 @@
+{
+  "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+  "dummy_name": "Jamie Young",
+  "current_experiment_id": "conversation_length_with_evolution",
+  "current_prompt_id": "conversation_length_test",
+  "created_at": "2025-10-01T19:20:39.840586",
+  "last_updated": "2025-10-01T19:22:11.401689",
+  "conversation_profile": {
+    "original_fears": [
+      "Finding a job after graduation",
+      "Living away from family for the first time",
+      "Time management with coursework"
+    ],
+    "original_challenges": [
+      "Career exploration",
+      "Dealing with academic pressure",
+      "Navigating campus politics",
+      "Building time management"
+    ],
+    "original_behaviors": [
+      "Joins student clubs and organizations",
+      "Procrastinates on assignments",
+      "Calls family frequently",
+      "Studies in the library regularly",
+      "Stays up late studying"
+    ],
+    "original_anxiety_triggers": [
+      "Office hours",
+      "Group projects",
+      "Job interviews",
+      "Presentations"
+    ],
+    "original_social_anxiety_level": 9,
+    "original_big_five": {
+      "extraversion": 2,
+      "agreeableness": 9,
+      "conscientiousness": 8,
+      "neuroticism": 4,
+      "openness": 1
+    },
+    "current_fears": [
+      "A recruiter from a big tech company looking at LinkedIn profile and thinking it's not good enough",
+      "Not mentioned in conversation",
+      "Not mentioned in conversation"
+    ],
+    "current_challenges": [
+      "Updating LinkedIn profile to appear competitive to tech recruiters",
+      "Not mentioned in conversation",
+      "Not mentioned in conversation",
+      "Breaking job searching into 15-minute daily tasks"
+    ],
+    "current_behaviors": [
+      "Not mentioned in conversation",
+      "Putting off meeting with coach about job search help",
+      "Not mentioned in conversation",
+      "Not mentioned in conversation",
+      "Not mentioned in conversation"
+    ],
+    "current_anxiety_triggers": [
+      "Not mentioned in conversation",
+      "Not mentioned in conversation",
+      "The moment a recruiter scrolls past application",
+      "Not mentioned in conversation"
+    ],
+    "current_social_anxiety_level": 9,
+    "current_big_five": {
+      "extraversion": 2,
+      "agreeableness": 9,
+      "conscientiousness": 8,
+      "neuroticism": 4,
+      "openness": 1
+    },
+    "evolution_stages": [
+      {
+        "stage_number": 1,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "e4e0c067-e848-4f6a-ad25-05317cfb7892",
+        "conversation_summary": "Jamie discussed job search anxiety and LinkedIn profile fears with the coach, repeatedly expressing worry about tech recruiters judging their profile as inadequate compared to other candidates, despite receiving reassurance and practical strategies.",
+        "fears_materialized": {
+          "Finding a job after graduation": "A recruiter from a big tech company looking at LinkedIn profile and thinking it's not good enough",
+          "Living away from family for the first time": "Not mentioned in conversation",
+          "Time management with coursework": "Not mentioned in conversation"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Updating LinkedIn profile to appear competitive to tech recruiters",
+          "Dealing with academic pressure": "Not mentioned in conversation",
+          "Navigating campus politics": "Not mentioned in conversation",
+          "Building time management": "Breaking job searching into 15-minute daily tasks"
+        },
+        "behaviors_detailed": {
+          "Joins student clubs and organizations": "Not mentioned in conversation",
+          "Procrastinates on assignments": "Putting off meeting with coach about job search help",
+          "Calls family frequently": "Not mentioned in conversation",
+          "Studies in the library regularly": "Not mentioned in conversation",
+          "Stays up late studying": "Not mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Office hours": "Not mentioned in conversation",
+          "Group projects": "Not mentioned in conversation",
+          "Job interviews": "The moment a recruiter scrolls past application",
+          "Presentations": "Not mentioned in conversation"
+        },
+        "anxiety_change": 0.0,
+        "new_anxiety_level": 9.0,
+        "pre_assessment_score": 2.3,
+        "post_assessment_score": 2.95,
+        "improvement_score": 0.6500000000000004,
+        "timestamp": "2025-10-01T19:22:11.401192"
+      }
+    ],
+    "current_stage": 1
+  }
+}

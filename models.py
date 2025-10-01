@@ -44,43 +44,145 @@ class SocialAnxietyProfile(BaseModel):
         else:
             return "severe"
 
+class EvolutionStage(BaseModel):
+    """One stage of personality evolution during a conversation"""
+    stage_number: int
+    prompt_id: str
+    prompt_name: str
+    generation: int
+    conversation_id: str
+    conversation_summary: str
+    
+    # Materialized traits (abstract → concrete)
+    fears_materialized: Dict[str, str] = Field(default_factory=dict)  # "social rejection" → "not being invited to study groups"
+    challenges_materialized: Dict[str, str] = Field(default_factory=dict)  # "starting conversations" → "approaching someone in cafeteria"
+    behaviors_detailed: Dict[str, str] = Field(default_factory=dict)  # "avoiding eye contact" → "looking at phone when people approach"
+    triggers_specified: Dict[str, str] = Field(default_factory=dict)  # "crowded rooms" → "dining hall during peak hours"
+    
+    # Anxiety level changes
+    anxiety_change: float = 0.0  # -0.5 (decreased by half a point)
+    new_anxiety_level: float = 0.0
+    
+    # Assessment impact
+    pre_assessment_score: float = 0.0
+    post_assessment_score: float = 0.0
+    improvement_score: float = 0.0
+    
+    timestamp: datetime = Field(default_factory=datetime.now)
+
+class ConversationBasedProfile(BaseModel):
+    """Profile that evolves during conversations but resets between prompt tests"""
+    
+    # Original (Static - Never Changes)
+    original_fears: List[str]
+    original_challenges: List[str]
+    original_behaviors: List[str]
+    original_anxiety_triggers: List[str]
+    original_social_anxiety_level: int
+    original_big_five: PersonalityProfile
+    
+    # Current (Dynamic - Changes During Conversation)
+    current_fears: List[str]
+    current_challenges: List[str]
+    current_behaviors: List[str]
+    current_anxiety_triggers: List[str]
+    current_social_anxiety_level: int
+    current_big_five: PersonalityProfile
+    
+    # Evolution tracking
+    evolution_stages: List[EvolutionStage] = Field(default_factory=list)
+    current_stage: int = 0
+    
+    def reset_to_original(self) -> None:
+        """Reset current profile to original for fair comparison between prompt tests"""
+        self.current_fears = self.original_fears.copy()
+        self.current_challenges = self.original_challenges.copy()
+        self.current_behaviors = self.original_behaviors.copy()
+        self.current_anxiety_triggers = self.original_anxiety_triggers.copy()
+        self.current_social_anxiety_level = self.original_social_anxiety_level
+        self.current_big_five = self.original_big_five
+    
+    def apply_evolution_stage(self, stage: EvolutionStage) -> None:
+        """Apply a new evolution stage to current profile"""
+        # Update materialized traits
+        self.current_fears = [stage.fears_materialized.get(fear, fear) for fear in self.original_fears]
+        self.current_challenges = [stage.challenges_materialized.get(challenge, challenge) for challenge in self.original_challenges]
+        self.current_behaviors = [stage.behaviors_detailed.get(behavior, behavior) for behavior in self.original_behaviors]
+        self.current_anxiety_triggers = [stage.triggers_specified.get(trigger, trigger) for trigger in self.original_anxiety_triggers]
+        
+        # Update anxiety level
+        self.current_social_anxiety_level = max(1, min(10, int(stage.new_anxiety_level)))
+        
+        # Add to evolution history
+        self.evolution_stages.append(stage)
+        self.current_stage = len(self.evolution_stages)
+    
+    def get_current_profile_for_assessment(self) -> Dict[str, Any]:
+        """Get current evolved profile for assessment"""
+        return {
+            "fears": self.current_fears,
+            "challenges": self.current_challenges,
+            "behaviors": self.current_behaviors,
+            "anxiety_triggers": self.current_anxiety_triggers,
+            "social_anxiety_level": self.current_social_anxiety_level,
+            "big_five": self.current_big_five
+        }
+
 class PersonalityEvolution(BaseModel):
     """
-    Track personality changes over time
+    Complete personality evolution system for a dummy across all experiments
     
-    Note: This is a framework for future implementation. The current focus should be on
-    evolving fears, challenges, behaviors, and anxiety triggers rather than Big Five 
-    personality traits, as the latter are more stable and harder to change.
-    
-    Future enhancements should include:
-    - Conversation memory tracking
-    - Fear/challenge/behavior evolution
-    - Anxiety trigger modification
-    - Conversation history integration
+    This replaces the old simple evolution system with a comprehensive
+    conversation-based evolution that materializes traits and tracks full history.
     """
-    original_personality: PersonalityProfile
-    current_personality: PersonalityProfile
-    evolution_history: List[Dict[str, Any]] = Field(default_factory=list)
+    dummy_id: str
+    dummy_name: str
+    
+    # Current conversation-based profile
+    conversation_profile: ConversationBasedProfile
+    
+    # Experiment tracking
+    current_experiment_id: Optional[str] = None
+    current_prompt_id: Optional[str] = None
+    
+    # Metadata
+    created_at: datetime = Field(default_factory=datetime.now)
     last_updated: datetime = Field(default_factory=datetime.now)
     
-    def evolve_personality(self, changes: Dict[str, float], reason: str) -> None:
-        """Apply personality changes with tracking"""
-        # Store current state in history
-        self.evolution_history.append({
-            "timestamp": datetime.now(),
-            "previous_personality": self.current_personality.dict(),
-            "changes": changes,
-            "reason": reason
-        })
-        
-        # Apply changes (clamped to valid ranges)
-        for trait, change in changes.items():
-            if hasattr(self.current_personality, trait):
-                current_value = getattr(self.current_personality, trait)
-                new_value = max(1, min(10, current_value + change))
-                setattr(self.current_personality, trait, int(new_value))
-        
+    def start_new_prompt_test(self, experiment_id: str, prompt_id: str, prompt_name: str) -> None:
+        """Start a new prompt test - reset profile for fair comparison"""
+        self.current_experiment_id = experiment_id
+        self.current_prompt_id = prompt_id
+        self.conversation_profile.reset_to_original()
         self.last_updated = datetime.now()
+        print(f"🔄 Reset {self.dummy_name}'s personality for prompt test: {prompt_name}")
+    
+    def add_evolution_stage(self, stage: EvolutionStage) -> None:
+        """Add a new evolution stage from a conversation"""
+        self.conversation_profile.apply_evolution_stage(stage)
+        self.last_updated = datetime.now()
+        print(f"🧬 {self.dummy_name} evolved: {stage.conversation_summary[:50]}...")
+    
+    def get_evolution_timeline(self) -> List[Dict[str, Any]]:
+        """Get evolution timeline for web interface visualization"""
+        timeline = []
+        for i, stage in enumerate(self.conversation_profile.evolution_stages):
+            timeline.append({
+                "stage_number": stage.stage_number,
+                "prompt_name": stage.prompt_name,
+                "generation": stage.generation,
+                "conversation_summary": stage.conversation_summary,
+                "anxiety_level": stage.new_anxiety_level,
+                "improvement_score": stage.improvement_score,
+                "timestamp": stage.timestamp.isoformat(),
+                "materialized_traits": {
+                    "fears": stage.fears_materialized,
+                    "challenges": stage.challenges_materialized,
+                    "behaviors": stage.behaviors_detailed,
+                    "triggers": stage.triggers_specified
+                }
+            })
+        return timeline
 
 class AIDummy(BaseModel):
     """AI Dummy character for social skills testing"""
@@ -105,17 +207,27 @@ class AIDummy(BaseModel):
     def get_character_summary(self) -> str:
         """Get a concise character summary for AI interactions"""
         # Use evolved personality if available and enabled, otherwise use original
-        personality_to_use = self.personality
         if self.personality_evolution and self._is_personality_evolution_enabled():
-            personality_to_use = self.personality_evolution.current_personality
+            # Use current evolved profile
+            current_profile = self.personality_evolution.conversation_profile
+            personality_to_use = current_profile.current_big_five
+            fears_to_use = current_profile.current_fears
+            challenges_to_use = current_profile.current_challenges
+            anxiety_level = current_profile.current_social_anxiety_level
+        else:
+            # Use original profile
+            personality_to_use = self.personality
+            fears_to_use = self.fears
+            challenges_to_use = self.challenges
+            anxiety_level = self.social_anxiety.anxiety_level
         
         dominant_traits = personality_to_use.get_dominant_traits()
-        anxiety_category = self.social_anxiety.get_anxiety_category()
+        anxiety_category = "low" if anxiety_level <= 3 else "moderate" if anxiety_level <= 6 else "high" if anxiety_level <= 9 else "severe"
         
         return f"""You are {self.name}, a {self.age}-year-old {self.student_type} studying {self.major} at {self.university}. 
         Your personality is characterized by high {', '.join(dominant_traits)}. 
-        You experience {anxiety_category} social anxiety and struggle with {', '.join(self.challenges)}. 
-        Your main fears include {', '.join(self.fears[:2])}. 
+        You experience {anxiety_category} social anxiety and struggle with {', '.join(challenges_to_use)}. 
+        Your main fears include {', '.join(fears_to_use[:2])}. 
         You want to improve your {', '.join(self.goals[:2])}."""
     
     def _is_personality_evolution_enabled(self) -> bool:
@@ -127,35 +239,80 @@ class AIDummy(BaseModel):
             return False
     
     def initialize_personality_evolution(self) -> None:
-        """Initialize personality evolution tracking"""
+        """Initialize personality evolution tracking with conversation-based profile"""
         if not self._is_personality_evolution_enabled():
             return  # Skip initialization if disabled
         
         if not self.personality_evolution:
-            self.personality_evolution = PersonalityEvolution(
-                original_personality=self.personality,
-                current_personality=self.personality
+            # Create conversation-based profile from current dummy data
+            conversation_profile = ConversationBasedProfile(
+                # Original (static) traits
+                original_fears=self.fears.copy(),
+                original_challenges=self.challenges.copy(),
+                original_behaviors=self.behaviors.copy(),
+                original_anxiety_triggers=self.social_anxiety.triggers.copy(),
+                original_social_anxiety_level=self.social_anxiety.anxiety_level,
+                original_big_five=self.personality,
+                
+                # Current (dynamic) traits - start same as original
+                current_fears=self.fears.copy(),
+                current_challenges=self.challenges.copy(),
+                current_behaviors=self.behaviors.copy(),
+                current_anxiety_triggers=self.social_anxiety.triggers.copy(),
+                current_social_anxiety_level=self.social_anxiety.anxiety_level,
+                current_big_five=self.personality
             )
+            
+            self.personality_evolution = PersonalityEvolution(
+                dummy_id=self.id,
+                dummy_name=self.name,
+                conversation_profile=conversation_profile
+            )
+            print(f"🧬 Initialized personality evolution for {self.name}")
     
-    def evolve_from_conversation(self, conversation_insights: Dict[str, Any]) -> None:
-        """Evolve personality based on conversation insights"""
+    def start_new_prompt_test(self, experiment_id: str, prompt_id: str, prompt_name: str) -> None:
+        """Start a new prompt test - reset personality for fair comparison"""
         if not self._is_personality_evolution_enabled():
-            return  # Skip evolution if disabled
+            return
         
         if not self.personality_evolution:
             self.initialize_personality_evolution()
         
-        # Example evolution logic (can be enhanced with LLM analysis)
-        changes = {}
-        reason = conversation_insights.get("reason", "Conversation-based growth")
+        if self.personality_evolution:
+            self.personality_evolution.start_new_prompt_test(experiment_id, prompt_id, prompt_name)
+    
+    def get_current_profile_for_assessment(self) -> Dict[str, Any]:
+        """Get current evolved profile for assessment"""
+        if self.personality_evolution and self._is_personality_evolution_enabled():
+            return self.personality_evolution.conversation_profile.get_current_profile_for_assessment()
+        else:
+            # Return original profile if evolution disabled
+            return {
+                "fears": self.fears,
+                "challenges": self.challenges,
+                "behaviors": self.behaviors,
+                "anxiety_triggers": self.social_anxiety.triggers,
+                "social_anxiety_level": self.social_anxiety.anxiety_level,
+                "big_five": self.personality
+            }
+    
+    def add_evolution_stage(self, stage: EvolutionStage) -> None:
+        """Add a new evolution stage from a conversation"""
+        if not self._is_personality_evolution_enabled():
+            return
         
-        # Simple example: if conversation was successful, increase confidence-related traits
-        if conversation_insights.get("success", False):
-            changes["extraversion"] = 0.2  # Slight increase in social confidence
-            changes["neuroticism"] = -0.1  # Slight decrease in anxiety
+        if not self.personality_evolution:
+            self.initialize_personality_evolution()
         
-        if changes:
-            self.personality_evolution.evolve_personality(changes, reason)
+        if self.personality_evolution:
+            self.personality_evolution.add_evolution_stage(stage)
+    
+    def get_evolution_timeline(self) -> List[Dict[str, Any]]:
+        """Get evolution timeline for web interface"""
+        if self.personality_evolution and self._is_personality_evolution_enabled():
+            return self.personality_evolution.get_evolution_timeline()
+        else:
+            return []
 
 class AssessmentResponse(BaseModel):
     """Response to a social skills assessment question"""
