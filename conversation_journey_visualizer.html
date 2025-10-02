@@ -32,29 +32,34 @@
         .controls {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
             margin-bottom: 30px;
             flex-wrap: wrap;
+            align-items: center;
         }
         
         .control-group {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
+            gap: 8px;
         }
         
         label {
             font-weight: bold;
             color: #34495e;
-            margin-bottom: 5px;
+            margin-bottom: 0;
+            margin-right: 5px;
+            white-space: nowrap;
         }
         
         select, button {
-            padding: 8px 12px;
+            padding: 6px 10px;
             border: 2px solid #bdc3c7;
             border-radius: 5px;
-            font-size: 14px;
+            font-size: 13px;
             background: white;
+            min-width: auto;
         }
         
         select:focus, button:focus {
@@ -309,7 +314,8 @@
             </div>
             
             <div class="control-group">
-                <button id="load-btn">Load Visualization</button>
+                <button id="show-prompt-btn" style="background: #e74c3c; border-color: #e74c3c;">Show Prompt</button>
+                <button id="load-btn">Load Chart</button>
             </div>
         </div>
         
@@ -385,6 +391,10 @@
             }
             
             setupEventListeners() {
+                document.getElementById('show-prompt-btn').addEventListener('click', () => {
+                    this.showPrompt();
+                });
+                
                 document.getElementById('load-btn').addEventListener('click', () => {
                     this.loadExperiment();
                 });
@@ -448,6 +458,114 @@
                 } catch (error) {
                     console.error('Error loading experiment details:', error);
                 }
+            }
+            
+            showPrompt() {
+                const filename = document.getElementById('experiment-select').value;
+                if (!filename) {
+                    alert('Please select an experiment first.');
+                    return;
+                }
+                
+                // First, try to get prompt from already loaded experiment data
+                if (this.currentExperiment && this.currentExperiment.experiment_info && this.currentExperiment.experiment_info.base_prompt) {
+                    console.log('Using prompt from already loaded experiment data');
+                    this.displayPrompt(this.currentExperiment.experiment_info.base_prompt, this.currentExperiment.experiment_info, filename);
+                    return;
+                }
+                
+                console.log(`Attempting to load prompt from: data/experiments/${filename}`);
+                
+                // Load the experiment data to get the prompt
+                fetch(`data/experiments/${filename}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        const prompt = data.experiment_info?.base_prompt || 'No prompt found in experiment data.';
+                        console.log('Successfully loaded prompt data');
+                        this.displayPrompt(prompt, data.experiment_info, filename);
+                    })
+                    .catch(error => {
+                        console.error('Error loading prompt:', error);
+                        alert(`Error loading prompt from experiment file: ${error.message}\n\nMake sure the experiment file exists and the server is running properly.`);
+                    });
+            }
+            
+            displayPrompt(prompt, experimentInfo, filename) {
+                // Create a new window/tab to show the prompt
+                const promptWindow = window.open('', '_blank', 'width=800,height=600,scrollbars=yes');
+                promptWindow.document.write(`
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <title>System Prompt - ${filename}</title>
+                        <style>
+                            body {
+                                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                margin: 20px;
+                                background-color: #f5f7fa;
+                                line-height: 1.6;
+                            }
+                            .container {
+                                max-width: 800px;
+                                margin: 0 auto;
+                                background: white;
+                                padding: 30px;
+                                border-radius: 10px;
+                                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                            }
+                            h1 {
+                                color: #2c3e50;
+                                border-bottom: 2px solid #3498db;
+                                padding-bottom: 10px;
+                            }
+                            .prompt-content {
+                                background-color: #f8f9fa;
+                                border: 1px solid #e9ecef;
+                                border-radius: 5px;
+                                padding: 20px;
+                                white-space: pre-wrap;
+                                font-family: 'Courier New', monospace;
+                                font-size: 14px;
+                                line-height: 1.5;
+                            }
+                            .meta-info {
+                                background-color: #e8f4f8;
+                                border: 1px solid #bee5eb;
+                                border-radius: 5px;
+                                padding: 15px;
+                                margin-bottom: 20px;
+                            }
+                            .error-info {
+                                background-color: #f8d7da;
+                                border: 1px solid #f5c6cb;
+                                border-radius: 5px;
+                                padding: 15px;
+                                margin-bottom: 20px;
+                                color: #721c24;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <h1>🤖 System Prompt Used</h1>
+                            <div class="meta-info">
+                                <strong>Experiment File:</strong> ${filename}<br>
+                                <strong>Timestamp:</strong> ${experimentInfo?.timestamp || 'Unknown'}<br>
+                                <strong>Experiment Type:</strong> ${experimentInfo?.experiment_type || 'Unknown'}<br>
+                                <strong>Number of Dummies:</strong> ${experimentInfo?.num_dummies || 'Unknown'}<br>
+                                <strong>Max Rounds:</strong> ${experimentInfo?.max_rounds || 'Unknown'}
+                            </div>
+                            <div class="prompt-content">${prompt}</div>
+                        </div>
+                    </body>
+                    </html>
+                `);
+                promptWindow.document.close();
             }
             
             async loadExperiment() {

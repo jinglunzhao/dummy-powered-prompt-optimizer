@@ -3,8 +3,8 @@
   "dummy_name": "Alex Lewis",
   "current_experiment_id": "conversation_length_with_evolution",
   "current_prompt_id": "conversation_length_test",
-  "created_at": "2025-10-02T14:35:22.715209",
-  "last_updated": "2025-10-02T15:12:04.774375",
+  "created_at": "2025-10-02T22:29:18.095450",
+  "last_updated": "2025-10-02T23:02:22.051338",
   "conversation_profile": {
     "original_fears": [
       "Finding a job after graduation",
@@ -33,24 +33,24 @@
       "openness": 3
     },
     "current_fears": [
-      "Finding a job after graduation",
+      "Anxiety about Metropolitan Museum internship application due to perceived lack of experience",
       "Homesickness"
     ],
     "current_challenges": [
-      "Balancing extracurricular activities with studies",
-      "Building time management",
+      "Juggling museum internship applications with art history seminar readings",
+      "Difficulty implementing and maintaining time-blocking schedule",
       "Financial planning",
-      "Developing effective study habits"
+      "Preparing for midterms while managing internship applications"
     ],
     "current_behaviors": [
-      "Uses campus resources like tutoring",
-      "Seeks out leadership roles",
-      "Studies in the library regularly"
+      "Scheduled resume brainstorming session at career center",
+      "Curated campus art club exhibition demonstrating initiative",
+      "Attended study group session for midterm preparation"
     ],
     "current_anxiety_triggers": [
-      "Campus social events"
+      "Art conservation class leading to internship discussion"
     ],
-    "current_social_anxiety_level": 8,
+    "current_social_anxiety_level": 1,
     "current_big_five": {
       "extraversion": 2,
       "agreeableness": 10,
@@ -65,17 +65,31 @@
         "prompt_name": "Conversation Length Test",
         "generation": 0,
         "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_5",
-        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
-        "fears_materialized": {},
-        "challenges_materialized": {},
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": 0.0,
-        "new_anxiety_level": 8.0,
+        "conversation_summary": "Alex expressed overwhelm balancing internship applications with coursework and insecurity about resume quality for competitive museum positions. Solutions offered included reframing academic projects as relevant experience, time-blocking strategies, and resume preparation techniques. Alex responded positively by identifying transferable skills from campus exhibition curation and archival work, immediately drafting bullet points, and scheduling concrete next steps. Progress is evidenced by reduced self-doubt, actionable planning for Thursday's meeting, and adoption of self-care reminders.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Anxiety about Metropolitan Museum internship application due to perceived lack of qualifications",
+          "Homesickness": "Not observed in conversation"
+        },
+        "challenges_materialized": {
+          "Balancing extracurricular activities with studies": "Juggling museum internship applications with art history seminar readings",
+          "Building time management": "Struggling to stick to time-blocking schedules for tasks",
+          "Financial planning": "Not discussed in conversation",
+          "Developing effective study habits": "Not discussed in conversation"
+        },
+        "behaviors_detailed": {
+          "Uses campus resources like tutoring": "Scheduled resume help session at career center",
+          "Seeks out leadership roles": "Curated campus art club exhibition",
+          "Studies in the library regularly": "Attended study group session at library"
+        },
+        "triggers_specified": {
+          "Campus social events": "Not observed in conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.1,
-        "improvement_score": 0.6000000000000001,
-        "timestamp": "2025-10-02T14:43:54.223101"
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.5,
+        "timestamp": "2025-10-02T22:33:44.456955"
       },
       {
         "stage_number": 2,
@@ -83,31 +97,31 @@
         "prompt_name": "Conversation Length Test",
         "generation": 0,
         "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_10",
-        "conversation_summary": "1) Problems discussed: Alex expressed overwhelm balancing art history coursework with starting a student club, job search anxiety, inefficient study habits for dense texts, and exhaustion from part-time museum work impacting studies. 2) Solutions offered/accepted: Coach proposed breaking club creation into steps (emailing professor), Pomodoro technique for readings, color-coded note-taking, and post-work micro-study sessions. Alex implemented all: emailed professor, tested Pomodoro with journaling, applied limited color-coding to Impressionism notes, and scheduled 20-min post-work reviews. 3) Student's response: Initially nervous but became increasingly engaged - took initiative at museum (researching artwork history with docents), committed to internship research, and adopted accountability systems (check-ins, progress journal). 4) Evidence of progress: Completed first club-creation step, developed customized study system (Pomodoro + color-coding), transformed museum job into learning opportunity, shifted from overwhelmed statements to proactive planning ('Thursday can't come fast enough'), and demonstrated visible confidence growth through body language and concrete actions.",
+        "conversation_summary": "Alex expressed overwhelm balancing internship applications with coursework and fear about inadequate museum experience. Solutions included time blocking, reframing campus projects as professional experience (art exhibition curation, archival transcription), and portfolio development. Alex accepted these by identifying transferable skills, preparing experience bullet points, and scheduling a Thursday meeting to review materials. Progress shown through concrete action commitments (photos, notes), articulated strengths (\"visual storytelling\"), and accountability for planner use and breaks.",
         "fears_materialized": {
-          "Finding a job after graduation": "Expressed terror about graduating soon while discussing starting an art appreciation club",
-          "Homesickness": "Not explicitly addressed in conversation"
+          "Finding a job after graduation": "Feeling unqualified for the Metropolitan Museum internship due to perceived lack of experience",
+          "Homesickness": "Not discussed in the conversation"
         },
         "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Delaying art club creation due to coursework demands",
-          "Building time management": "Struggling to complete Renaissance architecture readings efficiently",
-          "Financial planning": "Not explicitly addressed in conversation",
-          "Developing effective study habits": "Difficulty processing dense art theory texts during library sessions"
+          "Balancing extracurricular activities with studies": "Juggling museum internship applications with art history seminar readings",
+          "Building time management": "Struggling to stick to time blocking schedules and overbooking commitments",
+          "Financial planning": "Not discussed in the conversation",
+          "Developing effective study habits": "Chaotic study methods causing overwhelm"
         },
         "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Not explicitly demonstrated in conversation",
-          "Seeks out leadership roles": "Initiating student art appreciation club by emailing professor",
-          "Studies in the library regularly": "Consistently going to library between classes, experimenting with new study spots"
+          "Uses campus resources like tutoring": "Scheduled resume help session at career center",
+          "Seeks out leadership roles": "Curated campus art club exhibition",
+          "Studies in the library regularly": "Attended scheduled study group session"
         },
         "triggers_specified": {
-          "Campus social events": "Not explicitly triggered in conversation"
+          "Campus social events": "Not triggered in the conversation"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 1.5,
-        "pre_assessment_score": 3.1,
-        "post_assessment_score": 3.3,
-        "improvement_score": 0.19999999999999973,
-        "timestamp": "2025-10-02T14:48:38.603917"
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.0,
+        "improvement_score": 0.0,
+        "timestamp": "2025-10-02T22:43:32.388251"
       },
       {
         "stage_number": 3,
@@ -115,31 +129,31 @@
         "prompt_name": "Conversation Length Test",
         "generation": 0,
         "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_15",
-        "conversation_summary": "Alex discussed 1) overwhelming job anxiety manifesting as internship application paralysis, 2) exhaustion preventing post-work studying, and 3) difficulty retaining dense art theory. Solutions offered included micro-studying (20-30 min blocks after work), sending imperfect internship applications, strategic color-coding, and leveraging museum downtime for learning. Alex accepted all solutions, demonstrated by immediately implementing work-study integration ('reviewing Monet prints during inventory'), sending the internship email despite anxiety ('clicked send before overthink'), testing color-coding on Impressionism artists, and scheduling concrete check-ins. Progress is evident through reduced avoidance (email sent), new habit formation (scheduled study blocks), successful networking initiation (docent conversation about painting crack history), and self-aware recognition of growing confidence ('shoulders look less tense').",
+        "conversation_summary": "Discussed internship application anxiety, time management struggles, and resume concerns. Solutions offered included time blocking, resume skill documentation, and creating a video application showcase. Alex responded by immediately documenting transferable skills, scheduling concrete actions (Thursday resume session/video filming), and demonstrating increased confidence through proactive planning. Progress evidenced by shift from self-doubt to identifying relevant experiences, commitment to planner use, and enthusiastic adoption of video application strategy.",
         "fears_materialized": {
-          "Finding a job after graduation": "Panicking about internship applications while studying",
-          "Homesickness": "Not explicitly mentioned in this segment (focus on job anxiety)"
+          "Finding a job after graduation": "Anxiety about Metropolitan Museum internship application due to perceived lack of museum experience",
+          "Homesickness": "Not discussed in conversation"
         },
         "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Struggling to start art club while managing museum job and coursework",
-          "Building time management": "Feeling too tired after museum shifts to study effectively",
-          "Financial planning": "Implied through part-time job commitment (not directly discussed)",
-          "Developing effective study habits": "Difficulty focusing on dense art theory texts after work"
+          "Balancing extracurricular activities with studies": "Juggling museum internship applications with art history seminar readings",
+          "Building time management": "Struggling to implement time blocking for tasks",
+          "Financial planning": "Not discussed in conversation",
+          "Developing effective study habits": "Not discussed in conversation"
         },
         "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Not shown here (earlier focus)",
-          "Seeks out leadership roles": "Proactively starting art club & museum work engagement",
-          "Studies in the library regularly": "Immediately heading to library after session; strategic seating near art section"
+          "Uses campus resources like tutoring": "Scheduled resume help session at career center for Thursday",
+          "Seeks out leadership roles": "Referenced curating campus art club exhibition as leadership experience",
+          "Studies in the library regularly": "Rushed to library study group session during conversation"
         },
         "triggers_specified": {
-          "Campus social events": "Not triggered here (focus on academic/work stress)"
+          "Campus social events": "Not discussed in conversation"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 1.5,
-        "pre_assessment_score": 3.3,
-        "post_assessment_score": 2.0,
-        "improvement_score": -1.2999999999999998,
-        "timestamp": "2025-10-02T14:51:49.942488"
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 3.15,
+        "improvement_score": 1.15,
+        "timestamp": "2025-10-02T22:49:31.536176"
       },
       {
         "stage_number": 4,
@@ -147,17 +161,31 @@
         "prompt_name": "Conversation Length Test",
         "generation": 0,
         "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_20",
-        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
-        "fears_materialized": {},
-        "challenges_materialized": {},
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": 0.0,
-        "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.0,
-        "post_assessment_score": 2.95,
-        "improvement_score": 0.9500000000000002,
-        "timestamp": "2025-10-02T14:54:35.908637"
+        "conversation_summary": "Discussed internship application anxiety and time management challenges. Solutions: reframing academic projects as professional experience, creating video application materials, and time-blocking with accountability. Alex responded by identifying relevant skills (exhibition curation, archival transcription), scheduling concrete actions (Thursday resume session, video filming), and demonstrating improved self-awareness through articulated strengths. Progress evidenced by reduced self-doubt, proactive planning commitments, and humor replacing nervous behaviors.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Anxiety about Metropolitan Museum internship application due to perceived lack of experience",
+          "Homesickness": "Not discussed in this session"
+        },
+        "challenges_materialized": {
+          "Balancing extracurricular activities with studies": "Juggling museum internship applications with art history seminar readings",
+          "Building time management": "Difficulty sticking to planned time-blocking schedules",
+          "Financial planning": "Not discussed in this session",
+          "Developing effective study habits": "Preparing for midterms with library study groups"
+        },
+        "behaviors_detailed": {
+          "Uses campus resources like tutoring": "Scheduled resume help session at career center",
+          "Seeks out leadership roles": "Initiated campus art club exhibition curation",
+          "Studies in the library regularly": "Attending study group before midterm"
+        },
+        "triggers_specified": {
+          "Campus social events": "Not triggered in this session"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 3.15,
+        "post_assessment_score": 3.1,
+        "improvement_score": -0.04999999999999982,
+        "timestamp": "2025-10-02T22:55:35.431953"
       },
       {
         "stage_number": 5,
@@ -165,137 +193,31 @@
         "prompt_name": "Conversation Length Test",
         "generation": 0,
         "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_25",
-        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
-        "fears_materialized": {},
-        "challenges_materialized": {},
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": 0.0,
-        "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.95,
-        "post_assessment_score": 3.05,
-        "improvement_score": 0.09999999999999964,
-        "timestamp": "2025-10-02T14:57:09.806921"
-      },
-      {
-        "stage_number": 6,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_30",
-        "conversation_summary": "1) Alex discussed overwhelming anxiety about job prospects, difficulty balancing museum work with art history studies, and procrastination on starting an art club. 2) Solutions offered included: Pomodoro technique for focused studying, micro-tasking for club initiation, integrating studies with museum work, and alumni networking for career anxiety. 3) Alex actively implemented solutions: emailed professor about club, tested Pomodoro with architecture readings, color-coded Impressionism notes, and scheduled museum-study integration. 4) Progress evidenced by: uncovering artwork backstory through docent conversation, drafting internship emails, adopting accountability systems (red-ink reminders), and demonstrating increased confidence in networking ('baby steps with docents').",
+        "conversation_summary": "Problems discussed: 1) Balancing internship applications with academic workload, 2) Self-doubt about resume quality for competitive positions, 3) Difficulty implementing time management strategies. Solutions offered/accepted: 1) Reframing campus experiences as relevant qualifications, 2) Creating video application materials showcasing skills, 3) Time-blocking with 30-minute focused sessions. Student's response: Positively identified transferable skills (exhibition curation, research transcription), scheduled concrete actions (video filming, bullet point preparation), and demonstrated initiative (walking brainstorming session). Evidence of progress: Shifted from self-doubt to recognizing own qualifications, created actionable plan for application enhancement, and showed increased confidence through proactive behaviors.",
         "fears_materialized": {
-          "Finding a job after graduation": "Expressing terror about post-graduation employment during art history studies",
-          "Homesickness": "Not explicitly discussed in this session"
+          "Finding a job after graduation": "Anxiety about Metropolitan Museum internship application due to perceived lack of experience"
         },
         "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Struggling to launch student art club while keeping up with coursework",
-          "Building time management": "Falling behind on readings due to museum job schedule (Tues/Thurs/Sat shifts)",
-          "Financial planning": "Not explicitly discussed in this session",
-          "Developing effective study habits": "Difficulty focusing on dense art theory texts for extended periods"
+          "Balancing extracurricular activities with studies": "Juggling museum internship applications with art history seminar readings",
+          "Building time management": "Difficulty implementing and maintaining time-blocking schedule",
+          "Developing effective study habits": "Preparing for midterms while managing internship applications"
         },
         "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Consistently studies in library (mentioned 3x), seeks professor guidance",
-          "Seeks out leadership roles": "Proactively pursuing art appreciation club creation",
-          "Studies in the library regularly": "Immediately heads to library after sessions, experiments with new study spots"
+          "Uses campus resources like tutoring": "Scheduled resume brainstorming session at career center",
+          "Seeks out leadership roles": "Curated campus art club exhibition demonstrating initiative",
+          "Studies in the library regularly": "Attended study group session for midterm preparation"
         },
         "triggers_specified": {
-          "Campus social events": "Not explicitly discussed, but club creation serves as social/academic trigger"
+          "Campus social events": "Art conservation class leading to internship discussion"
         },
         "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 3.05,
-        "post_assessment_score": 3.15,
-        "improvement_score": 0.10000000000000009,
-        "timestamp": "2025-10-02T15:00:32.188552"
-      },
-      {
-        "stage_number": 7,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_35",
-        "conversation_summary": "1) Alex discussed job search anxiety, time management struggles with museum work, and difficulty starting an art club. 2) Solutions offered: Pomodoro technique, bite-sized club initiation (email professor), color-coded notes, and museum-integrated studying. 3) Alex implemented all solutions: emailed professor, tested Pomodoro, color-coded Impressionism notes, and discovered historical art details via docent conversations. 4) Progress evidenced by: drafting internship emails, maintaining accountability journals, reframing anxiety as actionable strategy ('growing gains'), and demonstrating initiative through artifact research (1923 fire discovery).",
-        "fears_materialized": {
-          "Finding a job after graduation": "Stressing about internship applications while studying Renaissance architecture",
-          "Homesickness": "Not explicitly discussed in this segment"
-        },
-        "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Delaying art club creation due to coursework demands",
-          "Building time management": "Falling behind on readings while working museum shifts (Tues/Thurs/Sat)",
-          "Financial planning": "Not explicitly discussed in this segment",
-          "Developing effective study habits": "Struggling with dense art theory texts during library sessions"
-        },
-        "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Consulting professor about club creation via email",
-          "Seeks out leadership roles": "Initiating student art appreciation club proposal",
-          "Studies in the library regularly": "Scheduling post-museum shift study sessions near art history section"
-        },
-        "triggers_specified": {
-          "Campus social events": "Club creation initiative triggering job anxiety discussions"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 3.15,
-        "post_assessment_score": 3.15,
-        "improvement_score": 0.0,
-        "timestamp": "2025-10-02T15:03:02.635337"
-      },
-      {
-        "stage_number": 8,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_40",
-        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
-        "fears_materialized": {},
-        "challenges_materialized": {},
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": 0.0,
-        "new_anxiety_level": 8.0,
-        "pre_assessment_score": 3.15,
-        "post_assessment_score": 2.0,
-        "improvement_score": -1.15,
-        "timestamp": "2025-10-02T15:06:28.081658"
-      },
-      {
-        "stage_number": 9,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_45",
-        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
-        "fears_materialized": {},
-        "challenges_materialized": {},
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": 0.0,
-        "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.0,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 3.1,
         "post_assessment_score": 3.0,
-        "improvement_score": 1.0,
-        "timestamp": "2025-10-02T15:09:17.561099"
-      },
-      {
-        "stage_number": 10,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_50",
-        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
-        "fears_materialized": {},
-        "challenges_materialized": {},
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": 0.0,
-        "new_anxiety_level": 8.0,
-        "pre_assessment_score": 3.0,
-        "post_assessment_score": 3.15,
-        "improvement_score": 0.3999999999999999,
-        "timestamp": "2025-10-02T15:12:04.773896"
+        "improvement_score": 0.1499999999999999,
+        "timestamp": "2025-10-02T23:02:22.050681"
       }
     ],
-    "current_stage": 10
+    "current_stage": 5
   }
 }

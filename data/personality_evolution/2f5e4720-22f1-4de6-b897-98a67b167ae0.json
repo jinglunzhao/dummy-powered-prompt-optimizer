@@ -3,8 +3,8 @@
   "dummy_name": "Gregory Moore",
   "current_experiment_id": "conversation_length_with_evolution",
   "current_prompt_id": "conversation_length_test",
-  "created_at": "2025-10-02T14:35:22.712172",
-  "last_updated": "2025-10-02T15:12:12.950525",
+  "created_at": "2025-10-02T22:29:18.092060",
+  "last_updated": "2025-10-02T23:07:02.596962",
   "conversation_profile": {
     "original_fears": [
       "Choosing the right career path",
@@ -37,26 +37,26 @@
     },
     "current_fears": [
       "Choosing the right career path",
-      "Social anxiety in large lecture halls",
-      "Academic failure and poor grades",
+      "Presenting project to 200 students in Algorithms class",
+      "Debugging complex problems without clear solutions (analogy for loan management)",
       "Dealing with roommate conflicts"
     ],
     "current_challenges": [
-      "Financial planning",
-      "Finding a mentor",
-      "Managing student loans"
+      "Unbalanced ramen-to-avocado ratio and Steam game overspending",
+      "Seeking alumni guidance through Professor Chen for loan/grad school advice",
+      "Navigating high interest rates and repayment plans without clear documentation"
     ],
     "current_behaviors": [
-      "Eats at the dining hall",
+      "Frequently consumes ramen while discussing budget upgrades",
       "Participates in study groups",
-      "Volunteers for campus events"
+      "Actively participates in hackathons to meet people"
     ],
     "current_anxiety_triggers": [
       "Networking events",
-      "Presentations",
+      "Project demonstration in Algorithms class",
       "Campus social events"
     ],
-    "current_social_anxiety_level": 8,
+    "current_social_anxiety_level": 2,
     "current_big_five": {
       "extraversion": 10,
       "agreeableness": 1,
@@ -71,30 +71,29 @@
         "prompt_name": "Conversation Length Test",
         "generation": 0,
         "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_5",
-        "conversation_summary": "Gregory discussed 1) Stress about student loans affecting academic focus, 2) Anxiety about contacting Professor Chen for mentorship, and 3) Scheduling conflict between financial workshop and study group. Solutions included: structured email templates for professors, alternatives for accessing financial workshop content, and strategies to reduce perfectionism. Gregory responded positively by immediately sending emails to two professors, volunteering for future workshops, and creating an action plan. Evidence of progress includes sending professional emails without excessive editing, implementing email management techniques, and committing to approach Dr. Chen in person with prepared talking points.",
+        "conversation_summary": "Discussed anxiety about loan repayment and budgeting challenges. Solutions offered: 1) Contacting alumni via Professor Chen for loan guidance 2) Implementing 3-step budget system with tracking. Student responded positively: immediately drafted/sent alumni request email, created budget tracking sheet with alerts, and committed to Friday check-ins. Progress shown through concrete actions: customized outreach initiated and financial tracking system established with accountability measures.",
         "fears_materialized": {
-          "Choosing the right career path": "Struggling to draft emails to Professor Chen about AI research paths due to overthinking",
-          "Social anxiety in large lecture halls": "Nervousness about approaching Professor Chen at coffee machine (small-scale social interaction)",
-          "Academic failure and poor grades": "Conflict between financial workshop and algorithms study group scheduling"
+          "Social anxiety in large lecture halls": "Presenting project to 200 students in Algorithms class",
+          "Academic failure and poor grades": "Debugging complex coding problems under pressure"
         },
         "challenges_materialized": {
-          "Financial planning": "Deciding between work-study hours vs. internship hunting while managing loans",
-          "Finding a mentor": "Drafting/re-writing emails to Professor Chen and researching other professors",
-          "Managing student loans": "Missing financial workshop due to academic conflict"
+          "Financial planning": "Unbalanced ramen-to-avocado ratio and Steam game overspending",
+          "Managing student loans": "Navigating repayment plans and interest rates without guidance",
+          "Finding a mentor": "Seeking alumni advice on grad school financing"
         },
         "behaviors_detailed": {
-          "Participates in study groups": "Prioritized algorithms study group over financial workshop",
-          "Volunteers for campus events": "Offered to help organize next financial workshop during phone call"
+          "Eats at the dining hall": "Frequently consumes ramen and dining hall cookies",
+          "Volunteers for campus events": "Actively participates in hackathons"
         },
         "triggers_specified": {
-          "Networking events": "Emailing professors for mentorship and approaching Dr. Chen in person"
+          "Presentations": "Preparing project presentation for Algorithms class"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 2.5,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.75,
-        "improvement_score": 0.25,
-        "timestamp": "2025-10-02T14:46:25.976016"
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.3999999999999999,
+        "timestamp": "2025-10-02T22:40:14.379273"
       },
       {
         "stage_number": 2,
@@ -102,17 +101,29 @@
         "prompt_name": "Conversation Length Test",
         "generation": 0,
         "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_10",
-        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
-        "fears_materialized": {},
-        "challenges_materialized": {},
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": 0.0,
-        "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.75,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.75,
-        "timestamp": "2025-10-02T14:50:13.188331"
+        "conversation_summary": "Discussed presentation anxiety in Algorithms class and significant stress about student loans/financial planning. Solutions: 1) Reaching out to Professor Chen for alumni mentorship connections (accepted - email sent with customized questions), 2) Implementing 3-step budget system (accepted - shared tracking sheet created with conditional formatting). Student responded positively: Immediately sent email, created budget tracker, and scheduled accountability check-in. Progress evidenced by concrete actions taken and humorous engagement with solutions.",
+        "fears_materialized": {
+          "Social anxiety in large lecture halls": "Presenting project to 200 students in Algorithms class",
+          "Academic failure and poor grades": "Struggling to understand monads in coursework"
+        },
+        "challenges_materialized": {
+          "Financial planning": "Unbalanced ramen-to-avocado ratio and excessive Steam game purchases",
+          "Finding a mentor": "Seeking alumni connections through Professor Chen for loan/grad school advice",
+          "Managing student loans": "Navigating repayment plans and interest rates without clear guidance"
+        },
+        "behaviors_detailed": {
+          "Eats at the dining hall": "Frequently consumes dining hall cookies and ramen",
+          "Volunteers for campus events": "Participates in hackathons to meet new people"
+        },
+        "triggers_specified": {
+          "Presentations": "Project presentation in Algorithms class lecture hall"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 2.5,
+        "pre_assessment_score": 2.9,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.0,
+        "timestamp": "2025-10-02T22:47:59.091434"
       },
       {
         "stage_number": 3,
@@ -120,17 +131,34 @@
         "prompt_name": "Conversation Length Test",
         "generation": 0,
         "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_15",
-        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
-        "fears_materialized": {},
-        "challenges_materialized": {},
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": 0.0,
-        "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.0,
-        "post_assessment_score": 2.65,
-        "improvement_score": 0.6499999999999999,
-        "timestamp": "2025-10-02T14:52:43.819181"
+        "conversation_summary": "Problems discussed: Student loan repayment stress, financial planning difficulties, and grad school decision concerns. Solutions offered: For loans, drafting email to Professor Chen to connect with experienced alumni; for budgeting, implementing a 3-step financial plan with tracking spreadsheet. Student's response: Immediately sent alumni request email, created budget spreadsheet with alerts, and scheduled accountability check-in. Evidence of progress: Concrete actions taken include email sent with specific questions, budget system implemented with overdraft alerts, and commitment to follow-up meeting.",
+        "fears_materialized": {
+          "Choosing the right career path": "Asking alumni whether they regretted grad school decisions",
+          "Social anxiety in large lecture halls": "Presenting projects in 200-student Algorithms class",
+          "Academic failure and poor grades": "Struggling to understand monads in computer science coursework",
+          "Dealing with roommate conflicts": "Not explicitly discussed in conversation"
+        },
+        "challenges_materialized": {
+          "Financial planning": "Unbalanced ramen-to-avocado ratio and frequent Steam sale purchases",
+          "Finding a mentor": "Seeking alumni who navigated student loans for grad school",
+          "Managing student loans": "Stress over repayment plans and high interest rates"
+        },
+        "behaviors_detailed": {
+          "Eats at the dining hall": "Surviving on dining hall cookies during intensive study sessions",
+          "Participates in study groups": "Not explicitly discussed in conversation",
+          "Volunteers for campus events": "Meeting new people at hackathons"
+        },
+        "triggers_specified": {
+          "Networking events": "Hackathons and categorizing Steam purchases as 'networking with future employers'",
+          "Presentations": "Upcoming project presentation in Algorithms class",
+          "Campus social events": "Not explicitly discussed in conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 2.5,
+        "pre_assessment_score": 2.9,
+        "post_assessment_score": 2.8,
+        "improvement_score": -0.10000000000000009,
+        "timestamp": "2025-10-02T22:53:21.074750"
       },
       {
         "stage_number": 4,
@@ -138,17 +166,28 @@
         "prompt_name": "Conversation Length Test",
         "generation": 0,
         "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_20",
-        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
-        "fears_materialized": {},
-        "challenges_materialized": {},
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": 0.0,
-        "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.65,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.6499999999999999,
-        "timestamp": "2025-10-02T14:55:45.807460"
+        "conversation_summary": "Discussed: 1) Anxiety about Algorithms class presentation, 2) Overwhelming student loan stress, 3) Unbalanced budgeting (ramen-heavy diet, Steam purchases). Solutions: 1) Drafted/sent alumni outreach email via Professor Chen, 2) Created 3-step budget system with tracking sheet. Response: Gregory actively customized solutions (added loan questions, implemented conditional formatting), scheduled check-in, and demonstrated accountability. Progress: Email sent immediately, budget system operationalized, and accountability mechanism established.",
+        "fears_materialized": {
+          "Social anxiety in large lecture halls": "Presenting project to 200 students in Algorithms class"
+        },
+        "challenges_materialized": {
+          "Financial planning": "Unbalanced ramen-to-avocado ratio and Steam game spending",
+          "Managing student loans": "Navigating repayment plans and interest rates",
+          "Finding a mentor": "Seeking alumni advice via Professor Chen"
+        },
+        "behaviors_detailed": {
+          "Eats at the dining hall": "Frequently consumes ramen and dining hall cookies",
+          "Volunteers for campus events": "Participates in hackathons"
+        },
+        "triggers_specified": {
+          "Presentations": "Project demonstration in Algorithms class"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 2.5,
+        "pre_assessment_score": 2.8,
+        "post_assessment_score": 2.95,
+        "improvement_score": 0.15000000000000036,
+        "timestamp": "2025-10-02T22:59:34.736039"
       },
       {
         "stage_number": 5,
@@ -156,125 +195,31 @@
         "prompt_name": "Conversation Length Test",
         "generation": 0,
         "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_25",
-        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
-        "fears_materialized": {},
-        "challenges_materialized": {},
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": 0.0,
-        "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.0,
-        "post_assessment_score": 2.65,
-        "improvement_score": 0.6499999999999999,
-        "timestamp": "2025-10-02T14:59:10.296064"
-      },
-      {
-        "stage_number": 6,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_30",
-        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
-        "fears_materialized": {},
-        "challenges_materialized": {},
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": 0.0,
-        "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.65,
-        "post_assessment_score": 2.7,
-        "improvement_score": 0.050000000000000266,
-        "timestamp": "2025-10-02T15:01:33.779272"
-      },
-      {
-        "stage_number": 7,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_35",
-        "conversation_summary": "Discussed 1) Mentor outreach paralysis (specifically emailing Professor Chen), 2) Student loan stress vs. academic priorities, and 3) Networking anxiety. Solutions included email templates with specific research references, financial workshop alternatives, and role-played academic conversations. Gregory responded positively by sending 2 professor emails immediately, volunteering for financial workshops, and developing backup plans. Progress evidenced by concrete actions: sent emails with follow-up systems, scheduled professor outreach, and created emergency scripts for in-person networking - transforming avoidance behaviors into proactive strategies with measurable outcomes.",
+        "conversation_summary": "Discussed loan repayment stress and budget management challenges. Solutions: 1) Reaching out to alumni via Professor Chen for loan/grad school advice (email drafted/sent with customized questions), 2) Implementing 3-step budget system with tracking spreadsheet. Student responded positively: immediately sent email, created spreadsheet with overdraft alerts, scheduled check-in, and reframed challenges using coding analogies. Progress evidenced by concrete actions taken during session and commitment to accountability systems.",
         "fears_materialized": {
-          "Choosing the right career path": "Paralysis in emailing professors about research mentorship opportunities",
-          "Social anxiety in large lecture halls": "Avoidance of approaching Professor Chen despite shared research interests",
-          "Academic failure and poor grades": "Overthinking email drafts instead of focusing on algorithms coursework"
+          "Social anxiety in large lecture halls": "Presenting project to 200 students in Algorithms class",
+          "Academic failure and poor grades": "Debugging complex problems without clear solutions (analogy for loan management)"
         },
         "challenges_materialized": {
-          "Financial planning": "Conflict between attending financial workshop vs. algorithms study group",
-          "Finding a mentor": "Anxiety about drafting emails to Professor Chen and backup professors",
-          "Managing student loans": "Debating work-study hours vs. internship hunting during class time"
+          "Financial planning": "Unbalanced ramen-to-avocado ratio and Steam game overspending",
+          "Finding a mentor": "Seeking alumni guidance through Professor Chen for loan/grad school advice",
+          "Managing student loans": "Navigating high interest rates and repayment plans without clear documentation"
         },
         "behaviors_detailed": {
-          "Eats at the dining hall": "Used coffee shop environment to research professors and draft emails",
-          "Participates in study groups": "Sacrificed algorithms study session to prioritize financial literacy",
-          "Volunteers for campus events": "Signed up to help organize next financial workshop during inquiry call"
+          "Eats at the dining hall": "Frequently consumes ramen while discussing budget upgrades",
+          "Volunteers for campus events": "Actively participates in hackathons to meet people"
         },
         "triggers_specified": {
-          "Networking events": "Coffee machine ambush plan for Professor Chen",
-          "Presentations": "Role-playing academic Q&A with AI coach",
-          "Campus social events": "Volunteering at financial workshop as networking alternative"
+          "Presentations": "Project demonstration in Algorithms class"
         },
         "anxiety_change": -0.5,
-        "new_anxiety_level": 6.5,
-        "pre_assessment_score": 2.7,
-        "post_assessment_score": 2.6,
-        "improvement_score": -0.10000000000000009,
-        "timestamp": "2025-10-02T15:04:20.445121"
-      },
-      {
-        "stage_number": 8,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_40",
-        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
-        "fears_materialized": {},
-        "challenges_materialized": {},
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": 0.0,
-        "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.6,
-        "post_assessment_score": 2.65,
-        "improvement_score": 0.04999999999999982,
-        "timestamp": "2025-10-02T15:07:39.657920"
-      },
-      {
-        "stage_number": 9,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_45",
-        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
-        "fears_materialized": {},
-        "challenges_materialized": {},
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": 0.0,
-        "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.65,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.6499999999999999,
-        "timestamp": "2025-10-02T15:10:01.315099"
-      },
-      {
-        "stage_number": 10,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_50",
-        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
-        "fears_materialized": {},
-        "challenges_materialized": {},
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": 0.0,
-        "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.0,
-        "post_assessment_score": 2.7,
-        "improvement_score": 0.20000000000000018,
-        "timestamp": "2025-10-02T15:12:12.950029"
+        "new_anxiety_level": 2.5,
+        "pre_assessment_score": 2.95,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.44999999999999973,
+        "timestamp": "2025-10-02T23:07:02.596483"
       }
     ],
-    "current_stage": 10
+    "current_stage": 5
   }
 }
