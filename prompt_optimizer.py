@@ -972,6 +972,9 @@ Be concise and actionable. No verbose analysis.
         
         # Update Pareto frontier
         self._update_pareto_frontier()
+        
+        # Cap population to top 8 performing prompts AFTER evaluation
+        self._cap_population_after_evaluation()
     
     def _update_pareto_frontier(self) -> None:
         """Update the Pareto frontier using 20-criteria optimization based on individual assessment questions"""
@@ -1016,6 +1019,29 @@ Be concise and actionable. No verbose analysis.
         # Update frontier (non-dominated solutions)
         self.pareto_frontier = [p for p in tested_prompts if p.pareto_rank == 0]
         print(f"🏆 20-criteria Pareto frontier updated: {len(self.pareto_frontier)} non-dominated solutions")
+    
+    def _cap_population_after_evaluation(self) -> None:
+        """Cap population to top 8 performing prompts after evaluation"""
+        if len(self.population) <= 8:
+            return  # No need to cap
+        
+        print(f"   🏆 Capping population from {len(self.population)} to top 8 prompts...")
+        
+        # Sort by average improvement and keep top 8
+        self.population.sort(key=lambda p: p.performance_metrics.get('avg_improvement', 0), reverse=True)
+        
+        # Keep top 8 prompts
+        top_8_prompts = self.population[:8]
+        
+        print(f"   📊 Population capping results:")
+        for i, prompt in enumerate(top_8_prompts):
+            improvement = prompt.performance_metrics.get('avg_improvement', 0)
+            print(f"      {i+1}. {prompt.name}: +{improvement:.3f}")
+        
+        # Update population to top 8
+        self.population = top_8_prompts
+        
+        print(f"   ✅ Population capped to {len(self.population)} top-performing prompts")
     
     def evolve_population(self) -> List[OptimizedPrompt]:
         """Evolve the population using genetic algorithms (GEPA approach)"""
@@ -1149,15 +1175,13 @@ Be concise and actionable. No verbose analysis.
             
             new_population.append(child)
         
-        # Keep only the top 8 performing prompts for next generation
-        if len(new_population) > 8:
-            # Sort by average improvement and keep top 8
-            new_population.sort(key=lambda p: p.performance_metrics.get('avg_improvement', 0), reverse=True)
-            new_population = new_population[:8]
-            print(f"   🏆 Selected top 8 prompts (capped from {len(new_population) + len(self.population)} total)")
+        # DON'T cap population here - let all new prompts be tested first
+        # Population capping will happen AFTER evaluation in the next generation
         
         self.population = new_population
         self.all_prompts.extend(new_population)  # Add all new prompts to history
+        
+        print(f"   📈 Created {len(new_population)} new prompts for testing (no capping yet)")
         
         # Save results incrementally
         self._save_incremental_results()
@@ -1541,7 +1565,8 @@ Example format: "You are a helpful social skills coach who..."
         optimal_round = min(optimal_round, len(conversation.turns) // 2)
         
         print(f"   🎯 Optimal ending point: Round {optimal_round}")
-        print(f"   📊 Quality scores: {[f\"R{s['round']}:{s['quality']:.2f}\" for s in quality_scores[:5]]}")
+        quality_summary = [f"R{s['round']}:{s['quality']:.2f}" for s in quality_scores[:5]]
+        print(f"   📊 Quality scores: {quality_summary}")
         
         return optimal_round
     
