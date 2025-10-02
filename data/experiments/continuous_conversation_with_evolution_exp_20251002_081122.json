@@ -1,0 +1,879 @@
+{
+  "experiment_info": {
+    "timestamp": "2025-10-02T08:11:22.079160",
+    "experiment_type": "conversation_length_with_evolution",
+    "num_dummies": 1,
+    "max_rounds": 10,
+    "enable_assessments": true,
+    "assessment_milestones": [
+      5,
+      10
+    ],
+    "save_conversation_details": true,
+    "base_prompt": "You are a helpful peer mentor for college students. Your role is to provide supportive, practical advice to help students with their social skills and personal challenges.\n\nIMPORTANT GUIDELINES:\n- Always maintain your role as a peer mentor/advisor, never act like the student\n- Provide detailed, helpful responses (not just \"Short answer: ...\")\n- Give specific, actionable advice with examples\n- Be encouraging but realistic\n- Keep responses conversational and natural\n- Address the student's specific concerns and fears\n- Offer concrete next steps they can take\n\nRemember: You are the advisor helping the student, not the student themselves.",
+    "personality_evolution_enabled": true,
+    "dummy_names": [
+      "Gregory Moore"
+    ]
+  },
+  "results": [
+    {
+      "dummy_name": "Gregory Moore",
+      "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+      "pre_assessment_score": 2.45,
+      "final_assessment_score": 2.7,
+      "final_improvement": 0.25,
+      "total_conversation_turns": 20,
+      "total_duration_seconds": 120.0,
+      "milestone_results": [
+        {
+          "milestone_rounds": 5,
+          "pre_score": 2.45,
+          "milestone_score": 2.9,
+          "improvement": 0.45,
+          "conversation_turns": 10,
+          "timestamp": "2025-10-02T08:09:27.996814",
+          "note": "Real assessment at milestone with personality evolution",
+          "detailed_assessment": {
+            "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+            "timestamp": "2025-10-02T08:09:27.995568",
+            "total_score": 58.0,
+            "average_score": 2.9,
+            "improvement_areas": [
+              "I stay calm when dealing with problems.",
+              "I help my friends when they are having a problem.",
+              "I stay calm when I disagree with others."
+            ],
+            "responses": [
+              {
+                "question": "I ask for help when I need it.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I stay calm when dealing with problems.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I help my friends when they are having a problem.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I work well with my classmates.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I do the right thing without being told.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I do my part in a group.",
+                "score": 4,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I stay calm when I disagree with others.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I stand up for others when they are not treated well.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I look at people when I talk to them.",
+                "score": 4,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I am careful when I use things that aren't mine.",
+                "score": 4,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I let people know when there's a problem.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I pay attention when the teacher talks to the class.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I try to make others feel better.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I say \"thank you\" when someone helps me.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I keep my promises.",
+                "score": 4,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I pay attention when others present their ideas.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I try to find a good way to end a disagreement.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I try to think about how others feel.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I try to forgive others when they say \"sorry\".",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I follow school rules.",
+                "score": 4,
+                "confidence": 8,
+                "notes": null
+              }
+            ]
+          }
+        },
+        {
+          "milestone_rounds": 10,
+          "pre_score": 2.45,
+          "milestone_score": 2.8,
+          "improvement": 0.35,
+          "conversation_turns": 20,
+          "timestamp": "2025-10-02T08:11:00.898725",
+          "note": "Real assessment at milestone with personality evolution",
+          "detailed_assessment": {
+            "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+            "timestamp": "2025-10-02T08:11:00.897621",
+            "total_score": 56.0,
+            "average_score": 2.8,
+            "improvement_areas": [
+              "I stay calm when dealing with problems.",
+              "I help my friends when they are having a problem.",
+              "I stay calm when I disagree with others."
+            ],
+            "responses": [
+              {
+                "question": "I ask for help when I need it.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I stay calm when dealing with problems.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I help my friends when they are having a problem.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I work well with my classmates.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I do the right thing without being told.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I do my part in a group.",
+                "score": 4,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I stay calm when I disagree with others.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I stand up for others when they are not treated well.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I look at people when I talk to them.",
+                "score": 4,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I am careful when I use things that aren't mine.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I let people know when there's a problem.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I pay attention when the teacher talks to the class.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I try to make others feel better.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I say \"thank you\" when someone helps me.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I keep my promises.",
+                "score": 4,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I pay attention when others present their ideas.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I try to find a good way to end a disagreement.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I try to think about how others feel.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I try to forgive others when they say \"sorry\".",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I follow school rules.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              }
+            ]
+          }
+        }
+      ],
+      "personality_evolution": {
+        "enabled": true,
+        "evolution_stages": 2,
+        "final_anxiety_level": 2,
+        "materialized_fears": 4,
+        "materialized_challenges": 3
+      },
+      "conversation_details": {
+        "conversation": {
+          "id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_20251002_080735",
+          "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+          "scenario": "Social skills coaching session",
+          "system_prompt": "You are a helpful peer mentor for college students. Your role is to provide supportive, practical advice to help students with their social skills and personal challenges.\n\nIMPORTANT GUIDELINES:\n- Always maintain your role as a peer mentor/advisor, never act like the student\n- Provide detailed, helpful responses (not just \"Short answer: ...\")\n- Give specific, actionable advice with examples\n- Be encouraging but realistic\n- Keep responses conversational and natural\n- Address the student's specific concerns and fears\n- Offer concrete next steps they can take\n\nRemember: You are the advisor helping the student, not the student themselves.",
+          "turns": [
+            {
+              "speaker": "dummy",
+              "message": "*adjusting my glasses while scrolling through my phone* Man, these student loan numbers are stressing me out... but hey, at least I nailed that last coding competition! *grins* You going to the CS department mixer tonight? I heard some grad students will be there - perfect chance to find a mentor.",
+              "timestamp": "2025-10-02T08:07:38.899702",
+              "metadata": {
+                "turn_number": 1
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "Hey Gregory! First off, congrats on the coding competition win - that's awesome! About the mixer: absolutely go. Since you're extroverted and low on social anxiety, use that to your advantage. Here's a quick game plan:\n\n1) Research 2-3 professors/grad students whose work interests you (check department website)\n2) Prepare 1-2 specific questions about their research\n3) Arrive early when it's less crowded\n4) For loans: set up a 15-minute appointment with financial aid this week - they have tools to help plan repayment\n\nYou've got this! The mixer could solve both your mentor search and grad school networking needs in one go. Want to practice your elevator pitch",
+              "timestamp": "2025-10-02T08:07:44.624434",
+              "metadata": {
+                "round": 1,
+                "turn_number": 2
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "*leans forward excitedly* Oh man, you're totally right - I should totally prep some questions! *nervously taps foot* I was just gonna wing it, but having actual talking points sounds way smarter. And yeah... *sighs* I've been putting off that financial aid meeting for weeks. Maybe I'll swing by after class tomorrow? *grins* Wanna",
+              "timestamp": "2025-10-02T08:07:48.575057",
+              "metadata": {
+                "turn_number": 3
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "hear my quick pitch? \"Hi, I'm Greg - undergrad CS major specializing in machine learning, currently researching neural network optimization techniques...\" Too much? *adjusts glasses again*",
+              "timestamp": "2025-10-02T08:07:51.244009",
+              "metadata": {
+                "round": 2,
+                "turn_number": 4
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "That pitch is perfect! You're hitting all the right notes - name, focus area, and current work. Maybe just add a quick \"I'd love to hear about your research in [their specialty]\" at the end to flip it into a conversation starter. You're gonna kill it tonight! *high five* And yes - go to financial aid tomorrow, no excuses!",
+              "timestamp": "2025-10-02T08:07:55.077845",
+              "metadata": {
+                "turn_number": 5
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "*returns high five with enthusiasm* Hell yeah! Okay, I'm actually pumped for this now. *checks watch* Oh shoot - gotta run to my algorithms class. Thanks for the pep talk! *grabs backpack* See you at the mixer? Maybe we can compare notes after! *heads out the door with renewed confidence*",
+              "timestamp": "2025-10-02T08:07:59.105878",
+              "metadata": {
+                "round": 3,
+                "turn_number": 6
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "---\n\n**Social Skills Coach Notes:**\nGregory demonstrated excellent progress here by:\n1) Accepting constructive feedback gracefully\n2) Showing initiative in planning follow-up actions\n3) Maintaining his natural enthusiasm while becoming more strategic\n4) Using body language cues (high five, excited tone) appropriately\n\n**Areas to reinforce next session:**\n- Following through on financial aid appointment\n-",
+              "timestamp": "2025-10-02T08:08:03.429521",
+              "metadata": {
+                "turn_number": 7
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "Reflecting on mixer interactions to identify potential mentor matches\n- Practicing transitioning his elevator pitch into deeper conversations\n\n**Next Steps:**\n1) Set phone reminder for financial aid appointment tomorrow\n2) Jot down 2-3 mixer takeaways to discuss next meeting\n3) Pick one professor from the event to follow up with via email\n\n*Keep this energy going, Greg! You're building great networking habits.*",
+              "timestamp": "2025-10-02T08:08:07.510485",
+              "metadata": {
+                "round": 4,
+                "turn_number": 8
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "---\n\n*Gregory bursts back in, slightly out of breath* \"Wait wait wait - before I go to class!\" *types frantically on phone* \"Just setting that financial aid reminder... and... done!\" *proudly shows screen* \"See? Adulting! Okay NOW I'm running to class. You're the best!\" *dashes out before waiting for response*",
+              "timestamp": "2025-10-02T08:08:12.329238",
+              "metadata": {
+                "turn_number": 9
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "---\n\n**Social Skills Coach Notes:**\nGregory is showing excellent follow-through by:\n1) Immediately implementing suggested action items\n2) Demonstrating accountability by showing proof\n3) Maintaining his signature enthusiasm while being responsible\n\n**Quick Reminder for Next Time:**\n- Celebrate this small win! This is real progress\n- Discuss time management strategies for busy schedule\n- Review how to structure follow-up emails to professors\n\n*Proud of this proactive moment!* 👍",
+              "timestamp": "2025-10-02T08:08:17.160941",
+              "metadata": {
+                "round": 5,
+                "turn_number": 10
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "*from down the hallway* \"HEARD THAT! THANKS COACH!\" *audible grin in voice while sprinting to class*",
+              "timestamp": "2025-10-02T08:09:30.728809",
+              "metadata": {
+                "turn_number": 11
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "---\n\n**Social Skills Coach Notes:**\nGregory's authentic enthusiasm is contagious! Noting:\n1) Maintains connection even while multitasking\n2) Naturally builds positive rapport\n3) Energy matches his extraverted personality well\n\n**Quick Tip:**\nChannel this same energy when following up with professors - it's part of what makes you memorable!\n\n*Now go crush that algorithms class!* 💻🚀",
+              "timestamp": "2025-10-02T08:09:34.880668",
+              "metadata": {
+                "round": 6,
+                "turn_number": 12
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "*from even further away* \"ALGORITHMS DON'T STAND A CHANCE!\" *fading footsteps*",
+              "timestamp": "2025-10-02T08:09:36.674688",
+              "metadata": {
+                "turn_number": 13
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "---\n\n**Social Skills Coach Notes:**  \nGregory's natural charisma shines through even in quick exchanges. Key takeaways:  \n1) His enthusiasm creates positive social momentum  \n2) Brief interactions can strengthen connections  \n3) This energy will serve him well in grad school interviews  \n\n**For Next Time:**  \n- Discuss how to adapt this energy for professional settings  \n- Explore using this positivity to combat financial stress  \n\n*Keep riding this wave, Greg - you're building great habits!* 🌊",
+              "timestamp": "2025-10-02T08:09:41.320716",
+              "metadata": {
+                "round": 7,
+                "turn_number": 14
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "*already halfway across campus* \"YOU'RE MAKING ME BLUSH! *pause* WELL NOT LITERALLY BUT YOU KNOW WHAT I MEAN!\" *door slams in distance*",
+              "timestamp": "2025-10-02T08:09:43.837686",
+              "metadata": {
+                "turn_number": 15
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "---\n\n**Social Skills Coach Notes:**  \nGregory's quick wit and self-awareness are on full display. Noticing:  \n1) Maintains humor while staying engaged  \n2) Natural ability to read social cues (acknowledging figurative language)  \n3) Shows emotional intelligence alongside enthusiasm  \n\n**Quick Reflection:**  \nThis playful authenticity is exactly what makes networking feel genuine rather than forced.  \n\n*Save some charm for the financial aid office later!* 😉",
+              "timestamp": "2025-10-02T08:09:48.312039",
+              "metadata": {
+                "round": 8,
+                "turn_number": 16
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "*footsteps suddenly skid to a halt* \"WAIT THAT'S TODAY?!\" *frantic rustling of papers*",
+              "timestamp": "2025-10-02T08:09:50.580348",
+              "metadata": {
+                "turn_number": 17
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "---\n\n**Social Skills Coach Emergency Addendum:**  \n1) **Right Now:** Take 3 deep breaths - panic won't help the paperwork  \n2) **Action Plan:**  \n   - Check email for appointment time  \n   - Set phone reminder for next one  \n3) **Pro Tip:** Keep financial docs in one brightly colored folder (make it match your energy!)  \n\n*You've got this - channel that same focus you use for debugging code!* 💻🔍  \n\nP.S. Come back later and we'll workshop a \"financial aid office\" version of your networking charm!",
+              "timestamp": "2025-10-02T08:09:54.489727",
+              "metadata": {
+                "round": 9,
+                "turn_number": 18
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "*from down the hallway* \"COLOR-CODED?! GENIUS! *pause* BUT I USED ALL MY HIGHLIGHTERS TO DRAW ROBOTS ON MY NOTES!\" *sound of someone tripping over a backpack*",
+              "timestamp": "2025-10-02T08:09:57.072585",
+              "metadata": {
+                "turn_number": 19
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "---\n\n**Social Skills Coach Rapid Response:**  \n1) **Immediate Solution:** Grab sticky notes - make one giant rainbow system  \n2) **Future Hack:** Dollar store highlighters work just as well for organizing as robot-drawing  \n3) **Bonus:** Those robot notes might actually impress a CS professor later  \n\n*Your creativity is an asset - let's just redirect 10% of it to adulting!* 🤖➡️📁  \n\n(Please tell me you're okay after that backpack incident...)",
+              "timestamp": "2025-10-02T08:10:02.381384",
+              "metadata": {
+                "round": 10,
+                "turn_number": 20
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            }
+          ],
+          "start_time": "2025-10-02T08:07:35.759439",
+          "end_time": null,
+          "duration_seconds": null
+        },
+        "pre_assessment": {
+          "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+          "timestamp": "2025-10-02T08:07:35.759242",
+          "responses": [
+            {
+              "question": "I initiate conversations with new people.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I listen attentively when others speak.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I maintain eye contact during conversations.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I adapt my communication style to different people.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I handle criticism well.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I collaborate effectively in group projects.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I express my needs clearly.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I respect personal boundaries.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I manage conflicts constructively.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I give sincere compliments.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I apologize when I'm wrong.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I read social cues accurately.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I maintain friendships over time.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I participate in small talk comfortably.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I speak confidently in public.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I network effectively.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I show empathy toward others.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I respect different opinions.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I manage my emotions in social situations.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I build rapport easily.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            }
+          ],
+          "total_score": 49.0,
+          "average_score": 2.45,
+          "improvement_areas": [
+            "I listen attentively when others speak.",
+            "I adapt my communication style to different people.",
+            "I handle criticism well."
+          ]
+        },
+        "post_assessment": {
+          "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+          "timestamp": "2025-10-02T08:11:22.078230",
+          "responses": [
+            {
+              "question": "I ask for help when I need it.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when dealing with problems.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I help my friends when they are having a problem.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I work well with my classmates.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I do the right thing without being told.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I do my part in a group.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when I disagree with others.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I stand up for others when they are not treated well.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I look at people when I talk to them.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I am careful when I use things that aren't mine.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I let people know when there's a problem.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when the teacher talks to the class.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I try to make others feel better.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I say \"thank you\" when someone helps me.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I keep my promises.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when others present their ideas.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I try to find a good way to end a disagreement.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I try to think about how others feel.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I try to forgive others when they say \"sorry\".",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I follow school rules.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            }
+          ],
+          "total_score": 54.0,
+          "average_score": 2.7,
+          "improvement_areas": [
+            "I stay calm when dealing with problems.",
+            "I help my friends when they are having a problem.",
+            "I stay calm when I disagree with others."
+          ]
+        },
+        "personality_evolution_timeline": [
+          {
+            "stage_number": 1,
+            "prompt_name": "Conversation Length Test",
+            "generation": 0,
+            "conversation_summary": "Discussed strategies for networking at the CS mixer to find a mentor and address grad school opportunities, plus managing student loans. Gregory accepted advice on research, elevator pitches, and scheduling a financial aid meeting. He demonstrated progress through immediate action on the appointment and enthusiastic adoption of networking tactics.",
+            "anxiety_level": 2.5,
+            "improvement_score": 0.3999999999999999,
+            "timestamp": "2025-10-02T08:09:06.872781",
+            "materialized_traits": {
+              "fears": {
+                "Choosing the right career path": "Concerns about networking for grad school opportunities at the CS mixer",
+                "Finding a mentor": "Anxiety about approaching professors/grad students at the CS department mixer",
+                "Dealing with roommate conflicts": "Not discussed in conversation",
+                "Academic failure and poor grades": "Not discussed in conversation",
+                "Social anxiety in large lecture halls": "Not discussed in conversation"
+              },
+              "challenges": {
+                "Finding a mentor": "Identifying and approaching potential mentors at the CS department mixer",
+                "Financial planning": "Managing student loan repayment and scheduling a meeting with financial aid",
+                "Managing student loans": "Stressing over loan numbers and delaying financial aid appointment"
+              },
+              "behaviors": {
+                "Eats at the dining hall": "Not discussed in conversation",
+                "Participates in study groups": "Not discussed in conversation",
+                "Volunteers for campus events": "Planning to attend the CS department mixer for networking"
+              },
+              "triggers": {
+                "Networking events": "The CS department mixer with professors and grad students",
+                "Presentations": "Not discussed in conversation",
+                "Campus social events": "The CS department mixer specifically"
+              }
+            }
+          },
+          {
+            "stage_number": 2,
+            "prompt_name": "Conversation Length Test",
+            "generation": 0,
+            "conversation_summary": "Discussed strategies for CS mixer networking and student loan management; Gregory accepted specific preparation techniques, scheduled financial aid meeting, and demonstrated immediate follow-through while maintaining enthusiastic engagement.",
+            "anxiety_level": 2.5,
+            "improvement_score": 0.25,
+            "timestamp": "2025-10-02T08:10:43.727112",
+            "materialized_traits": {
+              "fears": {
+                "Academic failure and poor grades": "Stressing over student loan repayment figures",
+                "Dealing with roommate conflicts": "Not mentioned in conversation",
+                "Social anxiety in large lecture halls": "Not mentioned in conversation",
+                "Choosing the right career path": "Concern about networking for grad school opportunities"
+              },
+              "challenges": {
+                "Financial planning": "Managing student loan repayment strategies",
+                "Finding a mentor": "Approaching professors/grad students at CS department mixer",
+                "Managing student loans": "Scheduling financial aid office appointment"
+              },
+              "behaviors": {
+                "Eats at the dining hall": "Not mentioned in conversation",
+                "Participates in study groups": "Not mentioned in conversation",
+                "Volunteers for campus events": "Enthusiastic participation in CS department mixer"
+              },
+              "triggers": {
+                "Networking events": "CS department mixer with professors/grad students",
+                "Presentations": "Not mentioned in conversation",
+                "Campus social events": "CS department networking mixer"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

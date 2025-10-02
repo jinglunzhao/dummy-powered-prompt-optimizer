@@ -212,6 +212,7 @@ EVALUATION GUIDELINES:
 3. Think about how the coaching conversation specifically addressed each skill area
 4. Consider how materialized fears/challenges may have changed their self-assessment
 5. Maintain consistency with their evolved personality traits while allowing for growth
+6. Consider the cumulative effect of multiple coaching sessions, focus on incremental progress rather than dramatic fluctuations
 
 Rate each of the 20 social skills questions from 1-4 based on how {dummy.name} would assess themselves after this coaching experience. Consider whether coaching helped them improve from their baseline scores."""
 

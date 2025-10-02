@@ -3,8 +3,8 @@
   "dummy_name": "Zachary Wilson",
   "current_experiment_id": "conversation_length_with_evolution",
   "current_prompt_id": "conversation_length_test",
-  "created_at": "2025-10-01T23:40:20.284761",
-  "last_updated": "2025-10-02T00:03:26.559552",
+  "created_at": "2025-10-02T00:20:12.745533",
+  "last_updated": "2025-10-02T00:38:26.633174",
   "conversation_profile": {
     "original_fears": [
       "Dealing with roommate conflicts",
@@ -35,24 +35,24 @@
       "openness": 6
     },
     "current_fears": [
-      "Negotiating quiet hours after 11pm with roommate regarding music volume",
-      "Sitting in front-left section to reduce crowd visibility and answering questions"
+      "Dealing with roommate conflicts",
+      "Asking questions in 300-person gen chem lecture"
     ],
     "current_challenges": [
-      "Implementing 25/5 Pomodoro intervals with Anki flashcards during lab breaks",
-      "Scheduling treadmill MCAT drills at 5am while blocking 'mandatory fun' time on Sundays",
+      "Surviving three exams and lab report week with coffee-for-lunch habits",
+      "Creating study content while managing microbio midterms and lab reports",
       "Managing student loans",
-      "Preparing and delivering 30-second research pitch to Dr. Chen about zebrafish lab opportunities"
+      "Approaching professors about research opportunities"
     ],
     "current_behaviors": [
-      "Uses social media for networking",
-      "Preparing color-coded questions about cross-department projects for company representatives",
-      "Strategically reserving seat C-12 near power outlets in library for optimal study sessions",
+      "Developing science communication content on TikTok/Instagram for academic networking",
+      "Attends career fairs",
+      "Attending writing center time management workshops",
       "Calls family frequently",
       "Studies in the library regularly"
     ],
     "current_anxiety_triggers": [
-      "Not discussed - omitted per instructions"
+      "Grabbing quick turkey clubs between classes to avoid skipping meals"
     ],
     "current_social_anxiety_level": 1,
     "current_big_five": {
@@ -68,288 +68,282 @@
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_20251001_234039",
-        "conversation_summary": "They discussed study group strategies, research mentorship, stress management, and student loans, leading to a coffee meetup for time management tips and spreadsheet sharing, with Zachary responding positively and showing reduced anxiety through open engagement.",
+        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_20251002_002032",
+        "conversation_summary": "The discussion centered on Zach's stress from academic workload and anxiety in large lectures, with solutions like task breakdown, sitting near the front, and question practice accepted. Plans were made for a coffee meetup to rehearse public speaking and attend a time management workshop, with Zach showing engagement through behavioral commitments.",
         "fears_materialized": {
-          "Social anxiety in large lecture halls": "fear of appearing too eager when approaching professors like Dr. Chen for research mentorship"
+          "social anxiety in large lecture halls": "speaking up in a 300-person gen chem lecture"
         },
         "challenges_materialized": {
-          "Coping with stress and burnout": "managing stress from intensive organic chemistry study groups and dissection lab work",
-          "Balancing extracurricular activities with studies": "juggling TA office hours, research proposal drafting, and coursework",
-          "Managing student loans": "tracking loan payments with a spreadsheet against residency salaries and visiting the financial aid office",
-          "Finding a mentor": "directly asking Dr. Chen about lab opportunities despite nervousness"
+          "coping with stress and burnout": "managing weeks with heavy workloads like three exams and a lab report due"
         },
         "behaviors_detailed": {
-          "Uses campus resources like tutoring": "attending TA office hours for research experience and participating in study groups",
-          "Studies in the library regularly": "studying biology textbooks in the library as a routine spot"
+          "uses campus resources like tutoring": "planning to attend the writing center's time management workshop"
         },
-        "triggers_specified": {},
+        "triggers_specified": {
+          "dining hall during peak hours": "going to the dining hall to get a turkey club sandwich"
+        },
         "anxiety_change": -0.5,
         "new_anxiety_level": 1.5,
         "pre_assessment_score": 2.5,
         "post_assessment_score": 3.0,
         "improvement_score": 0.5,
-        "timestamp": "2025-10-01T23:42:58.326753"
+        "timestamp": "2025-10-02T00:22:26.122407"
       },
       {
         "stage_number": 2,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_20251001_234039",
-        "conversation_summary": "Zachary and the coach discussed strategies for managing academic stress, loans, and mentorship, leading to plans for coffee and a study group. Zachary shared his budgeting spreadsheet and invited the coach, demonstrating increased collaboration and reduced anxiety through humor and openness.",
+        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_20251002_002032",
+        "conversation_summary": "Discussed academic overload and lecture anxiety; agreed to task breakdown, front-row seating, writing center workshop, and practice session. Zach committed to preparing orgo question, implementing note color-coding, and proper lunch before meeting.",
         "fears_materialized": {
-          "Social anxiety in large lecture halls": "Nervousness about appearing too eager when approaching Dr. Chen for lab mentorship"
+          "Social anxiety in large lecture halls": "Speaking up in 300-person gen chem lecture"
         },
         "challenges_materialized": {
-          "Coping with stress and burnout": "Using multitasking like Anki flashcards during 5am treadmill sessions and napping upright during study groups",
-          "Balancing extracurricular activities with studies": "Juggling TA office hours, lab reports, and study group meetings with a 'no grade-talk' policy",
-          "Managing student loans": "Creating and sharing a budgeting spreadsheet to track loan payments against expected residency salaries, and visiting the financial aid office",
-          "Finding a mentor": "Expressing intention to ask Dr. Chen directly for research opportunities despite nervousness"
+          "Coping with stress and burnout": "Overwhelming workload during exam week with three exams and lab report",
+          "Balancing extracurricular activities with studies": "Skipping lunch ('coffee for lunch' habit)"
         },
         "behaviors_detailed": {
-          "Studies in the library regularly": "Choosing specific library seats like C-12 for optimal charging access and minimal distractions",
-          "Uses campus resources like tutoring": "Attending TA office hours for academic support and research guidance"
+          "Uses campus resources like tutoring": "Checking writing center link for time management workshops",
+          "Calls family frequently": "Not mentioned in conversation",
+          "Studies in the library regularly": "Not specified in interaction",
+          "Uses social media for networking": "Not discussed",
+          "Attends career fairs": "Not referenced"
         },
         "triggers_specified": {
-          "Dining hall during peak hours": "Not discussed"
+          "Dining hall during peak hours": "Getting turkey club sandwich from dining hall"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 1.5,
         "pre_assessment_score": 2.5,
         "post_assessment_score": 3.0,
         "improvement_score": 0.5,
-        "timestamp": "2025-10-01T23:46:01.903992"
+        "timestamp": "2025-10-02T00:23:43.354294"
       },
       {
         "stage_number": 3,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_20251001_234039",
-        "conversation_summary": "Discussed strategies for approaching Dr. Chen for mentorship, managing roommate conflicts through scheduled check-ins, and balancing academic workload with extracurriculars. Zachary responded positively by implementing advice, such as practicing pitches and using spreadsheets, and bonded over shared pre-med challenges, leading to plans for a joint study group.",
+        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_20251002_002032",
+        "conversation_summary": "Discussed strategies for managing academic workload stress and reducing anxiety in large lectures, including Pomodoro technique and public speaking practice. Student agreed to meet for coffee to review notes, attend workshops, and take steps like emailing professors for mentorship.",
         "fears_materialized": {
-          "Dealing with roommate conflicts": "Scheduling weekly check-ins with roommate to address late-night music using shared documents and 'I feel' statements"
+          "Social anxiety in large lecture halls": "Speaking up in a 300-person gen chem lecture"
         },
         "challenges_materialized": {
-          "Coping with stress and burnout": "Multitasking MCAT preparation with 5am treadmill sessions and managing sleep deprivation",
-          "Balancing extracurricular activities with studies": "Juggling TA office hours, dissection lab responsibilities, and study group meetings",
-          "Managing student loans": "Using a budgeting spreadsheet to track loan payments against expected residency salaries",
-          "Finding a mentor": "Preparing and practicing a 30-second pitch to approach Dr. Chen for research opportunities in her lab"
+          "Coping with stress and burnout": "Handling weeks with three exams and a lab report due",
+          "Finding a mentor": "Asking professors specific questions about their research during student hours"
         },
         "behaviors_detailed": {
-          "Studies in the library regularly": "Studying at library corner table C-12 with prime charging access and minimal foot traffic",
-          "Uses campus resources like tutoring": "Participating in study groups with a 'no grade-talk' policy and utilizing financial aid counseling for loan negotiations"
+          "Uses campus resources like tutoring": "Attending writing center workshops for time management and stress"
         },
-        "triggers_specified": {},
+        "triggers_specified": {
+          "Dining hall during peak hours": "Grabbing a quick turkey club sandwich to avoid skipping meals"
+        },
         "anxiety_change": -0.5,
         "new_anxiety_level": 1.5,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.05,
-        "improvement_score": 0.5499999999999998,
-        "timestamp": "2025-10-01T23:48:32.218272"
+        "post_assessment_score": 3.0,
+        "improvement_score": 0.5,
+        "timestamp": "2025-10-02T00:25:39.970489"
       },
       {
         "stage_number": 4,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_20251001_234039",
-        "conversation_summary": "Discussed research mentorship approaches with Dr. Chen, roommate conflict resolution strategies, and academic balancing techniques. Zachary implemented solutions through spreadsheets and scheduling, responding with proactive humor and immediate action plans.",
+        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_20251002_002032",
+        "conversation_summary": "Zach discussed academic stress and lecture hall anxiety. The coach offered strategies like task breakdown, sitting front, and campus resources. Zach accepted solutions like the 50/10 rule and question preparation, committing to specific actions that show proactive engagement in managing workload and building confidence.",
         "fears_materialized": {
-          "Dealing with roommate conflicts": "Addressing late-night music disturbances by creating shared spreadsheets with compromise columns and scheduled check-ins"
+          "Social anxiety in large lecture halls": "fear of speaking up in a 300-person gen chem lecture due to intimidation"
         },
         "challenges_materialized": {
-          "Coping with stress and burnout": "Managing sleep deprivation through 5am treadmill study sessions and power naps between classes",
-          "Balancing extracurricular activities with studies": "Juggling TA office hours, dissection labs, research proposals, and MCAT prep simultaneously",
-          "Managing student loans": "Tracking loan payments against residency salaries using detailed budgeting spreadsheets",
-          "Finding a mentor": "Preparing 30-second research pitches to approach Dr. Chen during low-traffic lab hours"
+          "Coping with stress and burnout": "managing weeks with three exams and a lab report due",
+          "Finding a mentor": "seeking mentors through professor office hours or peer programs"
         },
         "behaviors_detailed": {
-          "Studies in the library regularly": "Reserving seat C-12 for optimal charging access and minimal foot traffic during study sessions"
+          "Uses campus resources": "planning to attend writing center time management workshops and peer mentoring programs",
+          "Studies regularly": "bringing organic chemistry notes to sessions and color-coding reaction types"
         },
         "triggers_specified": {},
         "anxiety_change": -1.0,
         "new_anxiety_level": 1.0,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.1,
-        "improvement_score": 0.6000000000000001,
-        "timestamp": "2025-10-01T23:51:21.335915"
+        "post_assessment_score": 3.0,
+        "improvement_score": 0.5,
+        "timestamp": "2025-10-02T00:28:04.519943"
       },
       {
         "stage_number": 5,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_20251001_234039",
-        "conversation_summary": "Discussed strategies for approaching Dr. Chen for research mentorship, resolving roommate conflicts via structured check-ins and spreadsheets, and managing pre-med stress through study groups with enforced 'no grade-talk' policy. Zachary actively implemented suggestions, demonstrating reduced anxiety through humor and proactive planning.",
+        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_20251002_002032",
+        "conversation_summary": "Discussed concrete strategies for lecture participation, workload management, and mentorship seeking. Zach accepted study techniques like 50/10 rule and color-coding, planned TikTok content for academic topics, and committed to professor outreach. Showed initiative through resource utilization and humor about challenges.",
         "fears_materialized": {
-          "Dealing with roommate conflicts": "Negotiating quiet hours after 11pm due to roommate's late-night music disrupting study focus"
+          "Social anxiety in large lecture halls": "Asking questions in 300-person gen chem lecture about nucleophilic substitution"
         },
         "challenges_materialized": {
-          "Coping with stress and burnout": "Managing energy during 5am treadmill MCAT drills and 3am Quizlet sessions",
-          "Finding a mentor": "Approaching Dr. Chen about her lab while nervous about appearing overly eager"
+          "Coping with stress and burnout": "Managing three exams and lab report due in one week",
+          "Balancing extracurricular activities with studies": "Finding time for cultural learning amid heavy workload",
+          "Finding a mentor": "Seeking biology professors for research opportunities"
         },
         "behaviors_detailed": {
-          "Uses social media for networking": "Practicing research pitches to vending machines and the bio department fish tank",
-          "Calls family frequently": "Not explicitly detailed in conversation",
-          "Uses campus resources like tutoring": "Scheduling TA office hours for research experience and utilizing empty cadaver lab at 6am for practice",
-          "Studies in the library regularly": "Strategically reserving seat C-12 near outlets for laptop charging during study groups"
+          "Uses campus resources like tutoring": "Attending writing center's time management workshops",
+          "Studies in the library regularly": "Using color-coded notes for organic chemistry patterns"
         },
         "triggers_specified": {
-          "Dining hall during peak hours": "Not explicitly detailed in conversation",
-          "Newly emerged trigger": "Sleep deprivation during late-night study sessions (e.g., 3am Quizlet, 5am treadmill drills)"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 1.5,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.0,
-        "improvement_score": 0.5,
-        "timestamp": "2025-10-01T23:52:37.590332"
-      },
-      {
-        "stage_number": 6,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_20251001_234039",
-        "conversation_summary": "The conversation focused on Zachary's pre-med challenges, including stress management, mentorship seeking with Dr. Chen, and roommate conflicts. Zachary responded proactively by implementing spreadsheets for loans and negotiations, scheduling study groups, and showing increased confidence through practice and planning.",
-        "fears_materialized": {
-          "Dealing with roommate conflicts": "Conflict over loud music late at night affecting study time"
-        },
-        "challenges_materialized": {
-          "Coping with stress and burnout": "Managing exhaustion from 5am treadmill MCAT drills and organic chemistry study sessions",
-          "Balancing extracurricular activities with studies": "Juggling TA office hours, research proposal drafting, and MCAT preparation",
-          "Managing student loans": "Creating a detailed spreadsheet to track loan payments against projected residency salaries",
-          "Finding a mentor": "Preparing and rehearsing a 30-second pitch to approach Dr. Chen for undergraduate research opportunities"
-        },
-        "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Organizing peer study groups in the library with pizza and highlighters for subjects like biology",
-          "Studies in the library regularly": "Consistently using library facilities for individual study and late-night group sessions, such as the pre-med meetups"
-        },
-        "triggers_specified": {},
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 1.5,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.0,
-        "improvement_score": 0.5,
-        "timestamp": "2025-10-01T23:55:15.646691"
-      },
-      {
-        "stage_number": 7,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_20251001_234039",
-        "conversation_summary": "Discussed strategies for approaching Dr. Chen for research mentorship, managing roommate conflicts through spreadsheets and negotiations, and balancing academic demands with stress management. Zachary responded proactively by implementing suggestions, such as scheduling pitch practice and creating detailed plans, while building camaraderie through humor and shared experiences.",
-        "fears_materialized": {
-          "Dealing with roommate conflicts": "When roommate plays music late at night, causing distraction during study hours"
-        },
-        "challenges_materialized": {
-          "Coping with stress and burnout": "Juggling MCAT prep with 5am treadmill sessions and late-night study groups, leading to sleep deprivation",
-          "Balancing extracurricular activities with studies": "Coordinating TA office hours, study group meetings, and personal activities like karaoke while maintaining studies",
-          "Managing student loans": "Creating and using a budgeting spreadsheet to track loan payments against expected residency salaries",
-          "Finding a mentor": "Preparing to ask Dr. Chen directly about joining her lab, including drafting a 30-second pitch and practicing it"
-        },
-        "behaviors_detailed": {
-          "Studies in the library regularly": "Studies in the library corner table, perfecting the art of napping upright with a textbook propped open"
-        },
-        "triggers_specified": {},
-        "anxiety_change": -1.0,
-        "new_anxiety_level": 1.0,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.0,
-        "improvement_score": 0.5,
-        "timestamp": "2025-10-01T23:57:33.603700"
-      },
-      {
-        "stage_number": 8,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_20251001_234039",
-        "conversation_summary": "Discussed concrete strategies for approaching Dr. Chen (research pitch), resolving roommate conflicts (spreadsheet negotiations), and balancing studies (scheduled breaks). Zachary demonstrated proactive implementation through calendar blocking, spreadsheet customization, and study group coordination.",
-        "fears_materialized": {
-          "Dealing with roommate conflicts": "Negotiating quiet hours after 11pm using a shared spreadsheet with compromise columns"
-        },
-        "challenges_materialized": {
-          "Finding a mentor": "Approaching Dr. Chen with a 30-second research pitch about specific lab techniques",
-          "Balancing extracurricular activities with studies": "Scheduling karaoke breaks between MCAT treadmill drills and lab reports"
-        },
-        "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Strategically reserving seat C-12 in the library for optimal outlet access and minimal foot traffic",
-          "Studies in the library regularly": "Napping upright with propped textbooks during study group sessions"
-        },
-        "triggers_specified": {
-          "Dining hall during peak hours": "Not discussed, but new trigger emerged: Formaldehyde fumes in dissection lab causing stress"
+          "Dining hall during peak hours": "Grabbing turkey clubs before crowds form"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 1.5,
         "pre_assessment_score": 2.5,
         "post_assessment_score": 2.95,
         "improvement_score": 0.4500000000000002,
-        "timestamp": "2025-10-01T23:59:03.280022"
+        "timestamp": "2025-10-02T00:29:18.898359"
       },
       {
-        "stage_number": 9,
+        "stage_number": 6,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_20251001_234039",
-        "conversation_summary": "The discussion centered on managing academic pressures, including strategies for approaching mentors like Dr. Chen, handling roommate conflicts with spreadsheets, and balancing activities like TA hours and study groups. Zachary responded proactively by implementing tools such as budgeting sheets and pitch practices, showing reduced anxiety through collaborative planning.",
+        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_20251002_002032",
+        "conversation_summary": "Discussed academic stress management and lecture participation strategies, leading to adoption of Pomodoro variants, content creation for accountability, and proactive mentorship seeking. Zachary demonstrated immediate implementation of study systems and reframed challenges as engagement opportunities.",
         "fears_materialized": {
-          "Dealing with roommate conflicts": "Negotiating quiet hours after 11pm to avoid music distractions during study time"
+          "Social anxiety in large lecture halls": "Speaking up in 300-person gen chem lecture"
         },
         "challenges_materialized": {
-          "Coping with stress and burnout": "Using Anki flashcards during 5am treadmill sessions to manage MCAT prep stress",
-          "Balancing extracurricular activities with studies": "Juggling TA office hours, dissection lab, volunteer shifts, and study group meetings",
-          "Managing student loans": "Creating and using a budgeting spreadsheet to track loan payments against expected residency salaries",
-          "Finding a mentor": "Preparing and practicing a 30-second pitch to approach Dr. Chen about research opportunities in her lab"
+          "Coping with stress and burnout": "Handling three exams and a lab report due in one week",
+          "Finding a mentor": "Seeking research opportunities through professors/bulletin boards"
         },
         "behaviors_detailed": {
-          "Studies in the library regularly": "Studying in the library at seat C-12 for optimal laptop charging access and attending study groups there"
+          "Uses campus resources like tutoring": "Planning to attend writing center's time management workshop",
+          "Uses social media for networking": "Creating academic content (studygrams) to build portfolio/connections"
         },
         "triggers_specified": {
-          "Dining hall during peak hours": "Not discussed in conversation"
+          "Dining hall during peak hours": "Grabbing turkey club sandwiches during busy times"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 1.5,
         "pre_assessment_score": 2.5,
         "post_assessment_score": 3.0,
         "improvement_score": 0.5,
-        "timestamp": "2025-10-02T00:01:47.490824"
+        "timestamp": "2025-10-02T00:30:32.989024"
+      },
+      {
+        "stage_number": 7,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_20251002_002032",
+        "conversation_summary": "Zach discussed academic stress and lecture anxiety, leading to solutions like breaking tasks, preparing questions, and using social media for educational content. He embraced these, committing to specific actions such as study techniques and workshops, showing proactive engagement.",
+        "fears_materialized": {
+          "Social anxiety in large lecture halls": "Asking questions in a 300-person gen chem lecture about nucleophilic substitution reactions"
+        },
+        "challenges_materialized": {
+          "Coping with stress and burnout": "Managing weeks with three exams and a lab report due while forgetting to eat properly",
+          "Finding a mentor": "Seeking research opportunities by contacting professors or alumni through LinkedIn"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Creating TikTok-style educational videos about study methods like color-coding and sharing them online",
+          "Uses campus resources like tutoring": "Attending writing center workshops for time management and participating in language exchange events"
+        },
+        "triggers_specified": {
+          "Dining hall during peak hours": "Grabbing quick turkey club sandwiches during busy times as a form of self-care"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.5,
+        "timestamp": "2025-10-02T00:33:22.933755"
+      },
+      {
+        "stage_number": 8,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_20251002_002032",
+        "conversation_summary": "Discussed strategies for lecture participation, workload management, and mentorship seeking. Zach embraced content creation as a dual-purpose solution for study reinforcement and networking, implementing specific techniques like the 50/10 rule and color-coded notes while planning academic social media content.",
+        "fears_materialized": {
+          "Social anxiety in large lecture halls": "Speaking up in 300-person gen chem lecture"
+        },
+        "challenges_materialized": {
+          "Coping with stress and burnout": "Handling three exams and a lab report due simultaneously",
+          "Balancing extracurricular activities with studies": "Finding time for language exchange after lab report",
+          "Finding a mentor": "Connecting with professors for research opportunities"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Creating educational TikTok/LinkedIn content about study methods",
+          "Uses campus resources like tutoring": "Attending time management workshops at writing center",
+          "Studies in the library regularly": "Color-coding organic chemistry notes by reaction type"
+        },
+        "triggers_specified": {
+          "Dining hall during peak hours": "Grabbing turkey clubs from dining hall between commitments"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.95,
+        "improvement_score": 0.4500000000000002,
+        "timestamp": "2025-10-02T00:35:13.084499"
+      },
+      {
+        "stage_number": 9,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_20251002_002032",
+        "conversation_summary": "Discussed academic overload and lecture anxiety solutions including time-blocking, public speaking techniques, and stress management. Zach embraced content creation strategies to enhance learning and networking, actively implementing organizational systems, professor outreach, and collaborative projects while humorously reframing academic challenges.",
+        "fears_materialized": {
+          "Social anxiety in large lecture halls": "Feeling intimidated to speak up in 300-person gen chem lecture while hiding in the back"
+        },
+        "challenges_materialized": {
+          "Coping with stress and burnout": "Overwhelmed by three exams and lab report due simultaneously, laptop battery dying faster than motivation during 8am classes",
+          "Finding a mentor": "Considering tagging chem department in content for research lab opportunities, planning to ask professors about their undergrad research fails"
+        },
+        "behaviors_detailed": {
+          "Uses campus resources like tutoring": "Committing to attend writing center's time management workshop next Tuesday",
+          "Uses social media for networking": "Creating research folder on phone, planning professor outreach via LinkedIn/DMs, developing 'Future Research Scientist (Current Lab Meme Archivist)' professional brand"
+        },
+        "triggers_specified": {
+          "Dining hall during peak hours": "Grabbing turkey club sandwiches during non-peak times to avoid crowds"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.95,
+        "improvement_score": 0.4500000000000002,
+        "timestamp": "2025-10-02T00:36:57.589975"
       },
       {
         "stage_number": 10,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_20251001_234039",
-        "conversation_summary": "Discussed concrete strategies for approaching Dr. Chen, resolving roommate conflicts via spreadsheet negotiations, and balancing pre-med demands; Zachary responded proactively by implementing scheduling systems, practicing pitches, and organizing collaborative study sessions.",
+        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_20251002_002032",
+        "conversation_summary": "Discussed academic stress solutions including Pomodoro technique and lecture strategies, evolving into science communication content creation. Zach actively implemented color-coding systems, scheduled workshops, and developed plans to leverage humor for academic networking and research opportunities.",
         "fears_materialized": {
-          "Dealing with roommate conflicts": "Negotiating quiet hours after 11pm with roommate regarding music volume",
-          "Social anxiety in large lecture halls": "Sitting in front-left section to reduce crowd visibility and answering questions"
+          "Social anxiety in large lecture halls": "Asking questions in 300-person gen chem lecture"
         },
         "challenges_materialized": {
-          "Finding a mentor": "Preparing and delivering 30-second research pitch to Dr. Chen about zebrafish lab opportunities",
-          "Balancing extracurricular activities with studies": "Scheduling treadmill MCAT drills at 5am while blocking 'mandatory fun' time on Sundays",
-          "Coping with stress and burnout": "Implementing 25/5 Pomodoro intervals with Anki flashcards during lab breaks"
+          "Coping with stress and burnout": "Surviving three exams and lab report week with coffee-for-lunch habits",
+          "Balancing extracurricular activities with studies": "Creating study content while managing microbio midterms and lab reports",
+          "Finding a mentor": "Approaching professors about research opportunities"
         },
         "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Strategically reserving seat C-12 near power outlets in library for optimal study sessions",
-          "Attends career fairs": "Preparing color-coded questions about cross-department projects for company representatives",
-          "Studies in library regularly": "Developing 'napping upright with textbook propped open' technique during marathon sessions"
+          "Uses social media for networking": "Developing science communication content on TikTok/Instagram for academic networking",
+          "Uses campus resources like tutoring": "Attending writing center time management workshops"
         },
         "triggers_specified": {
-          "Dining hall during peak hours": "Not discussed - omitted per instructions",
-          "Newly emerged triggers": "Formaldehyde smells in dissection lab, 3am Quizlet session reminders"
+          "Dining hall during peak hours": "Grabbing quick turkey clubs between classes to avoid skipping meals"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 1.5,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.8999999999999999,
-        "timestamp": "2025-10-02T00:03:26.559039"
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.2999999999999998,
+        "timestamp": "2025-10-02T00:38:26.632678"
       }
     ],
     "current_stage": 10

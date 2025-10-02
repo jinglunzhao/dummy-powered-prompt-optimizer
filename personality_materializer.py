@@ -85,6 +85,10 @@ class PersonalityMaterializer:
                                 behaviors_detailed=materialization_data.get("behaviors_detailed", {}),
                                 triggers_specified=materialization_data.get("triggers_specified", {}),
                                 
+                                accepted_solutions=materialization_data.get("accepted_solutions", {}),
+                                progress_indicators=materialization_data.get("progress_indicators", {}),
+                                action_plans=materialization_data.get("action_plans", {}),
+                                
                                 anxiety_change=materialization_data.get("anxiety_change", 0.0),
                                 new_anxiety_level=materialization_data.get("new_anxiety_level", dummy.social_anxiety.anxiety_level),
                                 
@@ -133,7 +137,7 @@ ORIGINAL ABSTRACT TRAITS:
 CONVERSATION:
 {conversation_text}
 
-TASK: Based on this conversation, analyze how the student's abstract traits have become more concrete and specific. The goal is NOT to change the traits completely, but to make them more tangible and specific based on what emerged during the conversation.
+TASK: Based on this conversation, analyze how the student's abstract traits have become more concrete and specific, AND identify any solutions, progress, or action plans that were accepted or discussed. The goal is to capture both trait materialization AND progress indicators.
 
 For each category, provide specific materializations:
 
@@ -157,13 +161,31 @@ For each category, provide specific materializations:
    - Example: "crowded rooms" → "the student union dining hall during lunch hour"
    - Format: {{"original_trigger": "specific_context"}}
 
-5. ANXIETY ASSESSMENT:
+5. ACCEPTED SOLUTIONS:
+   - Identify solutions, strategies, or advice that the student explicitly accepted or agreed to try
+   - Focus on concrete, actionable solutions the student committed to
+   - Example: "networking anxiety" → "start by sending LinkedIn messages to 2 alumni per week"
+   - Format: {{"problem_area": "accepted_solution"}}
+
+6. PROGRESS INDICATORS:
+   - Identify any signs of progress, improvement, or positive changes the student mentioned
+   - Look for evidence of growth, confidence building, or successful attempts
+   - Example: "social anxiety" → "practiced speaking up in class discussion 3 times this week"
+   - Format: {{"area_of_growth": "progress_evidence"}}
+
+7. ACTION PLANS:
+   - Identify specific action plans, steps, or commitments the student made
+   - Focus on concrete next steps or behavioral changes planned
+   - Example: "time management" → "use Pomodoro technique for 25-minute study blocks with 5-minute breaks"
+   - Format: {{"challenge_area": "action_plan"}}
+
+8. ANXIETY ASSESSMENT:
    - Did the student's social anxiety level change during the conversation? 
    - If yes, by how much? (Range: -3.0 to +1.0, negative means anxiety decreased)
    - New anxiety level: (1-10)
 
-6. CONVERSATION SUMMARY:
-   - Brief 2-3 sentence summary of what was discussed and how the student responded
+9. CONVERSATION SUMMARY:
+   - Brief 2-3 sentence summary of what was discussed, solutions offered, and how the student responded
 
 RESPONSE FORMAT (JSON ONLY):
 {{
@@ -171,6 +193,9 @@ RESPONSE FORMAT (JSON ONLY):
     "challenges_materialized": {{"starting conversations": "specific scenario"}},
     "behaviors_detailed": {{"avoiding eye contact": "specific behavior"}},
     "triggers_specified": {{"crowded rooms": "specific context"}},
+    "accepted_solutions": {{"networking anxiety": "start with LinkedIn messages to 2 people per week"}},
+    "progress_indicators": {{"social anxiety": "practiced speaking up in class 3 times this week"}},
+    "action_plans": {{"time management": "use Pomodoro technique for 25min study blocks"}},
     "anxiety_change": -0.5,
     "new_anxiety_level": 7.5,
     "conversation_summary": "Brief summary of what happened"
@@ -180,11 +205,14 @@ CRITICAL INSTRUCTIONS:
 1. Your response must be ONLY the JSON object above - no explanations, no reasoning, no additional text
 2. Do NOT include any reasoning process or step-by-step analysis
 3. Do NOT include any text before or after the JSON
-4. Only materialize traits that were actually discussed or emerged in the conversation
-5. Keep the same core meaning but make it more specific and concrete
-6. If a trait wasn't mentioned, don't include it in the materialization
-7. Focus on making abstract concepts more tangible, not changing them completely
-8. Start your response with {{ and end with }} - nothing else
+4. Do NOT include any examples or sample JSON objects
+5. Do NOT include any commentary or explanations
+6. Only materialize traits that were actually discussed or emerged in the conversation
+7. Keep the same core meaning but make it more specific and concrete
+8. If a trait wasn't mentioned, don't include it in the materialization
+9. Focus on making abstract concepts more tangible, not changing them completely
+10. Start your response with {{ and end with }} - nothing else
+11. REMEMBER: Only output the final JSON object, nothing else
 """
     
     def _parse_materialization_response(self, response_text: str) -> Dict[str, Any]:
@@ -225,14 +253,18 @@ CRITICAL INSTRUCTIONS:
                     
                     if brace_count == 0:  # Found complete JSON
                         candidate = response_text[start:end]
-                        json_candidates.append(candidate)
+                        # Only consider candidates that look like our expected JSON structure
+                        if '"fears_materialized"' in candidate and '"conversation_summary"' in candidate:
+                            json_candidates.append(candidate)
                     
                     start += 1
                 
                 if json_candidates:
                     # Use the longest candidate (most likely to be complete)
                     json_text = max(json_candidates, key=len)
-                    print(f"🔍 Found {len(json_candidates)} JSON candidates, using longest one")
+                    print(f"🔍 Found {len(json_candidates)} valid JSON candidates, using longest one")
+                else:
+                    print(f"⚠️  Found {len([c for c in response_text.split('{') if '}' in c])} potential JSON blocks, but none contain expected structure")
             
             # Method 3: Simple fallback - find first { to last }
             if not json_text and "{" in response_text and "}" in response_text:
@@ -255,6 +287,12 @@ CRITICAL INSTRUCTIONS:
             # Validate required fields
             required_fields = ["fears_materialized", "challenges_materialized", "behaviors_detailed", "triggers_specified", "conversation_summary"]
             for field in required_fields:
+                if field not in materialization_data:
+                    materialization_data[field] = {}
+            
+            # Validate new progress fields
+            progress_fields = ["accepted_solutions", "progress_indicators", "action_plans"]
+            for field in progress_fields:
                 if field not in materialization_data:
                     materialization_data[field] = {}
             
@@ -281,6 +319,9 @@ CRITICAL INSTRUCTIONS:
             "challenges_materialized": {},
             "behaviors_detailed": {},
             "triggers_specified": {},
+            "accepted_solutions": {},
+            "progress_indicators": {},
+            "action_plans": {},
             "anxiety_change": 0.0,
             "new_anxiety_level": 8.0,
             "conversation_summary": "Conversation analysis unavailable - fallback materialization used"

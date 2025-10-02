@@ -59,6 +59,11 @@ class EvolutionStage(BaseModel):
     behaviors_detailed: Dict[str, str] = Field(default_factory=dict)  # "avoiding eye contact" → "looking at phone when people approach"
     triggers_specified: Dict[str, str] = Field(default_factory=dict)  # "crowded rooms" → "dining hall during peak hours"
     
+    # Accepted solutions and progress indicators
+    accepted_solutions: Dict[str, str] = Field(default_factory=dict)  # "networking fear" → "start with LinkedIn messages to 2 people per week"
+    progress_indicators: Dict[str, str] = Field(default_factory=dict)  # "social anxiety" → "practiced speaking up in class 3 times this week"
+    action_plans: Dict[str, str] = Field(default_factory=dict)  # "time management" → "use Pomodoro technique for 25min study blocks"
+    
     # Anxiety level changes
     anxiety_change: float = 0.0  # -0.5 (decreased by half a point)
     new_anxiety_level: float = 0.0

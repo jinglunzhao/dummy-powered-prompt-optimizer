@@ -584,7 +584,30 @@
                             .attr('stroke', 'white')
                             .attr('stroke-width', 2)
                             .style('cursor', 'pointer')
-                            .on('click', (event, d) => this.showPersonalityEvolutionAtRound(dummy.name, d.round))
+                            .on('click', (event, d) => {
+                                console.log('=== CLICK EVENT ===');
+                                console.log('Clicked round:', d.round);
+                                console.log('Final point round:', finalPoint.round);
+                                console.log('Dummy name:', dummy.name);
+                                console.log('Are they equal?', d.round === finalPoint.round);
+                                
+                                // Check if this is a milestone round
+                                const dummyData = this.currentExperiment?.results?.find(r => r.dummy_name === dummy.name);
+                                console.log('Dummy data found:', !!dummyData);
+                                
+                                const milestone = dummyData?.milestone_results?.find(m => m.milestone_rounds === d.round);
+                                console.log('Is milestone:', !!milestone);
+                                
+                                if (milestone) {
+                                    console.log('Showing milestone assessment details');
+                                    // Show assessment details for milestone rounds
+                                    this.showMilestoneAssessmentDetails(dummy.name, d.round);
+                                } else {
+                                    console.log('Showing evolution for non-milestone round');
+                                    // Show evolution for non-milestone rounds
+                                    this.showPersonalityEvolutionAtRound(dummy.name, d.round);
+                                }
+                            })
                             .on('mouseover', function(event, d) {
                                 // Show tooltip
                                 d3.select(this)
@@ -609,27 +632,21 @@
                                 d3.selectAll('.tooltip').remove();
                             });
                         
-                        // Add evolution markers at the end of conversation (final data point)
+                        // Add evolution icon above the final data point
                         const finalPoint = dummy.data[dummy.data.length - 1];
                         if (finalPoint && dummy.conversation_details && dummy.conversation_details.personality_evolution_timeline) {
-                            const evolutionCircle = g.append('circle')
-                                .attr('cx', xScale(finalPoint.round))
-                                .attr('cy', yScale(finalPoint.improvement))
-                                .attr('r', 8)
-                                .attr('fill', this.colors[i % this.colors.length])
-                                .attr('stroke', 'white')
-                                .attr('stroke-width', 3)
-                                .style('cursor', 'pointer')
-                                .on('click', () => this.showEvolutionDetails(dummy.name, dummy.conversation_details.personality_evolution_timeline));
-                            
-                            // Add evolution icon
                             g.append('text')
                                 .attr('x', xScale(finalPoint.round))
                                 .attr('y', yScale(finalPoint.improvement) - 15)
                                 .attr('text-anchor', 'middle')
                                 .attr('font-size', '12px')
                                 .attr('fill', this.colors[i % this.colors.length])
-                                .text('🧬');
+                                .style('cursor', 'pointer')
+                                .text('🧬')
+                                .on('click', (event) => {
+                                    console.log('Evolution icon clicked!');
+                                    this.showEvolutionDetails(dummy.name, dummy.conversation_details.personality_evolution_timeline);
+                                });
                         }
                     });
                     
@@ -667,7 +684,8 @@
             
             
             
-            showEvolutionDetails(dummyName, evolutionTimeline) {
+            showEvolutionDetails(dummyName, evolutionTimeline, returnToAssessment = false, returnRound = null) {
+                console.log('showEvolutionDetails called with:', dummyName, evolutionTimeline?.length, 'stages');
                 const modal = document.getElementById('conversation-modal');
                 const modalBody = document.getElementById('modal-content-body');
                 
@@ -677,13 +695,19 @@
                 
                 let html = `
                     <div class="conversation-header">
-                        <div class="conversation-title">🧬 ${dummyName} - Personality Evolution Details</div>
+                        <div class="conversation-title-row">
+                            <div class="conversation-title">🧬 ${dummyName} - Personality Evolution Details</div>
+                            ${returnToAssessment && returnRound ? `
+                                <button class="return-button" onclick="visualizer.showMilestoneAssessmentDetails('${dummyName}', ${returnRound}); this.closest('.modal').remove();">
+                                    📊 Back to Assessment
+                                </button>
+                            ` : ''}
+                        </div>
                         <div class="conversation-meta">
                             <div><strong>Evolution Stages:</strong> ${evolutionTimeline.length}</div>
                             <div><strong>Assessment Improvement:</strong> +${dummyData?.final_improvement?.toFixed(3) || 'N/A'} points</div>
                             <div><strong>Final Anxiety Level:</strong> ${evolution?.final_anxiety_level || 'N/A'}/10</div>
                             <div><strong>Materialized Traits:</strong> ${evolution?.materialized_fears || 0} fears, ${evolution?.materialized_challenges || 0} challenges</div>
-                            <div><strong>Last Updated:</strong> ${new Date(evolutionTimeline[evolutionTimeline.length - 1]?.timestamp || Date.now()).toLocaleString()}</div>
                         </div>
                     </div>
                     
@@ -738,6 +762,32 @@
                         Object.entries(traits.triggers).forEach(([original, evolved]) => {
                             html += `<em>${original}</em> → <span style="color: #dc3545;">${evolved}</span><br>`;
                         });
+                        html += '<br>';
+                    }
+                    
+                    // Add progress indicators
+                    if (stage.accepted_solutions && Object.keys(stage.accepted_solutions).length > 0) {
+                        html += '<strong>✅ Accepted Solutions:</strong><br>';
+                        Object.entries(stage.accepted_solutions).forEach(([problem, solution]) => {
+                            html += `<em>${problem}</em> → <span style="color: #28a745; font-weight: bold;">${solution}</span><br>`;
+                        });
+                        html += '<br>';
+                    }
+                    
+                    if (stage.progress_indicators && Object.keys(stage.progress_indicators).length > 0) {
+                        html += '<strong>📈 Progress Indicators:</strong><br>';
+                        Object.entries(stage.progress_indicators).forEach(([area, progress]) => {
+                            html += `<em>${area}</em> → <span style="color: #17a2b8; font-weight: bold;">${progress}</span><br>`;
+                        });
+                        html += '<br>';
+                    }
+                    
+                    if (stage.action_plans && Object.keys(stage.action_plans).length > 0) {
+                        html += '<strong>📋 Action Plans:</strong><br>';
+                        Object.entries(stage.action_plans).forEach(([challenge, plan]) => {
+                            html += `<em>${challenge}</em> → <span style="color: #ffc107; font-weight: bold;">${plan}</span><br>`;
+                        });
+                        html += '<br>';
                     }
                     
                     html += `
@@ -929,15 +979,15 @@
                         </div>
                     `;
                     
-                    // Check if this is a milestone (display after dummy response completes the round)
+                    // Check if this is a milestone (display after AI response completes the round)
                     let milestone = null;
-                    if (turn.speaker === 'dummy' && turn.metadata && turn.metadata.round) {
+                    if (turn.speaker === 'ai' && turn.metadata && turn.metadata.round) {
                         milestone = milestones.find(m => m.milestone_rounds === turn.metadata.round);
                     }
                     if (milestone) {
                         html += `
-                            <div class="milestone-marker" onclick="visualizer.showPersonalityEvolutionAtRound('${dummyName}', ${milestone.milestone_rounds})" style="cursor: pointer;">
-                                📊 Assessment Milestone: ${milestone.milestone_rounds} rounds → +${milestone.improvement.toFixed(3)} points
+                            <div class="milestone-marker" onclick="visualizer.showMilestoneAssessmentDetails('${dummyName}', ${milestone.milestone_rounds})" style="cursor: pointer;">
+                                📊 Assessment Milestone: ${milestone.milestone_rounds} rounds → +${milestone.improvement.toFixed(3)} points (Click for details)
                             </div>
                         `;
                     }
@@ -952,7 +1002,7 @@
                 this.showConversationHistory(dummyName, round);
             }
             
-            showPersonalityEvolutionAtRound(dummyName, round) {
+            showPersonalityEvolutionAtRound(dummyName, round, returnToAssessment = false, returnRound = null) {
                 // Get dummy data
                 const dummyData = this.currentExperiment?.results?.find(r => r.dummy_name === dummyName);
                 if (!dummyData || !dummyData.conversation_details?.personality_evolution_timeline) {
@@ -975,7 +1025,7 @@
                         const milestoneIndex = milestoneResults.indexOf(recentMilestone);
                         if (milestoneIndex >= 0 && milestoneIndex < evolutionTimeline.length) {
                             const stage = evolutionTimeline[milestoneIndex];
-                            this.showEvolutionDetails(dummyName, [stage]);
+                            this.showEvolutionDetails(dummyName, [stage], returnToAssessment, returnRound);
                             return;
                         }
                     }
@@ -987,11 +1037,202 @@
                 const milestoneIndex = milestoneResults.indexOf(milestone);
                 if (milestoneIndex >= 0 && milestoneIndex < evolutionTimeline.length) {
                     const stage = evolutionTimeline[milestoneIndex];
-                    this.showEvolutionDetails(dummyName, [stage]);
+                    this.showEvolutionDetails(dummyName, [stage], returnToAssessment, returnRound);
                 } else {
                     alert('No evolution data available for this milestone.');
                 }
             }
+            
+            showMilestoneAssessmentDetails(dummyName, round) {
+                // Get dummy data
+                const dummyData = this.currentExperiment?.results?.find(r => r.dummy_name === dummyName);
+                if (!dummyData || !dummyData.milestone_results) {
+                    alert('No milestone assessment data available for this dummy.');
+                    return;
+                }
+                
+                // Find the milestone that corresponds to this round
+                const milestone = dummyData.milestone_results.find(m => m.milestone_rounds === round);
+                
+                if (!milestone || !milestone.detailed_assessment) {
+                    alert('No detailed assessment data available for this milestone.');
+                    return;
+                }
+                
+                const assessment = milestone.detailed_assessment;
+                const preAssessment = dummyData.conversation_details?.pre_assessment;
+                
+                // Find previous milestone for comparison
+                const sortedMilestones = dummyData.milestone_results
+                    .filter(m => m.milestone_rounds < round)
+                    .sort((a, b) => b.milestone_rounds - a.milestone_rounds);
+                
+                const previousMilestone = sortedMilestones.length > 0 ? sortedMilestones[0] : null;
+                
+                // Create modal for assessment details
+                const modal = document.createElement('div');
+                modal.className = 'modal';
+                modal.style.display = 'block';
+                
+                // Calculate pre-assessment score (use first response as baseline or default)
+                const preScore = preAssessment?.responses?.[0]?.score || 2.5;
+                const preTotal = preScore * 20; // Assuming 20 questions
+                
+                modal.innerHTML = `
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="modal-title-row">
+                                <h2>📊 Assessment Details - ${dummyName}</h2>
+                                <button class="evolution-button" onclick="visualizer.showPersonalityEvolutionAtRound('${dummyName}', ${round}, true, ${round}); this.closest('.modal').remove();">
+                                    🧬 View Evolution
+                                </button>
+                            </div>
+                            <span class="close" onclick="this.parentElement.parentElement.parentElement.remove()">&times;</span>
+                        </div>
+                        <div class="modal-body">
+                            <div class="conversation-header">
+                                <div class="conversation-title">Milestone ${round} Rounds Assessment</div>
+                                <div class="conversation-meta">
+                                    ${previousMilestone ? 
+                                        `<div><strong>Previous Milestone:</strong> ${previousMilestone.detailed_assessment.average_score.toFixed(2)} points</div>
+                                         <div><strong>Current Milestone:</strong> ${assessment.average_score.toFixed(2)} points</div>
+                                         <div><strong>Change from Previous:</strong> ${(assessment.average_score - previousMilestone.detailed_assessment.average_score) > 0 ? '+' : ''}${(assessment.average_score - previousMilestone.detailed_assessment.average_score).toFixed(3)} points</div>` :
+                                        `<div><strong>Initial Assessment:</strong> ${preScore.toFixed(2)} points</div>
+                                         <div><strong>Current Milestone:</strong> ${assessment.average_score.toFixed(2)} points</div>
+                                         <div><strong>Total Improvement:</strong> ${milestone.improvement > 0 ? '+' : ''}${milestone.improvement.toFixed(3)} points</div>`
+                                    }
+                                    <div><strong>Assessment Questions:</strong> ${assessment.responses.length}</div>
+                                </div>
+                            </div>
+                            <div class="assessment-questions-container">
+                                <div id="assessment-questions"></div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                document.body.appendChild(modal);
+                
+                // Populate the assessment questions in a single compact block
+                const questionsContainer = document.getElementById('assessment-questions');
+                let questionsHTML = '';
+                
+                assessment.responses.forEach((response, index) => {
+                    // Use previous milestone for comparison if available
+                    let preScore = 2.5; // Default baseline
+                    if (previousMilestone && previousMilestone.detailed_assessment.responses[index]) {
+                        preScore = previousMilestone.detailed_assessment.responses[index].score;
+                    } else if (preAssessment?.responses?.[index]?.score) {
+                        preScore = preAssessment.responses[index].score;
+                    }
+                    
+                    const scoreChange = response.score - preScore;
+                    const changeColor = scoreChange > 0 ? 'red' : scoreChange < 0 ? 'green' : 'gray';
+                    const changeSymbol = scoreChange > 0 ? '+' : scoreChange < 0 ? '-' : '';
+                    const changeText = scoreChange !== 0 ? `(${changeSymbol}${Math.abs(scoreChange)})` : '';
+                    
+                    questionsHTML += `
+                        <div class="assessment-question-row">
+                            <div class="question-number">${index + 1}.</div>
+                            <div class="question-text">${response.question}</div>
+                            <div class="question-score">
+                                ${changeText ? `<span class="change" style="color: ${changeColor};">${changeText}</span>` : ''}
+                                <span class="score">${response.score}/4</span>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                questionsContainer.innerHTML = questionsHTML;
+                
+                // Add CSS for compact assessment questions and evolution button
+                const style = document.createElement('style');
+                style.textContent = `
+                    .modal-title-row {
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                    }
+                    .modal-title-row h2 {
+                        margin: 0;
+                    }
+                    .evolution-button {
+                        background: #e3f2fd;
+                        color: #1976d2;
+                        border: 1px solid #bbdefb;
+                        border-radius: 4px;
+                        padding: 6px 12px;
+                        font-size: 0.85em;
+                        cursor: pointer;
+                        transition: all 0.2s ease;
+                    }
+                    .evolution-button:hover {
+                        background: #bbdefb;
+                        transform: translateY(-1px);
+                    }
+                    .conversation-title-row {
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                    }
+                    .return-button {
+                        background: #f3e5f5;
+                        color: #7b1fa2;
+                        border: 1px solid #ce93d8;
+                        border-radius: 4px;
+                        padding: 6px 12px;
+                        font-size: 0.85em;
+                        cursor: pointer;
+                        transition: all 0.2s ease;
+                    }
+                    .return-button:hover {
+                        background: #ce93d8;
+                        transform: translateY(-1px);
+                    }
+                    .assessment-questions-container {
+                        max-height: 400px;
+                        overflow-y: auto;
+                        border: 1px solid #ecf0f1;
+                        border-radius: 5px;
+                        padding: 15px;
+                        background-color: #f8f9fa;
+                    }
+                    .assessment-question-row {
+                        display: flex;
+                        align-items: center;
+                        padding: 4px 0;
+                        border-bottom: 1px solid #eee;
+                    }
+                    .assessment-question-row:last-child {
+                        border-bottom: none;
+                    }
+                    .question-number {
+                        min-width: 25px;
+                        font-weight: bold;
+                        color: #7b1fa2;
+                        margin-right: 8px;
+                    }
+                    .question-text {
+                        flex: 1;
+                        font-size: 0.9em;
+                        margin-right: 10px;
+                    }
+                    .question-score {
+                        min-width: 80px;
+                        text-align: right;
+                        font-weight: bold;
+                    }
+                    .score {
+                        color: #2c3e50;
+                    }
+                    .change {
+                        font-size: 0.9em;
+                        margin-left: 4px;
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+            
         }
         
         // Initialize the visualizer when the page loads

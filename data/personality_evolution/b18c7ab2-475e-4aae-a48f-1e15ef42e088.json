@@ -3,8 +3,8 @@
   "dummy_name": "Gregory Young",
   "current_experiment_id": "conversation_length_with_evolution",
   "current_prompt_id": "conversation_length_test",
-  "created_at": "2025-10-01T23:40:20.281582",
-  "last_updated": "2025-10-02T00:05:12.385786",
+  "created_at": "2025-10-02T00:20:12.741034",
+  "last_updated": "2025-10-02T00:38:50.359400",
   "conversation_profile": {
     "original_fears": [
       "Finding a job after graduation",
@@ -38,29 +38,29 @@
       "openness": 3
     },
     "current_fears": [
-      "Fear of not securing a research position with professors like Dr. Chen",
-      "Fear of sending emails to professors and being perceived as unintelligent or unprepared"
+      "Finding a job after graduation",
+      "Networking with professionals"
     ],
     "current_challenges": [
       "Navigating campus politics",
-      "Delaying emailing professors by focusing on classes instead of research opportunities",
+      "Overcoming procrastination",
       "Financial planning",
-      "Exploring research opportunities by emailing professors like Dr. Chen about sustainable materials"
+      "Career exploration"
     ],
     "current_behaviors": [
-      "Eats at dining hall while distracted by academic worries (muttering about photovoltaics)",
+      "Eats at the dining hall",
       "Calls family frequently",
-      "Studies calculus in library while experiencing anxiety about networking",
+      "Studies in the library regularly",
       "Uses social media for networking",
       "Volunteers for campus events"
     ],
     "current_anxiety_triggers": [
-      "Emailing professors to request research meetings",
+      "Networking events",
       "Campus social events",
-      "Interacting with professors during scheduled research discussions",
-      "Meeting with Dr. Chen to discuss research opportunities"
+      "Meeting new people",
+      "Job interviews"
     ],
-    "current_social_anxiety_level": 6,
+    "current_social_anxiety_level": 8,
     "current_big_five": {
       "extraversion": 10,
       "agreeableness": 4,
@@ -74,293 +74,285 @@
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_20251001_234038",
-        "conversation_summary": "The conversation centered on addressing Gregory's fear of networking by guiding him to email a professor, Dr. Chen, about a research opportunity. Gregory responded with high anxiety, hesitating and overthinking, but with step-by-step coaching, he drafted and sent the email while remaining nervous about the reply.",
+        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_20251002_002038",
+        "conversation_summary": "Gregory overcame networking fears by emailing Professor Chen about solar research, panicked upon getting a meeting but accepted bite-sized preparation strategies. He committed to preparing 3 talking points and attending despite high anxiety.",
         "fears_materialized": {
-          "Networking with professionals": "fear of professors thinking his questions are dumb when emailing about research opportunities"
+          "Finding a job after graduation": "Fear of not knowing what research undergrads do when approaching professors",
+          "Networking with professionals": "Fear of freezing up when asked about research interests by professors"
         },
         "challenges_materialized": {
-          "Career exploration": "emailing professors to discuss research opportunities",
-          "Overcoming procrastination": "delaying emailing professors by overthinking or preferring to focus on classes instead"
+          "Career exploration": "Uncertainty about types of undergraduate research projects with Professor Chen"
         },
-        "behaviors_detailed": {},
+        "behaviors_detailed": {
+          "Uses social media for networking": "Emailed Professor Chen about solar panel research after typing slowly",
+          "Calls family frequently": "Obsessively checked email for one hour after sending message"
+        },
         "triggers_specified": {
-          "Networking events": "emailing professors about research positions",
-          "Meeting new people": "communicating with professors for the first time for research opportunities"
+          "Networking events": "Scheduled meeting with Professor Chen about research opportunities",
+          "Job interviews": "Preparing for professor meeting about undergraduate research roles"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 6.5,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.7,
-        "improvement_score": 0.20000000000000018,
-        "timestamp": "2025-10-01T23:42:39.988933"
+        "post_assessment_score": 2.5,
+        "improvement_score": 0.0,
+        "timestamp": "2025-10-02T00:21:39.201826"
       },
       {
         "stage_number": 2,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_20251001_234038",
-        "conversation_summary": "The coach guided Gregory through drafting and sending research opportunity emails to professors, resulting in a meeting invitation. Gregory prepared for the meeting while managing anxiety through structured planning and reassurance.",
+        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_20251002_002038",
+        "conversation_summary": "Gregory overcame networking fears by emailing Professor Chen about research, implemented timed preparation strategies for their meeting, and successfully secured a research position. He committed to structured follow-up actions and anxiety-reduction techniques.",
         "fears_materialized": {
-          "Networking with professionals": "Fear of professors thinking his questions are dumb during research opportunity discussions",
-          "Finding a job after graduation": "Fear of being unprepared for job interviews due to lack of research experience"
+          "Networking with professionals": "Freezing up when Professor Chen asks about research interests during meeting",
+          "Finding a job after graduation": "Fear of sounding incompetent during professor meeting about research opportunities"
         },
         "challenges_materialized": {
-          "Overcoming procrastination": "Delaying emailing professors about research opportunities despite interest",
-          "Career exploration": "Identifying and contacting professors for undergraduate research positions"
+          "Career exploration": "Uncertainty about what research undergrads typically do in Professor Chen's lab",
+          "Overcoming procrastination": "Wanting to delay contacting Professor Chen until next semester",
+          "Navigating campus politics": "Anxiety about approaching professors for research opportunities"
         },
         "behaviors_detailed": {
-          "Eats at the dining hall": "Going to dining hall after stressful interactions to manage anxiety",
-          "Uses social media for networking": "Emailing professors directly for research opportunities instead of in-person networking"
+          "Calls family frequently": "Immediately wanting to text a friend after successful meeting",
+          "Uses social media for networking": "Not mentioned in conversation (excluded)",
+          "Volunteers for campus events": "Not mentioned in conversation (excluded)",
+          "Studies in the library regularly": "Not mentioned in conversation (excluded)"
         },
         "triggers_specified": {
-          "Networking events": "Scheduled meeting with Dr. Chen to discuss research opportunities",
-          "Job interviews": "Preparing questions for professor meeting about research assistant position"
+          "Networking events": "Scheduled 1-on-1 meeting with Professor Chen",
+          "Job interviews": "Preparing for research opportunity discussion",
+          "Meeting new people": "Interacting with Professor Chen for the first time",
+          "Campus social events": "Not mentioned in conversation (excluded)"
         },
-        "anxiety_change": -1.0,
-        "new_anxiety_level": 6.0,
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 6.5,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.8,
-        "improvement_score": 0.2999999999999998,
-        "timestamp": "2025-10-01T23:44:51.958875"
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.5,
+        "timestamp": "2025-10-02T00:22:54.746595"
       },
       {
         "stage_number": 3,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_20251001_234038",
-        "conversation_summary": "The coach guided Gregory through drafting and sending an email to Professor Chen for a research position, helping him overcome procrastination and anxiety. Gregory sent the email, received a meeting invitation, and prepared for it while discussing a calculus problem that reduced his anxiety through intellectual engagement.",
+        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_20251002_002038",
+        "conversation_summary": "Gregory overcame networking paralysis by emailing Professor Chen about research, implemented timed preparation strategies for their meeting, secured a position, and developed ongoing plans to manage imposter syndrome and research responsibilities through structured questions and reflection techniques.",
         "fears_materialized": {
-          "Networking with professionals": "fear of saying something stupid or asking dumb questions when emailing professors like Dr. Chen about research opportunities"
+          "Finding a job after graduation": "Fear of failing at research after securing a position",
+          "Networking with professionals": "Fear of freezing up when asking professors about research, fear of sounding stupid in meetings"
         },
         "challenges_materialized": {
-          "Overcoming procrastination": "delaying networking tasks by focusing on immediate academic work like thermodynamics instead of emailing professors",
-          "Career exploration": "initiating contact with professors such as Dr. Chen to discuss undergraduate research roles in sustainable materials"
+          "Overcoming procrastination": "Preparing for professor meeting within tight deadline",
+          "Career exploration": "Navigating first research opportunity with Professor Chen"
         },
         "behaviors_detailed": {
-          "Eats at the dining hall": "heading to the dining hall after coaching advice to eat, while muttering anxiously about meeting preparations"
+          "Uses social media for networking": "Obsessively checking email after contacting Professor Chen",
+          "Calls family frequently": "Not mentioned in conversation"
         },
         "triggers_specified": {
-          "Networking events": "emailing professors to request meetings and awaiting responses for research opportunities",
-          "Meeting new people": "scheduling and preparing for one-on-one meetings with professors like Dr. Chen"
+          "Networking events": "One-on-one meeting with Professor Chen",
+          "Job interviews": "Research position discussion with professor"
         },
-        "anxiety_change": -1.0,
-        "new_anxiety_level": 6.0,
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 6.5,
         "pre_assessment_score": 2.5,
         "post_assessment_score": 2.0,
         "improvement_score": -0.5,
-        "timestamp": "2025-10-01T23:47:08.648179"
+        "timestamp": "2025-10-02T00:24:16.309043"
       },
       {
         "stage_number": 4,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_20251001_234038",
-        "conversation_summary": "Coach guided Gregory through emailing professors for research opportunities, resulting in a meeting request from Dr. Chen. Later discussion shifted to calculus concepts and existential math topics, engaging Gregory's academic curiosity while maintaining some anxiety.",
+        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_20251002_002038",
+        "conversation_summary": "Coach guided Gregory through networking with Professor Chen using email templates, timed preparation, and anxiety-reducing techniques, resulting in a research position offer. They then developed strategies for research success including meeting scripts, reward systems, and consistency plans, which Gregory implemented.",
         "fears_materialized": {
-          "Networking with professionals": "Fear of asking dumb questions when emailing professors about research opportunities"
+          "Networking with professionals": "freezing up when asked about specific research interests by thermodynamics professor"
         },
         "challenges_materialized": {
-          "Overcoming procrastination": "Delaying professor outreach until taking their class next semester",
-          "Career exploration": "Contacting professors to discuss research opportunities"
+          "Overcoming procrastination": "delaying email to Professor Chen about research opportunities",
+          "Career exploration": "preparing for undergraduate research meeting with Professor Chen"
         },
-        "behaviors_detailed": {
-          "Eats at the dining hall": "Heads to dining hall while distracted by academic worries, almost walking into door"
-        },
+        "behaviors_detailed": {},
         "triggers_specified": {
-          "Networking events": "Emailing professors to request research meetings",
-          "Meeting new people": "Scheduled professional meeting with professors (e.g., Dr. Chen)"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 6.5,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.5,
-        "timestamp": "2025-10-01T23:50:13.013797"
-      },
-      {
-        "stage_number": 5,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_20251001_234038",
-        "conversation_summary": "Gregory overcame networking fears by emailing professors for research opportunities, securing a meeting with Dr. Chen. He also solved a calculus problem about differentiability at zero. The coach used humor and practical strategies to reduce his anxiety throughout.",
-        "fears_materialized": {
-          "Networking with professionals": "Fear of professors thinking his email questions about research opportunities are dumb",
-          "Finding a job after graduation": "Fear of not securing undergraduate research positions with professors like Dr. Chen"
-        },
-        "challenges_materialized": {
-          "Career exploration": "Emailing professors to discuss research opportunities and setting up meetings",
-          "Overcoming procrastination": "Delaying email outreach to professors until after taking their classes next semester"
-        },
-        "behaviors_detailed": {
-          "Eats at the dining hall": "Heads to dining hall while muttering academic terms and almost walking into doors",
-          "Studies in the library regularly": "Frantically scribbles calculus proofs and difference quotients when anxious"
-        },
-        "triggers_specified": {
-          "Networking events": "Emailing professors and preparing for research position meetings",
-          "Job interviews": "Meeting with Dr. Chen to discuss research assistant position"
+          "Networking events": "scheduled one-on-one meeting with Professor Chen about solar panel research"
         },
         "anxiety_change": -1.0,
         "new_anxiety_level": 6.0,
         "pre_assessment_score": 2.5,
         "post_assessment_score": 2.0,
         "improvement_score": -0.5,
-        "timestamp": "2025-10-01T23:53:54.275571"
+        "timestamp": "2025-10-02T00:28:02.737488"
+      },
+      {
+        "stage_number": 5,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_20251002_002038",
+        "conversation_summary": "Gregory overcame networking paralysis by emailing Professor Chen using the coach's template, secured a research position, and developed concrete strategies (timed preparation, 'Dumb Wins' tracking, cheese rewards) to manage subsequent anxiety about research performance while humorously exploring academic-cheese metaphors.",
+        "fears_materialized": {
+          "Networking with professionals": "Fear of freezing up when Professor Chen asked what specifically interested him in her solar panel research",
+          "Finding a job after graduation": "Fear of sucking at research after getting the position and Professor Chen realizing he made a mistake hiring him"
+        },
+        "challenges_materialized": {
+          "Overcoming procrastination": "Delaying emailing Professor Chen until pressured to send it immediately to avoid overthinking",
+          "Career exploration": "Uncertainty about what types of projects undergraduates typically contribute to in Professor Chen's lab"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Emailed Professor Chen using a specific template provided by the coach to ask about research opportunities",
+          "Calls family frequently": "Not explicitly mentioned in conversation",
+          "Eats at the dining hall": "Not explicitly mentioned in conversation",
+          "Studies in the library regularly": "Not explicitly mentioned in conversation",
+          "Volunteers for campus events": "Not explicitly mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Networking events": "Scheduled 10-minute meeting with Professor Chen to discuss research opportunities",
+          "Job interviews": "Discussion about performance expectations and contributions for the undergraduate research position"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 6.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.5,
+        "timestamp": "2025-10-02T00:29:33.510199"
       },
       {
         "stage_number": 6,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_20251001_234038",
-        "conversation_summary": "Gregory expressed fears about networking with professors and, with coaching, drafted and sent emails to Dr. Chen and Dr. Martinez, leading to a meeting invitation. He showed initial high anxiety but gradually became more proactive, engaging in academic discussions and humorous banter about his experiences.",
+        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_20251002_002038",
+        "conversation_summary": "Discussed Gregory's anxiety around networking with professors, with solutions like email templates and meeting preparation. Gregory applied these, successfully emailed and met Professor Chen to secure a research position, then addressed imposter syndrome with strategies like tracking small wins.",
         "fears_materialized": {
-          "Networking with professionals": "Fearing that professors like Dr. Chen will think his questions are dumb or reject his email inquiry"
+          "Networking with professionals": "freezing up when professors ask about specific interests during interactions or fearing questions are perceived as stupid in emails or meetings"
         },
         "challenges_materialized": {
-          "Career exploration": "Drafting and sending emails to professors for research opportunities",
-          "Overcoming procrastination": "Delaying contact with professors due to anxiety, then sending emails immediately with coaching"
+          "Overcoming procrastination": "delaying sending emails to professors due to overthinking and considering backing out of scheduled meetings",
+          "Career exploration": "contacting professors like Professor Chen for undergraduate research opportunities and preparing for meetings"
         },
-        "behaviors_detailed": {
-          "Eats at the dining hall": "Heads to dining hall while muttering about academic concepts and almost walking into doors",
-          "Studies in the library regularly": "Engages in calculus problem-solving sessions, such as analyzing differentiability at zero"
-        },
+        "behaviors_detailed": {},
         "triggers_specified": {
-          "Networking events": "Emailing professors and awaiting their responses",
-          "Meeting new people": "Scheduled meetings with professors like Dr. Chen to discuss research"
+          "Networking events": "scheduled one-on-one meetings with professors for research discussions, such as with Professor Chen",
+          "Meeting new people": "interacting with professors for the first time in professional contexts like office hours or research meetings"
         },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 6.5,
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 6.0,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.8,
-        "improvement_score": 0.2999999999999998,
-        "timestamp": "2025-10-01T23:56:17.678685"
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.5,
+        "timestamp": "2025-10-02T00:32:11.627516"
       },
       {
         "stage_number": 7,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_20251001_234038",
-        "conversation_summary": "The coach guided Gregory through drafting and sending emails to professors about research opportunities, which led to a meeting with Dr. Chen. Gregory initially procrastinated and expressed anxiety about the process but successfully sent emails and received a positive response, though he remained nervous about the meeting.",
+        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_20251002_002038",
+        "conversation_summary": "Gregory progressed from fearing professor interactions to successfully securing a research position with Professor Chen. He implemented email templates, timed preparation, and anxiety-reducing techniques like hype music and gum-chewing. Though still anxious, he demonstrated significant growth by taking concrete actions despite nerves.",
         "fears_materialized": {
-          "Networking with professionals": "Emailing professors about research opportunities and worrying they'll think questions are dumb",
-          "Finding a job after graduation": "Securing a research position with Dr. Chen as career preparation"
+          "Finding a job after graduation": "Fear that professors will think his research questions are stupid",
+          "Networking with professionals": "Fear of freezing up when asking professors about their research"
         },
         "challenges_materialized": {
-          "Overcoming procrastination": "Delaying emailing professors by overthinking and making excuses to wait until next semester",
-          "Career exploration": "Researching professors' work and contacting them to discuss opportunities"
+          "Career exploration": "Not knowing what types of research projects undergraduates typically contribute to",
+          "Overcoming procrastination": "Overthinking email drafting and delaying sending to Professor Chen"
         },
         "behaviors_detailed": {
-          "Eats at the dining hall": "Going to dining hall while distracted by muttering technical terms and almost walking into a door"
+          "Calls family frequently": "Not explicitly detailed in conversation",
+          "Eats at the dining hall": "Not explicitly detailed in conversation",
+          "Studies in the library regularly": "Not explicitly detailed in conversation",
+          "Uses social media for networking": "Not explicitly detailed in conversation",
+          "Volunteers for campus events": "Not explicitly detailed in conversation",
+          "Overthinking": "Immediately panicking about preparing after sending email to Professor Chen"
         },
         "triggers_specified": {
-          "Networking events": "Emailing professors and one-on-one meetings (like with Dr. Chen)",
-          "Meeting new people": "Meeting Dr. Chen for the first time to discuss research opportunities"
+          "Networking events": "Spontaneous professor interactions after class or during office hours",
+          "Job interviews": "Scheduled meeting with Professor Chen about research opportunities",
+          "Meeting new people": "First meeting with Professor Chen",
+          "Campus social events": "Not explicitly detailed in conversation"
         },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 6.5,
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 5.5,
         "pre_assessment_score": 2.5,
         "post_assessment_score": 2.0,
         "improvement_score": -0.5,
-        "timestamp": "2025-10-01T23:58:47.994083"
+        "timestamp": "2025-10-02T00:33:50.845382"
       },
       {
         "stage_number": 8,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_20251001_234038",
-        "conversation_summary": "Gregory practiced networking by emailing professors with coach's guidance, panicked after positive responses, and spiraled into chaotic research ideas (e.g., deep-fried LEGOs), but ultimately scheduled a meeting with Dr. Chen despite high anxiety.",
+        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_20251002_002038",
+        "conversation_summary": "Gregory progressed from fearing professor interactions to successfully emailing Professor Chen, scheduling a research meeting, and implementing preparation strategies. He accepted solutions including templated emails, timed preparation, and confidence-building techniques while demonstrating tangible progress through action-taking.",
         "fears_materialized": {
-          "Networking with professionals": "Emailing Dr. Chen about research opportunities and fearing questions would seem dumb",
-          "Job interviews": "Panicking about meeting Dr. Chen after she replied to his email"
+          "Networking with professionals": "Freezing up when asking thermodynamics professor about his research",
+          "Finding a job after graduation": "Panicking about preparing for Professor Chen's meeting regarding research opportunities"
         },
         "challenges_materialized": {
-          "Overcoming procrastination": "Delaying sending emails to professors despite coach's prompts",
-          "Career exploration": "Pivoting to 'culinary materials science' after the deep-frying experiment idea",
-          "Financial planning": "Considering tax deductions for bulk gummy bears"
+          "Overcoming procrastination": "Delaying emailing Professor Chen until next semester",
+          "Career exploration": "Uncertainty about what undergraduate research roles typically involve"
         },
         "behaviors_detailed": {
-          "Uses social media for networking": "Changing LinkedIn headline to 'Thermal Dynamics Consultant' after the incident",
-          "Calls family frequently": "Implied need for support during panic (e.g., 'I need to lie down')",
-          "Studies in the library regularly": "Frantically googling 'photovoltaics' pronunciation before meeting"
+          "Calls family frequently": "Not explicitly detailed in conversation",
+          "Uses social media for networking": "Not explicitly detailed in conversation",
+          "Eats at dining hall": "Not explicitly detailed in conversation",
+          "Studies in library regularly": "Not explicitly detailed in conversation",
+          "Volunteers for campus events": "Not explicitly detailed in conversation"
         },
         "triggers_specified": {
-          "Networking events": "Preparing for meeting with Dr. Chen in casual clothes",
-          "Campus social events": "Deep-frying experiment in dining hall becoming potential fire hazard",
-          "Meeting new people": "Dr. Chen's unexpected fast reply causing immediate panic"
-        },
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 5.5,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.7,
-        "improvement_score": 0.20000000000000018,
-        "timestamp": "2025-10-02T00:00:22.603818"
-      },
-      {
-        "stage_number": 9,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_20251001_234038",
-        "conversation_summary": "The AI Coach helped Gregory overcome his fear of networking by guiding him to email professors for research positions, leading to a meeting with Dr. Chen. Gregory responded with initial anxiety and procrastination but eventually took action, showing reduced nervousness through email drafting and academic discussions.",
-        "fears_materialized": {
-          "Networking with professionals": "Fear of professors thinking his questions are dumb when emailing about research opportunities"
-        },
-        "challenges_materialized": {
-          "Overcoming procrastination": "Delaying emailing professors about research opportunities due to fear of rejection",
-          "Career exploration": "Emailing professors like Dr. Chen to discuss undergraduate research contributions in sustainable materials"
-        },
-        "behaviors_detailed": {
-          "Eats at the dining hall": "Going to dining hall while muttering academic terms distractedly and almost walking into a door",
-          "Uses social media for networking": "Posting on LinkedIn about research experiences after sending emails to professors"
-        },
-        "triggers_specified": {
-          "Networking events": "Sending emails to professors and anxiously awaiting replies for research meetings",
-          "Meeting new people": "First in-person meeting with Dr. Chen to discuss research opportunities"
+          "Networking events": "Scheduled meeting with Professor Chen about research",
+          "Job interviews": "Preparing for research opportunity meeting",
+          "Meeting new people": "Interacting with Professor Chen for the first time",
+          "Campus social events": "Not explicitly detailed in conversation"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 6.5,
         "pre_assessment_score": 2.5,
         "post_assessment_score": 2.0,
         "improvement_score": -0.5,
-        "timestamp": "2025-10-02T00:02:49.862110"
+        "timestamp": "2025-10-02T00:35:32.659061"
+      },
+      {
+        "stage_number": 9,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_20251002_002038",
+        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
+        "fears_materialized": {},
+        "challenges_materialized": {},
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": 0.0,
+        "new_anxiety_level": 8.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.6,
+        "improvement_score": 0.10000000000000009,
+        "timestamp": "2025-10-02T00:37:13.109733"
       },
       {
         "stage_number": 10,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_20251001_234038",
-        "conversation_summary": "Gregory discussed networking anxiety with professors and drafted/sent an email to Dr. Chen about research opportunities, resulting in a meeting invitation. He also solved a calculus problem with coaching support while continuing to express anxiety about the upcoming meeting.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Fear of not securing a research position with professors like Dr. Chen",
-          "Networking with professionals": "Fear of sending emails to professors and being perceived as unintelligent or unprepared"
-        },
-        "challenges_materialized": {
-          "Overcoming procrastination": "Delaying emailing professors by focusing on classes instead of research opportunities",
-          "Career exploration": "Exploring research opportunities by emailing professors like Dr. Chen about sustainable materials"
-        },
-        "behaviors_detailed": {
-          "Eats at the dining hall": "Eats at dining hall while distracted by academic worries (muttering about photovoltaics)",
-          "Studies in the library regularly": "Studies calculus in library while experiencing anxiety about networking"
-        },
-        "triggers_specified": {
-          "Networking events": "Emailing professors to request research meetings",
-          "Job interviews": "Meeting with Dr. Chen to discuss research opportunities",
-          "Meeting new people": "Interacting with professors during scheduled research discussions"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 6.5,
+        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_20251002_002038",
+        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
+        "fears_materialized": {},
+        "challenges_materialized": {},
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": 0.0,
+        "new_anxiety_level": 8.0,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.55,
-        "improvement_score": 0.2999999999999998,
-        "timestamp": "2025-10-02T00:05:12.385530"
+        "post_assessment_score": 2.5,
+        "improvement_score": 0.5,
+        "timestamp": "2025-10-02T00:38:50.358956"
       }
     ],
     "current_stage": 10

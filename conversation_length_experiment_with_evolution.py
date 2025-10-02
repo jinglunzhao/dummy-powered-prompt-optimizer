@@ -339,7 +339,23 @@ class ConversationLengthExperimentWithEvolution:
                     "improvement": round(improvement, 3),
                     "conversation_turns": len(conversation.turns),
                     "timestamp": datetime.now().isoformat(),
-                    "note": "Real assessment at milestone with personality evolution"
+                    "note": "Real assessment at milestone with personality evolution",
+                    "detailed_assessment": {
+                        "dummy_id": milestone_assessment.dummy_id,
+                        "timestamp": milestone_assessment.timestamp.isoformat(),
+                        "total_score": milestone_assessment.total_score,
+                        "average_score": milestone_assessment.average_score,
+                        "improvement_areas": milestone_assessment.improvement_areas,
+                        "responses": [
+                            {
+                                "question": response.question,
+                                "score": response.score,
+                                "confidence": response.confidence,
+                                "notes": response.notes
+                            }
+                            for response in milestone_assessment.responses
+                        ]
+                    }
                 }
                 milestone_assessments.append(milestone_result)
                 print(f"   📊 Milestone {current_round}: {milestone_assessment.average_score:.2f} (improvement: {improvement:+.3f})")

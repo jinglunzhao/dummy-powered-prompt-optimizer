@@ -3,8 +3,8 @@
   "dummy_name": "Casey Goldberg",
   "current_experiment_id": "conversation_length_with_evolution",
   "current_prompt_id": "conversation_length_test",
-  "created_at": "2025-10-01T23:40:20.280732",
-  "last_updated": "2025-10-02T00:06:34.580971",
+  "created_at": "2025-10-02T00:20:12.739857",
+  "last_updated": "2025-10-02T00:40:14.742829",
   "conversation_profile": {
     "original_fears": [
       "Academic failure and poor grades",
@@ -35,26 +35,26 @@
       "openness": 5
     },
     "current_fears": [
-      "Falling behind in coursework while learning Python for data journalism",
-      "Managing mom's frequent check-in texts while completing ethics paper deadlines",
-      "Finding a job after graduation"
+      "Failing to ask questions in Python coding workshops due to anxiety",
+      "Balancing social life and studies",
+      "Networking anxiety preventing engagement in career-building workshops"
     ],
     "current_challenges": [
-      "Navigating campus politics",
-      "Implementing Pomodoro technique for Python coding while juggling ethics paper deadlines",
-      "Scheduling video calls with family without disrupting study sessions"
+      "Anxiety about instructor perceptions when asking for coding help",
+      "Maintaining focus during coding practice with frequent cat interruptions",
+      "Dealing with homesickness"
     ],
     "current_behaviors": [
-      "Seeks out leadership roles",
+      "Created 'Gummy Bribery System' to self-manage coding practice",
       "Goes to campus events",
       "Attends career fairs",
       "Exercises regularly",
-      "Uses social media for networking"
+      "Updated LinkedIn with 'Feline-Collaborative Coder' skills after workshop progress"
     ],
     "current_anxiety_triggers": [
-      "Presentations"
+      "Asking questions during live Python coding workshops"
     ],
-    "current_social_anxiety_level": 8,
+    "current_social_anxiety_level": 7,
     "current_big_five": {
       "extraversion": 5,
       "agreeableness": 7,
@@ -68,249 +68,279 @@
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251001_234041",
-        "conversation_summary": "Casey discussed anxiety about balancing coursework with learning Python for data journalism, specifically starting with election data analysis. The coach provided a step-by-step plan and accountability, leading Casey to commit to small actions after finishing an ethics paper.",
+        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251002_002031",
+        "conversation_summary": "Addressed Casey's coding workshop anxiety by creating a step-by-step email engagement plan; agreed to watch recordings in dorm, email instructor with journalism context, and meet at campus coffee shop for accountability. Casey registered for workshop and demonstrated proactive planning.",
         "fears_materialized": {
-          "Academic failure and poor grades": "fear of falling behind in journalism coursework while learning Python for data journalism"
+          "Academic failure and poor grades": "Fear of asking questions in coding workshops leading to misunderstandings",
+          "Finding a job after graduation": "Avoiding live workshops that provide networking opportunities in data journalism field"
         },
-        "challenges_materialized": {
-          "Developing effective study habits": "prioritizing completion of a media ethics paper before starting Python tutorial"
-        },
+        "challenges_materialized": {},
         "behaviors_detailed": {
-          "Uses social media for networking": "bookmarking a Python for journalists tutorial online for skill development"
+          "Goes to campus events": "Registered for Python workshop to watch recording in dorm room",
+          "Uses social media for networking": "Emailed workshop instructor with field-specific context (journalism student)"
         },
-        "triggers_specified": {},
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 8.5,
+        "triggers_specified": {
+          "Presentations": "Speaking up during live coding workshops"
+        },
+        "anxiety_change": -2.0,
+        "new_anxiety_level": 8.0,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.85,
-        "improvement_score": 0.3500000000000001,
-        "timestamp": "2025-10-01T23:42:44.749825"
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.3999999999999999,
+        "timestamp": "2025-10-02T00:23:24.213140"
       },
       {
         "stage_number": 2,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251001_234041",
-        "conversation_summary": "The coach helped Casey break down Python learning into manageable steps for election data analysis while prioritizing an ethics paper. Casey implemented structured planning with phone reminders and completed 302 words of the paper, though perfectionism emerged during categorization. Accountability was established for next-day follow-up on Python progress.",
+        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251002_002031",
+        "conversation_summary": "Casey addressed Python workshop anxiety by accepting a step-by-step email strategy, successfully sent a scary email with support, and celebrated progress. They planned to apply this approach to networking and future challenges, showing reduced anxiety through concrete actions and positive reinforcement.",
         "fears_materialized": {
-          "Academic failure and poor grades": "Falling behind in coursework due to time spent learning Python for data journalism",
-          "Balancing social life and studies": "Scheduling Python learning versus ethics paper completion and bedtime"
+          "Academic failure and poor grades": "Fear of asking questions in coding workshops due to potential embarrassment",
+          "Finding a job after graduation": "Anxiety about networking being crucial for journalism career"
         },
         "challenges_materialized": {
-          "Developing effective study habits": "Prioritizing ethics paper over Python tutorial and choosing between tracking word count versus time spent"
+          "Developing effective study habits": "Struggling to transition from passive learning (online tutorials) to active participation (live workshops)",
+          "Dealing with homesickness": "Relying on dorm as designated safe space for stressful tasks"
         },
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 8.5,
+        "behaviors_detailed": {
+          "Seeks out leadership roles": "Proactively registering for Python workshop despite anxiety",
+          "Uses social media for networking": "Adapting networking strategy to email communication with instructors",
+          "Exercises regularly": "Using deep breathing as physical coping mechanism during stress"
+        },
+        "triggers_specified": {
+          "Presentations": "Speaking up in coding workshops or asking questions publicly"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.9,
-        "improvement_score": 0.3999999999999999,
-        "timestamp": "2025-10-01T23:45:26.637975"
+        "post_assessment_score": 3.1,
+        "improvement_score": 0.6000000000000001,
+        "timestamp": "2025-10-02T00:24:40.969840"
       },
       {
         "stage_number": 3,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251001_234041",
-        "conversation_summary": "The coach helped Casey develop a step-by-step plan to start learning Python for data journalism by analyzing election data, while managing anxiety around starting and balancing it with an ethics paper. Casey progressed on the paper using word count goals and took structured breaks.",
+        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251002_002031",
+        "conversation_summary": "Discussed strategies to manage anxiety in coding workshops, with Casey accepting a step-by-step email-based approach for questions and networking. Casey progressed by sending an email, committing to further actions, and showing reduced anxiety through laughter and relief.",
         "fears_materialized": {
-          "Academic failure and poor grades": "Messing up Python code while analyzing election data, wasting time",
-          "Balancing social life and studies": "Deciding whether to do Python before dinner (energy) or after (planned)"
+          "Academic failure and poor grades": "Fear of failing to ask questions in Python coding workshops hindering learning",
+          "Finding a job after graduation": "Fear of missing networking opportunities in coding workshops impacting journalism career prospects"
         },
         "challenges_materialized": {
-          "Developing effective study habits": "Choosing whether to track progress on the ethics paper by word count or time spent"
+          "Developing effective study habits": "Creating a structured approach to learning Python by watching workshop recordings and emailing questions from a safe space"
         },
         "behaviors_detailed": {
-          "Seeks out leadership roles": "Taking initiative to analyze election data for political journalism class",
-          "Exercises regularly": "Performing shoulder rolls with audible cracks and stretching during the fountain break"
+          "Goes to campus events": "Registering for and utilizing recorded campus workshop sessions for skill development",
+          "Uses social media for networking": "Using email to network with instructors for academic and career advice"
         },
         "triggers_specified": {
-          "Presentations": "Questioning if a paragraph in the ethics paper belonged to ethics or media law (categorization anxiety), the timer dinging signaling work start"
+          "Presentations": "Speaking up or asking questions during live coding workshop sessions"
         },
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 8.5,
+        "anxiety_change": -2.0,
+        "new_anxiety_level": 8.0,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.5,
-        "timestamp": "2025-10-01T23:46:51.586530"
+        "post_assessment_score": 2.85,
+        "improvement_score": 0.3500000000000001,
+        "timestamp": "2025-10-02T00:26:58.021131"
       },
       {
         "stage_number": 4,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251001_234041",
-        "conversation_summary": "The coach helped Casey develop a step-by-step plan to learn Python for data journalism using election data, starting small to reduce overwhelm. They then addressed anxiety during the ethics paper by implementing structured breaks, progress tracking, and coping strategies like deep breathing, leading to task completion and reduced panic.",
+        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251002_002031",
+        "conversation_summary": "Discussed strategies to manage anxiety in coding workshops, leading to Casey accepting a step-by-step email approach and celebrating small wins like sending an email and running a successful loop, which built confidence and reduced fear.",
         "fears_materialized": {
-          "Academic failure and poor grades": "fear of falling behind in journalism coursework while learning Python for data journalism due to time mismanagement or coding mistakes"
+          "Academic failure and poor grades": "Fear of asking questions in coding workshops hindering Python learning for data journalism",
+          "Finding a job after graduation": "Concern about networking importance in the field and reluctance to engage professionally"
         },
         "challenges_materialized": {
-          "Developing effective study habits": "overcoming indecision in tracking progress (word count vs. time spent) and managing perfectionism during the ethics paper writing"
+          "Developing effective study habits": "Watching workshop recordings in a safe dorm space and using a notebook for questions",
+          "Dealing with homesickness": "Not discussed in conversation"
         },
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 8.5,
+        "behaviors_detailed": {
+          "Goes to campus events": "Registered for a beginner Python workshop and planned to attend",
+          "Uses social media for networking": "Emailed instructors with specific questions to build professional connections"
+        },
+        "triggers_specified": {
+          "Presentations": "Speaking up or asking questions in live coding workshops"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.9,
-        "improvement_score": 0.3999999999999999,
-        "timestamp": "2025-10-01T23:49:37.250040"
+        "post_assessment_score": 3.0,
+        "improvement_score": 0.5,
+        "timestamp": "2025-10-02T00:28:28.833313"
       },
       {
         "stage_number": 5,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251001_234041",
-        "conversation_summary": "The discussion focused on helping Casey manage anxiety around learning Python for data journalism while balancing academic work, particularly an ethics paper. The coach provided step-by-step strategies for time management, perfectionism, and homesickness, and Casey responded by implementing tools like timers, mini-milestones, and a rubber duck for debugging, showing reduced anxiety through focused action.",
+        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251002_002031",
+        "conversation_summary": "The coach helped Casey overcome fear of asking questions in coding workshops by suggesting emailing instructors as a low-pressure strategy. Casey registered for a workshop, watched the recording, sent an email, and celebrated progress with rewards, leading to successfully running a Python loop and adopting a gummy-based incentive system for future challenges.",
         "fears_materialized": {
-          "Academic failure and poor grades": "Fear of making errors in Python coding while learning for data journalism, wasting time and causing falling behind in journalism coursework like the media ethics paper",
-          "Balancing social life and studies": "Fear of not managing time effectively between learning Python and completing academic tasks, such as debating whether to code before or after dinner while handling the ethics paper deadline"
+          "Academic failure and poor grades": "Fear of not learning Python effectively for data journalism due to anxiety about asking questions in coding workshops"
         },
         "challenges_materialized": {
-          "Developing effective study habits": "Struggling to choose between tracking word count or time spent on assignments like the media ethics paper and implementing consistent routines for learning Python",
-          "Dealing with homesickness": "Managing escalating text messages from mother (e.g., from '?' to urgent demands) and establishing scheduled video calls to maintain connection without disrupting studies"
+          "Developing effective study habits": "Structuring Python learning by watching workshop recordings in a dorm safe space and preparing specific questions to email instructors"
         },
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 8.5,
+        "behaviors_detailed": {
+          "Uses social media for networking": "Emailing instructors to ask coding questions and build academic connections for career advancement"
+        },
+        "triggers_specified": {
+          "Presentations": "Speaking up to ask questions during live coding workshops"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.9,
-        "improvement_score": 0.3999999999999999,
-        "timestamp": "2025-10-01T23:53:05.218050"
+        "post_assessment_score": 2.95,
+        "improvement_score": 0.4500000000000002,
+        "timestamp": "2025-10-02T00:30:21.076826"
       },
       {
         "stage_number": 6,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251001_234041",
-        "conversation_summary": "Coached Casey through Python initiation anxiety and ethics paper perfectionism using step-by-step breakdowns, timers, and rubber duck debugging. Casey progressed from paralysis to actionable plans, implementing accountability systems and structured task sequencing.",
+        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251002_002031",
+        "conversation_summary": "Discussed strategies to manage anxiety in coding workshops, including emailing instructors and using rewards; Casey took steps like registering, sending an email, and running a successful loop, showing increased confidence through small wins.",
         "fears_materialized": {
-          "Academic failure and poor grades": "Fear of falling behind in coursework when learning Python and making coding mistakes that waste time",
-          "Balancing social life and studies": "Fear that learning Python after dinner would compromise energy for studies"
+          "Academic failure and poor grades": "Fear of asking questions in coding workshops due to potential mistakes",
+          "Finding a job after graduation": "Fear of not networking effectively in data journalism field"
         },
         "challenges_materialized": {
-          "Developing effective study habits": "Indecision about tracking words versus time for ethics paper and setting incorrect timers",
-          "Dealing with homesickness": "Managing mother's escalating texts demanding proof-of-life during study sessions"
+          "Developing effective study habits": "Preparing specific questions before workshops and watching recordings in a safe study space"
         },
         "behaviors_detailed": {
-          "Seeks out leadership roles": "Assigning Mr. Quackers rubber duck as coding project manager with defined roles",
-          "Uses social media for networking": "Bookmarking Python tutorials for journalists but delaying initiation"
+          "Goes to campus events": "Attending beginner Python workshops and meeting at campus coffee shops"
         },
         "triggers_specified": {
-          "Presentations": "Explaining code to rubber duck during debugging sessions"
+          "Presentations": "Asking questions in coding workshops or sending emails to instructors"
         },
-        "anxiety_change": -1.0,
-        "new_anxiety_level": 9.0,
+        "anxiety_change": -2.0,
+        "new_anxiety_level": 8.0,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.9,
-        "improvement_score": 0.3999999999999999,
-        "timestamp": "2025-10-01T23:56:02.091151"
+        "post_assessment_score": 2.95,
+        "improvement_score": 0.4500000000000002,
+        "timestamp": "2025-10-02T00:32:23.918046"
       },
       {
         "stage_number": 7,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251001_234041",
-        "conversation_summary": "The coach and Casey focused on strategies for balancing Python learning with journalism coursework, specifically starting with election data analysis and managing the ethics paper. They addressed perfectionism and time management using step-by-step plans, timers, and accountability, with Casey responding by implementing actions like setting reminders and using a rubber duck for debugging, showing reduced anxiety.",
+        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251002_002031",
+        "conversation_summary": "The coach helped Casey address workshop anxiety by suggesting email communication and rewards, leading to Casey sending an email, running successful code, and planning future steps with reduced anxiety.",
         "fears_materialized": {
-          "Academic failure and poor grades": "Falling behind in journalism coursework due to time spent on Python coding and fear of messing up code while analyzing election data",
-          "Balancing social life and studies": "Juggling completion of the media ethics paper with learning Python, specifically worrying about energy levels before or after dinner"
+          "Academic failure and poor grades": "Fear of asking questions in coding workshops leading to poor Python skills for data journalism"
         },
         "challenges_materialized": {
-          "Developing effective study habits": "Implementing step-by-step Python tutorials for election data analysis and tracking ethics paper progress using word count metrics",
-          "Dealing with homesickness": "Managing frequent anxious texts from mom during study sessions and scheduling video calls to avoid disruptions"
+          "Developing effective study habits": "Creating a comfortable study routine in the dorm to watch workshop recordings without anxiety"
         },
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 8.5,
+        "behaviors_detailed": {
+          "Uses social media for networking": "Emailing instructors with specific, prepared questions to build academic connections"
+        },
+        "triggers_specified": {
+          "Presentations": "Speaking up or asking questions during live coding workshops"
+        },
+        "anxiety_change": -2.0,
+        "new_anxiety_level": 8.0,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.9,
-        "improvement_score": 0.3999999999999999,
-        "timestamp": "2025-10-01T23:59:09.245581"
+        "post_assessment_score": 3.0,
+        "improvement_score": 0.5,
+        "timestamp": "2025-10-02T00:34:34.353377"
       },
       {
         "stage_number": 8,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251001_234041",
-        "conversation_summary": "The coach assisted Casey in creating step-by-step strategies to start learning Python for data journalism while managing an ethics paper deadline, using timers, breaks, and a rubber duck for debugging. Casey initially showed high anxiety with nervous habits but became more proactive by setting specific mini-goals and seeking accountability, leading to reduced stress.",
+        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251002_002031",
+        "conversation_summary": "Addressed coding workshop anxiety through gradual exposure (emailing instructors), created action plans for Python practice using comfort items/rewards, and developed strategies to manage distractions from pet cat. Student showed decreased anxiety through successful email sends and first working code.",
         "fears_materialized": {
-          "Academic failure and poor grades": "fear of messing up Python code while analyzing election data for political journalism class, leading to wasted time and poor results"
+          "Academic failure and poor grades": "Fear of asking questions in Python coding workshops due to potential embarrassment",
+          "Finding a job after graduation": "Anxiety about networking in the tech/journalism field through workshops"
         },
         "challenges_materialized": {
-          "Developing effective study habits": "difficulty in tracking progress for ethics paper (choosing between word count or time spent) and starting Python tutorials without overcomplicating schedules",
-          "Dealing with homesickness": "managing frequent anxious texts and calls from mom that disrupt study sessions, requiring scheduled check-ins"
+          "Developing effective study habits": "Creating a coding practice routine while managing distractions from cat (Mittens)",
+          "Dealing with homesickness": "Reliance on safe spaces like dorm room for learning activities"
         },
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 8.5,
+        "behaviors_detailed": {
+          "Seeks out leadership roles": "Strategically planning how to engage with instructors to build professional connections",
+          "Uses social media for networking": "Using email as low-pressure professional communication tool",
+          "Exercises regularly": "Using deep breathing techniques to manage anxiety before tasks"
+        },
+        "triggers_specified": {
+          "Presentations": "Emailing instructors with questions and debugging code while anxious"
+        },
+        "anxiety_change": -3.0,
+        "new_anxiety_level": 7.0,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.5,
-        "timestamp": "2025-10-02T00:01:32.881344"
+        "post_assessment_score": 3.2,
+        "improvement_score": 0.7000000000000002,
+        "timestamp": "2025-10-02T00:36:17.059643"
       },
       {
         "stage_number": 9,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251001_234041",
-        "conversation_summary": "The conversation focused on breaking down Casey's Python learning and ethics paper tasks into manageable steps, addressing perfectionism and distractions (like a demanding rubber duck and mom's texts). Casey adopted structured plans and accountability, leading to reduced anxiety and progress on tasks.",
+        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251002_002031",
+        "conversation_summary": "Discussed strategies to manage anxiety in coding workshops, leading Casey to register for a workshop, send an email to an instructor, and celebrate small wins. They developed action plans for gradual exposure and rewards, resulting in reduced anxiety.",
         "fears_materialized": {
-          "Academic failure and poor grades": "Messing up Python code while analyzing election data and wasting time that should be spent on coursework",
-          "Balancing social life and studies": "Choosing between finishing media ethics paper and starting Python tutorial after dinner"
+          "Academic failure and poor grades": "Fear of appearing foolish when asking questions in Python coding workshops",
+          "Finding a job after graduation": "Fear of ineffective networking in coding workshops for data journalism career prospects"
         },
         "challenges_materialized": {
-          "Developing effective study habits": "Tracking progress using word count versus time spent on ethics paper",
-          "Dealing with homesickness": "Managing frequent check-in demands from mom without disrupting study focus"
+          "Developing effective study habits": "Difficulty engaging in live coding workshops and relying on passive online tutorials instead"
         },
         "behaviors_detailed": {
-          "Seeks out leadership roles": "Assigning Mr. Quackers rubber duck as 'Senior Fact-Checking Editor' for debugging assistance"
+          "Goes to campus events": "Registered for a beginner Python workshop on campus",
+          "Uses social media for networking": "Emailed workshop instructor for clarification as a low-pressure networking approach"
         },
         "triggers_specified": {
-          "Presentations": "Explaining Python code to rubber duck during debugging sessions"
+          "Presentations": "Speaking up or asking questions during live coding workshops"
         },
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 8.5,
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.0,
-        "improvement_score": 0.5,
-        "timestamp": "2025-10-02T00:04:00.797270"
+        "post_assessment_score": 2.95,
+        "improvement_score": 0.4500000000000002,
+        "timestamp": "2025-10-02T00:38:41.430544"
       },
       {
         "stage_number": 10,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251001_234041",
-        "conversation_summary": "The coach helped Casey break down learning Python and completing an ethics paper into manageable steps, using rubber duck debugging and structured scheduling. They developed strategies for starting small with coding (election data analysis) and tracking progress on coursework while managing family communication and anxiety through humor and boundaries.",
+        "conversation_id": "conv_a38e5b22-4037-474a-a4cc-f613ea1a3189_20251002_002031",
+        "conversation_summary": "Addressed Python workshop anxiety through email strategies and graduated exposure, implemented cat-assisted productivity systems, and celebrated coding milestones with rewards. Casey progressed from panic to successfully running first code loop.",
         "fears_materialized": {
-          "Academic failure and poor grades": "Falling behind in coursework while learning Python for data journalism",
-          "Balancing social life and studies": "Managing mom's frequent check-in texts while completing ethics paper deadlines"
+          "Academic failure and poor grades": "Failing to ask questions in Python coding workshops due to anxiety",
+          "Finding a job after graduation": "Networking anxiety preventing engagement in career-building workshops"
         },
         "challenges_materialized": {
-          "Developing effective study habits": "Implementing Pomodoro technique for Python coding while juggling ethics paper deadlines",
-          "Dealing with homesickness": "Scheduling video calls with family without disrupting study sessions"
+          "Developing effective study habits": "Maintaining focus during coding practice with frequent cat interruptions",
+          "Navigating campus politics": "Anxiety about instructor perceptions when asking for coding help"
         },
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 8.5,
+        "behaviors_detailed": {
+          "Seeks out leadership roles": "Created 'Gummy Bribery System' to self-manage coding practice",
+          "Uses social media for networking": "Updated LinkedIn with 'Feline-Collaborative Coder' skills after workshop progress"
+        },
+        "triggers_specified": {
+          "Presentations": "Asking questions during live Python coding workshops"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.85,
-        "improvement_score": 0.050000000000000266,
-        "timestamp": "2025-10-02T00:06:34.580499"
+        "post_assessment_score": 3.05,
+        "improvement_score": 0.3999999999999999,
+        "timestamp": "2025-10-02T00:40:14.742369"
       }
     ],
     "current_stage": 10
