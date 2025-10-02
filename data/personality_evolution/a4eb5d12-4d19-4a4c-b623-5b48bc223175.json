@@ -3,8 +3,8 @@
   "dummy_name": "Alex Lewis",
   "current_experiment_id": "conversation_length_with_evolution",
   "current_prompt_id": "conversation_length_test",
-  "created_at": "2025-10-02T00:20:12.738821",
-  "last_updated": "2025-10-02T00:39:26.546503",
+  "created_at": "2025-10-02T13:25:22.290170",
+  "last_updated": "2025-10-02T13:39:32.081168",
   "conversation_profile": {
     "original_fears": [
       "Finding a job after graduation",
@@ -33,24 +33,24 @@
       "openness": 3
     },
     "current_fears": [
-      "Stress about juggling museum internship applications with art history club responsibilities and an upcoming internship fair",
-      "Feeling overwhelmed and needing to schedule calls with mom for comfort during busy times"
+      "Finding a job after graduation",
+      "Homesickness"
     ],
     "current_challenges": [
-      "Juggling internship applications, art history club flyers, and Modern Art midterm preparation simultaneously",
-      "Over-organizing planner with color-coding instead of taking action, spending excessive time on setup",
+      "Balancing extracurricular activities with studies",
+      "Building time management",
       "Financial planning",
-      "Using postcards as visual motivators for studying specific art history sections"
+      "Developing effective study habits"
     ],
     "current_behaviors": [
-      "Processing internship fair materials and studying in the library after the event",
-      "Taking responsibility for art history club event flyers and meeting agendas",
-      "Going to the library after the internship fair to process materials and study"
+      "Uses campus resources like tutoring",
+      "Seeks out leadership roles",
+      "Studies in the library regularly"
     ],
     "current_anxiety_triggers": [
-      "Anxiety about navigating the internship fair, making connections with recruiters, and approaching museum tables"
+      "Campus social events"
     ],
-    "current_social_anxiety_level": 1,
+    "current_social_anxiety_level": 8,
     "current_big_five": {
       "extraversion": 2,
       "agreeableness": 10,
@@ -64,296 +64,249 @@
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251002_002033",
-        "conversation_summary": "Alex discussed overwhelm with internship applications, club duties, and upcoming events. The coach offered time management strategies like color-coded planners and task limits, which Alex accepted and planned to apply to the midterm and internship fair. Alex showed reduced anxiety through smiles and commitments to practical actions.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Stressing about juggling museum internship applications with art history club responsibilities"
-        },
-        "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Juggling museum internship applications and art history club responsibilities",
-          "Building time management": "Concern about over-organizing planner instead of completing tasks",
-          "Developing effective study habits": "Preparing for Modern Art midterm"
-        },
-        "behaviors_detailed": {
-          "Seeks out leadership roles": "Managing responsibilities in the art history club"
-        },
-        "triggers_specified": {
-          "Campus social events": "Attending the internship fair"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 1.5,
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_5",
+        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
+        "fears_materialized": {},
+        "challenges_materialized": {},
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": 0.0,
+        "new_anxiety_level": 8.0,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.15,
-        "improvement_score": 0.6499999999999999,
-        "timestamp": "2025-10-02T00:22:25.930109"
+        "post_assessment_score": 3.1,
+        "improvement_score": 0.6000000000000001,
+        "timestamp": "2025-10-02T13:37:03.035088"
       },
       {
         "stage_number": 2,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251002_002033",
-        "conversation_summary": "Alex discussed strategies for managing time between internship applications, club duties, and studies, accepting solutions like a simplified planner and focused networking. Alex implemented these at an internship fair, showing progress through successful interactions and scheduled follow-ups, with reduced anxiety.",
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_10",
+        "conversation_summary": "Alex expressed overwhelm balancing internship applications, art club planning, and academics, manifesting in chaotic planner use and procrastination. The coach offered concrete solutions: simplifying planning (2-color system), breaking tasks into micro-steps (90-minute blocks), and accountability check-ins. Alex immediately implemented these by selecting a top internship, adopting the simplified planner, and scheduling Friday reviews. Progress is evident through reduced perfectionism (limiting portfolio pieces), self-awareness about overcommitment, and proactive problem-solving (backup Etsy plan). The student responded positively to structure, humorously engaging with solutions while demonstrating tangible next steps.",
         "fears_materialized": {
-          "Finding a job after graduation": "Juggling museum internship applications with art history club responsibilities and attending the internship fair"
+          "Finding a job after graduation": "Stressing over museum internship applications while juggling academic responsibilities",
+          "Homesickness": "Mentioning dorm wall emptiness and seeking 'local souvenirs' (thrift store postcard) as comfort"
         },
         "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Managing art history club responsibilities alongside internship applications",
-          "Building time management": "Spending excessive time organizing a planner instead of completing tasks",
-          "Developing effective study habits": "Preparing for the Modern Art midterm during a busy week"
+          "Balancing extracurricular activities with studies": "Overwhelmed schedule with art club planning + internship apps + classes",
+          "Building time management": "Color-coded planner chaos causing paralysis",
+          "Financial planning": "Offering to buy coffee (budgeting trade-offs)",
+          "Developing effective study habits": "Rushing to art history lecture after planning session"
         },
         "behaviors_detailed": {
-          "Studies in the library regularly": "Going to the library to process internship fair materials and study",
-          "Seeks out leadership roles": "Taking on responsibilities in the art history club, such as planning events and meetings"
+          "Uses campus resources": "Studying in library regularly (mentioned library shift)",
+          "Seeks out leadership roles": "Actively starting art appreciation club",
+          "Studies in library regularly": "Scheduling check-ins before library shifts"
         },
         "triggers_specified": {
-          "Campus social events": "Attending the internship fair with multiple tables and crowds"
-        },
-        "anxiety_change": -1.0,
-        "new_anxiety_level": 1.0,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.0,
-        "improvement_score": 0.5,
-        "timestamp": "2025-10-02T00:24:16.530197"
-      },
-      {
-        "stage_number": 3,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251002_002033",
-        "conversation_summary": "Discussed strategies for balancing internship applications, club duties, and studies using planners, prioritization, and practical tips for the internship fair. Alex implemented suggestions, attended the fair successfully, and planned next steps with reduced anxiety and increased confidence.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Stressing about juggling museum internship applications and attending the internship fair"
-        },
-        "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Managing museum internship applications, art history club responsibilities, and Modern Art midterm studies simultaneously",
-          "Building time management": "Avoiding over-organizing a color-coded planner while setting weekly tasks"
-        },
-        "behaviors_detailed": {
-          "Seeks out leadership roles": "Taking responsibilities in the art history club, such as planning event brainstorms",
-          "Studies in the library regularly": "Going to the library to process internship fair materials and study"
-        },
-        "triggers_specified": {
-          "Campus social events": "Attending the crowded internship fair with multiple tables and recruiters"
-        },
-        "anxiety_change": -1.0,
-        "new_anxiety_level": 1.0,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.15,
-        "improvement_score": 0.6499999999999999,
-        "timestamp": "2025-10-02T00:26:15.405480"
-      },
-      {
-        "stage_number": 4,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251002_002033",
-        "conversation_summary": "Alex discussed stress over balancing internship applications, club duties, and studies, leading the coach to suggest organizational strategies like color-coded planners and fair preparation tips. Alex implemented these, successfully navigated the internship fair, and developed action plans for ongoing tasks, showing increased confidence and reduced anxiety.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Juggling museum internship applications with art history club responsibilities and attending the internship fair"
-        },
-        "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Juggling internship applications, art history club duties, and Modern Art midterm preparation",
-          "Building time management": "Setting up a planner without over-organizing it during high-stakes weeks",
-          "Developing effective study habits": "Preparing for the Modern Art midterm using color-coded notes and rewards"
-        },
-        "behaviors_detailed": {
-          "Seeks out leadership roles": "Handling art history club responsibilities like planning events and meetings",
-          "Studies in the library regularly": "Using the library to process internship fair materials and study after the event"
-        },
-        "triggers_specified": {
-          "Campus social events": "The internship fair with crowded tables and networking demands"
-        },
-        "anxiety_change": -1.0,
-        "new_anxiety_level": 1.0,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.15,
-        "improvement_score": 0.6499999999999999,
-        "timestamp": "2025-10-02T00:28:21.502343"
-      },
-      {
-        "stage_number": 5,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251002_002033",
-        "conversation_summary": "Discussed time management strategies for balancing internship applications, club duties, and studies using a color-coded planner and specific tips for the internship fair. Alex implemented advice, attended the fair successfully with reduced anxiety, and planned to apply systems like postcard reminders and chocolate rewards to upcoming tasks.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Stressing about juggling museum internship applications with art history club responsibilities and approaching recruiters at the internship fair"
-        },
-        "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Juggling museum internship applications, art history club event planning, and preparing for the Modern Art midterm",
-          "Building time management": "Over-organizing the planner instead of completing tasks, such as spending excessive time setting it up",
-          "Developing effective study habits": "Managing study sessions for the Modern Art midterm while handling internship fair preparations"
-        },
-        "behaviors_detailed": {
-          "Studies in the library regularly": "Going to the library to process internship fair materials and study for the midterm after the event"
-        },
-        "triggers_specified": {
-          "Campus social events": "The internship fair, where Alex felt anxious about making connections and approaching recruiters"
+          "Campus social events": "Art club planning as social/academic hybrid activity"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 1.5,
         "pre_assessment_score": 2.5,
         "post_assessment_score": 3.25,
         "improvement_score": 0.75,
-        "timestamp": "2025-10-02T00:30:18.630723"
+        "timestamp": "2025-10-02T13:37:15.610903"
+      },
+      {
+        "stage_number": 3,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_15",
+        "conversation_summary": "Alex expressed overwhelm balancing internship applications and launching an art club, leading to procrastination and a chaotic planning system. The coach offered concrete solutions: simplifying the planner to two colors, breaking tasks into micro-steps (e.g., 'research 3 museums this week'), and scheduling accountability check-ins. Alex actively accepted these strategies—switching to the simplified planner, committing to start one application, and preparing a focused portfolio. Progress is evident in Alex's shift from paralysis ('staring at listings for weeks') to action-oriented statements ('Operation Color-Coded Life starts now'), use of humor to diffuse perfectionism, and establishment of a structured Friday check-in ritual. The solutions directly addressed time management and anxiety triggers, resulting in reduced avoidance behaviors.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Paralyzed by internship applications, staring at listings for weeks without starting",
+          "Homesickness": "Mentioned thrifting a local postcard as a 'first souvenir' to combat isolation"
+        },
+        "challenges_materialized": {
+          "Balancing extracurriculars with studies": "Overwhelmed by museum internship apps + launching art appreciation club",
+          "Building time management": "Color-coded planner became chaotic 'rainbow mess', leading to avoidance",
+          "Financial planning": "Offering to buy coach coffee despite tight budget (implied)",
+          "Developing effective study habits": "3 AM paper rewrites and library procrastination"
+        },
+        "behaviors_detailed": {
+          "Uses campus resources": "Brought internship listing to coach, utilized library for study sessions",
+          "Seeks leadership roles": "Actively developing recruitment flyers for new art club",
+          "Studies in library regularly": "Rushed to art history lecture, planned 'squirrel-free study session'"
+        },
+        "triggers_specified": {
+          "Campus social events": "Proposed combining sketch walks with bio club (social + academic)"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.15,
+        "improvement_score": 0.6499999999999999,
+        "timestamp": "2025-10-02T13:37:49.199223"
+      },
+      {
+        "stage_number": 4,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_20",
+        "conversation_summary": "1) Problems discussed: Overwhelm from internship applications/art club launch, counterproductive perfectionism (over-tweaking portfolio, complex planner), and time management failures. 2) Solutions offered/accepted: Simplified two-color planner system, breaking tasks into micro-steps (1 app → 3 steps), limiting portfolio review to 3 pieces, and establishing Friday accountability check-ins. 3) Student's response: Immediately implemented solutions (selected top internship, adopted simplified planner), honored boundaries (left excessive work home), and scheduled check-ins. 4) Evidence of improvement: Concrete task initiation (listed app steps), reduced perfectionism (kept stained planner), and commitment to accountability (brought materials as agreed).",
+        "fears_materialized": {
+          "Finding a job after graduation": "Paralysis when facing multiple internship applications for museums",
+          "Homesickness": "Attachment to hometown postcard as comfort object in dorm"
+        },
+        "challenges_materialized": {
+          "Balancing extracurricular activities with studies": "Overwhelm from simultaneously starting art club + internship applications",
+          "Building time management": "Rainbow-coded planner causing visual overload",
+          "Financial planning": "Offering to buy coach coffee despite budget concerns",
+          "Developing effective study habits": "3AM paper rewrites and portfolio over-tweaking"
+        },
+        "behaviors_detailed": {
+          "Uses campus resources like tutoring": "Scheduled library study shifts",
+          "Seeks out leadership roles": "Persistent efforts to launch art appreciation club",
+          "Studies in the library regularly": "Rushed departure to art history lecture"
+        },
+        "triggers_specified": {
+          "Campus social events": "Art club planning triggering schedule overload"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 8.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.5,
+        "timestamp": "2025-10-02T13:37:50.605202"
+      },
+      {
+        "stage_number": 5,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_25",
+        "conversation_summary": "1) PROBLEMS: Alex expressed overwhelm balancing internship applications/art club launch, shown through chaotic rainbow planner avoidance and portfolio paralysis. 2) SOLUTIONS: Coach proposed simplified two-color time-blocking, micro-tasking internship steps (pick top choice → baby steps), and portfolio curation (3-5 pieces with stickies). 3) STUDENT RESPONSE: Alex immediately implemented solutions - switched to two-color system, selected specific portfolio pieces, emailed career center, and planned curator outreach. 4) PROGRESS: Reduced avoidance behaviors (started internship tasks), demonstrated strategic preparation (portfolio selection), and maintained humor about perfectionism ('leaving 10-page paper at home'), showing decreased overwhelm.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Paralysis while staring at museum internship listings for weeks without starting applications",
+          "Homesickness": "Empty dorm walls lacking personalization during high-stress periods"
+        },
+        "challenges_materialized": {
+          "Balancing extracurricular activities with studies": "Simultaneous museum internship applications and launching art appreciation club overwhelming schedule",
+          "Building time management": "Rainbow color-coded planner causing visual overload and avoidance",
+          "Developing effective study habits": "Last-minute 3AM paper rewrites and portfolio tweaks disrupting sleep"
+        },
+        "behaviors_detailed": {
+          "Uses campus resources like tutoring": "Scheduled library study sessions before check-ins",
+          "Seeks out leadership roles": "Active development of squirrel-themed recruitment flyers for new art club",
+          "Studies in the library regularly": "Committing to bibliography work in stacks despite squirrel distractions"
+        },
+        "triggers_specified": {
+          "Campus social events": "Club planning meetings conflicting with academic deadlines"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.15,
+        "improvement_score": 0.6499999999999999,
+        "timestamp": "2025-10-02T13:38:00.643701"
       },
       {
         "stage_number": 6,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251002_002033",
-        "conversation_summary": "Discussed strategies for managing internship applications, club duties, and midterm preparation, including planner use and fair preparation; Alex accepted tips like note-taking and task limits, successfully attended the fair, and planned to apply the strategies with increased confidence and reduced anxiety.",
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_35",
+        "conversation_summary": "Discussed Alex's overwhelm from internship applications, art club planning, and academic workload. Solutions offered included: simplifying planner to two-color coding, breaking internship applications into micro-steps (research → draft → submit), limiting portfolio reviews to 3 prioritized pieces, and implementing the 5-minute rule for study initiation. Alex responded positively by immediately adopting the two-color system, selecting a top internship for focused effort, preparing portfolio pieces with sticky-note priorities, and scheduling concrete actions (emailing curator, recruiting club help). Evidence of improvement includes: reduced perfectionism (leaving unnecessary materials behind), structured planning (scheduling squirrel sketch walk), and proactive accountability (scheduling weekly check-ins while offering coffee).",
         "fears_materialized": {
-          "Finding a job after graduation": "Stressing about juggling museum internship applications with art history club responsibilities during a busy semester"
+          "Finding a job after graduation": "Struggling with museum internship applications while overwhelmed by other commitments",
+          "Homesickness": "Mentioning an empty dorm wall while discussing comfort items"
         },
         "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Juggling museum internship applications, art history club event planning, and Modern Art midterm preparation",
-          "Building time management": "Over-organizing the planner instead of completing tasks, such as spending excessive time on color-coding",
-          "Developing effective study habits": "Preparing for the Modern Art midterm while integrating motivational tools like postcards"
+          "Balancing extracurricular activities with studies": "Juggling art club startup with internship applications and art history coursework",
+          "Building time management": "Overwhelm from color-coded planner showing packed schedule",
+          "Financial planning": "Offering to buy coffee as treat despite financial concerns (implied)",
+          "Developing effective study habits": "Last-minute paper rewrites at 3 AM and library procrastination"
         },
         "behaviors_detailed": {
-          "Seeks out leadership roles": "Planning art history club event brainstorm sessions and taking initiative in club responsibilities",
-          "Studies in the library regularly": "Going to the library to process internship fair materials and study for the midterm after the event"
+          "Uses campus resources": "Scheduling meetings before library shifts and visiting career services",
+          "Seeks out leadership roles": "Founding squirrel-themed art appreciation club",
+          "Studies in library regularly": "Consistent library shifts despite distractions"
         },
         "triggers_specified": {
-          "Campus social events": "The internship fair with recruiters and crowded tables causing initial overwhelm"
+          "Campus social events": "Planning squirrel sketch walk as social/academic hybrid event"
         },
-        "anxiety_change": -1.0,
-        "new_anxiety_level": 1.0,
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
         "pre_assessment_score": 2.5,
         "post_assessment_score": 3.2,
         "improvement_score": 0.7000000000000002,
-        "timestamp": "2025-10-02T00:32:31.313379"
+        "timestamp": "2025-10-02T13:38:41.653290"
       },
       {
         "stage_number": 7,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251002_002033",
-        "conversation_summary": "Discussed strategies for managing internship applications, club responsibilities, and studies using a simplified planner system and delegation. Alex accepted tips for reducing over-organization, coping with homesickness, and navigating the internship fair, leading to successful connections and reduced anxiety.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Stressing about juggling museum internship applications with art history club responsibilities and the internship fair",
-          "Homesickness": "Feeling overwhelmed and scheduling a Sunday video call with mom to cope"
-        },
-        "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Juggling museum internship applications, art history club event flyers, and Modern Art midterm preparation",
-          "Building time management": "Struggling with over-organizing a color-coded planner instead of completing tasks and implementing a 20-minute setup limit",
-          "Developing effective study habits": "Using motivational postcards as chapter dividers for studying and grading study sessions with chocolate rewards"
-        },
-        "behaviors_detailed": {
-          "Seeks out leadership roles": "Taking responsibility for planning and delegating art history club event flyers",
-          "Studies in the library regularly": "Going to the library to process internship fair materials and for studying after the event"
-        },
-        "triggers_specified": {
-          "Campus social events": "The internship fair event where Alex felt initially overwhelmed but approached recruiters"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 1.5,
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_30",
+        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
+        "fears_materialized": {},
+        "challenges_materialized": {},
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": 0.0,
+        "new_anxiety_level": 8.0,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.05,
-        "improvement_score": 0.5499999999999998,
-        "timestamp": "2025-10-02T00:34:58.522835"
+        "post_assessment_score": 3.0,
+        "improvement_score": 0.5,
+        "timestamp": "2025-10-02T13:38:44.174989"
       },
       {
         "stage_number": 8,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251002_002033",
-        "conversation_summary": "Discussed strategies for internship fair anxiety and balancing priorities; Alex implemented planner systems, networking approaches, and homesickness coping mechanisms, showing increased confidence in managing overwhelm through actionable steps.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Stress about networking at internship fair and juggling applications",
-          "Homesickness": "Nighttime peaks addressed with scheduled calls and visual reminders"
-        },
-        "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Juggling art history club flyers with internship applications and Modern Art midterm",
-          "Building time management": "Over-organizing planner instead of taking action",
-          "Financial planning": "Not explicitly discussed",
-          "Developing effective study habits": "Using postcards as chapter dividers for motivation"
-        },
-        "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Not explicitly discussed",
-          "Seeks out leadership roles": "Taking initiative with art history club responsibilities",
-          "Studies in the library regularly": "Processing internship fair materials in the library"
-        },
-        "triggers_specified": {
-          "Campus social events": "Internship fair networking interactions"
-        },
-        "anxiety_change": -1.0,
-        "new_anxiety_level": 1.0,
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_40",
+        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
+        "fears_materialized": {},
+        "challenges_materialized": {},
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": 0.0,
+        "new_anxiety_level": 8.0,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.15,
-        "improvement_score": 0.6499999999999999,
-        "timestamp": "2025-10-02T00:36:27.223004"
+        "post_assessment_score": 3.05,
+        "improvement_score": 0.5499999999999998,
+        "timestamp": "2025-10-02T13:38:48.951747"
       },
       {
         "stage_number": 9,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251002_002033",
-        "conversation_summary": "Alex sought help for balancing internship applications, club duties, and studies. The coach provided concrete organization strategies (color-coded planner, 3-task limits) and anxiety-reducing techniques for the internship fair. Alex implemented these immediately, reported successful networking outcomes, and committed to specific action plans including interview prep and delegation.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Stressing about juggling museum internship applications with art history club responsibilities",
-          "Homesickness": "Using Van Gogh postcard on nightstand for comfort and scheduling Sunday video calls with mom"
-        },
-        "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Juggling Modern Art midterm preparation and internship fair attendance in the same week",
-          "Building time management": "Over-organizing planner instead of completing tasks, spending excessive time on setup",
-          "Financial planning": "Printing resumes for internship fair and budgeting for professional supplies",
-          "Developing effective study habits": "Using postcards as chapter dividers for notes and grading study sessions with chocolate rewards"
-        },
-        "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Processing internship fair materials and studying in the library",
-          "Seeks out leadership roles": "Taking responsibility for art history club event flyers and meeting agendas",
-          "Studies in the library regularly": "Going to library to process internship materials after the fair"
-        },
-        "triggers_specified": {
-          "Campus social events": "Anxiety about attending the internship fair and networking with recruiters"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 1.5,
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_50",
+        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
+        "fears_materialized": {},
+        "challenges_materialized": {},
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": 0.0,
+        "new_anxiety_level": 8.0,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.15,
-        "improvement_score": 0.6499999999999999,
-        "timestamp": "2025-10-02T00:37:55.341010"
+        "post_assessment_score": 3.1,
+        "improvement_score": 0.6000000000000001,
+        "timestamp": "2025-10-02T13:39:27.417067"
       },
       {
         "stage_number": 10,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251002_002033",
-        "conversation_summary": "Alex sought help for juggling internship applications, club duties, and studies, leading to concrete strategies like simplified color-coding and 3-task prioritization. They implemented these at an anxiety-triggering internship fair, reporting successful connections and decreased overwhelm. Plans include mock interview prep and maintaining new organizational systems.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Stress about juggling museum internship applications with art history club responsibilities and an upcoming internship fair",
-          "Homesickness": "Feeling overwhelmed and needing to schedule calls with mom for comfort during busy times"
-        },
-        "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Juggling internship applications, art history club flyers, and Modern Art midterm preparation simultaneously",
-          "Building time management": "Over-organizing planner with color-coding instead of taking action, spending excessive time on setup",
-          "Developing effective study habits": "Using postcards as visual motivators for studying specific art history sections"
-        },
-        "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Processing internship fair materials and studying in the library after the event",
-          "Seeks out leadership roles": "Taking responsibility for art history club event flyers and meeting agendas",
-          "Studies in the library regularly": "Going to the library after the internship fair to process materials and study"
-        },
-        "triggers_specified": {
-          "Campus social events": "Anxiety about navigating the internship fair, making connections with recruiters, and approaching museum tables"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 1.5,
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_45",
+        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
+        "fears_materialized": {},
+        "challenges_materialized": {},
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": 0.0,
+        "new_anxiety_level": 8.0,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.1,
-        "improvement_score": 0.3500000000000001,
-        "timestamp": "2025-10-02T00:39:26.546063"
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.19999999999999973,
+        "timestamp": "2025-10-02T13:39:32.080672"
       }
     ],
     "current_stage": 10

@@ -21,7 +21,10 @@ class PersonalityMaterializer:
         if not self.api_key:
             raise ValueError("API key is required for personality materializer")
         
-        print("✅ Personality Materializer initialized")
+        # Add rate limiting to prevent API issues
+        self._semaphore = asyncio.Semaphore(3)  # Max 3 concurrent calls
+        
+        print("✅ Personality Materializer initialized with rate limiting (max 3 concurrent calls)")
     
     async def materialize_personality_from_conversation(self, 
                                                       dummy, 
@@ -38,80 +41,92 @@ class PersonalityMaterializer:
         # Create materialization prompt
         materialization_prompt = self._create_materialization_prompt(dummy, conversation)
         
-        try:
-            # Call DeepSeek Reasoner for materialization
-            async with aiohttp.ClientSession() as session:
-                async with session.post(
-                    "https://api.lkeap.cloud.tencent.com/v1/chat/completions",
-                    headers={
-                        "Authorization": f"Bearer {self.api_key}",
-                        "Content-Type": "application/json"
-                    },
-                    json={
-                        "model": "deepseek-r1-0528",
-                        "messages": [{"role": "user", "content": materialization_prompt}],
-                        "temperature": 0.3,  # Low temperature for focused analysis
-                        "max_tokens": 2000   # Enough for detailed materialization
-                    },
-                    timeout=180
-                ) as response:
+        # Use rate limiting to prevent API overload
+        async with self._semaphore:
+            for attempt in range(3):  # Retry up to 3 times
+                try:
+                    print(f"   🔄 Attempt {attempt + 1}/3 for {dummy.name}")
                     
-                    if response.status == 200:
-                        result = await response.json()
-                        print(f"🔍 API Response received: {len(str(result))} chars")
-                        
-                        if 'choices' in result and len(result['choices']) > 0:
-                            message = result['choices'][0]['message']
-                            # DeepSeek Reasoner puts the actual JSON response in 'content', reasoning in 'reasoning_content'
-                            materialization_text = (message.get('content') or message.get('reasoning_content') or '').strip()
-                            print(f"📝 Materialization text: {len(materialization_text)} chars")
-                            print(f"📄 Text preview: {materialization_text[:200]}...")
+                    # Call DeepSeek Reasoner for materialization
+                    async with aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=300)) as session:
+                        async with session.post(
+                            "https://api.lkeap.cloud.tencent.com/v1/chat/completions",
+                            headers={
+                                "Authorization": f"Bearer {self.api_key}",
+                                "Content-Type": "application/json"
+                            },
+                            json={
+                                "model": "deepseek-r1-0528",
+                                "messages": [{"role": "user", "content": materialization_prompt}],
+                                "temperature": 0.3,  # Low temperature for focused analysis
+                                "max_tokens": 2000   # Enough for detailed materialization
+                            },
+                            timeout=aiohttp.ClientTimeout(total=300)
+                        ) as response:
                             
-                            # Parse the materialization response
-                            materialization_data = self._parse_materialization_response(materialization_text)
-                            print(f"🔍 Parsed data keys: {list(materialization_data.keys())}")
-                            
-                            # Create evolution stage
-                            evolution_stage = EvolutionStage(
-                                stage_number=dummy.personality_evolution.conversation_profile.current_stage + 1 if dummy.personality_evolution else 1,
-                                prompt_id=prompt_id,
-                                prompt_name=prompt_name,
-                                generation=generation,
-                                conversation_id=conversation.id,
-                                conversation_summary=materialization_data.get("conversation_summary", "No summary available"),
+                            if response.status == 200:
+                                result = await response.json()
+                                print(f"🔍 API Response received: {len(str(result))} chars")
                                 
-                                fears_materialized=materialization_data.get("fears_materialized", {}),
-                                challenges_materialized=materialization_data.get("challenges_materialized", {}),
-                                behaviors_detailed=materialization_data.get("behaviors_detailed", {}),
-                                triggers_specified=materialization_data.get("triggers_specified", {}),
-                                
-                                accepted_solutions=materialization_data.get("accepted_solutions", {}),
-                                progress_indicators=materialization_data.get("progress_indicators", {}),
-                                action_plans=materialization_data.get("action_plans", {}),
-                                
-                                anxiety_change=materialization_data.get("anxiety_change", 0.0),
-                                new_anxiety_level=materialization_data.get("new_anxiety_level", dummy.social_anxiety.anxiety_level),
-                                
-                                pre_assessment_score=pre_assessment_score,
-                                post_assessment_score=post_assessment_score,
-                                improvement_score=post_assessment_score - pre_assessment_score
-                            )
-                            
-                            print(f"✅ Materialized {dummy.name}'s personality: {evolution_stage.conversation_summary[:50]}...")
-                            return evolution_stage
-                        else:
-                            print(f"❌ No materialization response from DeepSeek Reasoner")
-                            print(f"🔍 Response structure: {list(result.keys()) if isinstance(result, dict) else 'Not a dict'}")
-                            return None
+                                if 'choices' in result and len(result['choices']) > 0:
+                                    message = result['choices'][0]['message']
+                                    # DeepSeek Reasoner puts the actual JSON response in 'content', reasoning in 'reasoning_content'
+                                    materialization_text = (message.get('content') or message.get('reasoning_content') or '').strip()
+                                    print(f"📝 Materialization text: {len(materialization_text)} chars")
+                                    print(f"📄 Text preview: {materialization_text[:200]}...")
+                                    
+                                    # Parse the materialization response
+                                    materialization_data = self._parse_materialization_response(materialization_text)
+                                    print(f"🔍 Parsed data keys: {list(materialization_data.keys())}")
+                                    
+                                    # Create evolution stage
+                                    evolution_stage = EvolutionStage(
+                                        stage_number=dummy.personality_evolution.conversation_profile.current_stage + 1 if dummy.personality_evolution else 1,
+                                        prompt_id=prompt_id,
+                                        prompt_name=prompt_name,
+                                        generation=generation,
+                                        conversation_id=conversation.id,
+                                        conversation_summary=materialization_data.get("conversation_summary", "No summary available"),
+                                        
+                                        fears_materialized=materialization_data.get("fears_materialized", {}),
+                                        challenges_materialized=materialization_data.get("challenges_materialized", {}),
+                                        behaviors_detailed=materialization_data.get("behaviors_detailed", {}),
+                                        triggers_specified=materialization_data.get("triggers_specified", {}),
+                                        
+                                        accepted_solutions=materialization_data.get("accepted_solutions", {}),
+                                        progress_indicators=materialization_data.get("progress_indicators", {}),
+                                        action_plans=materialization_data.get("action_plans", {}),
+                                        
+                                        anxiety_change=materialization_data.get("anxiety_change", 0.0),
+                                        new_anxiety_level=materialization_data.get("new_anxiety_level", dummy.social_anxiety.anxiety_level),
+                                        
+                                        pre_assessment_score=pre_assessment_score,
+                                        post_assessment_score=post_assessment_score,
+                                        improvement_score=post_assessment_score - pre_assessment_score
+                                    )
+                                    
+                                    print(f"✅ Materialized {dummy.name}'s personality: {evolution_stage.conversation_summary[:50]}...")
+                                    return evolution_stage
+                                else:
+                                    print(f"❌ No materialization response from DeepSeek Reasoner")
+                                    print(f"🔍 Response structure: {list(result.keys()) if isinstance(result, dict) else 'Not a dict'}")
+                                    return None
+                            else:
+                                error_text = await response.text()
+                                print(f"❌ DeepSeek Reasoner API Error: {response.status}")
+                                print(f"🔍 Error details: {error_text[:500]}")
+                                return None
+                    
+                except Exception as e:
+                    print(f"   ⚠️  Personality materialization API call failed: {e}")
+                    if attempt < 2:  # Not the last attempt
+                        wait_time = 2 ** attempt  # Exponential backoff: 1s, 2s, 4s
+                        print(f"   ⏳ Waiting {wait_time}s before retry...")
+                        await asyncio.sleep(wait_time)
                     else:
-                        error_text = await response.text()
-                        print(f"❌ DeepSeek Reasoner API Error: {response.status}")
-                        print(f"🔍 Error details: {error_text[:500]}")
+                        print(f"   ❌ Materialization returned None for {dummy.name} (attempt {attempt + 1})")
                         return None
-                        
-        except Exception as e:
-            print(f"⚠️  Personality materialization failed: {e}")
-            print("❌ Returning None - no fallback mechanism")
+            
             return None
     
     def _create_materialization_prompt(self, dummy, conversation: Conversation) -> str:
@@ -123,97 +138,31 @@ class PersonalityMaterializer:
             speaker_label = "AI Coach" if turn.speaker == "ai" else dummy.name
             conversation_text += f"{speaker_label}: {turn.message}\n"
         
-        return f"""
-You are an expert psychologist analyzing a conversation between a social skills coach and a student to understand how the student's personality traits have been materialized (made more concrete and tangible) through the interaction.
+        return f"""Analyze this conversation and materialize abstract traits into concrete situations. Focus on capturing progress and solutions.
 
 STUDENT: {dummy.name}
-ORIGINAL ABSTRACT TRAITS:
-- Fears: {', '.join(dummy.fears)}
-- Challenges: {', '.join(dummy.challenges)}
-- Behaviors: {', '.join(dummy.behaviors)}
-- Anxiety Triggers: {', '.join(dummy.social_anxiety.triggers)}
-- Social Anxiety Level: {dummy.social_anxiety.anxiety_level}/10
+TRAITS: Fears: {', '.join(dummy.fears)} | Challenges: {', '.join(dummy.challenges)} | Behaviors: {', '.join(dummy.behaviors)} | Triggers: {', '.join(dummy.social_anxiety.triggers)} | Anxiety: {dummy.social_anxiety.anxiety_level}/10
 
 CONVERSATION:
 {conversation_text}
 
-TASK: Based on this conversation, analyze how the student's abstract traits have become more concrete and specific, AND identify any solutions, progress, or action plans that were accepted or discussed. The goal is to capture both trait materialization AND progress indicators.
+TASK: Materialize abstract traits into specific situations AND capture solutions/progress that show improvement.
 
-For each category, provide specific materializations:
-
-1. FEAR MATERIALIZATION:
-   - Take each abstract fear and identify SPECIFIC situations or concerns that emerged in the conversation
-   - Example: "social rejection" → "fear of not being included in study group after asking to join"
-   - Format: {{"original_fear": "specific_situation"}}
-
-2. CHALLENGE MATERIALIZATION:
-   - Take each abstract challenge and identify SPECIFIC instances or scenarios that came up
-   - Example: "starting conversations" → "approaching someone in the cafeteria to ask about homework"
-   - Format: {{"original_challenge": "specific_scenario"}}
-
-3. BEHAVIOR MATERIALIZATION:
-   - Take each abstract behavior and add SPECIFIC details that emerged
-   - Example: "avoiding eye contact" → "looking down at phone when people try to start conversations"
-   - Format: {{"original_behavior": "specific_behavior"}}
-
-4. TRIGGER SPECIFICATION:
-   - Take each abstract trigger and identify SPECIFIC contexts or situations
-   - Example: "crowded rooms" → "the student union dining hall during lunch hour"
-   - Format: {{"original_trigger": "specific_context"}}
-
-5. ACCEPTED SOLUTIONS:
-   - Identify solutions, strategies, or advice that the student explicitly accepted or agreed to try
-   - Focus on concrete, actionable solutions the student committed to
-   - Example: "networking anxiety" → "start by sending LinkedIn messages to 2 alumni per week"
-   - Format: {{"problem_area": "accepted_solution"}}
-
-6. PROGRESS INDICATORS:
-   - Identify any signs of progress, improvement, or positive changes the student mentioned
-   - Look for evidence of growth, confidence building, or successful attempts
-   - Example: "social anxiety" → "practiced speaking up in class discussion 3 times this week"
-   - Format: {{"area_of_growth": "progress_evidence"}}
-
-7. ACTION PLANS:
-   - Identify specific action plans, steps, or commitments the student made
-   - Focus on concrete next steps or behavioral changes planned
-   - Example: "time management" → "use Pomodoro technique for 25-minute study blocks with 5-minute breaks"
-   - Format: {{"challenge_area": "action_plan"}}
-
-8. ANXIETY ASSESSMENT:
-   - Did the student's social anxiety level change during the conversation? 
-   - If yes, by how much? (Range: -3.0 to +1.0, negative means anxiety decreased)
-   - New anxiety level: (1-10)
-
-9. CONVERSATION SUMMARY:
-   - Brief 2-3 sentence summary of what was discussed, solutions offered, and how the student responded
-
-RESPONSE FORMAT (JSON ONLY):
+JSON FORMAT:
 {{
-    "fears_materialized": {{"social rejection": "specific situation"}},
-    "challenges_materialized": {{"starting conversations": "specific scenario"}},
-    "behaviors_detailed": {{"avoiding eye contact": "specific behavior"}},
-    "triggers_specified": {{"crowded rooms": "specific context"}},
-    "accepted_solutions": {{"networking anxiety": "start with LinkedIn messages to 2 people per week"}},
-    "progress_indicators": {{"social anxiety": "practiced speaking up in class 3 times this week"}},
-    "action_plans": {{"time management": "use Pomodoro technique for 25min study blocks"}},
+    "fears_materialized": {{"original_fear": "specific_situation"}},
+    "challenges_materialized": {{"original_challenge": "specific_scenario"}},
+    "behaviors_detailed": {{"original_behavior": "specific_behavior"}},
+    "triggers_specified": {{"original_trigger": "specific_context"}},
+    "accepted_solutions": {{"problem_area": "concrete_solution_accepted"}},
+    "progress_indicators": {{"area_of_growth": "evidence_of_improvement"}},
+    "action_plans": {{"challenge_area": "specific_next_steps"}},
     "anxiety_change": -0.5,
     "new_anxiety_level": 7.5,
-    "conversation_summary": "Brief summary of what happened"
+    "conversation_summary": "Summary MUST include: 1) Problems discussed, 2) Solutions offered/accepted, 3) Student's response to solutions, 4) Evidence of progress/improvement"
 }}
 
-CRITICAL INSTRUCTIONS:
-1. Your response must be ONLY the JSON object above - no explanations, no reasoning, no additional text
-2. Do NOT include any reasoning process or step-by-step analysis
-3. Do NOT include any text before or after the JSON
-4. Do NOT include any examples or sample JSON objects
-5. Do NOT include any commentary or explanations
-6. Only materialize traits that were actually discussed or emerged in the conversation
-7. Keep the same core meaning but make it more specific and concrete
-8. If a trait wasn't mentioned, don't include it in the materialization
-9. Focus on making abstract concepts more tangible, not changing them completely
-10. Start your response with {{ and end with }} - nothing else
-11. REMEMBER: Only output the final JSON object, nothing else
-"""
+CRITICAL: The conversation_summary is crucial for assessment - it must show how the student addressed their concerns and made progress. Include specific solutions discussed and the student's positive response to them."""
     
     def _parse_materialization_response(self, response_text: str) -> Dict[str, Any]:
         """Parse the materialization response from LLM"""

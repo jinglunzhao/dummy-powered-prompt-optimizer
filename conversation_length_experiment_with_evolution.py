@@ -14,7 +14,7 @@ import asyncio
 import argparse
 import aiohttp
 from datetime import datetime
-from typing import List, Dict, Any, Tuple
+from typing import List, Dict, Any, Tuple, Optional
 from models import AIDummy, Conversation, ConversationTurn
 from conversation_simulator import ConversationSimulator
 from config import Config
@@ -235,7 +235,25 @@ class ConversationLengthExperimentWithEvolution:
                                                    max_rounds: int,
                                                    milestones: List[int],
                                                    enable_assessments: bool) -> Tuple[Conversation, List[Dict[str, Any]]]:
-        """Simulate conversation with real milestone assessments without interrupting flow"""
+        """Simulate conversation with OPTIMIZED flow: continuous conversation + parallel milestone processing"""
+        
+        print(f"   🚀 Starting OPTIMIZED conversation flow...")
+        
+        # Phase 1: Run continuous conversation without interruptions
+        conversation = await self._run_continuous_conversation(dummy, base_prompt, max_rounds)
+        
+        # Phase 2: Process milestones in parallel (materialization + assessment)
+        milestone_assessments = []
+        if enable_assessments and milestones:
+            print(f"   🔄 Processing {len(milestones)} milestones in parallel...")
+            milestone_assessments = await self._process_milestones_parallel(
+                dummy, conversation, milestones
+            )
+        
+        return conversation, milestone_assessments
+    
+    async def _run_continuous_conversation(self, dummy: AIDummy, base_prompt: str, max_rounds: int) -> Conversation:
+        """Run conversation continuously without milestone interruptions"""
         
         conversation = Conversation(
             id=f"conv_{dummy.id}_{datetime.now().strftime('%Y%m%d_%H%M%S')}",
@@ -243,10 +261,9 @@ class ConversationLengthExperimentWithEvolution:
             system_prompt=base_prompt,
             scenario="Social skills coaching session",
             turns=[],
-            created_at=datetime.now()
+            start_time=datetime.now()
         )
         
-        milestone_assessments = []
         current_round = 0
         
         # Generate initial dummy response
@@ -261,7 +278,7 @@ class ConversationLengthExperimentWithEvolution:
         ))
         current_round += 1
         
-        # Main conversation loop with milestone assessments
+        # Continuous conversation loop (no milestone interruptions)
         while current_round <= max_rounds:
             # Generate AI response
             ai_response = await self.conversation_simulator._generate_ai_response_async(
@@ -274,31 +291,84 @@ class ConversationLengthExperimentWithEvolution:
                 metadata={"round": current_round, "turn_number": current_round * 2}
             ))
             
-            # Check if we've reached a milestone
-            if enable_assessments and current_round in milestones and self.assessment_system:
-                print(f"   📊 Milestone assessment at round {current_round}...")
-                
-                # Materialize personality evolution before milestone assessment
-                print(f"   🧠 Materializing personality evolution before milestone {current_round}...")
-                evolution_stage = await personality_materializer.materialize_personality_from_conversation(
-                    dummy=dummy,
-                    conversation=conversation,
-                    prompt_id="conversation_length_test",
-                    prompt_name="Conversation Length Test",
-                    generation=0,
-                    pre_assessment_score=2.5,  # Will be updated with actual pre-assessment later
-                    post_assessment_score=0.0  # Will be updated after milestone assessment
+            # Generate dummy response for next round (if not the last round)
+            if current_round < max_rounds:
+                dummy_response = await self.conversation_simulator._generate_character_response_async(
+                    conversation, dummy, current_round + 1
                 )
-                
-                if evolution_stage:
-                    dummy.add_evolution_stage(evolution_stage)
-                    personality_evolution_storage.save_personality_evolution(dummy)
-                    print(f"   ✅ Personality evolution captured before milestone {current_round}")
-                
-                # Run milestone assessment (using current evolved personality)
-                # Create a minimal pre-assessment for milestone assessment
+                conversation.turns.append(ConversationTurn(
+                    speaker="dummy",
+                    message=dummy_response,
+                    timestamp=datetime.now(),
+                    metadata={"turn_number": current_round * 2 + 1}
+                ))
+            
+            current_round += 1
+        
+        print(f"   ✅ Continuous conversation completed: {len(conversation.turns)} turns")
+        return conversation
+    
+    async def _process_milestones_parallel(self, dummy: AIDummy, conversation: Conversation, milestones: List[int]) -> List[Dict[str, Any]]:
+        """Process all milestones in parallel (materialization + assessment)"""
+        
+        # Create tasks for all milestones
+        milestone_tasks = []
+        for milestone_round in milestones:
+            task = self._process_single_milestone(dummy, conversation, milestone_round)
+            milestone_tasks.append(task)
+        
+        # Run all milestone processing in parallel
+        milestone_results = await asyncio.gather(*milestone_tasks, return_exceptions=True)
+        
+        # Filter out exceptions and collect valid results
+        valid_milestone_assessments = []
+        for i, result in enumerate(milestone_results):
+            if isinstance(result, Exception):
+                print(f"   ⚠️  Milestone {milestones[i]} failed: {result}")
+            elif result:
+                valid_milestone_assessments.append(result)
+                print(f"   ✅ Milestone {milestones[i]} completed: {result['milestone_score']:.2f}")
+        
+        return valid_milestone_assessments
+    
+    async def _process_single_milestone(self, dummy: AIDummy, conversation: Conversation, milestone_round: int) -> Optional[Dict[str, Any]]:
+        """Process a single milestone: materialization + assessment"""
+        
+        print(f"   📊 Processing milestone {milestone_round}...")
+        
+        # Create conversation up to milestone point
+        milestone_conversation = Conversation(
+            id=f"conv_{dummy.id}_milestone_{milestone_round}",
+            dummy_id=dummy.id,
+            system_prompt=conversation.system_prompt,
+            scenario=conversation.scenario,
+            turns=[turn for turn in conversation.turns if turn.metadata.get("round", 0) <= milestone_round],
+            start_time=conversation.start_time
+        )
+        
+        try:
+            # Materialize personality evolution at this milestone
+            print(f"   🧠 Materializing personality evolution at milestone {milestone_round}...")
+            evolution_stage = await personality_materializer.materialize_personality_from_conversation(
+                dummy=dummy,
+                conversation=milestone_conversation,
+                prompt_id="conversation_length_test",
+                prompt_name="Conversation Length Test",
+                generation=0,
+                pre_assessment_score=2.5,  # Will be updated with actual pre-assessment later
+                post_assessment_score=0.0  # Will be updated after milestone assessment
+            )
+            
+            if evolution_stage:
+                dummy.add_evolution_stage(evolution_stage)
+                personality_evolution_storage.save_personality_evolution(dummy)
+                print(f"   ✅ Personality evolution captured at milestone {milestone_round}")
+            
+            # Run milestone assessment (using current evolved personality)
+            if self.assessment_system:
                 from assessment_system_llm_based import Assessment, AssessmentResponse
                 baseline_score = 2.5  # Default baseline, will be updated with actual pre-assessment later
+                
                 # Create baseline assessment responses
                 baseline_responses = []
                 for i in range(20):
@@ -319,7 +389,7 @@ class ConversationLengthExperimentWithEvolution:
                 )
                 
                 milestone_assessment = await self.assessment_system.generate_post_assessment(
-                    dummy, milestone_pre_assessment, conversation
+                    dummy, milestone_pre_assessment, milestone_conversation
                 )
                 
                 # Update evolution stage with milestone assessment score
@@ -328,18 +398,17 @@ class ConversationLengthExperimentWithEvolution:
                     evolution_stage.improvement_score = milestone_assessment.average_score - baseline_score
                     personality_evolution_storage.save_personality_evolution(dummy)
                 
-                # Calculate improvement from baseline (pre-assessment will be calculated later)
-                baseline_score = 2.5  # Default baseline, will be updated with actual pre-assessment
+                # Calculate improvement from baseline
                 improvement = milestone_assessment.average_score - baseline_score
                 
                 milestone_result = {
-                    "milestone_rounds": current_round,
+                    "milestone_rounds": milestone_round,
                     "pre_score": baseline_score,
                     "milestone_score": round(milestone_assessment.average_score, 2),
                     "improvement": round(improvement, 3),
-                    "conversation_turns": len(conversation.turns),
+                    "conversation_turns": len(milestone_conversation.turns),
                     "timestamp": datetime.now().isoformat(),
-                    "note": "Real assessment at milestone with personality evolution",
+                    "note": "Real assessment at milestone with personality evolution (parallel processing)",
                     "detailed_assessment": {
                         "dummy_id": milestone_assessment.dummy_id,
                         "timestamp": milestone_assessment.timestamp.isoformat(),
@@ -357,24 +426,14 @@ class ConversationLengthExperimentWithEvolution:
                         ]
                     }
                 }
-                milestone_assessments.append(milestone_result)
-                print(f"   📊 Milestone {current_round}: {milestone_assessment.average_score:.2f} (improvement: {improvement:+.3f})")
+                
+                return milestone_result
             
-            # Generate dummy response for next round
-            if current_round < max_rounds:
-                dummy_response = await self.conversation_simulator._generate_character_response_async(
-                    conversation, dummy, current_round + 1
-                )
-                conversation.turns.append(ConversationTurn(
-                    speaker="dummy",
-                    message=dummy_response,
-                    timestamp=datetime.now(),
-                    metadata={"turn_number": current_round * 2 + 1}
-                ))
-            
-            current_round += 1
+        except Exception as e:
+            print(f"   ❌ Error processing milestone {milestone_round}: {e}")
+            return None
         
-        return conversation, milestone_assessments
+        return None
     
     def print_analysis(self, results: List[Dict[str, Any]]):
         """Print analysis of results"""
@@ -426,7 +485,7 @@ async def main():
     # Parse milestones
     milestones = [int(x.strip()) for x in args.milestones.split(",")]
     
-    # Default prompt - improved to address response quality issues
+    # Default prompt - improved to address response quality issues and prevent conversation degradation
     base_prompt = args.prompt or """You are a helpful peer mentor for college students. Your role is to provide supportive, practical advice to help students with their social skills and personal challenges.
 
 IMPORTANT GUIDELINES:
@@ -438,7 +497,14 @@ IMPORTANT GUIDELINES:
 - Address the student's specific concerns and fears
 - Offer concrete next steps they can take
 
-Remember: You are the advisor helping the student, not the student themselves."""
+CONVERSATION CONTINUITY:
+- This is an ongoing coaching session - NEVER end the conversation
+- Do NOT use phrases like "[End of conversation]" or suggest the conversation is over
+- Always provide helpful follow-up questions or additional guidance
+- Continue supporting the student throughout the entire session
+- Each response should encourage further discussion and growth
+
+Remember: You are the advisor helping the student, not the student themselves. Keep the conversation flowing naturally."""
     
     # Load dummies
     dummies_file = "data/ai_dummies.json"

@@ -3,8 +3,8 @@
   "dummy_name": "Lisa Smith",
   "current_experiment_id": "conversation_length_with_evolution",
   "current_prompt_id": "conversation_length_test",
-  "created_at": "2025-10-02T00:20:12.744830",
-  "last_updated": "2025-10-02T00:35:50.161600",
+  "created_at": "2025-10-02T13:25:22.295643",
+  "last_updated": "2025-10-02T13:37:01.742246",
   "conversation_profile": {
     "original_fears": [
       "Time management with coursework",
@@ -33,24 +33,24 @@
       "openness": 10
     },
     "current_fears": [
-      "Drowning in lesson plans and research proposals while worrying about loans",
-      "Navigating repayment options on studentaid.gov and fearing bureaucratic nightmares",
-      "Stressing over drafting curriculum units and research proposals under deadline pressure",
-      "Networking anxiety for securing a research position"
+      "Time management with coursework",
+      "Student loan debt and financial stress",
+      "Academic failure and poor grades",
+      "Choosing the right career path"
     ],
     "current_challenges": [
-      "Distraction from roommate noise while studying",
-      "Dealing with glitchy loan websites and calling the federal hotline before overthinking"
+      "Dealing with homesickness",
+      "Managing student loans"
     ],
     "current_behaviors": [
-      "Aggressively flipping through planner to block 50-minute Pomodoro sessions at night",
+      "Stays up late studying",
       "Eats at the dining hall",
-      "Grumbling about starting loan calls until prompted to act immediately"
+      "Procrastinates on assignments"
     ],
     "current_anxiety_triggers": [
-      "Anxiety about approaching professors (Dr. Carter) in academic settings"
+      "Large lecture halls"
     ],
-    "current_social_anxiety_level": 4,
+    "current_social_anxiety_level": 8,
     "current_big_five": {
       "extraversion": 6,
       "agreeableness": 2,
@@ -64,170 +64,39 @@
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_20251002_002033",
-        "conversation_summary": "The coach provided strategies for time management (Pomodoro), networking (targeted professor approach), and loan management (hotline). Lisa accepted all solutions despite initial resistance, committing to specific actions like library studying, questioning Dr. Carter, and immediate loan calls, showing decreased anxiety through humor and engagement.",
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_5",
+        "conversation_summary": "Lisa expressed overwhelming stress about research proposals, loan debt, and lecture anxiety. Solutions offered included: 1) Structured application drafting with professor feedback, 2) Lecture recording for desensitization, 3) Financial aid meeting, and 4) Scheduled family calls. Lisa implemented key solutions immediately: emailed Dr. Carter with specific questions, blocked work time, called her mother, recorded a practice lecture, and submitted her application. Progress is evident through her adoption of concrete strategies (color-coding interview prep, using cloud storage), decreased defensiveness (accepting templates while pretending annoyance), and proactive outreach to professors. Her anxiety visibly decreased from initial panic to focused action.",
         "fears_materialized": {
-          "Time management with coursework": "Overwhelmed by lesson plans and research proposals while worrying about loans",
-          "Student loan debt and financial stress": "Frustration with loan repayment options and website glitches",
-          "Choosing the right career path": "Networking pressure for securing a research position"
+          "Time management with coursework": "Panicking about research proposal deadline while juggling lesson plans",
+          "Student loan debt and financial stress": "Anxiety over loan statements while studying, aggressive spreadsheet updates",
+          "Academic failure and poor grades": "Terror of blanking during lectures despite overpreparation",
+          "Choosing the right career path": "Desperation about securing research position for career advancement"
         },
         "challenges_materialized": {
-          "Managing student loans": "Navigating repayment options and dealing with bureaucratic systems"
+          "Dealing with homesickness": "Avoiding calls home to hide tears about missing mother's cooking",
+          "Managing student loans": "Stressing over repayment during academic work, needing budget spreadsheet time"
         },
         "behaviors_detailed": {
-          "Stays up late studying": "Drafting curriculum units at night",
-          "Procrastinates on assignments": "Delaying loan management tasks"
+          "Stays up late studying": "Planning three all-nighters for honors distinction",
+          "Eats at dining hall": "Not explicitly shown in conversation",
+          "Procrastinates on assignments": "Aggressive last-minute work on research proposal before deadline"
         },
-        "triggers_specified": {},
+        "triggers_specified": {
+          "Large lecture halls": "Anxiety about blanking mid-lecture despite thorough preparation"
+        },
         "anxiety_change": -0.5,
         "new_anxiety_level": 5.5,
         "pre_assessment_score": 2.5,
         "post_assessment_score": 3.05,
         "improvement_score": 0.5499999999999998,
-        "timestamp": "2025-10-02T00:21:50.389808"
+        "timestamp": "2025-10-02T13:32:55.210633"
       },
       {
         "stage_number": 2,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_20251002_002033",
-        "conversation_summary": "Coached Lisa through coursework, loan, and networking stress using concrete strategies like Pomodoro technique, professor outreach scripts, and hotline negotiation tactics. She implemented loan solutions immediately, planned academic networking, and adopted humor to reframe challenges, showing decreased anxiety through proactive engagement.",
-        "fears_materialized": {
-          "Time management with coursework": "Struggling to draft curriculum unit while roommate creates noise distractions",
-          "Student loan debt and financial stress": "Frustration with loan website errors and fear of bureaucratic repayment processes",
-          "Academic failure and poor grades": "Anxiety about Dr. Carter trapping her in lengthy office hours instead of focusing on assignments"
-        },
-        "challenges_materialized": {
-          "Managing student loans": "Navigating studentaid.gov website glitches and calling loan hotline before 8pm deadline"
-        },
-        "behaviors_detailed": {
-          "Stays up late studying": "Blocking 50-minute library sessions at 1900 hours with noise-canceling headphones",
-          "Procrastinates on assignments": "Rushing loan calls 20 minutes before office closing time"
-        },
-        "triggers_specified": {
-          "Large lecture halls": "Not explicitly mentioned; new context-specific anxiety emerged about being trapped in Dr. Carter's office during office hours"
-        },
-        "anxiety_change": -1.0,
-        "new_anxiety_level": 5.0,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.5,
-        "timestamp": "2025-10-02T00:23:13.083761"
-      },
-      {
-        "stage_number": 3,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_20251002_002033",
-        "conversation_summary": "Coached Lisa through time management (Pomodoro/library), networking (targeted professor approach), and loan stress (hotline strategy). She implemented all solutions, showing reduced anxiety through successful loan negotiation, academic engagement with Dr. Carter, and humorous reframing of challenges.",
-        "fears_materialized": {
-          "Time management with coursework": "Struggling to draft curriculum units while organizing study notes late at night",
-          "Student loan debt and financial stress": "Frustration with loan repayment website errors and fear of bureaucratic nightmares",
-          "Academic failure and poor grades": "Anxiety about meeting Dr. Carter's expectations for research discussions",
-          "Choosing the right career path": "Pressure to network for a research position despite feeling overwhelmed"
-        },
-        "challenges_materialized": {
-          "Managing student loans": "Dealing with glitchy repayment websites and stressful hotline calls before deadlines"
-        },
-        "behaviors_detailed": {
-          "Stays up late studying": "Blocking 50-minute Pomodoro sessions at night despite roommate distractions",
-          "Procrastinates on assignments": "Rushing loan calls 20 minutes before office closing after avoiding them"
-        },
-        "triggers_specified": {
-          "Large lecture halls": "Not explicitly mentioned, but academic interactions materialized as anxiety about one-on-one office hours with professors like Dr. Carter"
-        },
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 4.5,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.1,
-        "improvement_score": 0.6000000000000001,
-        "timestamp": "2025-10-02T00:24:40.942066"
-      },
-      {
-        "stage_number": 4,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_20251002_002033",
-        "conversation_summary": "The coach provided strategies for time management, networking, and loan stress, including Pomodoro technique, approaching a professor, and calling loan services. Lisa accepted these solutions, took action on loans, and showed reduced anxiety through humor and successful execution.",
-        "fears_materialized": {
-          "Time management with coursework": "overwhelmed with lesson plans and research proposals",
-          "Student loan debt and financial stress": "frustration with loan repayment bureaucracy and calling the hotline",
-          "Choosing the right career path": "concern about networking for a research position"
-        },
-        "challenges_materialized": {
-          "Managing student loans": "dealing with loan website errors and calling the hotline"
-        },
-        "behaviors_detailed": {
-          "Stays up late studying": "trying Pomodoro sessions tonight for curriculum draft",
-          "Procrastinates on assignments": "delaying loan-related tasks until pressured to act"
-        },
-        "triggers_specified": {},
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 4.5,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.05,
-        "improvement_score": 0.5499999999999998,
-        "timestamp": "2025-10-02T00:26:49.223359"
-      },
-      {
-        "stage_number": 5,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_20251002_002033",
-        "conversation_summary": "Discussed time management (Pomodoro technique), networking (targeted professor outreach), and loan stress (hotline strategy). Student progressed from reluctant acceptance to confident execution, culminating in successful loan negotiation and humorous escalation into academic mischief themes.",
-        "fears_materialized": {
-          "Time management with coursework": "Drowning in lesson plans and research proposals while procrastinating",
-          "Student loan debt and financial stress": "Fearing bureaucratic nightmares with repayment options and yelling at civil servants",
-          "Academic failure and poor grades": "Stressing over curriculum drafts and research proposals",
-          "Choosing the right career path": "Worrying networking feels forced for research positions"
-        },
-        "challenges_materialized": {
-          "Managing student loans": "Navigating glitchy repayment websites and confrontational hotline calls",
-          "Dealing with homesickness": "Not explicitly mentioned in conversation"
-        },
-        "behaviors_detailed": {
-          "Stays up late studying": "Aggressively flipping through planner to block 50-minute Pomodoro sessions",
-          "Eats at the dining hall": "Not explicitly mentioned in conversation",
-          "Procrastinates on assignments": "Grumbling about starting curriculum drafts until pressured"
-        },
-        "triggers_specified": {
-          "Large lecture halls": "Not explicitly mentioned; shifted to Dr. Carter's office hours as anxiety context"
-        },
-        "anxiety_change": -3.0,
-        "new_anxiety_level": 3.0,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.1,
-        "improvement_score": 0.6000000000000001,
-        "timestamp": "2025-10-02T00:28:08.326794"
-      },
-      {
-        "stage_number": 6,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_20251002_002033",
-        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
-        "fears_materialized": {},
-        "challenges_materialized": {},
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": 0.0,
-        "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.85,
-        "improvement_score": 0.3500000000000001,
-        "timestamp": "2025-10-02T00:29:36.264449"
-      },
-      {
-        "stage_number": 7,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_20251002_002033",
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_15",
         "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
         "fears_materialized": {},
         "challenges_materialized": {},
@@ -238,94 +107,205 @@
         "pre_assessment_score": 2.5,
         "post_assessment_score": 2.95,
         "improvement_score": 0.4500000000000002,
-        "timestamp": "2025-10-02T00:31:09.481001"
+        "timestamp": "2025-10-02T13:33:26.586447"
+      },
+      {
+        "stage_number": 3,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_10",
+        "conversation_summary": "Lisa discussed overwhelming academic pressures (research proposals, teaching anxiety, loan stress) and homesickness. Solutions offered included: 1) Time-blocking for tasks, 2) Structured professor outreach (email drafts + printed copies), 3) Lecture recording practice, 4) Scheduled family calls/budget time, and 5) Cloud backups. Lisa initially resisted but implemented: emailed Dr. Carter, recorded lecture successfully, submitted applications, and created organizational systems (color-coding, templates). Progress evidenced by: research application submission, lecture recording accomplishment, scheduled budget/karaoke self-care integration, and proactive resource management (cloud storage, professor feedback).",
+        "fears_materialized": {
+          "Time management with coursework": "Overwhelmed by simultaneous lesson planning, research proposals, and coursework deadlines",
+          "Student loan debt and financial stress": "Receiving student loan statements while juggling academic pressures",
+          "Academic failure and poor grades": "Panic about submitting research proposal by Friday deadline",
+          "Choosing the right career path": "Intense pressure to secure competitive research position for career advancement"
+        },
+        "challenges_materialized": {
+          "Dealing with homesickness": "Emotional breakdowns when thinking about missing family/mom's cooking",
+          "Managing student loans": "Constant anxiety about repayment while balancing academic workload"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Planning three all-nighters to complete research proposal",
+          "Eats at the dining hall": "Not explicitly mentioned in conversation",
+          "Procrastinates on assignments": "Delaying research proposal until deadline pressure intensifies"
+        },
+        "triggers_specified": {
+          "Large lecture halls": "Anxiety about teaching lectures (hands shaking while holding whiteboard marker)"
+        },
+        "anxiety_change": -1.0,
+        "new_anxiety_level": 5.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.1,
+        "improvement_score": 0.6000000000000001,
+        "timestamp": "2025-10-02T13:33:50.941987"
+      },
+      {
+        "stage_number": 4,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_30",
+        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
+        "fears_materialized": {},
+        "challenges_materialized": {},
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": 0.0,
+        "new_anxiety_level": 8.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.3999999999999999,
+        "timestamp": "2025-10-02T13:34:40.817612"
+      },
+      {
+        "stage_number": 5,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_20",
+        "conversation_summary": "Discussed: 1) Overwhelm from research applications/lecture anxiety, 2) Homesickness and loan stress, 3) Procrastination tendencies. Solutions offered/accepted: Email+print strategy for professor meetings, lecture recordings with cheat sheets, scheduled family calls, and color-coded planning systems. Lisa responded by immediately implementing solutions: submitted research applications, recorded lecture practice, scheduled financial planning, and organized interview prep. Progress evidenced by: receiving professor feedback, reduced lecture anxiety through practice, strategic application submissions, and self-awareness about thoroughness as strength.",
+        "fears_materialized": {
+          "Time management with coursework": "Overwhelmed by simultaneous lesson planning and research proposal deadlines, considering all-nighters",
+          "Student loan debt and financial stress": "Receiving loan statements while juggling academic pressures",
+          "Academic failure and poor grades": "Panic about securing honors distinction and research positions",
+          "Choosing the right career path": "Anxiety about research position applications determining academic future"
+        },
+        "challenges_materialized": {
+          "Dealing with homesickness": "Emotional difficulty calling home without crying about missing family",
+          "Managing student loans": "Stress from loan statements interfering with academic focus"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Planning 3 all-nighters for coursework/research applications",
+          "Procrastinates on assignments": "Delaying research proposal until deadline pressure (Friday submission)"
+        },
+        "triggers_specified": {
+          "Large lecture halls": "Anxiety about lecturing/teaching (physical manifestation: shaking hands while holding markers)"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 4.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.1,
+        "improvement_score": 0.6000000000000001,
+        "timestamp": "2025-10-02T13:34:44.923706"
+      },
+      {
+        "stage_number": 6,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_35",
+        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
+        "fears_materialized": {},
+        "challenges_materialized": {},
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": 0.0,
+        "new_anxiety_level": 8.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.05,
+        "improvement_score": 0.5499999999999998,
+        "timestamp": "2025-10-02T13:35:32.796851"
+      },
+      {
+        "stage_number": 7,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_25",
+        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
+        "fears_materialized": {},
+        "challenges_materialized": {},
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": 0.0,
+        "new_anxiety_level": 8.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.8,
+        "improvement_score": 0.2999999999999998,
+        "timestamp": "2025-10-02T13:36:13.400623"
       },
       {
         "stage_number": 8,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_20251002_002033",
-        "conversation_summary": "Discussed time management, networking, and loan stress solutions. Lisa implemented Pomodoro studying, prepared specific professor questions, and called loan hotline. Anxiety decreased through actionable plans and humor, culminating in successful loan resolution.",
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_45",
+        "conversation_summary": "Discussed: 1) Overwhelm from research apps/lecture anxiety, 2) Student loan panic, 3) Homesickness, 4) Teaching jitters. Solutions: Email+print materials for professor meetings, schedule decompression blocks, teaching recording technique, revolutionary planning sessions. Response: Lisa implemented time-blocking for proposals, scheduled family calls, used color-coding for interviews, attempted lecture recording. Progress: Secured professor feedback, developed concrete lecture coping strategies (grounding/teacher voice), scheduled financial self-care, organized change-making meeting.",
         "fears_materialized": {
-          "Time management with coursework": "Overwhelmed by lesson plans and research proposals",
-          "Student loan debt and financial stress": "Worrying about repayment options and website glitches",
-          "Academic failure and poor grades": "Procrastinating on curriculum draft assignments",
-          "Choosing the right career path": "Networking anxiety for research position opportunities"
+          "Time management with coursework": "Overwhelmed by lesson plans/research proposals while organizing study notes late at night",
+          "Student loan debt and financial stress": "Panic when receiving loan statements while juggling academic work",
+          "Academic failure and poor grades": "Terror of blanking out during lectures despite overpreparation",
+          "Choosing the right career path": "Intense pressure to secure research positions for career advancement"
         },
         "challenges_materialized": {
-          "Managing student loans": "Navigating studentaid.gov errors and hotline bureaucracy"
+          "Dealing with homesickness": "Unable to call family without crying about missing home/mom's cooking",
+          "Managing student loans": "Updating repayment spreadsheets conflicting with revolution planning time"
         },
         "behaviors_detailed": {
-          "Stays up late studying": "Blocking 50-minute Pomodoro sessions at night",
-          "Procrastinates on assignments": "Delaying loan tasks until deadline pressure"
+          "Stays up late studying": "Pulling all-nighters for research proposals at dorm desk",
+          "Eats at the dining hall": "Not mentioned (assumed routine)",
+          "Procrastinates on assignments": "Delaying lecture preparation until last 3 minutes before class"
         },
-        "triggers_specified": {},
+        "triggers_specified": {
+          "Large lecture halls": "Physical shaking while holding whiteboard markers in front of class"
+        },
         "anxiety_change": -1.5,
         "new_anxiety_level": 4.5,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.05,
-        "improvement_score": 0.5499999999999998,
-        "timestamp": "2025-10-02T00:32:36.353619"
+        "post_assessment_score": 3.1,
+        "improvement_score": 0.6000000000000001,
+        "timestamp": "2025-10-02T13:36:18.420432"
       },
       {
         "stage_number": 9,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_20251002_002033",
-        "conversation_summary": "Discussed time management, networking, and loan stress solutions using Pomodoro, professor outreach, and hotline strategies. Student progressed from resistance to implementing study plans, securing professor meeting, and successfully handling loan call with humor.",
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_40",
+        "conversation_summary": "Discussed: 1) Overwhelming workload causing all-nighters, 2) Loan statements triggering financial panic, 3) Teaching anxiety in lectures, 4) Research applications determining career path. Solutions: Time-blocking for tasks, recording practice lectures, scheduled family calls, targeted professor feedback. Response: Initially resistant (dismissed Pomodoro), but implemented scheduling, called mom, submitted research applications, and recorded lecture. Progress: Completed proposal draft, scheduled decompression time, created loan spreadsheet, applied to multiple positions with color-coded organization.",
         "fears_materialized": {
-          "Time management with coursework": "Drowning in lesson plans and research proposals while drafting curriculum units",
-          "Student loan debt and financial stress": "Dealing with bureaucratic nightmares on studentaid.gov and fearing loan repayment glitches",
-          "Academic failure and poor grades": "Procrastinating on assignments like curriculum drafts despite aggressive planner use",
-          "Choosing the right career path": "Feeling networking is crucial but forced for securing a research position"
+          "Time management with coursework": "Overwhelmed by juggling lesson plans, research proposals, and lectures simultaneously",
+          "Student loan debt and financial stress": "Panic when receiving loan statements while already stressed about academic workload",
+          "Academic failure and poor grades": "Fear of bombing lecture delivery despite thorough preparation",
+          "Choosing the right career path": "Anxiety about research position applications determining academic future"
         },
         "challenges_materialized": {
-          "Managing student loans": "Navigating studentaid.gov errors and calling the 1-800 hotline while fearing bureaucratic traps"
+          "Dealing with homesickness": "Crying during calls home while craving mother's cooking",
+          "Managing student loans": "Updating repayment spreadsheets during revolutionary planning meetings"
         },
         "behaviors_detailed": {
-          "Stays up late studying": "Drafting curriculum units at night despite roommate noise disruptions",
-          "Procrastinates on assignments": "Aggressively flipping through planner while delaying loan repayment tasks"
+          "Stays up late studying": "Pulling three consecutive all-nighters for honors distinction",
+          "Procrastinates on assignments": "Delaying research proposal until deadline pressure forced action"
         },
-        "triggers_specified": {},
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 5.5,
+        "triggers_specified": {
+          "Large lecture halls": "Teaching anxiety manifesting as hand tremors and blanking out during lectures"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 4.5,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.5,
-        "timestamp": "2025-10-02T00:34:08.309272"
+        "post_assessment_score": 3.1,
+        "improvement_score": 0.6000000000000001,
+        "timestamp": "2025-10-02T13:36:32.555710"
       },
       {
         "stage_number": 10,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_20251002_002033",
-        "conversation_summary": "Discussed time management, loan stress, and networking anxiety. Lisa accepted Pomodoro technique, professor outreach strategies, and immediate loan calls. Showed progress through scheduled meetings, successful loan negotiation, and humor-based coping. Ended with reduced anxiety and concrete action plans.",
-        "fears_materialized": {
-          "Time management with coursework": "Drowning in lesson plans and research proposals while worrying about loans",
-          "Student loan debt and financial stress": "Navigating repayment options on studentaid.gov and fearing bureaucratic nightmares",
-          "Academic failure and poor grades": "Stressing over drafting curriculum units and research proposals under deadline pressure",
-          "Choosing the right career path": "Networking anxiety for securing a research position"
-        },
-        "challenges_materialized": {
-          "Managing student loans": "Dealing with glitchy loan websites and calling the federal hotline before overthinking",
-          "Dealing with homesickness": "Distraction from roommate noise while studying"
-        },
-        "behaviors_detailed": {
-          "Stays up late studying": "Aggressively flipping through planner to block 50-minute Pomodoro sessions at night",
-          "Procrastinates on assignments": "Grumbling about starting loan calls until prompted to act immediately"
-        },
-        "triggers_specified": {
-          "Large lecture halls": "Anxiety about approaching professors (Dr. Carter) in academic settings"
-        },
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 4.5,
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_50",
+        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
+        "fears_materialized": {},
+        "challenges_materialized": {},
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": 0.0,
+        "new_anxiety_level": 8.0,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.7999999999999998,
-        "timestamp": "2025-10-02T00:35:50.161096"
+        "post_assessment_score": 3.0,
+        "improvement_score": 0.04999999999999982,
+        "timestamp": "2025-10-02T13:37:01.741759"
       }
     ],
     "current_stage": 10

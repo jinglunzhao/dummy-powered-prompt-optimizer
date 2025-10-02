@@ -106,7 +106,7 @@ Start with a natural opening message (1-2 sentences)."""
         
         # Prepare conversation history
         messages = [
-            {"role": "system", "content": system_prompt + "\n\nIMPORTANT: Keep your response concise and under 150 words. Focus on being helpful and encouraging without being overly long."},
+            {"role": "system", "content": system_prompt + "\n\nIMPORTANT: Keep your response concise and under 150 words. Focus on being helpful and encouraging without being overly long. NEVER end the conversation or use phrases like '[End of conversation]' - this is an ongoing coaching session."},
             {"role": "user", "content": f"Student Profile: {dummy.get_character_summary()}"}
         ]
         

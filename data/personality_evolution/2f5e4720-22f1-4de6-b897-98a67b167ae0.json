@@ -3,8 +3,8 @@
   "dummy_name": "Gregory Moore",
   "current_experiment_id": "conversation_length_with_evolution",
   "current_prompt_id": "conversation_length_test",
-  "created_at": "2025-10-02T08:10:07.513007",
-  "last_updated": "2025-10-02T08:16:10.544815",
+  "created_at": "2025-10-02T13:25:22.286910",
+  "last_updated": "2025-10-02T13:51:55.648655",
   "conversation_profile": {
     "original_fears": [
       "Choosing the right career path",
@@ -36,25 +36,25 @@
       "openness": 7
     },
     "current_fears": [
-      "Choosing the right career path",
-      "Social anxiety in large lecture halls",
-      "Academic failure and poor grades",
-      "Dealing with roommate conflicts"
+      "Preparing grad school applications while doubting CS specialization",
+      "Asking questions in Algorithms class to approach Dr. Chen",
+      "Panic about presenting research to hedgehog experts",
+      "Not explicitly discussed (remains abstract)"
     ],
     "current_challenges": [
-      "tracking coffee and boba tea spending to create a budget",
-      "Finding a mentor",
-      "meeting with financial aid and reviewing loan documents"
+      "Reviewing loan amortization schedules before financial aid meeting",
+      "Approaching Dr. Chen after class about NLP research",
+      "Preparing specific questions about grace periods/subsidized loans"
     ],
     "current_behaviors": [
       "Eats at the dining hall",
-      "Participates in study groups",
-      "Volunteers for campus events"
+      "Transformed into 'Code & Converse Wednesdays' professional practice sessions",
+      "Using campus mixer to practice grad school pitches"
     ],
     "current_anxiety_triggers": [
-      "Networking events",
-      "giving project demos at hackathons",
-      "Campus social events"
+      "CS department mixer elevator pitch practice",
+      "Hedgehog researcher talk preparation",
+      "Department head 'coffee bump' strategy at espresso machine"
     ],
     "current_social_anxiety_level": 2,
     "current_big_five": {
@@ -70,51 +70,283 @@
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_20251002_081033",
-        "conversation_summary": "Addressed Gregory's financial stress and networking challenges through concrete steps: scheduling financial aid meeting, hackathon networking strategies, and budget planning. Gregory showed public speaking progress from hackathons and committed to preparing documents and practicing pitches, demonstrating reduced overwhelm.",
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_5",
+        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
         "fears_materialized": {},
-        "challenges_materialized": {
-          "Financial planning": "Creating a 6-month financial plan while budgeting daily expenses like coffee",
-          "Managing student loans": "Reviewing repayment options with financial aid and downloading loan documents"
-        },
-        "behaviors_detailed": {
-          "Volunteers for campus events": "Participating in hackathons and giving project demos"
-        },
-        "triggers_specified": {
-          "Presentations": "Giving project demos at hackathons",
-          "Networking events": "Exchanging contacts at hackathons"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 2.5,
+        "challenges_materialized": {},
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": 0.0,
+        "new_anxiety_level": 8.0,
         "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.5,
-        "timestamp": "2025-10-02T08:13:40.974101"
+        "post_assessment_score": 2.5,
+        "improvement_score": 0.0,
+        "timestamp": "2025-10-02T13:49:24.358553"
       },
       {
         "stage_number": 2,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_20251002_081033",
-        "conversation_summary": "Discussed managing student loans through financial aid meetings, creating budgets including beverage spending, and leveraging hackathon experiences for grad school applications. Gregory committed to preparing loan documents, tracking expenses, and practicing elevator pitches, showing reduced anxiety through enthusiastic engagement and recalling successful demo experiences.",
-        "fears_materialized": {},
-        "challenges_materialized": {
-          "Financial planning": "tracking coffee and boba tea spending to create a budget",
-          "Managing student loans": "meeting with financial aid and reviewing loan documents"
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_10",
+        "conversation_summary": "Discussed: 1) Anxiety about CS mixer elevator pitch, 2) Student loan stress impacting grad school plans, 3) Difficulty approaching professor mentors. Solutions: Structured pitch framework, study group practice sessions ('Code & Converse Wednesdays'), cookie-bribed feedback, loan management meeting scheduling, and strategic professor outreach tactics. Student responded enthusiastically: Created shared recording drive, scheduled financial meeting, drafted mentor email, and reframed anxiety as excitement. Progress evidenced by concrete systems implementation (regular practice group, financial planning) and proactive outreach steps (Dr. Chen email draft).",
+        "fears_materialized": {
+          "Choosing the right career path": "Preparing grad school applications for AI/CS programs",
+          "Social anxiety in large lecture halls": "Practicing elevator pitch for CS department mixer",
+          "Academic failure and poor grades": "Fear of bombing pitch in front of professors",
+          "Dealing with roommate conflicts": "Not explicitly discussed in this session"
         },
-        "behaviors_detailed": {},
+        "challenges_materialized": {
+          "Financial planning": "Stress over student loan numbers during grad school prep",
+          "Finding a mentor": "Approaching Dr. Chen about NLP research after class",
+          "Managing student loans": "Scheduling financial aid office meeting"
+        },
+        "behaviors_detailed": {
+          "Eats at the dining hall": "Strategic 3pm cookie raids to bribe study group",
+          "Participates in study groups": "Transformed into 'Code & Converse Wednesdays' professional practice sessions",
+          "Volunteers for campus events": "Not explicitly discussed in this session"
+        },
         "triggers_specified": {
-          "Presentations": "giving project demos at hackathons"
+          "Networking events": "CS department mixer elevator pitch",
+          "Presentations": "Hedgehog researcher presentation preparation",
+          "Campus social events": "Not explicitly discussed in this session"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 2.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.3999999999999999,
+        "timestamp": "2025-10-02T13:49:32.291665"
+      },
+      {
+        "stage_number": 3,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_25",
+        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
+        "fears_materialized": {},
+        "challenges_materialized": {},
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": 0.0,
+        "new_anxiety_level": 8.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.65,
+        "improvement_score": 0.1499999999999999,
+        "timestamp": "2025-10-02T13:50:15.726118"
+      },
+      {
+        "stage_number": 4,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_20",
+        "conversation_summary": "Gregory sought help for 1) networking anxiety (CS mixer pitch), 2) financial stress (student loans), and 3) mentor outreach (approaching Dr. Chen). Solutions offered included: a structured 3-part pitch formula, transforming his study group into a practice lab ('Code & Converse Wednesdays'), loan management strategies, and scripted professor outreach phrases. Gregory enthusiastically implemented solutions by: creating shared practice resources (Google Drive), scheduling financial aid meetings, and drafting outreach messages. Evidence of improvement includes: reframing anxiety as excitement, establishing peer accountability systems, taking concrete steps toward mentorship, and developing humor as a coping mechanism ('Dr. Cookie-Coder' persona).",
+        "fears_materialized": {
+          "Choosing the right career path": "Preparing grad school applications while questioning if AI research aligns with long-term goals",
+          "Social anxiety in large lecture halls": "Practicing networking pitch for CS department mixer with professors",
+          "Academic failure and poor grades": "Worrying about bombing pitch delivery in front of influential academics",
+          "Dealing with roommate conflicts": "Not explicitly discussed in this session"
+        },
+        "challenges_materialized": {
+          "Financial planning": "Stress over student loan numbers impacting grad school decisions",
+          "Finding a mentor": "Planning to approach Dr. Chen about NLP research after class",
+          "Managing student loans": "Discussing RA positions with tuition benefits and budgeting tools"
+        },
+        "behaviors_detailed": {
+          "Eats at the dining hall": "Strategic 3pm cookie raids to bribe study group",
+          "Participates in study groups": "Transforming group into 'Code & Converse Wednesdays' for professional practice",
+          "Volunteers for campus events": "Preparing to volunteer at CS department mixer"
+        },
+        "triggers_specified": {
+          "Networking events": "CS department mixer with professors next week",
+          "Presentations": "Practicing grad school pitch and upcoming hedgehog research presentation",
+          "Campus social events": "Using mixer as career opportunity rather than social event"
+        },
+        "anxiety_change": 4.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.6,
+        "improvement_score": 0.10000000000000009,
+        "timestamp": "2025-10-02T13:50:16.280043"
+      },
+      {
+        "stage_number": 5,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_30",
+        "conversation_summary": "Gregory sought help for 1) CS mixer elevator pitch anxiety and 2) approaching professor Dr. Chen for mentorship. Solutions offered included: structured pitch formula, study group practice sessions with recording review, and scripted professor outreach strategy. Gregory accepted all solutions, transforming his study group into 'Code & Converse Wednesdays' with cookie incentives and setting up shared resources. Evidence of progress includes: creating detailed practice systems, drafting Dr. Chen outreach email immediately, and reframing anxiety as excitement. He demonstrated leadership by institutionalizing professional development within his peer group.",
+        "fears_materialized": {
+          "Social anxiety in large lecture halls": "Nervousness about asking professor questions after Algorithms class",
+          "Academic failure and poor grades": "Fear of freezing during grad school pitch practice",
+          "Dealing with roommate conflicts": "Not discussed in this session"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Approaching Dr. Chen about NLP research after class",
+          "Managing student loans": "Planning post-mixer budgeting session",
+          "Financial planning": "Strategizing RA positions for tuition benefits"
+        },
+        "behaviors_detailed": {
+          "Participates in study groups": "Transformed group into 'Code & Converse Wednesdays' for professional skills practice",
+          "Eats at dining hall": "Strategic cookie acquisition for group bribery (3pm fresh batches)",
+          "Volunteers for campus events": "Preparing for CS department networking mixer"
+        },
+        "triggers_specified": {
+          "Networking events": "CS department grad school mixer elevator pitch",
+          "Presentations": "Practice sessions with brutally honest study group",
+          "Campus social events": "Not discussed in this session"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 2.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.75,
+        "improvement_score": 0.25,
+        "timestamp": "2025-10-02T13:50:57.542466"
+      },
+      {
+        "stage_number": 6,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_15",
+        "conversation_summary": "Gregory discussed stress about student loans during grad school applications, nervousness about an elevator pitch for a CS networking event, and fear of approaching professor Dr. Chen. Solutions included a structured pitch formula, transforming his study group into a professional practice lab ('Code & Converse'), and specific scripts for mentor outreach. Gregory enthusiastically implemented all solutions: created shared Google Drive for practice recordings, emailed loan servicer, scheduled financial meetings, and drafted research-specific questions for Dr. Chen. Evidence of progress includes establishing weekly skills labs, taking financial initiative, and developing presentation metaphors. His anxiety decreased as he shifted from avoidance to proactive problem-solving, using humor and peer support systems.",
+        "fears_materialized": {
+          "Choosing the right career path": "Preparing grad school applications while uncertain about financial sustainability",
+          "Social anxiety in large lecture halls": "Nervousness about elevator pitch at CS department networking mixer",
+          "Academic failure and poor grades": "Fear of freezing during presentation to hedgehog researchers",
+          "Dealing with roommate conflicts": "Not explicitly addressed in conversation"
+        },
+        "challenges_materialized": {
+          "Financial planning": "Stress over student loans during grad school prep",
+          "Finding a mentor": "Approaching Dr. Chen to discuss research opportunities",
+          "Managing student loans": "Emailing loan servicer about amortization schedules"
+        },
+        "behaviors_detailed": {
+          "Eats at the dining hall": "Strategic 3pm cookie acquisition for study group bribes",
+          "Participates in study groups": "Transformed into weekly 'Code & Converse' professional skills lab",
+          "Volunteers for campus events": "Active preparation for CS department mixer"
+        },
+        "triggers_specified": {
+          "Networking events": "CS department grad school mixer",
+          "Presentations": "Upcoming talk to hedgehog researchers",
+          "Campus social events": "Self-created 'Code & Converse Wednesdays'"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 2.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.8,
+        "improvement_score": 0.2999999999999998,
+        "timestamp": "2025-10-02T13:51:05.782500"
+      },
+      {
+        "stage_number": 7,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_35",
+        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
+        "fears_materialized": {},
+        "challenges_materialized": {},
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": 0.0,
+        "new_anxiety_level": 8.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.95,
+        "improvement_score": 0.4500000000000002,
+        "timestamp": "2025-10-02T13:51:07.130069"
+      },
+      {
+        "stage_number": 8,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_40",
+        "conversation_summary": "Gregory discussed 1) Grad school application stress, 2) Networking anxiety for CS mixer, 3) Student loan management, and 4) Finding mentors. Solutions offered/accepted included: structured elevator pitch framework, study group practice sessions ('Code & Converse Wednesdays'), financial aid meeting scheduling, and scripted professor approach tactics. Gregory responded proactively by immediately implementing suggestions: created shared Google Drive for recordings, booked financial aid appointment, drafted email to Dr. Chen, and developed cookie-based accountability system. Evidence of progress includes transformed study group into professional skills lab, scheduled critical meetings, and reframed anxiety through humor ('hedgehog memes', 'flammable learning opportunities').",
+        "fears_materialized": {
+          "Choosing the right career path": "Preparing grad school applications for AI-focused CS programs",
+          "Social anxiety in large lecture halls": "Asking questions after Algorithms class to approach Dr. Chen",
+          "Academic failure and poor grades": "Precision preparation for high-stakes presentation to hedgehog researchers",
+          "Dealing with roommate conflicts": "Not explicitly addressed in conversation"
+        },
+        "challenges_materialized": {
+          "Financial planning": "Scheduling financial aid appointment to discuss loan amortization",
+          "Finding a mentor": "Targeted approach to Dr. Chen after class with specific research questions",
+          "Managing student loans": "Reviewing exact loan amounts and grace periods with financial aid office"
+        },
+        "behaviors_detailed": {
+          "Eats at dining hall": "Strategic 3pm cookie acquisition for study group bribery",
+          "Participates in study groups": "Transformed into 'Code & Converse Wednesdays' professional skills lab",
+          "Volunteers for campus events": "Leveraged into networking practice (CS department mixer)"
+        },
+        "triggers_specified": {
+          "Networking events": "CS department mixer elevator pitch practice",
+          "Presentations": "Hedgehog researcher talk preparation with fireproof notecards",
+          "Campus social events": "Coffee cart 'accidental' meetings with department head"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 2.5,
         "pre_assessment_score": 2.5,
         "post_assessment_score": 2.65,
-        "improvement_score": 0.6499999999999999,
-        "timestamp": "2025-10-02T08:16:10.544310"
+        "improvement_score": 0.1499999999999999,
+        "timestamp": "2025-10-02T13:51:37.194224"
+      },
+      {
+        "stage_number": 9,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_50",
+        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
+        "fears_materialized": {},
+        "challenges_materialized": {},
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": 0.0,
+        "new_anxiety_level": 8.0,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.7,
+        "improvement_score": 0.20000000000000018,
+        "timestamp": "2025-10-02T13:51:50.450322"
+      },
+      {
+        "stage_number": 10,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_45",
+        "conversation_summary": "1) Problems discussed: Grad school application stress, networking anxiety at CS mixer, loan management paralysis, and mentor outreach fears. 2) Solutions offered/accepted: Structured elevator pitch framework; study group practice sessions with recordings; scripted professor approach strategy; financial aid meeting scheduling; humor integration for presentation anxiety. 3) Student's response: Immediately implemented solutions (created shared Google Drive, scheduled meetings, drafted emails, designed Code & Converse Wednesdays). Demonstrated decreased avoidance through proactive planning (cookie bribery logistics, rehearsal scheduling). 4) Evidence of progress: Transformed study group into professional development lab; booked financial aid appointment; prepared specific research questions for Dr. Chen; developed actionable systems (3pm cookie raids, recording reviews) showing behavioral adaptation to triggers.",
+        "fears_materialized": {
+          "Choosing the right career path": "Preparing grad school applications while doubting CS specialization",
+          "Social anxiety in large lecture halls": "Asking questions in Algorithms class to approach Dr. Chen",
+          "Academic failure and poor grades": "Panic about presenting research to hedgehog experts",
+          "Dealing with roommate conflicts": "Not explicitly discussed (remains abstract)"
+        },
+        "challenges_materialized": {
+          "Financial planning": "Reviewing loan amortization schedules before financial aid meeting",
+          "Finding a mentor": "Approaching Dr. Chen after class about NLP research",
+          "Managing student loans": "Preparing specific questions about grace periods/subsidized loans"
+        },
+        "behaviors_detailed": {
+          "Eats at dining hall": "Strategic 3pm cookie acquisition for study group bribery",
+          "Participates in study groups": "Transformed into 'Code & Converse Wednesdays' professional practice sessions",
+          "Volunteers for campus events": "Using campus mixer to practice grad school pitches"
+        },
+        "triggers_specified": {
+          "Networking events": "CS department mixer elevator pitch practice",
+          "Presentations": "Hedgehog researcher talk preparation",
+          "Campus social events": "Department head 'coffee bump' strategy at espresso machine"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 2.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.65,
+        "improvement_score": 0.25,
+        "timestamp": "2025-10-02T13:51:55.648149"
       }
     ],
-    "current_stage": 2
+    "current_stage": 10
   }
 }
