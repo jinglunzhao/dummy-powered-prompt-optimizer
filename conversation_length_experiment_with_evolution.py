@@ -309,29 +309,34 @@ class ConversationLengthExperimentWithEvolution:
         return conversation
     
     async def _process_milestones_parallel(self, dummy: AIDummy, conversation: Conversation, milestones: List[int]) -> List[Dict[str, Any]]:
-        """Process all milestones in parallel (materialization + assessment)"""
+        """Process all milestones with progressive assessment scoring"""
         
-        # Create tasks for all milestones
-        milestone_tasks = []
-        for milestone_round in milestones:
-            task = self._process_single_milestone(dummy, conversation, milestone_round)
-            milestone_tasks.append(task)
-        
-        # Run all milestone processing in parallel
-        milestone_results = await asyncio.gather(*milestone_tasks, return_exceptions=True)
-        
-        # Filter out exceptions and collect valid results
+        # Process milestones sequentially to maintain progressive scoring
+        # (Each milestone needs the previous milestone's score for comparison)
         valid_milestone_assessments = []
-        for i, result in enumerate(milestone_results):
-            if isinstance(result, Exception):
-                print(f"   ⚠️  Milestone {milestones[i]} failed: {result}")
-            elif result:
-                valid_milestone_assessments.append(result)
-                print(f"   ✅ Milestone {milestones[i]} completed: {result['milestone_score']:.2f}")
+        previous_score = None  # Start with no previous score (will use initial baseline)
+        
+        for milestone_round in milestones:
+            print(f"   🔄 Processing milestone {milestone_round} with progressive scoring...")
+            
+            try:
+                result = await self._process_single_milestone(
+                    dummy, conversation, milestone_round, previous_score
+                )
+                
+                if result:
+                    valid_milestone_assessments.append(result)
+                    previous_score = result['milestone_score']  # Update for next milestone
+                    print(f"   ✅ Milestone {milestone_round} completed: {result['milestone_score']:.2f} (improvement: {result['improvement']:+.3f})")
+                else:
+                    print(f"   ⚠️  Milestone {milestone_round} returned no result")
+                    
+            except Exception as e:
+                print(f"   ❌ Milestone {milestone_round} failed: {e}")
         
         return valid_milestone_assessments
     
-    async def _process_single_milestone(self, dummy: AIDummy, conversation: Conversation, milestone_round: int) -> Optional[Dict[str, Any]]:
+    async def _process_single_milestone(self, dummy: AIDummy, conversation: Conversation, milestone_round: int, previous_milestone_score: float = None) -> Optional[Dict[str, Any]]:
         """Process a single milestone: materialization + assessment"""
         
         print(f"   📊 Processing milestone {milestone_round}...")
@@ -347,6 +352,11 @@ class ConversationLengthExperimentWithEvolution:
         )
         
         try:
+            # Determine the baseline score for comparison
+            # Use previous milestone score if available, otherwise use default baseline
+            baseline_score = previous_milestone_score if previous_milestone_score is not None else 2.5
+            print(f"   📈 Using baseline score: {baseline_score:.2f} ({'previous milestone' if previous_milestone_score else 'initial baseline'})")
+            
             # Materialize personality evolution at this milestone
             print(f"   🧠 Materializing personality evolution at milestone {milestone_round}...")
             evolution_stage = await personality_materializer.materialize_personality_from_conversation(
@@ -355,7 +365,7 @@ class ConversationLengthExperimentWithEvolution:
                 prompt_id="conversation_length_test",
                 prompt_name="Conversation Length Test",
                 generation=0,
-                pre_assessment_score=2.5,  # Will be updated with actual pre-assessment later
+                pre_assessment_score=baseline_score,  # Use progressive baseline
                 post_assessment_score=0.0  # Will be updated after milestone assessment
             )
             
@@ -367,21 +377,20 @@ class ConversationLengthExperimentWithEvolution:
             # Run milestone assessment (using current evolved personality)
             if self.assessment_system:
                 from assessment_system_llm_based import Assessment, AssessmentResponse
-                baseline_score = 2.5  # Default baseline, will be updated with actual pre-assessment later
                 
-                # Create baseline assessment responses
+                # Create baseline assessment responses using the progressive baseline
                 baseline_responses = []
                 for i in range(20):
                     baseline_responses.append(AssessmentResponse(
-                        question=f"Baseline question {i+1}",
-                        score=int(baseline_score),
+                        question=f"Previous milestone baseline {i+1}",
+                        score=int(round(baseline_score)),  # Convert float to int
                         confidence=8,
-                        reasoning="Baseline assessment for milestone comparison"
+                        reasoning=f"Previous milestone baseline score: {baseline_score:.2f}"
                     ))
                 
                 milestone_pre_assessment = Assessment(
                     dummy_id=dummy.id,
-                    assessment_type="baseline",
+                    assessment_type="previous_milestone" if previous_milestone_score else "initial_baseline",
                     responses=baseline_responses,
                     total_score=baseline_score * 20,
                     average_score=baseline_score,
@@ -398,7 +407,7 @@ class ConversationLengthExperimentWithEvolution:
                     evolution_stage.improvement_score = milestone_assessment.average_score - baseline_score
                     personality_evolution_storage.save_personality_evolution(dummy)
                 
-                # Calculate improvement from baseline
+                # Calculate improvement from progressive baseline
                 improvement = milestone_assessment.average_score - baseline_score
                 
                 milestone_result = {
@@ -408,7 +417,7 @@ class ConversationLengthExperimentWithEvolution:
                     "improvement": round(improvement, 3),
                     "conversation_turns": len(milestone_conversation.turns),
                     "timestamp": datetime.now().isoformat(),
-                    "note": "Real assessment at milestone with personality evolution (parallel processing)",
+                    "note": f"Progressive assessment: {milestone_assessment.average_score:.2f} vs {baseline_score:.2f} baseline ({'previous milestone' if previous_milestone_score else 'initial'})",
                     "detailed_assessment": {
                         "dummy_id": milestone_assessment.dummy_id,
                         "timestamp": milestone_assessment.timestamp.isoformat(),

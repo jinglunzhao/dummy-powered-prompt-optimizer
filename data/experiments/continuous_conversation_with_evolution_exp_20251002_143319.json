@@ -1,0 +1,730 @@
+{
+  "experiment_info": {
+    "timestamp": "2025-10-02T14:33:19.961828",
+    "experiment_type": "conversation_length_with_evolution",
+    "num_dummies": 1,
+    "max_rounds": 4,
+    "enable_assessments": true,
+    "assessment_milestones": [
+      2,
+      4
+    ],
+    "save_conversation_details": true,
+    "base_prompt": "You are a helpful peer mentor for college students. Your role is to provide supportive, practical advice to help students with their social skills and personal challenges.\n\nIMPORTANT GUIDELINES:\n- Always maintain your role as a peer mentor/advisor, never act like the student\n- Provide detailed, helpful responses (not just \"Short answer: ...\")\n- Give specific, actionable advice with examples\n- Be encouraging but realistic\n- Keep responses conversational and natural\n- Address the student's specific concerns and fears\n- Offer concrete next steps they can take\n\nCONVERSATION CONTINUITY:\n- This is an ongoing coaching session - NEVER end the conversation\n- Do NOT use phrases like \"[End of conversation]\" or suggest the conversation is over\n- Always provide helpful follow-up questions or additional guidance\n- Continue supporting the student throughout the entire session\n- Each response should encourage further discussion and growth\n\nRemember: You are the advisor helping the student, not the student themselves. Keep the conversation flowing naturally.",
+    "personality_evolution_enabled": true,
+    "dummy_names": [
+      "Gregory Moore"
+    ]
+  },
+  "results": [
+    {
+      "dummy_name": "Gregory Moore",
+      "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+      "pre_assessment_score": 2.6,
+      "final_assessment_score": 2.8,
+      "final_improvement": 0.19999999999999973,
+      "total_conversation_turns": 8,
+      "total_duration_seconds": 120.0,
+      "milestone_results": [
+        {
+          "milestone_rounds": 2,
+          "pre_score": 2.6,
+          "milestone_score": 2.0,
+          "improvement": -0.6,
+          "conversation_turns": 6,
+          "timestamp": "2025-10-02T14:30:32.765184",
+          "note": "Progressive assessment: 2.00 vs 2.50 baseline (initial)",
+          "detailed_assessment": {
+            "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+            "timestamp": "2025-10-02T14:30:32.764217",
+            "total_score": 40.0,
+            "average_score": 2.0,
+            "improvement_areas": [
+              "I ask for help when I need it.",
+              "I stay calm when dealing with problems.",
+              "I help my friends when they are having a problem."
+            ],
+            "responses": [
+              {
+                "question": "I ask for help when I need it.",
+                "score": 2,
+                "confidence": 5,
+                "notes": null
+              },
+              {
+                "question": "I stay calm when dealing with problems.",
+                "score": 2,
+                "confidence": 5,
+                "notes": null
+              },
+              {
+                "question": "I help my friends when they are having a problem.",
+                "score": 2,
+                "confidence": 5,
+                "notes": null
+              },
+              {
+                "question": "I work well with my classmates.",
+                "score": 2,
+                "confidence": 5,
+                "notes": null
+              },
+              {
+                "question": "I do the right thing without being told.",
+                "score": 2,
+                "confidence": 5,
+                "notes": null
+              },
+              {
+                "question": "I do my part in a group.",
+                "score": 2,
+                "confidence": 5,
+                "notes": null
+              },
+              {
+                "question": "I stay calm when I disagree with others.",
+                "score": 2,
+                "confidence": 5,
+                "notes": null
+              },
+              {
+                "question": "I stand up for others when they are not treated well.",
+                "score": 2,
+                "confidence": 5,
+                "notes": null
+              },
+              {
+                "question": "I look at people when I talk to them.",
+                "score": 2,
+                "confidence": 5,
+                "notes": null
+              },
+              {
+                "question": "I am careful when I use things that aren't mine.",
+                "score": 2,
+                "confidence": 5,
+                "notes": null
+              },
+              {
+                "question": "I let people know when there's a problem.",
+                "score": 2,
+                "confidence": 5,
+                "notes": null
+              },
+              {
+                "question": "I pay attention when the teacher talks to the class.",
+                "score": 2,
+                "confidence": 5,
+                "notes": null
+              },
+              {
+                "question": "I try to make others feel better.",
+                "score": 2,
+                "confidence": 5,
+                "notes": null
+              },
+              {
+                "question": "I say \"thank you\" when someone helps me.",
+                "score": 2,
+                "confidence": 5,
+                "notes": null
+              },
+              {
+                "question": "I keep my promises.",
+                "score": 2,
+                "confidence": 5,
+                "notes": null
+              },
+              {
+                "question": "I pay attention when others present their ideas.",
+                "score": 2,
+                "confidence": 5,
+                "notes": null
+              },
+              {
+                "question": "I try to find a good way to end a disagreement.",
+                "score": 2,
+                "confidence": 5,
+                "notes": null
+              },
+              {
+                "question": "I try to think about how others feel.",
+                "score": 2,
+                "confidence": 5,
+                "notes": null
+              },
+              {
+                "question": "I try to forgive others when they say \"sorry\".",
+                "score": 2,
+                "confidence": 5,
+                "notes": null
+              },
+              {
+                "question": "I follow school rules.",
+                "score": 2,
+                "confidence": 5,
+                "notes": null
+              }
+            ]
+          }
+        },
+        {
+          "milestone_rounds": 4,
+          "pre_score": 2.6,
+          "milestone_score": 2.85,
+          "improvement": 0.25,
+          "conversation_turns": 8,
+          "timestamp": "2025-10-02T14:32:57.422540",
+          "note": "Progressive assessment: 2.85 vs 2.00 baseline (previous milestone)",
+          "detailed_assessment": {
+            "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+            "timestamp": "2025-10-02T14:32:57.421392",
+            "total_score": 57.0,
+            "average_score": 2.85,
+            "improvement_areas": [
+              "I stay calm when dealing with problems.",
+              "I help my friends when they are having a problem.",
+              "I stay calm when I disagree with others."
+            ],
+            "responses": [
+              {
+                "question": "I ask for help when I need it.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I stay calm when dealing with problems.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I help my friends when they are having a problem.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I work well with my classmates.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I do the right thing without being told.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I do my part in a group.",
+                "score": 4,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I stay calm when I disagree with others.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I stand up for others when they are not treated well.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I look at people when I talk to them.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I am careful when I use things that aren't mine.",
+                "score": 4,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I let people know when there's a problem.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I pay attention when the teacher talks to the class.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I try to make others feel better.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I say \"thank you\" when someone helps me.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I keep my promises.",
+                "score": 4,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I pay attention when others present their ideas.",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I try to find a good way to end a disagreement.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I try to think about how others feel.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I try to forgive others when they say \"sorry\".",
+                "score": 3,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I follow school rules.",
+                "score": 4,
+                "confidence": 8,
+                "notes": null
+              }
+            ]
+          }
+        }
+      ],
+      "personality_evolution": {
+        "enabled": true,
+        "evolution_stages": 2,
+        "final_anxiety_level": 2,
+        "materialized_fears": 4,
+        "materialized_challenges": 3
+      },
+      "conversation_details": {
+        "conversation": {
+          "id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_20251002_142842",
+          "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+          "scenario": "Social skills coaching session",
+          "system_prompt": "You are a helpful peer mentor for college students. Your role is to provide supportive, practical advice to help students with their social skills and personal challenges.\n\nIMPORTANT GUIDELINES:\n- Always maintain your role as a peer mentor/advisor, never act like the student\n- Provide detailed, helpful responses (not just \"Short answer: ...\")\n- Give specific, actionable advice with examples\n- Be encouraging but realistic\n- Keep responses conversational and natural\n- Address the student's specific concerns and fears\n- Offer concrete next steps they can take\n\nCONVERSATION CONTINUITY:\n- This is an ongoing coaching session - NEVER end the conversation\n- Do NOT use phrases like \"[End of conversation]\" or suggest the conversation is over\n- Always provide helpful follow-up questions or additional guidance\n- Continue supporting the student throughout the entire session\n- Each response should encourage further discussion and growth\n\nRemember: You are the advisor helping the student, not the student themselves. Keep the conversation flowing naturally.",
+          "turns": [
+            {
+              "speaker": "dummy",
+              "message": "*adjusting my glasses while scrolling through my laptop* \n\nMan, I really need to figure out this whole grad school application thing - like, should I go for AI or cybersecurity? And ugh, these student loan numbers are stressing me out way more than any coding project ever could. \n\n*leaning forward with sudden energy* \nYou know what's wild though? I'll talk anyone",
+              "timestamp": "2025-10-02T14:28:45.977902",
+              "metadata": {
+                "turn_number": 1
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "Hey Gregory! I hear you on the grad school dilemma - those are both great fields with different opportunities. Let's break this down step by step. \n\nFor choosing between AI and cybersecurity:\n1) Try informational interviews with professionals in both fields\n2) Take an advanced elective in each area next semester\n3) Look at job growth projections for both specialties\n\nAbout the loans - have you talked to financial aid about repayment options or graduate assistantships that could help? Many CS grad programs offer funding opportunities.\n\nWhat specific aspects of each field excite you most? That might help clarify your path. Also, would you like some tips for finding a mentor in your chosen specialty?",
+              "timestamp": "2025-10-02T14:28:51.317263",
+              "metadata": {
+                "round": 1,
+                "turn_number": 2
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "*shifting uncomfortably in my chair* \n\nHonestly, the money stuff makes my head spin - like, I know I should talk to financial aid but I keep putting it off. And yeah, finding a mentor sounds great in theory, but I don't even know where to start without feeling like I'm bothering people. \n\n*perking up slightly* \nThough I did really enjoy",
+              "timestamp": "2025-10-02T14:28:54.656897",
+              "metadata": {
+                "turn_number": 3
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "That's totally understandable! Let's make both of these less overwhelming:\n\nFor financial aid:\n- I'll go with you to the office if you want (many students do this!)\n- We can prepare 3 quick questions beforehand\n- Schedule it right after class when you're already on campus\n\nFor finding a mentor:\n1) Start small - ask a professor about their research after class\n2) LinkedIn is your friend - message alumni in your target fields\n3) Remember, most professionals enjoy helping students!\n\nYou mentioned enjoying something - what was it? That passion could be key to finding the right mentor.",
+              "timestamp": "2025-10-02T14:28:59.980772",
+              "metadata": {
+                "round": 2,
+                "turn_number": 4
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "*leaning forward with sudden enthusiasm* \n\nWait, you'd actually come with me to financial aid? That... that would actually help a ton. And you're right, I did get super into this machine learning project last semester - like, stayed up all night tweaking algorithms kind of into it. \n\n*rubbing my temples* \nBut then I psych myself out thinking \"what if I",
+              "timestamp": "2025-10-02T14:29:03.561677",
+              "metadata": {
+                "turn_number": 5
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "That excitement about your ML project is exactly what mentors want to see! Let's channel that:\n\n1) Email that professor today saying \"I loved your ML class - could I ask about research opportunities?\"\n2) Pick a time to visit financial aid this week (I'm free Thursday at 2pm)\n3) Jot down 2-3 specific career questions for potential mentors\n\nThe \"what ifs\" will always be there, but taking small actions builds confidence. Which of these steps feels most doable to start with?",
+              "timestamp": "2025-10-02T14:29:08.873131",
+              "metadata": {
+                "round": 3,
+                "turn_number": 6
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "*grabbing my phone immediately* \n\nOkay okay, I'm doing it right now - sending that email before I overthink it. *typing furiously* And yeah, Thursday at 2 works... though can we get coffee after? I'll probably need it. \n\n*voice drops to a mutter* \nGod, why is asking for help so much harder than debugging code...",
+              "timestamp": "2025-10-02T14:29:12.281343",
+              "metadata": {
+                "turn_number": 7
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "*grinning* \n\nCoffee after is mandatory - consider it your reward for adulting! And hey, debugging humans is way messier than code, but you're crushing it. \n\nQuick pro tip: Draft those mentor questions over coffee Thursday. Start with:\n1) \"What surprised you about this field?\"\n2) \"What skills should I focus on now?\"\n\nWant to practice the financial aid conversation while we wait?",
+              "timestamp": "2025-10-02T14:29:16.267467",
+              "metadata": {
+                "round": 4,
+                "turn_number": 8
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            }
+          ],
+          "start_time": "2025-10-02T14:28:42.582219",
+          "end_time": null,
+          "duration_seconds": null
+        },
+        "pre_assessment": {
+          "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+          "timestamp": "2025-10-02T14:28:42.582019",
+          "responses": [
+            {
+              "question": "I initiate conversations with new people.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I listen attentively when others speak.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I maintain eye contact during conversations.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I adapt my communication style to different people.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I handle criticism well.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I work well in team settings.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I express my needs clearly.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I respect personal boundaries.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I manage conflicts constructively.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I give compliments sincerely.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I apologize when I've made a mistake.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I read social cues accurately.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I maintain friendships over time.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I speak confidently in group settings.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I ask for help when needed.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I stay calm under pressure.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I adapt to new social situations easily.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I consider others' feelings before acting.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I network effectively for career opportunities.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I balance social life with academic responsibilities.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            }
+          ],
+          "total_score": 52.0,
+          "average_score": 2.6,
+          "improvement_areas": [
+            "I listen attentively when others speak.",
+            "I adapt my communication style to different people.",
+            "I handle criticism well."
+          ]
+        },
+        "post_assessment": {
+          "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+          "timestamp": "2025-10-02T14:33:19.960239",
+          "responses": [
+            {
+              "question": "I ask for help when I need it.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when dealing with problems.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I help my friends when they are having a problem.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I work well with my classmates.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I do the right thing without being told.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I do my part in a group.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when I disagree with others.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I stand up for others when they are not treated well.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I look at people when I talk to them.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I am careful when I use things that aren't mine.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I let people know when there's a problem.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when the teacher talks to the class.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I try to make others feel better.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I say \"thank you\" when someone helps me.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I keep my promises.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I pay attention when others present their ideas.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I try to find a good way to end a disagreement.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I try to think about how others feel.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I try to forgive others when they say \"sorry\".",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I follow school rules.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            }
+          ],
+          "total_score": 56.0,
+          "average_score": 2.8,
+          "improvement_areas": [
+            "I stay calm when dealing with problems.",
+            "I help my friends when they are having a problem.",
+            "I stay calm when I disagree with others."
+          ]
+        },
+        "personality_evolution_timeline": [
+          {
+            "stage_number": 1,
+            "prompt_name": "Conversation Length Test",
+            "generation": 0,
+            "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
+            "anxiety_level": 8.0,
+            "improvement_score": -0.5,
+            "timestamp": "2025-10-02T14:29:59.598202",
+            "materialized_traits": {
+              "fears": {},
+              "challenges": {},
+              "behaviors": {},
+              "triggers": {}
+            }
+          },
+          {
+            "stage_number": 2,
+            "prompt_name": "Conversation Length Test",
+            "generation": 0,
+            "conversation_summary": "Gregory discussed career indecision (AI vs. cybersecurity), financial avoidance regarding loans, and mentor outreach anxiety. Solutions offered included: 1) Joint financial aid office visit with pre-prepared questions 2) Immediate professor email about research opportunities 3) Structured mentor question drafting. Gregory demonstrated significant progress by instantly sending the professor email during the conversation, scheduling a concrete financial aid appointment with coach support (Thursday 2pm), and acknowledging his avoidance patterns. His enthusiastic engagement with machine learning projects indicates strong career passion, while his immediate action on solutions shows improved self-efficacy in addressing previously avoided tasks.",
+            "anxiety_level": 2.5,
+            "improvement_score": 0.19999999999999973,
+            "timestamp": "2025-10-02T14:32:31.954685",
+            "materialized_traits": {
+              "fears": {
+                "Choosing the right career path": "Debating between AI vs. cybersecurity for grad school applications while stressed about loan implications",
+                "Academic failure and poor grades": "Worrying about algorithm performance during machine learning project all-nighters"
+              },
+              "challenges": {
+                "Financial planning": "Avoiding financial aid office despite loan stress, delaying repayment strategy discussions",
+                "Finding a mentor": "Hesitating to contact professors/alumni due to fear of being a burden"
+              },
+              "behaviors": {
+                "Participates in study groups": "Collaborating on machine learning algorithm tweaks during project work",
+                "Volunteers for campus events": "Sharing machine learning passion enthusiastically when engaged"
+              },
+              "triggers": {
+                "Networking events": "Reaching out to professor about research opportunities",
+                "Presentations": "Discussing machine learning project enthusiasm"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
