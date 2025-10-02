@@ -74,18 +74,21 @@ async def run_gepa_test(config: Dict[str, Any] = None):
         config: Dictionary with test configuration parameters
     """
     
-    # Default configuration for quick validation
+    # Default configuration for enhanced GEPA system
     default_config = {
-        "test_name": "Quick Validation",
+        "test_name": "Enhanced GEPA System",
         "dummies_count": 10,
-        "conversation_rounds": 5,
+        "conversation_rounds": 25,  # Increased to 25 rounds as requested
         "generations": 6,
         "population_size": 1,
         "mutation_rate": 0.3,
         "crossover_rate": 0.6,
         "use_real_api": True,
-        "save_detailed_data": False,
-        "output_file": "data/gepa_test_results.json"
+        "save_detailed_data": True,  # Enable detailed data for analysis
+        "output_file": "data/gepa_test_results.json",
+        "optimal_ending_detection": True,  # New feature
+        "milestone_assessment": True,  # New feature
+        "conversation_quality_monitoring": True  # New feature
     }
     
     # Override with provided config
@@ -394,55 +397,67 @@ def view_test_history():
         print(f"❌ Error reading test history: {e}")
 
 def get_preset_configs():
-    """Get preset configurations for different test scales"""
+    """Get preset configurations for different test scales with enhanced GEPA features"""
     return {
         "quick_validation": {
             "test_name": "Quick Validation Test",
             "dummies_count": 10,
-            "conversation_rounds": 5,
+            "conversation_rounds": 25,  # Enhanced: 25 rounds
             "generations": 6,
             "population_size": 1,
             "mutation_rate": 0.3,
             "crossover_rate": 0.6,
             "use_real_api": True,
-            "save_detailed_data": False,
-            "output_file": "data/validation_test_results.json"
+            "save_detailed_data": True,
+            "output_file": "data/validation_test_results.json",
+            "optimal_ending_detection": True,
+            "milestone_assessment": True,
+            "conversation_quality_monitoring": True
         },
         "small_scale": {
             "test_name": "Small Scale Test",
             "dummies_count": 10,
-            "conversation_rounds": 5,
+            "conversation_rounds": 25,  # Enhanced: 25 rounds
             "generations": 5,
             "population_size": 1,
             "mutation_rate": 0.3,
             "crossover_rate": 0.6,
             "use_real_api": True,
             "save_detailed_data": True,
-            "output_file": "data/real_api_test_results.json"
+            "output_file": "data/real_api_test_results.json",
+            "optimal_ending_detection": True,
+            "milestone_assessment": True,
+            "conversation_quality_monitoring": True
         },
         "medium_scale": {
             "test_name": "Medium Scale Test",
             "dummies_count": 25,
-            "conversation_rounds": 5,
+            "conversation_rounds": 25,  # Enhanced: 25 rounds
             "generations": 6,
             "population_size": 1,
             "mutation_rate": 0.3,
             "crossover_rate": 0.6,
             "use_real_api": True,
             "save_detailed_data": True,
-            "output_file": "data/medium_scale_results.json"
+            "output_file": "data/medium_scale_results.json",
+            "optimal_ending_detection": True,
+            "milestone_assessment": True,
+            "conversation_quality_monitoring": True
         },
         "full_scale": {
             "test_name": "Full Scale Test",
             "dummies_count": 50,
-            "conversation_rounds": 8,
+            "conversation_rounds": 25,  # Enhanced: 25 rounds
             "generations": 8,
             "population_size": 1,
             "mutation_rate": 0.3,
             "crossover_rate": 0.6,
             "use_real_api": True,
             "save_detailed_data": True,
-            "output_file": "data/full_scale_results.json"
+            "output_file": "data/full_scale_results.json",
+            "optimal_ending_detection": True,
+            "milestone_assessment": True,
+            "conversation_quality_monitoring": True
         }
     }
 
