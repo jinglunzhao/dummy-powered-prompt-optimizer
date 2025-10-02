@@ -3,8 +3,8 @@
   "dummy_name": "Lisa Smith",
   "current_experiment_id": "conversation_length_with_evolution",
   "current_prompt_id": "conversation_length_test",
-  "created_at": "2025-10-02T13:25:22.295643",
-  "last_updated": "2025-10-02T13:37:01.742246",
+  "created_at": "2025-10-02T14:35:22.722218",
+  "last_updated": "2025-10-02T15:12:59.845628",
   "conversation_profile": {
     "original_fears": [
       "Time management with coursework",
@@ -65,88 +65,102 @@
         "prompt_name": "Conversation Length Test",
         "generation": 0,
         "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_5",
-        "conversation_summary": "Lisa expressed overwhelming stress about research proposals, loan debt, and lecture anxiety. Solutions offered included: 1) Structured application drafting with professor feedback, 2) Lecture recording for desensitization, 3) Financial aid meeting, and 4) Scheduled family calls. Lisa implemented key solutions immediately: emailed Dr. Carter with specific questions, blocked work time, called her mother, recorded a practice lecture, and submitted her application. Progress is evident through her adoption of concrete strategies (color-coding interview prep, using cloud storage), decreased defensiveness (accepting templates while pretending annoyance), and proactive outreach to professors. Her anxiety visibly decreased from initial panic to focused action.",
+        "conversation_summary": "1) Problems: Loan anxiety disrupting coursework, fellowship application procrastination, networking rejection, unstructured preparation for critical meetings. 2) Solutions: Time-blocked 'rage drafting', research-aligned fellowship strategy, Excel scheduling, loan negotiation battle tactics. 3) Student response: Initially resistant to scheduling but embraced brutalist Excel system; transformed networking failure into research-led approach; enthusiastically adopted adversarial loan negotiation stance. 4) Progress evidence: Created actionable fellowship interview script leveraging VR research; prepared annotated loan documents; implemented structured 'rage' time blocks; demonstrated strategic pivoting from setbacks to strengths-based solutions.",
         "fears_materialized": {
-          "Time management with coursework": "Panicking about research proposal deadline while juggling lesson plans",
-          "Student loan debt and financial stress": "Anxiety over loan statements while studying, aggressive spreadsheet updates",
-          "Academic failure and poor grades": "Terror of blanking during lectures despite overpreparation",
-          "Choosing the right career path": "Desperation about securing research position for career advancement"
+          "Time management with coursework": "Stayed up until 3AM finishing curriculum design project while loan statements distracted focus",
+          "Student loan debt and financial stress": "Calculating repayment hours during study time, delaying lesson plan draft due to loan anxiety",
+          "Academic failure and poor grades": "Procrastination on fellowship application risking deadline (3 weeks)",
+          "Choosing the right career path": "Pressure to secure Dr. Chen's fellowship as primary debt solution"
         },
         "challenges_materialized": {
-          "Dealing with homesickness": "Avoiding calls home to hide tears about missing mother's cooking",
-          "Managing student loans": "Stressing over repayment during academic work, needing budget spreadsheet time"
+          "Managing student loans": "Reviewing repayment projections during study sessions; preparing for financial counseling meeting",
+          "Dealing with homesickness": "Not explicitly discussed in this session"
         },
         "behaviors_detailed": {
-          "Stays up late studying": "Planning three all-nighters for honors distinction",
-          "Eats at dining hall": "Not explicitly shown in conversation",
-          "Procrastinates on assignments": "Aggressive last-minute work on research proposal before deadline"
+          "Stays up late studying": "Consistently working past midnight, defending night owl productivity",
+          "Eats at dining hall": "Mentioned avoiding overpriced coffee carts",
+          "Procrastinates on assignments": "Delayed lesson plan draft due to loan stress; initial resistance to structured fellowship prep"
         },
         "triggers_specified": {
-          "Large lecture halls": "Anxiety about blanking mid-lecture despite thorough preparation"
+          "Large lecture halls": "Not explicitly triggered in this session"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 5.5,
         "pre_assessment_score": 2.5,
         "post_assessment_score": 3.05,
         "improvement_score": 0.5499999999999998,
-        "timestamp": "2025-10-02T13:32:55.210633"
+        "timestamp": "2025-10-02T14:46:44.438924"
       },
       {
         "stage_number": 2,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_15",
-        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
-        "fears_materialized": {},
-        "challenges_materialized": {},
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": 0.0,
-        "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.95,
-        "improvement_score": 0.4500000000000002,
-        "timestamp": "2025-10-02T13:33:26.586447"
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_10",
+        "conversation_summary": "1) Problems: Overwhelming loan stress disrupting work, fellowship application pressure, procrastination on lesson plans, and adversarial networking experiences. 2) Solutions: Structured rage-containment for loans, optimized night-owl scheduling, research-aligned fellowship strategy, and battle-ready financial negotiation tactics. 3) Response: Lisa initially resisted scheduling help but co-created a minimalist system, transformed anxiety into strategic aggression for financial meetings, and weaponized her strengths (VR research alignment, TA evaluations). 4) Progress: Developed concrete fellowship timeline, prepared specific financial negotiation questions, created actionable 'victory dance' reward system, and demonstrated increased self-advocacy in demanding urgent counseling.",
+        "fears_materialized": {
+          "Time management with coursework": "Staying up until 3AM to finish curriculum design project while neglecting sleep",
+          "Student loan debt and financial stress": "Calculating repayment hours after receiving loan statements, disrupting focus",
+          "Academic failure and poor grades": "Panic about fellowship application being only solution to debt cycle",
+          "Choosing the right career path": "Threatening to drop out for bartending when overwhelmed"
+        },
+        "challenges_materialized": {
+          "Managing student loans": "Scheduling '4:30am loan rage' time block for financial aid office communications",
+          "Dealing with homesickness": "Not explicitly discussed in this session"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Night owl schedule optimized with power naps and protected focus hours",
+          "Eats at the dining hall": "Referenced ramen-based diet as financial constraint",
+          "Procrastinates on assignments": "Lesson plan draft delayed despite impending deadline"
+        },
+        "triggers_specified": {
+          "Large lecture halls": "Not triggered in this session"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 5.5,
+        "pre_assessment_score": 3.05,
+        "post_assessment_score": 3.1,
+        "improvement_score": 0.050000000000000266,
+        "timestamp": "2025-10-02T14:50:59.942836"
       },
       {
         "stage_number": 3,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_10",
-        "conversation_summary": "Lisa discussed overwhelming academic pressures (research proposals, teaching anxiety, loan stress) and homesickness. Solutions offered included: 1) Time-blocking for tasks, 2) Structured professor outreach (email drafts + printed copies), 3) Lecture recording practice, 4) Scheduled family calls/budget time, and 5) Cloud backups. Lisa initially resisted but implemented: emailed Dr. Carter, recorded lecture successfully, submitted applications, and created organizational systems (color-coding, templates). Progress evidenced by: research application submission, lecture recording accomplishment, scheduled budget/karaoke self-care integration, and proactive resource management (cloud storage, professor feedback).",
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_15",
+        "conversation_summary": "1) Problems discussed: Loan anxiety disrupting studies, fellowship application pressure, procrastination on lesson plans, and financial counseling preparation. 2) Solutions offered/accepted: Dedicated 'loan rage' time blocks, VR research angle for fellowship, optimized night-owl schedule, and assertive financial questioning tactics. 3) Student's response: Pragmatic acceptance of solutions (created Excel schedule, implemented VR angle, prepared specific financial questions) while maintaining authentic frustration. 4) Evidence of progress: Developed concrete strategies (minimalist schedule, counseling battle plan), demonstrated improved self-advocacy (tailored fellowship approach), and showed emotional awareness (structured outlet for anger).",
         "fears_materialized": {
-          "Time management with coursework": "Overwhelmed by simultaneous lesson planning, research proposals, and coursework deadlines",
-          "Student loan debt and financial stress": "Receiving student loan statements while juggling academic pressures",
-          "Academic failure and poor grades": "Panic about submitting research proposal by Friday deadline",
-          "Choosing the right career path": "Intense pressure to secure competitive research position for career advancement"
+          "Time management with coursework": "Pulling all-nighters for curriculum design project",
+          "Student loan debt and financial stress": "Calculating repayment hours during study time",
+          "Academic failure and poor grades": "Aggressively pursuing Dr. Chen's fellowship as academic salvation",
+          "Choosing the right career path": "Staking career future on single research position"
         },
         "challenges_materialized": {
-          "Dealing with homesickness": "Emotional breakdowns when thinking about missing family/mom's cooking",
-          "Managing student loans": "Constant anxiety about repayment while balancing academic workload"
+          "Dealing with homesickness": "Not explicitly discussed (implied through avoidance)",
+          "Managing student loans": "Preparing for financial counseling meeting with annotated documents"
         },
         "behaviors_detailed": {
-          "Stays up late studying": "Planning three all-nighters to complete research proposal",
-          "Eats at the dining hall": "Not explicitly mentioned in conversation",
-          "Procrastinates on assignments": "Delaying research proposal until deadline pressure intensifies"
+          "Stays up late studying": "Working until 3AM in quiet library",
+          "Eats at the dining hall": "Avoiding expensive coffee carts",
+          "Procrastinates on assignments": "Delaying lesson plan draft for fellowship prep"
         },
         "triggers_specified": {
-          "Large lecture halls": "Anxiety about teaching lectures (hands shaking while holding whiteboard marker)"
+          "Large lecture halls": "Not directly addressed (implied avoidance via night studying)"
         },
-        "anxiety_change": -1.0,
-        "new_anxiety_level": 5.0,
-        "pre_assessment_score": 2.5,
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 5.5,
+        "pre_assessment_score": 3.1,
         "post_assessment_score": 3.1,
-        "improvement_score": 0.6000000000000001,
-        "timestamp": "2025-10-02T13:33:50.941987"
+        "improvement_score": 0.0,
+        "timestamp": "2025-10-02T14:53:30.574006"
       },
       {
         "stage_number": 4,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_30",
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_20",
         "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
         "fears_materialized": {},
         "challenges_materialized": {},
@@ -154,140 +168,170 @@
         "triggers_specified": {},
         "anxiety_change": 0.0,
         "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.9,
-        "improvement_score": 0.3999999999999999,
-        "timestamp": "2025-10-02T13:34:40.817612"
+        "pre_assessment_score": 3.1,
+        "post_assessment_score": 3.05,
+        "improvement_score": -0.050000000000000266,
+        "timestamp": "2025-10-02T14:56:24.694027"
       },
       {
         "stage_number": 5,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_20",
-        "conversation_summary": "Discussed: 1) Overwhelm from research applications/lecture anxiety, 2) Homesickness and loan stress, 3) Procrastination tendencies. Solutions offered/accepted: Email+print strategy for professor meetings, lecture recordings with cheat sheets, scheduled family calls, and color-coded planning systems. Lisa responded by immediately implementing solutions: submitted research applications, recorded lecture practice, scheduled financial planning, and organized interview prep. Progress evidenced by: receiving professor feedback, reduced lecture anxiety through practice, strategic application submissions, and self-awareness about thoroughness as strength.",
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_25",
+        "conversation_summary": "1) Problems: Loan panic disrupting workflow, fellowship application anxiety, and procrastination on lesson plans. 2) Solutions: Time-blocked 'loan rage' sessions, VR research angle for Chen fellowship, brutalist Excel scheduling, and assertive financial counseling prep. 3) Response: Lisa initially resisted scheduling help but co-created a minimalist system; transformed networking failure into targeted admin outreach; channeled anger into structured negotiation tactics. 4) Progress: Implemented focused financial time blocks, drafted strategic fellowship outreach, prepared concrete counselor questions, and developed combat-tested meeting strategies using teaching skills as leverage.",
         "fears_materialized": {
-          "Time management with coursework": "Overwhelmed by simultaneous lesson planning and research proposal deadlines, considering all-nighters",
-          "Student loan debt and financial stress": "Receiving loan statements while juggling academic pressures",
-          "Academic failure and poor grades": "Panic about securing honors distinction and research positions",
-          "Choosing the right career path": "Anxiety about research position applications determining academic future"
+          "Time management with coursework": "Staying up until 3AM to finish curriculum design project while procrastinating on lesson plans",
+          "Student loan debt and financial stress": "Calculating repayment hours after receiving loan statements, discussing plasma donations to offset debt",
+          "Academic failure and poor grades": "Panic about fellowship application rejection and networking failures",
+          "Choosing the right career path": "Hyper-focus on Dr. Chen's fellowship as sole debt escape, threatening bartending career pivot"
         },
         "challenges_materialized": {
-          "Dealing with homesickness": "Emotional difficulty calling home without crying about missing family",
-          "Managing student loans": "Stress from loan statements interfering with academic focus"
+          "Managing student loans": "Preparing for financial counseling meeting with aggressive negotiation tactics",
+          "Dealing with homesickness": "Not explicitly addressed in this conversation segment"
         },
         "behaviors_detailed": {
-          "Stays up late studying": "Planning 3 all-nighters for coursework/research applications",
-          "Procrastinates on assignments": "Delaying research proposal until deadline pressure (Friday submission)"
+          "Stays up late studying": "Consistently working past 3AM on projects despite exhaustion",
+          "Eats at dining hall": "References ramen as primary food source and dining dollar budgeting",
+          "Procrastinates on assignments": "Delaying lesson plan draft despite impending deadline"
         },
         "triggers_specified": {
-          "Large lecture halls": "Anxiety about lecturing/teaching (physical manifestation: shaking hands while holding markers)"
+          "Large lecture halls": "Not explicitly triggered in this segment"
         },
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 4.5,
-        "pre_assessment_score": 2.5,
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 5.5,
+        "pre_assessment_score": 3.05,
         "post_assessment_score": 3.1,
-        "improvement_score": 0.6000000000000001,
-        "timestamp": "2025-10-02T13:34:44.923706"
+        "improvement_score": 0.050000000000000266,
+        "timestamp": "2025-10-02T14:59:48.672554"
       },
       {
         "stage_number": 6,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_35",
-        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
-        "fears_materialized": {},
-        "challenges_materialized": {},
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": 0.0,
-        "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.05,
-        "improvement_score": 0.5499999999999998,
-        "timestamp": "2025-10-02T13:35:32.796851"
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_30",
+        "conversation_summary": "Discussed 1) Sleep-deprived academic overload, 2) Paralysis from loan debt, and 3) Fellowship application pressure. Solutions: Structured 'rage time' blocking, strategic networking pivots, and negotiation role-playing. Lisa accepted: 4:30AM financial rage slot, VR research angle for Chen, and aggressive financial questions. Progress evidenced by: Drafted outreach emails, minimalist Excel schedule, loan interrogation prep, and adoption of 'grading rubric' mindset for financial negotiations. Showed decreased resistance to coaching and increased strategic focus.",
+        "fears_materialized": {
+          "Time management with coursework": "Staying up until 3AM to finish curriculum design project",
+          "Student loan debt and financial stress": "Calculating repayment hours instead of sleeping after receiving loan statements",
+          "Academic failure and poor grades": "Panic about fellowship application as only escape from debt cycle",
+          "Choosing the right career path": "Staking entire career prospects on Dr. Chen's fellowship"
+        },
+        "challenges_materialized": {
+          "Dealing with homesickness": "Not explicitly shown (likely channeled into academic intensity)",
+          "Managing student loans": "Rage-drafting voicemails to financial aid office at 4:30AM"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Consistent 3AM study sessions despite exhaustion",
+          "Eats at the dining hall": "Ramen-based diet referenced multiple times as financial necessity",
+          "Procrastinates on assignments": "Delaying lesson plan draft to focus on financial counseling"
+        },
+        "triggers_specified": {
+          "Large lecture halls": "Not explicitly triggered (replaced by high-stakes 1:1 interactions)"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 5.5,
+        "pre_assessment_score": 3.1,
+        "post_assessment_score": 3.1,
+        "improvement_score": 0.0,
+        "timestamp": "2025-10-02T15:02:16.875745"
       },
       {
         "stage_number": 7,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_25",
-        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
-        "fears_materialized": {},
-        "challenges_materialized": {},
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": 0.0,
-        "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.8,
-        "improvement_score": 0.2999999999999998,
-        "timestamp": "2025-10-02T13:36:13.400623"
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_35",
+        "conversation_summary": "1) Problems: Loan panic disrupting workflow, fellowship application stress, networking rejections, and unsustainable scheduling. 2) Solutions: Structured rage time-blocking, department admin outreach strategy, optimized night-owl schedule, and hostile-witness approach to loans. 3) Response: Initially resistant (dismissed scheduling advice, threatened bartending) but implemented concrete solutions (Excel schedule, VR research angle, financial aid email template). 4) Progress: Created actionable schedule with victory breaks, transformed networking approach after rejection, prepared focused financial counseling questions, and channeled frustration into strategic planning rather than avoidance.",
+        "fears_materialized": {
+          "Time management with coursework": "Pulling all-nighters (e.g., until 3AM) for curriculum design project",
+          "Student loan debt and financial stress": "Obsessively calculating repayment hours after receiving loan statements",
+          "Academic failure and poor grades": "Panic about fellowship application being the only solution to debt cycle",
+          "Choosing the right career path": "Threatening to drop out for bartending when overwhelmed"
+        },
+        "challenges_materialized": {
+          "Dealing with homesickness": "Not explicitly shown, but implied in aggressive self-reliance",
+          "Managing student loans": "Rage-drafting voicemails to financial aid office at 4:30AM"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Consistently working past 3AM despite exhaustion",
+          "Eats at the dining hall": "Mentioned reliance on ramen as primary food source",
+          "Procrastinates on assignments": "Delaying financial aid email to proofread lesson plan instead"
+        },
+        "triggers_specified": {
+          "Large lecture halls": "Not explicitly triggered, but implied avoidance through night owl preference"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 4.5,
+        "pre_assessment_score": 3.1,
+        "post_assessment_score": 3.1,
+        "improvement_score": 0.0,
+        "timestamp": "2025-10-02T15:05:09.876749"
       },
       {
         "stage_number": 8,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_45",
-        "conversation_summary": "Discussed: 1) Overwhelm from research apps/lecture anxiety, 2) Student loan panic, 3) Homesickness, 4) Teaching jitters. Solutions: Email+print materials for professor meetings, schedule decompression blocks, teaching recording technique, revolutionary planning sessions. Response: Lisa implemented time-blocking for proposals, scheduled family calls, used color-coding for interviews, attempted lecture recording. Progress: Secured professor feedback, developed concrete lecture coping strategies (grounding/teacher voice), scheduled financial self-care, organized change-making meeting.",
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_40",
+        "conversation_summary": "1) Problems: Overwhelming loan anxiety, fellowship application pressure, and procrastination on lesson plans. 2) Solutions: Structured financial email template, strategic networking approaches, brutalist scheduling system, and research pitch framework. 3) Response: Initially resistant (dismissed scheduling/nice networking) but adopted customized solutions matching her intensity (rage scheduling, aggressive financial prep, research grenade-toss). 4) Progress: Drafted financial aid request, implemented concrete outreach strategy for fellowship, developed actionable pitch framework, and created accountability system for paperwork - all while channeling stress into structured outputs.",
         "fears_materialized": {
-          "Time management with coursework": "Overwhelmed by lesson plans/research proposals while organizing study notes late at night",
-          "Student loan debt and financial stress": "Panic when receiving loan statements while juggling academic work",
-          "Academic failure and poor grades": "Terror of blanking out during lectures despite overpreparation",
-          "Choosing the right career path": "Intense pressure to secure research positions for career advancement"
+          "Time management with coursework": "Stayed up until 3AM finishing curriculum design project",
+          "Student loan debt and financial stress": "Calculating repayment hours after receiving loan statements",
+          "Academic failure and poor grades": "Frantic fellowship application to avoid career/financial failure",
+          "Choosing the right career path": "Obsession with Dr. Chen's fellowship as 'ticket out of debt'"
         },
         "challenges_materialized": {
-          "Dealing with homesickness": "Unable to call family without crying about missing home/mom's cooking",
-          "Managing student loans": "Updating repayment spreadsheets conflicting with revolution planning time"
+          "Managing student loans": "Rage-drafting emails to financial aid office at 4:30AM",
+          "Dealing with homesickness": "Not explicitly discussed in this session"
         },
         "behaviors_detailed": {
-          "Stays up late studying": "Pulling all-nighters for research proposals at dorm desk",
-          "Eats at the dining hall": "Not mentioned (assumed routine)",
-          "Procrastinates on assignments": "Delaying lecture preparation until last 3 minutes before class"
+          "Stays up late studying": "Maintained 4:30AM 'loan rage' time block intentionally",
+          "Eats at dining hall": "Referenced through ramen budget comments",
+          "Procrastinates on assignments": "Delaying lesson plan draft despite urgency"
         },
         "triggers_specified": {
-          "Large lecture halls": "Physical shaking while holding whiteboard markers in front of class"
+          "Large lecture halls": "No direct evidence in this conversation"
         },
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 4.5,
-        "pre_assessment_score": 2.5,
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 5.5,
+        "pre_assessment_score": 3.1,
         "post_assessment_score": 3.1,
-        "improvement_score": 0.6000000000000001,
-        "timestamp": "2025-10-02T13:36:18.420432"
+        "improvement_score": 0.0,
+        "timestamp": "2025-10-02T15:08:18.634043"
       },
       {
         "stage_number": 9,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_40",
-        "conversation_summary": "Discussed: 1) Overwhelming workload causing all-nighters, 2) Loan statements triggering financial panic, 3) Teaching anxiety in lectures, 4) Research applications determining career path. Solutions: Time-blocking for tasks, recording practice lectures, scheduled family calls, targeted professor feedback. Response: Initially resistant (dismissed Pomodoro), but implemented scheduling, called mom, submitted research applications, and recorded lecture. Progress: Completed proposal draft, scheduled decompression time, created loan spreadsheet, applied to multiple positions with color-coded organization.",
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_45",
+        "conversation_summary": "1) PROBLEMS: Lisa grappled with loan-induced panic, fellowship application stress, procrastination on lesson plans, and networking rejections. 2) SOLUTIONS: Coach offered structured financial prep (rage time-blocking, specific counselor questions), fellowship strategy (lead with TA evals/VR research), and minimalist scheduling. 3) RESPONSE: Lisa initially resisted ('my system works') but adopted Excel scheduling, crafted urgent counselor email, and developed 3-point interview battle plan. 4) PROGRESS: She created annotated financial documents, prepared assertive meeting scripts, reframed debt as 'grit with pie charts', and decreased anxiety by channeling frustration into actionable systems.",
         "fears_materialized": {
-          "Time management with coursework": "Overwhelmed by juggling lesson plans, research proposals, and lectures simultaneously",
-          "Student loan debt and financial stress": "Panic when receiving loan statements while already stressed about academic workload",
-          "Academic failure and poor grades": "Fear of bombing lecture delivery despite thorough preparation",
-          "Choosing the right career path": "Anxiety about research position applications determining academic future"
+          "Time management with coursework": "Staying up until 3AM to finish curriculum design project while neglecting lesson plan draft",
+          "Student loan debt and financial stress": "Receiving loan statements and calculating repayment hours during study time",
+          "Academic failure and poor grades": "Procrastinating on lesson plan draft due tomorrow while prioritizing fellowship application",
+          "Choosing the right career path": "Hyper-focusing on Dr. Chen's fellowship as only solution to debt cycle"
         },
         "challenges_materialized": {
-          "Dealing with homesickness": "Crying during calls home while craving mother's cooking",
-          "Managing student loans": "Updating repayment spreadsheets during revolutionary planning meetings"
+          "Dealing with homesickness": "Not explicitly discussed in this segment",
+          "Managing student loans": "Preparing for financial aid meeting with annotated statements and repayment calculations"
         },
         "behaviors_detailed": {
-          "Stays up late studying": "Pulling three consecutive all-nighters for honors distinction",
-          "Procrastinates on assignments": "Delaying research proposal until deadline pressure forced action"
+          "Stays up late studying": "Working until 3AM on curriculum project despite next-day obligations",
+          "Eats at the dining hall": "Mentioning ramen as primary food source due to budget constraints",
+          "Procrastinates on assignments": "Delaying lesson plan draft to work on fellowship application"
         },
         "triggers_specified": {
-          "Large lecture halls": "Teaching anxiety manifesting as hand tremors and blanking out during lectures"
+          "Large lecture halls": "Not explicitly triggered in this segment"
         },
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 4.5,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.1,
-        "improvement_score": 0.6000000000000001,
-        "timestamp": "2025-10-02T13:36:32.555710"
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 5.5,
+        "pre_assessment_score": 3.1,
+        "post_assessment_score": 3.05,
+        "improvement_score": -0.050000000000000266,
+        "timestamp": "2025-10-02T15:10:58.198192"
       },
       {
         "stage_number": 10,
@@ -302,10 +346,10 @@
         "triggers_specified": {},
         "anxiety_change": 0.0,
         "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.5,
+        "pre_assessment_score": 3.05,
         "post_assessment_score": 3.0,
-        "improvement_score": 0.04999999999999982,
-        "timestamp": "2025-10-02T13:37:01.741759"
+        "improvement_score": 0.0,
+        "timestamp": "2025-10-02T15:12:59.845160"
       }
     ],
     "current_stage": 10

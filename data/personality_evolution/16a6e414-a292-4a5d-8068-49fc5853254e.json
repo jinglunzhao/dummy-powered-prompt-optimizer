@@ -3,8 +3,8 @@
   "dummy_name": "Jamie Young",
   "current_experiment_id": "conversation_length_with_evolution",
   "current_prompt_id": "conversation_length_test",
-  "created_at": "2025-10-02T13:25:22.288512",
-  "last_updated": "2025-10-02T13:43:34.440577",
+  "created_at": "2025-10-02T14:35:22.713693",
+  "last_updated": "2025-10-02T15:08:33.152478",
   "conversation_profile": {
     "original_fears": [
       "Finding a job after graduation",
@@ -39,30 +39,30 @@
       "openness": 1
     },
     "current_fears": [
-      "Finding a job after graduation",
+      "Panic when seeing entry-level job postings requiring 5+ years experience",
       "Living away from family for the first time",
-      "Time management with coursework"
+      "12-hour coding marathons causing physical strain"
     ],
     "current_challenges": [
-      "Career exploration",
-      "Dealing with academic pressure",
-      "Navigating campus politics",
-      "Building time management"
+      "Struggling to articulate project value during networking",
+      "Redoing personal website endlessly due to perfectionism",
+      "Overanalyzing TA's emoji response ('Haha.')",
+      "No protected breaks in schedule (e.g., Thursday 3-5pm blocked as 'Human being hours')"
     ],
     "current_behaviors": [
       "Joins student clubs and organizations",
-      "Procrastinates on assignments",
-      "Calls family frequently",
+      "Staring at unfinished linked lists instead of taking breaks",
+      "Drafting apology texts to mom for missed calls",
       "Studies in the library regularly",
-      "Stays up late studying"
+      "Scheduling 3AM LinkedIn activities to avoid human interaction"
     ],
     "current_anxiety_triggers": [
-      "Office hours",
-      "Group projects",
-      "Job interviews",
-      "Presentations"
+      "TA's ambiguous emoji response triggering panic",
+      "Not explicitly discussed but implied in avoidance behaviors",
+      "Rewriting resume obsessively after seeing unrealistic job requirements",
+      "Struggling to explain projects without over-technical details"
     ],
-    "current_social_anxiety_level": 8,
+    "current_social_anxiety_level": 7,
     "current_big_five": {
       "extraversion": 2,
       "agreeableness": 9,
@@ -77,6 +77,44 @@
         "prompt_name": "Conversation Length Test",
         "generation": 0,
         "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_milestone_5",
+        "conversation_summary": "1) PROBLEMS: Jamie exhibited severe networking anxiety (shaking hands, panic over LinkedIn responses), career-search paralysis (rewriting resume endlessly), and physical/cognitive strain from poor time management (12-hour coding sessions). 2) SOLUTIONS: Coach provided templated LinkedIn message, scheduled 'human being hours', broke outreach into micro-steps (draft→schedule→reward), and introduced spreadsheet tracking for remote jobs. 3) RESPONSE: Jamie accepted all solutions - set 9am calendar reminder for messaging, created job-tracking spreadsheet, scheduled posture breaks, and committed to Friday progress email. 4) PROGRESS: Demonstrated measurable behavioral changes including calendar blocking for self-care, adopting low-pressure outreach tactics, and reframing networking as 'showing up imperfectly' rather than requiring perfection.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Panic over entry-level job postings requiring 5+ years experience",
+          "Living away from family for the first time": "Missing Sunday calls with mom due to academic stress",
+          "Time management with coursework": "12-hour coding marathons causing physical strain"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Paralysis when identifying cloud security internships",
+          "Dealing with academic pressure": "Redoing personal website endlessly, deeming it 'not ready'",
+          "Navigating campus politics": "Over-researching TA's social media before outreach",
+          "Building time management": "No scheduled breaks leading to back pain from prolonged sitting"
+        },
+        "behaviors_detailed": {
+          "Joins student clubs": "Attempting CS communities for low-pressure networking",
+          "Procrastinates on assignments": "Minimizing LinkedIn to avoid sending messages",
+          "Calls family frequently": "Drafting apology texts for missed Sunday calls",
+          "Studies in library regularly": "Hunched posture during 12-hour coding sessions",
+          "Stays up late studying": "3AM message scheduling attempts"
+        },
+        "triggers_specified": {
+          "Office hours": "Over-researching TA's RateMyProfessor/dog's Instagram before asking questions",
+          "Group projects": "Not mentioned in this segment",
+          "Job interviews": "Freezing during practice elevator pitches",
+          "Presentations": "Voice cracking when describing portfolio site"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 3.4,
+        "improvement_score": 0.8999999999999999,
+        "timestamp": "2025-10-02T14:42:14.191401"
+      },
+      {
+        "stage_number": 2,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_milestone_10",
         "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
         "fears_materialized": {},
         "challenges_materialized": {},
@@ -84,48 +122,10 @@
         "triggers_specified": {},
         "anxiety_change": 0.0,
         "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.2,
-        "improvement_score": 0.7000000000000002,
-        "timestamp": "2025-10-02T13:39:37.731536"
-      },
-      {
-        "stage_number": 2,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_milestone_20",
-        "conversation_summary": "1) Jamie discussed severe networking anxiety preventing job search efforts and unhealthy coping mechanisms (coffee dependency, 3AM work). 2) Solutions: Structured low-pressure networking (2 alumni messages via 20-min timer), hydration compromises, and plant-based accountability. 3) Jamie implemented ALL solutions: Sent messages despite panic, used timer system, brought donuts near CS club, and drank water. 4) Clear progress: Messages sent (major barrier overcome), LinkedIn tab closed to focus, hydration attempts made, and humor used to reduce shame around struggles.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Shaking hands while drafting LinkedIn messages to alumni",
-          "Living away from family for the first time": "Using family calls as emotional crutch instead of problem-solving",
-          "Time management with coursework": "Working until 3AM and debating coffee-as-hydration"
-        },
-        "challenges_materialized": {
-          "Career exploration": "Paralyzing anxiety about networking messages",
-          "Dealing with academic pressure": "Avoiding debugging by fixating on LinkedIn replies",
-          "Navigating campus politics": "Fear of approaching CS club members",
-          "Building time management": "Overthinking instead of coding at 3AM"
-        },
-        "behaviors_detailed": {
-          "Joins student clubs": "Standing outside CS club room wearing pineapple sunglasses",
-          "Procrastinates on assignments": "Creating donut-themed coding projects to avoid algorithms homework",
-          "Calls family frequently": "Considering texting mom about donut algorithm instead of career questions",
-          "Studies in library regularly": "Debugging code while obsessively checking LinkedIn replies",
-          "Stays up late studying": "Working at 3AM with espresso-filled water bottle"
-        },
-        "triggers_specified": {
-          "Job interviews": "Drafting LinkedIn messages to alumni",
-          "Presentations": "Approaching CS club with donuts",
-          "Group projects": "Debating solo project excuses after tripping",
-          "Office hours": "Anxiety about meme-based professor communications"
-        },
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.35,
-        "improvement_score": 0.8500000000000001,
-        "timestamp": "2025-10-02T13:40:23.541905"
+        "pre_assessment_score": 3.4,
+        "post_assessment_score": 3.4,
+        "improvement_score": 0.0,
+        "timestamp": "2025-10-02T14:44:12.790970"
       },
       {
         "stage_number": 3,
@@ -140,13 +140,51 @@
         "triggers_specified": {},
         "anxiety_change": 0.0,
         "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.2,
-        "improvement_score": 0.7000000000000002,
-        "timestamp": "2025-10-02T13:40:28.272782"
+        "pre_assessment_score": 3.4,
+        "post_assessment_score": 3.4,
+        "improvement_score": 0.0,
+        "timestamp": "2025-10-02T14:48:07.702965"
       },
       {
         "stage_number": 4,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_milestone_20",
+        "conversation_summary": "1) Problems discussed: Networking paralysis (fear of rejection), perfectionism in projects, and physical/mental burnout from overwork. 2) Solutions offered/accepted: Templated LinkedIn outreach with scheduled send time; reframing networking as 'making CS friends'; accepting work-in-progress sharing; scheduled breaks with rewards. 3) Student's response: Initially hesitant but engaged in solution-building (co-created messages, scheduled actions, participated in roleplay). Demonstrated self-awareness by identifying perfectionism. 4) Evidence of progress: Calendar entries for concrete actions (Friday message send, Thursday breaks); developed coping strategy (reward system); completed anxiety-provoking roleplay; drafted proactive follow-up plan.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Paralysis in sending LinkedIn message to startup alum",
+          "Living away from family": "Panic-drafting apology text for missing Sunday call",
+          "Time management": "12-hour coding binges causing physical discomfort"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Freezing when describing personal website project",
+          "Academic pressure": "Reworking portfolio endlessly before sharing",
+          "Campus politics": "Over-researching TA's social media before outreach",
+          "Time management": "No scheduled breaks causing back pain"
+        },
+        "behaviors_detailed": {
+          "Joins student clubs": "Considering TA as 'safe' networking contact",
+          "Procrastinates": "Checking RateMyProfessor instead of sending message",
+          "Calls family frequently": "Drafting apology texts during stress",
+          "Studies in library": "Physical discomfort from marathon coding",
+          "Stays up late": "3AM scheduled message sending attempt"
+        },
+        "triggers_specified": {
+          "Office hours": "Researching TA's dog's Instagram before contact",
+          "Group projects": "N/A in conversation",
+          "Job interviews": "Roleplay practice for project explanations",
+          "Presentations": "Voice cracking during elevator pitch practice"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 3.4,
+        "post_assessment_score": 3.45,
+        "improvement_score": 0.050000000000000266,
+        "timestamp": "2025-10-02T14:51:19.002214"
+      },
+      {
+        "stage_number": 5,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
@@ -158,13 +196,13 @@
         "triggers_specified": {},
         "anxiety_change": 0.0,
         "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.2,
-        "improvement_score": 0.7000000000000002,
-        "timestamp": "2025-10-02T13:41:14.933354"
+        "pre_assessment_score": 3.45,
+        "post_assessment_score": 3.4,
+        "improvement_score": -0.050000000000000266,
+        "timestamp": "2025-10-02T14:54:02.230007"
       },
       {
-        "stage_number": 5,
+        "stage_number": 6,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
@@ -176,85 +214,69 @@
         "triggers_specified": {},
         "anxiety_change": 0.0,
         "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.9,
-        "improvement_score": 0.3999999999999999,
-        "timestamp": "2025-10-02T13:41:19.147298"
-      },
-      {
-        "stage_number": 6,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_milestone_35",
-        "conversation_summary": "Jamie expressed intense anxiety about networking/job searches, specifically fearing LinkedIn outreach. The coach provided concrete scripts and behavioral strategies (e.g., time-limited tasks, reward systems). Jamie implemented these by sending 2 alumni messages despite physical anxiety, demonstrating significant follow-through. Later exchanges revealed procrastination/time management struggles during late-night coding, with the coach reframing hydration/breaks as 'system maintenance.' Jamie showed progress by negotiating hydration compromises and physically approaching the CS club. Crucially, Jamie transformed avoidance into creative action by linking a QR code to their resume and conceptualizing a coding project ('donut visualizer'), indicating improved initiative. Anxiety decreased from 9→7.5 through executed micro-actions and cognitive reframing.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Panic about networking and job interviews, especially messaging alumni on LinkedIn",
-          "Living away from family for the first time": "Frequent calls home for reassurance and comfort-seeking",
-          "Time management with coursework": "Staying up until 3AM debugging code while neglecting basic needs"
-        },
-        "challenges_materialized": {
-          "Career exploration": "Avoiding in-person CS club meetings despite interest in tech careers",
-          "Dealing with academic pressure": "Aggressive coding sessions fueled by caffeine while ignoring physical needs",
-          "Navigating campus politics": "Paranoia about group projects ('emailing professors about solo work')",
-          "Building time management": "Overcomplicating tasks (e.g., debating time-zone hacks instead of starting assignments)"
-        },
-        "behaviors_detailed": {
-          "Joins student clubs and organizations": "Standing outside CS club meeting room in sunglasses to 'assess donut situation'",
-          "Procrastinates on assignments": "Creating QR codes for resumes instead of debugging urgent code",
-          "Calls family frequently": "Considering texting mom about donut-coding project for validation",
-          "Studies in the library regularly": "Late-night IDE debugging sessions with coffee/water negotiations",
-          "Stays up late studying": "3AM coding with 'sent from my bed' email drafts"
-        },
-        "triggers_specified": {
-          "Office hours": "Fear of emailing professors after accidental meme incident",
-          "Group projects": "Imagining elaborate excuses to work solo ('technical difficulties')",
-          "Job interviews": "Physical anxiety (shaking hands) when sending LinkedIn messages",
-          "Presentations": "Avoiding CS club due to social anxiety around peers"
-        },
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.1,
-        "improvement_score": 0.6000000000000001,
-        "timestamp": "2025-10-02T13:42:20.316528"
+        "pre_assessment_score": 3.4,
+        "post_assessment_score": 3.4,
+        "improvement_score": 0.0,
+        "timestamp": "2025-10-02T14:56:33.641782"
       },
       {
         "stage_number": 7,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_milestone_40",
-        "conversation_summary": "1) Jamie discussed job search anxiety and networking difficulties, academic procrastination, and time management struggles during late-night study sessions. 2) Solutions included structured LinkedIn outreach using alumni scripts, timer techniques for task management, hydration breaks, and portfolio project development using humor. 3) Jamie implemented solutions by sending 2 LinkedIn messages despite anxiety, starting a donut algorithm portfolio project, using timers/hydration breaks, and preparing to attend CS club. 4) Progress evidenced by completed LinkedIn outreach, GitHub project initiation, improved work-break balance, and concrete plans to network at CS club with donut strategy.",
+        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_milestone_35",
+        "conversation_summary": "Discussed Jamie's severe networking anxiety and perfectionism blocking job search. Solutions: 1) Graduated exposure to networking (drafted/scheduled templated LinkedIn message) 2) Reframing imperfect projects as learning opportunities 3) Structured time management ('human hours'). Jamie showed progress by: accepting message template, scheduling send time with reward system (coffee), identifying perfectionism patterns, blocking break times, and developing authentic project explanations. Demonstrated increased self-awareness through humor ('AWS Instance Assassin') and commitment to incremental steps despite ongoing anxiety.",
         "fears_materialized": {
-          "Finding a job after graduation": "Anxiety during LinkedIn outreach to alumni for job opportunities",
-          "Living away from family for the first time": "Seeking comfort by texting mom about projects instead of coursework",
-          "Time management with coursework": "Working at 3AM on assignments while procrastinating with new project ideas"
+          "Finding a job after graduation": "Panic when seeing entry-level jobs requiring 5+ years of experience",
+          "Living away from family": "Missing Sunday calls with mom due to academic stress",
+          "Time management with coursework": "12-hour non-stop coding sessions causing physical strain"
         },
         "challenges_materialized": {
-          "Career exploration": "Attempting to network at CS club meeting while hiding in hallway",
-          "Dealing with academic pressure": "Debugging code at 3AM with constant self-interruptions",
-          "Building time management": "Struggling to balance algorithms homework with new donut visualizer project"
+          "Career exploration": "Paralyzed by remote job applications for GitHub",
+          "Dealing with academic pressure": "Redoing personal website endlessly due to perfectionism",
+          "Navigating campus politics": "Over-researching TA's social media before outreach",
+          "Building time management": "No scheduled breaks leading to back pain"
         },
         "behaviors_detailed": {
-          "Joins student clubs and organizations": "Preparing to attend CS club meeting with donuts as networking strategy",
-          "Procrastinates on assignments": "Starting new IDE tab for donut algorithm visualizer during algorithms homework",
-          "Calls family frequently": "Texting mom about GitHub project instead of focusing on coursework",
-          "Stays up late studying": "Debugging code at 3AM while questioning life choices"
+          "Joins student clubs": "Avoidance of actual networking within clubs",
+          "Procrastinates on assignments": "Opening 18+ tabs to research recipients instead of messaging",
+          "Calls family frequently": "Drafting apology texts for missed calls",
+          "Studies in library regularly": "Hunched coding marathons without movement",
+          "Stays up late studying": "3AM LinkedIn message scheduling attempts"
         },
         "triggers_specified": {
-          "Job interviews": "Physical anxiety (shaky hands) while sending LinkedIn messages to alumni",
-          "Group projects": "Joking about emailing professors to request solo work due to social anxiety"
+          "Office hours": "Panic-researching TA's RateMyProfessor before visits",
+          "Group projects": "Over-explaining technical details when nervous",
+          "Job interviews": "Replacing question marks with exclamation points + hedgehog GIFs",
+          "Presentations": "Voice cracking during elevator pitch practice"
         },
         "anxiety_change": -1.5,
         "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.5,
-        "timestamp": "2025-10-02T13:42:39.693049"
+        "pre_assessment_score": 3.4,
+        "post_assessment_score": 3.45,
+        "improvement_score": 0.050000000000000266,
+        "timestamp": "2025-10-02T14:59:54.573854"
       },
       {
         "stage_number": 8,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_milestone_40",
+        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
+        "fears_materialized": {},
+        "challenges_materialized": {},
+        "behaviors_detailed": {},
+        "triggers_specified": {},
+        "anxiety_change": 0.0,
+        "new_anxiety_level": 8.0,
+        "pre_assessment_score": 3.45,
+        "post_assessment_score": 3.2,
+        "improvement_score": -0.25,
+        "timestamp": "2025-10-02T15:02:22.622787"
+      },
+      {
+        "stage_number": 9,
         "prompt_id": "conversation_length_test",
         "prompt_name": "Conversation Length Test",
         "generation": 0,
@@ -266,48 +288,10 @@
         "triggers_specified": {},
         "anxiety_change": 0.0,
         "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.5,
+        "pre_assessment_score": 3.2,
         "post_assessment_score": 3.4,
-        "improvement_score": 0.8999999999999999,
-        "timestamp": "2025-10-02T13:43:03.620906"
-      },
-      {
-        "stage_number": 9,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_milestone_10",
-        "conversation_summary": "1) Jamie discussed intense job search anxiety (particularly LinkedIn outreach) and time management failures leading to 3 AM work sessions. 2) Solutions offered included: scripted alumni messaging, 20-min timer for task initiation, closing anxiety triggers (LinkedIn tabs), and distraction techniques. 3) Jamie responded positively by sending 2 LinkedIn messages using the scripts, implementing timers/rewards, and planning CS club attendance. 4) Progress evidenced through message transmission despite physical anxiety, use of timer system, recognition of overthinking patterns, and concrete planning for next career exploration steps (club meeting + donuts).",
-        "fears_materialized": {
-          "Finding a job after graduation": "Struggling to initiate LinkedIn outreach to alumni due to fear of rejection and self-doubt during job search",
-          "Time management with coursework": "Working until 3 AM on assignments due to procrastination and distraction cycles",
-          "Living away from family for the first time": "Not explicitly discussed, but manifested through reliance on virtual comfort objects (plant) and avoidance of in-person social opportunities"
-        },
-        "challenges_materialized": {
-          "Career exploration": "Attempting to network with alumni but freezing at message-drafting stage due to overthinking",
-          "Dealing with academic pressure": "Debugging code late at night while battling anxiety spirals about unfinished work",
-          "Building time management": "Frequently derailed by non-urgent tasks (e.g., plant/hydration tangent) during critical work sessions",
-          "Navigating campus politics": "Hesitation to join CS club meetings despite interest, resorting to 'hallway spying' tactics"
-        },
-        "behaviors_detailed": {
-          "Joins student clubs and organizations": "Researched CS club meeting details and planned donut delivery as entry strategy",
-          "Procrastinates on assignments": "Created QR code meme resume and 'donut-based diplomacy' concepts instead of algorithms homework",
-          "Calls family frequently": "Considered contacting mother for project validation during stress (though resisted)",
-          "Studies in the library regularly": "Not observed; all work occurred in dorm with distractions",
-          "Stays up late studying": "Worked until 3 AM debugging code while neglecting hydration/sleep"
-        },
-        "triggers_specified": {
-          "Job interviews": "Drafting LinkedIn messages to alumni triggered shaking hands and deletion-retry cycles",
-          "Group projects": "Joked about emailing professors to avoid group work after tripping incident",
-          "Presentations": "Implied anxiety during CS club meeting planning ('hostile architecture' comment)",
-          "Office hours": "Not triggered in conversation"
-        },
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.8,
-        "improvement_score": 0.2999999999999998,
-        "timestamp": "2025-10-02T13:43:07.881919"
+        "improvement_score": 0.19999999999999973,
+        "timestamp": "2025-10-02T15:05:34.928316"
       },
       {
         "stage_number": 10,
@@ -315,17 +299,37 @@
         "prompt_name": "Conversation Length Test",
         "generation": 0,
         "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_milestone_50",
-        "conversation_summary": "Conversation analysis unavailable - fallback materialization used",
-        "fears_materialized": {},
-        "challenges_materialized": {},
-        "behaviors_detailed": {},
-        "triggers_specified": {},
-        "anxiety_change": 0.0,
-        "new_anxiety_level": 8.0,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.9,
-        "improvement_score": 0.95,
-        "timestamp": "2025-10-02T13:43:34.440097"
+        "conversation_summary": "Discussed Jamie's job search anxiety and networking paralysis. Solutions: 1) Structured alumni outreach approach (template + scheduling + reward system) 2) Reframing networking as 'making CS friends' 3) Project pitching techniques focusing on specific achievements. Jamie responded positively: Created send schedule, drafted messages, and practiced pitches despite discomfort. Progress evidenced by: Scheduled first outreach, developed elevator pitch, implemented anxiety buffers (coffee reward, coding distraction), and set family call reminder. Perfectionism addressed through 'show one polished element' strategy.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Panic when seeing entry-level job postings requiring 5+ years experience",
+          "Living away from family": "Missing Sunday calls with mom due to academic stress",
+          "Time management with coursework": "12-hour coding marathons causing physical strain"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Struggling to articulate project value during networking",
+          "Dealing with academic pressure": "Redoing personal website endlessly due to perfectionism",
+          "Navigating campus politics": "Overanalyzing TA's emoji response ('Haha.')",
+          "Building time management": "No protected breaks in schedule (e.g., Thursday 3-5pm blocked as 'Human being hours')"
+        },
+        "behaviors_detailed": {
+          "Joins student clubs/organizations": "Active in online CS communities (implied by coach's suggestion)",
+          "Procrastinates on assignments": "Staring at unfinished linked lists instead of taking breaks",
+          "Calls family frequently": "Drafting apology texts to mom for missed calls",
+          "Studies in library regularly": "12-hour coding sessions causing physical discomfort",
+          "Stays up late studying": "Scheduling 3AM LinkedIn activities to avoid human interaction"
+        },
+        "triggers_specified": {
+          "Office hours": "TA's ambiguous emoji response triggering panic",
+          "Group projects": "Not explicitly discussed but implied in avoidance behaviors",
+          "Job interviews": "Rewriting resume obsessively after seeing unrealistic job requirements",
+          "Presentations": "Struggling to explain projects without over-technical details"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 3.4,
+        "post_assessment_score": 3.25,
+        "improvement_score": 1.15,
+        "timestamp": "2025-10-02T15:08:33.151966"
       }
     ],
     "current_stage": 10
