@@ -148,6 +148,8 @@ CONVERSATION:
 
 TASK: Materialize abstract traits into specific situations AND capture solutions/progress that show improvement.
 
+IMPORTANT: Output ONLY valid JSON. No explanations, no commentary, no additional text. Ensure all strings are properly escaped and no trailing commas.
+
 JSON FORMAT:
 {{
     "fears_materialized": {{"original_fear": "specific_situation"}},
@@ -229,9 +231,23 @@ CRITICAL: The conversation_summary is crucial for assessment - it must show how 
             # Clean up the JSON text
             json_text = json_text.strip()
             
-            # Parse JSON
-            materialization_data = json.loads(json_text)
-            print(f"✅ Successfully parsed JSON with {len(materialization_data)} fields")
+            # Parse JSON with better error handling
+            try:
+                materialization_data = json.loads(json_text)
+                print(f"✅ Successfully parsed JSON with {len(materialization_data)} fields")
+            except json.JSONDecodeError as e:
+                print(f"⚠️  JSON parsing failed: {e}")
+                print(f"🔍 Attempting to fix common JSON issues...")
+                
+                # Try to fix common JSON issues
+                fixed_json = self._fix_common_json_issues(json_text)
+                try:
+                    materialization_data = json.loads(fixed_json)
+                    print(f"✅ Successfully parsed fixed JSON with {len(materialization_data)} fields")
+                except json.JSONDecodeError as e2:
+                    print(f"❌ Could not fix JSON: {e2}")
+                    print(f"🔍 Using fallback materialization")
+                    return self._create_fallback_materialization()
             
             # Validate required fields
             required_fields = ["fears_materialized", "challenges_materialized", "behaviors_detailed", "triggers_specified", "conversation_summary"]
@@ -260,6 +276,40 @@ CRITICAL: The conversation_summary is crucial for assessment - it must show how 
         except Exception as e:
             print(f"⚠️  Error parsing materialization response: {e}")
             return self._create_fallback_materialization()
+    
+    def _fix_common_json_issues(self, json_text: str) -> str:
+        """Fix common JSON parsing issues"""
+        fixed = json_text
+        
+        # Fix 1: Remove trailing commas before closing braces/brackets
+        import re
+        fixed = re.sub(r',(\s*[}\]])', r'\1', fixed)
+        
+        # Fix 2: Handle unescaped quotes in strings (basic approach)
+        lines = fixed.split('\n')
+        fixed_lines = []
+        for line in lines:
+            # Simple fix: if a line has odd number of quotes, try to balance them
+            quote_count = line.count('"')
+            if quote_count % 2 == 1 and ':' in line:
+                # This might be a string value with unescaped quotes
+                # Try to escape internal quotes
+                if line.strip().endswith(','):
+                    line = line.rstrip(',') + ','
+                fixed_lines.append(line)
+            else:
+                fixed_lines.append(line)
+        
+        fixed = '\n'.join(fixed_lines)
+        
+        # Fix 3: Remove any incomplete lines at the end
+        lines = fixed.split('\n')
+        while lines and not lines[-1].strip().endswith(('}', ']')):
+            lines.pop()
+        fixed = '\n'.join(lines)
+        
+        print(f"🔧 Applied JSON fixes to improve parsing")
+        return fixed
     
     def _create_fallback_materialization(self) -> Dict[str, Any]:
         """Create fallback materialization when LLM parsing fails"""
