@@ -911,6 +911,17 @@ Be concise and actionable. No verbose analysis.
                 try:
                     results = await asyncio.gather(*tasks, return_exceptions=True)
                     
+                    # Validate that all dummies were tested
+                    successful_tests = sum(1 for r in results if not isinstance(r, Exception))
+                    expected_tests = len(evaluation_dummies)
+                    
+                    if successful_tests < expected_tests:
+                        print(f"   ⚠️  WARNING: Only {successful_tests}/{expected_tests} tests completed for {prompt.name}")
+                        failed_tests = expected_tests - successful_tests
+                        print(f"   ⚠️  {failed_tests} tests failed or were interrupted")
+                    else:
+                        print(f"   ✅ All {successful_tests}/{expected_tests} tests completed for {prompt.name}")
+                    
                     total_improvement = 0.0
                     total_quality = 0.0
                     test_count = 0
@@ -1576,15 +1587,15 @@ Example format: "You are a helpful social skills coach who..."
         
         for i, score_data in enumerate(quality_scores):
             if score_data['round'] > best_round['round']:
-                # Check for significant degradation (quality drop > 20%)
+                # Check for significant degradation (quality drop > 40% - less sensitive)
                 quality_drop = (best_quality - score_data['quality']) / best_quality
-                if quality_drop > 0.2:  # 20% quality drop
+                if quality_drop > 0.4:  # 40% quality drop (less aggressive)
                     optimal_round = score_data['round'] - 1  # End before degradation
                     print(f"   📉 Quality degradation detected at round {score_data['round']} (drop: {quality_drop:.1%})")
                     break
         
-        # Ensure minimum conversation length (at least 5 rounds)
-        optimal_round = max(5, optimal_round)
+        # Ensure minimum conversation length (at least 15 rounds for meaningful conversations)
+        optimal_round = max(15, optimal_round)
         
         # Ensure maximum conversation length (don't exceed total rounds)
         optimal_round = min(optimal_round, len(conversation.turns) // 2)
