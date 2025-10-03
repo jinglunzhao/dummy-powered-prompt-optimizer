@@ -859,7 +859,32 @@ Be concise and actionable. No verbose analysis.
             evaluation_dummies = dummies
         
         # Filter untested prompts for parallel processing
-        untested_prompts = [p for p in self.population if p.last_tested is None]
+        # Use more robust check: prompts without performance metrics or with 0 test count
+        untested_prompts = []
+        for p in self.population:
+            if not p.performance_metrics or p.performance_metrics.get('test_count', 0) == 0:
+                untested_prompts.append(p)
+        
+        print(f"   🔍 Population analysis: {len(self.population)} total prompts")
+        print(f"   🔍 Untested prompts: {len(untested_prompts)}")
+        
+        # Debug: Show which prompts are being tested vs skipped
+        tested_prompts = []
+        for p in self.population:
+            if p.performance_metrics and p.performance_metrics.get('test_count', 0) > 0:
+                tested_prompts.append(p)
+        
+        if tested_prompts:
+            print(f"   📊 Already tested prompts: {len(tested_prompts)}")
+            for p in tested_prompts[:3]:  # Show first 3
+                test_count = p.performance_metrics.get('test_count', 0)
+                improvement = p.performance_metrics.get('avg_improvement', 0)
+                print(f"      • {p.name}: {test_count} tests, {improvement:+.3f} improvement")
+        
+        if untested_prompts:
+            print(f"   🚀 Will test prompts: {len(untested_prompts)}")
+            for p in untested_prompts[:3]:  # Show first 3
+                print(f"      • {p.name} (Gen {p.generation})")
         
         if not untested_prompts:
             print("   ✅ All prompts already tested, skipping evaluation")
