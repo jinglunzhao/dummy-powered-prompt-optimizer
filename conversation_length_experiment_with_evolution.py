@@ -253,59 +253,27 @@ class ConversationLengthExperimentWithEvolution:
         return conversation, milestone_assessments
     
     async def _run_continuous_conversation(self, dummy: AIDummy, base_prompt: str, max_rounds: int) -> Conversation:
-        """Run conversation continuously without milestone interruptions"""
+        """Run conversation continuously with end detection using the latest conversation simulator"""
         
-        conversation = Conversation(
-            id=f"conv_{dummy.id}_{datetime.now().strftime('%Y%m%d_%H%M%S')}",
-            dummy_id=dummy.id,
-            system_prompt=base_prompt,
+        print(f"   🔄 Running conversation with end detection (max {max_rounds} rounds)...")
+        
+        # Use the latest conversation simulator with end detection
+        conversation = await self.conversation_simulator.simulate_conversation_async(
+            dummy=dummy,
             scenario="Social skills coaching session",
-            turns=[],
-            start_time=datetime.now()
+            num_rounds=max_rounds,
+            custom_system_prompt=base_prompt
         )
         
-        current_round = 0
+        # Update conversation metadata for experiment tracking
+        conversation.id = f"conv_{dummy.id}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+        conversation.dummy_id = dummy.id
+        conversation.system_prompt = base_prompt
+        conversation.scenario = "Social skills coaching session"
+        conversation.start_time = datetime.now()
         
-        # Generate initial dummy response
-        dummy_response = await self.conversation_simulator._generate_character_response_async(
-            conversation, dummy, current_round + 1
-        )
-        conversation.turns.append(ConversationTurn(
-            speaker="dummy",
-            message=dummy_response,
-            timestamp=datetime.now(),
-            metadata={"turn_number": current_round * 2 + 1}
-        ))
-        current_round += 1
+        print(f"   ✅ Conversation completed: {len(conversation.turns)} turns")
         
-        # Continuous conversation loop (no milestone interruptions)
-        while current_round <= max_rounds:
-            # Generate AI response
-            ai_response = await self.conversation_simulator._generate_ai_response_async(
-                conversation, base_prompt, dummy
-            )
-            conversation.turns.append(ConversationTurn(
-                speaker="ai",
-                message=ai_response,
-                timestamp=datetime.now(),
-                metadata={"round": current_round, "turn_number": current_round * 2}
-            ))
-            
-            # Generate dummy response for next round (if not the last round)
-            if current_round < max_rounds:
-                dummy_response = await self.conversation_simulator._generate_character_response_async(
-                    conversation, dummy, current_round + 1
-                )
-                conversation.turns.append(ConversationTurn(
-                    speaker="dummy",
-                    message=dummy_response,
-                    timestamp=datetime.now(),
-                    metadata={"turn_number": current_round * 2 + 1}
-                ))
-            
-            current_round += 1
-        
-        print(f"   ✅ Continuous conversation completed: {len(conversation.turns)} turns")
         return conversation
     
     async def _process_milestones_parallel(self, dummy: AIDummy, conversation: Conversation, milestones: List[int]) -> List[Dict[str, Any]]:

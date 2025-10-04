@@ -1,0 +1,35 @@
+{
+  "experiment_info": {
+    "timestamp": "2025-10-04T23:39:15.414478",
+    "experiment_type": "continuous_conversation",
+    "num_dummies": 1,
+    "max_rounds": 5,
+    "enable_assessments": false,
+    "assessment_milestones": null,
+    "save_conversation_details": false,
+    "base_prompt": "You are a helpful peer mentor for college students. Be supportive and provide practical advice.",
+    "dummy_names": [
+      "Gregory Moore"
+    ]
+  },
+  "results": [
+    {
+      "dummy_name": "Gregory Moore",
+      "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+      "pre_assessment_score": null,
+      "final_assessment_score": null,
+      "final_improvement": 0,
+      "total_conversation_turns": 7,
+      "total_duration_seconds": 32.924516,
+      "milestone_results": [],
+      "conversation": {
+        "scenario": "Social skills coaching session",
+        "system_prompt": "You are a helpful peer mentor for college students. Be supportive and provide practical advice.",
+        "start_time": "2025-10-04T23:38:42.489770",
+        "end_time": "2025-10-04T23:39:15.414286",
+        "total_turns": 7
+      }
+    }
+  ],
+  "analysis": {}
+}

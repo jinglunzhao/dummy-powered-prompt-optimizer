@@ -175,59 +175,41 @@ class ContinuousConversationExperiment:
         else:
             print(f"   [{dummy_num}/{total_dummies}] 💬 Conversation mode (assessments disabled)")
         
-        # Create conversation
-        conversation = Conversation(
-            dummy_id=dummy.id,
+        # Use the latest conversation simulator with end detection
+        print(f"   [{dummy_num}/{total_dummies}] Running conversation with end detection (max {max_rounds} rounds)", end="", flush=True)
+        
+        conversation = await self.conversation_simulator.simulate_conversation_async(
+            dummy=dummy,
             scenario="Social skills coaching session",
-            system_prompt=base_prompt,
-            turns=[]
+            num_rounds=max_rounds,
+            custom_system_prompt=base_prompt
         )
         
-        # Generate initial message
-        print(f"   [{dummy_num}/{total_dummies}] Starting conversation", end="", flush=True)
-        initial_message = await self._generate_character_driven_opening(dummy)
-        conversation.add_turn("dummy", initial_message, {
-            "character_context": self._get_character_context(dummy)
-        })
-        print(" ✓", flush=True)
+        print(f" ✓ ({len(conversation.turns)} turns)", flush=True)
         
         # Track milestone results
         milestone_results = []
-        current_milestone_idx = 0
         assessment_tasks = []  # Store assessment tasks to run in parallel
         
-        # Run conversation rounds up to max_rounds
-        for round_num in range(max_rounds):
-            # AI response
-            print(".", end="", flush=True)
-            ai_response = await self._generate_ai_response_async(conversation, base_prompt, dummy)
-            conversation.add_turn("ai", ai_response, {"round": round_num + 1})
-            
-            # Dummy response
-            print(".", end="", flush=True)
-            dummy_response = await self._generate_character_response_async(conversation, dummy, round_num + 1)
-            conversation.add_turn("dummy", dummy_response, {"round": round_num + 1})
-            
-            # Check if we've reached a milestone (only if assessments enabled)
-            current_rounds = round_num + 1
-            if (enable_assessments and 
-                current_milestone_idx < len(assessment_milestones) and 
-                current_rounds == assessment_milestones[current_milestone_idx]):
-                
-                print(f" [M{dummy_num}:{current_rounds}]", end="", flush=True)
-                
-                # Start assessment in background (don't wait for it)
-                if self.assessment_system:
-                    assessment_task = asyncio.create_task(
-                        self.assessment_system.generate_post_assessment(dummy, pre_assessment, conversation)
-                    )
-                    assessment_tasks.append({
-                        "task": assessment_task,
-                        "rounds": current_rounds,
-                        "index": current_milestone_idx
-                    })
-                
-                current_milestone_idx += 1
+        # Process milestones based on actual conversation length (only if assessments enabled)
+        if enable_assessments:
+            for milestone_rounds in assessment_milestones:
+                # Only process milestone if conversation has enough turns
+                if milestone_rounds <= len(conversation.turns) // 2:  # Each round = 2 turns
+                    print(f"   [{dummy_num}/{total_dummies}] Processing milestone at {milestone_rounds} rounds", end="", flush=True)
+                    
+                    # Start assessment in background (don't wait for it)
+                    if self.assessment_system:
+                        assessment_task = asyncio.create_task(
+                            self.assessment_system.generate_post_assessment(dummy, pre_assessment, conversation)
+                        )
+                        assessment_tasks.append({
+                            "task": assessment_task,
+                            "rounds": milestone_rounds,
+                            "index": len(assessment_tasks)
+                        })
+                    
+                    print(" ✓", flush=True)
         
         # Wait for all assessment tasks to complete (only if assessments enabled)
         if enable_assessments and assessment_tasks:
@@ -399,120 +381,6 @@ class ContinuousConversationExperiment:
             "best_milestone": best_milestone if len(improvements) >= 2 else None,
             "best_improvement": best_improvement if len(improvements) >= 2 else 0
         }
-    
-    # Helper methods (copied from ConversationSimulator)
-    async def _generate_character_driven_opening(self, dummy: AIDummy) -> str:
-        """Generate opening message based on dummy's actual concerns"""
-        
-        character_context = self._get_character_context(dummy)
-        
-        prompt = f"""You are {dummy.name}, a {dummy.age}-year-old {dummy.student_type} at {dummy.university}.
-
-{character_context}
-
-You're meeting with a social skills coach. Based on your actual personality, fears, goals, and challenges, start the conversation naturally. 
-
-Be authentic to your character:
-- Express your real concerns and fears
-- Mention specific goals you want to work on
-- Show your personality traits naturally
-- Be honest about your challenges
-
-Start with a natural opening message (1-2 sentences)."""
-
-        async with aiohttp.ClientSession() as session:
-            async with session.post(
-                "https://api.lkeap.cloud.tencent.com/v1/chat/completions",
-                headers={
-                    "Authorization": f"Bearer {self.conversation_simulator.api_key}",
-                    "Content-Type": "application/json"
-                },
-                json={
-                    "model": "deepseek-v3-0324",
-                    "messages": [{"role": "user", "content": prompt}],
-                    "max_tokens": 80,
-                    "temperature": 0.8
-                }
-            ) as response:
-                result = await response.json()
-                return result['choices'][0]['message']['content'].strip()
-    
-    async def _generate_ai_response_async(self, conversation: Conversation, system_prompt: str, dummy: AIDummy) -> str:
-        """Generate AI response using the custom system prompt"""
-        
-        # Prepare conversation history
-        messages = [
-            {"role": "system", "content": system_prompt + "\n\nIMPORTANT: Keep your response concise and under 150 words. Focus on being helpful and encouraging without being overly long."},
-            {"role": "user", "content": f"Student Profile: {dummy.get_character_summary()}"}
-        ]
-        
-        # Add conversation history
-        for turn in conversation.turns[-6:]:  # Last 6 turns for context
-            role = "assistant" if turn.speaker == "ai" else "user"
-            messages.append({"role": role, "content": turn.message})
-        
-        async with aiohttp.ClientSession() as session:
-            async with session.post(
-                "https://api.lkeap.cloud.tencent.com/v1/chat/completions",
-                headers={
-                    "Authorization": f"Bearer {self.conversation_simulator.api_key}",
-                    "Content-Type": "application/json"
-                },
-                json={
-                    "model": "deepseek-v3-0324",
-                    "messages": messages,
-                    "max_tokens": 150,
-                    "temperature": 0.7
-                }
-            ) as response:
-                result = await response.json()
-                return result['choices'][0]['message']['content'].strip()
-    
-    async def _generate_character_response_async(self, conversation: Conversation, dummy: AIDummy, round_num: int) -> str:
-        """Generate character-authentic response based on dummy's profile"""
-        
-        # Get the last AI message
-        last_ai_message = None
-        for turn in reversed(conversation.turns):
-            if turn.speaker == "ai":
-                last_ai_message = turn.message
-                break
-        
-        if not last_ai_message:
-            return "Thank you for your help. I'm not sure what to say next."
-        
-        character_context = self._get_character_context(dummy)
-        
-        prompt = f"""You are {dummy.name}, responding authentically to your social skills coach.
-
-{character_context}
-
-Your coach just said: "{last_ai_message}"
-
-Respond naturally as your character would:
-- Stay true to your personality traits and anxiety level
-- Express your real fears, goals, and challenges
-- Show your communication style
-- Be honest about your feelings and thoughts
-
-Keep your response conversational and authentic (1-2 sentences). Be concise and natural."""
-
-        async with aiohttp.ClientSession() as session:
-            async with session.post(
-                "https://api.lkeap.cloud.tencent.com/v1/chat/completions",
-                headers={
-                    "Authorization": f"Bearer {self.conversation_simulator.api_key}",
-                    "Content-Type": "application/json"
-                },
-                json={
-                    "model": "deepseek-v3-0324",
-                    "messages": [{"role": "user", "content": prompt}],
-                    "max_tokens": 80,
-                    "temperature": 0.8
-                }
-            ) as response:
-                result = await response.json()
-                return result['choices'][0]['message']['content'].strip()
     
     def _get_character_context(self, dummy: AIDummy) -> str:
         """Create comprehensive character context from dummy data"""
