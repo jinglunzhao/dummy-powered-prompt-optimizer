@@ -50,7 +50,7 @@ class ConversationSimulator:
             # AI response
             print(".", end="", flush=True)  # Show progress dot
             ai_response = await self._generate_ai_response_async(conversation, system_prompt_text, dummy)
-                conversation.add_turn("ai", ai_response, {"round": round_num + 1})
+            conversation.add_turn("ai", ai_response, {"round": round_num + 1})
             
             # Dummy response based on character
             print(".", end="", flush=True)  # Show progress dot
