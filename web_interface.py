@@ -6,6 +6,7 @@ Interactive web application to explore dummy personalities, assessments, and con
 from flask import Flask, render_template, jsonify, request, send_from_directory
 import json
 import os
+from datetime import datetime
 from typing import List, Dict, Any
 from collections import defaultdict
 from conversation_storage import conversation_storage
@@ -422,6 +423,84 @@ def api_prompt(prompt_id):
         'total_results': len(prompt_results),
         'inheritance_info': inheritance_info
     })
+
+@app.route('/api/comments/<prompt_id>')
+def api_get_comments(prompt_id):
+    """API endpoint to get comments for a specific prompt/experiment"""
+    try:
+        # Create comments directory if it doesn't exist
+        comments_dir = 'data/comments'
+        os.makedirs(comments_dir, exist_ok=True)
+        
+        # Comments file path based on prompt ID
+        comments_file = os.path.join(comments_dir, f'{prompt_id}_comments.json')
+        
+        if os.path.exists(comments_file):
+            with open(comments_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                return jsonify({
+                    'comments': data.get('comments', ''),
+                    'last_modified': data.get('last_modified'),
+                    'prompt_id': prompt_id
+                })
+        else:
+            return jsonify({
+                'comments': None,
+                'last_modified': None,
+                'prompt_id': prompt_id
+            })
+    except Exception as e:
+        print(f"❌ Error loading comments for {prompt_id}: {e}")
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/comments/<prompt_id>', methods=['POST'])
+def api_save_comments(prompt_id):
+    """API endpoint to save comments for a specific prompt/experiment"""
+    try:
+        # Get JSON data from request
+        data = request.get_json()
+        comments = data.get('comments', '')
+        
+        # Create comments directory if it doesn't exist
+        comments_dir = 'data/comments'
+        os.makedirs(comments_dir, exist_ok=True)
+        
+        # Comments file path based on prompt ID
+        comments_file = os.path.join(comments_dir, f'{prompt_id}_comments.json')
+        
+        # Create comments data structure
+        comments_data = {
+            'prompt_id': prompt_id,
+            'comments': comments,
+            'last_modified': datetime.now().isoformat(),
+            'created_at': datetime.now().isoformat() if not os.path.exists(comments_file) else None
+        }
+        
+        # If file exists, preserve created_at
+        if os.path.exists(comments_file):
+            try:
+                with open(comments_file, 'r', encoding='utf-8') as f:
+                    existing_data = json.load(f)
+                    comments_data['created_at'] = existing_data.get('created_at')
+            except:
+                pass  # If we can't read existing data, just use None
+        
+        # Save comments to file
+        with open(comments_file, 'w', encoding='utf-8') as f:
+            json.dump(comments_data, f, indent=2, ensure_ascii=False)
+        
+        print(f"💾 Saved comments for prompt {prompt_id}: {len(comments)} characters")
+        
+        return jsonify({
+            'success': True,
+            'prompt_id': prompt_id,
+            'last_modified': comments_data['last_modified'],
+            'message': 'Comments saved successfully'
+        })
+        
+    except Exception as e:
+        print(f"❌ Error saving comments for {prompt_id}: {e}")
+        return jsonify({'success': False, 'error': str(e)}), 500
 
 @app.route('/api/conversation/<conversation_id>')
 def api_conversation(conversation_id):
