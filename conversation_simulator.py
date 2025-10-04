@@ -56,6 +56,14 @@ class ConversationSimulator:
             print(".", end="", flush=True)  # Show progress dot
             dummy_response = await self._generate_character_response_async(conversation, dummy, round_num + 1)
             conversation.add_turn("dummy", dummy_response, {"round": round_num + 1})
+            
+            # Check for natural ending after each complete round (AI + dummy)
+            # Only check after we have at least 2 rounds (4 turns total)
+            if len(conversation.turns) >= 6:  # Initial turn + 2 complete rounds
+                should_end = await self.check_conversation_should_end(conversation)
+                if should_end:
+                    print(f"\n✅ Natural ending detected at round {round_num + 1}")
+                    break
         
         print()  # New line after conversation progress
         
@@ -106,7 +114,7 @@ Start with a natural opening message (1-2 sentences)."""
         
         # Prepare conversation history
         messages = [
-            {"role": "system", "content": system_prompt + "\n\nIMPORTANT: Keep your response concise and under 150 words. Focus on being helpful and encouraging without being overly long. NEVER end the conversation or use phrases like '[End of conversation]' - this is an ongoing coaching session."},
+            {"role": "system", "content": system_prompt + "\n\nIMPORTANT: You are having a real conversation with a student. Respond naturally and authentically. Do NOT predict what the student will say or include meta-commentary. Just provide helpful advice and support. When you've provided sufficient help or the student seems ready to conclude, it's okay to wrap up naturally."},
             {"role": "user", "content": f"Student Profile: {dummy.get_character_summary()}"}
         ]
         
@@ -128,8 +136,8 @@ Start with a natural opening message (1-2 sentences)."""
                     "temperature": 0.7
                 }
             ) as response:
-                result = await response.json()
-                return result['choices'][0]['message']['content'].strip()
+                    result = await response.json()
+            return result['choices'][0]['message']['content'].strip()
     
     async def _generate_character_response_async(self, conversation: Conversation, dummy: AIDummy, round_num: int) -> str:
         """Generate character-authentic response based on dummy's profile"""
@@ -138,7 +146,7 @@ Start with a natural opening message (1-2 sentences)."""
         
         # Prepare conversation history (same as AI - last 6 turns for context)
         messages = [
-            {"role": "system", "content": f"You are {dummy.name}, responding authentically to your social skills coach.\n\n{character_context}\n\nRespond naturally as your character would:\n- Stay true to your personality traits and anxiety level\n- Express your real fears, goals, and challenges\n- Show your communication style\n- Be honest about your feelings and thoughts\n\nKeep your response conversational and authentic (1-2 sentences). Be concise and natural."},
+            {"role": "system", "content": f"You are {dummy.name}, a {dummy.age}-year-old {dummy.major} student at {dummy.university}.\n\n{character_context}\n\nYou're having a conversation with a peer mentor. Respond naturally and authentically as this character. Keep your response concise. When you feel satisfied with the advice or ready to end, it's natural to conclude."},
             {"role": "user", "content": f"Student Profile: {dummy.get_character_summary()}"}
         ]
         
@@ -156,7 +164,7 @@ Start with a natural opening message (1-2 sentences)."""
                 json={
                     "model": "deepseek-v3-0324",
                     "messages": messages,
-                    "max_tokens": 80,
+                    "max_tokens": 150,
                     "temperature": 0.8
                 }
             ) as response:
@@ -192,6 +200,64 @@ Start with a natural opening message (1-2 sentences)."""
 - Behaviors: {', '.join(dummy.behaviors)}"""
         
         return f"{personality_desc}\n\n{anxiety_desc}\n\n{personal_desc}"
+    
+    async def check_conversation_should_end(self, conversation: Conversation) -> bool:
+        """Simple, lightweight check if conversation has reached a natural ending"""
+        if len(conversation.turns) < 4:  # Need at least 2 rounds
+            return False
+            
+        # Get recent conversation context for LLM-based detection
+        recent_turns = conversation.turns[-4:]  # Last 4 turns (2 rounds)
+        conversation_text = "\n".join([f"{turn.speaker}: {turn.message}" for turn in recent_turns])
+        
+        headers = {
+            "Authorization": f"Bearer {Config.DEEPSEEK_API_KEY}",
+            "Content-Type": "application/json"
+        }
+        
+        # More effective prompt for end detection
+        prompt = f"""You are analyzing a coaching conversation between a student and an AI mentor.
+
+Recent conversation:
+{conversation_text}
+
+Determine if this conversation has reached a natural ending. Look for:
+1. Student expressing satisfaction, thanks, or saying goodbye
+2. Student indicating they're leaving or ending the session  
+3. Student appearing ready to conclude (even without explicit words)
+4. Any action descriptions indicating departure (exits, leaves, walks away, etc.)
+5. Both parties showing closure or conclusion
+
+Be sensitive to subtle ending signals. If the student seems ready to conclude or is departing, say YES.
+
+Answer with exactly "YES" or "NO"."""
+        
+        messages = [
+            {"role": "system", "content": "You are an expert conversation analyst. Detect natural conversation endings accurately. Be sensitive to departure signals."},
+            {"role": "user", "content": prompt}
+        ]
+        
+        payload = {
+            "model": "deepseek-v3-0324",
+            "messages": messages,
+            "temperature": 0.2,  # Slightly higher for better sensitivity
+            "max_tokens": 10
+        }
+        
+        try:
+            async with aiohttp.ClientSession() as session:
+                async with session.post("https://api.lkeap.cloud.tencent.com/v1/chat/completions", headers=headers, json=payload) as response:
+                    result = await response.json()
+                    if "choices" in result:
+                        response_text = result["choices"][0]["message"]["content"].strip().upper()
+                        is_ending = "YES" in response_text  # More flexible matching
+                        if is_ending:
+                            print(f"🎯 LLM detected ending: {response_text}")
+                        return is_ending
+        except Exception as e:
+            print(f"⚠️  End detection API error: {e}")
+            
+        return False  # Default to continuing conversation
 
 def main():
     """Test the clean conversation simulator"""

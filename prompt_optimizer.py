@@ -1538,117 +1538,13 @@ Example format: "You are a helpful social skills coach who..."
             custom_system_prompt=custom_system_prompt
         )
         
-        # Detect optimal ending point based on conversation quality
-        optimal_ending_point = self._detect_optimal_ending_point(conversation, dummy)
-        
-        print(f"   📍 Optimal ending point detected: Round {optimal_ending_point}")
+        # Simple end detection is now handled within the conversation simulator
         print(f"   📊 Conversation length: {len(conversation.turns)} turns")
         
-        # Truncate conversation to optimal ending point if needed
-        if optimal_ending_point < len(conversation.turns):
-            # Keep only turns up to optimal ending point
-            conversation.turns = conversation.turns[:optimal_ending_point * 2]  # *2 because each round has 2 turns (AI + dummy)
-            print(f"   ✂️  Truncated conversation to {len(conversation.turns)} turns")
-        
-        return conversation, optimal_ending_point
+        # Return the conversation as-is (end detection handled during simulation)
+        return conversation, len(conversation.turns) // 2
     
-    def _detect_optimal_ending_point(self, conversation: Conversation, dummy: AIDummy) -> int:
-        """Detect the optimal ending point for a conversation based on quality degradation"""
-        print(f"🔍 Analyzing conversation quality for optimal ending point...")
-        
-        # Analyze conversation quality in chunks
-        chunk_size = 5  # Analyze every 5 rounds
-        quality_scores = []
-        
-        for i in range(0, len(conversation.turns), chunk_size * 2):  # *2 for AI + dummy turns
-            chunk = conversation.turns[i:i + chunk_size * 2]
-            if len(chunk) < 4:  # Need at least 2 rounds (4 turns)
-                break
-                
-            quality_score = self._analyze_conversation_chunk_quality(chunk, dummy)
-            quality_scores.append({
-                'round': (i // 2) + 1,  # Convert to round number
-                'quality': quality_score,
-                'turn_start': i,
-                'turn_end': i + len(chunk)
-            })
-        
-        # Find optimal ending point (peak quality before degradation)
-        if len(quality_scores) < 2:
-            # Not enough data, use full conversation
-            return len(conversation.turns) // 2
-        
-        # Find the round with highest quality
-        best_round = max(quality_scores, key=lambda x: x['quality'])
-        best_quality = best_round['quality']
-        
-        # Look for significant quality degradation after the peak
-        optimal_round = best_round['round']
-        
-        for i, score_data in enumerate(quality_scores):
-            if score_data['round'] > best_round['round']:
-                # Check for significant degradation (quality drop > 40% - less sensitive)
-                quality_drop = (best_quality - score_data['quality']) / best_quality
-                if quality_drop > 0.4:  # 40% quality drop (less aggressive)
-                    optimal_round = score_data['round'] - 1  # End before degradation
-                    print(f"   📉 Quality degradation detected at round {score_data['round']} (drop: {quality_drop:.1%})")
-                    break
-        
-        # Ensure minimum conversation length (at least 15 rounds for meaningful conversations)
-        optimal_round = max(15, optimal_round)
-        
-        # Ensure maximum conversation length (don't exceed total rounds)
-        optimal_round = min(optimal_round, len(conversation.turns) // 2)
-        
-        print(f"   🎯 Optimal ending point: Round {optimal_round}")
-        quality_summary = [f"R{s['round']}:{s['quality']:.2f}" for s in quality_scores[:5]]
-        print(f"   📊 Quality scores: {quality_summary}")
-        
-        return optimal_round
-    
-    def _analyze_conversation_chunk_quality(self, turns: List, dummy: AIDummy) -> float:
-        """Analyze the quality of a conversation chunk"""
-        if not turns:
-            return 0.0
-        
-        quality_indicators = {
-            'engagement': 0.0,
-            'helpfulness': 0.0,
-            'relevance': 0.0,
-            'depth': 0.0
-        }
-        
-        # Analyze AI responses for quality indicators
-        ai_turns = [turn for i, turn in enumerate(turns) if i % 2 == 0]  # AI turns (even indices)
-        
-        for turn in ai_turns:
-            message = turn.message.lower()
-            
-            # Engagement indicators
-            if any(word in message for word in ['how', 'what', 'tell me', 'can you', 'would you']):
-                quality_indicators['engagement'] += 1.0
-            
-            # Helpfulness indicators
-            if any(word in message for word in ['try', 'practice', 'suggest', 'recommend', 'help']):
-                quality_indicators['helpfulness'] += 1.0
-            
-            # Relevance indicators
-            if any(word in message for word in ['social', 'anxiety', 'confident', 'skills', 'interaction']):
-                quality_indicators['relevance'] += 1.0
-            
-            # Depth indicators (longer, more thoughtful responses)
-            if len(message.split()) > 15:  # Substantial response
-                quality_indicators['depth'] += 1.0
-        
-        # Calculate overall quality score
-        total_indicators = sum(quality_indicators.values())
-        max_possible = len(ai_turns) * len(quality_indicators)
-        
-        if max_possible == 0:
-            return 0.0
-        
-        quality_score = total_indicators / max_possible
-        return min(1.0, quality_score)  # Cap at 1.0
+    # Old end detection methods removed - now using simple API-based detection in conversation simulator
     
     async def run_optimization_async(self, dummies: List[AIDummy]) -> OptimizedPrompt:
         """Run the complete optimization process"""
