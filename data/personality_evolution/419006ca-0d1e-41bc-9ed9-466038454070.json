@@ -1,10 +1,10 @@
 {
   "dummy_id": "419006ca-0d1e-41bc-9ed9-466038454070",
   "dummy_name": "Kimberly Robinson",
-  "current_experiment_id": "gepa_exp_20251004_191257",
-  "current_prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+  "current_experiment_id": "gepa_exp_20251004_194514",
+  "current_prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
   "created_at": "2025-10-04T19:08:38.128395",
-  "last_updated": "2025-10-04T19:15:02.907317",
+  "last_updated": "2025-10-04T19:46:18.000616",
   "conversation_profile": {
     "original_fears": [
       "Making new friends",
@@ -34,23 +34,23 @@
       "openness": 7
     },
     "current_fears": [
-      "Starting conversations in the cafeteria",
-      "Raising hand to answer a question"
+      "Networking events and class discussions",
+      "Handing papers to the professor and speaking up in seminars"
     ],
     "current_challenges": [
-      "Approaching a professor during office hours",
-      "Attending a fraternity/sorority event",
-      "Managing time between club meetings and homework",
-      "Staying up late studying for exams"
+      "Navigating pre-law and research goals",
+      "Interacting with classmates and roommates",
+      "Moot court sign-ups and torts readings",
+      "Over-preparing and late-night studying"
     ],
     "current_behaviors": [
-      "Pulling all-nighters before exams",
-      "Spending 3 hours daily in the library",
-      "Going to the gym 4 times a week"
+      "Heavily highlighted legal pad",
+      "Over-preparing for classes",
+      "Not explicitly mentioned in conversation"
     ],
     "current_anxiety_triggers": [
-      "Feeling out of place at social gatherings",
-      "Stumbling over words during an interview"
+      "Not explicitly mentioned in conversation",
+      "Not explicitly mentioned in conversation"
     ],
     "current_social_anxiety_level": 7,
     "current_big_five": {
@@ -126,8 +126,338 @@
         "post_assessment_score": 2.9,
         "improvement_score": 0.8999999999999999,
         "timestamp": "2025-10-04T19:15:02.906775"
+      },
+      {
+        "stage_number": 3,
+        "prompt_id": "76f427d6-7f43-40db-bd23-cc064b5199e9",
+        "prompt_name": "G2C02 from G1M01 & G1E00",
+        "generation": 2,
+        "conversation_id": "5e981385-22a7-4a0a-920e-f627aa1a156b",
+        "conversation_summary": "Kimberly discussed her fears of public speaking and making new friends, as well as her high anxiety levels. Solutions offered included making small comments in class, complimenting someone's shoes as an easy social win, and using a humorous 'CODE LLAMA' escape plan for stressful situations. Kimberly responded positively, agreeing to compliment a classmate's sneakers and engaging in light-hearted banter about the llama protocol. Evidence of progress includes her willingness to take small social steps and her use of humor to cope with anxiety.",
+        "fears_materialized": {
+          "Making new friends": "Complimenting a classmate's holographic sneakers",
+          "Public speaking in class": "Making a small comment or nodding in agreement during class discussions"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Not addressed in this conversation",
+          "Making friends in a new environment": "Initiating a conversation by complimenting someone's shoes",
+          "Balancing extracurricular activities with studies": "Not addressed in this conversation",
+          "Coping with stress and burnout": "Not addressed in this conversation"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Not specified in this conversation",
+          "Studies in the library regularly": "Not specified in this conversation",
+          "Exercises regularly": "Not specified in this conversation"
+        },
+        "triggers_specified": {
+          "Fraternity/Sorority events": "Not addressed in this conversation",
+          "Job interviews": "Not addressed in this conversation"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.8,
+        "improvement_score": 0.7999999999999998,
+        "timestamp": "2025-10-04T19:21:36.042376"
+      },
+      {
+        "stage_number": 4,
+        "prompt_id": "d675a42d-8758-4aa1-9f9a-2504ddb08752",
+        "prompt_name": "G2M01 from G1M01",
+        "generation": 2,
+        "conversation_id": "45dbe7c6-afce-4c1a-ab5e-3c4eeba4bcbc",
+        "conversation_summary": "1) Problems discussed: Fear of public speaking, social judgment, and avoidance behaviors hindering academic goals. 2) Solutions offered/accepted: Counting real silence durations, embracing unique traits (color-coding/glitter pens), targeting like-minded peers via visible cues (colorful attire). 3) Student's response: Initially resistant but engaged with humor (laughing at 'Mom' story), committed to trying the 'color person' approach, and showed physical relaxation. 4) Evidence of progress: Verbalized willingness to act ('I’ll look for neon laces'), genuine laughter, and ended conversation with unprompted gratitude ('Thanks for the dino solidarity').",
+        "fears_materialized": {
+          "Making new friends": "Avoiding study group after sharing her note-taking method",
+          "Public speaking in class": "Blanketing during introductions, voice cracking, and being remembered as awkward"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Fear of being perceived as pretentious or boring when discussing interests",
+          "Making friends in a new environment": "Avoiding interactions after an awkward encounter",
+          "Balancing extracurricular activities with studies": "Staying up late studying, indicating poor time management",
+          "Coping with stress and burnout": "Expressed high anxiety (9/10) and fear of failure"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Pulling all-nighters to compensate for perceived social shortcomings",
+          "Studies in the library regularly": "Using library as a safe space to avoid social interactions",
+          "Exercises regularly": "Physical activity as a stress relief mechanism"
+        },
+        "triggers_specified": {
+          "Fraternity/Sorority events": "Networking scenarios where she fears judgment",
+          "Job interviews": "High-pressure situations requiring self-presentation"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.7,
+        "improvement_score": 0.7000000000000002,
+        "timestamp": "2025-10-04T19:23:49.838399"
+      },
+      {
+        "stage_number": 5,
+        "prompt_id": "e790c703-2c16-4dd7-9ee1-cc749cda9e8a",
+        "prompt_name": "G2C03 from G1E00 & G1M01",
+        "generation": 2,
+        "conversation_id": "fb42e947-0acd-40a4-b56a-edb84c937602",
+        "conversation_summary": "Kimberly discussed her fears of public speaking and making new friends, as well as challenges in finding a mentor and coping with stress. Solutions offered included starting small with social interactions, joining a debate club or study group, and emailing a professor for mentorship. Kimberly responded positively by sending an email to Professor Calloway, acknowledging the need for self-care, and expressing willingness to try small social steps. Evidence of progress includes sending the email, asking a question in class, and planning to improve self-care habits.",
+        "fears_materialized": {
+          "Making new friends": "Networking events and small study groups",
+          "Public speaking in class": "Asking questions in Contracts class"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Emailing Professor Calloway about her antitrust paper",
+          "Making friends in a new environment": "Joining a small study group",
+          "Balancing extracurricular activities with studies": "Skipping meals between classes",
+          "Coping with stress and burnout": "Forgetting to breathe and shaky hands"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Pulling up faculty page with shaking hands",
+          "Studies in the library regularly": "Victory lap around the library stacks",
+          "Exercises regularly": "Not mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Fraternity/Sorority events": "Not mentioned in conversation",
+          "Job interviews": "Hiding in bathroom at career fairs"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.85,
+        "improvement_score": 0.8500000000000001,
+        "timestamp": "2025-10-04T19:25:04.032621"
+      },
+      {
+        "stage_number": 6,
+        "prompt_id": "5a2e1ba7-9521-4df4-bece-085e7d07aa1c",
+        "prompt_name": "G3M05 from G2C03",
+        "generation": 3,
+        "conversation_id": "26bd94df-9588-43f7-9e25-1fae1b2b711f",
+        "conversation_summary": "Problems discussed: Kimberly expressed fear of making new friends and public speaking in class, particularly in the library setting. Solutions offered/accepted: The AI Coach suggested starting with small, low-pressure interactions like nodding at someone in the library and whispering 'hi' to a plant as practice. Kimberly agreed to try these steps, showing willingness to take action. Evidence of progress/improvement: Kimberly hesitantly smiled and agreed to the plan, indicating a reduction in anxiety and a positive response to the solutions. She also recognized her tendency to overthink and decided to leave before doing so, demonstrating self-awareness.",
+        "fears_materialized": {
+          "Making new friends": "Nodding at someone in the library",
+          "Public speaking in class": "Whispering 'hi' to a plant as practice"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Not addressed in this conversation",
+          "Making friends in a new environment": "Starting with small interactions in the library",
+          "Balancing extracurricular activities with studies": "Not addressed in this conversation",
+          "Coping with stress and burnout": "Not addressed in this conversation"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Studying in the library regularly",
+          "Studies in the library regularly": "Seeing the same people but avoiding interaction",
+          "Exercises regularly": "Not addressed in this conversation"
+        },
+        "triggers_specified": {
+          "Fraternity/Sorority events": "Not addressed in this conversation",
+          "Job interviews": "Not addressed in this conversation"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.95,
+        "improvement_score": 0.9500000000000002,
+        "timestamp": "2025-10-04T19:27:28.678697"
+      },
+      {
+        "stage_number": 7,
+        "prompt_id": "f4eccadd-cbf4-4a75-9b58-3abe8a4d407b",
+        "prompt_name": "G3C03 from G2C03 & G2M01",
+        "generation": 3,
+        "conversation_id": "77c344b1-73db-4ea2-a5c8-1b39bf0cf3a8",
+        "conversation_summary": "Problems discussed: 1) Fear of public speaking in class, 2) Anxiety about networking for research positions, 3) Fear of judgment from professors. Solutions offered/accepted: 1) Prepping one talking point for class discussions, 2) Emailing a professor with a short, specific question, 3) Using a script to follow up if blanking. Student's response to solutions: Initially hesitant but agreed to try, sent the email with support, and expressed relief afterward. Evidence of progress/improvement: Student sent the email, showed reduced anxiety, and demonstrated willingness to take small steps.",
+        "fears_materialized": {
+          "Making new friends": "Networking for a research position",
+          "Public speaking in class": "Freezing up during class discussions"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Emailing a professor for guidance",
+          "Making friends in a new environment": "Avoiding fraternity/sorority events",
+          "Balancing extracurricular activities with studies": "Staying up late studying",
+          "Coping with stress and burnout": "Exercising regularly but still feeling overwhelmed"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Pulling all-nighters before exams",
+          "Studies in the library regularly": "Spends 4+ hours daily in the library",
+          "Exercises regularly": "Goes to the gym 3 times a week"
+        },
+        "triggers_specified": {
+          "Fraternity/Sorority events": "Social gatherings with unfamiliar peers",
+          "Job interviews": "Networking for research positions"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.8999999999999999,
+        "timestamp": "2025-10-04T19:28:58.607365"
+      },
+      {
+        "stage_number": 8,
+        "prompt_id": "c60cd38c-fce5-40e3-969d-a206fb771098",
+        "prompt_name": "G3M06 from G2C03",
+        "generation": 3,
+        "conversation_id": "d982a41c-a6ed-4d6c-a3e0-85e4825dd16c",
+        "conversation_summary": "Kimberly discussed her fears of making new friends and public speaking, as well as her challenges with networking and social interactions. The AI Coach offered the 2-Second Rule as a solution to ease into eye contact, suggesting she start with a classmate who uses cool stationery. Kimberly responded positively, laughing and showing relief at the idea of eyebrow contact instead of direct eye contact. She agreed to try the experiment and even joked about texting an emoji to report her progress. Evidence of improvement includes her willingness to engage with the solution, her visible relaxation during the conversation, and her commitment to trying the 2-Second Rule in class.",
+        "fears_materialized": {
+          "Making new friends": "Attempting eye contact with a classmate who uses cool stationery",
+          "Public speaking in class": "Practicing the 2-Second Rule during class discussions"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Networking with peers in class as a first step",
+          "Making friends in a new environment": "Starting small with one classmate",
+          "Balancing extracurricular activities with studies": "Not explicitly addressed yet",
+          "Coping with stress and burnout": "Not explicitly addressed yet"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Studying late into the night, possibly leading to fatigue",
+          "Studies in the library regularly": "Frequent library visits for focused study sessions",
+          "Exercises regularly": "Maintaining a routine of physical activity"
+        },
+        "triggers_specified": {
+          "Fraternity/Sorority events": "Not explicitly addressed yet",
+          "Job interviews": "Not explicitly addressed yet"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.0,
+        "improvement_score": 0.0,
+        "timestamp": "2025-10-04T19:32:24.568470"
+      },
+      {
+        "stage_number": 9,
+        "prompt_id": "6047de79-e44a-421b-8e45-261a5fdcaa16",
+        "prompt_name": "G3C07 from G2C03 & G2E00",
+        "generation": 3,
+        "conversation_id": "21e86fd8-8389-4cc5-9be9-e5430eec8794",
+        "conversation_summary": "Kimberly discussed her fears of public speaking and making new friends, as well as challenges with finding a mentor and balancing studies. Solutions offered included practicing one question for seminar, reassurance about professor reactions, and role-playing social interactions. Kimberly responded positively, practicing a question and laughing during the session, showing reduced tension. Evidence of progress includes her willingness to practice and her relaxed demeanor by the end of the conversation.",
+        "fears_materialized": {
+          "Making new friends": "Practicing social interactions with AI Coach",
+          "Public speaking in class": "Practicing a question for seminar with AI Coach"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Seeking advice from AI Coach on approaching professors",
+          "Making friends in a new environment": "Practicing social skills in a safe setting",
+          "Balancing extracurricular activities with studies": "Expressed stress about upcoming torts reading",
+          "Coping with stress and burnout": "Mentioned impending caffeine-and-highlighter breakdown"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Noted due torts reading",
+          "Studies in the library regularly": "Brought notebook to session",
+          "Exercises regularly": "Not mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Fraternity/Sorority events": "Not mentioned in conversation",
+          "Job interviews": "Expressed fear of freezing up during research position interviews"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.85,
+        "improvement_score": 0.8500000000000001,
+        "timestamp": "2025-10-04T19:33:40.677923"
+      },
+      {
+        "stage_number": 10,
+        "prompt_id": "8966845e-bd42-4a15-9003-2b2ed03db063",
+        "prompt_name": "G3M04 from G2E00",
+        "generation": 3,
+        "conversation_id": "cce0943b-12bf-44d9-b8a2-15e308f84b61",
+        "conversation_summary": "1) Problems discussed: Social anxiety (library interactions, fraternity events), public speaking fears (upcoming presentation), and difficulty approaching professors for mentorship. 2) Solutions offered/accepted: Breaking tasks into smaller steps (emailing professors first), role-playing conversations, using low-pressure icebreakers in the library, and opting out of overwhelming social events. 3) Student's response: Initially hesitant but engaged in solutions (practiced scripting, scheduled a professor meeting, agreed to try library interactions). 4) Evidence of progress: Successfully role-played a professor interaction, committed to a concrete action plan ('Operation Bowtie'), and demonstrated reduced catastrophic thinking by the end.",
+        "fears_materialized": {
+          "Making new friends": "Approaching peers in the library",
+          "Public speaking in class": "Upcoming class presentation"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Asking Bowtie Professor for office hours",
+          "Making friends in a new environment": "Initiating conversations in study groups",
+          "Balancing extracurricular activities with studies": "Prioritizing tasks for the week",
+          "Coping with stress and burnout": "Managing pre-presentation anxiety"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Pulling all-nighters before exams",
+          "Studies in the library regularly": "Sitting alone to avoid interactions",
+          "Exercises regularly": "Using gym sessions as stress relief"
+        },
+        "triggers_specified": {
+          "Fraternity/Sorority events": "Large social gatherings with unfamiliar people",
+          "Job interviews": "High-pressure one-on-one conversations"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.8999999999999999,
+        "timestamp": "2025-10-04T19:38:14.144706"
+      },
+      {
+        "stage_number": 11,
+        "prompt_id": "1683d52f-8fd4-4194-a06f-eea15f95d10e",
+        "prompt_name": "G4C07 from G3C07 & G3E01",
+        "generation": 4,
+        "conversation_id": "c2db8a48-5bfb-46ba-bff4-28b64ddf876c",
+        "conversation_summary": "Problems discussed: 1) Severe public speaking anxiety (freezing, throat tightness), 2) Isolation/lack of peer support, 3) Perfectionism leading to burnout. Solutions offered/accepted: 1) Humorous self-naming of panic symptoms, 2) Embracing \"flawed\" participation, 3) Small social steps. Student's response: Initially resistant (dismissed scripts), then engaged with humor, physically relaxed, agreed to try techniques. Evidence of progress: Returned after panic attack, used humor to diffuse tension, verbalized willingness to experiment with strategies.",
+        "fears_materialized": {
+          "Making new friends": "Avoiding networking events due to panic",
+          "Public speaking in class": "Freezing up during seminar discussions"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Struggling to approach potential mentors at events",
+          "Making friends in a new environment": "Isolating herself in the library",
+          "Balancing extracurricular activities with studies": "Staying up late studying, leading to burnout",
+          "Coping with stress and burnout": "Physical symptoms like throat closing up during stress"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Pulling all-nighters before exams",
+          "Studies in the library regularly": "Spending excessive hours alone in the library",
+          "Exercises regularly": "Using gym sessions as sole stress relief"
+        },
+        "triggers_specified": {
+          "Fraternity/Sorority events": "Panic at thought of socializing with peers",
+          "Job interviews": "Fear of being judged or humiliated"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.95,
+        "improvement_score": 0.9500000000000002,
+        "timestamp": "2025-10-04T19:43:34.304661"
+      },
+      {
+        "stage_number": 12,
+        "prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
+        "prompt_name": "G5C07 from G4E01 & G4E02",
+        "generation": 5,
+        "conversation_id": "cdb89202-f152-4733-8b46-2451c114959b",
+        "conversation_summary": "Problems discussed: Kimberly expressed fears about public speaking in class and making new friends, as well as challenges in balancing studies and extracurriculars. Solutions offered/accepted: The coach suggested writing one question in the margin of notes before class to observe others, which Kimberly agreed to try. Student's response to solutions: Kimberly showed engagement and humor, recognizing her tendency to over-prepare and treat situations like court cases. Evidence of progress/improvement: Kimberly's agreement to try the margin technique and her playful interaction with the coach indicate reduced anxiety and willingness to address her fears.",
+        "fears_materialized": {
+          "Making new friends": "Networking events and class discussions",
+          "Public speaking in class": "Handing papers to the professor and speaking up in seminars"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Navigating pre-law and research goals",
+          "Making friends in a new environment": "Interacting with classmates and roommates",
+          "Balancing extracurricular activities with studies": "Moot court sign-ups and torts readings",
+          "Coping with stress and burnout": "Over-preparing and late-night studying"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Heavily highlighted legal pad",
+          "Studies in the library regularly": "Over-preparing for classes",
+          "Exercises regularly": "Not explicitly mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Fraternity/Sorority events": "Not explicitly mentioned in conversation",
+          "Job interviews": "Not explicitly mentioned in conversation"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.8999999999999999,
+        "timestamp": "2025-10-04T19:46:18.000222"
       }
     ],
-    "current_stage": 2
+    "current_stage": 12
   }
 }

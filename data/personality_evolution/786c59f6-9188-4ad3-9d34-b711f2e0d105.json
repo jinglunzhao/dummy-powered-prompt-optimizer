@@ -1,10 +1,10 @@
 {
   "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
   "dummy_name": "Zachary Wilson",
-  "current_experiment_id": "gepa_exp_20251004_191257",
-  "current_prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+  "current_experiment_id": "gepa_exp_20251004_194514",
+  "current_prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
   "created_at": "2025-10-04T19:08:38.126572",
-  "last_updated": "2025-10-04T19:13:50.990353",
+  "last_updated": "2025-10-04T19:47:30.053792",
   "conversation_profile": {
     "original_fears": [
       "Dealing with roommate conflicts",
@@ -36,25 +36,25 @@
     },
     "current_fears": [
       "Not explicitly mentioned in conversation",
-      "Feeling overwhelmed and judged when speaking up in 200-person lectures"
+      "Presenting research proposal in bio seminar"
     ],
     "current_challenges": [
-      "Feeling overwhelmed balancing classes, networking, and social situations",
-      "Considering joining debate club while managing studies",
+      "Feeling overwhelmed with balancing networking and public speaking",
+      "Not explicitly mentioned in conversation",
       "Not explicitly mentioned in conversation",
       "Not explicitly mentioned in conversation"
     ],
     "current_behaviors": [
       "Not explicitly mentioned in conversation",
+      "Circled STEM career fair twice but left due to discomfort",
       "Not explicitly mentioned in conversation",
-      "Attending bio study group",
       "Not explicitly mentioned in conversation",
       "Not explicitly mentioned in conversation"
     ],
     "current_anxiety_triggers": [
       "Not explicitly mentioned in conversation"
     ],
-    "current_social_anxiety_level": 7,
+    "current_social_anxiety_level": 1,
     "current_big_five": {
       "extraversion": 6,
       "agreeableness": 3,
@@ -130,8 +130,348 @@
         "post_assessment_score": 2.0,
         "improvement_score": -0.7000000000000002,
         "timestamp": "2025-10-04T19:13:50.989894"
+      },
+      {
+        "stage_number": 3,
+        "prompt_id": "76f427d6-7f43-40db-bd23-cc064b5199e9",
+        "prompt_name": "G2C02 from G1M01 & G1E00",
+        "generation": 2,
+        "conversation_id": "4377db3f-454a-4c3c-b605-de52d1e43ea6",
+        "conversation_summary": "Zachary discussed feeling overwhelmed with balancing classes, extracurriculars, and networking, and expressed a desire to improve his public speaking and social confidence in large lecture halls and crowded spaces like the dining hall. The AI Coach suggested joining the campus Toastmasters club for public speaking practice, sitting near the front or aisle in lecture halls to reduce anxiety, and using noise-canceling headphones in the dining hall. Zachary responded positively to these suggestions, agreeing to look into Toastmasters and try the aisle seat trick. He also expressed interest in finding a research mentor in molecular biology, which the AI Coach agreed to help with. Evidence of progress includes Zachary's willingness to implement the suggested strategies and his proactive approach to seeking further advice on time management and mentorship.",
+        "fears_materialized": {
+          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation",
+          "Social anxiety in large lecture halls": "Feeling overwhelmed in big lecture halls or crowded spaces like the dining hall"
+        },
+        "challenges_materialized": {
+          "Coping with stress and burnout": "Feeling overwhelmed with balancing classes, extracurriculars, and networking",
+          "Balancing extracurricular activities with studies": "Struggling to manage time effectively",
+          "Managing student loans": "Not explicitly mentioned in conversation",
+          "Finding a mentor": "Expressed interest in finding a research mentor in molecular biology"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Not explicitly mentioned in conversation",
+          "Attends career fairs": "Not explicitly mentioned in conversation",
+          "Uses campus resources like tutoring": "Not explicitly mentioned in conversation",
+          "Calls family frequently": "Not explicitly mentioned in conversation",
+          "Studies in the library regularly": "Not explicitly mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Dining hall during peak hours": "Feeling anxious in crowded dining hall during peak hours"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.7,
+        "post_assessment_score": 3.1,
+        "improvement_score": 0.3999999999999999,
+        "timestamp": "2025-10-04T19:18:37.331190"
+      },
+      {
+        "stage_number": 4,
+        "prompt_id": "e790c703-2c16-4dd7-9ee1-cc749cda9e8a",
+        "prompt_name": "G2C03 from G1E00 & G1M01",
+        "generation": 2,
+        "conversation_id": "de4f9a10-cb37-400b-be73-be25c16555ca",
+        "conversation_summary": "Problems discussed: 1) Social anxiety in large lecture halls and networking for internships, 2) Finding a mentor in bio. Solutions offered/accepted: 1) Start small by asking one question per lecture and schedule reminders, 2) Use cultural events for networking, 3) Warm email approach for finding mentors by attending office hours with specific questions and coffee events. Student's response to solutions: Positive, plans to implement scheduling questions, attend mixer, and visit office hours. Evidence of progress/improvement: Student feels more confident, has concrete plans, and sees networking as manageable.",
+        "fears_materialized": {
+          "Dealing with roommate conflicts": "Not explicitly discussed in conversation",
+          "Social anxiety in large lecture halls": "Speaking up in large lecture halls, fearing judgment from peers"
+        },
+        "challenges_materialized": {
+          "Coping with stress and burnout": "Balancing public speaking, networking, and academic workload",
+          "Balancing extracurricular activities with studies": "Attending cultural events for networking while managing studies",
+          "Managing student loans": "Not explicitly discussed in conversation",
+          "Finding a mentor": "Cold-emailing professors with no success"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Not explicitly discussed in conversation",
+          "Attends career fairs": "Not explicitly discussed in conversation",
+          "Uses campus resources like tutoring": "Not explicitly discussed in conversation",
+          "Calls family frequently": "Not explicitly discussed in conversation",
+          "Studies in the library regularly": "Not explicitly discussed in conversation"
+        },
+        "triggers_specified": {
+          "Dining hall during peak hours": "Not explicitly discussed in conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.7,
+        "post_assessment_score": 3.15,
+        "improvement_score": 0.44999999999999973,
+        "timestamp": "2025-10-04T19:19:13.333221"
+      },
+      {
+        "stage_number": 5,
+        "prompt_id": "d675a42d-8758-4aa1-9f9a-2504ddb08752",
+        "prompt_name": "G2M01 from G1M01",
+        "generation": 2,
+        "conversation_id": "7a5ff97f-cc80-4bc0-9571-cbd544e5f638",
+        "conversation_summary": "Problems discussed: 1) Public speaking anxiety in large lectures, 2) Awkwardness in networking situations. Solutions offered/accepted: 1) Reframing worst-case scenarios for public speaking, starting with smaller discussion groups, 2) Practicing small talk in low-pressure settings like coffee lines. Student's response: Positive engagement with practical solutions, demonstrated by: 1) Planning to speak up in Bio 200 discussion, 2) Planning to practice networking in coffee lines, 3) Reduced catastrophic thinking about public speaking. Evidence of progress: Concrete plans to implement strategies, lighter demeanor, and self-reported decreased intimidation.",
+        "fears_materialized": {
+          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation",
+          "Social anxiety in large lecture halls": "Speaking up in Bio 200 discussion"
+        },
+        "challenges_materialized": {
+          "Coping with stress and burnout": "Upcoming midterms",
+          "Balancing extracurricular activities with studies": "Not explicitly mentioned in conversation",
+          "Managing student loans": "Not explicitly mentioned in conversation",
+          "Finding a mentor": "Conversation with peer mentor"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Not explicitly mentioned in conversation",
+          "Attends career fairs": "Not explicitly mentioned in conversation",
+          "Uses campus resources like tutoring": "Not explicitly mentioned in conversation",
+          "Calls family frequently": "Not explicitly mentioned in conversation",
+          "Studies in the library regularly": "Not explicitly mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Dining hall during peak hours": "Not explicitly mentioned in conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.7,
+        "post_assessment_score": 3.1,
+        "improvement_score": 0.3999999999999999,
+        "timestamp": "2025-10-04T19:20:42.390038"
+      },
+      {
+        "stage_number": 6,
+        "prompt_id": "f4eccadd-cbf4-4a75-9b58-3abe8a4d407b",
+        "prompt_name": "G3C03 from G2C03 & G2M01",
+        "generation": 3,
+        "conversation_id": "37c7a2ea-a8b8-4257-8182-0b29ade9cad0",
+        "conversation_summary": "Problems discussed: 1) Social anxiety in large lectures, 2) Burnout from academic/extracurricular overload, 3) Underutilizing tutoring resources, 4) Passive approach to finding mentors. Solutions offered/accepted: 1) 'Micro-practicing' public speaking in smaller settings, 2) 'Top 3' rule and scheduled stress vents, 3) Committing to tutoring center visits, 4) Active mentor outreach strategy. Student's response: Enthusiastically embraced all solutions, showing immediate behavioral adjustments (scheduled breakdown, planned lab-section practice). Evidence of progress: Shift from avoidance to structured action plans in all areas, with measurable next steps.",
+        "fears_materialized": {
+          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation",
+          "Social anxiety in large lecture halls": "Shutting down during large lectures, fearing judgment from peers"
+        },
+        "challenges_materialized": {
+          "Coping with stress and burnout": "Overwhelmed by two midterms, a lab report, and a networking event in one week",
+          "Balancing extracurricular activities with studies": "Juggling pre-med club events with academic workload",
+          "Managing student loans": "Mentioned as a task to prioritize ('calling loan servicer')",
+          "Finding a mentor": "Waiting for a 'perfect' professor to approach him"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "LinkedIn messaging suggested for mentor outreach",
+          "Attends career fairs": "Pre-med club networking event attended",
+          "Uses campus resources like tutoring": "Admits to walking past tutoring center without utilizing it",
+          "Calls family frequently": "Not explicitly mentioned in conversation",
+          "Studies in the library regularly": "Not explicitly mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Dining hall during peak hours": "Not explicitly mentioned in conversation"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.7,
+        "post_assessment_score": 3.05,
+        "improvement_score": 0.34999999999999964,
+        "timestamp": "2025-10-04T19:31:08.030420"
+      },
+      {
+        "stage_number": 7,
+        "prompt_id": "6047de79-e44a-421b-8e45-261a5fdcaa16",
+        "prompt_name": "G3C07 from G2C03 & G2E00",
+        "generation": 3,
+        "conversation_id": "49da4a15-d212-4fa6-9925-ac0a51cf8786",
+        "conversation_summary": "Zachary discussed feeling overwhelmed by balancing classes, networking, and social situations, particularly in large lecture halls and crowded dining halls. Solutions offered included joining public speaking clubs, practicing in lectures, avoiding peak dining hours, and utilizing campus resources. Zachary responded positively, agreeing to meet at the dining hall, sharing a successful power posing experience, and expressing interest in mentorship. Evidence of progress includes his willingness to try new strategies and his proactive approach to networking and academics.",
+        "fears_materialized": {
+          "Dealing with roommate conflicts": "Roommate walking in during power posing",
+          "Social anxiety in large lecture halls": "Answering questions in big lecture halls"
+        },
+        "challenges_materialized": {
+          "Coping with stress and burnout": "Balancing midterms and networking",
+          "Balancing extracurricular activities with studies": "Juggling classes and career fairs",
+          "Managing student loans": "Not explicitly mentioned in conversation",
+          "Finding a mentor": "Approaching professors during office hours"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Attending career fairs",
+          "Attends career fairs": "Networking with peers and professionals",
+          "Uses campus resources like tutoring": "Utilizing tutoring services for organic chem",
+          "Calls family frequently": "Not explicitly mentioned in conversation",
+          "Studies in the library regularly": "Aggressively highlighting organic chem notes"
+        },
+        "triggers_specified": {
+          "Dining hall during peak hours": "Avoiding peak times or going with friends"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.7,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.7000000000000002,
+        "timestamp": "2025-10-04T19:31:31.097027"
+      },
+      {
+        "stage_number": 7,
+        "prompt_id": "5a2e1ba7-9521-4df4-bece-085e7d07aa1c",
+        "prompt_name": "G3M05 from G2C03",
+        "generation": 3,
+        "conversation_id": "3d325497-0b80-4d10-8c1b-77a767d0cf63",
+        "conversation_summary": "Problems discussed: Zachary expressed concerns about networking skills at career fairs and participation in large lectures, as well as stress management leading to burnout. Solutions offered/accepted: For networking, starting small with practice and targeting one recruiter; for lectures, sitting closer to the front and preparing questions; for stress, using timers for breaks. Student's response to solutions: Zachary accepted the networking and stress management strategies, planning to attend workshops and implement break timers. Evidence of progress/improvement: Zachary showed readiness to act by planning specific steps like practicing his pitch and sitting closer in lectures, indicating reduced anxiety and increased confidence in tackling these challenges.",
+        "fears_materialized": {
+          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation",
+          "Social anxiety in large lecture halls": "Freezing up in large lectures, affecting participation grades"
+        },
+        "challenges_materialized": {
+          "Coping with stress and burnout": "Feeling drained by midterms despite scheduling breaks",
+          "Balancing extracurricular activities with studies": "Not explicitly mentioned in conversation",
+          "Managing student loans": "Not explicitly mentioned in conversation",
+          "Finding a mentor": "Not explicitly mentioned in conversation"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Not explicitly mentioned in conversation",
+          "Attends career fairs": "Worried about networking skills in big settings like career fairs",
+          "Uses campus resources like tutoring": "Mentioned checking out Career Center’s networking workshops",
+          "Calls family frequently": "Not explicitly mentioned in conversation",
+          "Studies in the library regularly": "Not explicitly mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Dining hall during peak hours": "Not explicitly mentioned in conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.7,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.7000000000000002,
+        "timestamp": "2025-10-04T19:31:31.097465"
+      },
+      {
+        "stage_number": 9,
+        "prompt_id": "8966845e-bd42-4a15-9003-2b2ed03db063",
+        "prompt_name": "G3M04 from G2E00",
+        "generation": 3,
+        "conversation_id": "af63ec7c-f820-4e20-a967-bf1d59f11512",
+        "conversation_summary": "Problems discussed: Zachary expressed feeling overwhelmed by balancing college life, particularly nervousness in large lecture halls and hesitation to speak up in class discussions. Solutions offered/accepted: The AI Coach suggested sitting in different spots in lecture halls, time-blocking for stress management, and grounding techniques like box breathing. Zachary accepted the suggestion to join debate club workshops and signed up for a low-pressure STEM diversity council lightning talk on marine biology. Student's response to solutions: Zachary showed enthusiasm for the concrete steps, agreeing to connect with debate club VP Rachel and committing to the lightning talk. Evidence of progress/improvement: Zachary's willingness to sign up for public speaking opportunities and use grounding techniques indicates reduced anxiety and proactive steps toward confidence-building.",
+        "fears_materialized": {
+          "Dealing with roommate conflicts": "Not explicitly discussed in conversation",
+          "Social anxiety in large lecture halls": "Nervousness in bio lecture hall, hesitation to speak up in class discussions"
+        },
+        "challenges_materialized": {
+          "Coping with stress and burnout": "Feeling overwhelmed balancing classes, networking, and college life adjustment",
+          "Balancing extracurricular activities with studies": "Not explicitly discussed in conversation",
+          "Managing student loans": "Not explicitly discussed in conversation",
+          "Finding a mentor": "Interest in connecting with debate club VP (Rachel) for guidance"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Not explicitly discussed in conversation",
+          "Attends career fairs": "Not explicitly discussed in conversation",
+          "Uses campus resources like tutoring": "Not explicitly discussed in conversation",
+          "Calls family frequently": "Not explicitly discussed in conversation",
+          "Studies in the library regularly": "Not explicitly discussed in conversation"
+        },
+        "triggers_specified": {
+          "Dining hall during peak hours": "Not explicitly discussed in conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.7,
+        "post_assessment_score": 3.1,
+        "improvement_score": 0.3999999999999999,
+        "timestamp": "2025-10-04T19:34:00.789696"
+      },
+      {
+        "stage_number": 10,
+        "prompt_id": "c60cd38c-fce5-40e3-969d-a206fb771098",
+        "prompt_name": "G3M06 from G2C03",
+        "generation": 3,
+        "conversation_id": "c8b5db62-93cb-42d4-8d8a-ce92550001ec",
+        "conversation_summary": "Zachary discussed feeling overwhelmed with balancing classes, networking, and social situations, particularly in crowded lectures and dining halls. Solutions offered included practicing public speaking by recording lectures, attending campus clubs, dining at off-peak hours, and sitting closer in lectures to reduce anxiety. Zachary responded positively, agreeing to record a lecture, attend a Bio Society mixer, and draft an email to Dr. Chen for mentorship. Evidence of progress includes his concrete plans to implement these strategies and his reduced anxiety level.",
+        "fears_materialized": {
+          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation",
+          "Social anxiety in large lecture halls": "Feeling overwhelmed in crowded lectures and dining hall"
+        },
+        "challenges_materialized": {
+          "Coping with stress and burnout": "Feeling overwhelmed with balancing classes, networking, and social situations",
+          "Balancing extracurricular activities with studies": "Juggling Bio Society mixer and studies",
+          "Managing student loans": "Not explicitly mentioned in conversation",
+          "Finding a mentor": "Considering reaching out to Dr. Chen for undergrad research"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Not explicitly mentioned in conversation",
+          "Attends career fairs": "Not explicitly mentioned in conversation",
+          "Uses campus resources like tutoring": "Not explicitly mentioned in conversation",
+          "Calls family frequently": "Not explicitly mentioned in conversation",
+          "Studies in the library regularly": "Not explicitly mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Dining hall during peak hours": "Feeling anxious in crowded dining hall"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.7,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.19999999999999973,
+        "timestamp": "2025-10-04T19:34:43.786935"
+      },
+      {
+        "stage_number": 11,
+        "prompt_id": "1683d52f-8fd4-4194-a06f-eea15f95d10e",
+        "prompt_name": "G4C07 from G3C07 & G3E01",
+        "generation": 4,
+        "conversation_id": "8f26c258-5639-4af1-812f-1be9c98ff9b8",
+        "conversation_summary": "Zachary discussed feeling overwhelmed by public speaking in large lectures, networking for internships, and burnout from overcommitment to extracurriculars. Solutions offered included: using a 'future dog' technique for public speaking, starting networking with low-stakes club chats, delegating tasks like the pre-med newsletter, and utilizing alumni coffee chats for mentorship. Zachary responded positively, creating a 'Future Zach, MD' sticky note to prioritize activities aligning with his core values (compassionate, innovative, well-rested). He committed to stepping down from newsletter duty and scheduling proper downtime, showing improved self-awareness and willingness to reduce unnecessary stressors.",
+        "fears_materialized": {
+          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation",
+          "Social anxiety in large lecture halls": "Public speaking in large lectures"
+        },
+        "challenges_materialized": {
+          "Coping with stress and burnout": "Being VP of pre-med club while TA-ing organic chem labs",
+          "Balancing extracurricular activities with studies": "Overcommitment to activities for med school applications",
+          "Managing student loans": "Not explicitly mentioned in conversation",
+          "Finding a mentor": "Exploring alumni-student coffee chat programs"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Not explicitly mentioned in conversation",
+          "Attends career fairs": "Not explicitly mentioned in conversation",
+          "Uses campus resources like tutoring": "Not explicitly mentioned in conversation",
+          "Calls family frequently": "Not explicitly mentioned in conversation",
+          "Studies in the library regularly": "Not explicitly mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Dining hall during peak hours": "Not explicitly mentioned in conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.7,
+        "post_assessment_score": 3.1,
+        "improvement_score": 0.3999999999999999,
+        "timestamp": "2025-10-04T19:42:15.290200"
+      },
+      {
+        "stage_number": 12,
+        "prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
+        "prompt_name": "G5C07 from G4E01 & G4E02",
+        "generation": 5,
+        "conversation_id": "a9ab4c99-5a3d-44db-9802-358a99192032",
+        "conversation_summary": "1) Problems discussed: Zachary expressed overwhelm with public speaking (bio seminar presentation) and networking (STEM career fair avoidance). 2) Solutions offered/accepted: Micro-hacks for public speaking (unconventional practice spots), \"two-minute rule\" for networking, \"5-minute autopsy\" for reflection, and physical/absurd reset activities. 3) Student's response: Immediately applied 5-minute autopsy technique, planned concrete improvements for next career fair, and embraced the statue selfie idea. 4) Evidence of progress: Shift from avoidance/guilt to structured coping strategies and humorous reframing of challenges.",
+        "fears_materialized": {
+          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation",
+          "Social anxiety in large lecture halls": "Presenting research proposal in bio seminar"
+        },
+        "challenges_materialized": {
+          "Coping with stress and burnout": "Feeling overwhelmed with balancing networking and public speaking",
+          "Balancing extracurricular activities with studies": "Not explicitly mentioned in conversation",
+          "Managing student loans": "Not explicitly mentioned in conversation",
+          "Finding a mentor": "Not explicitly mentioned in conversation"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Not explicitly mentioned in conversation",
+          "Attends career fairs": "Circled STEM career fair twice but left due to discomfort",
+          "Uses campus resources like tutoring": "Not explicitly mentioned in conversation",
+          "Calls family frequently": "Not explicitly mentioned in conversation",
+          "Studies in the library regularly": "Not explicitly mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Dining hall during peak hours": "Not explicitly mentioned in conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.7,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.7000000000000002,
+        "timestamp": "2025-10-04T19:47:30.052982"
       }
     ],
-    "current_stage": 2
+    "current_stage": 12
   }
 }

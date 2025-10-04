@@ -1,10 +1,10 @@
 {
   "dummy_id": "b18c7ab2-475e-4aae-a48f-1e15ef42e088",
   "dummy_name": "Gregory Young",
-  "current_experiment_id": "gepa_exp_20251004_191257",
-  "current_prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+  "current_experiment_id": "gepa_exp_20251004_194514",
+  "current_prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
   "created_at": "2025-10-04T19:08:38.124074",
-  "last_updated": "2025-10-04T19:13:52.088883",
+  "last_updated": "2025-10-04T19:48:06.978280",
   "conversation_profile": {
     "original_fears": [
       "Finding a job after graduation",
@@ -38,27 +38,27 @@
       "openness": 3
     },
     "current_fears": [
-      "Fear of not securing a research position or publishing due to anxiety",
-      "Fear of sounding stupid or being perceived as a clueless undergrad at networking events"
+      "Struggling with networking events and job interviews",
+      "Anxiety during networking events and cold-emailing professors"
     ],
     "current_challenges": [
-      "Uncertainty about how to approach professors at department events",
-      "Delaying networking due to anxiety",
-      "Not directly addressed in conversation",
-      "Desire to land a research position and publish"
+      "Not explicitly addressed in conversation",
+      "Overthinking and delaying sending emails to professors",
+      "Not explicitly addressed in conversation",
+      "Seeking research positions and publishing papers"
     ],
     "current_behaviors": [
-      "Not directly addressed in conversation",
-      "Not directly addressed in conversation",
-      "Prefers hiding in the library over attending networking events",
-      "Not directly addressed in conversation",
-      "Not directly addressed in conversation"
+      "Not explicitly addressed in conversation",
+      "Not explicitly addressed in conversation",
+      "Not explicitly addressed in conversation",
+      "Not explicitly addressed in conversation",
+      "Not explicitly addressed in conversation"
     ],
     "current_anxiety_triggers": [
-      "Department mixers where professors are present",
-      "Not directly addressed in conversation",
-      "Approaching professors for research opportunities",
-      "Not directly addressed in conversation"
+      "Anxiety during introductions and asking questions",
+      "Not explicitly addressed in conversation",
+      "Anxiety during networking events",
+      "Anxiety during mock interviews and real interviews"
     ],
     "current_social_anxiety_level": 6,
     "current_big_five": {
@@ -142,8 +142,378 @@
         "post_assessment_score": 2.0,
         "improvement_score": -0.1499999999999999,
         "timestamp": "2025-10-04T19:13:52.088479"
+      },
+      {
+        "stage_number": 3,
+        "prompt_id": "e790c703-2c16-4dd7-9ee1-cc749cda9e8a",
+        "prompt_name": "G2C03 from G1E00 & G1M01",
+        "generation": 2,
+        "conversation_id": "cc231cff-3490-4da1-a3bd-8879b92dc074",
+        "conversation_summary": "Gregory discussed his fears about networking events and job interviews, specifically freezing up and oversharing. The AI Coach offered solutions like treating networking as a lab experiment with small goals and preparing 'interest soundbites.' Gregory responded positively, finding the lab experiment approach less terrifying and agreeing to test-drive soundbites. Progress was evident as Gregory seemed more open to practicing and preparing for networking, and the mentor offered follow-up support via email.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Struggling with networking events and job interviews",
+          "Networking with professionals": "Freezing up when asked about interests during networking events"
+        },
+        "challenges_materialized": {
+          "Navigating campus politics": "Not explicitly mentioned in conversation",
+          "Overcoming procrastination": "Not explicitly mentioned in conversation",
+          "Financial planning": "Not explicitly mentioned in conversation",
+          "Career exploration": "Desire for a research position but anxiety about networking"
+        },
+        "behaviors_detailed": {
+          "Eats at the dining hall": "Not explicitly mentioned in conversation",
+          "Calls family frequently": "Not explicitly mentioned in conversation",
+          "Studies in the library regularly": "Hiding in the library to avoid networking",
+          "Uses social media for networking": "Not explicitly mentioned in conversation",
+          "Volunteers for campus events": "Not explicitly mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Networking events": "Freezing up and oversharing about bridge engineering disasters",
+          "Campus social events": "Not explicitly mentioned in conversation",
+          "Meeting new people": "Not explicitly mentioned in conversation",
+          "Job interviews": "Brain shutting down during interviews"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 6.5,
+        "pre_assessment_score": 2.15,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.1499999999999999,
+        "timestamp": "2025-10-04T19:18:34.575832"
+      },
+      {
+        "stage_number": 4,
+        "prompt_id": "76f427d6-7f43-40db-bd23-cc064b5199e9",
+        "prompt_name": "G2C02 from G1M01 & G1E00",
+        "generation": 2,
+        "conversation_id": "1d5d3874-cbea-47b8-a42c-37791cb84459",
+        "conversation_summary": "Problems discussed: Gregory expressed high anxiety about networking events and job interviews, fearing awkward interactions and brain freezes. Solutions offered/accepted: The AI Coach suggested practicing with low-stakes interactions, preparing scripts, and role-playing scenarios to build confidence. Specific strategies included buying time with questions and embracing awkwardness. Student's response to solutions: Gregory engaged positively, participating in role-playing and laughing off simulated mishaps. Evidence of progress/improvement: Gregory demonstrated increased comfort by practicing scripts and handling simulated awkwardness, showing readiness to apply these strategies in real events.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Attending networking events and job interviews",
+          "Networking with professionals": "Interacting at career fairs and academic conferences"
+        },
+        "challenges_materialized": {
+          "Navigating campus politics": "Engaging with professors and peers in academic settings",
+          "Overcoming procrastination": "Preparing for networking events and job interviews",
+          "Financial planning": "Budgeting for career-related expenses like professional attire",
+          "Career exploration": "Researching and discussing potential fields like renewable energy systems"
+        },
+        "behaviors_detailed": {
+          "Eats at the dining hall": "Regular meals with peers to build informal networks",
+          "Calls family frequently": "Seeks emotional support and advice",
+          "Studies in the library regularly": "Uses study time to also prepare for career-related interactions",
+          "Uses social media for networking": "Connects with professionals on LinkedIn",
+          "Volunteers for campus events": "Gains experience and visibility in professional settings"
+        },
+        "triggers_specified": {
+          "Networking events": "Career fairs and academic meetups",
+          "Campus social events": "Departmental gatherings and volunteer opportunities",
+          "Meeting new people": "Introductions to professors and industry professionals",
+          "Job interviews": "Preparing and executing interviews for research positions"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 6.5,
+        "pre_assessment_score": 2.15,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.1499999999999999,
+        "timestamp": "2025-10-04T19:24:14.941220"
+      },
+      {
+        "stage_number": 5,
+        "prompt_id": "d675a42d-8758-4aa1-9f9a-2504ddb08752",
+        "prompt_name": "G2M01 from G1M01",
+        "generation": 2,
+        "conversation_id": "f4d71ced-dddf-4a2c-8e56-d3e654fd9e73",
+        "conversation_summary": "Problems discussed: Gregory's fear of networking and approaching professors for research positions, social anxiety in initiating conversations. Solutions offered/accepted: Reframing networking as learning, drafting a specific email to a professor, practicing small talk in low-stakes settings, and role-playing conversations. Student's response to solutions: Gregory drafted an email to Dr. Chen, recognized professors' desire for student interest, and engaged in role-playing. Evidence of progress/improvement: Gregory showed increased confidence by drafting the email and expressing excitement about sustainable materials, and demonstrated willingness to practice and take actionable steps.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Approaching professors for research positions",
+          "Networking with professionals": "Attending campus events and initiating conversations"
+        },
+        "challenges_materialized": {
+          "Navigating campus politics": "Interacting with professors and peers in academic settings",
+          "Overcoming procrastination": "Taking the first step to email a professor",
+          "Financial planning": "Not explicitly addressed in this conversation",
+          "Career exploration": "Exploring research opportunities in sustainable materials"
+        },
+        "behaviors_detailed": {
+          "Eats at the dining hall": "Practicing small talk in low-stakes settings like the dining hall",
+          "Calls family frequently": "Not explicitly addressed in this conversation",
+          "Studies in the library regularly": "Using library time to research professors' papers",
+          "Uses social media for networking": "Not explicitly addressed in this conversation",
+          "Volunteers for campus events": "Not explicitly addressed in this conversation"
+        },
+        "triggers_specified": {
+          "Networking events": "Emailing a professor to discuss research",
+          "Campus social events": "Practicing small talk in dining hall or coffee line",
+          "Meeting new people": "Role-playing conversations with AI Coach",
+          "Job interviews": "Not explicitly addressed in this conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 6.5,
+        "pre_assessment_score": 2.15,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.1499999999999999,
+        "timestamp": "2025-10-04T19:24:58.072979"
+      },
+      {
+        "stage_number": 6,
+        "prompt_id": "6047de79-e44a-421b-8e45-261a5fdcaa16",
+        "prompt_name": "G3C07 from G2C03 & G2E00",
+        "generation": 3,
+        "conversation_id": "886a15f1-e070-43f6-895a-bb3ec272bd46",
+        "conversation_summary": "Gregory discussed his struggles with networking events and job interviews, particularly freezing up when talking to professors or professionals. Solutions offered included treating networking like a lab experiment, preparing a 30-second elevator pitch, and starting with low-stakes practice like coffee with a professor. Gregory responded positively, refining his pitch and planning to attend the engineering department mixer and have coffee with his professor. Evidence of progress includes Gregory's willingness to practice his pitch and take actionable steps towards improving his networking skills.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Struggling with networking events and job interviews",
+          "Networking with professionals": "Freezing up when talking to professors or professionals"
+        },
+        "challenges_materialized": {
+          "Navigating campus politics": "Not specified in conversation",
+          "Overcoming procrastination": "Not specified in conversation",
+          "Financial planning": "Not specified in conversation",
+          "Career exploration": "Exploring research positions and post-graduation survival"
+        },
+        "behaviors_detailed": {
+          "Eats at the dining hall": "Not specified in conversation",
+          "Calls family frequently": "Not specified in conversation",
+          "Studies in the library regularly": "Not specified in conversation",
+          "Uses social media for networking": "Not specified in conversation",
+          "Volunteers for campus events": "Not specified in conversation"
+        },
+        "triggers_specified": {
+          "Networking events": "Engineering department mixer",
+          "Campus social events": "Not specified in conversation",
+          "Meeting new people": "Coffee with professor",
+          "Job interviews": "Not specified in conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 6.5,
+        "pre_assessment_score": 2.15,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.1499999999999999,
+        "timestamp": "2025-10-04T19:32:45.443388"
+      },
+      {
+        "stage_number": 6,
+        "prompt_id": "5a2e1ba7-9521-4df4-bece-085e7d07aa1c",
+        "prompt_name": "G3M05 from G2C03",
+        "generation": 3,
+        "conversation_id": "ef519614-2297-424d-ae1d-98e1b83f7df6",
+        "conversation_summary": "Problems discussed: Gregory expressed intense social anxiety during networking events and job interviews, particularly when meeting professionals and following up. Solutions offered/accepted: The AI Coach suggested breaking down the process into manageable steps, such as practicing a 30-second intro, memorizing three emergency questions, and reframing networking as genuine curiosity. Student's response to solutions: Gregory positively responded by agreeing to practice with his roommate, planning to attend a department coffee chat with a specific goal, and reframing his approach to networking. Evidence of progress/improvement: Gregory showed increased self-awareness and preparation, setting concrete goals for future events and expressing a more positive outlook on networking.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Attending networking events and job interviews",
+          "Networking with professionals": "Engineering mixer and department coffee chat"
+        },
+        "challenges_materialized": {
+          "Navigating campus politics": "Interacting with professors and TAs",
+          "Overcoming procrastination": "Preparing for networking events",
+          "Financial planning": "Not explicitly mentioned in conversation",
+          "Career exploration": "Seeking research positions"
+        },
+        "behaviors_detailed": {
+          "Eats at the dining hall": "Not explicitly mentioned in conversation",
+          "Calls family frequently": "Not explicitly mentioned in conversation",
+          "Studies in the library regularly": "Not explicitly mentioned in conversation",
+          "Uses social media for networking": "Not explicitly mentioned in conversation",
+          "Volunteers for campus events": "Attending engineering mixer and department coffee chat"
+        },
+        "triggers_specified": {
+          "Networking events": "Engineering mixer and department coffee chat",
+          "Campus social events": "Engineering mixer",
+          "Meeting new people": "Interacting with professionals at events",
+          "Job interviews": "Not explicitly mentioned in conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 6.5,
+        "pre_assessment_score": 2.15,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.1499999999999999,
+        "timestamp": "2025-10-04T19:32:45.443711"
+      },
+      {
+        "stage_number": 8,
+        "prompt_id": "8966845e-bd42-4a15-9003-2b2ed03db063",
+        "prompt_name": "G3M04 from G2E00",
+        "generation": 3,
+        "conversation_id": "92c0e481-45cf-4ed1-956e-c783a3144cab",
+        "conversation_summary": "1) Problems discussed: Gregory expressed fears about networking, job interviews, and freezing up in conversations. 2) Solutions offered/accepted: Starting with low-pressure interactions, keeping an 'emergency kit' of questions, role-playing awkward scenarios, and focusing on being interested rather than interesting. 3) Student's response to solutions: Gregory showed willingness to try the suggested strategies, laughed during role-play, and acknowledged the potential for improvement. 4) Evidence of progress/improvement: Gregory's anxiety decreased slightly, and he demonstrated a more positive attitude towards networking and handling awkwardness.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Attending networking events and job interviews",
+          "Networking with professionals": "Interacting with classmates, TAs, and professionals at mixers"
+        },
+        "challenges_materialized": {
+          "Navigating campus politics": "Participating in department mixers and research fairs",
+          "Overcoming procrastination": "Preparing for networking events in advance",
+          "Financial planning": "Not explicitly addressed in conversation",
+          "Career exploration": "Exploring research positions and networking opportunities"
+        },
+        "behaviors_detailed": {
+          "Eats at the dining hall": "Not explicitly addressed in conversation",
+          "Calls family frequently": "Not explicitly addressed in conversation",
+          "Studies in the library regularly": "Not explicitly addressed in conversation",
+          "Uses social media for networking": "Not explicitly addressed in conversation",
+          "Volunteers for campus events": "Not explicitly addressed in conversation"
+        },
+        "triggers_specified": {
+          "Networking events": "Department mixers and research fairs",
+          "Campus social events": "Not explicitly addressed in conversation",
+          "Meeting new people": "Chatting with classmates or TAs after lectures",
+          "Job interviews": "Not explicitly addressed in conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 6.5,
+        "pre_assessment_score": 2.15,
+        "post_assessment_score": 2.35,
+        "improvement_score": 0.20000000000000018,
+        "timestamp": "2025-10-04T19:35:14.081897"
+      },
+      {
+        "stage_number": 9,
+        "prompt_id": "f4eccadd-cbf4-4a75-9b58-3abe8a4d407b",
+        "prompt_name": "G3C03 from G2C03 & G2M01",
+        "generation": 3,
+        "conversation_id": "e6e67992-3b6c-44bc-874a-893d0663e2c7",
+        "conversation_summary": "Problems discussed: Gregory expressed fear about networking with professionals and attending campus events, as well as impostor syndrome when discussing research. Solutions offered/accepted: The AI Coach suggested breaking networking into small steps like asking follow-up questions in low-stakes settings, drafting a specific email to a professor, and keeping a 'win log' to track progress. Gregory responded positively, agreeing to draft the email, lurk near bulletin boards, and start a 'win log'. Evidence of progress/improvement: Gregory committed to taking these actions and showed reduced anxiety by the end of the conversation, as indicated by his willingness to follow through and his positive reaction to the 'win log' idea.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Networking with professionals at campus events",
+          "Networking with professionals": "Emailing a professor about their research"
+        },
+        "challenges_materialized": {
+          "Navigating campus politics": "Attending club meetings or study groups",
+          "Overcoming procrastination": "Drafting an email to a professor",
+          "Financial planning": "Not addressed in conversation",
+          "Career exploration": "Researching and discussing specific papers with professionals"
+        },
+        "behaviors_detailed": {
+          "Eats at the dining hall": "Not addressed in conversation",
+          "Calls family frequently": "Not addressed in conversation",
+          "Studies in the library regularly": "Camping out near department bulletin boards to overhear research gossip",
+          "Uses social media for networking": "Not addressed in conversation",
+          "Volunteers for campus events": "Not addressed in conversation"
+        },
+        "triggers_specified": {
+          "Networking events": "Club meetings or study groups",
+          "Campus social events": "Department bulletin boards",
+          "Meeting new people": "Asking follow-up questions in low-stakes settings",
+          "Job interviews": "Not addressed in conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 6.5,
+        "pre_assessment_score": 2.15,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.1499999999999999,
+        "timestamp": "2025-10-04T19:35:23.475606"
+      },
+      {
+        "stage_number": 10,
+        "prompt_id": "c60cd38c-fce5-40e3-969d-a206fb771098",
+        "prompt_name": "G3M06 from G2C03",
+        "generation": 3,
+        "conversation_id": "9c12ce3a-4e2c-4720-a8c6-54e46c0d78e8",
+        "conversation_summary": "Problems discussed: Gregory expressed fear and anxiety about networking events and job interviews, particularly around starting conversations and discussing his research. Solutions offered/accepted: The AI Coach suggested focusing on having one genuine conversation, arriving early to events, and using icebreakers like asking about others' work. They also role-played a conversation, helping Gregory practice describing his research in an engaging way. Student's response to solutions: Gregory found the strategies helpful, particularly the idea of arriving early and leaning into the unique aspects of his research. He practiced his pitch and received positive feedback, showing readiness to apply these techniques. Evidence of progress/improvement: Gregory demonstrated increased confidence by practicing his pitch, planning to attend an event with a clear strategy, and expressing relief and readiness to use the discussed solutions.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Attending networking events and job interviews",
+          "Networking with professionals": "Starting conversations at department mixers or research symposiums"
+        },
+        "challenges_materialized": {
+          "Navigating campus politics": "Interacting with professors and peers at events",
+          "Overcoming procrastination": "Preparing for networking events in advance",
+          "Financial planning": "Not explicitly addressed in conversation",
+          "Career exploration": "Discussing research interests with professionals"
+        },
+        "behaviors_detailed": {
+          "Eats at the dining hall": "Not explicitly addressed in conversation",
+          "Calls family frequently": "Not explicitly addressed in conversation",
+          "Studies in the library regularly": "Not explicitly addressed in conversation",
+          "Uses social media for networking": "Not explicitly addressed in conversation",
+          "Volunteers for campus events": "Attending and participating in networking events"
+        },
+        "triggers_specified": {
+          "Networking events": "Department mixers or research symposiums",
+          "Campus social events": "Not explicitly addressed in conversation",
+          "Meeting new people": "Starting conversations with professionals",
+          "Job interviews": "Practicing pitch and conversation skills"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 6.5,
+        "pre_assessment_score": 2.15,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.1499999999999999,
+        "timestamp": "2025-10-04T19:37:03.673450"
+      },
+      {
+        "stage_number": 11,
+        "prompt_id": "1683d52f-8fd4-4194-a06f-eea15f95d10e",
+        "prompt_name": "G4C07 from G3C07 & G3E01",
+        "generation": 4,
+        "conversation_id": "dd468795-9ff6-41ef-bfac-dcc13e93170d",
+        "conversation_summary": "Problems discussed: Gregory's fear of networking and freezing up in professional settings. Solutions offered/accepted: Start small with a one-on-one coffee chat with Professor Chen, prepare questions beforehand, and practice active listening. Student's response to solutions: Gregory felt cautiously optimistic and immediately drafted an email to Professor Chen. Evidence of progress/improvement: Gregory took concrete steps to address his networking anxiety by planning to reach out to Professor Chen and preparing for the conversation.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Attending a professional mixer for research positions",
+          "Networking with professionals": "Approaching Professor Chen for a coffee chat"
+        },
+        "challenges_materialized": {
+          "Navigating campus politics": "Interacting with professors and grad students",
+          "Overcoming procrastination": "Drafting an email to Professor Chen immediately after the conversation",
+          "Financial planning": "Not explicitly addressed in this conversation",
+          "Career exploration": "Exploring research opportunities through networking"
+        },
+        "behaviors_detailed": {
+          "Eats at the dining hall": "Not explicitly detailed in this conversation",
+          "Calls family frequently": "Not explicitly detailed in this conversation",
+          "Studies in the library regularly": "Using the library as a refuge from networking anxiety",
+          "Uses social media for networking": "Not explicitly detailed in this conversation",
+          "Volunteers for campus events": "Not explicitly detailed in this conversation"
+        },
+        "triggers_specified": {
+          "Networking events": "Professional mixer for research positions",
+          "Campus social events": "Not explicitly detailed in this conversation",
+          "Meeting new people": "Coffee chat with Professor Chen",
+          "Job interviews": "Not explicitly detailed in this conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 6.5,
+        "pre_assessment_score": 2.15,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.1499999999999999,
+        "timestamp": "2025-10-04T19:41:52.857626"
+      },
+      {
+        "stage_number": 12,
+        "prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
+        "prompt_name": "G5C07 from G4E01 & G4E02",
+        "generation": 5,
+        "conversation_id": "eb5bbb5a-2584-473c-8405-2aa0fc5f7574",
+        "conversation_summary": "Gregory discussed his anxiety around networking events and job interviews, as well as his struggle with cold-emailing professors for research positions. The AI Coach offered solutions such as setting small goals for networking, using a 3-part conversation formula, and drafting personalized emails to professors. Gregory responded positively, drafting an email with a personal story and specific details from a professor's paper, and agreed to try mock interviews. Evidence of progress includes Gregory's willingness to implement these strategies and his immediate action in drafting an email.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Struggling with networking events and job interviews",
+          "Networking with professionals": "Anxiety during networking events and cold-emailing professors"
+        },
+        "challenges_materialized": {
+          "Navigating campus politics": "Not explicitly addressed in conversation",
+          "Overcoming procrastination": "Overthinking and delaying sending emails to professors",
+          "Financial planning": "Not explicitly addressed in conversation",
+          "Career exploration": "Seeking research positions and publishing papers"
+        },
+        "behaviors_detailed": {
+          "Eats at the dining hall": "Not explicitly addressed in conversation",
+          "Calls family frequently": "Not explicitly addressed in conversation",
+          "Studies in the library regularly": "Not explicitly addressed in conversation",
+          "Uses social media for networking": "Not explicitly addressed in conversation",
+          "Volunteers for campus events": "Not explicitly addressed in conversation"
+        },
+        "triggers_specified": {
+          "Networking events": "Anxiety during introductions and asking questions",
+          "Campus social events": "Not explicitly addressed in conversation",
+          "Meeting new people": "Anxiety during networking events",
+          "Job interviews": "Anxiety during mock interviews and real interviews"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 6.5,
+        "pre_assessment_score": 2.15,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.1499999999999999,
+        "timestamp": "2025-10-04T19:48:06.977861"
       }
     ],
-    "current_stage": 2
+    "current_stage": 12
   }
 }

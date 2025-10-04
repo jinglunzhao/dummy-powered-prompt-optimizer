@@ -1,10 +1,10 @@
 {
   "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
   "dummy_name": "Jamie Young",
-  "current_experiment_id": "gepa_exp_20251004_191257",
-  "current_prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+  "current_experiment_id": "gepa_exp_20251004_194514",
+  "current_prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
   "created_at": "2025-10-04T19:08:38.122095",
-  "last_updated": "2025-10-04T19:13:51.693868",
+  "last_updated": "2025-10-04T19:47:40.764959",
   "conversation_profile": {
     "original_fears": [
       "Finding a job after graduation",
@@ -39,28 +39,28 @@
       "openness": 1
     },
     "current_fears": [
-      "Freezing during job interviews, particularly when explaining coding concepts",
-      "Feeling the need to call family frequently to avoid worrying them",
-      "Staying up late studying due to procrastination"
+      "Freezing up during job interviews and networking events",
+      "Frequent calls home due to homesickness",
+      "Staying up late studying and procrastinating on assignments"
     ],
     "current_challenges": [
-      "Difficulty in networking and job interviews",
-      "Leaving a group presentation due to panic",
-      "Not explicitly mentioned, but implied in general anxiety",
-      "Procrastinating on assignments leading to late-night study sessions"
+      "Difficulty starting conversations at networking events",
+      "Procrastination leading to late-night study sessions",
+      "Fear of asking questions in public forums like alumni panels",
+      "Poor scheduling leading to last-minute cramming"
     ],
     "current_behaviors": [
-      "Not explicitly detailed in conversation",
-      "Stays up late studying as a result",
-      "Needs to call mom regularly to reassure her",
-      "Not explicitly detailed in conversation",
-      "Result of procrastination on assignments"
+      "Joined coding club and attends events",
+      "Delays starting assignments until the last minute",
+      "Calls home multiple times a week due to anxiety",
+      "Spends long hours in the library to compensate for procrastination",
+      "Pulls all-nighters before deadlines"
     ],
     "current_anxiety_triggers": [
-      "Not explicitly detailed in conversation",
-      "Left a group presentation due to panic",
-      "Freezing when explaining coding concepts",
-      "Panic leading to leaving a group presentation"
+      "Fear of asking professors for help",
+      "Anxiety about contributing in group settings",
+      "Freezing up during interviews",
+      "Fear of public speaking"
     ],
     "current_social_anxiety_level": 7,
     "current_big_five": {
@@ -146,8 +146,388 @@
         "post_assessment_score": 2.0,
         "improvement_score": 0.3500000000000001,
         "timestamp": "2025-10-04T19:13:51.693493"
+      },
+      {
+        "stage_number": 3,
+        "prompt_id": "76f427d6-7f43-40db-bd23-cc064b5199e9",
+        "prompt_name": "G2C02 from G1M01 & G1E00",
+        "generation": 2,
+        "conversation_id": "3a8e1756-b596-4a91-832d-7e843e72efd3",
+        "conversation_summary": "Jamie discussed fears about networking, interviews, and virtual participation. Solutions offered included micro-networking (sending one LinkedIn message), normalizing interview failures, and gradually increasing virtual engagement (turning camera on for club meetings). Jamie responded positively, committing to sending a LinkedIn message and considering camera-on participation. Evidence of progress includes Jamie's willingness to take small, actionable steps and expressed relief about interview expectations.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Freezing up during networking and interviews",
+          "Living away from family for the first time": "Frequent calls to family for emotional support",
+          "Time management with coursework": "Staying up late studying due to procrastination"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Difficulty reaching out to professionals for advice",
+          "Dealing with academic pressure": "Procrastination leading to late-night study sessions",
+          "Navigating campus politics": "Avoiding participation in virtual club meetings",
+          "Building time management": "Poor scheduling leading to last-minute assignments"
+        },
+        "behaviors_detailed": {
+          "Joins student clubs and organizations": "Attends virtual club meetings with camera off",
+          "Procrastinates on assignments": "Delays starting assignments until the last minute",
+          "Calls family frequently": "Contacts family multiple times a week for reassurance",
+          "Studies in the library regularly": "Spends long hours in the library to compensate for procrastination",
+          "Stays up late studying": "Pulls all-nighters to complete assignments"
+        },
+        "triggers_specified": {
+          "Office hours": "Fear of asking questions in front of peers",
+          "Group projects": "Anxiety about contributing effectively",
+          "Job interviews": "Freezing up during conversations",
+          "Presentations": "Overthinking every word and action"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 1.65,
+        "post_assessment_score": 2.8,
+        "improvement_score": 1.15,
+        "timestamp": "2025-10-04T19:21:20.574473"
+      },
+      {
+        "stage_number": 4,
+        "prompt_id": "e790c703-2c16-4dd7-9ee1-cc749cda9e8a",
+        "prompt_name": "G2C03 from G1E00 & G1M01",
+        "generation": 2,
+        "conversation_id": "af4e7060-6228-459b-abbc-433ca5c2a852",
+        "conversation_summary": "Problems discussed: Jamie expressed fear of job interviews and networking, citing concerns about freezing up, saying something stupid, and feeling fake. Solutions offered/accepted: The AI Coach suggested starting small with LinkedIn comments, practicing interview questions using a structured formula, and roleplaying over Zoom. Jamie responded positively, successfully answering \"Why computer science?\" and agreeing to use personal stories in networking. Evidence of progress/improvement: Jamie smiled and acknowledged the win, showing reduced anxiety and increased confidence in interview preparation.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Fear of freezing up during job interviews or saying something stupid",
+          "Living away from family for the first time": "Frequent calls to family due to homesickness",
+          "Time management with coursework": "Staying up late studying due to procrastination"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Uncertainty about how to start networking or prepare for job interviews",
+          "Dealing with academic pressure": "Procrastination leading to late-night study sessions",
+          "Navigating campus politics": "Not explicitly mentioned in conversation",
+          "Building time management": "Procrastination on assignments"
+        },
+        "behaviors_detailed": {
+          "Joins student clubs and organizations": "Not explicitly mentioned in conversation",
+          "Procrastinates on assignments": "Stays up late studying due to delayed work",
+          "Calls family frequently": "Seeks comfort from family due to anxiety",
+          "Studies in the library regularly": "Not explicitly mentioned in conversation",
+          "Stays up late studying": "Result of procrastination on assignments"
+        },
+        "triggers_specified": {
+          "Office hours": "Not explicitly mentioned in conversation",
+          "Group projects": "Not explicitly mentioned in conversation",
+          "Job interviews": "Fear of freezing up or saying something stupid",
+          "Presentations": "Not explicitly mentioned in conversation"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 1.65,
+        "post_assessment_score": 2.6,
+        "improvement_score": 0.9500000000000002,
+        "timestamp": "2025-10-04T19:22:15.266306"
+      },
+      {
+        "stage_number": 5,
+        "prompt_id": "d675a42d-8758-4aa1-9f9a-2504ddb08752",
+        "prompt_name": "G2M01 from G1M01",
+        "generation": 2,
+        "conversation_id": "33e51c1b-8f8e-4ced-b824-613a2df3a047",
+        "conversation_summary": "Problems discussed: Jamie's fear of job interviews and networking, tendency to freeze up, and parental tracking. Solutions offered/accepted: Practicing 3-second pauses, using index cards with bullet points, collecting one useful thing per conversation, and finding solidarity in shared experiences. Student's response to solutions: Jamie showed willingness to try the index card trick and practice with their cat, found comfort in shared parental tracking stories, and laughed at the 'taco-lake' anecdote. Evidence of progress/improvement: Jamie articulated fears clearly, accepted concrete solutions, and showed reduced anxiety by the end of the conversation.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Freezing up during job interviews and networking events",
+          "Living away from family for the first time": "Frequent calls and texts from worried parents",
+          "Time management with coursework": "Staying up late studying due to procrastination"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Navigating CS department mixer and career fairs",
+          "Dealing with academic pressure": "Panicking during presentations and group projects",
+          "Navigating campus politics": "Feeling out of place in student clubs",
+          "Building time management": "Procrastinating on assignments leading to late-night study sessions"
+        },
+        "behaviors_detailed": {
+          "Joins student clubs and organizations": "Attending CS department mixer",
+          "Procrastinates on assignments": "Staying up late to complete work",
+          "Calls family frequently": "Responding quickly to mom's texts",
+          "Studies in the library regularly": "Using library as a study space",
+          "Stays up late studying": "Burning the midnight oil to catch up"
+        },
+        "triggers_specified": {
+          "Office hours": "Fear of asking 'stupid' questions",
+          "Group projects": "Worrying about not contributing enough",
+          "Job interviews": "Freezing up and blanking on answers",
+          "Presentations": "Panicking in front of an audience"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 1.65,
+        "post_assessment_score": 2.8,
+        "improvement_score": 1.15,
+        "timestamp": "2025-10-04T19:23:15.750703"
+      },
+      {
+        "stage_number": 6,
+        "prompt_id": "5a2e1ba7-9521-4df4-bece-085e7d07aa1c",
+        "prompt_name": "G3M05 from G2C03",
+        "generation": 3,
+        "conversation_id": "f152f82c-a0a7-4028-8645-d6205b7c65ca",
+        "conversation_summary": "Problems discussed: Jamie expressed fear of social interactions, particularly in group projects and networking, and anxiety about class participation and presentations. Solutions offered/accepted: The AI Coach suggested practical strategies like gripping a pencil to manage shaky hands, preparing a go-to phrase for when blanking out, and recognizing physical symptoms of anxiety. Student's response to solutions: Jamie showed engagement by scribbling notes, laughing at the suggestion, and planning to try the strategies in class. Evidence of progress/improvement: Jamie's shoulders relaxed slightly, and they expressed willingness to report back, indicating reduced anxiety and increased confidence.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Networking and job interviews",
+          "Living away from family for the first time": "Daily calls with family to ease separation anxiety",
+          "Time management with coursework": "Staying up late studying due to procrastination"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Difficulty in networking and social interactions",
+          "Dealing with academic pressure": "Anxiety during class participation and presentations",
+          "Navigating campus politics": "Fear of being judged by peers in group projects",
+          "Building time management": "Procrastination leading to late-night study sessions"
+        },
+        "behaviors_detailed": {
+          "Joins student clubs and organizations": "Attempts to build social skills and network",
+          "Procrastinates on assignments": "Delays work until the last minute, causing stress",
+          "Calls family frequently": "Daily calls to cope with homesickness",
+          "Studies in the library regularly": "Seeks a quiet environment to focus",
+          "Stays up late studying": "Consequence of procrastination"
+        },
+        "triggers_specified": {
+          "Office hours": "Fear of one-on-one interactions with professors",
+          "Group projects": "Anxiety about being judged by peers",
+          "Job interviews": "Fear of failure and rejection",
+          "Presentations": "Physical symptoms of anxiety (shaky hands)"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 1.65,
+        "post_assessment_score": 3.2,
+        "improvement_score": 1.5500000000000003,
+        "timestamp": "2025-10-04T19:32:52.500297"
+      },
+      {
+        "stage_number": 7,
+        "prompt_id": "6047de79-e44a-421b-8e45-261a5fdcaa16",
+        "prompt_name": "G3C07 from G2C03 & G2E00",
+        "generation": 3,
+        "conversation_id": "eaf4d179-0e3c-4a4c-b6e0-47a82b45654b",
+        "conversation_summary": "Jamie discussed fears about job interviews, networking, and speaking up in group projects. Solutions offered included practicing low-stakes conversations, preparing one idea for group meetings, and scripting a 15-second self-introduction. Jamie accepted these solutions, recognizing debugging as a leadership skill and agreeing to practice the intro. Evidence of progress included reduced backtracking, visible relaxation, and a willingness to take byte-sized steps toward improvement.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Freezing up during job interviews and networking events",
+          "Living away from family for the first time": "Frequent calls home due to homesickness",
+          "Time management with coursework": "Staying up late studying due to procrastination"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Difficulty in networking and job interviews",
+          "Dealing with academic pressure": "Procrastination leading to late-night study sessions",
+          "Navigating campus politics": "Hesitation to speak up in group projects",
+          "Building time management": "Poor scheduling leading to last-minute cramming"
+        },
+        "behaviors_detailed": {
+          "Joins student clubs and organizations": "Active participation in CS-related clubs",
+          "Procrastinates on assignments": "Delays starting assignments until deadlines loom",
+          "Calls family frequently": "Daily calls to family for emotional support",
+          "Studies in the library regularly": "Consistent library use for focused study sessions",
+          "Stays up late studying": "Late-night cramming due to procrastination"
+        },
+        "triggers_specified": {
+          "Office hours": "Anxiety about asking questions one-on-one",
+          "Group projects": "Fear of speaking up in team meetings",
+          "Job interviews": "Freezing during self-introductions",
+          "Presentations": "Nervousness about public speaking"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 1.65,
+        "post_assessment_score": 2.55,
+        "improvement_score": 0.8999999999999999,
+        "timestamp": "2025-10-04T19:35:36.362179"
+      },
+      {
+        "stage_number": 8,
+        "prompt_id": "8966845e-bd42-4a15-9003-2b2ed03db063",
+        "prompt_name": "G3M04 from G2E00",
+        "generation": 3,
+        "conversation_id": "7f9aee9d-1d5c-40c0-8c26-15440fee783d",
+        "conversation_summary": "Problems discussed: Jamie expressed anxiety about networking, job interviews, and group projects, particularly around small talk and fear of awkwardness. Solutions offered/accepted: The coach suggested starting with small, manageable interactions, focusing on positive outcomes, and role-playing scenarios. Jamie responded positively, agreeing to try a small question in their study group and considering typing first in group chats. Evidence of progress/improvement: Jamie engaged in role-playing, acknowledged the value of small wins, and showed willingness to take incremental steps to reduce anxiety.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Freezing up during job interviews and networking events",
+          "Living away from family for the first time": "Feeling homesick and calling family frequently",
+          "Time management with coursework": "Staying up late studying and procrastinating on assignments"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Difficulty in networking and small talk with recruiters and classmates",
+          "Dealing with academic pressure": "Stress from group projects and presentations",
+          "Navigating campus politics": "Feeling uncomfortable in group settings",
+          "Building time management": "Procrastination leading to late-night study sessions"
+        },
+        "behaviors_detailed": {
+          "Joins student clubs and organizations": "Participating in an Algorithms study group",
+          "Procrastinates on assignments": "Delaying work until the last minute",
+          "Calls family frequently": "Regular phone calls to cope with homesickness",
+          "Studies in the library regularly": "Late-night study sessions",
+          "Stays up late studying": "Due to procrastination"
+        },
+        "triggers_specified": {
+          "Office hours": "Anxiety about asking questions in front of peers",
+          "Group projects": "Stress from collaboration and small talk",
+          "Job interviews": "Fear of freezing up and saying something awkward",
+          "Presentations": "Nervousness about public speaking"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 1.65,
+        "post_assessment_score": 2.85,
+        "improvement_score": 1.2000000000000002,
+        "timestamp": "2025-10-04T19:37:15.617201"
+      },
+      {
+        "stage_number": 9,
+        "prompt_id": "f4eccadd-cbf4-4a75-9b58-3abe8a4d407b",
+        "prompt_name": "G3C03 from G2C03 & G2M01",
+        "generation": 3,
+        "conversation_id": "db720a04-c954-4652-a7c9-f178deda198b",
+        "conversation_summary": "Jamie discussed fears about job interviews, freezing up, and overthinking responses. Solutions included practicing one question daily, naming nerves upfront, and using humor/scripts for panic moments. Jamie responded positively, laughing and engaging with panic scripts, and agreed to practice without deleting. Evidence of progress includes successfully using humor in practice, recognizing the value of raw answers, and showing reduced tension through laughter.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Freezing up during job interviews",
+          "Living away from family for the first time": "Calling family frequently for reassurance",
+          "Time management with coursework": "Staying up late studying due to procrastination"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Avoiding networking events despite joining clubs",
+          "Dealing with academic pressure": "Overthinking and deleting responses during practice interviews",
+          "Navigating campus politics": "Avoiding events due to overthinking",
+          "Building time management": "Procrastinating on assignments leading to late-night study sessions"
+        },
+        "behaviors_detailed": {
+          "Joins student clubs and organizations": "Joins clubs but avoids events due to overthinking",
+          "Procrastinates on assignments": "Delays work until the last minute, leading to late-night study sessions",
+          "Calls family frequently": "Seeks reassurance from family due to anxiety about living away",
+          "Studies in the library regularly": "Uses library as a study space but struggles with time management",
+          "Stays up late studying": "Burns the midnight oil due to procrastination"
+        },
+        "triggers_specified": {
+          "Office hours": "Avoiding due to fear of asking for help",
+          "Group projects": "Overthinking contributions and interactions",
+          "Job interviews": "Freezing up and fearing judgment",
+          "Presentations": "Anxiety about public speaking"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 1.65,
+        "post_assessment_score": 2.0,
+        "improvement_score": 0.3500000000000001,
+        "timestamp": "2025-10-04T19:37:41.679249"
+      },
+      {
+        "stage_number": 10,
+        "prompt_id": "c60cd38c-fce5-40e3-969d-a206fb771098",
+        "prompt_name": "G3M06 from G2C03",
+        "generation": 3,
+        "conversation_id": "890421eb-01e3-4695-afdb-fe3b20d51001",
+        "conversation_summary": "Problems discussed: Jamie expressed fear of networking and job interviews, particularly around small talk and follow-up questions. Solutions offered/accepted: Starting with low-pressure online interactions (Discord), preparing one specific question (favorite IDE), and RSVPing to the CS mixer with a plan to stay for 15 minutes. Student's response to solutions: Jamie submitted the RSVP, planned to use a fidget cube and snack table strategy, and prepared a specific question. Evidence of progress/improvement: Jamie showed willingness to attend the mixer, prepared a question, and understood the follow-up technique, indicating reduced anxiety and increased confidence.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Freezing up during job interviews and networking events",
+          "Living away from family for the first time": "Frequent calls home due to homesickness",
+          "Time management with coursework": "Staying up late studying and procrastinating on assignments"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Uncertainty about job applications and networking",
+          "Dealing with academic pressure": "3AM elevator pitch rewrites and stress",
+          "Navigating campus politics": "Anxiety about attending a CS mixer",
+          "Building time management": "Procrastination leading to late-night study sessions"
+        },
+        "behaviors_detailed": {
+          "Joins student clubs and organizations": "Considering attending a CS mixer",
+          "Procrastinates on assignments": "Rewriting elevator pitch at 3AM",
+          "Calls family frequently": "Frequent calls due to homesickness",
+          "Studies in the library regularly": "Staying up late to study",
+          "Stays up late studying": "Late-night study sessions"
+        },
+        "triggers_specified": {
+          "Office hours": "Uncertainty about asking questions",
+          "Group projects": "Fear of not contributing enough",
+          "Job interviews": "Freezing up during conversations",
+          "Presentations": "Anxiety about public speaking"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 1.65,
+        "post_assessment_score": 3.3,
+        "improvement_score": 1.65,
+        "timestamp": "2025-10-04T19:38:35.591125"
+      },
+      {
+        "stage_number": 11,
+        "prompt_id": "1683d52f-8fd4-4194-a06f-eea15f95d10e",
+        "prompt_name": "G4C07 from G3C07 & G3E01",
+        "generation": 4,
+        "conversation_id": "6fd07f62-6ff3-42f5-948d-905a5878cd80",
+        "conversation_summary": "Problems discussed: Jamie expressed nervousness about job interviews and networking, particularly freezing up and mind going blank. Solutions offered/accepted: The AI Coach suggested practicing elevator pitches, role-playing, carrying a notebook for bullet points, and scripting go-to responses. Jamie accepted these solutions and successfully drafted and delivered a personalized self-introduction. Student's response to solutions: Jamie showed improvement by reducing apologies, embracing authenticity, and handling silence better. Evidence of progress/improvement: Jamie delivered a confident and engaging intro, recognized the brevity of perceived silence, and went 37 seconds without apologizing.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Freezing up during job interviews and networking events",
+          "Living away from family for the first time": "Frequent calls home due to homesickness",
+          "Time management with coursework": "Staying up late studying and procrastinating on assignments"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Difficulty in crafting a compelling self-introduction for interviews",
+          "Dealing with academic pressure": "Stress from IDE crashes during critical moments",
+          "Navigating campus politics": "Not explicitly mentioned in conversation",
+          "Building time management": "Procrastination leading to last-minute cramming"
+        },
+        "behaviors_detailed": {
+          "Joins student clubs and organizations": "Not explicitly mentioned in conversation",
+          "Procrastinates on assignments": "Staying up late to complete work due to procrastination",
+          "Calls family frequently": "Seeking comfort from family due to stress and homesickness",
+          "Studies in the library regularly": "Not explicitly mentioned in conversation",
+          "Stays up late studying": "Cramming due to poor time management"
+        },
+        "triggers_specified": {
+          "Office hours": "Not explicitly mentioned in conversation",
+          "Group projects": "Not explicitly mentioned in conversation",
+          "Job interviews": "Freezing up and mind going blank during questions",
+          "Presentations": "Not explicitly mentioned in conversation"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 1.65,
+        "post_assessment_score": 2.6,
+        "improvement_score": 0.9500000000000002,
+        "timestamp": "2025-10-04T19:44:30.429756"
+      },
+      {
+        "stage_number": 12,
+        "prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
+        "prompt_name": "G5C07 from G4E01 & G4E02",
+        "generation": 5,
+        "conversation_id": "d3f368e8-dc06-4d7b-b910-f4eb449ccf27",
+        "conversation_summary": "Problems discussed: Jamie expressed fears about job interviews, networking, and academic pressure, along with procrastination and time management issues. Solutions offered/accepted: The AI Coach suggested scripted icebreakers, low-stakes alumni DMs, the Triple-A Plan for alumni panels, and a boba tea reward system. Student's response to solutions: Jamie showed determination to implement these strategies, including sending a DM to an alum and posting a question at an alumni panel. Evidence of progress/improvement: Jamie's shoulders relaxed, they laughed, and committed to specific actions, indicating reduced anxiety and increased confidence.",
+        "fears_materialized": {
+          "Finding a job after graduation": "Freezing up during job interviews and networking events",
+          "Living away from family for the first time": "Frequent calls home due to homesickness",
+          "Time management with coursework": "Staying up late studying and procrastinating on assignments"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Difficulty starting conversations at networking events",
+          "Dealing with academic pressure": "Procrastination leading to late-night study sessions",
+          "Navigating campus politics": "Fear of asking questions in public forums like alumni panels",
+          "Building time management": "Poor scheduling leading to last-minute cramming"
+        },
+        "behaviors_detailed": {
+          "Joins student clubs and organizations": "Joined coding club and attends events",
+          "Procrastinates on assignments": "Delays starting assignments until the last minute",
+          "Calls family frequently": "Calls home multiple times a week due to anxiety",
+          "Studies in the library regularly": "Spends long hours in the library to compensate for procrastination",
+          "Stays up late studying": "Pulls all-nighters before deadlines"
+        },
+        "triggers_specified": {
+          "Office hours": "Fear of asking professors for help",
+          "Group projects": "Anxiety about contributing in group settings",
+          "Job interviews": "Freezing up during interviews",
+          "Presentations": "Fear of public speaking"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 1.65,
+        "post_assessment_score": 2.6,
+        "improvement_score": 0.9500000000000002,
+        "timestamp": "2025-10-04T19:47:30.053668"
       }
     ],
-    "current_stage": 2
+    "current_stage": 12
   }
 }

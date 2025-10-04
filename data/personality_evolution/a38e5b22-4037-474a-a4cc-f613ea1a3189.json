@@ -1,10 +1,10 @@
 {
   "dummy_id": "a38e5b22-4037-474a-a4cc-f613ea1a3189",
   "dummy_name": "Casey Goldberg",
-  "current_experiment_id": "gepa_exp_20251004_191257",
-  "current_prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+  "current_experiment_id": "gepa_exp_20251004_194514",
+  "current_prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
   "created_at": "2025-10-04T19:08:38.123552",
-  "last_updated": "2025-10-04T19:15:25.231779",
+  "last_updated": "2025-10-04T19:47:07.846278",
   "conversation_profile": {
     "original_fears": [
       "Academic failure and poor grades",
@@ -35,24 +35,24 @@
       "openness": 5
     },
     "current_fears": [
-      "Struggling with presentations and networking due to social anxiety",
-      "Balancing social life and studies",
-      "Fear of networking hindering job prospects in journalism"
+      "Struggling with presentations and networking, fearing awkwardness and unpreparedness",
+      "Over-preparing for presentations, leading to robotic delivery",
+      "Anxiety about networking and presentations, crucial for journalism career"
     ],
     "current_challenges": [
-      "Navigating campus politics",
-      "Over-rehearsing presentations until exhaustion",
-      "Not explicitly mentioned, but implied in general anxiety"
+      "Not explicitly mentioned, but implied in networking challenges",
+      "Over-preparing for presentations, leading to stress",
+      "Mention of therapist and emotional support dog, Sir Barksalot"
     ],
     "current_behaviors": [
-      "Attending career fairs and networking events despite anxiety",
-      "Goes to campus events",
-      "Attends career fairs",
-      "Exercises regularly",
-      "Not explicitly mentioned, but implied in networking efforts"
+      "Actively seeking mentorship and solutions for presentation anxiety",
+      "Attending career fairs and networking events",
+      "Mentioned as part of her behaviors",
+      "Not explicitly mentioned in conversation",
+      "Not explicitly mentioned in conversation"
     ],
     "current_anxiety_triggers": [
-      "Mind going blank during presentations despite rehearsal"
+      "The silence right before starting a presentation, feeling pressure to be perfect"
     ],
     "current_social_anxiety_level": 7,
     "current_big_five": {
@@ -121,8 +121,332 @@
         "post_assessment_score": 2.95,
         "improvement_score": 0.40000000000000036,
         "timestamp": "2025-10-04T19:15:25.230925"
+      },
+      {
+        "stage_number": 3,
+        "prompt_id": "e790c703-2c16-4dd7-9ee1-cc749cda9e8a",
+        "prompt_name": "G2C03 from G1E00 & G1M01",
+        "generation": 2,
+        "conversation_id": "ba395988-b4cf-4e02-af7f-f8712827202f",
+        "conversation_summary": "Casey discussed their social anxiety, particularly around presentations and networking, fearing it would hinder their job search and class participation. The coach offered solutions like using a stress ball, printing slides as backup notes, and role-playing networking scenarios. Casey responded positively, practicing a follow-up question and trying the stress ball trick. Evidence of progress includes their willingness to engage in role-play, ask questions, and adopt the stress ball technique, showing reduced anxiety and increased confidence.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "Struggling with presentations and networking due to social anxiety",
+          "Finding a job after graduation": "Fear of blanking during interviews or networking events"
+        },
+        "challenges_materialized": {
+          "Developing effective study habits": "Difficulty managing anxiety during presentations",
+          "Dealing with homesickness": "Not explicitly mentioned but implied in overall anxiety"
+        },
+        "behaviors_detailed": {
+          "Seeks out leadership roles": "Attempting to role-play networking scenarios",
+          "Attends career fairs": "Practicing follow-up questions for networking",
+          "Exercises regularly": "Using a stress ball to manage physical anxiety"
+        },
+        "triggers_specified": {
+          "Presentations": "Holding notecards with shaking hands, fear of blanking"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.55,
+        "post_assessment_score": 2.95,
+        "improvement_score": 0.40000000000000036,
+        "timestamp": "2025-10-04T19:22:59.230840"
+      },
+      {
+        "stage_number": 4,
+        "prompt_id": "76f427d6-7f43-40db-bd23-cc064b5199e9",
+        "prompt_name": "G2C02 from G1M01 & G1E00",
+        "generation": 2,
+        "conversation_id": "24688dfe-f65b-4ef7-b5cd-9bdd18f83010",
+        "conversation_summary": "Problems discussed: Casey's intense anxiety during presentations and networking, leading to freezing and word-vomit. Solutions offered/accepted: Using virtual presentations, practicing with stuffed animals, leaning into pauses, and embracing mistakes humorously. Student's response to solutions: Positive engagement, laughing, and planning to implement the strategies. Evidence of progress/improvement: Reduced physical tension, willingness to practice with Gerald, and a shift in perspective from perfectionism to survival.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "Freezing during presentations, leading to poor performance",
+          "Balancing social life and studies": "Attending campus events while managing study time",
+          "Finding a job after graduation": "Networking anxiety at career fairs"
+        },
+        "challenges_materialized": {
+          "Navigating campus politics": "Participating in leadership roles while managing social dynamics",
+          "Developing effective study habits": "Practicing presentations but still freezing during actual delivery",
+          "Dealing with homesickness": "Using social media to stay connected with family"
+        },
+        "behaviors_detailed": {
+          "Seeks out leadership roles": "Active participation in campus organizations",
+          "Goes to campus events": "Attending social and academic events",
+          "Attends career fairs": "Networking despite anxiety",
+          "Exercises regularly": "Using physical activity to manage stress",
+          "Uses social media for networking": "Connecting with professionals online"
+        },
+        "triggers_specified": {
+          "Presentations": "Freezing during public speaking, especially in journalism-related contexts"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.55,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.3500000000000001,
+        "timestamp": "2025-10-04T19:23:13.348041"
+      },
+      {
+        "stage_number": 5,
+        "prompt_id": "d675a42d-8758-4aa1-9f9a-2504ddb08752",
+        "prompt_name": "G2M01 from G1M01",
+        "generation": 2,
+        "conversation_id": "faa14067-9c15-4be2-bd9b-9983bd0080e2",
+        "conversation_summary": "1) Problems discussed: Casey's fear of presentations, especially in the journalism program, and how it might affect publishing a paper and job prospects. 2) Solutions offered/accepted: Grounding techniques (5-4-3-2-1 trick), scripting only opening and closing lines, imagining the presentation as a conversation, stalling tactics for Q&A, planting a friend to ask the first question. 3) Student's response to solutions: Casey practiced the \"hey friend\" opener successfully, used grounding techniques effectively, and pivoted a tough question during practice. 4) Evidence of progress/improvement: Casey's shoulders relaxed, laughed more, and showed reduced anxiety during practice, planning to use water bottle and hand notes for future presentations.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "Struggling with presentations in journalism program, fearing it will hold back publishing a paper and job prospects",
+          "Finding a job after graduation": "Worried that poor presentation skills will make it harder to secure a job"
+        },
+        "challenges_materialized": {
+          "Developing effective study habits": "Reliance on rigid scripts for presentations leading to anxiety",
+          "Dealing with homesickness": "Not explicitly mentioned, but implied in general anxiety and need for support"
+        },
+        "behaviors_detailed": {
+          "Seeks out leadership roles": "Aspiring to publish a paper and take on a leadership role in journalism",
+          "Attends career fairs": "Concern about job prospects after graduation",
+          "Uses social media for networking": "Not explicitly mentioned, but implied in the focus on networking for career"
+        },
+        "triggers_specified": {
+          "Presentations": "Fear of freezing up, forgetting prepared material, and being judged as incompetent during presentations"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.55,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.3500000000000001,
+        "timestamp": "2025-10-04T19:24:33.114366"
+      },
+      {
+        "stage_number": 6,
+        "prompt_id": "6047de79-e44a-421b-8e45-261a5fdcaa16",
+        "prompt_name": "G3C07 from G2C03 & G2E00",
+        "generation": 3,
+        "conversation_id": "5bca22a7-d0d5-4c6c-b8b5-050898701418",
+        "conversation_summary": "Problems discussed: 1) Fear of blanking out during presentations despite over-preparing, 2) Panic and avoidance at networking events. Solutions offered/accepted: 1) Memorize first and last lines of presentations, use bullet points for the middle, 2) Use scripted openers (\"How’d you get into [their field]?\") and escape hatches (\"I’d love to hear more\") at networking events, 3) Practice in front of a mirror or phone camera. Student's response to solutions: 1) Laughed at mentor's story and felt relieved, 2) Agreed to practice in mirror and use scripted openers, 3) Planned to attend next mixer with new strategies. Evidence of progress/improvement: 1) Reduced anxiety level from 10/10 to 7.5/10, 2) Demonstrated willingness to try new techniques, 3) Scheduled follow-up meeting to report progress.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "Fear of blanking out during presentations despite over-preparing",
+          "Balancing social life and studies": "Struggling to attend networking events due to panic",
+          "Finding a job after graduation": "Anxiety about networking and presentations affecting job hunt"
+        },
+        "challenges_materialized": {
+          "Navigating campus politics": "Not explicitly mentioned in conversation",
+          "Developing effective study habits": "Over-preparing for presentations but still fearing failure",
+          "Dealing with homesickness": "Not explicitly mentioned in conversation"
+        },
+        "behaviors_detailed": {
+          "Seeks out leadership roles": "Not explicitly mentioned in conversation",
+          "Goes to campus events": "Attending journalism mixers but hovering near snack table",
+          "Attends career fairs": "Not explicitly mentioned in conversation",
+          "Exercises regularly": "Not explicitly mentioned in conversation",
+          "Uses social media for networking": "Not explicitly mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Presentations": "Fear of blanking out and being judged during presentations"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.55,
+        "post_assessment_score": 2.85,
+        "improvement_score": 0.30000000000000027,
+        "timestamp": "2025-10-04T19:27:59.380712"
+      },
+      {
+        "stage_number": 7,
+        "prompt_id": "f4eccadd-cbf4-4a75-9b58-3abe8a4d407b",
+        "prompt_name": "G3C03 from G2C03 & G2M01",
+        "generation": 3,
+        "conversation_id": "82693739-60d2-4bd0-9b87-33989dcd739d",
+        "conversation_summary": "Problems discussed: Casey expressed extreme anxiety about presentations and networking, specifically fearing freezing during pitches to real editors. Solutions offered/accepted: The mentor suggested low-stakes practice (unmuting in Zoom classes), pre-writing escape phrases, and practicing pitches. Casey responded positively, laughing and engaging with the mentor, and successfully pitched a story idea. Evidence of progress/improvement: Casey showed reduced anxiety, engaged in the conversation, and agreed to continue practicing, indicating a shift from avoidance to proactive coping.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "Freezing during a big presentation in journalism class",
+          "Finding a job after graduation": "Networking and pitching stories to real editors"
+        },
+        "challenges_materialized": {
+          "Developing effective study habits": "Preparing for presentations and pitches",
+          "Dealing with homesickness": "Not explicitly mentioned but implied in overall anxiety"
+        },
+        "behaviors_detailed": {
+          "Seeks out leadership roles": "Engaging with peer mentor for help",
+          "Attends career fairs": "Preparing for job hunting by improving networking skills",
+          "Uses social media for networking": "Not explicitly mentioned but implied in overall behavior"
+        },
+        "triggers_specified": {
+          "Presentations": "Pitching stories to real editors in journalism class"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.55,
+        "post_assessment_score": 2.95,
+        "improvement_score": 0.40000000000000036,
+        "timestamp": "2025-10-04T19:29:16.628009"
+      },
+      {
+        "stage_number": 8,
+        "prompt_id": "8966845e-bd42-4a15-9003-2b2ed03db063",
+        "prompt_name": "G3M04 from G2E00",
+        "generation": 3,
+        "conversation_id": "254f0749-c6d5-435e-b160-206d0d9930f7",
+        "conversation_summary": "Problems discussed: Casey's intense anxiety around presentations, especially the first few seconds and interpreting audience reactions, as well as stress about networking and group project dynamics. Solutions offered/accepted: Practicing with a friend starting with eyes closed, using bullet points instead of scripts, preparing open-ended questions for networking, and using the \"1-second rule\" in group settings. Student's response to solutions: Casey showed willingness to try these techniques, smiled for the first time, and agreed to check in after trying them. Evidence of progress/improvement: Casey moved from deleting practice recordings to planning low-stakes practice with a friend, and from over-rehearsing to accepting more flexible preparation methods.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "Struggling with presentations and networking for jobs",
+          "Balancing social life and studies": "Juggling group project meetings and personal study time",
+          "Finding a job after graduation": "Networking anxiety and fear of poor first impressions"
+        },
+        "challenges_materialized": {
+          "Navigating campus politics": "Group project dynamics and fear of saying something dumb",
+          "Developing effective study habits": "Over-rehearsing presentations but still freezing up",
+          "Dealing with homesickness": "Not explicitly mentioned, but implied in overall stress"
+        },
+        "behaviors_detailed": {
+          "Seeks out leadership roles": "Actively seeking help to improve presentation skills",
+          "Goes to campus events": "Attending career fairs and networking events",
+          "Attends career fairs": "Preparing for job search despite anxiety",
+          "Exercises regularly": "Not mentioned in conversation",
+          "Uses social media for networking": "Not mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Presentations": "First few seconds of presenting, seeing audience reactions"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.55,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.5499999999999998,
+        "timestamp": "2025-10-04T19:30:41.975970"
+      },
+      {
+        "stage_number": 9,
+        "prompt_id": "c60cd38c-fce5-40e3-969d-a206fb771098",
+        "prompt_name": "G3M06 from G2C03",
+        "generation": 3,
+        "conversation_id": "ae03654a-851f-4a04-bbe0-5ad039090079",
+        "conversation_summary": "Problems discussed: Casey expressed fear of blanking during presentations and rejection when networking. Solutions offered/accepted: Scripting recovery lines for presentations, role-playing with intentional blanks, and creating low-pressure email templates for networking. Student's response to solutions: Casey laughed, engaged in role-play, and drafted an email, showing reduced anxiety. Evidence of progress/improvement: Casey's willingness to practice and use humor to cope with fear, indicating a positive shift in mindset and reduced anxiety.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "Struggling with presentations and networking, fearing it will affect post-graduation opportunities",
+          "Finding a job after graduation": "Fear of rejection when reaching out to alumni or professionals"
+        },
+        "challenges_materialized": {
+          "Developing effective study habits": "Difficulty in preparing for presentations and networking",
+          "Dealing with homesickness": "Not explicitly addressed in this conversation"
+        },
+        "behaviors_detailed": {
+          "Seeks out leadership roles": "Engaging in role-play exercises to build confidence",
+          "Attends career fairs": "Practicing networking strategies and drafting emails",
+          "Uses social media for networking": "Planning to reach out to alumni with tailored emails"
+        },
+        "triggers_specified": {
+          "Presentations": "Mind going blank during presentations, fearing silence and judgment"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.55,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.5499999999999998,
+        "timestamp": "2025-10-04T19:35:56.144232"
+      },
+      {
+        "stage_number": 10,
+        "prompt_id": "5a2e1ba7-9521-4df4-bece-085e7d07aa1c",
+        "prompt_name": "G3M05 from G2C03",
+        "generation": 3,
+        "conversation_id": "e800a12f-2907-4e65-9794-cd17f54b9131",
+        "conversation_summary": "Problems discussed: 1) Social anxiety during presentations and networking, 2) Fear of rejection when pitching ideas, 3) Overthinking interactions. Solutions offered/accepted: 1) '3-second rule' to act before overthinking, 2) Drafting both a 'real' and 'absurd' pitch to reduce pressure, 3) Starting with less intimidating social situations. Student's response to solutions: Positive engagement, willingness to try new strategies, and acknowledgment of progress. Evidence of progress/improvement: Agreed to draft a pitch, recognized the cost of inaction, and expressed intent to use the '3-second rule'.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "Struggling with social anxiety during presentations and networking, impacting job prospects",
+          "Balancing social life and studies": "Overthinking interactions, leading to avoidance of social opportunities",
+          "Finding a job after graduation": "Fear of rejection when pitching ideas or networking"
+        },
+        "challenges_materialized": {
+          "Navigating campus politics": "Avoiding opportunities like pitching to the campus magazine due to fear of rejection",
+          "Developing effective study habits": "Overthinking interactions, leading to procrastination on academic tasks",
+          "Dealing with homesickness": "Not explicitly mentioned, but social anxiety may exacerbate feelings of isolation"
+        },
+        "behaviors_detailed": {
+          "Seeks out leadership roles": "Expressed desire to pitch an article to the campus magazine",
+          "Goes to campus events": "Attends career fairs and networking events despite anxiety",
+          "Attends career fairs": "Uses social media for networking, despite fear of rejection",
+          "Exercises regularly": "Not explicitly mentioned in conversation",
+          "Uses social media for networking": "Expressed interest in networking but held back by anxiety"
+        },
+        "triggers_specified": {
+          "Presentations": "Pitching ideas, networking, and public speaking"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.55,
+        "post_assessment_score": 2.95,
+        "improvement_score": 0.40000000000000036,
+        "timestamp": "2025-10-04T19:36:35.145874"
+      },
+      {
+        "stage_number": 11,
+        "prompt_id": "1683d52f-8fd4-4194-a06f-eea15f95d10e",
+        "prompt_name": "G4C07 from G3C07 & G3E01",
+        "generation": 4,
+        "conversation_id": "38d30f15-be66-4a2d-898a-c85ce95a289f",
+        "conversation_summary": "Problems discussed: Casey expressed severe social anxiety during presentations and networking, particularly fearing small talk and physical symptoms like shaky hands. Solutions offered/accepted: The AI Coach suggested reframing networking as podcast interviews, using specific questions to guide conversations, and holding a cold drink to manage physical anxiety. Student's response to solutions: Casey laughed, relaxed, and successfully role-played networking scenarios, showing immediate improvement. Evidence of progress/improvement: Casey saved the suggested questions in their Notes app and expressed newfound confidence in handling networking situations.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "Struggling with presentations and networking due to social anxiety",
+          "Balancing social life and studies": "Attending campus events while managing study time",
+          "Finding a job after graduation": "Networking anxiety affecting job hunt"
+        },
+        "challenges_materialized": {
+          "Navigating campus politics": "Participating in leadership roles and events",
+          "Developing effective study habits": "Balancing studies with social activities",
+          "Dealing with homesickness": "Using social media to stay connected with family"
+        },
+        "behaviors_detailed": {
+          "Seeks out leadership roles": "Active participation in campus organizations",
+          "Goes to campus events": "Attending social and academic events",
+          "Attends career fairs": "Preparing for job hunting despite anxiety",
+          "Exercises regularly": "Managing stress through physical activity",
+          "Uses social media for networking": "Building professional connections online"
+        },
+        "triggers_specified": {
+          "Presentations": "Public speaking and networking events"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.55,
+        "post_assessment_score": 2.95,
+        "improvement_score": 0.40000000000000036,
+        "timestamp": "2025-10-04T19:42:32.273162"
+      },
+      {
+        "stage_number": 12,
+        "prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
+        "prompt_name": "G5C07 from G4E01 & G4E02",
+        "generation": 5,
+        "conversation_id": "15bb8b43-a200-43b6-b4e4-db4d612b584f",
+        "conversation_summary": "Casey discussed her intense anxiety around presentations and networking, fearing awkwardness and unpreparedness, which are critical for her journalism career. The mentor offered solutions like practicing with a friend, scripting just the opening line, and using her dog, Sir Barksalot, as a hype-dog. Casey responded positively, laughing genuinely and agreeing to try these strategies. Evidence of progress includes her willingness to practice with her roommate and her reduced anxiety during the conversation, as seen in her relaxed demeanor and engagement with the solutions.",
+        "fears_materialized": {
+          "Academic failure and poor grades": "Struggling with presentations and networking, fearing awkwardness and unpreparedness",
+          "Balancing social life and studies": "Over-preparing for presentations, leading to robotic delivery",
+          "Finding a job after graduation": "Anxiety about networking and presentations, crucial for journalism career"
+        },
+        "challenges_materialized": {
+          "Navigating campus politics": "Not explicitly mentioned, but implied in networking challenges",
+          "Developing effective study habits": "Over-preparing for presentations, leading to stress",
+          "Dealing with homesickness": "Mention of therapist and emotional support dog, Sir Barksalot"
+        },
+        "behaviors_detailed": {
+          "Seeks out leadership roles": "Actively seeking mentorship and solutions for presentation anxiety",
+          "Goes to campus events": "Attending career fairs and networking events",
+          "Attends career fairs": "Mentioned as part of her behaviors",
+          "Exercises regularly": "Not explicitly mentioned in conversation",
+          "Uses social media for networking": "Not explicitly mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Presentations": "The silence right before starting a presentation, feeling pressure to be perfect"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.55,
+        "post_assessment_score": 2.95,
+        "improvement_score": 0.40000000000000036,
+        "timestamp": "2025-10-04T19:47:07.845876"
       }
     ],
-    "current_stage": 2
+    "current_stage": 12
   }
 }

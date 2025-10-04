@@ -1,10 +1,10 @@
 {
   "dummy_id": "cfbb8d60-e804-4291-b394-f4efe20628f8",
   "dummy_name": "Lisa Robinson",
-  "current_experiment_id": "gepa_exp_20251004_190838",
-  "current_prompt_id": "9c0d9da5-ff41-4ca0-839e-9ec565c87d0d",
+  "current_experiment_id": "gepa_exp_20251004_194514",
+  "current_prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
   "created_at": "2025-10-04T19:08:38.131594",
-  "last_updated": "2025-10-04T19:11:04.318528",
+  "last_updated": "2025-10-04T19:48:28.309460",
   "conversation_profile": {
     "original_fears": [
       "Homesickness",
@@ -32,21 +32,21 @@
       "openness": 10
     },
     "current_fears": [
-      "Feeling isolated when away from home",
-      "Struggling to manage time between social events and academic work"
+      "Feeling isolated during grad school",
+      "Struggling to attend social events while keeping up with academic work"
     ],
     "current_challenges": [
-      "Difficulty approaching professors for guidance",
-      "Lack of structured study routines",
-      "Overwhelm from multiple commitments"
+      "Approaching professors during office hours",
+      "Preparing questions for academic discussions",
+      "Allocating time for networking and studies"
     ],
     "current_behaviors": [
-      "Attending seminars and social gatherings",
-      "Connecting with peers and professionals online",
-      "Participating in extracurricular activities"
+      "Attending student club meetings and networking events",
+      "Connecting with peers and professors online",
+      "Participating in sociology-related clubs"
     ],
     "current_anxiety_triggers": [
-      "Anxiety during preparation and execution of interviews"
+      "Anxiety during academic conversations and office hours"
     ],
     "current_social_anxiety_level": 7,
     "current_big_five": {
@@ -87,8 +87,350 @@
         "post_assessment_score": 2.0,
         "improvement_score": -0.6000000000000001,
         "timestamp": "2025-10-04T19:11:04.318330"
+      },
+      {
+        "stage_number": 2,
+        "prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+        "prompt_name": "G1M01 from Genesis",
+        "generation": 1,
+        "conversation_id": "7bdea4f3-70cc-4dda-84dd-3958b3c28edf",
+        "conversation_summary": "Problems discussed: 1) Networking anxiety and fear of judgment during job interviews and academic interactions, 2) Impostor syndrome and self-doubt about research ideas, 3) Distractions and overthinking during preparation. Solutions offered/accepted: 1) Shifting focus from pitching to asking questions about others' research, 2) Using phrases to buy time and reduce pressure, 3) Embracing unique interests as strengths. Student's response to solutions: Positive, with immediate application (e.g., planning to ask about research twists) and self-awareness (recognizing passion in oversharing). Evidence of progress/improvement: Reduced anxiety (self-reported), adoption of practical techniques, and newfound confidence in leveraging niche interests.",
+        "fears_materialized": {
+          "Homesickness": "Feeling isolated in a new environment",
+          "Balancing social life and studies": "Struggling to attend events while keeping up with coursework"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Approaching professors or professionals for guidance",
+          "Developing effective study habits": "Distractions while rehearsing elevator pitches",
+          "Building time management": "Getting sidetracked by minor details like reflections"
+        },
+        "behaviors_detailed": {
+          "Goes to campus events": "Attending seminars and networking events",
+          "Uses social media for networking": "Connecting with professionals online",
+          "Joins student clubs and organizations": "Participating in sociology-related groups"
+        },
+        "triggers_specified": {
+          "Job interviews": "Networking with academics or professionals"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.6,
+        "post_assessment_score": 2.7,
+        "improvement_score": 0.10000000000000009,
+        "timestamp": "2025-10-04T19:16:22.378790"
+      },
+      {
+        "stage_number": 3,
+        "prompt_id": "d675a42d-8758-4aa1-9f9a-2504ddb08752",
+        "prompt_name": "G2M01 from G1M01",
+        "generation": 2,
+        "conversation_id": "8b679df9-17fa-458f-86b6-24cd2ad39616",
+        "conversation_summary": "Problems discussed: Lisa's fear of job interviews, difficulty finding a mentor, and email drafting paralysis. Solutions offered/accepted: Normalizing her experiences, drafting a concise email, and using bullet points for safety. Student's response to solutions: Lisa laughed, relaxed, and committed to sending the email. Evidence of progress/improvement: She drafted the email, showed reduced self-criticism, and displayed physical signs of reduced anxiety.",
+        "fears_materialized": {
+          "Homesickness": "Feeling isolated and overwhelmed when away from home",
+          "Balancing social life and studies": "Struggling to allocate time between social events and academic responsibilities"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Difficulty drafting and sending emails to professors due to fear of rejection",
+          "Developing effective study habits": "Procrastination and lack of structured study routines",
+          "Building time management": "Overcommitting to social events and clubs, leading to academic stress"
+        },
+        "behaviors_detailed": {
+          "Goes to campus events": "Attending student club meetings and networking events",
+          "Uses social media for networking": "Connecting with peers and professors on LinkedIn",
+          "Joins student clubs and organizations": "Active participation in sociology-related clubs"
+        },
+        "triggers_specified": {
+          "Job interviews": "Anxiety spikes during preparation and actual interviews"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.6,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.6000000000000001,
+        "timestamp": "2025-10-04T19:21:17.200720"
+      },
+      {
+        "stage_number": 4,
+        "prompt_id": "e790c703-2c16-4dd7-9ee1-cc749cda9e8a",
+        "prompt_name": "G2C03 from G1E00 & G1M01",
+        "generation": 2,
+        "conversation_id": "9ae548f4-87fa-49c3-9ebc-0c8fe876b922",
+        "conversation_summary": "Problems discussed: Lisa expressed fear of job interviews and networking, worrying about bothering mentors and freezing up during conversations. Solutions offered/accepted: The AI Coach suggested preparing a go-to question, admitting nervousness, and asking mentors to explain terms like she's new to the topic. Lisa responded positively, laughing and relaxing, and committed to practicing by asking a professor about their research. Evidence of progress/improvement: Lisa showed reduced self-judgment, planned actionable steps, and displayed a willingness to embrace growth, indicating a decrease in anxiety.",
+        "fears_materialized": {
+          "Homesickness": "Feeling isolated during job interviews and networking events",
+          "Balancing social life and studies": "Struggling to manage time between social events and academic responsibilities"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Approaching professors after class to discuss their research",
+          "Developing effective study habits": "Not yet addressed in conversation",
+          "Building time management": "Not yet addressed in conversation"
+        },
+        "behaviors_detailed": {
+          "Goes to campus events": "Attending networking events and student clubs",
+          "Uses social media for networking": "Not yet addressed in conversation",
+          "Joins student clubs and organizations": "Active participation in clubs"
+        },
+        "triggers_specified": {
+          "Job interviews": "Freezing up during networking and interviews"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.6,
+        "post_assessment_score": 2.75,
+        "improvement_score": 0.1499999999999999,
+        "timestamp": "2025-10-04T19:21:51.080732"
+      },
+      {
+        "stage_number": 5,
+        "prompt_id": "76f427d6-7f43-40db-bd23-cc064b5199e9",
+        "prompt_name": "G2C02 from G1M01 & G1E00",
+        "generation": 2,
+        "conversation_id": "b7a43248-4f30-4d13-9599-684049becbdd",
+        "conversation_summary": "Problems discussed: 1) Fear of social interactions, especially with professors and club leaders, 2) Overthinking and deleting drafts of emails/texts, 3) Skipping club meetings due to anxiety. Solutions offered/accepted: 1) Sending a low-stakes email to a professor about their work, 2) Texting the club president to arrange a meet-up at the door, 3) Using a pre-written script with humor to reduce anxiety. Student's response to solutions: Positive, agreed to send the text immediately and consider sending the email. Evidence of progress/improvement: Student demonstrated willingness to take actionable steps, used humor to cope, and showed reduced anxiety by the end of the conversation.",
+        "fears_materialized": {
+          "Homesickness": "Feeling isolated when attending club meetings alone",
+          "Balancing social life and studies": "Skipping Sociology Society meetings due to social anxiety"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Fear of reaching out to professors via email",
+          "Developing effective study habits": "Procrastination and deleting draft emails",
+          "Building time management": "Overthinking simple tasks like sending a text"
+        },
+        "behaviors_detailed": {
+          "Goes to campus events": "Joining the Sociology Society but skipping meetings",
+          "Uses social media for networking": "Considering texting the club president for support",
+          "Joins student clubs and organizations": "Active in Sociology Society but struggles with attendance"
+        },
+        "triggers_specified": {
+          "Job interviews": "Generalized to any high-pressure social interaction, like talking to professors or club leaders"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.6,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.6000000000000001,
+        "timestamp": "2025-10-04T19:22:13.726667"
+      },
+      {
+        "stage_number": 6,
+        "prompt_id": "f4eccadd-cbf4-4a75-9b58-3abe8a4d407b",
+        "prompt_name": "G3C03 from G2C03 & G2M01",
+        "generation": 3,
+        "conversation_id": "a4dafb7e-753f-4499-ad50-9d030f2618e8",
+        "conversation_summary": "Problems discussed: 1) Anxiety during job interviews and conversations, 2) Procrastination on emails due to stress, 3) Avoidance of social interactions. Solutions offered/accepted: 1) Using humor (clown shoes) to reduce panic, 2) Drafting emails in Comic Sans, 3) Practicing low-stakes interactions. Student's response to solutions: Positive engagement, willingness to try techniques, and laughter indicating reduced stress. Evidence of progress/improvement: Commitment to sending an email in Comic Sans, practicing specific coffee orders, and reduced anxiety during the conversation.",
+        "fears_materialized": {
+          "Homesickness": "Avoiding social interactions due to stress",
+          "Balancing social life and studies": "Putting off emailing professors to avoid awkwardness"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Struggling to initiate conversations with potential mentors",
+          "Developing effective study habits": "Procrastinating on academic tasks due to anxiety",
+          "Building time management": "Avoiding tasks that trigger anxiety, leading to poor time allocation"
+        },
+        "behaviors_detailed": {
+          "Goes to campus events": "Attending events but avoiding one-on-one interactions",
+          "Uses social media for networking": "Using social media but hesitating to reach out directly",
+          "Joins student clubs and organizations": "Joining clubs but not engaging deeply due to fear of awkwardness"
+        },
+        "triggers_specified": {
+          "Job interviews": "Freezing and overthinking during unexpected questions",
+          "Emailing professors": "Stressing over wording and avoiding sending emails"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.6,
+        "post_assessment_score": 2.75,
+        "improvement_score": 0.1499999999999999,
+        "timestamp": "2025-10-04T19:29:46.751925"
+      },
+      {
+        "stage_number": 7,
+        "prompt_id": "8966845e-bd42-4a15-9003-2b2ed03db063",
+        "prompt_name": "G3M04 from G2E00",
+        "generation": 3,
+        "conversation_id": "9caf02c6-fb44-4144-a58a-62234c776313",
+        "conversation_summary": "Problems discussed: Lisa's anxiety during job interviews and networking, awkwardness in mentorship approaches, and time management struggles. Solutions offered/accepted: Turning awkward moments into strategic segues, analyzing anxiety as data, and using chaos as a methodology. Student's response to solutions: Lisa showed enthusiasm and determination, planning to apply these strategies in future interactions. Evidence of progress/improvement: Lisa's anxiety decreased, she accepted the solutions, and she began planning specific actions to implement them.",
+        "fears_materialized": {
+          "Homesickness": "Feeling isolated during job interviews and networking events",
+          "Balancing social life and studies": "Struggling to manage time between student clubs and academic responsibilities"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Approaching Dr. Lee for mentorship after an awkward conversation about her cat's surgery",
+          "Developing effective study habits": "Difficulty focusing due to anxiety about job interviews",
+          "Building time management": "Juggling campus events, social media networking, and academic work"
+        },
+        "behaviors_detailed": {
+          "Goes to campus events": "Attending Dr. Lee's office hours and student club meetings",
+          "Uses social media for networking": "Connecting with peers and professors online",
+          "Joins student clubs and organizations": "Participating in the grad student anarchist collective"
+        },
+        "triggers_specified": {
+          "Job interviews": "Freezing up during networking conversations and interviews"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.6,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.6000000000000001,
+        "timestamp": "2025-10-04T19:31:00.393505"
+      },
+      {
+        "stage_number": 8,
+        "prompt_id": "5a2e1ba7-9521-4df4-bece-085e7d07aa1c",
+        "prompt_name": "G3M05 from G2C03",
+        "generation": 3,
+        "conversation_id": "d0724a7e-917e-459a-b280-f00ab89c6a74",
+        "conversation_summary": "Problems discussed: Lisa expressed extreme anxiety about an upcoming job interview and general nervousness in leadership situations. Solutions offered/accepted: The mentor suggested preparing ridiculous answers first to ease tension, then transitioning to genuine responses, and using physical aids like mints to manage anxiety. Student's response to solutions: Lisa responded positively, practicing the techniques immediately and showing visible relaxation and laughter. Evidence of progress/improvement: Lisa successfully answered an interview question authentically, expressed reduced anxiety, and demonstrated a willingness to face her fears.",
+        "fears_materialized": {
+          "Homesickness": "Feeling isolated during job interviews",
+          "Balancing social life and studies": "Struggling to manage time between academic responsibilities and social engagements"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Difficulty in identifying a mentor who can guide her through academic and career challenges",
+          "Developing effective study habits": "Inability to focus during study sessions due to anxiety",
+          "Building time management": "Overwhelmed by deadlines and social commitments"
+        },
+        "behaviors_detailed": {
+          "Goes to campus events": "Attending networking events to meet potential mentors",
+          "Uses social media for networking": "Connecting with professionals and peers on LinkedIn",
+          "Joins student clubs and organizations": "Participating in sociology club activities"
+        },
+        "triggers_specified": {
+          "Job interviews": "Upcoming research assistant position interview causing significant anxiety"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.6,
+        "post_assessment_score": 2.7,
+        "improvement_score": 0.10000000000000009,
+        "timestamp": "2025-10-04T19:36:53.752620"
+      },
+      {
+        "stage_number": 9,
+        "prompt_id": "6047de79-e44a-421b-8e45-261a5fdcaa16",
+        "prompt_name": "G3C07 from G2C03 & G2E00",
+        "generation": 3,
+        "conversation_id": "67bbb263-41f0-4119-8634-d1cc5a7e6fa2",
+        "conversation_summary": "Problems discussed: 1) Panic during job interviews, especially the 'tell me about yourself' segment, 2) Difficulty selling oneself without oversharing or sounding robotic, 3) Fear of quirks (e.g., cat backpack, emoji notes) being judged. Solutions offered/accepted: 1) Using a storytelling framework (Present-Past-Future) to structure responses, 2) Reframing weaknesses as growth arcs (e.g., Excel crashes → resilience), 3) Embracing humor and uniqueness (e.g., raccoon scholar analogy) to stand out. Student's response to solutions: Initially hesitant but engaged with humor, created a tailored response, and practiced owning quirks. Evidence of progress/improvement: Developed a confident 'trailer'-style pitch, laughed off mistakes, and planned next steps (mock interviews, networking).",
+        "fears_materialized": {
+          "Homesickness": "Feeling isolated during job interview preparation",
+          "Balancing social life and studies": "Struggling to network effectively while managing academic workload"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Difficulty in seeking guidance for interview preparation",
+          "Developing effective study habits": "Overwhelm when structuring interview responses",
+          "Building time management": "Juggling interview prep with academic responsibilities"
+        },
+        "behaviors_detailed": {
+          "Goes to campus events": "Attended mock interview sessions",
+          "Uses social media for networking": "Connected with alumni for interview tips",
+          "Joins student clubs and organizations": "Participated in career-focused clubs"
+        },
+        "triggers_specified": {
+          "Job interviews": "Anxiety during 'tell me about yourself' segment"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.6,
+        "post_assessment_score": 2.8,
+        "improvement_score": 0.19999999999999973,
+        "timestamp": "2025-10-04T19:38:32.880259"
+      },
+      {
+        "stage_number": 10,
+        "prompt_id": "c60cd38c-fce5-40e3-969d-a206fb771098",
+        "prompt_name": "G3M06 from G2C03",
+        "generation": 3,
+        "conversation_id": "723df5c9-0310-4901-936f-a999c4185214",
+        "conversation_summary": "Problems discussed: 1) Panic during job interviews, especially with unexpected questions and silence. 2) Fear of leadership roles due to nervousness. 3) Anxiety about being noticed as nervous. Solutions offered/accepted: 1) Using intentional pauses during interviews to reframe silence. 2) Starting with low-stakes leadership (coffee hour coordination). 3) Reframing nervousness as normal and using humor to cope. Student's response to solutions: Positive engagement, willingness to practice, and immediate application of techniques (e.g., role-playing coffee hour scenarios). Evidence of progress/improvement: Student demonstrated reduced anxiety through laughter, planning to coordinate coffee hour, and expressing confidence in trying new techniques.",
+        "fears_materialized": {
+          "Homesickness": "Not explicitly addressed in conversation",
+          "Balancing social life and studies": "Not explicitly addressed in conversation"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Engaging with peer mentor for guidance",
+          "Developing effective study habits": "Not explicitly addressed in conversation",
+          "Building time management": "Not explicitly addressed in conversation"
+        },
+        "behaviors_detailed": {
+          "Goes to campus events": "Planning to coordinate grad student coffee hour",
+          "Uses social media for networking": "Not explicitly addressed in conversation",
+          "Joins student clubs and organizations": "Not explicitly addressed in conversation"
+        },
+        "triggers_specified": {
+          "Job interviews": "Freezing during unexpected questions, panic during silence"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.6,
+        "post_assessment_score": 2.65,
+        "improvement_score": 0.04999999999999982,
+        "timestamp": "2025-10-04T19:38:56.118322"
+      },
+      {
+        "stage_number": 11,
+        "prompt_id": "1683d52f-8fd4-4194-a06f-eea15f95d10e",
+        "prompt_name": "G4C07 from G3C07 & G3E01",
+        "generation": 4,
+        "conversation_id": "d270859e-1665-4083-9429-141a85404e78",
+        "conversation_summary": "1) Problems discussed: Lisa's anxiety during job interviews (specifically the 'tell me about yourself' part), difficulty with networking and small talk in student clubs, and feeling like she's bothering others when trying to connect. 2) Solutions offered/accepted: Reframing interviews as research interactions, using sociology skills to start conversations, practicing low-stakes networking, and hydrating to prevent voice squeaks. 3) Student's response to solutions: Lisa laughed, engaged in role-playing, and practiced a natural conversation starter ('I just read this wild study...'). She expressed enthusiasm for baby steps and showed reduced anxiety by the end. 4) Evidence of progress/improvement: Lisa identified practical tools (hydration, reframing), successfully practiced a networking conversation, and left the conversation with a plan to apply these strategies ('Time to go annotate my *how to human* notes!').",
+        "fears_materialized": {
+          "Homesickness": "Not explicitly mentioned in conversation",
+          "Balancing social life and studies": "Struggling to network and engage in student clubs due to social anxiety"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Not explicitly mentioned in conversation",
+          "Developing effective study habits": "Not explicitly mentioned in conversation",
+          "Building time management": "Not explicitly mentioned in conversation"
+        },
+        "behaviors_detailed": {
+          "Goes to campus events": "Attends sociology club meetings but sits in the back",
+          "Uses social media for networking": "Not explicitly mentioned in conversation",
+          "Joins student clubs and organizations": "Joined a sociology club but struggles to engage"
+        },
+        "triggers_specified": {
+          "Job interviews": "Panic during the 'tell me about yourself' part, voice shakes, overthinking"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.6,
+        "post_assessment_score": 2.95,
+        "improvement_score": 0.3500000000000001,
+        "timestamp": "2025-10-04T19:44:04.241461"
+      },
+      {
+        "stage_number": 12,
+        "prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
+        "prompt_name": "G5C07 from G4E01 & G4E02",
+        "generation": 5,
+        "conversation_id": "abe52064-ad86-45bd-9f51-267d77380778",
+        "conversation_summary": "Problems discussed: Lisa expressed anxiety about academic conversations, fear of judgment, and physical symptoms of stress during office hours. Solutions offered/accepted: Using a sticky note for questions, role-playing with a peer mentor, framing questions to sound confident, using a stress ball, and bringing cookies to meetings. Student's response to solutions: Lisa initially hesitated but eventually agreed to try the sticky note method, role-playing, and bringing cookies. She also reframed potential mishaps with humor, showing reduced avoidance behavior. Evidence of progress/improvement: Lisa planned concrete steps (drafting a shower script, attending office hours) and showed emotional regulation by laughing off potential mishaps.",
+        "fears_materialized": {
+          "Homesickness": "Feeling isolated during grad school",
+          "Balancing social life and studies": "Struggling to attend social events while keeping up with academic work"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Approaching professors during office hours",
+          "Developing effective study habits": "Preparing questions for academic discussions",
+          "Building time management": "Allocating time for networking and studies"
+        },
+        "behaviors_detailed": {
+          "Goes to campus events": "Attending student club meetings and networking events",
+          "Uses social media for networking": "Connecting with peers and professors online",
+          "Joins student clubs and organizations": "Participating in sociology-related clubs"
+        },
+        "triggers_specified": {
+          "Job interviews": "Anxiety during academic conversations and office hours"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.6,
+        "post_assessment_score": 2.8,
+        "improvement_score": 0.19999999999999973,
+        "timestamp": "2025-10-04T19:48:28.309099"
       }
     ],
-    "current_stage": 1
+    "current_stage": 12
   }
 }

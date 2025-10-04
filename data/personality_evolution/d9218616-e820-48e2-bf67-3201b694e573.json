@@ -1,10 +1,10 @@
 {
   "dummy_id": "d9218616-e820-48e2-bf67-3201b694e573",
   "dummy_name": "Lisa Lee",
-  "current_experiment_id": "gepa_exp_20251004_191257",
-  "current_prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+  "current_experiment_id": "gepa_exp_20251004_194514",
+  "current_prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
   "created_at": "2025-10-04T19:08:38.124586",
-  "last_updated": "2025-10-04T19:14:30.488820",
+  "last_updated": "2025-10-04T19:48:27.793751",
   "conversation_profile": {
     "original_fears": [
       "Dealing with roommate conflicts",
@@ -36,25 +36,25 @@
       "openness": 3
     },
     "current_fears": [
-      "Not explicitly discussed in conversation",
-      "Reaching out to alumni on LinkedIn for networking"
+      "Not explicitly addressed in conversation",
+      "Networking at career fairs and crafting follow-up emails"
     ],
     "current_challenges": [
-      "Not explicitly discussed in conversation",
-      "Fear of stumbling over words or losing train of thought during presentations",
-      "Networking with alumni for job opportunities"
+      "Not explicitly addressed in conversation",
+      "Practicing presentations and incorporating storytelling",
+      "Networking strategies and follow-up emails"
     ],
     "current_behaviors": [
-      "Connecting with alumni on LinkedIn",
-      "Not explicitly discussed in conversation",
-      "Practicing presentations with study groups or roommate",
-      "Not explicitly discussed in conversation"
+      "Not explicitly addressed in conversation",
+      "Attending career fairs and networking events",
+      "Not explicitly addressed in conversation",
+      "Not explicitly addressed in conversation"
     ],
     "current_anxiety_triggers": [
-      "Not explicitly discussed in conversation",
-      "Fear of public speaking during presentations",
-      "Not explicitly discussed in conversation",
-      "Not explicitly discussed in conversation"
+      "Not explicitly addressed in conversation",
+      "Practicing presentations and receiving feedback",
+      "Not explicitly addressed in conversation",
+      "Not explicitly addressed in conversation"
     ],
     "current_social_anxiety_level": 1,
     "current_big_five": {
@@ -134,8 +134,358 @@
         "post_assessment_score": 2.95,
         "improvement_score": 0.10000000000000009,
         "timestamp": "2025-10-04T19:14:30.488009"
+      },
+      {
+        "stage_number": 3,
+        "prompt_id": "e790c703-2c16-4dd7-9ee1-cc749cda9e8a",
+        "prompt_name": "G2C03 from G1E00 & G1M01",
+        "generation": 2,
+        "conversation_id": "ed75cb07-d10c-46e1-ad2c-290cd51b1e04",
+        "conversation_summary": "Problems discussed: Lisa expressed anxiety about public speaking during presentations and networking for job opportunities. Solutions offered/accepted: For presentations, she accepted the suggestion to practice in front of a mirror or record herself. For networking, she agreed to start engaging on LinkedIn by commenting on posts and using emoji reactions. Student's response to solutions: Lisa responded positively, finding the LinkedIn tip practical and acknowledging the benefit of recording herself. Evidence of progress/improvement: She planned to start engaging on LinkedIn immediately and recognized her natural enthusiasm when discussing projects informally, indicating a readiness to apply these solutions.",
+        "fears_materialized": {
+          "Dealing with roommate conflicts": "Not discussed in conversation",
+          "Finding a job after graduation": "Networking at career fairs and engaging on LinkedIn"
+        },
+        "challenges_materialized": {
+          "Managing student loans": "Not discussed in conversation",
+          "Preparing for presentations": "Practicing in front of a mirror or recording herself",
+          "Career exploration": "Commenting on LinkedIn posts and asking professors for advice"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Commenting on LinkedIn posts from alumni and using emoji reactions",
+          "Goes to campus events": "Attending study groups and career fairs",
+          "Participates in study groups": "Meeting with study group to prep for finals",
+          "Attends professor office hours": "Asking professors to coffee for career advice"
+        },
+        "triggers_specified": {
+          "Office hours": "Asking professors for career advice",
+          "Presentations": "Practicing presentations in front of a mirror or recording herself",
+          "Fraternity/Sorority events": "Not discussed in conversation",
+          "Group projects": "Not discussed in conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.85,
+        "post_assessment_score": 2.95,
+        "improvement_score": 0.10000000000000009,
+        "timestamp": "2025-10-04T19:18:51.181270"
+      },
+      {
+        "stage_number": 4,
+        "prompt_id": "76f427d6-7f43-40db-bd23-cc064b5199e9",
+        "prompt_name": "G2C02 from G1M01 & G1E00",
+        "generation": 2,
+        "conversation_id": "6b2b81d6-50a8-4e27-976e-0257f5c03d6b",
+        "conversation_summary": "Problems discussed: 1) Nervousness during presentations and networking, especially for career preparation. Solutions offered/accepted: 1) Practicing presentations in varied formats (alone, recorded, with a friend), 2) Using social media to network by commenting on professionals' posts, 3) Preparing quirky marketing facts and printed questions for networking events, 4) Adopting humorous personas (YouTube host, podcast host) to reframe anxiety. Student's response: Enthusiastically accepted all solutions, scheduled a coffee meetup to practice networking, and shared personal tactics (lucky hoodie). Evidence of progress: Reduced anxiety about networking (humorously owning past mistakes), concrete plans to implement presentation practice methods, and proactive scheduling of networking practice.",
+        "fears_materialized": {
+          "Dealing with roommate conflicts": "Not explicitly addressed in conversation",
+          "Finding a job after graduation": "Networking anxiety and public speaking during career fairs"
+        },
+        "challenges_materialized": {
+          "Managing student loans": "Not explicitly addressed in conversation",
+          "Preparing for presentations": "Nervousness during graded presentations",
+          "Career exploration": "Networking with professionals and alumni"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Commenting on posts by marketing professionals",
+          "Goes to campus events": "Attending alumni coffee meetups",
+          "Participates in study groups": "Not explicitly addressed in conversation",
+          "Attends professor office hours": "Not explicitly addressed in conversation"
+        },
+        "triggers_specified": {
+          "Office hours": "Not explicitly addressed in conversation",
+          "Presentations": "Graded presentations in marketing classes",
+          "Fraternity/Sorority events": "Not explicitly addressed in conversation",
+          "Group projects": "Trauma-dumping during networking (mentioned humorously)"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.85,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.8500000000000001,
+        "timestamp": "2025-10-04T19:22:30.632075"
+      },
+      {
+        "stage_number": 5,
+        "prompt_id": "d675a42d-8758-4aa1-9f9a-2504ddb08752",
+        "prompt_name": "G2M01 from G1M01",
+        "generation": 2,
+        "conversation_id": "3c8575a9-ada1-45ad-b0d2-9232386890ac",
+        "conversation_summary": "Problems discussed: 1) Intimidation with initial networking outreach, 2) Overthinking messages, 3) Confidence in professional settings. Solutions offered/accepted: 1) Start by reading alumni profiles without messaging, 2) Be specific and personal in outreach messages, 3) Repurpose pre-presentation ritual (Lizzo + power poses) for networking, 4) Prepare a follow-up message. Student's response to solutions: Positive, drafted and scheduled an outreach message, prepared follow-up, and scheduled the message. Evidence of progress/improvement: Reduced anxiety, took concrete steps (drafted, scheduled, prepared follow-up), and showed enthusiasm for implementing solutions.",
+        "fears_materialized": {
+          "Dealing with roommate conflicts": "Not addressed in this conversation",
+          "Finding a job after graduation": "Initial outreach for networking feels intimidating"
+        },
+        "challenges_materialized": {
+          "Managing student loans": "Not addressed in this conversation",
+          "Preparing for presentations": "Pre-presentation ritual (Lizzo + power poses)",
+          "Career exploration": "Networking with alumni for job opportunities"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Identifying and reaching out to alumni on LinkedIn",
+          "Goes to campus events": "Not addressed in this conversation",
+          "Participates in study groups": "Mentioned attending Consumer Behavior study group",
+          "Attends professor office hours": "Not addressed in this conversation"
+        },
+        "triggers_specified": {
+          "Office hours": "Not addressed in this conversation",
+          "Presentations": "Pre-presentation ritual (Lizzo + power poses)",
+          "Fraternity/Sorority events": "Not addressed in this conversation",
+          "Group projects": "Not addressed in this conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.85,
+        "post_assessment_score": 3.0,
+        "improvement_score": 0.1499999999999999,
+        "timestamp": "2025-10-04T19:24:41.978838"
+      },
+      {
+        "stage_number": 6,
+        "prompt_id": "f4eccadd-cbf4-4a75-9b58-3abe8a4d407b",
+        "prompt_name": "G3C03 from G2C03 & G2M01",
+        "generation": 3,
+        "conversation_id": "6c44162c-ed5c-44fb-a57f-2a976a4c9a67",
+        "conversation_summary": "Problems discussed: 1) Nervousness during marketing presentations affecting career prospects, 2) Awkwardness in networking situations. Solutions offered/accepted: 1) Practice short, playful product pitches to build spontaneity (demonstrated via stapler roleplay), 2) Reframe networking as 'collecting stories' and use enthusiasm. Student's response: Embraced techniques, successfully performed pitch, accepted networking challenge, and planned to apply methods in group projects. Evidence of progress: Demonstrated confident, humorous pitch delivery; expressed shifted mindset about presentations; committed to concrete next steps.",
+        "fears_materialized": {
+          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation",
+          "Finding a job after graduation": "Networking awkwardness and public speaking fears affecting career prospects"
+        },
+        "challenges_materialized": {
+          "Managing student loans": "Not discussed in conversation",
+          "Preparing for presentations": "Nervousness during marketing presentations",
+          "Career exploration": "Difficulty networking effectively"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Not discussed in conversation",
+          "Goes to campus events": "Mentioned as a networking opportunity",
+          "Participates in study groups": "Not discussed in conversation",
+          "Attends professor office hours": "Not discussed in conversation"
+        },
+        "triggers_specified": {
+          "Office hours": "Not discussed in conversation",
+          "Presentations": "Marketing class presentations",
+          "Fraternity/Sorority events": "Not discussed in conversation",
+          "Group projects": "Mentioned as potential application for stapler pitch technique"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.85,
+        "post_assessment_score": 2.55,
+        "improvement_score": -0.30000000000000027,
+        "timestamp": "2025-10-04T19:27:33.184121"
+      },
+      {
+        "stage_number": 7,
+        "prompt_id": "6047de79-e44a-421b-8e45-261a5fdcaa16",
+        "prompt_name": "G3C07 from G2C03 & G2E00",
+        "generation": 3,
+        "conversation_id": "dae6ed52-b4f5-4cb3-9bc4-04bcd91901d9",
+        "conversation_summary": "Problems discussed: Lisa's nervousness about presentations and networking events, and her desire to improve public speaking and networking skills to secure a job after graduation. Solutions offered/accepted: For presentations, practice like a concert performance, record and review, focus on one improvement at a time. For networking, approach it as 'professional curiosity', ask about others' career paths, keep a 'brag file'. For elevator pitches, practice mock pitches, focus on specificity and confidence, follow up with problem-solving questions. Student's response to solutions: Lisa enthusiastically practiced a mock elevator pitch, received positive feedback, and drafted a LinkedIn post. Evidence of progress/improvement: Lisa delivered the pitch with confidence, showed enthusiasm for applying the tips, and demonstrated improved public speaking skills.",
+        "fears_materialized": {
+          "Dealing with roommate conflicts": "Not discussed in conversation",
+          "Finding a job after graduation": "Preparing for networking events and presentations"
+        },
+        "challenges_materialized": {
+          "Managing student loans": "Not discussed in conversation",
+          "Preparing for presentations": "Practicing and improving public speaking skills",
+          "Career exploration": "Networking and elevator pitch practice"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Drafting a LinkedIn post about sustainable FOMO",
+          "Goes to campus events": "Attending networking events",
+          "Participates in study groups": "Not discussed in conversation",
+          "Attends professor office hours": "Not discussed in conversation"
+        },
+        "triggers_specified": {
+          "Office hours": "Not discussed in conversation",
+          "Presentations": "Practicing presentations and receiving feedback",
+          "Fraternity/Sorority events": "Not discussed in conversation",
+          "Group projects": "Not discussed in conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.85,
+        "post_assessment_score": 2.85,
+        "improvement_score": 0.0,
+        "timestamp": "2025-10-04T19:28:15.598841"
+      },
+      {
+        "stage_number": 8,
+        "prompt_id": "c60cd38c-fce5-40e3-969d-a206fb771098",
+        "prompt_name": "G3M06 from G2C03",
+        "generation": 3,
+        "conversation_id": "f751aa91-2dec-485a-8162-b004beebc443",
+        "conversation_summary": "Problems discussed: 1) Presentation nerves causing blanking despite over-preparation, 2) Awkwardness with LinkedIn networking for post-graduation jobs in marketing. Solutions offered/accepted: 1) Recording practice sessions in short chunks, focusing on one friendly face, imagining explaining to a chaotic friend; 2) Commenting substantively on alumni posts, using a templated DM approach for advice calls; 3) Reframing job search eagerness positively. Student's response: Immediately adopted DM template, planned to record practice session, and began implementing LinkedIn strategy during conversation. Evidence of progress: Shift from passive lurking to active engagement strategy, concrete plan for presentation practice, reduced self-consciousness about networking.",
+        "fears_materialized": {
+          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation",
+          "Finding a job after graduation": "Feeling awkward reaching out to people on LinkedIn, unsure how to start conversations about brand management or digital marketing roles"
+        },
+        "challenges_materialized": {
+          "Managing student loans": "Not explicitly mentioned in conversation",
+          "Preparing for presentations": "Over-preparing but mind goes blank during delivery due to nerves",
+          "Career exploration": "Interested in brand management or digital marketing but unsure how to network effectively"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Lurking on LinkedIn but not actively engaging",
+          "Goes to campus events": "Not explicitly mentioned in conversation",
+          "Participates in study groups": "Not explicitly mentioned in conversation",
+          "Attends professor office hours": "Not explicitly mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Office hours": "Not explicitly mentioned in conversation",
+          "Presentations": "Upcoming group project pitch causing nerves",
+          "Fraternity/Sorority events": "Not explicitly mentioned in conversation",
+          "Group projects": "Upcoming group project pitch"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.85,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.8500000000000001,
+        "timestamp": "2025-10-04T19:29:21.819589"
+      },
+      {
+        "stage_number": 9,
+        "prompt_id": "5a2e1ba7-9521-4df4-bece-085e7d07aa1c",
+        "prompt_name": "G3M05 from G2C03",
+        "generation": 3,
+        "conversation_id": "cbc02b3e-f81c-4d7b-8cbd-67f77b39e706",
+        "conversation_summary": "Problems discussed: Lisa expressed nervousness about career fairs and presentations, key for her marketing career. Solutions offered/accepted: For presentations, practicing like a TED Talk was suggested. For networking, preparing conversation starters and refining her elevator pitch (including specific tools and ending with a question) were accepted. Student's response: Lisa delivered a pitch without filler words, showed reduced fear, and planned to practice daily. Evidence of progress: Lisa updated her LinkedIn, planned to attend events, and felt more confident about networking as 'just talking to people.'",
+        "fears_materialized": {
+          "Dealing with roommate conflicts": "Not explicitly addressed in conversation",
+          "Finding a job after graduation": "Nervousness about career fairs and networking events"
+        },
+        "challenges_materialized": {
+          "Managing student loans": "Not explicitly addressed in conversation",
+          "Preparing for presentations": "Practice and confidence-building for public speaking",
+          "Career exploration": "Networking at career fairs and refining elevator pitch"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Updating LinkedIn headline post-conversation",
+          "Goes to campus events": "Planning to attend virtual career events",
+          "Participates in study groups": "Not explicitly addressed in conversation",
+          "Attends professor office hours": "Not explicitly addressed in conversation"
+        },
+        "triggers_specified": {
+          "Office hours": "Not explicitly addressed in conversation",
+          "Presentations": "Practicing presentations like a TED Talk",
+          "Fraternity/Sorority events": "Not explicitly addressed in conversation",
+          "Group projects": "Not explicitly addressed in conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.85,
+        "post_assessment_score": 3.1,
+        "improvement_score": 0.25,
+        "timestamp": "2025-10-04T19:33:03.745211"
+      },
+      {
+        "stage_number": 10,
+        "prompt_id": "8966845e-bd42-4a15-9003-2b2ed03db063",
+        "prompt_name": "G3M04 from G2E00",
+        "generation": 3,
+        "conversation_id": "69bd91cf-73b1-4f9d-8894-7a077c27b852",
+        "conversation_summary": "Problems discussed: 1) Nervousness about public speaking in presentations, 2) Anxiety about job search and networking. Solutions offered/accepted: 1) Recording practice presentations to improve delivery, 2) Personalized LinkedIn outreach to alumni with scripts and role-playing practice, 3) 2-strike follow-up rule with scheduled maintenance time. Student's response: Enthusiastically adopted all solutions, created Trello system for tracking, scheduled first outreach session. Evidence of progress: Developed concrete outreach strategy, overcame initial hesitation about contacting alumni, implemented organizational system for follow-ups.",
+        "fears_materialized": {
+          "Dealing with roommate conflicts": "Not explicitly addressed in conversation",
+          "Finding a job after graduation": "Networking anxiety, reaching out to alumni on LinkedIn"
+        },
+        "challenges_materialized": {
+          "Managing student loans": "Not explicitly addressed in conversation",
+          "Preparing for presentations": "Nervousness about public speaking, especially in marketing class",
+          "Career exploration": "Uncertainty about job search strategies, leveraging alumni network"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Active on LinkedIn, reaching out to alumni",
+          "Goes to campus events": "Member of American Marketing Association",
+          "Participates in study groups": "Not explicitly addressed in conversation",
+          "Attends professor office hours": "Not explicitly addressed in conversation"
+        },
+        "triggers_specified": {
+          "Office hours": "Not explicitly addressed in conversation",
+          "Presentations": "Marketing class presentations",
+          "Fraternity/Sorority events": "Not explicitly addressed in conversation",
+          "Group projects": "Not explicitly addressed in conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.85,
+        "post_assessment_score": 2.95,
+        "improvement_score": 0.10000000000000009,
+        "timestamp": "2025-10-04T19:38:56.118600"
+      },
+      {
+        "stage_number": 11,
+        "prompt_id": "1683d52f-8fd4-4194-a06f-eea15f95d10e",
+        "prompt_name": "G4C07 from G3C07 & G3E01",
+        "generation": 4,
+        "conversation_id": "05b66cf1-c44e-4747-99cf-bf31abd57782",
+        "conversation_summary": "Problems discussed: 1) Nervousness about presentations and networking events, 2) Blanking during networking conversations. Solutions offered/accepted: 1) Practice presentations in informal settings, 2) Use curiosity to flip questions in networking, prepare quirky icebreakers, and create a 'skills brag sheet', 3) Roleplay to practice recovery from awkward moments. Student's response to solutions: Positive engagement, quick adoption of suggested hacks, and active participation in roleplay. Evidence of progress/improvement: Demonstrated quick thinking in roleplay, provided own recovery hack, and showed willingness to practice presentations informally.",
+        "fears_materialized": {
+          "Dealing with roommate conflicts": "Not discussed in conversation",
+          "Finding a job after graduation": "Networking at career fairs and events"
+        },
+        "challenges_materialized": {
+          "Managing student loans": "Not discussed in conversation",
+          "Preparing for presentations": "Practicing presentations in informal settings",
+          "Career exploration": "Networking and job hunting strategies"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Not discussed in conversation",
+          "Goes to campus events": "Attending career fairs and networking events",
+          "Participates in study groups": "Not discussed in conversation",
+          "Attends professor office hours": "Not discussed in conversation"
+        },
+        "triggers_specified": {
+          "Office hours": "Not discussed in conversation",
+          "Presentations": "Practicing presentations with friends or pets",
+          "Fraternity/Sorority events": "Not discussed in conversation",
+          "Group projects": "Not discussed in conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.85,
+        "post_assessment_score": 3.25,
+        "improvement_score": 0.3999999999999999,
+        "timestamp": "2025-10-04T19:43:39.382529"
+      },
+      {
+        "stage_number": 12,
+        "prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
+        "prompt_name": "G5C07 from G4E01 & G4E02",
+        "generation": 5,
+        "conversation_id": "223c215f-6074-44af-a95c-1a457a979972",
+        "conversation_summary": "Problems discussed: 1) Public speaking anxiety during presentations, 2) Networking awkwardness at career fairs, 3) Crafting effective follow-up emails. Solutions offered/accepted: 1) Practicing presentations to a phone camera and incorporating storytelling, 2) Asking recruiters about their jobs and using a quirky notebook, 3) Using the \"3-Ice-Cream-Scoops\" formula for follow-up emails. Student's response to solutions: Positive engagement, willingness to practice, and immediate application of feedback. Evidence of progress/improvement: Successfully delivered a 30-second pitch, crafted a personalized follow-up email draft, and expressed reduced anxiety about networking.",
+        "fears_materialized": {
+          "Dealing with roommate conflicts": "Not explicitly addressed in conversation",
+          "Finding a job after graduation": "Networking at career fairs and crafting follow-up emails"
+        },
+        "challenges_materialized": {
+          "Managing student loans": "Not explicitly addressed in conversation",
+          "Preparing for presentations": "Practicing presentations and incorporating storytelling",
+          "Career exploration": "Networking strategies and follow-up emails"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Not explicitly addressed in conversation",
+          "Goes to campus events": "Attending career fairs and networking events",
+          "Participates in study groups": "Not explicitly addressed in conversation",
+          "Attends professor office hours": "Not explicitly addressed in conversation"
+        },
+        "triggers_specified": {
+          "Office hours": "Not explicitly addressed in conversation",
+          "Presentations": "Practicing presentations and receiving feedback",
+          "Fraternity/Sorority events": "Not explicitly addressed in conversation",
+          "Group projects": "Not explicitly addressed in conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.85,
+        "post_assessment_score": 3.0,
+        "improvement_score": 0.1499999999999999,
+        "timestamp": "2025-10-04T19:48:27.793600"
       }
     ],
-    "current_stage": 2
+    "current_stage": 12
   }
 }

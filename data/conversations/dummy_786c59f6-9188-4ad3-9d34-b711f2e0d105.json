@@ -53621,6 +53621,3260 @@
         "**What worked:** The AI effectively normalized Zachary’s fears with stats/humor, broke goals into micro-steps (lab/debate club), and validated his concerns—boosting his confidence and readiness to act.  \n\n**Improvement:** The AI missed probing deeper on *why* attention unnerved him (e.g., past experiences?) to tailor strategies further.  \n\n**Key insight:** Pair universal normalization with personalized \"why\" questions to uncover root anxieties, then scaffold with tiered challenges (observe → speak once → regular participation)."
       ],
       "reflection": "**What worked:** The AI effectively normalized Zachary’s fears with stats/humor, broke goals into micro-steps (lab/debate club), and validated his concerns—boosting his confidence and readiness to act.  \n\n**Improvement:** The AI missed probing deeper on *why* attention unnerved him (e.g., past experiences?) to tailor strategies further.  \n\n**Key insight:** Pair universal normalization with personalized \"why\" questions to uncover root anxieties, then scaffold with tiered challenges (observe → speak once → regular participation)."
+    },
+    {
+      "conversation_id": "conv_2025-10-04_19-19-13_786c59f6_76f427d6",
+      "timestamp": "2025-10-04T19:19:13.243647",
+      "prompt_id": "76f427d6-7f43-40db-bd23-cc064b5199e9",
+      "prompt_name": "G2C02 from G1M01 & G1E00",
+      "generation": 2,
+      "conversation_rounds": 7,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "\"Hey, thanks for meeting with me. I’ve been feeling a bit overwhelmed with balancing everything—classes, extracurriculars, and networking—and I’m really hoping to work on my public speaking and social confidence, especially in big lecture halls or crowded spaces like the dining hall.\"",
+          "timestamp": "2025-10-04T19:17:55.364630"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hey Zachary! First off, major props for recognizing what you want to work on—that’s half the battle. And hey, feeling overwhelmed? Totally normal. I remember my first semester feeling like I was juggling flaming torches while riding a unicycle.  \n\nFor public speaking, have you checked out the campus Toastmasters club? Low-pressure way to practice, and bonus—you’ll meet people who are also working on the same thing. For lecture halls, try scoping out a seat near the front or aisle—gives you a “exit strategy” illusion (even if you never use it). And dining halls? Ugh, the noise. Pro tip: noise-canceling headphones (even if you",
+          "timestamp": "2025-10-04T19:18:01.001030"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "*checks watch* Oh shoot—I actually have a bio lab in 10. But this was super helpful! I’ll definitely look into Toastmasters and try the aisle seat trick. Maybe we could grab coffee next week and talk more about time management? I’ve been color-coding my Google Calendar like a maniac, but still feel behind.  \n\n*starts packing bag but pauses* Oh—and if you hear of any research mentor opportunities in molecular bio, could you shoot me an email? Thanks again! *dashes out with a wave*",
+          "timestamp": "2025-10-04T19:18:05.837966"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "You got it, Zachary! Coffee next week sounds perfect—we’ll crack the code on that calendar. And I’ll keep my ears peeled for mentor leads. *shouting after you* Good luck in lab—don’t let the pipettes win!  \n\n*quietly to self while tidying notes* That kid’s gonna crush it.",
+          "timestamp": "2025-10-04T19:18:09.610937"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "[END SCENE]",
+          "timestamp": "2025-10-04T19:18:11.007572"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "(Scene fades out as Zachary disappears around the corner, the sound of his hurried footsteps echoing down the hallway. The mentor smiles and shakes their head, scribbling a quick reminder in their planner about coffee and mentor leads before turning back to their work.)  \n\n(Stage lights dim to black.)",
+          "timestamp": "2025-10-04T19:18:14.501976"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "[END SCENE]  \n\n*(Curtain falls. Distant sound of a pipette dropping in a lab—then silence.)*",
+          "timestamp": "2025-10-04T19:18:16.698391"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
+        "timestamp": "2025-10-04 19:08:57.367600",
+        "responses": [
+          {
+            "question": "I initiate conversations with new people.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain eye contact during conversations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I listen attentively without interrupting.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I express my opinions clearly.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt my communication style to different people.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle criticism well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I apologize when I've made a mistake.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I cooperate well in group projects.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I manage conflicts constructively.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I show appreciation for others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I respect personal boundaries.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I remember important details about people.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I give constructive feedback.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I participate in social activities.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle large social gatherings comfortably.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I use appropriate humor in conversations.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I offer help to others when needed.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain friendships over time.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I speak confidently in public.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt to new social situations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 54.0,
+        "average_score": 2.7,
+        "improvement_areas": [
+          "I listen attentively without interrupting.",
+          "I adapt my communication style to different people.",
+          "I handle criticism well."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
+        "timestamp": "2025-10-04 19:19:08.131849",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 62.0,
+        "average_score": 3.1,
+        "improvement_areas": [
+          "I help my friends when they are having a problem.",
+          "I stand up for others when they are not treated well.",
+          "I try to make others feel better."
+        ]
+      },
+      "improvement": 0.3999999999999999,
+      "reflection_insights": [
+        "**What worked:** The mentor effectively validated Zachary’s feelings, offered specific, low-stakes strategies (Toastmasters, aisle seats), and built rapport with humor and follow-up plans.  \n\n**What didn’t:** The conversation was cut short before addressing time management or exploring deeper anxieties—missed chance to probe his \"manic\" calendar system.  \n\n**Key insight:** For busy students, prioritize bite-sized actions (like aisle seats) but schedule follow-ups to unpack systemic issues (e.g., time management) before they rush off."
+      ],
+      "reflection": "**What worked:** The mentor effectively validated Zachary’s feelings, offered specific, low-stakes strategies (Toastmasters, aisle seats), and built rapport with humor and follow-up plans.  \n\n**What didn’t:** The conversation was cut short before addressing time management or exploring deeper anxieties—missed chance to probe his \"manic\" calendar system.  \n\n**Key insight:** For busy students, prioritize bite-sized actions (like aisle seats) but schedule follow-ups to unpack systemic issues (e.g., time management) before they rush off."
+    },
+    {
+      "conversation_id": "conv_2025-10-04_19-19-56_786c59f6_e790c703",
+      "timestamp": "2025-10-04T19:19:56.543762",
+      "prompt_id": "e790c703-2c16-4dd7-9ee1-cc749cda9e8a",
+      "prompt_name": "G2C03 from G1E00 & G1M01",
+      "generation": 2,
+      "conversation_rounds": 7,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "\"Hey, thanks for meeting with me. I’ve been feeling a bit overwhelmed trying to balance everything—especially with public speaking in large lectures and networking for internships—and I’m not sure where to start improving.\"",
+          "timestamp": "2025-10-04T19:17:54.803845"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hey Zachary! First off, major props for recognizing you want to improve—that’s half the battle. Let’s tackle this step by step. For public speaking in lectures, start small: try asking one question per class (even if it’s just to the professor after). It’ll build muscle memory for speaking up. And hey, those huge lecture halls? Half the people are zoning out or on their phones—way less pressure than it feels. \n\nFor networking, try the \"two birds, one stone\" approach—combine it with your interest in different cultures! Hit up cultural club events (free food + natural convo starters). Alumni love talking to students who share their background or interests—makes the whole",
+          "timestamp": "2025-10-04T19:18:00.830950"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "\"Networking thing less awkward, right? That actually makes sense—I never thought about using cultural events as a networking opportunity. And yeah, I guess I psych myself out in lectures thinking everyone’s judging me when they’re probably just scrolling Instagram.\" \n\n*glances at planner* \n\n\"Would it be overkill if I literally scheduled ‘ask one question’ in my class notes as a reminder? I’m that person who needs to check things off a list. Also, any tips for finding a mentor in bio? I’ve been cold-emailing profs but no luck yet.\"",
+          "timestamp": "2025-10-04T19:18:06.173955"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "Zachary, scheduling question-asking is GENIUS—I do the same thing with \"smile at one new person\" in my planner! For bio mentors, try the \"warm email\" approach instead of cold: swing by office hours with a specific question about their research (even just \"I read your paper on X—could you explain Y concept?\"). They’ll remember you way more than an email in their flooded inbox. \n\nPro tip: Check if your department has \"coffee with a professor\" events—way more casual. And if a professor says no? That’s cool too—just means they’re busy, not that you’re not mentor-worthy.",
+          "timestamp": "2025-10-04T19:18:11.796831"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "*flips to contacts page in planner* \n\n\"Okay, so office hours + research questions first, then follow-up email. That feels way less intimidating than just shooting random ‘be my mentor’ emails into the void. And I’ll definitely look for those coffee events—free caffeine and career advice? Perfect combo.\" \n\n*closes planner decisively* \n\n\"Thanks—this actually feels manageable now. Maybe I’ll even hit up the Latin American Student Association mixer next week. Worst case scenario, I eat empanadas and bail early.\"",
+          "timestamp": "2025-10-04T19:18:17.284309"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "That’s the spirit! Empanadas are a foolproof backup plan—honestly, showing up for the food still counts as networking in my book. You’ve got this, Zachary. And hey, if you bomb a question in lecture? Future mentor material right there—shows you’re trying. Keep me posted on how the mixer goes!",
+          "timestamp": "2025-10-04T19:18:20.391446"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "*grins while scribbling in planner* \n\n\"Deal. And if I embarrass myself, at least it’ll make a good story for my future mentees, right? Thanks for the pep talk—I’m gonna go sign up for that coffee event before I overthink it.\" \n\n*stands up, taps pen against planner* \n\n\"See you at the next peer mentor meeting. Maybe with a success story... or at least a funny failure anecdote.\"",
+          "timestamp": "2025-10-04T19:18:24.441915"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
+        "timestamp": "2025-10-04 19:08:57.367600",
+        "responses": [
+          {
+            "question": "I initiate conversations with new people.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain eye contact during conversations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I listen attentively without interrupting.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I express my opinions clearly.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt my communication style to different people.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle criticism well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I apologize when I've made a mistake.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I cooperate well in group projects.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I manage conflicts constructively.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I show appreciation for others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I respect personal boundaries.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I remember important details about people.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I give constructive feedback.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I participate in social activities.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle large social gatherings comfortably.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I use appropriate humor in conversations.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I offer help to others when needed.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain friendships over time.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I speak confidently in public.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt to new social situations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 54.0,
+        "average_score": 2.7,
+        "improvement_areas": [
+          "I listen attentively without interrupting.",
+          "I adapt my communication style to different people.",
+          "I handle criticism well."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
+        "timestamp": "2025-10-04 19:19:50.700475",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 63.0,
+        "average_score": 3.15,
+        "improvement_areas": [
+          "I help my friends when they are having a problem.",
+          "I stand up for others when they are not treated well.",
+          "I try to make others feel better."
+        ]
+      },
+      "improvement": 0.44999999999999973,
+      "reflection_insights": [
+        "**What worked:** The AI effectively validated Zachary’s feelings, broke tasks into micro-steps (e.g., \"ask one question\"), and reframed failures as learning opportunities (\"future mentor material\"), which boosted his confidence and motivation.  \n\n**What could improve:** The AI missed probing deeper into Zachary’s specific anxieties about networking (e.g., fear of rejection) to tailor strategies further.  \n\n**Key insight:** Pairing concrete actions (scheduling questions, warm emails) with humor/normalization (\"empandas backup plan\") helps high-extraversion, low-anxiety students like Zachary commit to small wins without overthinking."
+      ],
+      "reflection": "**What worked:** The AI effectively validated Zachary’s feelings, broke tasks into micro-steps (e.g., \"ask one question\"), and reframed failures as learning opportunities (\"future mentor material\"), which boosted his confidence and motivation.  \n\n**What could improve:** The AI missed probing deeper into Zachary’s specific anxieties about networking (e.g., fear of rejection) to tailor strategies further.  \n\n**Key insight:** Pairing concrete actions (scheduling questions, warm emails) with humor/normalization (\"empandas backup plan\") helps high-extraversion, low-anxiety students like Zachary commit to small wins without overthinking."
+    },
+    {
+      "conversation_id": "conv_2025-10-04_19-21-31_786c59f6_d675a42d",
+      "timestamp": "2025-10-04T19:21:31.128497",
+      "prompt_id": "d675a42d-8758-4aa1-9f9a-2504ddb08752",
+      "prompt_name": "G2M01 from G1M01",
+      "generation": 2,
+      "conversation_rounds": 7,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "**Zachary:** \"Hey, I’ve been wanting to work on my public speaking—especially for large lectures—but I keep overthinking it. I’m also trying to network more, but I’m not great at starting conversations without feeling awkward.\"",
+          "timestamp": "2025-10-04T19:17:54.988408"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "**Peer Mentor:** \"First off, Zachary, major props for even *wanting* to tackle public speaking—that’s already a win! And hey, overthinking? Classic. Literally 90% of people in your lecture hall are probably worrying about the same thing, even if they look chill. Let’s break this down. What’s the *real* worst-case scenario when you speak up in class? Like, realistically—will the earth stop spinning? Or is it more about that split-second ‘uhhh’ moment?\"  \n\nThen, for networking: Awkwardness is basically the universal language of first conversations. Want to try a tiny experiment? Next time you’re in line for coffee or at",
+          "timestamp": "2025-10-04T19:18:01.608327"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "**Zachary:** \"Haha, okay, when you put it that way, the worst-case scenario is just me stumbling over my words for a second—not exactly earth-shattering. And yeah, I guess everyone else is probably just as nervous. The coffee line thing sounds low-pressure... maybe I’ll try asking someone about their major or if they’ve taken a class I’m in. Small talk’s easier when it’s not forced, right?\"  \n\n*[Pauses, then adds with a slightly relieved laugh]* \"Honestly, just saying this out loud makes it feel less intimidating. Thanks for not making it a whole ‘just be confident!’ pep talk—practical steps help way more.\"",
+          "timestamp": "2025-10-04T19:18:07.815082"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "**Peer Mentor:** \"Exactly! You’ve already nailed the reframe—*small talk isn’t forced, it’s just curiosity*. And look at you strategizing like a pro: ‘What’s your major?’ or ‘How’s that class?’ are golden because they’re *genuinely* useful intel for you too. Double win.  \n\nAnd hey, that relieved laugh? That’s your brain realizing, ‘Oh, this is just human stuff.’ Keep that energy. Next time you speak up in lecture, channel coffee-line Zachary—the guy who knows a stumble isn’t failure, it’s just proof you’re doing the thing. Want to pick one class this week to",
+          "timestamp": "2025-10-04T19:18:12.239096"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "**Zachary:** *[Nods, already mentally scanning his schedule]* \"Yeah, I think I’ll go for my Bio 200 discussion—it’s smaller, so less pressure. And if I bomb? Well, at least I’ll give the pre-meds a good story. *[Grins]* Seriously though, thanks. I’ll report back… maybe even before the existential crisis of midterms hits.\"  \n\n*[Gathers his backpack, standing up]* \"Alright, time to go pretend I understand organic chemistry. Catch you later!\"  \n\n*(Zachary exits, already rehearsing a question in his head—this time, without the apocalyptic stakes.)*",
+          "timestamp": "2025-10-04T19:18:18.356080"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "**Peer Mentor:** \"That’s the spirit! Bio 200 discussion is a perfect testing ground—small wins build big confidence. And hey, if it feels shaky, just remember: even the ‘bomb’ moments become hilarious stories later. *[Mimics dramatic gasp]* ‘The time Zachary confused mitochondria with mayonnaise…’  \n\nGo crush organic chem (or at least survive it). Can’t wait to hear how it goes—you’ve got this!\"  \n\n*(Mentor makes a mental note to check in next week—and maybe stash emergency snacks for midterm season.)*",
+          "timestamp": "2025-10-04T19:18:24.104682"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "**Zachary:** *[Laughs, shaking his head]* \"Mitochondria with mayonnaise—now *that* would be a legendary mix-up. I’ll try to keep my cellular organelles straight though. And yeah, emergency snacks might be necessary... I’ll bring extra to the next meet-up. See you around!\"  \n\n*[Heads out, shoulders a little lighter, already planning to grab a coffee and *casually* ask the person next in line about their major. Progress.]*",
+          "timestamp": "2025-10-04T19:18:29.169618"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
+        "timestamp": "2025-10-04 19:08:57.367600",
+        "responses": [
+          {
+            "question": "I initiate conversations with new people.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain eye contact during conversations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I listen attentively without interrupting.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I express my opinions clearly.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt my communication style to different people.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle criticism well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I apologize when I've made a mistake.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I cooperate well in group projects.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I manage conflicts constructively.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I show appreciation for others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I respect personal boundaries.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I remember important details about people.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I give constructive feedback.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I participate in social activities.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle large social gatherings comfortably.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I use appropriate humor in conversations.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I offer help to others when needed.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain friendships over time.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I speak confidently in public.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt to new social situations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 54.0,
+        "average_score": 2.7,
+        "improvement_areas": [
+          "I listen attentively without interrupting.",
+          "I adapt my communication style to different people.",
+          "I handle criticism well."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
+        "timestamp": "2025-10-04 19:21:26.533648",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 62.0,
+        "average_score": 3.1,
+        "improvement_areas": [
+          "I help my friends when they are having a problem.",
+          "I stand up for others when they are not treated well.",
+          "I try to make others feel better."
+        ]
+      },
+      "improvement": 0.3999999999999999,
+      "reflection_insights": [
+        "**What worked:** The mentor effectively normalized Zachary’s fears with humor and data (\"90% feel this way\"), reframed stumbling as growth, and broke networking into micro-steps (coffee-line chats), which Zachary immediately embraced.  \n\n**Improvement:** The mentor missed probing deeper on *why* public speaking felt high-stakes—uncovering hidden barriers (e.g., perfectionism) could’ve strengthened the reframe.  \n\n**Key insight:** Pair tactical steps (\"try Bio 200\") with lighthearted root-cause digging (\"What’s the story you’re telling yourself about mistakes?\") to reinforce sustainable confidence."
+      ],
+      "reflection": "**What worked:** The mentor effectively normalized Zachary’s fears with humor and data (\"90% feel this way\"), reframed stumbling as growth, and broke networking into micro-steps (coffee-line chats), which Zachary immediately embraced.  \n\n**Improvement:** The mentor missed probing deeper on *why* public speaking felt high-stakes—uncovering hidden barriers (e.g., perfectionism) could’ve strengthened the reframe.  \n\n**Key insight:** Pair tactical steps (\"try Bio 200\") with lighthearted root-cause digging (\"What’s the story you’re telling yourself about mistakes?\") to reinforce sustainable confidence."
+    },
+    {
+      "conversation_id": "conv_2025-10-04_19-31-43_786c59f6_f4eccadd",
+      "timestamp": "2025-10-04T19:31:43.057778",
+      "prompt_id": "f4eccadd-cbf4-4a75-9b58-3abe8a4d407b",
+      "prompt_name": "G3C03 from G2C03 & G2M01",
+      "generation": 3,
+      "conversation_rounds": 7,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "\"Hey, thanks for meeting with me. I’ve been feeling a bit overwhelmed trying to balance everything—classes, extracurriculars, and networking—and I’m really hoping to work on my public speaking, especially in large lectures where I tend to shut down a little.\"",
+          "timestamp": "2025-10-04T19:26:36.311829"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hey Zachary! First off, major props for recognizing what’s tripping you up—that’s half the battle right there. I love that you’re juggling so much (hello, future med school superstar?), but yeah, no surprise you’re feeling the squeeze. Let’s tackle this piece by piece. \n\nFor public speaking in lectures—totally normal to feel like a deer in headlights! What if you started *micro*-practicing? Like, challenge yourself to ask *one* question per lecture, even if it’s just to the professor afterward. Small wins build confidence. And hey, those giant lecture halls? Half the people are just praying they don’t get called on—you",
+          "timestamp": "2025-10-04T19:26:41.539292"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "Hey, that actually makes a lot of sense. I never thought about breaking it down into tiny steps like that. Maybe I’ll start by just raising my hand in my smaller lab sections first—fewer people, less pressure. And you’re right, I probably *am* overestimating how much others are judging me. \n\nAbout the burnout though... any tips for when everything starts piling up? Like last week, I had two midterms, a lab report, *and* a pre-med club networking event, and I basically short-circuited.",
+          "timestamp": "2025-10-04T19:26:46.111856"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "*Snort-laughs* Oh man, the classic \"pre-med triple threat\"! Been there, melted down over that. First—virtual high five for surviving that gauntlet. Now let’s weaponize that conscientiousness of yours. Two game-changers: \n\n1) The \"Top 3\" rule: Each day, pick ONLY three must-do tasks (one academic, one extracurricular, one wildcard—like laundry or calling your loan servicer). Everything else? Bonus points. This keeps you from playing whack-a-mole with 27 \"urgent\" things. \n\n2) Schedule your meltdowns. Seriously! Block 15-minute \"freakout slots\" in your calendar to vent/panic",
+          "timestamp": "2025-10-04T19:26:52.001169"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "*checks watch*—then move on. It sounds ridiculous, but it tricks your brain into containing stress. \n\nAlso… are you actually *using* those tutoring center hours you keep dutifully tracking? *Raises eyebrow* Because I’ve seen your color-coded planner—no shame in outsourcing some lab report agony!",
+          "timestamp": "2025-10-04T19:26:54.915622"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "Haha, okay you caught me—I *did* schedule a breakdown last Thursday at 3pm! But seriously, the \"Top 3\" thing is genius. I always feel like I need to do everything at once, and then end up doing nothing well. And yeah... I may have walked *past* the tutoring center approximately 47 times this month. Maybe I’ll actually go in next week. \n\nOne last thing—any advice for finding a mentor in the bio department? I keep waiting for some magical \"perfect\" professor to adopt me, but...",
+          "timestamp": "2025-10-04T19:26:59.659269"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "*Slams hands on table* YES. The secret? Mentors aren’t Pokémon—you don’t \"catch\" them, you *collect* them strategically. Start with the professor whose office hours smells like stale coffee (they’re always there). Ask one specific question about their research, then—plot twist—follow up with a LinkedIn message sharing an article related to it. Boom. You’re now on their radar. Rinse/repeat with 2-3 professors. \n\nAlso, your RA knows *everyone*. Bribe them with instant ramen for intros. \n\n*Glances at clock* Speaking of—my next mentee’s probably panicking outside. You got this, future Dr.",
+          "timestamp": "2025-10-04T19:27:05.027538"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
+        "timestamp": "2025-10-04 19:08:57.367600",
+        "responses": [
+          {
+            "question": "I initiate conversations with new people.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain eye contact during conversations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I listen attentively without interrupting.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I express my opinions clearly.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt my communication style to different people.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle criticism well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I apologize when I've made a mistake.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I cooperate well in group projects.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I manage conflicts constructively.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I show appreciation for others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I respect personal boundaries.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I remember important details about people.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I give constructive feedback.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I participate in social activities.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle large social gatherings comfortably.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I use appropriate humor in conversations.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I offer help to others when needed.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain friendships over time.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I speak confidently in public.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt to new social situations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 54.0,
+        "average_score": 2.7,
+        "improvement_areas": [
+          "I listen attentively without interrupting.",
+          "I adapt my communication style to different people.",
+          "I handle criticism well."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
+        "timestamp": "2025-10-04 19:31:37.189690",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 61.0,
+        "average_score": 3.05,
+        "improvement_areas": [
+          "I stay calm when dealing with problems.",
+          "I stay calm when I disagree with others.",
+          "I stand up for others when they are not treated well."
+        ]
+      },
+      "improvement": 0.34999999999999964,
+      "reflection_insights": [
+        "**What worked:** The AI effectively validated Zachary’s feelings, used humor to reduce tension, and broke goals into micro-steps (e.g., \"one question per lecture\"), which he immediately applied.  \n\n**What could improve:** The AI missed probing deeper into *why* Zachary avoids tutoring (e.g., fear of seeming incompetent?)—addressing root hesitations would prevent surface-level fixes.  \n\n**Key insight:** High-achievers like Zachary benefit from \"permission slips\" (e.g., scheduled meltdowns, limited daily tasks) to counter all-or-nothing thinking. Pair this with gentle accountability (e.g., \"Next week, report back on tutoring center\")."
+      ],
+      "reflection": "**What worked:** The AI effectively validated Zachary’s feelings, used humor to reduce tension, and broke goals into micro-steps (e.g., \"one question per lecture\"), which he immediately applied.  \n\n**What could improve:** The AI missed probing deeper into *why* Zachary avoids tutoring (e.g., fear of seeming incompetent?)—addressing root hesitations would prevent surface-level fixes.  \n\n**Key insight:** High-achievers like Zachary benefit from \"permission slips\" (e.g., scheduled meltdowns, limited daily tasks) to counter all-or-nothing thinking. Pair this with gentle accountability (e.g., \"Next week, report back on tutoring center\")."
+    },
+    {
+      "conversation_id": "conv_2025-10-04_19-32-18_786c59f6_6047de79",
+      "timestamp": "2025-10-04T19:32:18.418078",
+      "prompt_id": "6047de79-e44a-421b-8e45-261a5fdcaa16",
+      "prompt_name": "G3C07 from G2C03 & G2E00",
+      "generation": 3,
+      "conversation_rounds": 7,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "\"Hey, thanks for meeting with me. I’ve been feeling a bit overwhelmed trying to balance everything—classes, networking, and just navigating social stuff, especially in big lecture halls or crowded spaces like the dining hall. I really want to work on my public speaking and confidence, but I’m not sure where to start.\"",
+          "timestamp": "2025-10-04T19:26:37.109484"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hey Zachary! First off, major props for recognizing what you want to work on—that’s half the battle. And let me just say, if you’re already juggling classes *and* networking, you’re clearly ambitious, which is awesome. But yeah, I get how it can feel like you’re spinning plates sometimes.  \n\nFor public speaking, have you checked out any campus clubs? Debate team, Model UN, or even improv groups (sounds scary, but they’re *gold* for quick thinking and confidence). And hey, those big lecture halls? Perfect low-stakes practice. Try answering one question per class—no one’s judging as hard as you think (I promise, half the",
+          "timestamp": "2025-10-04T19:26:42.512303"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "class is on their phones anyway).  \n\nFor the dining hall stress—totally valid. Maybe go with a friend at first, or pick off-peak times till you’re comfy? And burnout-wise, *please* tell me you’re using those campus resources. Tutoring? Lifesaver. Therapy dogs during finals? Elite.  \n\nOh! For mentors—hit up office hours like it’s your job. Professors *love* when students show initiative. Maybe even ask one to coffee (department budget sometimes covers it—score).  \n\nYou’ve got this. Just don’t forget to breathe between the hustle. *[Glances at watch]* Speaking of—gotta run to chem lab. But down",
+          "timestamp": "2025-10-04T19:26:47.731125"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "to grab a smoothie later and chat more if you want? The dining hall’s mango-pineapple is weirdly fire this week.  \n\nP.S. If you ever need a pep talk before a presentation, my go-to move is power posing in a bathroom stall. Science-backed *and* ridiculous—win-win. 🚀",
+          "timestamp": "2025-10-04T19:26:50.893155"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "*checks phone calendar quickly* Yeah, actually, that works—I’ve got a gap after lab today. And honestly, bribing myself with smoothies is how I survive midterms anyway.  \n\nPower posing though? *laughs* I tried that before my bio midterm and my roommate walked in. Mortifying, but hey—aced the test, so worth it.  \n\n*adjusts backpack strap* Cool, meet you at the dining hall at 3? I’ll be the one aggressively highlighting organic chem notes until you get there.  \n\n*starts walking backward toward science building* And Zachary? Skip the 8am coffee run tomorrow. Trust me, their \"dark roast\" is just brown water.",
+          "timestamp": "2025-10-04T19:26:56.650776"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "*grinning* Dude, you're speaking my language—I live for those dining hall smoothies. And yeah, I'll definitely take you up on that pep talk offer. Maybe we can even brainstorm some low-key ways to get more comfortable in big lectures.  \n\n*glancing at watch* Oh snap, I should actually head to lab too. See you at 3 by the blender station? *laughs* I'll be the guy with the suspiciously organized color-coded notes.  \n\n*walking away but turns back* And noted on the coffee—I'll stick to my sad energy drinks like a true college student. Later!",
+          "timestamp": "2025-10-04T19:27:01.486641"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "*smirks while speed-walking backward* \"Suspiciously organized\" is just efficient, my guy. And hey—if the energy drinks fail, I’ve got a stash of *questionably* expired espresso shots in my dorm. Desperate times.  \n\n*almost trips over a backpack* Okay, *now* I’m leaving. Blender station, 3pm. Don’t let the chem notes catch fire! 🔥 *jogs off*",
+          "timestamp": "2025-10-04T19:27:05.190096"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
+        "timestamp": "2025-10-04 19:08:57.367600",
+        "responses": [
+          {
+            "question": "I initiate conversations with new people.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain eye contact during conversations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I listen attentively without interrupting.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I express my opinions clearly.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt my communication style to different people.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle criticism well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I apologize when I've made a mistake.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I cooperate well in group projects.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I manage conflicts constructively.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I show appreciation for others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I respect personal boundaries.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I remember important details about people.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I give constructive feedback.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I participate in social activities.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle large social gatherings comfortably.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I use appropriate humor in conversations.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I offer help to others when needed.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain friendships over time.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I speak confidently in public.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt to new social situations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 54.0,
+        "average_score": 2.7,
+        "improvement_areas": [
+          "I listen attentively without interrupting.",
+          "I adapt my communication style to different people.",
+          "I handle criticism well."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
+        "timestamp": "2025-10-04 19:32:12.318097",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          }
+        ],
+        "total_score": 40.0,
+        "average_score": 2.0,
+        "improvement_areas": [
+          "I ask for help when I need it.",
+          "I stay calm when dealing with problems.",
+          "I help my friends when they are having a problem."
+        ]
+      },
+      "improvement": -0.7000000000000002,
+      "reflection_insights": [
+        "**What worked:** The AI built rapport through humor and relatable advice (e.g., power posing, smoothie bribes), validated Zachary’s efforts, and offered specific, low-pressure strategies (e.g., answering one lecture question).  \n\n**What didn’t:** The AI cut off mid-sentence early on (technical hiccup), and some suggestions (e.g., improv clubs) might feel too big a leap for quieter students.  \n\n**Key insight:** Balance audacious tips with micro-steps (e.g., \"Try sitting near one new person in lectures\") to match comfort levels while keeping the tone light and actionable."
+      ],
+      "reflection": "**What worked:** The AI built rapport through humor and relatable advice (e.g., power posing, smoothie bribes), validated Zachary’s efforts, and offered specific, low-pressure strategies (e.g., answering one lecture question).  \n\n**What didn’t:** The AI cut off mid-sentence early on (technical hiccup), and some suggestions (e.g., improv clubs) might feel too big a leap for quieter students.  \n\n**Key insight:** Balance audacious tips with micro-steps (e.g., \"Try sitting near one new person in lectures\") to match comfort levels while keeping the tone light and actionable."
+    },
+    {
+      "conversation_id": "conv_2025-10-04_19-32-24_786c59f6_5a2e1ba7",
+      "timestamp": "2025-10-04T19:32:24.404375",
+      "prompt_id": "5a2e1ba7-9521-4df4-bece-085e7d07aa1c",
+      "prompt_name": "G3M05 from G2C03",
+      "generation": 3,
+      "conversation_rounds": 7,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "\"Hey, I’m Zach. I’ve been really focused on landing a competitive internship, but I’m worried my networking skills aren’t strong enough—especially in big settings like career fairs. Also, I freeze up a bit in large lectures, which isn’t great for participation grades. Any advice?\"",
+          "timestamp": "2025-10-04T19:26:37.696375"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hey Zach! First off, props to you for putting yourself out there—internship hunting is no joke, and those career fairs can be intimidating. Let’s break this down. For networking, start small: practice your \"elevator pitch\" with friends or even in the mirror. It sounds silly, but it helps! And at career fairs, aim to talk to just *one* recruiter first—treat it like a warm-up. As for lectures, I get it—feeling like a tiny fish in a massive pond is rough. Maybe try sitting closer to the front? It makes the room feel smaller, and professors notice engagement more. Also, prep a question or comment before class—just one—to build",
+          "timestamp": "2025-10-04T19:26:42.159241"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "confidence. You don’t have to be the loudest voice in the room to stand out.  \n\nBy the way, have you checked out the Career Center’s networking workshops? They do mock fairs that are way lower pressure. And for lectures, some professors offer participation points for written reflections if speaking up isn’t your thing—worth asking!  \n\n(Leans in slightly) Also… how’s your stress management? Balancing all this can be a lot. You mentioned burnout—what’s your go-to reset?  \n\n[Note: Zach’s high conscientiousness means he’ll likely appreciate actionable steps, while his extraversion means he’ll respond well to a conversational tone. His low social anxiety suggests he’s",
+          "timestamp": "2025-10-04T19:26:47.777502"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "not paralyzed by these fears—just needs strategy refinement. The nudge about stress management addresses his burnout tendency proactively.]  \n\n**What’s resonating most here—the networking piece or the lecture participation?** (Helps prioritize next steps)  \n\n**Pro tip:** If Zach mentions perfectionism (common with high conscientiousness), normalize “imperfect” networking attempts: *“A ‘good enough’ conversation that happens is better than a ‘perfect’ one you avoid.”*  \n\n**If he’s overwhelmed:** Co-create a micro-plan: *“Okay, so this week: 1) Practice your pitch with your roommate, 2) Sit in Row 3 for Bio 101. Cool?”*  \n\n**Watch for:**",
+          "timestamp": "2025-10-04T19:26:52.736274"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "Thanks for the tips—I think the networking part is what I need to tackle first. I’ll definitely check out those Career Center workshops. And you’re right, I do tend to overthink conversations until they feel \"perfect.\" I like the idea of starting with just one recruiter at the fair—that feels manageable.  \n\nAs for stress, I’ve been trying to schedule short breaks between study sessions, but I still end up feeling drained by midterms. Maybe I need to actually *take* those breaks instead of just planning them.  \n\n(Glances at watch) Oh—I’ve got lab in 10. Can we pick this up next week? I’d love to hear more about those participation alternatives",
+          "timestamp": "2025-10-04T19:26:57.631428"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "for lectures.  \n\n[Note: Zach’s engagement signals readiness to act (high conscientiousness + extraversion). His self-awareness about perfectionism and breaks suggests he’s primed for behavioral tweaks. The time constraint is genuine—honor it while reinforcing momentum.]  \n\n**You:** \"Absolutely! Lab waits for no one. Next week we’ll strategize lecture participation—maybe even role-play a recruiter chat if you want. For now, try this: set a phone timer for breaks and *leave your desk* when it goes off. Even if it’s just to walk to the water fountain. Small wins!\"  \n\n**Exit warm:** \"Go crush that lab. And text if you nail that first recruiter",
+          "timestamp": "2025-10-04T19:27:03.297394"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "convo before we meet!\"  \n\n[Closes with encouragement + accountability. The lab reference validates his priorities while keeping the mentorship thread open.]",
+          "timestamp": "2025-10-04T19:27:05.345012"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
+        "timestamp": "2025-10-04 19:08:57.367600",
+        "responses": [
+          {
+            "question": "I initiate conversations with new people.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain eye contact during conversations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I listen attentively without interrupting.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I express my opinions clearly.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt my communication style to different people.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle criticism well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I apologize when I've made a mistake.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I cooperate well in group projects.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I manage conflicts constructively.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I show appreciation for others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I respect personal boundaries.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I remember important details about people.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I give constructive feedback.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I participate in social activities.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle large social gatherings comfortably.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I use appropriate humor in conversations.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I offer help to others when needed.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain friendships over time.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I speak confidently in public.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt to new social situations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 54.0,
+        "average_score": 2.7,
+        "improvement_areas": [
+          "I listen attentively without interrupting.",
+          "I adapt my communication style to different people.",
+          "I handle criticism well."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
+        "timestamp": "2025-10-04 19:32:18.497831",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          }
+        ],
+        "total_score": 40.0,
+        "average_score": 2.0,
+        "improvement_areas": [
+          "I ask for help when I need it.",
+          "I stay calm when dealing with problems.",
+          "I help my friends when they are having a problem."
+        ]
+      },
+      "improvement": -0.7000000000000002,
+      "reflection_insights": [
+        "**What worked:** The mentor effectively matched Zach’s extraversion with a conversational tone and leveraged his conscientiousness by offering concrete micro-steps (e.g., \"one recruiter,\" \"phone timer for breaks\").  \n\n**Improvement:** The mentor missed a chance to explore Zach’s burnout deeper—probing *why* he skips breaks could reveal hidden pressures (e.g., guilt, perfectionism).  \n\n**Key insight:** For high-conscientious students, pair actionables with *emotional permission* (e.g., \"Breaks aren’t lazy—they’re fuel\"). Normalize imperfection early to disarm overthinking."
+      ],
+      "reflection": "**What worked:** The mentor effectively matched Zach’s extraversion with a conversational tone and leveraged his conscientiousness by offering concrete micro-steps (e.g., \"one recruiter,\" \"phone timer for breaks\").  \n\n**Improvement:** The mentor missed a chance to explore Zach’s burnout deeper—probing *why* he skips breaks could reveal hidden pressures (e.g., guilt, perfectionism).  \n\n**Key insight:** For high-conscientious students, pair actionables with *emotional permission* (e.g., \"Breaks aren’t lazy—they’re fuel\"). Normalize imperfection early to disarm overthinking."
+    },
+    {
+      "conversation_id": "conv_2025-10-04_19-34-27_786c59f6_8966845e",
+      "timestamp": "2025-10-04T19:34:27.037088",
+      "prompt_id": "8966845e-bd42-4a15-9003-2b2ed03db063",
+      "prompt_name": "G3M04 from G2E00",
+      "generation": 3,
+      "conversation_rounds": 9,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "\"Hey, thanks for meeting with me. I’ve been feeling a bit overwhelmed trying to balance everything—classes, networking, and just adjusting to college life—and I’m hoping we can work on some strategies to handle it all, especially my nerves in big lecture halls.\"",
+          "timestamp": "2025-10-04T19:26:37.195558"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hey Zachary, I totally get where you're coming from. That adjustment to college can be a lot to handle all at once. Since you mentioned lecture halls specifically, have you tried sitting in different spots to see what feels most comfortable? Some people find sitting near the front helps them stay engaged, while others prefer the sides where it feels less overwhelming. \n\nFor the stress and burnout, have you experimented with any time management systems yet? With your conscientious nature, I bet you'd do well with something like time-blocking—maybe color-coding your calendar so you can visually see balance between studies, extracurriculars, and downtime. \n\nAnd about those nerves—would you be open to practicing some quick grounding techniques before lectures? Something as simple as",
+          "timestamp": "2025-10-04T19:26:42.006785"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "box breathing—inhale for 4, hold for 4, exhale for 4—could help. I used to do that before presentations. \n\nBy the way, since you're interested in public speaking, the debate club actually does low-pressure workshops. A bunch of STEM majors go there to practice too. Want me to connect you with their VP? She's a bio major who struggled with the same thing freshman year. \n\n(Glancing at the time) We've got about 10 minutes left—want to focus on one of these areas to make a concrete plan?",
+          "timestamp": "2025-10-04T19:26:45.439568"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "That sounds really helpful, actually. I think the public speaking thing might be the best place to start—it's been holding me back from speaking up in class discussions too. Could you tell me more about those debate club workshops? Like how often they meet and what the vibe is like?",
+          "timestamp": "2025-10-04T19:26:47.102244"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "*Pulls up phone calendar* \n\nThey meet every Thursday at 7pm in the Student Union—super casual, just 10-15 people. First half is improv games (sounds scary but it's actually fun), second half they do structured speaking drills. No mandatory participation—you can just observe at first. The VP, Rachel, makes sure no one gets put on the spot. \n\nWant me to text her now to introduce you? She usually sits in the front left corner of the bio lecture hall wearing these bright red glasses—you could say hi before next class too. \n\n*Hesitates slightly* Though fair warning... she does make everyone do this ridiculous \"power pose\" warmup. You'll survive it.",
+          "timestamp": "2025-10-04T19:26:53.323969"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "*chuckles* Okay, the power pose thing sounds kinda ridiculous but I'm willing to try it. Yeah, go ahead and text her—I'll look for those red glasses before our next bio lecture. \n\nActually... now that I think about it, maybe starting with something smaller would help build confidence. Are there any other low-key speaking opportunities on campus? Like discussion groups or something?",
+          "timestamp": "2025-10-04T19:26:56.787303"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "*Taps chin thoughtfully* \n\nThe STEM diversity council does these monthly \"research lightning talks\"—5 minute summaries of cool studies. Super supportive crowd, mostly other nervous undergrads. Next one's on marine biology... which I know is your side interest from your lab assistant gig. \n\n*Scrolls through phone* \n\nHere's the sign-up—they always need volunteers. You could even co-present with Rachel if you want training wheels. Worst case scenario, you bomb and never see those people again. Best case? Free pizza and confidence boost. \n\n*Grins* So... marine bio or debate club first?",
+          "timestamp": "2025-10-04T19:27:01.767988"
+        },
+        {
+          "turn": 8,
+          "speaker": "ai",
+          "content": "*Laughs* When you put it that way, the marine bio talk does sound less intimidating—especially with the pizza bribe. Okay, I'll sign up for that. Worst case scenario, at least I get free food out of it. \n\nThanks for all this—I feel way better having actual next steps instead of just worrying about it. Maybe I'll see you at one of these events? \n\n*Starts gathering backpack* Seriously though, you've been super helpful. I was stressing about this way more than I needed to.",
+          "timestamp": "2025-10-04T19:27:06.746184"
+        },
+        {
+          "turn": 9,
+          "speaker": "dummy",
+          "content": "*/Makes exaggerated \"shooing\" motion/* \n\nGo sign up before you overthink it! And text me when you do—I'll come cheer you on. Rachel owes me a favor anyway; I'll make sure she saves you the good pepperoni slices. \n\n*Standing up* \n\nYou've got this, Zach. First awkward presentation is like freshman hazing—everyone survives. See you at the STEM center! \n\n*Waves and heads toward coffee machine*",
+          "timestamp": "2025-10-04T19:27:09.739512"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
+        "timestamp": "2025-10-04 19:08:57.367600",
+        "responses": [
+          {
+            "question": "I initiate conversations with new people.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain eye contact during conversations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I listen attentively without interrupting.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I express my opinions clearly.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt my communication style to different people.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle criticism well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I apologize when I've made a mistake.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I cooperate well in group projects.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I manage conflicts constructively.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I show appreciation for others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I respect personal boundaries.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I remember important details about people.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I give constructive feedback.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I participate in social activities.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle large social gatherings comfortably.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I use appropriate humor in conversations.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I offer help to others when needed.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain friendships over time.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I speak confidently in public.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt to new social situations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 54.0,
+        "average_score": 2.7,
+        "improvement_areas": [
+          "I listen attentively without interrupting.",
+          "I adapt my communication style to different people.",
+          "I handle criticism well."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
+        "timestamp": "2025-10-04 19:34:22.483813",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 62.0,
+        "average_score": 3.1,
+        "improvement_areas": [
+          "I help my friends when they are having a problem.",
+          "I stand up for others when they are not treated well.",
+          "I try to make others feel better."
+        ]
+      },
+      "improvement": 0.3999999999999999,
+      "reflection_insights": [
+        "**What worked:** The mentor effectively matched Zachary's energy, offering concrete options (debate club, lightning talks) with low-pressure entry points and humor to ease anxiety.  \n\n**What could improve:** Earlier clarification of Zachary’s priority (public speaking vs. general stress) would have streamlined the conversation.  \n\n**Key insight:** For moderately extraverted students, pairing practical steps with lighthearted accountability (\"free pizza,\" \"power poses\") reduces overthinking and builds momentum."
+      ],
+      "reflection": "**What worked:** The mentor effectively matched Zachary's energy, offering concrete options (debate club, lightning talks) with low-pressure entry points and humor to ease anxiety.  \n\n**What could improve:** Earlier clarification of Zachary’s priority (public speaking vs. general stress) would have streamlined the conversation.  \n\n**Key insight:** For moderately extraverted students, pairing practical steps with lighthearted accountability (\"free pizza,\" \"power poses\") reduces overthinking and builds momentum."
+    },
+    {
+      "conversation_id": "conv_2025-10-04_19-35-11_786c59f6_c60cd38c",
+      "timestamp": "2025-10-04T19:35:11.963192",
+      "prompt_id": "c60cd38c-fce5-40e3-969d-a206fb771098",
+      "prompt_name": "G3M06 from G2C03",
+      "generation": 3,
+      "conversation_rounds": 9,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "\"Hey, thanks for meeting with me. I’ve been feeling a bit overwhelmed with balancing everything—classes, networking, and just navigating social situations, especially in crowded places like the dining hall or large lectures. I really want to work on my public speaking and confidence, but I’m not sure where to start.\"",
+          "timestamp": "2025-10-04T19:26:36.351002"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hey Zachary! First off, major props for recognizing what you want to work on—that’s half the battle. And honestly? The fact that you’re juggling all this while being proactive about growth is seriously impressive.  \n\nLet’s break this down. For public speaking, start small—like *micro* small. Ever tried practicing your lecture notes out loud in your room? Or even recording yourself (yes, it’s cringey at first, but it works!). Campus clubs like debate or toastmasters are also low-pressure ways to flex that skill.  \n\nFor the crowded spaces thing: Totally normal to feel that way! Maybe try scoping out the dining hall at off-peak hours first, or",
+          "timestamp": "2025-10-04T19:26:41.039564"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "bring a study buddy—it’s less daunting when you’re not alone. And in lectures, sitting near the front can actually *reduce* anxiety (weirdly, it makes the crowd feel less “in your face”).  \n\nYou mentioned burnout too—what’s your current system for managing time? Ever tried time-blocking or the Pomodoro technique? I swear by them when midterms hit.  \n\nOh, and mentors! Have you tapped into your bio department’s office hours or undergrad research opportunities? Professors love when students show initiative (and it’s a sneaky way to find guidance).  \n\nYou’ve got this! What’s one tiny step you could take this week to test-drive",
+          "timestamp": "2025-10-04T19:26:45.994990"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "a new strategy? Maybe grabbing coffee with a classmate before a big lecture, or practicing a 2-minute intro for club meetings? Small wins add up—and I’m here to hype you through *all* of them.  \n\n(Also, side note: Your openness to different cultures is awesome. Ever checked out cultural student orgs? They often host low-key events with free food—great way to learn + meet people without pressure.)  \n\nWhat’s feeling most doable to tackle first?",
+          "timestamp": "2025-10-04T19:26:49.989073"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "*adjusts backpack straps, nodding* Yeah, the recording idea is actually smart—I’ve been avoiding it because it feels awkward, but I guess that’s the point, right? *laughs* And I never thought about sitting *closer* in lectures making it easier—I’ve been camping in the back like a ninja.  \n\nFor this week... maybe I’ll hit up the Bio Society mixer—they’re doing that “Two Truths and a Lie” icebreaker thing. Low stakes, plus free pizza. And *fine*, I’ll record myself explaining photosynthesis like I’m teaching it. *makes a face*  \n\nOh! And my TA actually mentioned undergrad research applications open",
+          "timestamp": "2025-10-04T19:26:55.908022"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "soon—I’ve been psyching myself out about reaching out, but you’re right. What’s the worst that could happen? “No” just means I try another prof.  \n\n*checks phone calendar* Okay, concrete plan:  \n1) Bio Society mixer Thursday (free pizza = commitment device)  \n2) Record 1 min “lecture” before bed tonight (gross but necessary)  \n3) Draft email to Dr. Chen about her lab by Friday—wanna peek over my shoulder on that? I always sound too formal.  \n\n*grins* How’s that for tiny steps?",
+          "timestamp": "2025-10-04T19:27:01.504510"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "*grinning back* That’s *perfect*—you’re already crushing the “small wins” mindset. And yes, absolutely down to proofread that email! Pro tip: Start with something personal like “I really enjoyed your lecture on [specific topic]” so it doesn’t sound like a template.  \n\nThursday’s mixer is a great call—icebreakers are secretly just storytelling practice. And hey, if the recording feels *too* cringe, try doing it in a funny accent first to take the edge off. *deadpan* Nothing builds confidence like explaining Krebs cycle as a British spy.  \n\nYou’ve got this locked in. Want to debrief after the mixer? I’ll bring celebr",
+          "timestamp": "2025-10-04T19:27:07.219482"
+        },
+        {
+          "turn": 8,
+          "speaker": "ai",
+          "content": "*checks watch* Oh shoot—gotta run to lab. But text me how it goes, yeah? And remember: Awkwardness is just future comedy material. *laughs, heads out*",
+          "timestamp": "2025-10-04T19:27:10.483995"
+        },
+        {
+          "turn": 9,
+          "speaker": "dummy",
+          "content": "*grinning and giving a thumbs-up* Got it! Awkwardness = future stand-up material, noted. *mock-salutes* Catch you later—and thanks for not letting me overthink this. *speed-walks toward lab, already mentally rehearsing a terrible Australian accent for that recording*  \n\n[End scene.]",
+          "timestamp": "2025-10-04T19:27:13.755023"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
+        "timestamp": "2025-10-04 19:08:57.367600",
+        "responses": [
+          {
+            "question": "I initiate conversations with new people.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain eye contact during conversations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I listen attentively without interrupting.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I express my opinions clearly.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt my communication style to different people.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle criticism well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I apologize when I've made a mistake.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I cooperate well in group projects.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I manage conflicts constructively.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I show appreciation for others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I respect personal boundaries.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I remember important details about people.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I give constructive feedback.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I participate in social activities.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle large social gatherings comfortably.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I use appropriate humor in conversations.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I offer help to others when needed.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain friendships over time.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I speak confidently in public.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt to new social situations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 54.0,
+        "average_score": 2.7,
+        "improvement_areas": [
+          "I listen attentively without interrupting.",
+          "I adapt my communication style to different people.",
+          "I handle criticism well."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
+        "timestamp": "2025-10-04 19:35:06.392353",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 58.0,
+        "average_score": 2.9,
+        "improvement_areas": [
+          "I stay calm when dealing with problems.",
+          "I help my friends when they are having a problem.",
+          "I stay calm when I disagree with others."
+        ]
+      },
+      "improvement": 0.19999999999999973,
+      "reflection_insights": [
+        "**What worked:** The AI effectively normalized Zachary’s anxieties, offered micro-steps (recording practice, mixer attendance), and used humor to reduce tension (\"British spy\" bit). Celebrating small wins (e.g., concrete plan) built momentum.  \n\n**Improvement:** The AI missed probing deeper on *why* public speaking/crowds felt overwhelming (e.g., perfectionism? fear of judgment?) to tailor long-term strategies.  \n\n**Key insight:** Balance tactical wins with brief curiosity about root causes early on (e.g., \"What’s the hardest part of speaking up?\"). This ensures tools address core fears, not just symptoms."
+      ],
+      "reflection": "**What worked:** The AI effectively normalized Zachary’s anxieties, offered micro-steps (recording practice, mixer attendance), and used humor to reduce tension (\"British spy\" bit). Celebrating small wins (e.g., concrete plan) built momentum.  \n\n**Improvement:** The AI missed probing deeper on *why* public speaking/crowds felt overwhelming (e.g., perfectionism? fear of judgment?) to tailor long-term strategies.  \n\n**Key insight:** Balance tactical wins with brief curiosity about root causes early on (e.g., \"What’s the hardest part of speaking up?\"). This ensures tools address core fears, not just symptoms."
+    },
+    {
+      "conversation_id": "conv_2025-10-04_19-42-47_786c59f6_1683d52f",
+      "timestamp": "2025-10-04T19:42:47.229589",
+      "prompt_id": "1683d52f-8fd4-4194-a06f-eea15f95d10e",
+      "prompt_name": "G4C07 from G3C07 & G3E01",
+      "generation": 4,
+      "conversation_rounds": 7,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "\"Hey, thanks for meeting with me. I’ve been feeling a bit overwhelmed trying to balance everything—especially with public speaking in large lectures and networking for internships—and I’m hoping we can work on strategies to make it all feel more manageable.\"",
+          "timestamp": "2025-10-04T19:41:10.757187"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hey Zachary! First off, major props for reaching out—that’s half the battle right there. I totally get how the whole \"adulting in college\" thing can feel like juggling flaming torches while riding a unicycle. Let’s break it down. \n\nFor public speaking in lectures, wanna hear my weird-but-effective trick? I pretend I’m explaining concepts to my future dog (stay with me—it makes you sound more conversational and less \"deer in headlights\"). Also, scoping out the room early to sit near friendly faces helps. \n\nAnd networking? Think of it like cultural exploration—you’re just collecting cool human stories! Start with low-stakes chats at club events (your",
+          "timestamp": "2025-10-04T19:41:18.013034"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "Bio department probably has mixers, right?). \n\nFor the burnout piece—what’s one thing you can delegate or drop this week? Even superheroes need naps. \n\nOh! And about mentors—have you checked if your college has an alumni-student coffee chat program? Goldmine for connections who’ve survived your exact stress tornado. \n\n*leans forward* So—which of these feels most doable to tackle first? Or is there another monster under the bed we should wrestle?",
+          "timestamp": "2025-10-04T19:41:23.493731"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "You're speaking my language with that future dog trick—I might actually try that next lecture! The alumni coffee chats sound perfect too. Honestly, the burnout piece is hitting hardest right now. I think I need to admit that being VP of the pre-med club while TA-ing organic chem labs might be... excessive. *rubs temples* How do you decide what to keep when everything seems important?",
+          "timestamp": "2025-10-04T19:41:27.842844"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "*grins* Ah, the classic \"but it’ll look good on my med school application!\" trap. Here’s my rule: If an activity doesn’t spark joy *or* directly align with your top 3 goals (for you—research experience, GPA protection, sanity preservation), it’s negotiable. \n\nTry this: Grab a sticky note. Write \"Future Zach, MD\" at the top. Below, just three words describing the doctor you’re becoming. Everything on your plate should fuel at least one of those words. If not—*makes scissors motion*—snip snip. \n\nSide note: Ever considered delegating the pre-med club newsletter to that overeager freshman who keeps volunteering",
+          "timestamp": "2025-10-04T19:41:34.614874"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "for everything? Win-win—you lighten your load and someone gets leadership experience. \n\n*notices your tense shoulders* And when’s the last time you took a proper break that didn’t involve cramming flashcards in the laundry room?",
+          "timestamp": "2025-10-04T19:41:37.633691"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "*chuckles* You caught me—my \"breaks\" usually involve speed-eating a granola bar between classes. But you're right, I haven't given myself real downtime in weeks. That sticky note idea is genius though. *pulls out phone to jot reminder* \"Future Zach, MD\" – compassionate, innovative, well-rested. \n\n*abruptly laughs* Okay, \"well-rested\" just called me out hard. Maybe I’ll step down from newsletter duty and actually use the campus hammocks this week. Thanks for not letting me BS myself about being \"too busy\" to breathe.",
+          "timestamp": "2025-10-04T19:41:42.898146"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
+        "timestamp": "2025-10-04 19:08:57.367600",
+        "responses": [
+          {
+            "question": "I initiate conversations with new people.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain eye contact during conversations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I listen attentively without interrupting.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I express my opinions clearly.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt my communication style to different people.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle criticism well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I apologize when I've made a mistake.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I cooperate well in group projects.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I manage conflicts constructively.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I show appreciation for others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I respect personal boundaries.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I remember important details about people.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I give constructive feedback.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I participate in social activities.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle large social gatherings comfortably.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I use appropriate humor in conversations.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I offer help to others when needed.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain friendships over time.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I speak confidently in public.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt to new social situations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 54.0,
+        "average_score": 2.7,
+        "improvement_areas": [
+          "I listen attentively without interrupting.",
+          "I adapt my communication style to different people.",
+          "I handle criticism well."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
+        "timestamp": "2025-10-04 19:42:41.910381",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 62.0,
+        "average_score": 3.1,
+        "improvement_areas": [
+          "I help my friends when they are having a problem.",
+          "I stand up for others when they are not treated well.",
+          "I try to make others feel better."
+        ]
+      },
+      "improvement": 0.3999999999999999,
+      "reflection_insights": [
+        "**What worked:** The mentor effectively used humor (\"future dog trick\") and relatable metaphors (\"juggling flaming torches\") to build rapport, while the sticky-note exercise provided a tangible, goal-aligned decision-making tool.  \n\n**What could improve:** The mentor missed an opportunity to explore Zachary’s underlying fear of \"dropping the ball\" (e.g., \"What’s the worst that happens if you delegate?\").  \n\n**Key insight:** High-achievers like Zachary respond well to *structured permission* (e.g., \"snip snip\" metaphor) to prioritize self-care, but need explicit probing to confront hidden perfectionism."
+      ],
+      "reflection": "**What worked:** The mentor effectively used humor (\"future dog trick\") and relatable metaphors (\"juggling flaming torches\") to build rapport, while the sticky-note exercise provided a tangible, goal-aligned decision-making tool.  \n\n**What could improve:** The mentor missed an opportunity to explore Zachary’s underlying fear of \"dropping the ball\" (e.g., \"What’s the worst that happens if you delegate?\").  \n\n**Key insight:** High-achievers like Zachary respond well to *structured permission* (e.g., \"snip snip\" metaphor) to prioritize self-care, but need explicit probing to confront hidden perfectionism."
+    },
+    {
+      "conversation_id": "conv_2025-10-04_19-48-27_786c59f6_4b3f663a",
+      "timestamp": "2025-10-04T19:48:27.709994",
+      "prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
+      "prompt_name": "G5C07 from G4E01 & G4E02",
+      "generation": 5,
+      "conversation_rounds": 7,
+      "conversation": [
+        {
+          "turn": 1,
+          "speaker": "dummy",
+          "content": "\"Hey, thanks for meeting with me. I’ve been feeling a bit overwhelmed with balancing everything—especially networking and public speaking—and I’m hoping we can work on strategies to make those less stressful.\"  \n\n*(Reasoning: This opening feels natural for Zachary—polite but direct, slightly competitive in wanting to improve, and organized enough to name specific goals. It also hints at his stress and social discomfort without oversharing.)*",
+          "timestamp": "2025-10-04T19:45:18.963991"
+        },
+        {
+          "turn": 2,
+          "speaker": "ai",
+          "content": "Hey Zachary! First off, major props for recognizing what you want to work on—that’s half the battle. Let’s tackle this step by step. For public speaking, one micro-hack is to practice your presentations in *weird* places first—like your dorm lounge or even the dining hall. It’ll make the actual lecture hall feel way less intimidating. And for networking, try the \"two-minute rule\": at events, just commit to two minutes of small talk with someone new before giving yourself permission to bail. Most of the time, you’ll realize it’s not so bad and keep going.  \n\nWhat’s one situation lately where you felt the public speaking or networking stress hit hardest? We",
+          "timestamp": "2025-10-04T19:45:25.299448"
+        },
+        {
+          "turn": 3,
+          "speaker": "dummy",
+          "content": "\"Honestly? Last week's bio seminar where I had to present my research proposal. I prepped for hours, but as soon as I saw all those faces, my slides felt like hieroglyphics. And networking—I went to that STEM career fair, but I just circled the room twice and left because everyone seemed to already know each other.\"  \n\n*(Pauses, tapping pen against notebook)* \"Your hacks sound less scary than my current strategy of...avoidance. But how do you rebound when you *do* bail? Like after the career fair, I beat myself up for wasting the opportunity.\"  \n\n*(Reasoning: Shows Zachary’s conscientious prep habits and competitive frustration with setbacks, while revealing his all-or",
+          "timestamp": "2025-10-04T19:45:31.897931"
+        },
+        {
+          "turn": 4,
+          "speaker": "ai",
+          "content": "Hey, first off—circling the room twice at that career fair? That’s still further than most people get! Seriously, give yourself credit for showing up. Avoidance is a sneaky beast, but you’re already calling it out, which is huge.  \n\nFor rebounding after a \"bail\": Try the *5-minute autopsy*—no more, no less. Spend 5 minutes jotting down what happened (e.g., \"Left career fair because X\"), one thing you’d tweak next time (\"Pick one table to approach before entering\"), and one thing that *didn’t* implode (\"Wore a killer outfit\"). Then physically close the notebook and treat yourself to something dumb/fun",
+          "timestamp": "2025-10-04T19:45:39.462571"
+        },
+        {
+          "turn": 5,
+          "speaker": "dummy",
+          "content": "*(Zachary snorts at \"killer outfit\" but starts scribbling in his notebook)*  \n\n\"Okay, the 5-minute autopsy sounds way better than my usual 3-hour guilt spiral. And yeah, I *did* nail the outfit—thanks for noticing.\" *(Flips notebook around to show messy bullet points)* \"So for next time: Target one company table beforehand, and maybe pack mints so I’m not weird about my breath. That’s...actually manageable.\"  \n\n*(Leans back, tapping pen again)* \"What’s your go-to dumb/fun rebound move? I usually stress-eat dining hall soft serve, but I’m open to upgrades.\"  \n\n*(Reasoning: Zachary",
+          "timestamp": "2025-10-04T19:45:47.241409"
+        },
+        {
+          "turn": 6,
+          "speaker": "ai",
+          "content": "*\"Stress-eating soft serve is a classic, but have you tried the *post-networking power walk*? Pick the most ridiculous campus statue or building, march over to it like you’re on a mission, and take a shameless selfie with it. Physical movement resets the nervous system, and the absurdity factor cuts the tension. Plus, now you’ve got a growing collection of ‘Zachary Conquers Things’ photos for later laughs.\"  \n\n*(Grins)* \"Bonus points if you caption them for Instagram later like ‘Just secured my future…with this pigeon-covered founder’s statue.’ Turns a bail into a win.\"",
+          "timestamp": "2025-10-04T19:45:53.388167"
+        },
+        {
+          "turn": 7,
+          "speaker": "dummy",
+          "content": "*(Zachary actually laughs, pulling out his phone)* \"You’re evil—I love it. There’s this *extremely* judgmental statue of our college founder by the library that’s basically begging for this treatment.\" *(Mimics typing)* \"‘Negotiating my signing bonus with the OG alumni. He’s speechless.’\"  \n\n*(Tucks phone away, more relaxed now)* \"Alright, next career fair: mints, one-target strategy, and an awkward statue pilgrimage after. Maybe I’ll even eat the soft serve *after* as a reward instead of a shame-spiral snack.\"  \n\n*(Stands up, slinging backpack on)* \"Thanks for not telling me to ‘",
+          "timestamp": "2025-10-04T19:46:00.117567"
+        }
+      ],
+      "pre_assessment": {
+        "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
+        "timestamp": "2025-10-04 19:08:57.367600",
+        "responses": [
+          {
+            "question": "I initiate conversations with new people.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain eye contact during conversations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I listen attentively without interrupting.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I express my opinions clearly.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt my communication style to different people.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle criticism well.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I apologize when I've made a mistake.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I cooperate well in group projects.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I manage conflicts constructively.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I show appreciation for others.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I respect personal boundaries.",
+            "score": 4,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I remember important details about people.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I give constructive feedback.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I participate in social activities.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I handle large social gatherings comfortably.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I use appropriate humor in conversations.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I offer help to others when needed.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I maintain friendships over time.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I speak confidently in public.",
+            "score": 2,
+            "confidence": 8,
+            "notes": null
+          },
+          {
+            "question": "I adapt to new social situations.",
+            "score": 3,
+            "confidence": 8,
+            "notes": null
+          }
+        ],
+        "total_score": 54.0,
+        "average_score": 2.7,
+        "improvement_areas": [
+          "I listen attentively without interrupting.",
+          "I adapt my communication style to different people.",
+          "I handle criticism well."
+        ]
+      },
+      "post_assessment": {
+        "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
+        "timestamp": "2025-10-04 19:48:22.164585",
+        "responses": [
+          {
+            "question": "I ask for help when I need it.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when dealing with problems.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I help my friends when they are having a problem.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I work well with my classmates.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I do the right thing without being told.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I do my part in a group.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I stay calm when I disagree with others.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I stand up for others when they are not treated well.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I look at people when I talk to them.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I am careful when I use things that aren't mine.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I let people know when there's a problem.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when the teacher talks to the class.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I try to make others feel better.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I say \"thank you\" when someone helps me.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I keep my promises.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I pay attention when others present their ideas.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I try to find a good way to end a disagreement.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I try to think about how others feel.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I try to forgive others when they say \"sorry\".",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          },
+          {
+            "question": "I follow school rules.",
+            "score": 2,
+            "confidence": 5,
+            "notes": null
+          }
+        ],
+        "total_score": 40.0,
+        "average_score": 2.0,
+        "improvement_areas": [
+          "I ask for help when I need it.",
+          "I stay calm when dealing with problems.",
+          "I help my friends when they are having a problem."
+        ]
+      },
+      "improvement": -0.7000000000000002,
+      "reflection_insights": [
+        "**What worked:** The AI effectively used humor (\"killer outfit\") and micro-steps (5-minute autopsy) to reduce Zachary’s self-criticism, while tangible strategies (target one table) built confidence.  \n\n**Improvement:** Earlier validation of his prep efforts (e.g., \"You researched for hours—that’s impressive!\") could have preempted guilt.  \n\n**Key insight:** Competitive students like Zachary thrive when reframing setbacks as strategic \"upgrades\" (soft serve → power walk) with a touch of lighthearted rebellion."
+      ],
+      "reflection": "**What worked:** The AI effectively used humor (\"killer outfit\") and micro-steps (5-minute autopsy) to reduce Zachary’s self-criticism, while tangible strategies (target one table) built confidence.  \n\n**Improvement:** Earlier validation of his prep efforts (e.g., \"You researched for hours—that’s impressive!\") could have preempted guilt.  \n\n**Key insight:** Competitive students like Zachary thrive when reframing setbacks as strategic \"upgrades\" (soft serve → power walk) with a touch of lighthearted rebellion."
     }
   ]
 }

@@ -1,10 +1,10 @@
 {
   "dummy_id": "4837b89f-d117-48f4-b1ef-576e77084e1e",
   "dummy_name": "Riley Lopez",
-  "current_experiment_id": "gepa_exp_20251004_191257",
-  "current_prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+  "current_experiment_id": "gepa_exp_20251004_194514",
+  "current_prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
   "created_at": "2025-10-04T19:08:38.129457",
-  "last_updated": "2025-10-04T19:14:11.512656",
+  "last_updated": "2025-10-04T19:46:04.407573",
   "conversation_profile": {
     "original_fears": [
       "Missing deadlines",
@@ -35,24 +35,24 @@
       "openness": 10
     },
     "current_fears": [
-      "Procrastinating on group project slides",
-      "Freezing during public speaking or networking events"
+      "Missing deadlines",
+      "Academic failure and poor grades"
     ],
     "current_challenges": [
-      "Networking for grad school applications",
-      "Balancing volunteer work with academic responsibilities"
+      "Lack of confidence in public speaking affecting grad school aspirations",
+      "Procrastinating on assignments leading to rushed work"
     ],
     "current_behaviors": [
-      "Planning to ask questions about others' interests",
-      "Not mentioned in conversation",
-      "Delaying work on group project slides",
-      "Organizing an upcoming campus event",
-      "Not mentioned in conversation"
+      "Connecting with peers and professionals online",
+      "Seeking emotional support from family",
+      "Delaying work until the last minute",
+      "Participating in activities to build social skills",
+      "Attending tutoring sessions to improve academic performance"
     ],
     "current_anxiety_triggers": [
-      "Networking events and public speaking",
-      "Presenting unfinished slides",
-      "Not mentioned in conversation"
+      "Nervousness during social interactions",
+      "Anxiety about collaboration and performance",
+      "Stress from large social gatherings"
     ],
     "current_social_anxiety_level": 7,
     "current_big_five": {
@@ -129,8 +129,341 @@
         "post_assessment_score": 2.8,
         "improvement_score": 0.7999999999999998,
         "timestamp": "2025-10-04T19:14:11.512277"
+      },
+      {
+        "stage_number": 3,
+        "prompt_id": "d675a42d-8758-4aa1-9f9a-2504ddb08752",
+        "prompt_name": "G2M01 from G1M01",
+        "generation": 2,
+        "conversation_id": "cf55d3bc-4717-4c87-a827-fec00b21fa02",
+        "conversation_summary": "Problems discussed: Riley's social anxiety in new settings and group projects, fear of judgment, and procrastination leading to deadline stress. Solutions offered/accepted: Using humor and role-playing to ease social anxiety, taking on specific roles in group projects to reduce pressure, and setting alarms to manage deadlines. Student's response to solutions: Positive engagement with suggested strategies, setting a deadline alarm, and planning to use memes and role-playing in future interactions. Evidence of progress/improvement: Riley demonstrated increased self-awareness, adopted coping mechanisms, and showed proactive behavior by setting alarms and planning next steps for social and academic challenges.",
+        "fears_materialized": {
+          "Missing deadlines": "Alarm for submission deadline going off, risking summer school",
+          "Academic failure and poor grades": "Fear of failing group projects and grad school applications"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Uncertainty about leadership roles and grad school due to social anxiety",
+          "Developing effective study habits": "Procrastination leading to last-minute rushes"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Not explicitly mentioned, but implied in communication major context",
+          "Calls family frequently": "Not explicitly mentioned in conversation",
+          "Procrastinates on assignments": "Rushing to meet deadline after procrastinating",
+          "Volunteers for campus events": "Not explicitly mentioned in conversation",
+          "Uses campus resources like tutoring": "Not explicitly mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Meeting new people": "Walking into a room full of new people causing brain to 'shut down'",
+          "Group projects": "Preferring to work alone to avoid group dynamics",
+          "Fraternity/Sorority events": "Not explicitly mentioned in conversation"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.8999999999999999,
+        "timestamp": "2025-10-04T19:20:22.085108"
+      },
+      {
+        "stage_number": 4,
+        "prompt_id": "76f427d6-7f43-40db-bd23-cc064b5199e9",
+        "prompt_name": "G2C02 from G1M01 & G1E00",
+        "generation": 2,
+        "conversation_id": "373e364f-3a60-4adf-935c-742a6e68a496",
+        "conversation_summary": "Problems discussed: Riley expressed anxiety about freezing up during group projects and public speaking, which are critical for academic success and grad school aspirations. Solutions offered/accepted: The AI Coach suggested preparing one key point for group discussions, practicing with a pet, and using laminated notecards for presentations. Riley responded positively, showing relief and enthusiasm, and planned to implement these strategies immediately. Evidence of progress/improvement: Riley's willingness to try the solutions and their animated response indicated a reduction in anxiety and a proactive approach to overcoming challenges.",
+        "fears_materialized": {
+          "Missing deadlines, Academic failure and poor grades": "Freezing up during group projects and presentations, leading to poor performance"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Needing to improve public speaking skills for grad school applications",
+          "Developing effective study habits": "Procrastinating on assignments and struggling with preparation for presentations"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Using platforms to connect with peers and professionals",
+          "Calls family frequently": "Seeking emotional support from family members",
+          "Procrastinates on assignments": "Delaying work until the last minute, leading to stress",
+          "Volunteers for campus events": "Participating in activities to build confidence and network",
+          "Uses campus resources like tutoring": "Attending tutoring sessions to improve academic performance"
+        },
+        "triggers_specified": {
+          "Meeting new people": "Initial interactions in group projects",
+          "Group projects": "Collaborative assignments requiring verbal contributions",
+          "Fraternity/Sorority events": "Social gatherings with new people"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.55,
+        "improvement_score": 0.5499999999999998,
+        "timestamp": "2025-10-04T19:20:24.848797"
+      },
+      {
+        "stage_number": 5,
+        "prompt_id": "e790c703-2c16-4dd7-9ee1-cc749cda9e8a",
+        "prompt_name": "G2C03 from G1E00 & G1M01",
+        "generation": 2,
+        "conversation_id": "f46e74f2-9d6c-4b62-bb12-c3a33d0950d5",
+        "conversation_summary": "Problems discussed: 1) Social anxiety in group projects/networking, 2) Procrastination/perfectionism with deadlines, 3) Fear of grad school rejection due to habits. Solutions offered/accepted: 1) Scripted roles/humor in groups, 2) Early arrival at events, 3) 'Panic deadlines' and reframing failures as growth. Student's response: Positive engagement (laughter, fist bump), immediate plan to implement strategies (scheduling deadlines, smuggling snacks). Evidence of progress: Reduced visible tension, verbal commitment to change, and self-deprecating humor indicating comfort.",
+        "fears_materialized": {
+          "Missing deadlines": "Turning in a video project three hours late due to over-editing",
+          "Academic failure and poor grades": "Fear of grad schools rejecting due to procrastination habits"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Networking events causing anxiety",
+          "Developing effective study habits": "Procrastination leading to rushed assignments"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Attempting to connect but freezing up in person",
+          "Calls family frequently": "Seeking emotional support",
+          "Procrastinates on assignments": "Re-editing video project lighting until deadline",
+          "Volunteers for campus events": "Participating but feeling overwhelmed",
+          "Uses campus resources like tutoring": "Not mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Meeting new people": "Networking events",
+          "Group projects": "Fear of blanking or ghosting group",
+          "Fraternity/Sorority events": "Not mentioned in conversation"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.85,
+        "improvement_score": 0.8500000000000001,
+        "timestamp": "2025-10-04T19:21:56.485041"
+      },
+      {
+        "stage_number": 6,
+        "prompt_id": "5a2e1ba7-9521-4df4-bece-085e7d07aa1c",
+        "prompt_name": "G3M05 from G2C03",
+        "generation": 3,
+        "conversation_id": "34abff2a-af3f-4e34-9a6f-aaa6808036f1",
+        "conversation_summary": "Problems discussed: Riley's fear of group projects and networking events, procrastination, and high social anxiety. Solutions offered/accepted: Starting with small social interactions (e.g., nodding at a classmate), viewing social progress as incremental 'side quests,' and committing to report back on attempts. Student's response to solutions: Initially hesitant but agreed to try nodding, showed reduced self-judgment, and committed to accountability. Evidence of progress/improvement: Riley demonstrated willingness to take small steps, acknowledged universal awkwardness, and planned a concrete action (nodding in class).",
+        "fears_materialized": {
+          "Missing deadlines": "Procrastinating on assignments until the last minute",
+          "Academic failure and poor grades": "Struggling with group projects and networking events affecting performance"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Difficulty networking and building professional connections",
+          "Developing effective study habits": "Procrastination leading to rushed assignments"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Attempting to connect with peers online but avoiding in-person interactions",
+          "Calls family frequently": "Seeking emotional support from family due to academic stress",
+          "Procrastinates on assignments": "Delaying work until deadlines loom",
+          "Volunteers for campus events": "Participating in events to build community but avoiding social interactions",
+          "Uses campus resources like tutoring": "Attending tutoring sessions but not addressing social anxiety"
+        },
+        "triggers_specified": {
+          "Meeting new people": "Avoiding eye contact and conversations in class",
+          "Group projects": "Feeling overwhelmed and anxious during collaborative work",
+          "Fraternity/Sorority events": "Avoiding social gatherings due to fear of judgment"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.75,
+        "improvement_score": 0.75,
+        "timestamp": "2025-10-04T19:32:06.858413"
+      },
+      {
+        "stage_number": 7,
+        "prompt_id": "8966845e-bd42-4a15-9003-2b2ed03db063",
+        "prompt_name": "G3M04 from G2E00",
+        "generation": 3,
+        "conversation_id": "62bc5a48-28bd-4dc4-9fc5-5f1ae2bc6da6",
+        "conversation_summary": "Riley discussed problems with group projects, networking anxiety, and procrastination. Solutions offered included taking on structured roles in group projects, using the Pomodoro technique, body-doubling, practicing public speaking in a safe environment, and using a fidget ring. Riley responded positively, agreeing to practice public speaking in a low-pressure setting and trying the Pomodoro technique. Evidence of progress includes Riley's willingness to take baby steps and use the fidget ring, showing reduced anxiety and a proactive attitude toward improvement.",
+        "fears_materialized": {
+          "Missing deadlines": "Procrastinating until 2 AM before a deadline",
+          "Academic failure and poor grades": "Freezing up during group projects and networking events"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Anxiety about networking events",
+          "Developing effective study habits": "Procrastination and lack of focus"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Attempts to network online but freezes in person",
+          "Calls family frequently": "Seeks emotional support from family",
+          "Procrastinates on assignments": "Delays work until the last minute",
+          "Volunteers for campus events": "Participates in events but feels anxious",
+          "Uses campus resources like tutoring": "Utilizes tutoring but struggles with time management"
+        },
+        "triggers_specified": {
+          "Meeting new people": "Networking events and group projects",
+          "Group projects": "Feeling overwhelmed and freezing up",
+          "Fraternity/Sorority events": "Social anxiety in large gatherings"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.85,
+        "improvement_score": 0.8500000000000001,
+        "timestamp": "2025-10-04T19:33:23.442531"
+      },
+      {
+        "stage_number": 8,
+        "prompt_id": "c60cd38c-fce5-40e3-969d-a206fb771098",
+        "prompt_name": "G3M06 from G2C03",
+        "generation": 3,
+        "conversation_id": "08c77bc9-458a-49f4-adce-5b2ad8ca289d",
+        "conversation_summary": "Problems discussed: Riley's fear of social interactions and networking due to anxiety, leading to procrastination and academic stress. Solutions offered/accepted: Starting with small, scripted interactions, pre-writing icebreakers, and role-playing scenarios. Student's response to solutions: Riley engaged positively, practicing lines and expressing willingness to try them in real life. Evidence of progress/improvement: Riley laughed at own awkwardness, role-played successfully, and committed to using a pre-loaded line in the wild, showing reduced anxiety and increased confidence.",
+        "fears_materialized": {
+          "Missing deadlines, Academic failure and poor grades": "Procrastinating on assignments and fearing poor grades due to lack of preparation"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Difficulty networking due to social anxiety",
+          "Developing effective study habits": "Procrastination leading to last-minute cramming"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Attempting to connect with peers online but struggling in person",
+          "Calls family frequently": "Seeking emotional support from family",
+          "Procrastinates on assignments": "Delaying work until the last minute",
+          "Volunteers for campus events": "Participating in events to build confidence",
+          "Uses campus resources like tutoring": "Attending tutoring sessions to improve grades"
+        },
+        "triggers_specified": {
+          "Meeting new people": "Anxiety when initiating conversations",
+          "Group projects": "Fear of collaboration and social interaction",
+          "Fraternity/Sorority events": "Overwhelming social situations"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.75,
+        "improvement_score": 0.75,
+        "timestamp": "2025-10-04T19:33:40.239338"
+      },
+      {
+        "stage_number": 9,
+        "prompt_id": "6047de79-e44a-421b-8e45-261a5fdcaa16",
+        "prompt_name": "G3C07 from G2C03 & G2E00",
+        "generation": 3,
+        "conversation_id": "c10b6ee3-359e-42d5-b219-859929c98114",
+        "conversation_summary": "Problems discussed: 1) Severe networking anxiety impacting grad school prep, 2) Procrastination in group projects due to social avoidance. Solutions offered/accepted: 1) 'Host mindset' reframing and cheese-plate exit strategy, 2) 'Controlled volunteering' for solo tasks, 3) Golden retriever pitch practice method. Student's response: Enthusiastically adopted tools (fidget spinner, mirror practice), laughed through nerves, and committed to incremental goals. Evidence of progress: Anxiety decreased from 10 to 7.5, concrete plans made for next event, and self-deprecating humor showed emotional resilience.",
+        "fears_materialized": {
+          "Missing deadlines, Academic failure and poor grades": "Procrastinating on group project assignments leading to last-minute stress"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Networking anxiety at grad school events",
+          "Developing effective study habits": "Struggling with time management in group projects"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Avoids in-person networking due to anxiety",
+          "Calls family frequently": "Seeks emotional support before stressful events",
+          "Procrastinates on assignments": "Volunteers for leadership roles to avoid small talk but delays work",
+          "Volunteers for campus events": "Uses organizational roles as a shield against social interaction",
+          "Uses campus resources like tutoring": "Not yet applied to public speaking/anxiety workshops"
+        },
+        "triggers_specified": {
+          "Meeting new people": "Walking into networking events alone",
+          "Group projects": "Being assigned open-ended collaborative tasks",
+          "Fraternity/Sorority events": "Large social gatherings with unfamiliar peers"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.65,
+        "improvement_score": 0.6499999999999999,
+        "timestamp": "2025-10-04T19:34:07.803536"
+      },
+      {
+        "stage_number": 10,
+        "prompt_id": "f4eccadd-cbf4-4a75-9b58-3abe8a4d407b",
+        "prompt_name": "G3C03 from G2C03 & G2M01",
+        "generation": 3,
+        "conversation_id": "5feb6b09-c42f-4a29-a0e1-d3ad79125803",
+        "conversation_summary": "Riley discussed their fear of public speaking and social interactions, particularly in group projects and upcoming campus events. Solutions offered included micro-exposures (speaking once per meeting), physical anchors (thumb-palm technique), and finding/approaching other awkward people at events. Riley accepted these solutions, showing progress by planning to use them in upcoming situations. Evidence of improvement includes Riley's willingness to try the thumb-palm technique, their plan to approach strangers at an event, and their humorous engagement with the \"TOTE BAG EMERGENCY\" exit strategy.",
+        "fears_materialized": {
+          "Missing deadlines, Academic failure and poor grades": "Freezing during public speaking in group projects or class discussions"
+        },
+        "challenges_materialized": {
+          "Career exploration, Developing effective study habits": "Preparing for grad school applications requiring leadership and public speaking skills"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Planning to use humor and physical anchors to ease social interactions",
+          "Calls family frequently": "Not explicitly mentioned in conversation",
+          "Procrastinates on assignments": "Not explicitly mentioned in conversation",
+          "Volunteers for campus events": "Upcoming campus event where Riley will practice social interactions",
+          "Uses campus resources like tutoring": "Not explicitly mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Meeting new people": "Approaching strangers at a campus event",
+          "Group projects": "Speaking up once per meeting",
+          "Fraternity/Sorority events": "Not explicitly mentioned in conversation"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.55,
+        "improvement_score": 0.5499999999999998,
+        "timestamp": "2025-10-04T19:36:01.996225"
+      },
+      {
+        "stage_number": 11,
+        "prompt_id": "1683d52f-8fd4-4194-a06f-eea15f95d10e",
+        "prompt_name": "G4C07 from G3C07 & G3E01",
+        "generation": 4,
+        "conversation_id": "123968cd-7eaf-4172-bbb2-ce2d842ef203",
+        "conversation_summary": "Problems discussed: 1) Social anxiety in group settings and meeting new people, 2) Difficulty bridging online confidence to real-life interactions, 3) Uncertainty about developing leadership skills without being extroverted. Solutions offered/accepted: 1) Using scripted comments in group projects, 2) Transferring small online habits to offline interactions, 3) Embracing quiet leadership by observing and aligning strengths. Student's response to solutions: Positive engagement, willingness to try the 'connector' role, and openness to practicing social skills in low-pressure settings. Evidence of progress/improvement: Student expressed relief and validation, planned concrete actions for the next group project, and showed reduced anxiety by the end of the conversation.",
+        "fears_materialized": {
+          "Missing deadlines, Academic failure and poor grades": "Procrastinating on assignments and fearing the consequences"
+        },
+        "challenges_materialized": {
+          "Career exploration": "Uncertainty about how to leverage social media networking for career growth",
+          "Developing effective study habits": "Struggling to balance social activities and academic responsibilities"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Posting Instagram stories about campus events",
+          "Calls family frequently": "Seeking emotional support from family",
+          "Procrastinates on assignments": "Delaying work until the last minute",
+          "Volunteers for campus events": "Participating in activities to build connections",
+          "Uses campus resources like tutoring": "Working at the tutoring center"
+        },
+        "triggers_specified": {
+          "Meeting new people": "Walking into a room full of strangers",
+          "Group projects": "Having to speak up in collaborative settings",
+          "Fraternity/Sorority events": "Social gatherings with unfamiliar peers"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.0,
+        "improvement_score": 0.0,
+        "timestamp": "2025-10-04T19:43:33.498833"
+      },
+      {
+        "stage_number": 12,
+        "prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
+        "prompt_name": "G5C07 from G4E01 & G4E02",
+        "generation": 5,
+        "conversation_id": "aecf35cf-9fcf-46d7-a1bc-461d77e5b9c9",
+        "conversation_summary": "Problems discussed: Riley's anxiety about public speaking and procrastination, which affects academic performance and grad school goals. Solutions offered/accepted: Practicing public speaking through recordings, using stress balls for physical anxiety, and breaking tasks into smaller steps. Student's response to solutions: Riley positively engaged with the suggestions, demonstrated by improvising a mock presentation and planning to record a rant about cereal. Evidence of progress/improvement: Riley showed increased confidence and reduced anxiety through humor and willingness to practice, indicating a proactive approach to overcoming fears.",
+        "fears_materialized": {
+          "Missing deadlines, Academic failure and poor grades": "Panicking during class presentations due to anxiety"
+        },
+        "challenges_materialized": {
+          "Developing effective study habits": "Procrastinating on assignments leading to rushed work",
+          "Career exploration": "Lack of confidence in public speaking affecting grad school aspirations"
+        },
+        "behaviors_detailed": {
+          "Uses social media for networking": "Connecting with peers and professionals online",
+          "Calls family frequently": "Seeking emotional support from family",
+          "Procrastinates on assignments": "Delaying work until the last minute",
+          "Volunteers for campus events": "Participating in activities to build social skills",
+          "Uses campus resources like tutoring": "Attending tutoring sessions to improve academic performance"
+        },
+        "triggers_specified": {
+          "Meeting new people": "Nervousness during social interactions",
+          "Group projects": "Anxiety about collaboration and performance",
+          "Fraternity/Sorority events": "Stress from large social gatherings"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.75,
+        "improvement_score": 0.75,
+        "timestamp": "2025-10-04T19:46:04.407226"
       }
     ],
-    "current_stage": 2
+    "current_stage": 12
   }
 }
