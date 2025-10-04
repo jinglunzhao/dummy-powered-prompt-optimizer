@@ -56,7 +56,7 @@ class PersonalityMaterializer:
                                 "Content-Type": "application/json"
                             },
                             json={
-                                "model": "deepseek-r1-0528",
+                                "model": "deepseek-v3-0324",
                                 "messages": [{"role": "user", "content": materialization_prompt}],
                                 "temperature": 0.3,  # Low temperature for focused analysis
                                 "max_tokens": 2000   # Enough for detailed materialization
