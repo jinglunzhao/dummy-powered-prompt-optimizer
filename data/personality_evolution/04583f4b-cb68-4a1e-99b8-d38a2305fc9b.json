@@ -1,0 +1,106 @@
+{
+  "dummy_id": "04583f4b-cb68-4a1e-99b8-d38a2305fc9b",
+  "dummy_name": "Gregory Moore",
+  "current_experiment_id": "gepa_exp_20251003_234802",
+  "current_prompt_id": "test-prompt-123",
+  "created_at": "2025-10-03T23:48:02.261506",
+  "last_updated": "2025-10-03T23:49:19.507685",
+  "conversation_profile": {
+    "original_fears": [
+      "Choosing the right career path",
+      "Social anxiety in large lecture halls",
+      "Academic failure and poor grades",
+      "Dealing with roommate conflicts"
+    ],
+    "original_challenges": [
+      "Financial planning",
+      "Finding a mentor",
+      "Managing student loans"
+    ],
+    "original_behaviors": [
+      "Eats at the dining hall",
+      "Participates in study groups",
+      "Volunteers for campus events"
+    ],
+    "original_anxiety_triggers": [
+      "Networking events",
+      "Presentations",
+      "Campus social events"
+    ],
+    "original_social_anxiety_level": 3,
+    "original_big_five": {
+      "extraversion": 10,
+      "agreeableness": 1,
+      "conscientiousness": 6,
+      "neuroticism": 8,
+      "openness": 7
+    },
+    "current_fears": [
+      "Grad school applications and interviews",
+      "Public speaking in presentations",
+      "Struggling with mentor search for grad school",
+      "Not addressed in this conversation"
+    ],
+    "current_challenges": [
+      "Not addressed in this conversation",
+      "Cold-emailing professors and no replies",
+      "Not addressed in this conversation"
+    ],
+    "current_behaviors": [
+      "Not addressed in this conversation",
+      "Using study group dynamics to calm nerves",
+      "Not addressed in this conversation"
+    ],
+    "current_anxiety_triggers": [
+      "Not addressed in this conversation",
+      "Public speaking in lecture halls",
+      "Not addressed in this conversation"
+    ],
+    "current_social_anxiety_level": 2,
+    "current_big_five": {
+      "extraversion": 10,
+      "agreeableness": 1,
+      "conscientiousness": 6,
+      "neuroticism": 8,
+      "openness": 7
+    },
+    "evolution_stages": [
+      {
+        "stage_number": 1,
+        "prompt_id": "test-prompt-123",
+        "prompt_name": "Test Prompt",
+        "generation": 0,
+        "conversation_id": "07d3cd12-0997-4c9a-9cf2-7054e74cc836",
+        "conversation_summary": "Problems discussed: 1) Public speaking anxiety in lecture halls and presentations, 2) Struggling to find a mentor for grad school applications. Solutions offered/accepted: 1) Using anchor phrases, reframing nerves as excitement, and practicing in low-stakes settings for public speaking, 2) Attending office hours, leveraging TAs/grad students, and preparing specific asks for mentor search. Student's response to solutions: Positive engagement, committing to attend Dr. Chen's office hours and rehearsing anchor phrases. Evidence of progress/improvement: Student showed initiative by scheduling office hours and planning to use study group dynamics to manage speaking anxiety.",
+        "fears_materialized": {
+          "Choosing the right career path": "Grad school applications and interviews",
+          "Social anxiety in large lecture halls": "Public speaking in presentations",
+          "Academic failure and poor grades": "Struggling with mentor search for grad school",
+          "Dealing with roommate conflicts": "Not addressed in this conversation"
+        },
+        "challenges_materialized": {
+          "Financial planning": "Not addressed in this conversation",
+          "Finding a mentor": "Cold-emailing professors and no replies",
+          "Managing student loans": "Not addressed in this conversation"
+        },
+        "behaviors_detailed": {
+          "Eats at the dining hall": "Not addressed in this conversation",
+          "Participates in study groups": "Using study group dynamics to calm nerves",
+          "Volunteers for campus events": "Not addressed in this conversation"
+        },
+        "triggers_specified": {
+          "Networking events": "Not addressed in this conversation",
+          "Presentations": "Public speaking in lecture halls",
+          "Campus social events": "Not addressed in this conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 2.5,
+        "pre_assessment_score": 2.65,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.6499999999999999,
+        "timestamp": "2025-10-03T23:49:19.507194"
+      }
+    ],
+    "current_stage": 1
+  }
+}

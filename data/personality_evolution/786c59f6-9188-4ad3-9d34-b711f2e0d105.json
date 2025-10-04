@@ -1,10 +1,10 @@
 {
   "dummy_id": "786c59f6-9188-4ad3-9d34-b711f2e0d105",
   "dummy_name": "Zachary Wilson",
-  "current_experiment_id": "conversation_length_with_evolution",
-  "current_prompt_id": "conversation_length_test",
-  "created_at": "2025-10-02T22:29:18.101134",
-  "last_updated": "2025-10-02T23:04:27.377639",
+  "current_experiment_id": "gepa_exp_20251004_191257",
+  "current_prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+  "created_at": "2025-10-04T19:08:38.126572",
+  "last_updated": "2025-10-04T19:13:50.990353",
   "conversation_profile": {
     "original_fears": [
       "Dealing with roommate conflicts",
@@ -35,26 +35,26 @@
       "openness": 6
     },
     "current_fears": [
-      "Navigating conversation about quitting intramural soccer and addressing recurring dish disputes",
-      "Preparing for research presentation in 300-person lecture hall"
+      "Not explicitly mentioned in conversation",
+      "Feeling overwhelmed and judged when speaking up in 200-person lectures"
     ],
     "current_challenges": [
-      "Overstuffed schedule with lab work, exams, and extracurriculars",
-      "Pressure to maintain intramural soccer despite lab commitments",
-      "Managing student loans",
-      "Anxiety about cold-calling potential mentors"
+      "Feeling overwhelmed balancing classes, networking, and social situations",
+      "Considering joining debate club while managing studies",
+      "Not explicitly mentioned in conversation",
+      "Not explicitly mentioned in conversation"
     ],
     "current_behaviors": [
-      "Uses social media for networking",
-      "Attends career fairs",
-      "Attending biology study group in library",
-      "Calls family frequently",
-      "Scheduled study group meeting for evolution exam"
+      "Not explicitly mentioned in conversation",
+      "Not explicitly mentioned in conversation",
+      "Attending bio study group",
+      "Not explicitly mentioned in conversation",
+      "Not explicitly mentioned in conversation"
     ],
     "current_anxiety_triggers": [
-      "Neutral setting chosen for difficult roommate conversation"
+      "Not explicitly mentioned in conversation"
     ],
-    "current_social_anxiety_level": 1,
+    "current_social_anxiety_level": 7,
     "current_big_five": {
       "extraversion": 6,
       "agreeableness": 3,
@@ -65,161 +65,73 @@
     "evolution_stages": [
       {
         "stage_number": 1,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
+        "prompt_id": "9c0d9da5-ff41-4ca0-839e-9ec565c87d0d",
+        "prompt_name": "Genesis",
         "generation": 0,
-        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_milestone_5",
-        "conversation_summary": "1) Problems discussed: Public speaking anxiety for research presentation, overcommitted schedule causing burnout, and roommate conflicts about quitting soccer/borrowing clothes. 2) Solutions offered/accepted: Practice presentations in empty lecture halls; drop soccer team; use positive communication scripts for roommate discussions. 3) Student's response: Immediately scheduled lecture hall practice, dropped soccer team freeing 3 evenings/week, and successfully implemented hoodie-borrowing boundary. 4) Evidence of progress: Concrete action plans set for public speaking practice, regained time for lab work/sleep, and demonstrated assertive communication with roommate.",
+        "conversation_id": "2691baa4-5247-4d48-a28b-029551764309",
+        "conversation_summary": "Zachary discussed feeling overwhelmed with balancing classes, networking, and social situations, particularly in large lecture halls and crowded dining halls. Solutions offered included joining Toastmasters for public speaking, adjusting seating and preparation for lecture halls, changing dining hall schedule, and implementing time-blocking for better time management. Zachary responded positively, planning to attend a Toastmasters meeting, adjust dining hall timing, and start time-blocking. Evidence of progress includes his proactive steps to address these challenges and his expressed feeling that the situation feels more manageable.",
         "fears_materialized": {
-          "Dealing with roommate conflicts": "Telling roommate about quitting soccer team and addressing unauthorized borrowing of hoodies",
-          "Social anxiety in large lecture halls": "Delivering research presentation in 300-person lecture hall"
+          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation",
+          "Social anxiety in large lecture halls": "Feeling intimidated in large lecture halls, difficulty participating"
         },
         "challenges_materialized": {
-          "Coping with stress and burnout": "Overstuffed planner with lab work, classes, and extracurriculars causing sleep deprivation",
-          "Balancing extracurricular activities with studies": "Juggling intramural soccer with lab work and biology exam preparation",
-          "Managing student loans": "Not discussed in conversation",
-          "Finding a mentor": "Not discussed in conversation"
+          "Coping with stress and burnout": "Feeling overwhelmed balancing classes, networking, and social situations",
+          "Balancing extracurricular activities with studies": "Struggling to manage time effectively",
+          "Managing student loans": "Not explicitly mentioned in conversation",
+          "Finding a mentor": "Expressed interest in finding guidance"
         },
         "behaviors_detailed": {
-          "Uses social media for networking": "Not observed in conversation",
-          "Attends career fairs": "Not observed in conversation",
-          "Uses campus resources like tutoring": "Practicing presentations in empty lecture halls and attending Toastmasters club",
-          "Calls family frequently": "Not observed in conversation",
-          "Studies in the library regularly": "Attending biology study group sessions in library"
+          "Uses social media for networking": "Not explicitly mentioned in conversation",
+          "Attends career fairs": "Not explicitly mentioned in conversation",
+          "Uses campus resources like tutoring": "Not explicitly mentioned in conversation",
+          "Calls family frequently": "Not explicitly mentioned in conversation",
+          "Studies in the library regularly": "Not explicitly mentioned in conversation"
         },
         "triggers_specified": {
-          "Dining hall during peak hours": "Not discussed in conversation"
+          "Dining hall during peak hours": "Feeling stressed in crowded dining hall during peak hours"
         },
         "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.85,
-        "improvement_score": 0.3500000000000001,
-        "timestamp": "2025-10-02T22:35:49.312477"
+        "new_anxiety_level": 1.5,
+        "pre_assessment_score": 2.7,
+        "post_assessment_score": 3.05,
+        "improvement_score": 0.34999999999999964,
+        "timestamp": "2025-10-04T19:09:46.856657"
       },
       {
         "stage_number": 2,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_milestone_10",
-        "conversation_summary": "Discussed: 1) Anxiety about research presentation in large lecture hall, 2) Overcommitment from intramural soccer causing sleep loss, 3) Roommate conflicts (quitting team, hoodie borrowing, dishes). Solutions: Practice presentations in empty halls, drop soccer team, use scripts for difficult conversations. Zachary accepted: Scheduled lecture hall practice, immediately quit soccer, practiced boundary-setting scripts. Progress: Freed 3 evenings/week, demonstrated firmer communication in roleplay, committed to practice session with specific plan.",
+        "prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+        "prompt_name": "G1M01 from Genesis",
+        "generation": 1,
+        "conversation_id": "0faa5c08-c744-463b-a695-aa846c975ee9",
+        "conversation_summary": "Problems discussed: Zachary expressed overwhelm with balancing classes, networking, and social situations, particularly anxiety about public speaking in large lectures and fear of judgment. Solutions offered/accepted: Start small by speaking in lab sections, attend debate club meetings, use office hours as a low-pressure way to engage, and recognize that peers are less judgmental than feared. Student's response to solutions: Zachary was visibly relieved, accepted the strategies, and made concrete plans to implement them (starting with lab sections and debate club). Evidence of progress/improvement: Zachary left with lighter shoulders, acknowledged overestimating peer judgment, and committed to actionable steps with a follow-up plan.",
         "fears_materialized": {
-          "Dealing with roommate conflicts": "Telling roommate about quitting soccer team and addressing hoodie borrowing without permission",
-          "Social anxiety in large lecture halls": "Delivering research presentation in 300-person lecture hall"
+          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation",
+          "Social anxiety in large lecture halls": "Feeling overwhelmed and judged when speaking up in 200-person lectures"
         },
         "challenges_materialized": {
-          "Coping with stress and burnout": "Overstuffed planner causing sleep deprivation before exams",
-          "Balancing extracurricular activities with studies": "Intramural soccer conflicting with lab work time",
-          "Managing student loans": "Not discussed in conversation",
-          "Finding a mentor": "Anxiety about cold-emailing potential mentors"
+          "Coping with stress and burnout": "Feeling overwhelmed balancing classes, networking, and social situations",
+          "Balancing extracurricular activities with studies": "Considering joining debate club while managing studies",
+          "Managing student loans": "Not explicitly mentioned in conversation",
+          "Finding a mentor": "Not explicitly mentioned in conversation"
         },
         "behaviors_detailed": {
-          "Uses social media for networking": "Researching ways to connect with international students online",
-          "Attends career fairs": "Not explicitly mentioned",
-          "Uses campus resources like tutoring": "Not explicitly mentioned",
-          "Calls family frequently": "Not explicitly mentioned",
-          "Studies in the library regularly": "Attending scheduled study group meetings in library"
+          "Uses social media for networking": "Not explicitly mentioned in conversation",
+          "Attends career fairs": "Not explicitly mentioned in conversation",
+          "Uses campus resources like tutoring": "Attending bio study group",
+          "Calls family frequently": "Not explicitly mentioned in conversation",
+          "Studies in the library regularly": "Not explicitly mentioned in conversation"
         },
         "triggers_specified": {
-          "Dining hall during peak hours": "Not explicitly discussed"
+          "Dining hall during peak hours": "Not explicitly mentioned in conversation"
         },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 1.5,
-        "pre_assessment_score": 2.85,
-        "post_assessment_score": 3.1,
-        "improvement_score": 0.25,
-        "timestamp": "2025-10-02T22:45:23.093816"
-      },
-      {
-        "stage_number": 3,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_milestone_15",
-        "conversation_summary": "Discussed public speaking anxiety for upcoming research presentation, overcommitted schedule causing burnout, and roommate conflicts about quitting soccer/borrowed items. Solutions included practicing in empty lecture halls, dropping soccer to free time, and scripted conversations with roleplay. Zachary accepted all: dropped soccer immediately, scheduled lecture hall practice, attended Toastmasters, and successfully roleplayed boundary-setting. Progress shown through freed schedule, committed practice plan, and confident boundary enforcement during roleplay.",
-        "fears_materialized": {
-          "Dealing with roommate conflicts": "Telling roommate about quitting soccer team and setting boundaries about borrowed hoodies",
-          "Social anxiety in large lecture halls": "Giving research presentation in 300-person lecture hall"
-        },
-        "challenges_materialized": {
-          "Coping with stress and burnout": "Overstuffed planner causing lack of sleep",
-          "Balancing extracurricular activities with studies": "Juggling intramural soccer with lab work and studies"
-        },
-        "behaviors_detailed": {
-          "Studies in the library regularly": "Attending study group meeting in library at 3pm"
-        },
-        "triggers_specified": {
-          "Dining hall during peak hours": "Having difficult conversation with roommate over dinner"
-        },
-        "anxiety_change": -0.5,
+        "anxiety_change": -2.5,
         "new_anxiety_level": 7.5,
-        "pre_assessment_score": 3.1,
-        "post_assessment_score": 3.15,
-        "improvement_score": 0.04999999999999982,
-        "timestamp": "2025-10-02T22:51:23.913838"
-      },
-      {
-        "stage_number": 4,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_milestone_20",
-        "conversation_summary": "Discussed public speaking anxiety for upcoming research presentation, overcommitted schedule causing burnout, and roommate conflicts about quitting soccer/borrowing items. Solutions: practice presentations in empty lecture hall, drop soccer team, scripted roommate conversations, and observe Toastmasters. Zachary accepted all solutions - scheduled practice, quit team immediately, and rehearsed communication scripts. Progress shown through decisive boundary-setting, scheduled skill-building activities, and improved communication planning.",
-        "fears_materialized": {
-          "Dealing with roommate conflicts": "Telling roommate about quitting soccer team and addressing hoodie borrowing without permission",
-          "Social anxiety in large lecture halls": "Delivering research presentation in 300-person lecture hall"
-        },
-        "challenges_materialized": {
-          "Coping with stress and burnout": "Overstuffed planner with lab work, exams, and extracurriculars causing sleep deprivation",
-          "Balancing extracurricular activities with studies": "Intramural soccer conflicting with lab work and exam preparation",
-          "Finding a mentor": "Anxiety about cold-emailing potential research mentors"
-        },
-        "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Consulted AI coach for public speaking strategies and time management",
-          "Studies in the library regularly": "Attended biology study group sessions before exams"
-        },
-        "triggers_specified": {
-          "Dining hall during peak hours": "Having difficult conversations with roommate during crowded dinner times"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 1.5,
-        "pre_assessment_score": 3.15,
-        "post_assessment_score": 3.1,
-        "improvement_score": -0.04999999999999982,
-        "timestamp": "2025-10-02T22:57:29.187495"
-      },
-      {
-        "stage_number": 5,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_786c59f6-9188-4ad3-9d34-b711f2e0d105_milestone_25",
-        "conversation_summary": "Discussed public speaking anxiety for upcoming research presentation, schedule overload from soccer commitments, and roommate conflicts. Accepted solutions: practice presentations in empty lecture halls, quit soccer team, scripted roommate conversation, and scheduled Toastmasters observation. Zachary responded positively by immediately scheduling practice sessions, dropping soccer, and rehearsing dialogue scripts. Progress evidenced through freed evenings, scheduled skill-building activities, and proactive boundary-setting with roommate.",
-        "fears_materialized": {
-          "Dealing with roommate conflicts": "Navigating conversation about quitting intramural soccer and addressing recurring dish disputes",
-          "Social anxiety in large lecture halls": "Preparing for research presentation in 300-person lecture hall"
-        },
-        "challenges_materialized": {
-          "Coping with stress and burnout": "Overstuffed schedule with lab work, exams, and extracurriculars",
-          "Balancing extracurricular activities with studies": "Pressure to maintain intramural soccer despite lab commitments",
-          "Finding a mentor": "Anxiety about cold-calling potential mentors"
-        },
-        "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Attending biology study group in library",
-          "Studies in the library regularly": "Scheduled study group meeting for evolution exam"
-        },
-        "triggers_specified": {
-          "Dining hall during peak hours": "Neutral setting chosen for difficult roommate conversation"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 1.5,
-        "pre_assessment_score": 3.1,
-        "post_assessment_score": 3.0,
-        "improvement_score": 0.3500000000000001,
-        "timestamp": "2025-10-02T23:04:27.377153"
+        "pre_assessment_score": 2.7,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.7000000000000002,
+        "timestamp": "2025-10-04T19:13:50.989894"
       }
     ],
-    "current_stage": 5
+    "current_stage": 2
   }
 }

@@ -1,0 +1,137 @@
+{
+  "dummy_id": "4f2584a5-2bcf-4d92-9346-2b2f5f413f40",
+  "dummy_name": "Sarah Wright",
+  "current_experiment_id": "gepa_exp_20251004_191257",
+  "current_prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+  "created_at": "2025-10-04T19:08:38.131072",
+  "last_updated": "2025-10-04T19:16:01.826462",
+  "conversation_profile": {
+    "original_fears": [
+      "Imposter syndrome in classes",
+      "Choosing the right career path",
+      "Public speaking in class"
+    ],
+    "original_challenges": [
+      "Dealing with academic pressure",
+      "Career exploration"
+    ],
+    "original_behaviors": [
+      "Studies in the library regularly",
+      "Procrastinates on assignments",
+      "Volunteers for campus events",
+      "Participates in study groups",
+      "Goes to campus events"
+    ],
+    "original_anxiety_triggers": [
+      "Campus social events",
+      "Dining hall during peak hours"
+    ],
+    "original_social_anxiety_level": 8,
+    "original_big_five": {
+      "extraversion": 1,
+      "agreeableness": 4,
+      "conscientiousness": 8,
+      "neuroticism": 4,
+      "openness": 9
+    },
+    "current_fears": [
+      "Freezing up when speaking in class, fearing sounding clueless",
+      "Avoiding networking events due to fear of awkwardness",
+      "Stumbling over words, hands shaking during interactions"
+    ],
+    "current_challenges": [
+      "Procrastinating on assignments, overthinking participation",
+      "Avoiding networking events, rehearsing conversations but blanking in the moment"
+    ],
+    "current_behaviors": [
+      "Studying alone to avoid social interactions",
+      "Delaying tasks due to fear of imperfection",
+      "Participating behind the scenes to avoid direct interaction",
+      "Joining but rarely speaking up",
+      "Attending but staying on the periphery"
+    ],
+    "current_anxiety_triggers": [
+      "Large gatherings where Sarah feels exposed",
+      "Crowded spaces increasing social anxiety"
+    ],
+    "current_social_anxiety_level": 7,
+    "current_big_five": {
+      "extraversion": 1,
+      "agreeableness": 4,
+      "conscientiousness": 8,
+      "neuroticism": 4,
+      "openness": 9
+    },
+    "evolution_stages": [
+      {
+        "stage_number": 1,
+        "prompt_id": "9c0d9da5-ff41-4ca0-839e-9ec565c87d0d",
+        "prompt_name": "Genesis",
+        "generation": 0,
+        "conversation_id": "1317122b-9765-461f-852b-842289774d41",
+        "conversation_summary": "Sarah discussed her fears of imposter syndrome, public speaking, and career uncertainty, along with challenges like academic pressure and networking avoidance. Solutions offered included creating a 'proof file' for imposter syndrome, preparing small comments for class, and starting with low-pressure networking steps. Sarah responded positively, implementing these solutions by messaging an alum, preparing for class, and documenting her achievements. Evidence of progress includes her successful networking attempt, increased confidence, and proactive planning for future steps.",
+        "fears_materialized": {
+          "Imposter syndrome in classes": "Feeling like everyone else knows what they're doing while waiting for it to 'click' for herself",
+          "Choosing the right career path": "Avoiding networking and LinkedIn due to fear of an empty profile",
+          "Public speaking in class": "Avoiding speaking up in class and feeling overwhelmed by the pressure"
+        },
+        "challenges_materialized": {
+          "Dealing with academic pressure": "Procrastinating on assignments and feeling overwhelmed by the workload",
+          "Career exploration": "Avoiding networking and internship search due to fear and uncertainty"
+        },
+        "behaviors_detailed": {
+          "Studies in the library regularly": "Going to the library before study group meetings",
+          "Procrastinates on assignments": "Avoiding tasks like networking and speaking up in class",
+          "Volunteers for campus events": "Participating in campus events and study groups",
+          "Participates in study groups": "Attending study groups regularly",
+          "Goes to campus events": "Engaging in campus social events"
+        },
+        "triggers_specified": {
+          "Campus social events": "Feeling pressured to network and socialize",
+          "Dining hall during peak hours": "Avoiding crowded spaces due to anxiety"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.15,
+        "post_assessment_score": 2.75,
+        "improvement_score": 0.6000000000000001,
+        "timestamp": "2025-10-04T19:10:54.346634"
+      },
+      {
+        "stage_number": 2,
+        "prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+        "prompt_name": "G1M01 from Genesis",
+        "generation": 1,
+        "conversation_id": "77f51407-392c-478b-a596-4aa9d9f41d50",
+        "conversation_summary": "1) Problems discussed: Sarah's imposter syndrome in classes, fear of public speaking, and avoidance of networking events due to social anxiety. 2) Solutions offered/accepted: Normalizing fears, using simple scripts for networking, and a low-stakes approach to events (snack table strategy). 3) Student's response to solutions: Initially hesitant but eventually smiled, agreed to try the snack table approach, and showed willingness to report back. 4) Evidence of progress/improvement: Sarah relaxed her shoulders, cracked a real smile, and showed reduced anxiety by the end of the conversation.",
+        "fears_materialized": {
+          "Imposter syndrome in classes": "Freezing up when speaking in class, fearing sounding clueless",
+          "Public speaking in class": "Stumbling over words, hands shaking during interactions",
+          "Choosing the right career path": "Avoiding networking events due to fear of awkwardness"
+        },
+        "challenges_materialized": {
+          "Dealing with academic pressure": "Procrastinating on assignments, overthinking participation",
+          "Career exploration": "Avoiding networking events, rehearsing conversations but blanking in the moment"
+        },
+        "behaviors_detailed": {
+          "Studies in the library regularly": "Studying alone to avoid social interactions",
+          "Procrastinates on assignments": "Delaying tasks due to fear of imperfection",
+          "Volunteers for campus events": "Participating behind the scenes to avoid direct interaction",
+          "Participates in study groups": "Joining but rarely speaking up",
+          "Goes to campus events": "Attending but staying on the periphery"
+        },
+        "triggers_specified": {
+          "Campus social events": "Large gatherings where Sarah feels exposed",
+          "Dining hall during peak hours": "Crowded spaces increasing social anxiety"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.15,
+        "post_assessment_score": 0.0,
+        "improvement_score": -2.15,
+        "timestamp": "2025-10-04T19:16:01.826126"
+      }
+    ],
+    "current_stage": 2
+  }
+}

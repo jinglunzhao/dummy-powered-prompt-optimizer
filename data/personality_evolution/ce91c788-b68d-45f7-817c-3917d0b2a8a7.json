@@ -1,0 +1,149 @@
+{
+  "dummy_id": "ce91c788-b68d-45f7-817c-3917d0b2a8a7",
+  "dummy_name": "Zachary Rodriguez",
+  "current_experiment_id": "gepa_exp_20251004_191257",
+  "current_prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+  "created_at": "2025-10-04T19:08:38.132552",
+  "last_updated": "2025-10-04T19:14:09.332039",
+  "conversation_profile": {
+    "original_fears": [
+      "Public speaking in class",
+      "Choosing the right career path",
+      "Academic failure and poor grades"
+    ],
+    "original_challenges": [
+      "Overcoming procrastination",
+      "Financial planning",
+      "Coping with stress and burnout",
+      "Balancing extracurricular activities with studies"
+    ],
+    "original_behaviors": [
+      "Attends career fairs",
+      "Eats at the dining hall",
+      "Uses campus resources like tutoring",
+      "Studies in the library regularly",
+      "Exercises regularly"
+    ],
+    "original_anxiety_triggers": [
+      "Job interviews",
+      "Office hours",
+      "Campus social events"
+    ],
+    "original_social_anxiety_level": 8,
+    "original_big_five": {
+      "extraversion": 9,
+      "agreeableness": 9,
+      "conscientiousness": 5,
+      "neuroticism": 7,
+      "openness": 6
+    },
+    "current_fears": [
+      "Networking at career fairs and office hours",
+      "Fear of sounding clueless during networking",
+      "Avoiding networking opportunities due to fear of failure"
+    ],
+    "current_challenges": [
+      "Skipping the last journalism mixer",
+      "Not mentioned in conversation",
+      "Feeling overwhelmed by networking pressure",
+      "Not mentioned in conversation"
+    ],
+    "current_behaviors": [
+      "Expressed fear but willingness to try again",
+      "Not mentioned in conversation",
+      "Not mentioned in conversation",
+      "Not mentioned in conversation",
+      "Not mentioned in conversation"
+    ],
+    "current_anxiety_triggers": [
+      "Not mentioned in conversation",
+      "Fear of networking during office hours",
+      "Avoiding journalism mixer"
+    ],
+    "current_social_anxiety_level": 7,
+    "current_big_five": {
+      "extraversion": 9,
+      "agreeableness": 9,
+      "conscientiousness": 5,
+      "neuroticism": 7,
+      "openness": 6
+    },
+    "evolution_stages": [
+      {
+        "stage_number": 1,
+        "prompt_id": "9c0d9da5-ff41-4ca0-839e-9ec565c87d0d",
+        "prompt_name": "Genesis",
+        "generation": 0,
+        "conversation_id": "271332dc-7e8d-4018-b634-aef38db086d5",
+        "conversation_summary": "Problems discussed: Zachary's fear of networking at career fairs and social events, anxiety about freezing during conversations, and feeling robotic in introductions. Solutions offered/accepted: Starting with smaller events like the campus newspaper mixer, preparing backup questions, and adding personal details to elevator pitches. Student's response to solutions: Zachary practiced an elevator pitch, added a personal story, and felt more natural. Evidence of progress/improvement: Zachary planned to attend the mixer, used prepared questions, and showed reduced anxiety during practice.",
+        "fears_materialized": {
+          "Public speaking in class": "Networking at career fairs and social events",
+          "Choosing the right career path": "Securing a good internship",
+          "Academic failure and poor grades": "Balancing extracurricular activities with studies"
+        },
+        "challenges_materialized": {
+          "Overcoming procrastination": "Preparing for networking events",
+          "Financial planning": "Budgeting for internship-related expenses",
+          "Coping with stress and burnout": "Managing anxiety during networking",
+          "Balancing extracurricular activities with studies": "Attending campus newspaper mixer"
+        },
+        "behaviors_detailed": {
+          "Attends career fairs": "Planning to attend campus newspaper mixer",
+          "Eats at the dining hall": "Using snack table as a networking strategy",
+          "Uses campus resources like tutoring": "Practicing elevator pitch with AI Coach",
+          "Studies in the library regularly": "Preparing questions for networking",
+          "Exercises regularly": "Using deep breathing to manage anxiety"
+        },
+        "triggers_specified": {
+          "Job interviews": "Practicing with AI Coach",
+          "Office hours": "Seeking advice on networking",
+          "Campus social events": "Attending campus newspaper mixer"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.7,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.7000000000000002,
+        "timestamp": "2025-10-04T19:10:09.244042"
+      },
+      {
+        "stage_number": 2,
+        "prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+        "prompt_name": "G1M01 from Genesis",
+        "generation": 1,
+        "conversation_id": "6171f15f-a051-409d-ae8f-f1ed3489c26e",
+        "conversation_summary": "Problems discussed: Zachary expressed fear of networking at career fairs and office hours, avoiding opportunities due to fear of sounding clueless and failing. Solutions offered/accepted: Peer mentor suggested preparing 3 ‘safe’ questions and committing to staying for 10 minutes at events. Student's response to solutions: Zachary practiced a question, agreed to try the 10-minute trick, and expressed willingness to submit an op-ed. Evidence of progress/improvement: Zachary showed reduced anxiety, practiced networking, and planned next steps with peer mentor.",
+        "fears_materialized": {
+          "Public speaking in class": "Networking at career fairs and office hours",
+          "Choosing the right career path": "Fear of sounding clueless during networking",
+          "Academic failure and poor grades": "Avoiding networking opportunities due to fear of failure"
+        },
+        "challenges_materialized": {
+          "Overcoming procrastination": "Skipping the last journalism mixer",
+          "Financial planning": "Not mentioned in conversation",
+          "Coping with stress and burnout": "Feeling overwhelmed by networking pressure",
+          "Balancing extracurricular activities with studies": "Not mentioned in conversation"
+        },
+        "behaviors_detailed": {
+          "Attends career fairs": "Expressed fear but willingness to try again",
+          "Eats at the dining hall": "Not mentioned in conversation",
+          "Uses campus resources like tutoring": "Not mentioned in conversation",
+          "Studies in the library regularly": "Not mentioned in conversation",
+          "Exercises regularly": "Not mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Job interviews": "Not mentioned in conversation",
+          "Office hours": "Fear of networking during office hours",
+          "Campus social events": "Avoiding journalism mixer"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.7,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.7000000000000002,
+        "timestamp": "2025-10-04T19:14:09.331555"
+      }
+    ],
+    "current_stage": 2
+  }
+}

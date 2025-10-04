@@ -1,10 +1,10 @@
 {
   "dummy_id": "fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc",
   "dummy_name": "Lisa Smith",
-  "current_experiment_id": "conversation_length_with_evolution",
-  "current_prompt_id": "conversation_length_test",
-  "created_at": "2025-10-02T22:29:18.100721",
-  "last_updated": "2025-10-02T23:07:42.694141",
+  "current_experiment_id": "gepa_exp_20251004_191257",
+  "current_prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+  "created_at": "2025-10-04T19:08:38.126087",
+  "last_updated": "2025-10-04T19:14:30.492316",
   "conversation_profile": {
     "original_fears": [
       "Time management with coursework",
@@ -33,22 +33,22 @@
       "openness": 10
     },
     "current_fears": [
-      "Procrastinating on literature review despite knowing its importance for research position",
-      "Stress from loan statements interfering with academic focus during study sessions",
-      "Repeatedly replaying thesis defense disaster in mind causing self-doubt",
-      "Hesitation to email professors about research opportunities due to fear of rejection"
+      "Staying up until 2am overthinking and rewriting assignments",
+      "Not explicitly mentioned in conversation",
+      "Fear of ideas being trash compared to engineering majors",
+      "Not explicitly mentioned in conversation"
     ],
     "current_challenges": [
-      "Not explicitly discussed in session",
-      "Loan statements causing distraction while organizing study notes"
+      "Not explicitly mentioned in conversation",
+      "Not explicitly mentioned in conversation"
     ],
     "current_behaviors": [
-      "Working until 3 AM grading papers followed by negative thought spirals",
-      "Not discussed in session",
-      "Delaying literature review despite career consequences"
+      "Rewriting a lesson plan four times until 2am",
+      "Not explicitly mentioned in conversation",
+      "Overthinking and delaying work due to perfectionism"
     ],
     "current_anxiety_triggers": [
-      "Not discussed in session"
+      "Makes her want to bolt, feels overwhelming"
     ],
     "current_social_anxiety_level": 5,
     "current_big_five": {
@@ -61,165 +61,69 @@
     "evolution_stages": [
       {
         "stage_number": 1,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
+        "prompt_id": "9c0d9da5-ff41-4ca0-839e-9ec565c87d0d",
+        "prompt_name": "Genesis",
         "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_5",
-        "conversation_summary": "Discussed procrastination on literature review, work-break neglect causing back pain, negative self-talk about academic performances, and career networking avoidance. Solutions included 15-minute work starters, stretch-break reminders with spot-saving keywords, reframing failures humorously, sending professor emails, and celebratory breaks. Lisa responded with sarcastic compliance but implemented all solutions: set timers, sent email, took breaks, acknowledged successes, and set STEM curriculum goal. Progress evidenced by initiated task, sent career email, taken self-care actions, and defined winter objective.",
+        "conversation_id": "1f6847e2-2884-4179-818f-e2de0b107f98",
+        "conversation_summary": "Problems discussed: 1) Freezing up in large lectures affecting participation grades, 2) Aggressive communication hindering networking for research positions. Solutions offered/accepted: 1) Front row + '3-second rule' and prep triggers for lectures, 2) 'Disrupt then build' approach and targeting professors 1:1 for networking. Student's response to solutions: Positive, with aggressive note-taking and commitment to try strategies. Evidence of progress/improvement: Plans to implement 3-second rule and approach Dr. Reynolds, showing proactive steps to address challenges.",
         "fears_materialized": {
-          "Time management with coursework": "Overwhelmed by lesson plans and research proposals while procrastinating on literature review",
-          "Student loan debt and financial stress": "Anxiety triggered by student loan statements during study sessions",
-          "Academic failure and poor grades": "Fear of losing train of thought during thesis work and past thesis defense disaster",
-          "Choosing the right career path": "Hesitation to email professors about research lab opportunities"
+          "Time management with coursework": "Staying up late studying and procrastinating on assignments",
+          "Student loan debt and financial stress": "Managing student loans while balancing academic workload",
+          "Academic failure and poor grades": "Freezing up in large lectures affecting participation grades",
+          "Choosing the right career path": "Networking aggressively for research positions"
         },
         "challenges_materialized": {
-          "Dealing with homesickness": "Not explicitly discussed in conversation",
-          "Managing student loans": "Financial stress interrupting academic focus when reviewing loan statements"
+          "Dealing with homesickness": "Not explicitly mentioned in conversation",
+          "Managing student loans": "Balancing financial stress with academic performance"
         },
         "behaviors_detailed": {
-          "Stays up late studying": "Worked until 3 AM grading papers and frequently does all-nighters for research",
-          "Eats at the dining hall": "Not explicitly discussed in conversation",
-          "Procrastinates on assignments": "Delayed literature review despite knowing its importance for research position"
+          "Stays up late studying": "Procrastinates on assignments, leading to late-night study sessions",
+          "Eats at the dining hall": "Not explicitly mentioned in conversation",
+          "Procrastinates on assignments": "Delays work until the last minute, causing stress"
         },
         "triggers_specified": {
-          "Large lecture halls": "Not explicitly discussed in conversation"
+          "Large lecture halls": "Freezing up and not participating due to anxiety"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 5.5,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 3.05,
-        "improvement_score": 0.5499999999999998,
-        "timestamp": "2025-10-02T22:42:28.297966"
+        "pre_assessment_score": 2.85,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.8500000000000001,
+        "timestamp": "2025-10-04T19:10:26.778716"
       },
       {
         "stage_number": 2,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_10",
-        "conversation_summary": "Problems: Overwhelm with coursework (lit review procrastination), physical strain from long study sessions, negative thought loops at bedtime, and career anxiety. Solutions: 15-minute task starts, stretch breaks with keyword tracking, pre-sleep positivity ritual, and achievement rewards. Lisa responded with initial sarcasm but implemented: timer for work, stretch reminders, reframed thesis disaster humorously, sent networking email, and celebrated with latte/dance. Progress: Demonstrated through concrete behavior changes, self-deprecating humor transformed into actionable strategies, and ownership of career goals.",
+        "prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+        "prompt_name": "G1M01 from Genesis",
+        "generation": 1,
+        "conversation_id": "1b6af303-3eab-418c-a34b-1b23cbd339d7",
+        "conversation_summary": "Problems discussed: 1) Procrastination due to perfectionism, 2) Aggressive communication in group projects, 3) Anxiety in large lecture halls. Solutions offered/accepted: 1) \"One and done\" rule for assignments, 2) Acknowledging fear of judgment and committing to sharing ideas, 3) Normalizing lecture hall anxiety with humor. Student's response to solutions: Positive, agreed to try \"one and done\" and recognized irrational fears. Evidence of progress/improvement: Committed to action plan, showed self-awareness, and used humor to cope.",
         "fears_materialized": {
-          "Time management with coursework": "Overwhelmed by lit review and research proposals, staying up until 3 AM to grade papers",
-          "Student loan debt and financial stress": "Stress from loan statements interfering with study focus",
-          "Academic failure and poor grades": "Replaying thesis defense disaster and fearing poor performance",
-          "Choosing the right career path": "Anxiety about landing research positions and defining STEM outreach goals"
+          "Time management with coursework": "Staying up until 2am overthinking and rewriting assignments",
+          "Student loan debt and financial stress": "Not explicitly mentioned in conversation",
+          "Academic failure and poor grades": "Fear of ideas being trash compared to engineering majors",
+          "Choosing the right career path": "Not explicitly mentioned in conversation"
         },
         "challenges_materialized": {
-          "Dealing with homesickness": "Not addressed in this session",
-          "Managing student loans": "Loan statements causing distraction during study sessions"
+          "Dealing with homesickness": "Not explicitly mentioned in conversation",
+          "Managing student loans": "Not explicitly mentioned in conversation"
         },
         "behaviors_detailed": {
-          "Stays up late studying": "Worked until 3 AM grading papers, risking burnout",
-          "Eats at the dining hall": "Not discussed in this session",
-          "Procrastinates on assignments": "Delayed starting lit review despite knowing its importance"
+          "Stays up late studying": "Rewriting a lesson plan four times until 2am",
+          "Eats at the dining hall": "Not explicitly mentioned in conversation",
+          "Procrastinates on assignments": "Overthinking and delaying work due to perfectionism"
         },
         "triggers_specified": {
-          "Large lecture halls": "Not discussed in this session"
+          "Large lecture halls": "Makes her want to bolt, feels overwhelming"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 5.5,
-        "pre_assessment_score": 3.05,
-        "post_assessment_score": 3.1,
-        "improvement_score": 0.050000000000000266,
-        "timestamp": "2025-10-02T22:48:53.159012"
-      },
-      {
-        "stage_number": 3,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_15",
-        "conversation_summary": "Discussed procrastination on literature review, sleep deprivation, career anxiety, and fear of academic failure. Solutions offered included micro-tasking (15-minute work sessions), pre-sleep reframing rituals, stretch breaks, and immediate career outreach. Lisa responded with initial resistance but demonstrated progress by starting her literature review, sending a professor email, reframing past failures with humor, and accepting self-care routines. Evidence includes her sending the email despite fears, implementing stretch breaks, and creating a sleep ritual.",
-        "fears_materialized": {
-          "Time management with coursework": "Overwhelmed by lesson plans and research proposals while procrastinating on literature review",
-          "Student loan debt and financial stress": "Receiving student loan statements during intense study sessions",
-          "Academic failure and poor grades": "Recalling thesis defense disaster and fearing research position rejection",
-          "Choosing the right career path": "Anxiety about emailing professors for research opportunities"
-        },
-        "challenges_materialized": {
-          "Managing student loans": "Financial stress compounding academic pressure",
-          "Dealing with homesickness": "Not explicitly discussed in conversation"
-        },
-        "behaviors_detailed": {
-          "Stays up late studying": "Working until 3 AM grading papers",
-          "Eats at the dining hall": "Not explicitly discussed in conversation",
-          "Procrastinates on assignments": "Delaying literature review despite knowing its importance"
-        },
-        "triggers_specified": {
-          "Large lecture halls": "Not explicitly discussed in conversation"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 5.5,
-        "pre_assessment_score": 3.1,
-        "post_assessment_score": 3.1,
-        "improvement_score": 0.0,
-        "timestamp": "2025-10-02T22:54:05.725158"
-      },
-      {
-        "stage_number": 4,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_20",
-        "conversation_summary": "Problems discussed: Procrastination on literature review, work absorption leading to all-nighters, sleep anxiety from negative self-talk, and career outreach hesitation. Solutions offered/accepted: 15-minute task starts, stretch breaks with keyword notepads, pre-sleep win/silly-memory ritual, and immediate professor email. Student's response: Initially sarcastic but compliant; took concrete actions (sent email, implemented breaks, recalled past success). Evidence of progress: Started lit review, took breaks, shared silly memory, recalled thesis Q&A success, sent outreach email, and celebrated with reward.",
-        "fears_materialized": {
-          "Time management with coursework": "Overwhelmed by lesson plans and research proposals while procrastinating on literature review",
-          "Student loan debt and financial stress": "Anxiety triggered by viewing student loan statements during study sessions",
-          "Academic failure and poor grades": "Fear of thesis defense failure and replaying past academic stumbles",
-          "Choosing the right career path": "Hesitation to email professors about research positions due to fear of rejection"
-        },
-        "challenges_materialized": {
-          "Dealing with homesickness": "",
-          "Managing student loans": "Stress from physical loan statements interfering with study focus"
-        },
-        "behaviors_detailed": {
-          "Stays up late studying": "Working until 3 AM grading papers and pulling all-nighters when absorbed in research",
-          "Eats at the dining hall": "",
-          "Procrastinates on assignments": "Delaying literature review despite knowing its importance for career goals"
-        },
-        "triggers_specified": {
-          "Large lecture halls": ""
-        },
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 4.5,
-        "pre_assessment_score": 3.1,
-        "post_assessment_score": 3.1,
-        "improvement_score": 0.0,
-        "timestamp": "2025-10-02T23:00:27.520181"
-      },
-      {
-        "stage_number": 5,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_25",
-        "conversation_summary": "Discussed procrastination on literature review, sleep difficulties from late-night grading, career anxiety about research positions, and negative thought patterns. Solutions included micro-work sessions (15-minute timer), stretch breaks with keyword notes, pre-sleep ritual replacement technique, humor reframing of past failures, and immediate career outreach action. Lisa responded with initial sarcasm but complied, sending a professor email during the session, implementing the stretch system, sharing an embarrassing memory, and performing a victory dance. Progress evidenced by completed outreach action, adoption of break system, willingness to try sleep ritual, and engagement in celebration behavior.",
-        "fears_materialized": {
-          "Time management with coursework": "Procrastinating on literature review despite knowing its importance for research position",
-          "Student loan debt and financial stress": "Stress from loan statements interfering with academic focus during study sessions",
-          "Academic failure and poor grades": "Repeatedly replaying thesis defense disaster in mind causing self-doubt",
-          "Choosing the right career path": "Hesitation to email professors about research opportunities due to fear of rejection"
-        },
-        "challenges_materialized": {
-          "Managing student loans": "Loan statements causing distraction while organizing study notes",
-          "Dealing with homesickness": "Not explicitly discussed in session"
-        },
-        "behaviors_detailed": {
-          "Stays up late studying": "Working until 3 AM grading papers followed by negative thought spirals",
-          "Eats at the dining hall": "Not discussed in session",
-          "Procrastinates on assignments": "Delaying literature review despite career consequences"
-        },
-        "triggers_specified": {
-          "Large lecture halls": "Not discussed in session"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 5.5,
-        "pre_assessment_score": 3.1,
-        "post_assessment_score": 3.1,
-        "improvement_score": 0.050000000000000266,
-        "timestamp": "2025-10-02T23:07:42.693688"
+        "pre_assessment_score": 2.85,
+        "post_assessment_score": 3.15,
+        "improvement_score": 0.2999999999999998,
+        "timestamp": "2025-10-04T19:14:30.488284"
       }
     ],
-    "current_stage": 5
+    "current_stage": 2
   }
 }

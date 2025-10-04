@@ -1,10 +1,10 @@
 {
   "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
   "dummy_name": "Gregory Moore",
-  "current_experiment_id": "conversation_length_with_evolution",
-  "current_prompt_id": "conversation_length_test",
-  "created_at": "2025-10-02T22:29:18.092060",
-  "last_updated": "2025-10-02T23:07:02.596962",
+  "current_experiment_id": "gepa_exp_20251004_191257",
+  "current_prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+  "created_at": "2025-10-04T19:08:38.120107",
+  "last_updated": "2025-10-04T19:16:01.555013",
   "conversation_profile": {
     "original_fears": [
       "Choosing the right career path",
@@ -36,25 +36,25 @@
       "openness": 7
     },
     "current_fears": [
-      "Choosing the right career path",
-      "Presenting project to 200 students in Algorithms class",
-      "Debugging complex problems without clear solutions (analogy for loan management)",
-      "Dealing with roommate conflicts"
+      "Feeling overwhelmed by grad school applications and networking pressure",
+      "Freezing up and forgetting how to form sentences at CS mixers",
+      "Not mentioned directly, but implied by the stress of grad school apps",
+      "Not mentioned in the conversation"
     ],
     "current_challenges": [
-      "Unbalanced ramen-to-avocado ratio and Steam game overspending",
-      "Seeking alumni guidance through Professor Chen for loan/grad school advice",
-      "Navigating high interest rates and repayment plans without clear documentation"
+      "Not mentioned in the conversation",
+      "Not mentioned directly, but implied by the need for networking",
+      "Not mentioned in the conversation"
     ],
     "current_behaviors": [
-      "Frequently consumes ramen while discussing budget upgrades",
-      "Participates in study groups",
-      "Actively participates in hackathons to meet people"
+      "Not mentioned in the conversation",
+      "Not mentioned in the conversation",
+      "Not mentioned in the conversation"
     ],
     "current_anxiety_triggers": [
-      "Networking events",
-      "Project demonstration in Algorithms class",
-      "Campus social events"
+      "CS mixers where Gregory freezes up",
+      "Not mentioned in the conversation",
+      "Not mentioned in the conversation"
     ],
     "current_social_anxiety_level": 2,
     "current_big_five": {
@@ -67,159 +67,75 @@
     "evolution_stages": [
       {
         "stage_number": 1,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
+        "prompt_id": "9c0d9da5-ff41-4ca0-839e-9ec565c87d0d",
+        "prompt_name": "Genesis",
         "generation": 0,
-        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_5",
-        "conversation_summary": "Discussed anxiety about loan repayment and budgeting challenges. Solutions offered: 1) Contacting alumni via Professor Chen for loan guidance 2) Implementing 3-step budget system with tracking. Student responded positively: immediately drafted/sent alumni request email, created budget tracking sheet with alerts, and committed to Friday check-ins. Progress shown through concrete actions: customized outreach initiated and financial tracking system established with accountability measures.",
+        "conversation_id": "59c51028-3086-446d-9770-3bb0e188c062",
+        "conversation_summary": "Gregory discussed his fears of bombing presentations in large CS lectures and the stress of grad school applications. Solutions offered included practicing public speaking in lower-stakes settings like study groups, attending an ACM workshop on technical communication, and exploring Toastmasters. Gregory responded positively, agreeing to attend the workshop despite it being after his midterm, and scheduled a debrief with the coach. Evidence of progress includes his willingness to face his fear of public speaking and his proactive approach to improving his skills for grad school.",
         "fears_materialized": {
-          "Social anxiety in large lecture halls": "Presenting project to 200 students in Algorithms class",
-          "Academic failure and poor grades": "Debugging complex coding problems under pressure"
+          "Choosing the right career path": "Grad school applications",
+          "Social anxiety in large lecture halls": "Bombing presentations in CS lectures",
+          "Academic failure and poor grades": "Fear of poor performance in algorithms midterm",
+          "Dealing with roommate conflicts": "Not mentioned in conversation"
         },
         "challenges_materialized": {
-          "Financial planning": "Unbalanced ramen-to-avocado ratio and Steam game overspending",
-          "Managing student loans": "Navigating repayment plans and interest rates without guidance",
-          "Finding a mentor": "Seeking alumni advice on grad school financing"
+          "Financial planning": "Not mentioned in conversation",
+          "Finding a mentor": "Not mentioned in conversation",
+          "Managing student loans": "Not mentioned in conversation"
         },
         "behaviors_detailed": {
-          "Eats at the dining hall": "Frequently consumes ramen and dining hall cookies",
-          "Volunteers for campus events": "Actively participates in hackathons"
+          "Eats at the dining hall": "Not mentioned in conversation",
+          "Participates in study groups": "Joined a study group last semester",
+          "Volunteers for campus events": "Considering attending ACM workshop"
         },
         "triggers_specified": {
-          "Presentations": "Preparing project presentation for Algorithms class"
+          "Networking events": "Fear of speaking up in class or at networking events",
+          "Presentations": "Fear of bombing presentations in CS lectures",
+          "Campus social events": "Not mentioned in conversation"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 2.5,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.9,
-        "improvement_score": 0.3999999999999999,
-        "timestamp": "2025-10-02T22:40:14.379273"
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.8,
+        "improvement_score": 0.7999999999999998,
+        "timestamp": "2025-10-04T19:10:46.753173"
       },
       {
         "stage_number": 2,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_10",
-        "conversation_summary": "Discussed presentation anxiety in Algorithms class and significant stress about student loans/financial planning. Solutions: 1) Reaching out to Professor Chen for alumni mentorship connections (accepted - email sent with customized questions), 2) Implementing 3-step budget system (accepted - shared tracking sheet created with conditional formatting). Student responded positively: Immediately sent email, created budget tracker, and scheduled accountability check-in. Progress evidenced by concrete actions taken and humorous engagement with solutions.",
+        "prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+        "prompt_name": "G1M01 from Genesis",
+        "generation": 1,
+        "conversation_id": "96b6abac-7831-4496-9366-6be3b8e73d05",
+        "conversation_summary": "Gregory discussed his overwhelming feelings about grad school applications and networking, particularly freezing up at CS mixers and fearing inauthenticity. Solutions offered included starting with low-stakes 'micro-networking,' practicing with self-recordings, and using quirky questions to steer conversations. Gregory responded positively, successfully practicing a mock networking scenario and demonstrating improved confidence and conversation skills. Evidence of progress includes his ability to pivot conversations humorously and effectively, and his readiness to apply these strategies in real networking events.",
         "fears_materialized": {
-          "Social anxiety in large lecture halls": "Presenting project to 200 students in Algorithms class",
-          "Academic failure and poor grades": "Struggling to understand monads in coursework"
+          "Choosing the right career path": "Feeling overwhelmed by grad school applications and networking pressure",
+          "Social anxiety in large lecture halls": "Freezing up and forgetting how to form sentences at CS mixers",
+          "Academic failure and poor grades": "Not mentioned directly, but implied by the stress of grad school apps",
+          "Dealing with roommate conflicts": "Not mentioned in the conversation"
         },
         "challenges_materialized": {
-          "Financial planning": "Unbalanced ramen-to-avocado ratio and excessive Steam game purchases",
-          "Finding a mentor": "Seeking alumni connections through Professor Chen for loan/grad school advice",
-          "Managing student loans": "Navigating repayment plans and interest rates without clear guidance"
+          "Financial planning": "Not mentioned in the conversation",
+          "Finding a mentor": "Not mentioned directly, but implied by the need for networking",
+          "Managing student loans": "Not mentioned in the conversation"
         },
         "behaviors_detailed": {
-          "Eats at the dining hall": "Frequently consumes dining hall cookies and ramen",
-          "Volunteers for campus events": "Participates in hackathons to meet new people"
+          "Eats at the dining hall": "Not mentioned in the conversation",
+          "Participates in study groups": "Not mentioned in the conversation",
+          "Volunteers for campus events": "Not mentioned in the conversation"
         },
         "triggers_specified": {
-          "Presentations": "Project presentation in Algorithms class lecture hall"
+          "Networking events": "CS mixers where Gregory freezes up",
+          "Presentations": "Not mentioned in the conversation",
+          "Campus social events": "Not mentioned in the conversation"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 2.5,
-        "pre_assessment_score": 2.9,
-        "post_assessment_score": 2.9,
-        "improvement_score": 0.0,
-        "timestamp": "2025-10-02T22:47:59.091434"
-      },
-      {
-        "stage_number": 3,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_15",
-        "conversation_summary": "Problems discussed: Student loan repayment stress, financial planning difficulties, and grad school decision concerns. Solutions offered: For loans, drafting email to Professor Chen to connect with experienced alumni; for budgeting, implementing a 3-step financial plan with tracking spreadsheet. Student's response: Immediately sent alumni request email, created budget spreadsheet with alerts, and scheduled accountability check-in. Evidence of progress: Concrete actions taken include email sent with specific questions, budget system implemented with overdraft alerts, and commitment to follow-up meeting.",
-        "fears_materialized": {
-          "Choosing the right career path": "Asking alumni whether they regretted grad school decisions",
-          "Social anxiety in large lecture halls": "Presenting projects in 200-student Algorithms class",
-          "Academic failure and poor grades": "Struggling to understand monads in computer science coursework",
-          "Dealing with roommate conflicts": "Not explicitly discussed in conversation"
-        },
-        "challenges_materialized": {
-          "Financial planning": "Unbalanced ramen-to-avocado ratio and frequent Steam sale purchases",
-          "Finding a mentor": "Seeking alumni who navigated student loans for grad school",
-          "Managing student loans": "Stress over repayment plans and high interest rates"
-        },
-        "behaviors_detailed": {
-          "Eats at the dining hall": "Surviving on dining hall cookies during intensive study sessions",
-          "Participates in study groups": "Not explicitly discussed in conversation",
-          "Volunteers for campus events": "Meeting new people at hackathons"
-        },
-        "triggers_specified": {
-          "Networking events": "Hackathons and categorizing Steam purchases as 'networking with future employers'",
-          "Presentations": "Upcoming project presentation in Algorithms class",
-          "Campus social events": "Not explicitly discussed in conversation"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 2.5,
-        "pre_assessment_score": 2.9,
-        "post_assessment_score": 2.8,
-        "improvement_score": -0.10000000000000009,
-        "timestamp": "2025-10-02T22:53:21.074750"
-      },
-      {
-        "stage_number": 4,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_20",
-        "conversation_summary": "Discussed: 1) Anxiety about Algorithms class presentation, 2) Overwhelming student loan stress, 3) Unbalanced budgeting (ramen-heavy diet, Steam purchases). Solutions: 1) Drafted/sent alumni outreach email via Professor Chen, 2) Created 3-step budget system with tracking sheet. Response: Gregory actively customized solutions (added loan questions, implemented conditional formatting), scheduled check-in, and demonstrated accountability. Progress: Email sent immediately, budget system operationalized, and accountability mechanism established.",
-        "fears_materialized": {
-          "Social anxiety in large lecture halls": "Presenting project to 200 students in Algorithms class"
-        },
-        "challenges_materialized": {
-          "Financial planning": "Unbalanced ramen-to-avocado ratio and Steam game spending",
-          "Managing student loans": "Navigating repayment plans and interest rates",
-          "Finding a mentor": "Seeking alumni advice via Professor Chen"
-        },
-        "behaviors_detailed": {
-          "Eats at the dining hall": "Frequently consumes ramen and dining hall cookies",
-          "Volunteers for campus events": "Participates in hackathons"
-        },
-        "triggers_specified": {
-          "Presentations": "Project demonstration in Algorithms class"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 2.5,
-        "pre_assessment_score": 2.8,
-        "post_assessment_score": 2.95,
-        "improvement_score": 0.15000000000000036,
-        "timestamp": "2025-10-02T22:59:34.736039"
-      },
-      {
-        "stage_number": 5,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_25",
-        "conversation_summary": "Discussed loan repayment stress and budget management challenges. Solutions: 1) Reaching out to alumni via Professor Chen for loan/grad school advice (email drafted/sent with customized questions), 2) Implementing 3-step budget system with tracking spreadsheet. Student responded positively: immediately sent email, created spreadsheet with overdraft alerts, scheduled check-in, and reframed challenges using coding analogies. Progress evidenced by concrete actions taken during session and commitment to accountability systems.",
-        "fears_materialized": {
-          "Social anxiety in large lecture halls": "Presenting project to 200 students in Algorithms class",
-          "Academic failure and poor grades": "Debugging complex problems without clear solutions (analogy for loan management)"
-        },
-        "challenges_materialized": {
-          "Financial planning": "Unbalanced ramen-to-avocado ratio and Steam game overspending",
-          "Finding a mentor": "Seeking alumni guidance through Professor Chen for loan/grad school advice",
-          "Managing student loans": "Navigating high interest rates and repayment plans without clear documentation"
-        },
-        "behaviors_detailed": {
-          "Eats at the dining hall": "Frequently consumes ramen while discussing budget upgrades",
-          "Volunteers for campus events": "Actively participates in hackathons to meet people"
-        },
-        "triggers_specified": {
-          "Presentations": "Project demonstration in Algorithms class"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 2.5,
-        "pre_assessment_score": 2.95,
-        "post_assessment_score": 2.9,
-        "improvement_score": 0.44999999999999973,
-        "timestamp": "2025-10-02T23:07:02.596483"
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 0.0,
+        "improvement_score": -2.0,
+        "timestamp": "2025-10-04T19:16:01.554480"
       }
     ],
-    "current_stage": 5
+    "current_stage": 2
   }
 }

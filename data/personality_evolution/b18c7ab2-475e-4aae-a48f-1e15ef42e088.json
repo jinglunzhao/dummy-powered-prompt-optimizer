@@ -1,10 +1,10 @@
 {
   "dummy_id": "b18c7ab2-475e-4aae-a48f-1e15ef42e088",
   "dummy_name": "Gregory Young",
-  "current_experiment_id": "conversation_length_with_evolution",
-  "current_prompt_id": "conversation_length_test",
-  "created_at": "2025-10-02T22:29:18.098197",
-  "last_updated": "2025-10-02T23:02:57.757875",
+  "current_experiment_id": "gepa_exp_20251004_191257",
+  "current_prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+  "created_at": "2025-10-04T19:08:38.124074",
+  "last_updated": "2025-10-04T19:13:52.088883",
   "conversation_profile": {
     "original_fears": [
       "Finding a job after graduation",
@@ -38,27 +38,27 @@
       "openness": 3
     },
     "current_fears": [
-      "Seeking research opportunities with professors to gain experience for future employment",
-      "Emailing professors to request meetings about research opportunities"
+      "Fear of not securing a research position or publishing due to anxiety",
+      "Fear of sounding stupid or being perceived as a clueless undergrad at networking events"
     ],
     "current_challenges": [
-      "Approaching professors while worrying about being perceived as intrusive or unqualified",
-      "Delaying sending drafted emails to professors due to perfectionism",
-      "Creating an 'emergency pizza fund' for celebration rewards",
-      "Researching solar panel efficiency projects with Professor Chen"
+      "Uncertainty about how to approach professors at department events",
+      "Delaying networking due to anxiety",
+      "Not directly addressed in conversation",
+      "Desire to land a research position and publish"
     ],
     "current_behaviors": [
-      "Stress-eating chips after sending important email",
-      "Not observed in conversation",
-      "Annotating solar panel research paper for upcoming meeting",
-      "Emailing professors for research opportunities",
-      "Not observed in conversation"
+      "Not directly addressed in conversation",
+      "Not directly addressed in conversation",
+      "Prefers hiding in the library over attending networking events",
+      "Not directly addressed in conversation",
+      "Not directly addressed in conversation"
     ],
     "current_anxiety_triggers": [
-      "Scheduling and preparing for meeting with Professor Chen",
-      "Not observed in conversation",
-      "Preparing for first professional meeting with Professor Chen",
-      "Meeting with Professor Chen serving as research opportunity interview"
+      "Department mixers where professors are present",
+      "Not directly addressed in conversation",
+      "Approaching professors for research opportunities",
+      "Not directly addressed in conversation"
     ],
     "current_social_anxiety_level": 6,
     "current_big_five": {
@@ -71,183 +71,79 @@
     "evolution_stages": [
       {
         "stage_number": 1,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
+        "prompt_id": "9c0d9da5-ff41-4ca0-839e-9ec565c87d0d",
+        "prompt_name": "Genesis",
         "generation": 0,
-        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_milestone_5",
-        "conversation_summary": "Discussed Gregory's fear of networking and procrastination in contacting professors. Solutions included a structured 3-sentence email approach and non-binding review goals. Gregory practiced drafting, eventually sent an email to Professor Chen, and received a positive meeting invitation. Progress evidenced by sending the email (after previous avoidance) and preparing for the scheduled meeting.",
+        "conversation_id": "a45933e3-8bf4-4da8-86b8-fba62dcb7fb8",
+        "conversation_summary": "Gregory discussed his fears about networking and approaching professors for research opportunities. Solutions offered included practicing in low-stakes environments, role-playing networking scenarios, and drafting a short email to show genuine interest in a professor's work. Gregory responded positively, successfully role-playing a networking conversation and expressing willingness to email Professor Chen. Evidence of progress includes his improved confidence in conversation and his plan to take actionable steps toward his goals.",
         "fears_materialized": {
-          "Finding a job after graduation": "Seeking research opportunities to build experience for job applications",
-          "Networking with professionals": "Emailing professors to discuss research opportunities and request meetings"
+          "Finding a job after graduation": "Attending networking events and talking to professionals",
+          "Networking with professionals": "Approaching professionals at career fairs or campus events"
         },
         "challenges_materialized": {
-          "Navigating campus politics": "Not discussed in conversation",
-          "Overcoming procrastination": "Drafting and sending an email to Professor Chen after repeated delays",
-          "Financial planning": "Not discussed in conversation",
-          "Career exploration": "Exploring solar panel research opportunities through professor outreach"
+          "Navigating campus politics": "Approaching professors for research opportunities",
+          "Overcoming procrastination": "Delaying emailing professors about research opportunities",
+          "Financial planning": "Not explicitly mentioned in conversation",
+          "Career exploration": "Exploring research opportunities in engineering"
         },
         "behaviors_detailed": {
-          "Eats at the dining hall": "Not observed in conversation",
-          "Calls family frequently": "Not observed in conversation",
-          "Studies in the library regularly": "Not observed in conversation",
-          "Uses social media for networking": "Not observed in conversation",
-          "Volunteers for campus events": "Not observed in conversation"
+          "Eats at the dining hall": "Not explicitly mentioned in conversation",
+          "Calls family frequently": "Not explicitly mentioned in conversation",
+          "Studies in the library regularly": "Prefers hiding in the library over attending social events",
+          "Uses social media for networking": "Not explicitly mentioned in conversation",
+          "Volunteers for campus events": "Not explicitly mentioned in conversation"
         },
         "triggers_specified": {
-          "Networking events": "Emailing professors and scheduling meetings",
-          "Campus social events": "Not triggered in conversation",
-          "Meeting new people": "Preparing to meet Professor Chen for research discussion",
-          "Job interviews": "Not triggered in conversation"
+          "Networking events": "Career fairs or department mixers",
+          "Campus social events": "Department mixers or club meetings",
+          "Meeting new people": "Introducing oneself to professionals or professors",
+          "Job interviews": "Not explicitly mentioned in conversation"
         },
         "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.85,
-        "improvement_score": 0.3500000000000001,
-        "timestamp": "2025-10-02T22:35:09.047830"
+        "new_anxiety_level": 6.5,
+        "pre_assessment_score": 2.15,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.1499999999999999,
+        "timestamp": "2025-10-04T19:11:40.918085"
       },
       {
         "stage_number": 2,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_milestone_10",
-        "conversation_summary": "Problems discussed: Networking anxiety (fear of rejection when emailing professors), perfectionism in communication, and meeting preparation stress. Solutions offered/accepted: 3-sentence email template, reframing academic weaknesses as perseverance evidence, simplified meeting attire/materials, and snack-based reward system. Student's response: Initially hesitant but drafted/sent successful email to Professor Chen, initiated solar panel research, and created celebration fund. Evidence of progress: Secured meeting with positive professor response, overcame email procrastination, and implemented preparation strategies despite residual anxiety.",
+        "prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+        "prompt_name": "G1M01 from Genesis",
+        "generation": 1,
+        "conversation_id": "bf83c58b-ee6c-455f-9341-32bd2d191074",
+        "conversation_summary": "Problems discussed: Gregory expressed fear of networking with professionals and approaching professors at department events, worrying about sounding stupid or freezing mid-conversation. Solutions offered/accepted: The AI Coach suggested attending events for just 10 minutes, using a scripted opener to approach professors, preparing an exit line, and accepting hoodies as appropriate attire. Student's response to solutions: Gregory agreed to try the 10-minute approach, practice the script, and adopt a more positive mindset towards potential rejection. Evidence of progress/improvement: Gregory's willingness to attend the next mixer and practice the script shows reduced anxiety and increased confidence in networking.",
         "fears_materialized": {
-          "Finding a job after graduation": "Securing research opportunities through professor networking",
-          "Networking with professionals": "Emailing Professor Chen to request a meeting about solar panel research"
+          "Finding a job after graduation": "Fear of not securing a research position or publishing due to anxiety",
+          "Networking with professionals": "Fear of sounding stupid or being perceived as a clueless undergrad at networking events"
         },
         "challenges_materialized": {
-          "Navigating campus politics": "Approaching a professor with B-grade performance in her tough course",
-          "Overcoming procrastination": "Delaying sending networking emails despite multiple drafts",
-          "Financial planning": "Creating emergency pizza fund for celebration rewards",
-          "Career exploration": "Researching solar panel engineering for meeting preparation"
+          "Navigating campus politics": "Uncertainty about how to approach professors at department events",
+          "Overcoming procrastination": "Delaying networking due to anxiety",
+          "Financial planning": "Not directly addressed in conversation",
+          "Career exploration": "Desire to land a research position and publish"
         },
         "behaviors_detailed": {
-          "Eats at the dining hall": "Not observed in conversation",
-          "Calls family frequently": "Not observed in conversation",
-          "Studies in the library regularly": "Not observed in conversation",
-          "Uses social media for networking": "Not observed in conversation",
-          "Volunteers for campus events": "Not observed in conversation"
+          "Eats at the dining hall": "Not directly addressed in conversation",
+          "Calls family frequently": "Not directly addressed in conversation",
+          "Studies in the library regularly": "Prefers hiding in the library over attending networking events",
+          "Uses social media for networking": "Not directly addressed in conversation",
+          "Volunteers for campus events": "Not directly addressed in conversation"
         },
         "triggers_specified": {
-          "Networking events": "Emailing professors to request research meetings",
-          "Campus social events": "Not observed in conversation",
-          "Meeting new people": "Preparing for first meeting with Professor Chen",
-          "Job interviews": "Research meeting framed as opportunity gateway"
+          "Networking events": "Department mixers where professors are present",
+          "Campus social events": "Not directly addressed in conversation",
+          "Meeting new people": "Approaching professors for research opportunities",
+          "Job interviews": "Not directly addressed in conversation"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 6.5,
-        "pre_assessment_score": 2.85,
+        "pre_assessment_score": 2.15,
         "post_assessment_score": 2.0,
-        "improvement_score": -0.8500000000000001,
-        "timestamp": "2025-10-02T22:45:22.520082"
-      },
-      {
-        "stage_number": 3,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_milestone_15",
-        "conversation_summary": "Discussed Gregory's networking anxiety and procrastination regarding emailing professors for research opportunities. Solutions included breaking emails into 3-sentence templates, setting send deadlines, using snack rewards, and simplifying meeting preparations. Gregory responded positively by sending two emails (to Professors Smith and Chen), securing a meeting invitation, and creating a reward system. Progress evidenced by sent emails, scheduled meeting, reduced avoidance behaviors, and self-recognition of growth compared to previous semester.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Fear of not securing research positions due to networking avoidance",
-          "Networking with professionals": "Emailing professors to request research opportunity meetings"
-        },
-        "challenges_materialized": {
-          "Overcoming procrastination": "Drafting emails to professors but delaying sending due to perfectionism",
-          "Career exploration": "Reaching out to professors in fluid dynamics and renewable energy fields",
-          "Financial planning": "Creating 'emergency pizza fund' for celebration rewards",
-          "Navigating campus politics": "Not observed in this session"
-        },
-        "behaviors_detailed": {
-          "Uses social media for networking": "Not observed in this session",
-          "Calls family frequently": "Not observed in this session",
-          "Eats at the dining hall": "Not observed in this session",
-          "Studies in the library regularly": "Not observed in this session",
-          "Volunteers for campus events": "Not observed in this session"
-        },
-        "triggers_specified": {
-          "Networking events": "Emailing professors to arrange research meetings",
-          "Job interviews": "Preparing for meeting with Professor Chen about research opportunities",
-          "Meeting new people": "Interacting with Professors Smith and Chen",
-          "Campus social events": "Not observed in this session"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 6.5,
-        "pre_assessment_score": 2.0,
-        "post_assessment_score": 2.9,
-        "improvement_score": 0.8999999999999999,
-        "timestamp": "2025-10-02T22:50:16.483858"
-      },
-      {
-        "stage_number": 4,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_milestone_20",
-        "conversation_summary": "Discussed networking anxiety around emailing professors and procrastination. Solutions: Three-sentence email template, scheduled sending, reframing academic weaknesses as perseverance. Gregory responded by sending two emails (including successful outreach to Professor Chen), scheduling a meeting, and creating reward systems. Progress: Secured professor meeting, recognized behavioral improvement over last semester, implemented preparation strategies.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Seeking research opportunities with professors as career stepping stones",
-          "Networking with professionals": "Emailing professors to request meetings about research positions"
-        },
-        "challenges_materialized": {
-          "Overcoming procrastination": "Delaying sending drafted emails to professors for weeks",
-          "Career exploration": "Researching professors' work and requesting opportunities",
-          "Financial planning": "Creating emergency pizza fund for celebration rewards",
-          "Navigating campus politics": "Communicating with professors about research roles"
-        },
-        "behaviors_detailed": {},
-        "triggers_specified": {
-          "Networking events": "Scheduling meeting with Professor Chen",
-          "Meeting new people": "Preparing for first interaction with Professor Chen",
-          "Job interviews": "Treating professor meeting as research opportunity interview"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 6.5,
-        "pre_assessment_score": 2.9,
-        "post_assessment_score": 2.8,
-        "improvement_score": -0.10000000000000009,
-        "timestamp": "2025-10-02T22:56:49.723522"
-      },
-      {
-        "stage_number": 5,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_b18c7ab2-475e-4aae-a48f-1e15ef42e088_milestone_25",
-        "conversation_summary": "Discussed Gregory's networking fears and email procrastination. Solutions included 3-sentence email structure, deadline-setting, and reframing weaknesses. Gregory accepted these, drafting and sending a successful email to Professor Chen that secured a research meeting. He showed progress by overcoming procrastination, implementing anxiety-reducing strategies for meeting preparation, and initiating career exploration. Evidence includes sent email, positive professor response, and annotated research materials.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Seeking research opportunities with professors to gain experience for future employment",
-          "Networking with professionals": "Emailing professors to request meetings about research opportunities"
-        },
-        "challenges_materialized": {
-          "Navigating campus politics": "Approaching professors while worrying about being perceived as intrusive or unqualified",
-          "Overcoming procrastination": "Delaying sending drafted emails to professors due to perfectionism",
-          "Financial planning": "Creating an 'emergency pizza fund' for celebration rewards",
-          "Career exploration": "Researching solar panel efficiency projects with Professor Chen"
-        },
-        "behaviors_detailed": {
-          "Eats at the dining hall": "Stress-eating chips after sending important email",
-          "Calls family frequently": "Not observed in conversation",
-          "Studies in the library regularly": "Annotating solar panel research paper for upcoming meeting",
-          "Uses social media for networking": "Emailing professors for research opportunities",
-          "Volunteers for campus events": "Not observed in conversation"
-        },
-        "triggers_specified": {
-          "Networking events": "Scheduling and preparing for meeting with Professor Chen",
-          "Campus social events": "Not observed in conversation",
-          "Meeting new people": "Preparing for first professional meeting with Professor Chen",
-          "Job interviews": "Meeting with Professor Chen serving as research opportunity interview"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 6.5,
-        "pre_assessment_score": 2.8,
-        "post_assessment_score": 2.75,
-        "improvement_score": 0.4500000000000002,
-        "timestamp": "2025-10-02T23:02:57.757459"
+        "improvement_score": -0.1499999999999999,
+        "timestamp": "2025-10-04T19:13:52.088479"
       }
     ],
-    "current_stage": 5
+    "current_stage": 2
   }
 }

@@ -1,0 +1,133 @@
+{
+  "dummy_id": "419006ca-0d1e-41bc-9ed9-466038454070",
+  "dummy_name": "Kimberly Robinson",
+  "current_experiment_id": "gepa_exp_20251004_191257",
+  "current_prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+  "created_at": "2025-10-04T19:08:38.128395",
+  "last_updated": "2025-10-04T19:15:02.907317",
+  "conversation_profile": {
+    "original_fears": [
+      "Making new friends",
+      "Public speaking in class"
+    ],
+    "original_challenges": [
+      "Finding a mentor",
+      "Making friends in a new environment",
+      "Balancing extracurricular activities with studies",
+      "Coping with stress and burnout"
+    ],
+    "original_behaviors": [
+      "Stays up late studying",
+      "Studies in the library regularly",
+      "Exercises regularly"
+    ],
+    "original_anxiety_triggers": [
+      "Fraternity/Sorority events",
+      "Job interviews"
+    ],
+    "original_social_anxiety_level": 9,
+    "original_big_five": {
+      "extraversion": 1,
+      "agreeableness": 8,
+      "conscientiousness": 4,
+      "neuroticism": 8,
+      "openness": 7
+    },
+    "current_fears": [
+      "Starting conversations in the cafeteria",
+      "Raising hand to answer a question"
+    ],
+    "current_challenges": [
+      "Approaching a professor during office hours",
+      "Attending a fraternity/sorority event",
+      "Managing time between club meetings and homework",
+      "Staying up late studying for exams"
+    ],
+    "current_behaviors": [
+      "Pulling all-nighters before exams",
+      "Spending 3 hours daily in the library",
+      "Going to the gym 4 times a week"
+    ],
+    "current_anxiety_triggers": [
+      "Feeling out of place at social gatherings",
+      "Stumbling over words during an interview"
+    ],
+    "current_social_anxiety_level": 7,
+    "current_big_five": {
+      "extraversion": 1,
+      "agreeableness": 8,
+      "conscientiousness": 4,
+      "neuroticism": 8,
+      "openness": 7
+    },
+    "evolution_stages": [
+      {
+        "stage_number": 1,
+        "prompt_id": "9c0d9da5-ff41-4ca0-839e-9ec565c87d0d",
+        "prompt_name": "Genesis",
+        "generation": 0,
+        "conversation_id": "7dab3c1c-26a2-4eec-b57e-537097c6a119",
+        "conversation_summary": "1) Problems discussed: Kimberly's fear of public speaking and making friends, exacerbated by failed attempts at social events and study groups. 2) Solutions offered/accepted: Starting small with class participation, using email as a low-pressure way to initiate contact, and practicing breathing techniques. 3) Student's response to solutions: Initially resistant but eventually sent an email to a classmate, showing willingness to try new approaches. 4) Evidence of progress/improvement: Demonstrated by sending the email despite high anxiety, acknowledging the value of small steps, and attempting breathing exercises.",
+        "fears_materialized": {
+          "Making new friends": "Attending a pre-law society mixer and standing alone, feeling humiliated",
+          "Public speaking in class": "Unable to raise hand in lectures due to fear of judgment"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Struggling to network for research positions due to social anxiety",
+          "Making friends in a new environment": "Failed attempts at joining study groups and clubs",
+          "Balancing extracurricular activities with studies": "Staying up late studying, leading to burnout",
+          "Coping with stress and burnout": "Physical symptoms like throat closing up during social interactions"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Pulling all-nighters to avoid social interactions",
+          "Studies in the library regularly": "Using library as a safe space to avoid social settings",
+          "Exercises regularly": "Using exercise as a coping mechanism for stress"
+        },
+        "triggers_specified": {
+          "Fraternity/Sorority events": "Pre-law society mixer triggering social anxiety",
+          "Job interviews": "Fear of public speaking extending to professional settings"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.8,
+        "improvement_score": 0.7999999999999998,
+        "timestamp": "2025-10-04T19:11:22.135808"
+      },
+      {
+        "stage_number": 2,
+        "prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+        "prompt_name": "G1M01 from Genesis",
+        "generation": 1,
+        "conversation_id": "71841b99-753b-4e48-9807-6324c437c2e5",
+        "conversation_summary": "1) Problems discussed: Fear of public speaking, difficulty making friends, and coping with rejection. 2) Solutions offered/accepted: Prepping 'safe' comments for class, starting conversations by asking about caffeine habits, and recognizing that most people forget awkward moments. 3) Student's response to solutions: Initially hesitant but engaged in small talk practice and showed self-awareness. 4) Evidence of progress/improvement: Successfully commented on the coach's coffee choice, recognized and adjusted tone, and demonstrated willingness to engage despite initial fear.",
+        "fears_materialized": {
+          "Making new friends": "Starting conversations in the cafeteria",
+          "Public speaking in class": "Raising hand to answer a question"
+        },
+        "challenges_materialized": {
+          "Finding a mentor": "Approaching a professor during office hours",
+          "Making friends in a new environment": "Attending a fraternity/sorority event",
+          "Balancing extracurricular activities with studies": "Managing time between club meetings and homework",
+          "Coping with stress and burnout": "Staying up late studying for exams"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Pulling all-nighters before exams",
+          "Studies in the library regularly": "Spending 3 hours daily in the library",
+          "Exercises regularly": "Going to the gym 4 times a week"
+        },
+        "triggers_specified": {
+          "Fraternity/Sorority events": "Feeling out of place at social gatherings",
+          "Job interviews": "Stumbling over words during an interview"
+        },
+        "anxiety_change": -1.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.8999999999999999,
+        "timestamp": "2025-10-04T19:15:02.906775"
+      }
+    ],
+    "current_stage": 2
+  }
+}

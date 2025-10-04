@@ -1,10 +1,10 @@
 {
   "dummy_id": "40bb2243-655e-45e1-911d-b8e933b89a69",
   "dummy_name": "Sarah Brooks",
-  "current_experiment_id": "conversation_length_with_evolution",
-  "current_prompt_id": "conversation_length_test",
-  "created_at": "2025-10-02T22:29:18.100175",
-  "last_updated": "2025-10-02T23:02:01.959012",
+  "current_experiment_id": "gepa_exp_20251004_191257",
+  "current_prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+  "created_at": "2025-10-04T19:08:38.125595",
+  "last_updated": "2025-10-04T19:15:06.417006",
   "conversation_profile": {
     "original_fears": [
       "Choosing the right career path",
@@ -35,24 +35,24 @@
       "openness": 5
     },
     "current_fears": [
-      "Not discussed in this session",
-      "Delivering a class presentation on graph theory and attending language exchange club meetings"
+      "Not explicitly addressed in this conversation",
+      "Speaking up in class or making comments to peers"
     ],
     "current_challenges": [
-      "Practicing a presentation introduction alone due to panic",
-      "Late-night studying after scheduled tasks",
-      "Delaying recording practice until roommate leaves",
-      "Joining language club and initiating at study groups"
+      "Fear of blanking out during presentations",
+      "Not explicitly addressed in this conversation",
+      "Not explicitly addressed in this conversation",
+      "Initiating conversations with classmates"
     ],
     "current_behaviors": [
-      "Evening run before scheduled tasks",
-      "Not observed in this session",
-      "Late-night study session after 8pm recording"
+      "Not explicitly addressed in this conversation",
+      "Not explicitly addressed in this conversation",
+      "Not explicitly addressed in this conversation"
     ],
     "current_anxiety_triggers": [
-      "Study group gathering with cookies",
-      "Language exchange club meeting",
-      "Not triggered in this session"
+      "Not explicitly addressed in this conversation",
+      "Not explicitly addressed in this conversation",
+      "Not explicitly addressed in this conversation"
     ],
     "current_social_anxiety_level": 7,
     "current_big_five": {
@@ -65,170 +65,73 @@
     "evolution_stages": [
       {
         "stage_number": 1,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
+        "prompt_id": "9c0d9da5-ff41-4ca0-839e-9ec565c87d0d",
+        "prompt_name": "Genesis",
         "generation": 0,
-        "conversation_id": "conv_40bb2243-655e-45e1-911d-b8e933b89a69_milestone_5",
-        "conversation_summary": "Discussed presentation anxiety and social avoidance at language club. Solutions: recording practice videos starting with 30-second segments, emailing club organizers, and using cookie-baking for social initiation. Sarah responded positively: recorded presentation introduction at scheduled time, baked cookies, shared photo evidence, and planned cookie-sharing with peer. Progress shown through executed recording, initiated social baking, and time-management strategies.",
+        "conversation_id": "05fe0c89-21f1-4c21-b070-d7191c6876bc",
+        "conversation_summary": "Problems discussed: Social anxiety in large lecture halls and networking events, fear of judgment during presentations, and avoiding social interactions. Solutions offered/accepted: Sit closer to the front in lectures, initiate small talk with a friendly classmate, use deep breathing techniques, and start with low-pressure questions. Student's response to solutions: Agreed to try sitting closer and initiating one small conversation, recognized overthinking, and expressed gratitude. Evidence of progress/improvement: Student felt slightly more prepared to take social risks and planned concrete steps for the next lecture.",
         "fears_materialized": {
-          "Choosing the right career path": "Not discussed in conversation",
-          "Social anxiety in large lecture halls": "Delivering class presentation on graph theory"
+          "Choosing the right career path": "Networking events where career paths are discussed",
+          "Social anxiety in large lecture halls": "Sitting in the back of large lecture halls, feeling isolated"
         },
         "challenges_materialized": {
-          "Preparing for presentations": "Practicing introduction for graph theory presentation",
-          "Developing effective study habits": "Balancing evening run with late-night studying",
-          "Overcoming procrastination": "Initiating presentation recording practice",
-          "Making friends in a new environment": "Baking cookies for peer interaction"
+          "Preparing for presentations": "Mind blanking out during presentations due to fear of judgment",
+          "Developing effective study habits": "Staying up late studying, leading to fatigue",
+          "Overcoming procrastination": "Delaying preparation for presentations and networking events",
+          "Making friends in a new environment": "Avoiding social interactions in lectures and campus events"
         },
         "behaviors_detailed": {
-          "Exercises regularly": "Evening run before study sessions",
-          "Uses social media for networking": "Not observed in conversation",
-          "Stays up late studying": "Late-night study after 8pm activities"
+          "Exercises regularly": "Uses exercise as a stress-relief mechanism",
+          "Uses social media for networking": "Engages in online networking to avoid in-person interactions",
+          "Stays up late studying": "Late-night study sessions affecting next-day energy"
         },
         "triggers_specified": {
-          "Networking events": "Not observed in conversation",
-          "Campus social events": "Language exchange club meetings",
-          "Office hours": "Not discussed in conversation"
+          "Networking events": "Fear of initiating conversations with strangers",
+          "Campus social events": "Avoidance due to social anxiety",
+          "Office hours": "Uncertainty about how to approach professors"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.5,
+        "pre_assessment_score": 1.8,
         "post_assessment_score": 2.75,
-        "improvement_score": 0.25,
-        "timestamp": "2025-10-02T22:34:41.853179"
+        "improvement_score": 0.95,
+        "timestamp": "2025-10-04T19:10:09.243380"
       },
       {
         "stage_number": 2,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_40bb2243-655e-45e1-911d-b8e933b89a69_milestone_10",
-        "conversation_summary": "Sarah discussed presentation anxiety and avoidance of language club. Solutions offered included recording short presentation segments and emailing club organizers first. Sarah accepted recording 30 seconds at 8pm and baking cookies to initiate social connections. She demonstrated progress by scheduling the recording, texting a classmate to arrange cookie delivery, and considering keeping her recording. Evidence includes her completed cookie photo text and specific plan to meet after class.",
+        "prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+        "prompt_name": "G1M01 from Genesis",
+        "generation": 1,
+        "conversation_id": "408721b4-b2bf-4d2e-8338-e6225dd99dc4",
+        "conversation_summary": "Problems discussed: 1) Social anxiety in class settings, particularly speaking up and making friends, 2) Fear of blanking during presentations. Solutions offered/accepted: 1) Starting with basic comments to classmates (\"problem three?\") and introducing herself, 2) Using a scripted pause phrase during presentations, 3) Alternative small talk about granola bars if seating is too crowded. Student's response: Sarah showed visible relief (giggling, relaxed shoulders), agreed to try the strategies, and wrote them down as a commitment. Evidence of progress: Sarah moved from extreme nervousness to expressing hope and making a concrete plan, demonstrating reduced anxiety through body language and verbal agreement to implement solutions.",
         "fears_materialized": {
-          "Choosing the right career path": "Not discussed in conversation",
-          "Social anxiety in large lecture halls": "Presenting in class and entering language exchange club meetings"
+          "Choosing the right career path": "Not explicitly addressed in this conversation",
+          "Social anxiety in large lecture halls": "Speaking up in class or making comments to peers"
         },
         "challenges_materialized": {
-          "Preparing for presentations": "Practicing graph theory presentation alone",
-          "Developing effective study habits": "Late-night studying interfering with rest",
-          "Overcoming procrastination": "Delaying club participation until next semester",
-          "Making friends in a new environment": "Joining language club and initiating cookie-sharing"
+          "Preparing for presentations": "Fear of blanking out during presentations",
+          "Developing effective study habits": "Not explicitly addressed in this conversation",
+          "Overcoming procrastination": "Not explicitly addressed in this conversation",
+          "Making friends in a new environment": "Initiating conversations with classmates"
         },
         "behaviors_detailed": {
-          "Exercises regularly": "Evening run before scheduled recording session",
-          "Uses social media for networking": "Texting classmate to arrange cookie delivery",
-          "Stays up late studying": "Late-night study session after presentation recording"
+          "Exercises regularly": "Not explicitly addressed in this conversation",
+          "Uses social media for networking": "Not explicitly addressed in this conversation",
+          "Stays up late studying": "Not explicitly addressed in this conversation"
         },
         "triggers_specified": {
-          "Networking events": "Language exchange club meetings",
-          "Campus social events": "Cookie-sharing meetup with classmate",
-          "Office hours": "Not discussed in conversation"
+          "Networking events": "Not explicitly addressed in this conversation",
+          "Campus social events": "Not explicitly addressed in this conversation",
+          "Office hours": "Not explicitly addressed in this conversation"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.75,
-        "post_assessment_score": 2.85,
-        "improvement_score": 0.10000000000000009,
-        "timestamp": "2025-10-02T22:42:46.960177"
-      },
-      {
-        "stage_number": 3,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_40bb2243-655e-45e1-911d-b8e933b89a69_milestone_15",
-        "conversation_summary": "Sarah discussed presentation anxiety and avoidance of language club due to social fears. Solutions offered: recording short presentation clips and emailing club organizers. She accepted both, scheduling recording practice at 8pm and considering keeping one weekly clip as progress journal. Later, she initiated cookie-baking for study group, sending photo evidence of follow-through. Progress shown through completed recording task, social initiative, and reframing nervousness as readiness.",
-        "fears_materialized": {
-          "Social anxiety in large lecture halls": "Presenting in front of class and joining language exchange club"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Practicing graph theory introduction for class presentation",
-          "Overcoming procrastination": "Avoiding recording practice for presentation",
-          "Making friends in a new environment": "Joining study group and initiating social connection"
-        },
-        "behaviors_detailed": {
-          "Exercises regularly": "Evening run before scheduled recording practice",
-          "Stays up late studying": "Late-night study session after recording practice"
-        },
-        "triggers_specified": {
-          "Campus social events": "Language exchange club meetings and study group gatherings"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.85,
-        "post_assessment_score": 2.85,
-        "improvement_score": 0.0,
-        "timestamp": "2025-10-02T22:49:21.485568"
-      },
-      {
-        "stage_number": 4,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_40bb2243-655e-45e1-911d-b8e933b89a69_milestone_20",
-        "conversation_summary": "Problems discussed: 1) Anxiety about class presentation delivery 2) Avoidance of language exchange club 3) Difficulty initiating social connections. Solutions offered/accepted: 1) Recording short presentation segments 2) Emailing club organizers 3) Using baking/shared food for social connection. Student's response: Initially hesitant but scheduled recording practice, baked cookies independently, and arranged cookie-sharing meetup. Evidence of progress: Set specific practice time, reframed nervousness as normal, initiated social contact via text, and demonstrated self-awareness by requesting support.",
-        "fears_materialized": {
-          "Choosing the right career path": "Not explicitly addressed in conversation",
-          "Social anxiety in large lecture halls": "Panic at prospect of class presentation on graph theory"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Practicing presentation introduction alone but freezing at thought of class delivery",
-          "Developing effective study habits": "Late-night studying interfering with presentation practice",
-          "Overcoming procrastination": "Setting reminder to prevent self-talk from delaying recording practice",
-          "Making friends in a new environment": "Hesitation to join language exchange club despite interest"
-        },
-        "behaviors_detailed": {
-          "Exercises regularly": "Evening run scheduled before recording practice",
-          "Uses social media for networking": "Texting about cookie-baking results to initiate connection",
-          "Stays up late studying": "Late-night study session scheduled after recording practice"
-        },
-        "triggers_specified": {
-          "Networking events": "Language exchange club meeting triggering avoidance",
-          "Campus social events": "Study group meeting requiring social initiation",
-          "Office hours": "Not triggered in conversation"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.85,
-        "post_assessment_score": 2.6,
-        "improvement_score": -0.25,
-        "timestamp": "2025-10-02T22:55:28.610963"
-      },
-      {
-        "stage_number": 5,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_40bb2243-655e-45e1-911d-b8e933b89a69_milestone_25",
-        "conversation_summary": "Problems discussed: 1) Anxiety about class presentations and joining language club, 2) Difficulty initiating social connections. Solutions offered/accepted: 1) Recording 30-second presentation segments at scheduled times, 2) Emailing club organizers instead of in-person approach, 3) Baking cookies for study groups to facilitate interactions. Student's response: Initially hesitant but scheduled recording, baked cookies, and arranged follow-up meeting. Evidence of progress: 1) Completed cookie baking and shared photo evidence, 2) Scheduled specific practice time with reminder, 3) Practiced opening line for study group, 4) Initiated recipe check request and taste-test meeting.",
-        "fears_materialized": {
-          "Choosing the right career path": "Not discussed in this session",
-          "Social anxiety in large lecture halls": "Delivering a class presentation on graph theory and attending language exchange club meetings"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Practicing a presentation introduction alone due to panic",
-          "Developing effective study habits": "Late-night studying after scheduled tasks",
-          "Overcoming procrastination": "Delaying recording practice until roommate leaves",
-          "Making friends in a new environment": "Joining language club and initiating at study groups"
-        },
-        "behaviors_detailed": {
-          "Exercises regularly": "Evening run before scheduled tasks",
-          "Uses social media for networking": "Not observed in this session",
-          "Stays up late studying": "Late-night study session after 8pm recording"
-        },
-        "triggers_specified": {
-          "Networking events": "Study group gathering with cookies",
-          "Campus social events": "Language exchange club meeting",
-          "Office hours": "Not triggered in this session"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.6,
-        "post_assessment_score": 2.85,
-        "improvement_score": 0.6000000000000001,
-        "timestamp": "2025-10-02T23:02:01.958525"
+        "pre_assessment_score": 1.8,
+        "post_assessment_score": 2.65,
+        "improvement_score": 0.8499999999999999,
+        "timestamp": "2025-10-04T19:15:06.416631"
       }
     ],
-    "current_stage": 5
+    "current_stage": 2
   }
 }

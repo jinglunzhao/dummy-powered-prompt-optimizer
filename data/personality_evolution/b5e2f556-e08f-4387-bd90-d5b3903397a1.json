@@ -1,10 +1,10 @@
 {
   "dummy_id": "b5e2f556-e08f-4387-bd90-d5b3903397a1",
   "dummy_name": "Lisa Wilson",
-  "current_experiment_id": "conversation_length_with_evolution",
-  "current_prompt_id": "conversation_length_test",
-  "created_at": "2025-10-02T22:29:18.099632",
-  "last_updated": "2025-10-02T23:06:05.825162",
+  "current_experiment_id": "gepa_exp_20251004_190838",
+  "current_prompt_id": "9c0d9da5-ff41-4ca0-839e-9ec565c87d0d",
+  "created_at": "2025-10-04T19:08:38.125182",
+  "last_updated": "2025-10-04T19:10:54.347909",
   "conversation_profile": {
     "original_fears": [
       "Choosing the right career path",
@@ -37,26 +37,26 @@
       "openness": 9
     },
     "current_fears": [
-      "Expressed frustration about figuring out life direction while overwhelmed by assignments",
-      "Not discussed in conversation"
+      "Starting a student organization and studying abroad",
+      "Not explicitly mentioned in conversation"
     ],
     "current_challenges": [
-      "Anxiety about writing, practicing, and delivering class presentation",
-      "Struggling to balance part-time job, classes, assignments, and basic self-care (eating)",
-      "Not discussed in conversation",
-      "Not discussed in conversation"
+      "Freezing up during a presentation for the student org",
+      "Not explicitly mentioned in conversation",
+      "Not explicitly mentioned in conversation",
+      "Not explicitly mentioned in conversation"
     ],
     "current_behaviors": [
-      "Not observed in conversation",
-      "Avoided trying time-blocking method due to feeling overwhelmed",
-      "Not observed in conversation",
-      "Not observed in conversation"
+      "Not explicitly mentioned in conversation",
+      "Not explicitly mentioned in conversation",
+      "Not explicitly mentioned in conversation",
+      "Attending networking events and office hours"
     ],
     "current_anxiety_triggers": [
-      "Preparing for and delivering class presentation",
-      "Not discussed in conversation",
-      "Not discussed in conversation",
-      "Not discussed in conversation"
+      "Presenting for the student org",
+      "Career fairs and big networking events",
+      "Not explicitly mentioned in conversation",
+      "Not explicitly mentioned in conversation"
     ],
     "current_social_anxiety_level": 7,
     "current_big_five": {
@@ -69,175 +69,41 @@
     "evolution_stages": [
       {
         "stage_number": 1,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
+        "prompt_id": "9c0d9da5-ff41-4ca0-839e-9ec565c87d0d",
+        "prompt_name": "Genesis",
         "generation": 0,
-        "conversation_id": "conv_b5e2f556-e08f-4387-bd90-d5b3903397a1_milestone_5",
-        "conversation_summary": "Lisa discussed overwhelming anxiety about an upcoming presentation and impossible workload balancing classes with a part-time job. Solutions offered included breathing exercises (rejected), practice recording (rejected), time-blocking (rejected), and fountain breaks (accepted). Lisa committed to trying 10-minute fountain breaks during lunch and accepted hydration/nutrition support. She demonstrated progress by immediately using the water bottle, consuming provided snacks, making specific future snack requests, and returning for continued engagement - showing reduced defensiveness and increased trust in the coaching process.",
+        "conversation_id": "23d8f16a-d853-4877-b54b-63f85373443d",
+        "conversation_summary": "Problems discussed: 1) Fear of judgment/rejection when pitching student org ideas, 2) Presentation anxiety in leadership roles, 3) Imposter syndrome about leading the org, 4) Isolation concerns with study abroad. Solutions offered/accepted: 1) Testing the org idea casually with 2-3 classmates over coffee, 2) Using bullet points for presentations and practicing, 3) Recruiting a co-founder for the org, 4) Requesting a buddy system and pre-departure meetups for study abroad. Student's response to solutions: Positive, agreed to text friends and email study abroad office, expressed gratitude for the support. Evidence of progress/improvement: Student has clear action items (texting friends, emailing study abroad office) and feels more confident about taking small steps.",
         "fears_materialized": {
-          "Choosing the right career path": "Feeling lost about future career direction while juggling Communications coursework and part-time job",
-          "Dealing with roommate conflicts": "Not explicitly discussed in conversation"
+          "Choosing the right career path": "Starting a student organization and studying abroad",
+          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation"
         },
         "challenges_materialized": {
-          "Preparing for presentations": "Anxiety about writing, practicing, and delivering class presentations causing physical distress",
-          "Adjusting to college workload": "Overwhelming schedule balancing classes, part-time job, and assignments with no personal time",
-          "Navigating campus politics": "Not explicitly discussed in conversation",
-          "Managing student loans": "Not explicitly discussed in conversation"
+          "Preparing for presentations": "Freezing up during a presentation for the student org",
+          "Adjusting to college workload": "Not explicitly mentioned in conversation",
+          "Navigating campus politics": "Not explicitly mentioned in conversation",
+          "Managing student loans": "Not explicitly mentioned in conversation"
         },
         "behaviors_detailed": {
-          "Participates in study groups": "Not explicitly discussed in conversation",
-          "Procrastinates on assignments": "Delaying work until overwhelmed, leading to last-minute cramming",
-          "Stays up late studying": "Exhausted from late-night study sessions due to poor time management",
-          "Goes to campus events": "Not explicitly discussed in conversation"
+          "Participates in study groups": "Not explicitly mentioned in conversation",
+          "Procrastinates on assignments": "Not explicitly mentioned in conversation",
+          "Stays up late studying": "Not explicitly mentioned in conversation",
+          "Goes to campus events": "Attending networking events and office hours"
         },
         "triggers_specified": {
-          "Presentations": "Upcoming class presentation causing stomach knots and panic",
-          "Networking events": "Not explicitly discussed in conversation",
-          "Fraternity/Sorority events": "Not explicitly discussed in conversation",
-          "Office hours": "Not explicitly discussed in conversation"
+          "Presentations": "Presenting for the student org",
+          "Networking events": "Career fairs and big networking events",
+          "Fraternity/Sorority events": "Not explicitly mentioned in conversation",
+          "Office hours": "Not explicitly mentioned in conversation"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.5,
-        "post_assessment_score": 2.6,
-        "improvement_score": 0.10000000000000009,
-        "timestamp": "2025-10-02T22:39:10.325138"
-      },
-      {
-        "stage_number": 2,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_b5e2f556-e08f-4387-bd90-d5b3903397a1_milestone_10",
-        "conversation_summary": "Discussed presentation anxiety, overwhelming workload, and perceived ease of peers' success. Solutions: Initially rejected breathing exercises and practice recording; accepted fountain breaks, hydration, and snacks. Lisa showed progress by accepting water/snacks, agreeing to a break, and shifting from hostility to playful engagement. Evidence: Took water bottle, consumed protein bars, smiled, set snack terms for next session, and demonstrated rapport through banter.",
-        "fears_materialized": {
-          "Choosing the right career path": "Expressing frustration about life direction while overwhelmed by academic demands",
-          "Dealing with roommate conflicts": "Not discussed in this session"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Anxiety about writing, practicing, and delivering class presentations",
-          "Adjusting to college workload": "Juggling part-time job, classes, and assignments with no free time",
-          "Navigating campus politics": "Not discussed in this session",
-          "Managing student loans": "Not discussed in this session"
-        },
-        "behaviors_detailed": {
-          "Participates in study groups": "Not observed in this session",
-          "Procrastinates on assignments": "Not observed in this session",
-          "Stays up late studying": "Not observed in this session",
-          "Goes to campus events": "Not observed in this session"
-        },
-        "triggers_specified": {
-          "Presentations": "Physical anxiety (stomach knots) when preparing for class presentations",
-          "Networking events": "Not discussed in this session",
-          "Fraternity/Sorority events": "Not discussed in this session",
-          "Office hours": "Not discussed in this session"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.6,
-        "post_assessment_score": 3.2,
-        "improvement_score": 0.6000000000000001,
-        "timestamp": "2025-10-02T22:47:22.447928"
-      },
-      {
-        "stage_number": 3,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_b5e2f556-e08f-4387-bd90-d5b3903397a1_milestone_15",
-        "conversation_summary": "Discussed presentation anxiety and overwhelming workload. Solutions offered: scaled-down intervention (10-minute fountain break), hydration, and snacks. Student initially rejected complex solutions but accepted small, tangible actions. Progress evidenced by: 1) Agreement to fountain break, 2) Immediate consumption of water/protein bar, 3) Emergence of humor/banter, 4) Setting terms for next session (peanut butter), 5) Reluctant gratitude expressions showing rapport building.",
-        "fears_materialized": {
-          "Choosing the right career path": "Overwhelmed by career uncertainty while juggling coursework and part-time job",
-          "Dealing with roommate conflicts": "Not discussed in this session"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Anxiety about writing, practicing, and delivering class presentations causing physical distress",
-          "Adjusting to college workload": "No time between classes, part-time job, and assignments; eating lunch while working",
-          "Navigating campus politics": "Not discussed in this session",
-          "Managing student loans": "Not discussed in this session"
-        },
-        "behaviors_detailed": {
-          "Participates in study groups": "Not observed in session",
-          "Procrastinates on assignments": "Avoiding presentation preparation due to anxiety",
-          "Stays up late studying": "Implied by 'running on fumes' comment",
-          "Goes to campus events": "Not observed in session"
-        },
-        "triggers_specified": {
-          "Presentations": "Upcoming class presentation causing stomach knots",
-          "Networking events": "Not discussed in this session",
-          "Fraternity/Sorority events": "Not discussed in this session",
-          "Office hours": "Not discussed in this session"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 3.2,
-        "post_assessment_score": 3.3,
-        "improvement_score": 0.09999999999999964,
-        "timestamp": "2025-10-02T22:52:47.455881"
-      },
-      {
-        "stage_number": 4,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_b5e2f556-e08f-4387-bd90-d5b3903397a1_milestone_20",
-        "conversation_summary": "Student continued to engage actively in coaching session, showing willingness to work on personal challenges and apply strategies discussed. While specific details could not be fully analyzed due to technical issues, the student demonstrated positive engagement and openness to guidance.",
-        "fears_materialized": {
-          "general_anxiety": "Continuing to work through social and academic challenges"
-        },
-        "challenges_materialized": {
-          "social_interaction": "Practicing communication skills in various contexts"
-        },
-        "behaviors_detailed": {
-          "engagement": "Actively participating in coaching sessions and applying advice"
-        },
-        "triggers_specified": {
-          "stress_situations": "High-pressure academic and social environments"
-        },
-        "anxiety_change": -0.2,
-        "new_anxiety_level": 7.8,
-        "pre_assessment_score": 3.3,
-        "post_assessment_score": 3.1,
-        "improvement_score": -0.19999999999999973,
-        "timestamp": "2025-10-02T22:59:13.912597"
-      },
-      {
-        "stage_number": 5,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_b5e2f556-e08f-4387-bd90-d5b3903397a1_milestone_25",
-        "conversation_summary": "Lisa discussed overwhelming anxiety about an upcoming presentation (writing, practicing, delivering) and inability to balance coursework with part-time job and basic self-care. Solutions offered included recording practice (rejected), time-blocking (rejected), and taking 10-minute breaks at campus fountain (accepted). She positively responded to hydration/nutrition support (accepted water/protein bars) and snack-based rapport building. Progress evidenced through: 1) Agreement to try fountain break, 2) Repeated return for sessions despite initial resistance, 3) Transition from hostile to humorous engagement, 4) Leaving payment for tissues showing investment in process, and 5) Specific snack requests demonstrating trust building.",
-        "fears_materialized": {
-          "Choosing the right career path": "Expressed frustration about figuring out life direction while overwhelmed by assignments",
-          "Dealing with roommate conflicts": "Not discussed in conversation"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Anxiety about writing, practicing, and delivering class presentation",
-          "Adjusting to college workload": "Struggling to balance part-time job, classes, assignments, and basic self-care (eating)",
-          "Navigating campus politics": "Not discussed in conversation",
-          "Managing student loans": "Not discussed in conversation"
-        },
-        "behaviors_detailed": {
-          "Participates in study groups": "Not observed in conversation",
-          "Procrastinates on assignments": "Avoided trying time-blocking method due to feeling overwhelmed",
-          "Stays up late studying": "Not observed in conversation",
-          "Goes to campus events": "Not observed in conversation"
-        },
-        "triggers_specified": {
-          "Presentations": "Preparing for and delivering class presentation",
-          "Networking events": "Not discussed in conversation",
-          "Fraternity/Sorority events": "Not discussed in conversation",
-          "Office hours": "Not discussed in conversation"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 3.1,
-        "post_assessment_score": 3.3,
-        "improvement_score": 0.75,
-        "timestamp": "2025-10-02T23:06:05.824680"
+        "pre_assessment_score": 2.55,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.5499999999999998,
+        "timestamp": "2025-10-04T19:10:54.346971"
       }
     ],
-    "current_stage": 5
+    "current_stage": 1
   }
 }

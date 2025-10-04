@@ -1,0 +1,141 @@
+{
+  "dummy_id": "e9f72c89-11cd-48ff-8f57-bb822854621a",
+  "dummy_name": "Morgan Clark",
+  "current_experiment_id": "gepa_exp_20251004_191257",
+  "current_prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+  "created_at": "2025-10-04T19:08:38.130565",
+  "last_updated": "2025-10-04T19:16:01.063759",
+  "conversation_profile": {
+    "original_fears": [
+      "Living away from family for the first time",
+      "Dealing with roommate conflicts",
+      "Balancing social life and studies"
+    ],
+    "original_challenges": [
+      "Adjusting to college workload",
+      "Making friends in a new environment",
+      "Finding a mentor"
+    ],
+    "original_behaviors": [
+      "Exercises regularly",
+      "Attends professor office hours",
+      "Uses campus resources like tutoring",
+      "Volunteers for campus events",
+      "Uses social media for networking"
+    ],
+    "original_anxiety_triggers": [
+      "Fraternity/Sorority events",
+      "Large lecture halls"
+    ],
+    "original_social_anxiety_level": 10,
+    "original_big_five": {
+      "extraversion": 8,
+      "agreeableness": 1,
+      "conscientiousness": 3,
+      "neuroticism": 10,
+      "openness": 3
+    },
+    "current_fears": [
+      "Feeling isolated in dorm room",
+      "Potential disagreements over shared space",
+      "Overwhelm from social events and coursework"
+    ],
+    "current_challenges": [
+      "Struggling with math problem sets",
+      "Anxiety at large social gatherings",
+      "Fear of approaching professors"
+    ],
+    "current_behaviors": [
+      "Uses campus gym to manage stress",
+      "Seeks help with math concepts",
+      "Attends math tutoring sessions",
+      "Helps at freshman orientation",
+      "Connects with peers via LinkedIn"
+    ],
+    "current_anxiety_triggers": [
+      "Large, noisy parties with unfamiliar people",
+      "Intimidating environment for asking questions"
+    ],
+    "current_social_anxiety_level": 7,
+    "current_big_five": {
+      "extraversion": 8,
+      "agreeableness": 1,
+      "conscientiousness": 3,
+      "neuroticism": 10,
+      "openness": 3
+    },
+    "evolution_stages": [
+      {
+        "stage_number": 1,
+        "prompt_id": "9c0d9da5-ff41-4ca0-839e-9ec565c87d0d",
+        "prompt_name": "Genesis",
+        "generation": 0,
+        "conversation_id": "a3ebfbf5-3fc9-4da2-9a55-2d278a6e7a5d",
+        "conversation_summary": "Problems discussed: 1) Anxiety about public speaking and leadership, 2) Difficulty making friends and initiating conversations, 3) Overwhelm with college adjustments. Solutions offered/accepted: 1) Start with low-pressure clubs (e.g., puzzle group), 2) Take smaller roles in clubs, 3) Use homework complaints as icebreakers. Student's response: Positive—expressed willingness to try conversation starters and join clubs. Evidence of progress: Plans to initiate a conversation in calc class and attend low-pressure club meetings, showing reduced anxiety and proactive steps toward social and leadership goals.",
+        "fears_materialized": {
+          "Living away from family for the first time": "Feeling overwhelmed and isolated in a new environment",
+          "Dealing with roommate conflicts": "Potential awkwardness or tension with a new roommate",
+          "Balancing social life and studies": "Struggling to manage time between social events and academic workload"
+        },
+        "challenges_materialized": {
+          "Adjusting to college workload": "Feeling stressed about keeping up with assignments and lectures",
+          "Making friends in a new environment": "Difficulty initiating conversations and forming connections",
+          "Finding a mentor": "Uncertainty about how to approach professors or older students for guidance"
+        },
+        "behaviors_detailed": {
+          "Exercises regularly": "Uses gym to relieve stress and stay healthy",
+          "Attends professor office hours": "Seeks clarification on difficult topics",
+          "Uses campus resources like tutoring": "Attends math tutoring sessions to improve understanding",
+          "Volunteers for campus events": "Helps at volunteer org events to meet people",
+          "Uses social media for networking": "Joins online groups for incoming students"
+        },
+        "triggers_specified": {
+          "Fraternity/Sorority events": "Large, noisy gatherings with unfamiliar people",
+          "Large lecture halls": "Intimidating environment with many students"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 1.85,
+        "post_assessment_score": 2.7,
+        "improvement_score": 0.8500000000000001,
+        "timestamp": "2025-10-04T19:10:31.295519"
+      },
+      {
+        "stage_number": 2,
+        "prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+        "prompt_name": "G1M01 from Genesis",
+        "generation": 1,
+        "conversation_id": "1cf116ed-9dbd-4d51-9619-d173a0c4ef6a",
+        "conversation_summary": "Problems discussed: Social anxiety, networking fears, fear of judgment in academic settings. Solutions offered/accepted: Micro-socializing, mirror practice, workshop attendance, and prepared escape routes. Student's response to solutions: Positive engagement, agreed to try mirror practice and workshop, planned cheese-table strategy. Evidence of progress/improvement: Reduced anxiety level, willingness to take actionable steps, and recognition of irrational fears.",
+        "fears_materialized": {
+          "Living away from family for the first time": "Feeling isolated in dorm room",
+          "Dealing with roommate conflicts": "Potential disagreements over shared space",
+          "Balancing social life and studies": "Overwhelm from social events and coursework"
+        },
+        "challenges_materialized": {
+          "Adjusting to college workload": "Struggling with math problem sets",
+          "Making friends in a new environment": "Anxiety at large social gatherings",
+          "Finding a mentor": "Fear of approaching professors"
+        },
+        "behaviors_detailed": {
+          "Exercises regularly": "Uses campus gym to manage stress",
+          "Attends professor office hours": "Seeks help with math concepts",
+          "Uses campus resources like tutoring": "Attends math tutoring sessions",
+          "Volunteers for campus events": "Helps at freshman orientation",
+          "Uses social media for networking": "Connects with peers via LinkedIn"
+        },
+        "triggers_specified": {
+          "Fraternity/Sorority events": "Large, noisy parties with unfamiliar people",
+          "Large lecture halls": "Intimidating environment for asking questions"
+        },
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 1.85,
+        "post_assessment_score": 0.0,
+        "improvement_score": -1.85,
+        "timestamp": "2025-10-04T19:16:01.063357"
+      }
+    ],
+    "current_stage": 2
+  }
+}

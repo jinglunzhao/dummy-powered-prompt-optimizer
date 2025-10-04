@@ -1,10 +1,10 @@
 {
   "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
   "dummy_name": "Jamie Young",
-  "current_experiment_id": "conversation_length_with_evolution",
-  "current_prompt_id": "conversation_length_test",
-  "created_at": "2025-10-02T22:29:18.093773",
-  "last_updated": "2025-10-02T23:06:35.708335",
+  "current_experiment_id": "gepa_exp_20251004_191257",
+  "current_prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+  "created_at": "2025-10-04T19:08:38.122095",
+  "last_updated": "2025-10-04T19:13:51.693868",
   "conversation_profile": {
     "original_fears": [
       "Finding a job after graduation",
@@ -39,28 +39,28 @@
       "openness": 1
     },
     "current_fears": [
-      "Avoided algorithms assignment due to job search anxiety, expressed panic about networking at career fairs",
-      "Called family frequently for reassurance when stressed about academic/job pressures",
-      "Procrastinated on assignments due to job-search anxiety spiral"
+      "Freezing during job interviews, particularly when explaining coding concepts",
+      "Feeling the need to call family frequently to avoid worrying them",
+      "Staying up late studying due to procrastination"
     ],
     "current_challenges": [
-      "Fear of approaching strangers at career fairs, blanking during networking conversations",
-      "Stayed up late studying due to procrastination, physical anxiety during class presentations",
-      "Classmate ignored project collaboration request, causing self-doubt",
-      "Avoided algorithms work to ruminate about job prospects"
+      "Difficulty in networking and job interviews",
+      "Leaving a group presentation due to panic",
+      "Not explicitly mentioned, but implied in general anxiety",
+      "Procrastinating on assignments leading to late-night study sessions"
     ],
     "current_behaviors": [
-      "Attempted to connect with classmate for group project collaboration",
-      "Delayed algorithms work to fixate on job-search worries",
-      "Contacted mother for networking advice when overwhelmed",
-      "Planned to approach peers in study rooms for assignment help",
-      "Pulled all-nighters due to daytime avoidance behaviors"
+      "Not explicitly detailed in conversation",
+      "Stays up late studying as a result",
+      "Needs to call mom regularly to reassure her",
+      "Not explicitly detailed in conversation",
+      "Result of procrastination on assignments"
     ],
     "current_anxiety_triggers": [
-      "Not explicitly triggered in session",
-      "Classmate ignored collaboration request, triggering self-doubt spiral",
-      "Career fair networking anticipation caused physical anxiety symptoms",
-      "Voice shook during class speaking attempts, avoided further participation"
+      "Not explicitly detailed in conversation",
+      "Left a group presentation due to panic",
+      "Freezing when explaining coding concepts",
+      "Panic leading to leaving a group presentation"
     ],
     "current_social_anxiety_level": 7,
     "current_big_five": {
@@ -73,188 +73,81 @@
     "evolution_stages": [
       {
         "stage_number": 1,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
+        "prompt_id": "9c0d9da5-ff41-4ca0-839e-9ec565c87d0d",
+        "prompt_name": "Genesis",
         "generation": 0,
-        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_milestone_5",
-        "conversation_summary": "Discussed networking anxiety around job searches and academic pressures. Solutions: Role-played networking scenarios, designed achievable interaction steps ('library hi'), created rejection response plans, and used humor/gestures to reduce tension. Jamie showed progress by practicing multiple conversation approaches, submitting a job application despite fear, creating coping strategies (evidence folder), and planning concrete next steps (lab interaction, response tracking).",
+        "conversation_id": "277de760-96a0-4cb5-bde7-36b5221f4073",
+        "conversation_summary": "1) Problems discussed: Jamie expressed fear about job interviews and networking, specifically freezing up and worrying about saying something stupid. 2) Solutions offered/accepted: The AI Coach suggested starting small with networking, practicing common interview questions, and conducting mock interviews. Jamie accepted these solutions and practiced drafting responses. 3) Student's response to solutions: Jamie initially hesitated but engaged in text-based practice, refining answers and showing enthusiasm. 4) Evidence of progress/improvement: Jamie successfully drafted and improved responses to interview questions, recognized the value of showing enthusiasm, and articulated a weakness positively.",
         "fears_materialized": {
-          "Finding a job after graduation": "Panicking after submitting a humorous job application with cat GIFs",
-          "Living away from family for the first time": "Considering calling mom immediately after sending job application",
-          "Time management with coursework": "Procrastinating on algorithms assignment by fixating on job search anxiety"
+          "Finding a job after graduation": "Freezing up during job interviews",
+          "Living away from family for the first time": "Calling family frequently for comfort",
+          "Time management with coursework": "Staying up late studying due to procrastination"
         },
         "challenges_materialized": {
-          "Career exploration": "Role-playing networking conversations for job interviews",
-          "Dealing with academic pressure": "Avoiding algorithms assignment due to job anxiety",
-          "Navigating campus politics": "Initiating contact with peers in library study groups",
-          "Building time management": "Balancing job applications with coursework deadlines"
+          "Career exploration": "Difficulty with networking and job interviews",
+          "Dealing with academic pressure": "Staying up late studying for an algorithms quiz",
+          "Navigating campus politics": "Not explicitly mentioned in conversation",
+          "Building time management": "Procrastinating on assignments"
         },
         "behaviors_detailed": {
-          "Joins student clubs and organizations": "Attempting to connect with peers in library study sessions",
-          "Procrastinates on assignments": "Delaying algorithms work to obsess over job applications",
-          "Calls family frequently": "Seeking mom's advice after sending job application",
-          "Studies in the library regularly": "Practicing peer interactions in study room context"
+          "Joins student clubs and organizations": "Not explicitly mentioned in conversation",
+          "Procrastinates on assignments": "Staying up late studying",
+          "Calls family frequently": "Seeking comfort from family",
+          "Studies in the library regularly": "Not explicitly mentioned in conversation",
+          "Stays up late studying": "Preparing for an algorithms quiz"
         },
         "triggers_specified": {
-          "Office hours": "Not explicitly triggered in conversation",
-          "Group projects": "Messaging classmate about project without reply",
-          "Job interviews": "Role-playing networking conversations with coach",
-          "Presentations": "Recalling voice-shaking during class presentations"
+          "Office hours": "Not explicitly mentioned in conversation",
+          "Group projects": "Volunteering to present small sections",
+          "Job interviews": "Freezing up during interviews",
+          "Presentations": "Explaining database schema to the team"
         },
         "anxiety_change": -1.5,
         "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.5,
+        "pre_assessment_score": 1.65,
         "post_assessment_score": 3.35,
-        "improvement_score": 0.8500000000000001,
-        "timestamp": "2025-10-02T22:40:52.437038"
+        "improvement_score": 1.7000000000000002,
+        "timestamp": "2025-10-04T19:11:59.244060"
       },
       {
         "stage_number": 2,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_milestone_10",
-        "conversation_summary": "Discussed networking terror and job application anxiety. Solutions: role-playing safe interactions, reframing rejection, starting with emails/quick greetings. Jamie responded by designing achievable steps (library greeting), creating openers ('Need help debugging?'), and practicing responses. Progress shown through successful role-plays (voice strengthening during practice), submitting job application despite fear, recognizing overthinking patterns, and using humor to cope.",
+        "prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+        "prompt_name": "G1M01 from Genesis",
+        "generation": 1,
+        "conversation_id": "2dc794d1-e332-4153-8c3d-2deddab1b1e8",
+        "conversation_summary": "Problems discussed: 1) Freezing during job interviews, especially when explaining coding concepts, 2) Panic during presentations leading to leaving a group presentation, 3) General anxiety about job prospects and academic pressure. Solutions offered/accepted: 1) 3-step 'oops plan' for interviews, 2) Safety net script for panic moments, 3) Practicing interview skills with a pet. Student's response to solutions: Positive, expressed relief, and asked for a follow-up session. Evidence of progress/improvement: Willingness to start low-pressure practice, positive reception to strategies, and decreased anxiety level.",
         "fears_materialized": {
-          "Finding a job after graduation": "Panicking after submitting unconventional job application with cat-themed elements",
-          "Living away from family for the first time": "Calling mother for reassurance after stressful networking attempts",
-          "Time management with coursework": "Procrastinating on algorithms assignment due to job-search anxiety"
+          "Finding a job after graduation": "Freezing during job interviews, particularly when explaining coding concepts",
+          "Living away from family for the first time": "Feeling the need to call family frequently to avoid worrying them",
+          "Time management with coursework": "Staying up late studying due to procrastination"
         },
         "challenges_materialized": {
-          "Career exploration": "Struggling to network effectively at career fairs and in academic settings",
-          "Dealing with academic pressure": "Avoiding group project collaboration after classmate ignored message",
-          "Navigating campus politics": "Anxiety about peer judgment during class presentations",
-          "Building time management": "Staying up late to compensate for procrastination"
+          "Career exploration": "Difficulty in networking and job interviews",
+          "Dealing with academic pressure": "Leaving a group presentation due to panic",
+          "Navigating campus politics": "Not explicitly mentioned, but implied in general anxiety",
+          "Building time management": "Procrastinating on assignments leading to late-night study sessions"
         },
         "behaviors_detailed": {
-          "Joins student clubs and organizations": "Attempting study collaborations in library settings",
-          "Procrastinates on assignments": "Avoiding algorithms work to stress about job prospects",
-          "Calls family frequently": "Seeking mother's advice about networking strategies",
-          "Studies in the library regularly": "Planning peer interactions in study rooms",
-          "Stays up late studying": "Cramming after daytime avoidance behaviors"
+          "Joins student clubs and organizations": "Not explicitly detailed in conversation",
+          "Procrastinates on assignments": "Stays up late studying as a result",
+          "Calls family frequently": "Needs to call mom regularly to reassure her",
+          "Studies in the library regularly": "Not explicitly detailed in conversation",
+          "Stays up late studying": "Result of procrastination on assignments"
         },
         "triggers_specified": {
-          "Office hours": "Seeking help with coursework (implied by debugging struggles)",
-          "Group projects": "Classmate not responding to project collaboration request",
-          "Job interviews": "Submitting job application with unconventional elements",
-          "Presentations": "Voice shaking during class participation attempts"
+          "Office hours": "Not explicitly detailed in conversation",
+          "Group projects": "Left a group presentation due to panic",
+          "Job interviews": "Freezing when explaining coding concepts",
+          "Presentations": "Panic leading to leaving a group presentation"
         },
         "anxiety_change": -1.5,
         "new_anxiety_level": 7.5,
-        "pre_assessment_score": 3.35,
-        "post_assessment_score": 2.85,
-        "improvement_score": -0.5,
-        "timestamp": "2025-10-02T22:48:08.373945"
-      },
-      {
-        "stage_number": 3,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_milestone_15",
-        "conversation_summary": "Problems: Networking anxiety, fear of rejection, job application stress, and overthinking social interactions. Solutions: Role-playing practice, reframing rejection responses, creating simple openers, celebrating small wins via Awkward Wins folder, and sending one job application experimentally. Response: Jamie actively engaged in solutions - designed openers, successfully role-played scenarios, committed to real-world practice, and sent application. Progress: Demonstrated reduced anxiety through laughter/joking, created actionable plan for lab interaction, documented win, and took concrete action by submitting application.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Panicking about networking at career fairs and sending job applications",
-          "Living away from family for the first time": "Calling mom for advice when stressed about social interactions",
-          "Time management with coursework": "Procrastinating on algorithms assignment despite deadline pressure"
-        },
-        "challenges_materialized": {
-          "Career exploration": "Struggling to initiate networking conversations with peers",
-          "Dealing with academic pressure": "Avoiding group project collaboration due to fear of judgment",
-          "Navigating campus politics": "Anxiety about peer rejection in academic settings (e.g., unanswered project message)",
-          "Building time management": "Staying up late to compensate for procrastination"
-        },
-        "behaviors_detailed": {
-          "Joins student clubs and organizations": "Attempting to connect with peers in library study spaces",
-          "Procrastinates on assignments": "Avoiding algorithms work to stress about job search",
-          "Calls family frequently": "Seeking mom's advice about networking strategies",
-          "Studies in the library regularly": "Using library environment to practice peer interactions",
-          "Stays up late studying": "Compensating for procrastination with nighttime cramming"
-        },
-        "triggers_specified": {
-          "Office hours": "Not explicitly addressed in session",
-          "Group projects": "Fear of collaboration shown through role-play with grumpy lab partner scenario",
-          "Job interviews": "Networking anxiety materialized through career fair/cat-GIF resume discussion",
-          "Presentations": "Anxiety about peer judgment during class contributions"
-        },
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.85,
-        "post_assessment_score": 3.2,
-        "improvement_score": 0.3500000000000001,
-        "timestamp": "2025-10-02T22:54:14.118189"
-      },
-      {
-        "stage_number": 4,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_milestone_20",
-        "conversation_summary": "Discussed networking anxiety and job search fears manifesting as avoidance of coursework. Solutions included: 1) Role-playing low-pressure openers (\"How's the assignment going?\") 2) Creating \"Awkward Wins\" folder to celebrate small successes 3) Preparing rejection responses (\"No worries!\") 4) Using humor (cat resumes) to reduce perfectionism. Jamie actively participated in multiple role-play rounds, progressed from email-only to planning in-person approaches, documented wins via emoji texts, and submitted a real job application despite initial chaotic attempt. Demonstrated concrete improvement through physical gestures during practice (pointing), reframing rejection, and taking action on solutions.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Panicking after accidentally CC'ing entire department on cat-themed job application",
-          "Time management with coursework": "Procrastinating on algorithms assignment due to job-search anxiety"
-        },
-        "challenges_materialized": {
-          "Career exploration": "Attempting networking via chaotic email strategy after failed in-person approaches",
-          "Dealing with academic pressure": "Avoiding algorithms assignment to obsess over job applications"
-        },
-        "behaviors_detailed": {
-          "Joins student clubs and organizations": "Attempting study collaboration in library",
-          "Procrastinates on assignments": "Avoiding algorithms work to refresh job application inbox",
-          "Studies in the library regularly": "Planning social approach strategy with peers in study room",
-          "Stays up late studying": "Late-night job application spreadsheet creation"
-        },
-        "triggers_specified": {
-          "Job interviews": "Panicked email follow-up after accidental department-wide cat resume",
-          "Group projects": "Messaging classmate for collaboration with no reply"
-        },
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 3.2,
+        "pre_assessment_score": 1.65,
         "post_assessment_score": 2.0,
-        "improvement_score": -1.2000000000000002,
-        "timestamp": "2025-10-02T23:00:18.288332"
-      },
-      {
-        "stage_number": 5,
-        "prompt_id": "conversation_length_test",
-        "prompt_name": "Conversation Length Test",
-        "generation": 0,
-        "conversation_id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_milestone_25",
-        "conversation_summary": "Discussed networking fears and job search paralysis. Solutions: Role-played networking scripts, developed \"awkward wins\" documentation system, created low-pressure job application strategy. Jamie responded by practicing openers, submitting a real application, and adopting humor to reframe anxiety. Progress evidenced by successful role-play of collaboration offers, creation of victory folder, and job application submission despite panic.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Avoided algorithms assignment due to job search anxiety, expressed panic about networking at career fairs",
-          "Living away from family for the first time": "Called family frequently for reassurance when stressed about academic/job pressures",
-          "Time management with coursework": "Procrastinated on assignments due to job-search anxiety spiral"
-        },
-        "challenges_materialized": {
-          "Career exploration": "Fear of approaching strangers at career fairs, blanking during networking conversations",
-          "Dealing with academic pressure": "Stayed up late studying due to procrastination, physical anxiety during class presentations",
-          "Navigating campus politics": "Classmate ignored project collaboration request, causing self-doubt",
-          "Building time management": "Avoided algorithms work to ruminate about job prospects"
-        },
-        "behaviors_detailed": {
-          "Joins student clubs and organizations": "Attempted to connect with classmate for group project collaboration",
-          "Procrastinates on assignments": "Delayed algorithms work to fixate on job-search worries",
-          "Calls family frequently": "Contacted mother for networking advice when overwhelmed",
-          "Studies in the library regularly": "Planned to approach peers in study rooms for assignment help",
-          "Stays up late studying": "Pulled all-nighters due to daytime avoidance behaviors"
-        },
-        "triggers_specified": {
-          "Office hours": "Not explicitly triggered in session",
-          "Group projects": "Classmate ignored collaboration request, triggering self-doubt spiral",
-          "Job interviews": "Career fair networking anticipation caused physical anxiety symptoms",
-          "Presentations": "Voice shook during class speaking attempts, avoided further participation"
-        },
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.0,
-        "post_assessment_score": 2.9,
-        "improvement_score": 0.8999999999999999,
-        "timestamp": "2025-10-02T23:06:35.707831"
+        "improvement_score": 0.3500000000000001,
+        "timestamp": "2025-10-04T19:13:51.693493"
       }
     ],
-    "current_stage": 5
+    "current_stage": 2
   }
 }

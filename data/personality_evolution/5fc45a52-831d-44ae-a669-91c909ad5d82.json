@@ -1,0 +1,133 @@
+{
+  "dummy_id": "5fc45a52-831d-44ae-a669-91c909ad5d82",
+  "dummy_name": "Sofia Garcia",
+  "current_experiment_id": "gepa_exp_20251004_191257",
+  "current_prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+  "created_at": "2025-10-04T19:08:38.127779",
+  "last_updated": "2025-10-04T19:15:03.847785",
+  "conversation_profile": {
+    "original_fears": [
+      "Balancing social life and studies",
+      "Time management with coursework",
+      "Dealing with roommate conflicts"
+    ],
+    "original_challenges": [
+      "Dealing with academic pressure",
+      "Coping with stress and burnout",
+      "Adjusting to college workload"
+    ],
+    "original_behaviors": [
+      "Volunteers for campus events",
+      "Joins student clubs and organizations",
+      "Uses campus resources like tutoring"
+    ],
+    "original_anxiety_triggers": [
+      "Presentations",
+      "Dining hall during peak hours"
+    ],
+    "original_social_anxiety_level": 4,
+    "original_big_five": {
+      "extraversion": 6,
+      "agreeableness": 5,
+      "conscientiousness": 2,
+      "neuroticism": 8,
+      "openness": 3
+    },
+    "current_fears": [
+      "Struggling to allocate time between coursework and social activities",
+      "Difficulty in prioritizing tasks and meeting deadlines",
+      "Tension over stress-cookie stash and perceived flaking"
+    ],
+    "current_challenges": [
+      "Paralysis over unfinished tasks and group project anxiety",
+      "Panic-procrastination loop during study sessions",
+      "Overwhelm from juggling multiple responsibilities"
+    ],
+    "current_behaviors": [
+      "Actively participates in campus activities despite stress",
+      "Engages in social and academic groups",
+      "Seeks help when needed, though inconsistently"
+    ],
+    "current_anxiety_triggers": [
+      "Anxiety about public speaking and performance",
+      "Stress from crowded and noisy environments"
+    ],
+    "current_social_anxiety_level": 3,
+    "current_big_five": {
+      "extraversion": 6,
+      "agreeableness": 5,
+      "conscientiousness": 2,
+      "neuroticism": 8,
+      "openness": 3
+    },
+    "evolution_stages": [
+      {
+        "stage_number": 1,
+        "prompt_id": "9c0d9da5-ff41-4ca0-839e-9ec565c87d0d",
+        "prompt_name": "Genesis",
+        "generation": 0,
+        "conversation_id": "4d2b7a54-52fd-4674-bb4a-28aabe6d4333",
+        "conversation_summary": "Sofia discussed feeling overwhelmed by balancing coursework, clubs, and grad school applications. Solutions offered included using a planner with 'recharge blocks,' the 'heck yes' rule to prioritize commitments, and backup study plans for unreliable study groups. Sofia responded positively, immediately scheduling her first recharge block and planning to use the Pomodoro technique. Evidence of progress includes her reduced panic, relief, and proactive steps to manage time and stress better.",
+        "fears_materialized": {
+          "Balancing social life and studies": "Agreeing to help with a club fundraiser while having two midterms the same week",
+          "Time management with coursework": "Overloading schedule by saying yes to everything, leading to stress",
+          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation"
+        },
+        "challenges_materialized": {
+          "Dealing with academic pressure": "Feeling overwhelmed by coursework, clubs, and grad school applications",
+          "Coping with stress and burnout": "Feeling guilty for not being constantly productive, leading to burnout",
+          "Adjusting to college workload": "Struggling to manage time effectively between studies and extracurriculars"
+        },
+        "behaviors_detailed": {
+          "Volunteers for campus events": "Helping with a club fundraiser",
+          "Joins student clubs and organizations": "Active participation in clubs",
+          "Uses campus resources like tutoring": "Not explicitly mentioned in conversation"
+        },
+        "triggers_specified": {
+          "Presentations": "Not explicitly mentioned in conversation",
+          "Dining hall during peak hours": "Not explicitly mentioned in conversation"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 3.5,
+        "pre_assessment_score": 2.4,
+        "post_assessment_score": 2.8,
+        "improvement_score": 0.3999999999999999,
+        "timestamp": "2025-10-04T19:11:22.663936"
+      },
+      {
+        "stage_number": 2,
+        "prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
+        "prompt_name": "G1M01 from Genesis",
+        "generation": 1,
+        "conversation_id": "a7aaaad1-d557-4e97-96e2-20e6c410f407",
+        "conversation_summary": "Problems discussed: Balancing social life and studies, time management, academic pressure, and procrastination. Solutions offered/accepted: Theme days for time allocation, 10-minute panic timer followed by a small task, and advance communication with friends about availability. Student's response to solutions: Positive engagement, immediate application of timer trick, and commitment to communicate with roommate. Evidence of progress/improvement: Successfully transitioned from panic to task initiation, planned to set boundaries with friends, and reduced anxiety level.",
+        "fears_materialized": {
+          "Balancing social life and studies": "Struggling to allocate time between coursework and social activities",
+          "Time management with coursework": "Difficulty in prioritizing tasks and meeting deadlines",
+          "Dealing with roommate conflicts": "Tension over stress-cookie stash and perceived flaking"
+        },
+        "challenges_materialized": {
+          "Dealing with academic pressure": "Paralysis over unfinished tasks and group project anxiety",
+          "Coping with stress and burnout": "Panic-procrastination loop during study sessions",
+          "Adjusting to college workload": "Overwhelm from juggling multiple responsibilities"
+        },
+        "behaviors_detailed": {
+          "Volunteers for campus events": "Actively participates in campus activities despite stress",
+          "Joins student clubs and organizations": "Engages in social and academic groups",
+          "Uses campus resources like tutoring": "Seeks help when needed, though inconsistently"
+        },
+        "triggers_specified": {
+          "Presentations": "Anxiety about public speaking and performance",
+          "Dining hall during peak hours": "Stress from crowded and noisy environments"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 3.5,
+        "pre_assessment_score": 2.4,
+        "post_assessment_score": 2.85,
+        "improvement_score": 0.4500000000000002,
+        "timestamp": "2025-10-04T19:15:03.847389"
+      }
+    ],
+    "current_stage": 2
+  }
+}
