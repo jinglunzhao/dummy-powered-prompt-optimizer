@@ -1148,7 +1148,11 @@ Be concise and actionable. No verbose analysis.
         print(f"   📊 Current population: {len(self.population)}, Pareto frontier: {len(self.pareto_frontier)}")
         
         # Generate new prompts through crossover and mutation
-        while len(new_population) < target_population_size:
+        max_iterations = target_population_size * 10  # Safety limit to prevent infinite loops
+        iteration_count = 0
+        
+        while len(new_population) < target_population_size and iteration_count < max_iterations:
+            iteration_count += 1
             if random.random() < self.crossover_rate and len(self.population) >= 2:
                 # Crossover: TRUE GEPA balanced selection (80% frontier, 20% exploration)
                 if random.random() < 0.8 and len(self.pareto_frontier) >= 2:
@@ -1210,6 +1214,11 @@ Be concise and actionable. No verbose analysis.
                 print(f"   🧬 LLM Mutation: {parent.name} → {child.name}")
             
             new_population.append(child)
+        
+        # Check if we hit the iteration limit
+        if iteration_count >= max_iterations:
+            print(f"   ⚠️  Hit maximum iterations ({max_iterations}), stopping evolution early")
+            print(f"   📊 Generated {len(new_population)}/{target_population_size} prompts")
         
         # DON'T cap population here - let all new prompts be tested first
         # Population capping will happen AFTER evaluation in the next generation
@@ -1304,8 +1313,16 @@ Example format: "You are a helpful social skills coach who..."
                         # Validate system prompt format - must start with "You are"
                         child_prompt_text = child_prompt_text.strip()
                         
-                        if not child_prompt_text.lower().startswith("you are") or len(child_prompt_text) < 20:
-                            print(f"   ❌ Generated prompt not a system prompt or too short: {child_prompt_text[:50]}...")
+                        # More robust validation - check for "you are" anywhere in first 50 chars, handle quotes
+                        first_part = child_prompt_text[:50].lower()
+                        has_you_are = "you are" in first_part
+                        has_proper_length = len(child_prompt_text) >= 20
+                        
+                        if not has_you_are or not has_proper_length:
+                            print(f"   ❌ Generated prompt validation failed:")
+                            print(f"      - Contains 'you are': {has_you_are}")
+                            print(f"      - Length >= 20: {has_proper_length} (actual: {len(child_prompt_text)})")
+                            print(f"      - Text: {child_prompt_text[:100]}...")
                             if attempt < max_retries - 1:
                                 print(f"   🔄 Retrying crossover (attempt {attempt + 2}/{max_retries})...")
                                 continue
@@ -1456,8 +1473,16 @@ Example format: "You are a helpful social skills coach who..."
                         # Validate system prompt format - must start with "You are"
                         mutated_prompt_text = mutated_prompt_text.strip()
                         
-                        if not mutated_prompt_text.lower().startswith("you are") or len(mutated_prompt_text) < 20:
-                            print(f"   ❌ Generated prompt not a system prompt or too short: {mutated_prompt_text[:50]}...")
+                        # More robust validation - check for "you are" anywhere in first 50 chars, handle quotes
+                        first_part = mutated_prompt_text[:50].lower()
+                        has_you_are = "you are" in first_part
+                        has_proper_length = len(mutated_prompt_text) >= 20
+                        
+                        if not has_you_are or not has_proper_length:
+                            print(f"   ❌ Generated prompt validation failed:")
+                            print(f"      - Contains 'you are': {has_you_are}")
+                            print(f"      - Length >= 20: {has_proper_length} (actual: {len(mutated_prompt_text)})")
+                            print(f"      - Text: {mutated_prompt_text[:100]}...")
                             if attempt < max_retries - 1:
                                 print(f"   🔄 Retrying mutation (attempt {attempt + 2}/{max_retries})...")
                                 continue

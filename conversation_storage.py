@@ -106,7 +106,11 @@ class ConversationStorage:
                 dummy_file = os.path.join(self.base_dir, filename)
                 try:
                     with open(dummy_file, 'r', encoding='utf-8') as f:
-                        dummy_data = json.load(f)
+                        content = f.read().strip()
+                        if not content:
+                            print(f"⚠️  Empty file: {filename}")
+                            continue
+                        dummy_data = json.loads(content)
                     
                     for conversation in dummy_data.get("conversations", []):
                         if conversation.get("conversation_id") == conversation_id:
@@ -125,7 +129,11 @@ class ConversationStorage:
                 dummy_file = os.path.join(self.base_dir, filename)
                 try:
                     with open(dummy_file, 'r', encoding='utf-8') as f:
-                        dummy_data = json.load(f)
+                        content = f.read().strip()
+                        if not content:
+                            print(f"⚠️  Empty file: {filename}")
+                            continue
+                        dummy_data = json.loads(content)
                     
                     for conversation in dummy_data.get("conversations", []):
                         if conversation.get("prompt_id") == prompt_id:
@@ -148,7 +156,11 @@ class ConversationStorage:
                 dummy_file = os.path.join(self.base_dir, filename)
                 try:
                     with open(dummy_file, 'r', encoding='utf-8') as f:
-                        dummy_data = json.load(f)
+                        content = f.read().strip()
+                        if not content:
+                            print(f"⚠️  Empty file: {filename}")
+                            continue
+                        dummy_data = json.loads(content)
                     
                     for conversation in dummy_data.get("conversations", []):
                         # Add dummy info to conversation
@@ -175,7 +187,11 @@ class ConversationStorage:
                 dummy_file = os.path.join(self.base_dir, filename)
                 try:
                     with open(dummy_file, 'r', encoding='utf-8') as f:
-                        dummy_data = json.load(f)
+                        content = f.read().strip()
+                        if not content:
+                            print(f"⚠️  Empty file: {filename}")
+                            continue
+                        dummy_data = json.loads(content)
                     
                     stats["total_dummies"] += 1
                     conversations = dummy_data.get("conversations", [])
