@@ -1267,9 +1267,9 @@ Create a new system prompt that:
 3. Is effective for social skills coaching
 4. Keep it concise (1-3 sentences)
 
-CRITICAL: Your response must be ONLY the system prompt text starting with "You are...". Do not include any reasoning, analysis, explanations, or other text. Just the prompt.
+CRITICAL: Your response must be ONLY the system prompt text starting with "You are...". Do not include any reasoning, analysis, explanations, quotes, or other text. Do NOT wrap your response in quotes. Just the prompt.
 
-Example format: "You are a helpful social skills coach who..."
+Example format: You are a helpful social skills coach who...
 """
         
         # Try crossover with retries
@@ -1426,9 +1426,9 @@ TASK: Create an improved system prompt that:
 
 Focus on making meaningful improvements based on the actual conversation performance analysis, not just numerical scores.
 
-CRITICAL: Your response must be ONLY the system prompt text starting with "You are..." (exactly these words). Do not include any reasoning, analysis, explanations, or other text. Just the prompt.
+CRITICAL: Your response must be ONLY the system prompt text starting with "You are..." (exactly these words). Do not include any reasoning, analysis, explanations, quotes, or other text. Do NOT wrap your response in quotes. Just the prompt.
 
-Example format: "You are a helpful social skills coach who..."
+Example format: You are a helpful social skills coach who...
 """
         
         # Try mutation with retries
