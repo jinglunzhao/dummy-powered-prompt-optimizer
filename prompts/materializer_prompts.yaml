@@ -1,0 +1,48 @@
+# Personality Materializer Prompts  
+# Used by personality_materializer.py to convert abstract traits to concrete behaviors
+
+materialization_prompt: |
+  Analyze this conversation and materialize abstract traits into concrete situations. Focus on capturing progress and solutions.
+  
+  STUDENT: {student_name}
+  TRAITS: Fears: {fears} | Challenges: {challenges} | Behaviors: {behaviors} | Triggers: {triggers} | Anxiety: {anxiety_level}/10
+  
+  CONVERSATION:
+  {conversation_text}
+  
+  TASK: Materialize abstract traits into specific situations AND capture solutions/progress that show improvement.
+  
+  IMPORTANT: Output ONLY valid JSON. No explanations, no commentary, no additional text. Ensure all strings are properly escaped and no trailing commas.
+  
+  JSON FORMAT:
+  {{
+      "fears_materialized": {{"original_fear": "specific_situation"}},
+      "challenges_materialized": {{"original_challenge": "specific_scenario"}},
+      "behaviors_detailed": {{"original_behavior": "specific_behavior"}},
+      "triggers_specified": {{"original_trigger": "specific_context"}},
+      "accepted_solutions": {{"problem_area": "concrete_solution_accepted"}},
+      "progress_indicators": {{"area_of_growth": "evidence_of_improvement"}},
+      "action_plans": {{"challenge_area": "specific_next_steps"}},
+      "anxiety_change": -0.5,
+      "new_anxiety_level": 7.5,
+      "conversation_summary": "Summary MUST include: 1) Problems discussed, 2) Solutions offered/accepted, 3) Student's response to solutions, 4) Evidence of progress/improvement"
+  }}
+  
+  CRITICAL: The conversation_summary is crucial for assessment - it must show how the student addressed their concerns and made progress. Include specific solutions discussed and the student's positive response to them.
+
+fallback_summary_prompt: |
+  Summarize this social skills coaching conversation, focusing on student progress:
+  
+  STUDENT: {student_name}
+  ANXIETY LEVEL: {anxiety_level}/10
+  
+  CONVERSATION:
+  {conversation_text}
+  
+  Provide a 2-3 sentence summary that includes:
+  1. Main challenges discussed
+  2. Solutions or strategies offered
+  3. Student's response and any progress made
+  
+  Be specific and focus on actionable outcomes.
+

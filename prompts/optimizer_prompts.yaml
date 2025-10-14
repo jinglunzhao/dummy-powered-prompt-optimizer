@@ -1,0 +1,82 @@
+# Prompt Optimizer Prompts
+# Used by prompt_optimizer.py for GEPA evolution
+
+mutation_prompt: |
+  CURRENT SYSTEM PROMPT: "{parent_prompt}"
+  
+  PERFORMANCE CONTEXT:
+  - Average improvement: {avg_improvement:+.2f} points
+  - Generation: {generation}
+  
+  SYNTHESIS ANALYSIS (based on actual conversation performance):
+  {synthesis_analysis}
+  
+  TASK: Create an improved system prompt that:
+  1. MUST start with "You are..." (system prompt format)
+  2. Addresses the weaknesses identified in the synthesis analysis
+  3. Builds upon the strengths identified in the synthesis analysis
+  4. Incorporates the specific recommendations from the conversation analysis
+  5. Improves overall effectiveness for social skills coaching
+  6. Keep it concise but effective (aim for 1-3 sentences, maximum 200 words)
+  
+  Focus on making meaningful improvements based on the actual conversation performance analysis, not just numerical scores.
+  
+  CRITICAL: Your response must be ONLY the system prompt text starting with "You are..." (exactly these words). Do not include any reasoning, analysis, explanations, quotes, or other text. Do NOT wrap your response in quotes. Just the prompt.
+  
+  Example format: You are a helpful social skills coach who...
+
+crossover_prompt: |
+  Combine these two system prompts into one better prompt:
+  
+  PROMPT 1: "{parent1_prompt}"
+  PROMPT 2: "{parent2_prompt}"
+  
+  Create a new system prompt that:
+  1. MUST start with "You are..." (exactly these words)
+  2. Combines the best parts of both prompts
+  3. Is effective for social skills coaching
+  4. Keep it concise (1-3 sentences)
+  
+  CRITICAL: Your response must be ONLY the system prompt text starting with "You are...". Do not include any reasoning, analysis, explanations, quotes, or other text. Do NOT wrap your response in quotes. Just the prompt.
+  
+  Example format: You are a helpful social skills coach who...
+
+synthesis_analysis_prompt: |
+  Analyze the following conversation performance data to create a synthesis analysis:
+  
+  PROMPT: "{prompt_text}"
+  
+  PERFORMANCE METRICS:
+  {metrics_summary}
+  
+  SAMPLE CONVERSATIONS:
+  {conversation_samples}
+  
+  Provide a comprehensive analysis covering:
+  1. What worked well in the conversations
+  2. What didn't work or could be improved  
+  3. Specific patterns observed across different student types
+  4. Concrete recommendations for prompt improvement
+  
+  Focus on actionable insights based on actual conversation quality, not just scores.
+
+reflection_prompt: |
+  Analyze this coaching conversation and identify what worked and what didn't:
+  
+  CONVERSATION:
+  {conversation_text}
+  
+  STUDENT PROFILE:
+  - Personality: {personality_summary}
+  - Anxiety Level: {anxiety_level}/10
+  - Key Challenges: {challenges}
+  
+  IMPROVEMENT: {improvement:+.2f} points
+  
+  Provide:
+  1. What coaching approaches were effective
+  2. What approaches were less effective
+  3. Specific suggestions for improvement
+  
+  Be specific and actionable in your analysis.
+
