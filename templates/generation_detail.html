@@ -147,9 +147,9 @@
                                         <i class="fas fa-eye me-1"></i>View All ${prompt.performance_metrics?.test_count || 0} Dummy Results
                                     </button>
                                 </div>
-                                <div class="text-center mt-2">
+                                <div class="text-center mt-2" id="comments-preview-${prompt.id}">
                                     <small class="text-muted">
-                                        <i class="fas fa-comments me-1"></i>Comments available in detailed view
+                                        <i class="fas fa-spinner fa-spin me-1"></i>Loading comments...
                                     </small>
                                 </div>
                             </div>
@@ -159,6 +159,48 @@
             });
 
             container.innerHTML = html;
+            
+            // Load comment previews for all prompts
+            data.prompts.forEach(prompt => {
+                loadCommentPreview(prompt.id);
+            });
+        }
+
+        function loadCommentPreview(promptId) {
+            fetch(`/api/comments/${promptId}`)
+                .then(response => response.json())
+                .then(data => {
+                    const previewElement = document.getElementById(`comments-preview-${promptId}`);
+                    if (previewElement) {
+                        if (data.comments && data.comments.trim().length > 0) {
+                            // Show first 50 characters of comment
+                            const preview = data.comments.length > 50 
+                                ? data.comments.substring(0, 50) + '...'
+                                : data.comments;
+                            previewElement.innerHTML = `
+                                <small class="text-success">
+                                    <i class="fas fa-comments me-1"></i>Comment: "${preview}"
+                                </small>
+                            `;
+                        } else {
+                            previewElement.innerHTML = `
+                                <small class="text-muted">
+                                    <i class="fas fa-comment-slash me-1"></i>No comment available
+                                </small>
+                            `;
+                        }
+                    }
+                })
+                .catch(error => {
+                    const previewElement = document.getElementById(`comments-preview-${promptId}`);
+                    if (previewElement) {
+                        previewElement.innerHTML = `
+                            <small class="text-muted">
+                                <i class="fas fa-comment-slash me-1"></i>No comment available
+                            </small>
+                        `;
+                    }
+                });
         }
 
         function viewPrompt(promptId) {

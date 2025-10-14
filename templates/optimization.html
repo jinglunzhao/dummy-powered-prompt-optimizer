@@ -127,7 +127,7 @@
         // Load optimization results on page load
         document.addEventListener('DOMContentLoaded', function() {
             loadExperimentList();
-            loadOptimizationResults();
+            // Auto-load the first experiment after list is loaded
         });
 
         // Experiment selection functionality
@@ -146,10 +146,12 @@
                     });
                     
                     if (experiments.length > 0) {
-                        // Auto-select the first (most recent) experiment
+                        // Auto-select and load the first (most recent) experiment
                         select.value = experiments[0].filename;
                         updateExperimentInfo(experiments[0]);
                         document.getElementById('load-experiment-btn').disabled = false;
+                        // Auto-load the first experiment
+                        loadSelectedExperiment();
                     }
                 })
                 .catch(error => {
