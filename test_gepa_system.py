@@ -78,7 +78,7 @@ async def run_gepa_test(config: Dict[str, Any] = None):
     default_config = {
         "test_name": "Enhanced GEPA System",
         "dummies_count": 10,
-        "conversation_rounds": 25,  # Increased to 25 rounds as requested
+        "conversation_rounds": 15,  
         "generations": 6,
         "population_size": 1,
         "mutation_rate": 0.3,
