@@ -24,7 +24,7 @@ def main():
     experiment_files = [f for f in os.listdir('data/experiments') if f.startswith('continuous_conversation_exp_')]
     if not experiment_files:
         print("❌ Error: No continuous conversation experiment files found!")
-        print("   Please run some experiments first using conversation_length_experiment_v2.py")
+        print("   Please run some experiments first using conversation_length_experiment_with_evolution.py")
         sys.exit(1)
     
     print(f"✅ Found {len(experiment_files)} experiment files")
