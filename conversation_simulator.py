@@ -132,9 +132,15 @@ Start with a natural opening message (1-2 sentences)."""
             {"role": "user", "content": f"Student Profile: {dummy.get_character_summary()}"}
         ]
         
-        # Add conversation history - DeepSeek API only uses "system" and "user" roles
+        # Add conversation history - properly label who said what
+        # DeepSeek API: student messages = "user", AI responses = "assistant"
         for turn in conversation.turns[-6:]:  # Last 6 turns for context
-            messages.append({"role": "user", "content": turn.message})
+            if turn.speaker == "dummy":
+                # Student's message
+                messages.append({"role": "user", "content": f"{dummy.name}: {turn.message}"})
+            else:
+                # AI coach's previous response
+                messages.append({"role": "assistant", "content": turn.message})
         
         async with aiohttp.ClientSession() as session:
             async with session.post(
@@ -175,9 +181,16 @@ Start with a natural opening message (1-2 sentences)."""
             {"role": "user", "content": f"Student Profile: {dummy.get_character_summary()}"}
         ]
         
-        # Add conversation history - DeepSeek API only uses "system" and "user" roles
+        # Add conversation history - properly label who said what
+        # Student's own messages = "assistant" (what they said before)
+        # AI mentor's messages = "user" (what they're responding to)
         for turn in conversation.turns[-6:]:  # Last 6 turns for context
-                messages.append({"role": "user", "content": turn.message})
+            if turn.speaker == "dummy":
+                # Student's own previous message
+                messages.append({"role": "assistant", "content": turn.message})
+            else:
+                # AI mentor's message that student is responding to
+                messages.append({"role": "user", "content": f"Mentor: {turn.message}"})
         
         async with aiohttp.ClientSession() as session:
             async with session.post(
