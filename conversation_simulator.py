@@ -48,6 +48,11 @@ class ConversationSimulator:
         
         # Simulate conversation rounds
         for round_num in range(num_rounds):
+            # Add grounding reminder every 5 rounds to keep conversation focused
+            if round_num > 0 and round_num % 5 == 0:
+                # Inject a reminder into the system context (will be seen by next AI response)
+                print(f"\n🎯 Grounding checkpoint at round {round_num}", flush=True)
+            
             # AI response
             print(".", end="", flush=True)  # Show progress dot
             ai_response = await self._generate_ai_response_async(conversation, system_prompt_text, dummy)
@@ -57,6 +62,14 @@ class ConversationSimulator:
             print(".", end="", flush=True)  # Show progress dot
             dummy_response = await self._generate_character_response_async(conversation, dummy, round_num + 1)
             conversation.add_turn("dummy", dummy_response, {"round": round_num + 1})
+            
+            # Check conversation quality every 3 rounds
+            if round_num > 0 and round_num % 3 == 0:
+                quality_ok, reason = self._check_conversation_quality(conversation)
+                if not quality_ok:
+                    print(f"\n⚠️  Conversation quality issue detected: {reason}")
+                    print(f"   Ending conversation early at round {round_num + 1}")
+                    break
             
             # Check for natural ending after each complete round (AI + dummy)
             # Only check after we have at least 2 rounds (4 turns total)
@@ -152,8 +165,8 @@ Start with a natural opening message (1-2 sentences)."""
                 json={
                     "model": "deepseek-v3-0324",
                     "messages": messages,
-                    "max_tokens": 150,
-                    "temperature": 0.7
+                    "max_tokens": 200,  # Allow slightly longer for complete thoughts
+                    "temperature": 0.6  # Reduced from 0.7 to be more focused and less creative
                 }
             ) as response:
                     result = await response.json()
@@ -202,12 +215,54 @@ Start with a natural opening message (1-2 sentences)."""
                 json={
                     "model": "deepseek-v3-0324",
                     "messages": messages,
-                    "max_tokens": 150,
-                    "temperature": 0.8
+                    "max_tokens": 150,  # Keep student responses concise
+                    "temperature": 0.7  # Reduced from 0.8 to be more focused
                 }
             ) as response:
                 result = await response.json()
                 return result['choices'][0]['message']['content'].strip()
+    
+    def _check_conversation_quality(self, conversation: Conversation) -> tuple[bool, str]:
+        """Check if conversation is maintaining quality and staying on-topic"""
+        if len(conversation.turns) < 6:
+            return True, "Conversation too short to evaluate"
+        
+        # Get recent turns
+        recent_turns = conversation.turns[-4:]
+        recent_text = " ".join([turn.message.lower() for turn in recent_turns])
+        
+        # Check for signs of derailment
+        derailment_indicators = [
+            # Absurd scenarios
+            ("forensics", "investigation", "detective"),
+            ("conspiracy", "whistleblow", "secret agent"),
+            ("llc", "ceo", "startup", "business plan"),
+            ("tax", "irs", "audit", "expense"),
+            # Excessive roleplay
+            ("*dramatic", "*theatrical", "*playful"),
+            ("*chuckles", "*grins", "*winks"),
+            ("*whispers", "*gasps", "*nervous"),
+            # Nonsensical elements
+            ("squirrel", "cookie forensics", "noodle packet"),
+            ("imaginary", "pretend", "fake"),
+        ]
+        
+        derailment_count = 0
+        for indicators in derailment_indicators:
+            if any(indicator in recent_text for indicator in indicators):
+                derailment_count += 1
+        
+        # Check for professional tone
+        professional_indicators = ["advice", "suggest", "recommend", "try", "practice", "improve", "work on"]
+        professional_count = sum(1 for word in professional_indicators if word in recent_text)
+        
+        # Determine quality
+        if derailment_count >= 3:
+            return False, f"High derailment detected ({derailment_count} indicators)"
+        elif derailment_count >= 2 and professional_count < 2:
+            return False, f"Conversation drifting off-topic"
+        
+        return True, "Conversation quality acceptable"
     
     def _get_character_context(self, dummy: AIDummy) -> str:
         """Create comprehensive character context from dummy data"""
