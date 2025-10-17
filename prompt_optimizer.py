@@ -23,6 +23,7 @@ from conversation_simulator import ConversationSimulator
 from conversation_storage import conversation_storage
 from personality_evolution_storage import personality_evolution_storage
 from personality_materializer import personality_materializer
+from prompts.prompt_loader import prompt_loader
 
 # Load environment variables
 # load_dotenv()  # Disabled to avoid encoding issues
@@ -1255,22 +1256,13 @@ Be concise and actionable. No verbose analysis.
         # Create crossover prompt using synthesis analysis
         print(f"   🤖 Analyzing crossover with synthesis: {parent1.name} + {parent2.name}")
         
-        crossover_prompt = f"""
-Combine these two system prompts into one better prompt:
-
-PROMPT 1: "{parent1.prompt_text}"
-PROMPT 2: "{parent2.prompt_text}"
-
-Create a new system prompt that:
-1. MUST start with "You are..." (exactly these words)
-2. Combines the best parts of both prompts
-3. Is effective for social skills coaching
-4. Keep it concise (1-3 sentences)
-
-CRITICAL: Your response must be ONLY the system prompt text starting with "You are...". Do not include any reasoning, analysis, explanations, quotes, or other text. Do NOT wrap your response in quotes. Just the prompt.
-
-Example format: You are a helpful social skills coach who...
-"""
+        # Load crossover prompt from YAML
+        crossover_prompt = prompt_loader.get_prompt(
+            'optimizer_prompts.yaml',
+            'crossover_prompt',
+            parent1_prompt=parent1.prompt_text,
+            parent2_prompt=parent2.prompt_text
+        )
         
         # Try crossover with retries
         for attempt in range(max_retries):
@@ -1404,32 +1396,15 @@ Example format: You are a helpful social skills coach who...
         # Create LLM prompt for mutation using synthesis analysis
         print(f"   🤖 Analyzing mutation with synthesis: {parent.name} (improvement: {avg_improvement:.3f})")
         
-        mutation_prompt = f"""
-You are an expert prompt engineer improving a social skills coaching system prompt based on comprehensive conversation analysis.
-
-CURRENT SYSTEM PROMPT: "{parent.prompt_text}"
-
-PERFORMANCE CONTEXT:
-- Average improvement: {avg_improvement:+.2f} points
-- Generation: {parent.generation}
-
-SYNTHESIS ANALYSIS (based on actual conversation performance):
-{synthesis_analysis}
-
-TASK: Create an improved system prompt that:
-1. MUST start with "You are..." (system prompt format)
-2. Addresses the weaknesses identified in the synthesis analysis
-3. Builds upon the strengths identified in the synthesis analysis
-4. Incorporates the specific recommendations from the conversation analysis
-5. Improves overall effectiveness for social skills coaching
-6. Keep it concise but effective (aim for 1-3 sentences, maximum 200 words)
-
-Focus on making meaningful improvements based on the actual conversation performance analysis, not just numerical scores.
-
-CRITICAL: Your response must be ONLY the system prompt text starting with "You are..." (exactly these words). Do not include any reasoning, analysis, explanations, quotes, or other text. Do NOT wrap your response in quotes. Just the prompt.
-
-Example format: You are a helpful social skills coach who...
-"""
+        # Load mutation prompt from YAML
+        mutation_prompt = prompt_loader.get_prompt(
+            'optimizer_prompts.yaml',
+            'mutation_prompt',
+            parent_prompt=parent.prompt_text,
+            avg_improvement=avg_improvement,
+            generation=parent.generation,
+            synthesis_analysis=synthesis_analysis
+        )
         
         # Try mutation with retries
         for attempt in range(max_retries):

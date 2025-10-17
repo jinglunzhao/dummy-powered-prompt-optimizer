@@ -11,6 +11,7 @@ import json
 from typing import Dict, List, Any, Optional
 from datetime import datetime
 from models import EvolutionStage, Conversation
+from prompts.prompt_loader import prompt_loader
 
 class PersonalityMaterializer:
     """LLM-based service for materializing personality traits from conversations"""
@@ -138,33 +139,18 @@ class PersonalityMaterializer:
             speaker_label = "AI Coach" if turn.speaker == "ai" else dummy.name
             conversation_text += f"{speaker_label}: {turn.message}\n"
         
-        return f"""Analyze this conversation and materialize abstract traits into concrete situations. Focus on capturing progress and solutions.
-
-STUDENT: {dummy.name}
-TRAITS: Fears: {', '.join(dummy.fears)} | Challenges: {', '.join(dummy.challenges)} | Behaviors: {', '.join(dummy.behaviors)} | Triggers: {', '.join(dummy.social_anxiety.triggers)} | Anxiety: {dummy.social_anxiety.anxiety_level}/10
-
-CONVERSATION:
-{conversation_text}
-
-TASK: Materialize abstract traits into specific situations AND capture solutions/progress that show improvement.
-
-IMPORTANT: Output ONLY valid JSON. No explanations, no commentary, no additional text. Ensure all strings are properly escaped and no trailing commas.
-
-JSON FORMAT:
-{{
-    "fears_materialized": {{"original_fear": "specific_situation"}},
-    "challenges_materialized": {{"original_challenge": "specific_scenario"}},
-    "behaviors_detailed": {{"original_behavior": "specific_behavior"}},
-    "triggers_specified": {{"original_trigger": "specific_context"}},
-    "accepted_solutions": {{"problem_area": "concrete_solution_accepted"}},
-    "progress_indicators": {{"area_of_growth": "evidence_of_improvement"}},
-    "action_plans": {{"challenge_area": "specific_next_steps"}},
-    "anxiety_change": -0.5,
-    "new_anxiety_level": 7.5,
-    "conversation_summary": "Summary MUST include: 1) Problems discussed, 2) Solutions offered/accepted, 3) Student's response to solutions, 4) Evidence of progress/improvement"
-}}
-
-CRITICAL: The conversation_summary is crucial for assessment - it must show how the student addressed their concerns and made progress. Include specific solutions discussed and the student's positive response to them."""
+        # Load materialization prompt from YAML
+        return prompt_loader.get_prompt(
+            'materializer_prompts.yaml',
+            'materialization_prompt',
+            student_name=dummy.name,
+            fears=', '.join(dummy.fears),
+            challenges=', '.join(dummy.challenges),
+            behaviors=', '.join(dummy.behaviors),
+            triggers=', '.join(dummy.social_anxiety.triggers),
+            anxiety_level=dummy.social_anxiety.anxiety_level,
+            conversation_text=conversation_text
+        )
     
     def _parse_materialization_response(self, response_text: str) -> Dict[str, Any]:
         """Parse the materialization response from LLM"""

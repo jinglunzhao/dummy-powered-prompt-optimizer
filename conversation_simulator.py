@@ -10,6 +10,7 @@ from typing import List, Dict, Any, Optional
 from datetime import datetime
 from models import AIDummy, Conversation, ConversationTurn
 from config import Config
+from prompts.prompt_loader import prompt_loader
 
 class ConversationSimulator:
     """Simplified conversation simulator that relies on AI and character data"""
@@ -78,11 +79,18 @@ class ConversationSimulator:
         
         character_context = self._get_character_context(dummy)
         
-        prompt = f"""You are {dummy.name}, a {dummy.age}-year-old {dummy.student_type} at {dummy.university}.
-
-{character_context}
-
-You're meeting with a social skills coach. Based on your actual personality, fears, goals, and challenges, start the conversation naturally. 
+        # Load student opening prompt from YAML
+        prompt_template = prompt_loader.get_prompt(
+            'conversation_prompts.yaml',
+            'student_opening_prompt',
+            student_name=dummy.name,
+            age=dummy.age,
+            student_type=dummy.student_type,
+            university=dummy.university,
+            character_context=character_context
+        )
+        
+        prompt = f"""{prompt_template}
 
 Be authentic to your character:
 - Express your real concerns and fears
@@ -112,9 +120,15 @@ Start with a natural opening message (1-2 sentences)."""
     async def _generate_ai_response_async(self, conversation: Conversation, system_prompt: str, dummy: AIDummy) -> str:
         """Generate AI response using the custom system prompt"""
         
+        # Load AI coach system addition from YAML
+        system_addition = prompt_loader.get_prompt(
+            'conversation_prompts.yaml',
+            'ai_coach_system_addition'
+        )
+        
         # Prepare conversation history
         messages = [
-            {"role": "system", "content": system_prompt + "\n\nIMPORTANT: You are having a real conversation with a student. Respond naturally and authentically. Do NOT predict what the student will say or include meta-commentary. Just provide helpful advice and support. When you've provided sufficient help or the student seems ready to conclude, it's okay to wrap up naturally."},
+            {"role": "system", "content": system_prompt + system_addition},
             {"role": "user", "content": f"Student Profile: {dummy.get_character_summary()}"}
         ]
         
@@ -144,9 +158,20 @@ Start with a natural opening message (1-2 sentences)."""
         
         character_context = self._get_character_context(dummy)
         
+        # Load student response system prompt from YAML
+        system_content = prompt_loader.get_prompt(
+            'conversation_prompts.yaml',
+            'student_response_system',
+            student_name=dummy.name,
+            age=dummy.age,
+            major=dummy.major,
+            university=dummy.university,
+            character_context=character_context
+        )
+        
         # Prepare conversation history (same as AI - last 6 turns for context)
         messages = [
-            {"role": "system", "content": f"You are {dummy.name}, a {dummy.age}-year-old {dummy.major} student at {dummy.university}.\n\n{character_context}\n\nYou're having a conversation with a peer mentor. Respond naturally and authentically as this character. Keep your response concise. When you feel satisfied with the advice or ready to end, it's natural to conclude."},
+            {"role": "system", "content": system_content},
             {"role": "user", "content": f"Student Profile: {dummy.get_character_summary()}"}
         ]
         
@@ -215,25 +240,20 @@ Start with a natural opening message (1-2 sentences)."""
             "Content-Type": "application/json"
         }
         
-        # More effective prompt for end detection
-        prompt = f"""You are analyzing a coaching conversation between a student and an AI mentor.
-
-Recent conversation:
-{conversation_text}
-
-Determine if this conversation has reached a natural ending. Look for:
-1. Student expressing satisfaction, thanks, or saying goodbye
-2. Student indicating they're leaving or ending the session  
-3. Student appearing ready to conclude (even without explicit words)
-4. Any action descriptions indicating departure (exits, leaves, walks away, etc.)
-5. Both parties showing closure or conclusion
-
-Be sensitive to subtle ending signals. If the student seems ready to conclude or is departing, say YES.
-
-Answer with exactly "YES" or "NO"."""
+        # Load end detection prompts from YAML
+        prompt = prompt_loader.get_prompt(
+            'conversation_prompts.yaml',
+            'conversation_end_detection_prompt',
+            conversation_text=conversation_text
+        )
+        
+        system_content = prompt_loader.get_prompt(
+            'conversation_prompts.yaml',
+            'end_detection_system'
+        )
         
         messages = [
-            {"role": "system", "content": "You are an expert conversation analyst. Detect natural conversation endings accurately. Be sensitive to departure signals."},
+            {"role": "system", "content": system_content},
             {"role": "user", "content": prompt}
         ]
         
