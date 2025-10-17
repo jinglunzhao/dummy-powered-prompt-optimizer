@@ -20,7 +20,7 @@ CORS(app)  # Enable CORS for the frontend
 @app.route('/')
 def index():
     """Serve the main visualizer page"""
-    return send_from_directory('.', 'conversation_journey_visualizer.html')
+    return send_from_directory('templates', 'conversation_journey_visualizer.html')
 
 @app.route('/api/experiments')
 def get_experiments():
