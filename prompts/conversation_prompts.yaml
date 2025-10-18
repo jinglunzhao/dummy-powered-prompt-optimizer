@@ -7,6 +7,35 @@ student_opening_prompt: |
   {character_context}
   
   You're meeting with a social skills coach. Based on your actual personality, fears, goals, and challenges, start the conversation naturally.
+  
+  Be authentic to your character:
+  - Express your real concerns and fears
+  - Mention specific goals you want to work on
+  - Show your personality traits naturally
+  - Be honest about your challenges
+  
+  Start with a natural opening message (1-2 sentences).
+
+character_context_template: |
+  Personality:
+  - Extraversion: {extraversion}/10
+  - Agreeableness: {agreeableness}/10
+  - Conscientiousness: {conscientiousness}/10
+  - Neuroticism: {neuroticism}/10
+  - Openness: {openness}/10
+  
+  Social Anxiety:
+  - Level: {anxiety_level}/10
+  - Communication style: {communication_style}
+  - Triggers: {triggers}
+  - Social comfort: {social_comfort}/10
+  
+  Personal Details:
+  - Major: {major}
+  - Fears: {fears}
+  - Goals: {goals}
+  - Challenges: {challenges}
+  - Behaviors: {behaviors}
 
 ai_coach_system_addition: |
   

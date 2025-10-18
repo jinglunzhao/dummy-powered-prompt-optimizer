@@ -92,8 +92,8 @@ class ConversationSimulator:
         
         character_context = self._get_character_context(dummy)
         
-        # Load student opening prompt from YAML
-        prompt_template = prompt_loader.get_prompt(
+        # Load student opening prompt from YAML (now includes all instructions)
+        prompt = prompt_loader.get_prompt(
             'conversation_prompts.yaml',
             'student_opening_prompt',
             student_name=dummy.name,
@@ -102,16 +102,6 @@ class ConversationSimulator:
             university=dummy.university,
             character_context=character_context
         )
-        
-        prompt = f"""{prompt_template}
-
-Be authentic to your character:
-- Express your real concerns and fears
-- Mention specific goals you want to work on
-- Show your personality traits naturally
-- Be honest about your challenges
-
-Start with a natural opening message (1-2 sentences)."""
 
         async with aiohttp.ClientSession() as session:
             async with session.post(
@@ -265,34 +255,33 @@ Start with a natural opening message (1-2 sentences)."""
         return True, "Conversation quality acceptable"
     
     def _get_character_context(self, dummy: AIDummy) -> str:
-        """Create comprehensive character context from dummy data"""
+        """Create comprehensive character context from dummy data using YAML template"""
         
-        # Personality description
         personality = dummy.personality
-        personality_desc = f"""Personality:
-- Extraversion: {personality.extraversion}/10 ({'Very outgoing' if personality.extraversion >= 7 else 'Moderately social' if personality.extraversion >= 4 else 'Introverted'})
-- Agreeableness: {personality.agreeableness}/10 ({'Very cooperative' if personality.agreeableness >= 7 else 'Moderately agreeable' if personality.agreeableness >= 4 else 'More competitive'})
-- Conscientiousness: {personality.conscientiousness}/10 ({'Very organized' if personality.conscientiousness >= 7 else 'Moderately organized' if personality.conscientiousness >= 4 else 'More spontaneous'})
-- Neuroticism: {personality.neuroticism}/10 ({'Very sensitive to stress' if personality.neuroticism >= 7 else 'Moderately sensitive' if personality.neuroticism >= 4 else 'Very emotionally stable'})
-- Openness: {personality.openness}/10 ({'Very creative and curious' if personality.openness >= 7 else 'Moderately open' if personality.openness >= 4 else 'More traditional'})"""
-        
-        # Social anxiety description
         anxiety = dummy.social_anxiety
-        anxiety_desc = f"""Social Anxiety:
-- Level: {anxiety.anxiety_level}/10 ({'Severe' if anxiety.anxiety_level >= 7 else 'Moderate' if anxiety.anxiety_level >= 5 else 'Low'})
-- Communication style: {anxiety.communication_style}
-- Triggers: {', '.join(anxiety.triggers)}
-- Social comfort: {anxiety.social_comfort}/10"""
         
-        # Personal details
-        personal_desc = f"""Personal Details:
-- Major: {dummy.major}
-- Fears: {', '.join(dummy.fears)}
-- Goals: {', '.join(dummy.goals)}
-- Challenges: {', '.join(dummy.challenges)}
-- Behaviors: {', '.join(dummy.behaviors)}"""
-        
-        return f"{personality_desc}\n\n{anxiety_desc}\n\n{personal_desc}"
+        # Load character context template from YAML - using numeric values only
+        return prompt_loader.get_prompt(
+            'conversation_prompts.yaml',
+            'character_context_template',
+            # Personality traits (numeric only)
+            extraversion=personality.extraversion,
+            agreeableness=personality.agreeableness,
+            conscientiousness=personality.conscientiousness,
+            neuroticism=personality.neuroticism,
+            openness=personality.openness,
+            # Social anxiety (numeric only)
+            anxiety_level=anxiety.anxiety_level,
+            communication_style=anxiety.communication_style,
+            triggers=', '.join(anxiety.triggers),
+            social_comfort=anxiety.social_comfort,
+            # Personal details
+            major=dummy.major,
+            fears=', '.join(dummy.fears),
+            goals=', '.join(dummy.goals),
+            challenges=', '.join(dummy.challenges),
+            behaviors=', '.join(dummy.behaviors)
+        )
     
     async def check_conversation_should_end(self, conversation: Conversation) -> bool:
         """Simple, lightweight check if conversation has reached a natural ending"""
