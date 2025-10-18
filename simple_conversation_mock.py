@@ -18,6 +18,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from conversation_simulator import ConversationSimulator
 from models import AIDummy
 from config import Config
+from prompts.prompt_loader import prompt_loader
 
 class SimpleConversationMock:
     def __init__(self):
@@ -29,11 +30,13 @@ class SimpleConversationMock:
     async def start_conversation(self, dummy: AIDummy, num_rounds: int = 10):
         """Start a conversation using the real conversation simulator"""
         self.dummy = dummy
+        # Load prompt from YAML instead of hardcoding
+        system_prompt = prompt_loader.get_prompt('default_prompts.yaml', 'default_peer_mentor_prompt')
         self.conversation = await self.simulator.simulate_conversation_async(
             dummy=dummy,
             scenario="Social skills coaching session",
             num_rounds=num_rounds,
-            custom_system_prompt="You are a helpful peer mentor for college students. Be supportive, practical, and encouraging. Provide concrete advice and examples. Keep responses concise and actionable."
+            custom_system_prompt=system_prompt
         )
         
         print(f"\n🎯 Started conversation with {dummy.name}")

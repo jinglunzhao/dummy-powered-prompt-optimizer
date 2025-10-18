@@ -162,11 +162,12 @@ async def run_gepa_test(config: Dict[str, Any] = None):
     assessment_system = AssessmentSystem(api_key=Config.DEEPSEEK_API_KEY)
     conversation_system = ConversationSimulator()
     
-    # Create new prompt for this test run (fresh start)
+    # Create new prompt for this test run (fresh start) - Load from YAML
+    from prompts.prompt_loader import prompt_loader
     initial_prompt = {
         "id": str(uuid.uuid4()),
         "name": "Simple Peer Mentor",
-        "prompt_text": "You are a helpful peer mentor for college students. Be supportive and provide practical advice.",
+        "prompt_text": prompt_loader.get_prompt('default_prompts.yaml', 'default_peer_mentor_prompt'),
         "generation": 0,
         "performance_metrics": {
             "avg_improvement": 0.0,

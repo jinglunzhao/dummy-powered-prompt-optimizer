@@ -1,0 +1,67 @@
+---
+globs: models.py
+description: Structure and conventions for the data models in models.py
+---
+
+# Data Models Structure
+
+The [models.py](mdc:models.py) file contains all Pydantic data models for the AI Dummy Social Skills Testing System.
+
+## Key Model Hierarchy
+
+### Core Profile Models
+1. **PersonalityProfile** - Big Five personality traits (1-10 scale)
+   - extraversion, agreeableness, conscientiousness, neuroticism, openness
+   - Method: `get_dominant_traits()` returns top 3 traits
+
+2. **SocialAnxietyProfile** - Social anxiety characteristics
+   - `anxiety_level`: int (1-10, use numeric values only)
+   - `social_comfort`: int (1-10)
+   - `communication_style`: str
+   - `triggers`: List[str]
+   - Method: `get_anxiety_category()` returns numeric anxiety_level
+
+### Evolution System Models
+3. **EvolutionStage** - One stage of personality evolution during conversation
+   - Tracks materialized traits (abstract → concrete)
+   - Records accepted solutions and progress indicators
+   - Stores anxiety changes and assessment impacts
+
+4. **ConversationBasedProfile** - Profile that evolves during conversations
+   - **Original** traits (static, never changes)
+   - **Current** traits (dynamic, changes during conversation)
+   - Methods:
+     - `reset_to_original()` - Reset for fair comparison between prompt tests
+     - `apply_evolution_stage()` - Apply new evolution
+     - `get_current_profile_for_assessment()` - Get current state
+
+5. **PersonalityEvolution** - Complete evolution system for a dummy
+   - Contains `ConversationBasedProfile`
+   - Tracks experiment and prompt test context
+   - Provides evolution timeline for visualization
+
+### Main Dummy Model
+6. **AIDummy** - Complete AI dummy character
+   - Basic info (name, age, gender, university, major)
+   - `personality`: PersonalityProfile
+   - `social_anxiety`: SocialAnxietyProfile
+   - `personality_evolution`: Optional[PersonalityEvolution]
+   - Key methods:
+     - `get_character_summary()` - Uses evolved or original profile based on config
+     - `initialize_personality_evolution()` - Set up evolution tracking
+     - `start_new_prompt_test()` - Reset for new prompt test
+     - `add_evolution_stage()` - Apply evolution from conversation
+
+### Conversation & Assessment Models
+7. **ConversationTurn** - Single turn in conversation
+8. **Conversation** - Complete conversation with turns
+9. **AssessmentResponse** & **Assessment** - Assessment questions and results
+10. **TestSession** - Complete test session with pre/post assessments
+
+## Important Conventions
+
+- All personality and anxiety scores use **1-10 scale**
+- Anxiety levels are **numeric only** (no categorical strings in Python)
+- Evolution system respects `Config.ENABLE_PERSONALITY_EVOLUTION` flag
+- Original traits are immutable; current traits evolve during conversations
+- Profiles reset between prompt tests for fair comparison

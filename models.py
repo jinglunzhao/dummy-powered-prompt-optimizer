@@ -33,16 +33,9 @@ class SocialAnxietyProfile(BaseModel):
     communication_style: str
     triggers: List[str] = Field(default_factory=list)
     
-    def get_anxiety_category(self) -> str:
-        """Get anxiety level category"""
-        if self.anxiety_level <= 3:
-            return "low"
-        elif self.anxiety_level <= 6:
-            return "moderate"
-        elif self.anxiety_level <= 9:
-            return "high"
-        else:
-            return "severe"
+    def get_anxiety_category(self) -> int:
+        """Get anxiety level as numeric value"""
+        return self.anxiety_level
 
 class EvolutionStage(BaseModel):
     """One stage of personality evolution during a conversation"""
@@ -227,11 +220,10 @@ class AIDummy(BaseModel):
             anxiety_level = self.social_anxiety.anxiety_level
         
         dominant_traits = personality_to_use.get_dominant_traits()
-        anxiety_category = "low" if anxiety_level <= 3 else "moderate" if anxiety_level <= 6 else "high" if anxiety_level <= 9 else "severe"
         
         return f"""You are {self.name}, a {self.age}-year-old {self.student_type} studying {self.major} at {self.university}. 
         Your personality is characterized by high {', '.join(dominant_traits)}. 
-        You experience {anxiety_category} social anxiety and struggle with {', '.join(challenges_to_use)}. 
+        You experience social anxiety at level {anxiety_level}/10 and struggle with {', '.join(challenges_to_use)}. 
         Your main fears include {', '.join(fears_to_use[:2])}. 
         You want to improve your {', '.join(self.goals[:2])}."""
     

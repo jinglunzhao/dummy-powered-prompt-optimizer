@@ -1,0 +1,92 @@
+---
+description: Guidelines for working with the personality evolution system
+---
+
+# Personality Evolution System
+
+The personality evolution system tracks how AI dummy personalities change during conversations for experimental purposes.
+
+## Architecture Overview
+
+Located in [models.py](mdc:models.py), the evolution system consists of:
+
+1. **EvolutionStage** - One snapshot of personality changes
+2. **ConversationBasedProfile** - Profile with original + current state
+3. **PersonalityEvolution** - Complete evolution tracking
+4. **AIDummy** - Main model that integrates evolution
+
+## Key Principles
+
+### Original vs Current Traits
+
+- **Original traits**: Static baseline, never modified
+  - `original_fears`, `original_challenges`, `original_behaviors`, etc.
+  - Used for resetting between prompt tests
+
+- **Current traits**: Dynamic, evolve during conversations
+  - `current_fears`, `current_challenges`, `current_behaviors`, etc.
+  - Updated by `apply_evolution_stage()`
+
+### Fair Comparison Between Prompts
+
+When testing different prompts, reset personality to original state:
+
+```python
+dummy.start_new_prompt_test(experiment_id, prompt_id, prompt_name)
+# This calls: conversation_profile.reset_to_original()
+```
+
+### Trait Materialization
+
+Evolution stages materialize abstract traits into concrete examples:
+- Abstract: "social rejection" → Concrete: "not being invited to study groups"
+- Abstract: "starting conversations" → Concrete: "approaching someone in cafeteria"
+
+Stored in:
+- `fears_materialized`: Dict[str, str]
+- `challenges_materialized`: Dict[str, str]
+- `behaviors_detailed`: Dict[str, str]
+- `triggers_specified`: Dict[str, str]
+
+### Configuration Control
+
+Evolution is controlled by config flag:
+```python
+Config.ENABLE_PERSONALITY_EVOLUTION  # True/False
+```
+
+When disabled:
+- Evolution methods return early without action
+- Original profile is always used
+- No evolution tracking occurs
+
+## Usage Pattern
+
+```python
+# 1. Initialize evolution (if enabled)
+dummy.initialize_personality_evolution()
+
+# 2. Start new prompt test (resets to original)
+dummy.start_new_prompt_test(exp_id, prompt_id, "Test Prompt")
+
+# 3. After each conversation, add evolution stage
+stage = EvolutionStage(
+    stage_number=1,
+    prompt_id=prompt_id,
+    conversation_summary="...",
+    fears_materialized={...},
+    anxiety_change=-0.5,
+    new_anxiety_level=6.5,
+    # ... other fields
+)
+dummy.add_evolution_stage(stage)
+
+# 4. Get current profile for assessment
+profile = dummy.get_current_profile_for_assessment()
+```
+
+## Related Files
+
+- [models.py](mdc:models.py) - Core evolution models
+- [personality_materializer.py](mdc:personality_materializer.py) - Materializes abstract traits
+- [conversation_length_experiment_with_evolution.py](mdc:conversation_length_experiment_with_evolution.py) - Experiment with evolution

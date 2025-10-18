@@ -469,24 +469,17 @@ class PromptOptimizer:
         # Calculate improvement for context
         improvement = post_assessment.average_score - pre_assessment.average_score
         
-        # Create reflection prompt for DeepSeek Reasoner
-        reflection_prompt = f"""
-You are an expert social skills coach analyzing a conversation between a peer mentor (AI) and a student. Provide a concise, actionable reflection.
-
-STUDENT: {dummy.name} (Extraversion: {dummy.personality.extraversion}/10, Anxiety: {dummy.social_anxiety.anxiety_level}/10, Improvement: {improvement:+.2f} points)
-
-SYSTEM PROMPT: "{prompt.prompt_text}"
-
-CONVERSATION:
-{conversation_text}
-
-TASK: Provide a brief, focused reflection (2-3 sentences) covering:
-- What worked well with this student
-- What didn't work or could be improved
-- Key coaching insight for similar students
-
-Be concise and actionable. No templates or verbose analysis.
-"""
+        # Load reflection prompt from YAML
+        reflection_prompt = prompt_loader.get_prompt(
+            'optimizer_prompts.yaml',
+            'reflection_prompt',
+            student_name=dummy.name,
+            extraversion=dummy.personality.extraversion,
+            anxiety_level=dummy.social_anxiety.anxiety_level,
+            improvement=improvement,
+            prompt_text=prompt.prompt_text,
+            conversation_text=conversation_text
+        )
 
         try:
             from config import Config
@@ -579,24 +572,16 @@ CONVERSATION WITH {dummy_name}:
         
         avg_improvement = total_improvement / conversation_count if conversation_count > 0 else 0.0
         
-        # Create synthesis prompt for DeepSeek Reasoner
-        synthesis_prompt = f"""
-You are an expert social skills coach analyzing a peer mentor AI system prompt across multiple conversations. Provide a concise synthesis analysis.
-
-SYSTEM PROMPT: "{prompt.prompt_text}"
-PERFORMANCE: {conversation_count} conversations, {avg_improvement:+.2f} avg improvement, Gen {prompt.generation}
-
-CONVERSATION REFLECTIONS:
-{''.join(conversation_summaries)}
-
-TASK: Provide a focused synthesis (3-4 sentences) covering:
-- Key strengths that work across students
-- Main weaknesses to address
-- Specific improvement recommendations
-- Priority areas for evolution
-
-Be concise and actionable. No verbose analysis.
-"""
+        # Load synthesis prompt from YAML
+        synthesis_prompt = prompt_loader.get_prompt(
+            'optimizer_prompts.yaml',
+            'synthesis_analysis_prompt',
+            prompt_text=prompt.prompt_text,
+            conversation_count=conversation_count,
+            avg_improvement=avg_improvement,
+            generation=prompt.generation,
+            conversation_summaries=''.join(conversation_summaries)
+        )
 
         try:
             from config import Config

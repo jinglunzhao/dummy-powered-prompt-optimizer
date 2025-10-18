@@ -19,9 +19,9 @@ class Config:
     DEEPSEEK_REASONER_MODEL = "deepseek-v3-0324"  # Use for prompt generation, reflections, synthesis (Tencent Cloud DeepSeek V3)
     TENCENT_BASE_URL = "https://api.lkeap.cloud.tencent.com/v1"  # Tencent Cloud DeepSeek base URL
     
-    # Default System Prompt - Simple constant for backwards compatibility
-    # Full default prompts are in prompts/default_prompts.yaml
-    SYSTEM_PROMPT = "You are a supportive AI assistant helping students improve their social skills. Be encouraging, provide practical advice, and help them build confidence gradually."
+    # Default System Prompt - Loaded from YAML
+    # Note: Loaded at class initialization to avoid hardcoding
+    SYSTEM_PROMPT = prompt_loader.get_prompt('default_prompts.yaml', 'default_system_prompt')
     
     # System Configuration
     NUM_DUMMIES = 100

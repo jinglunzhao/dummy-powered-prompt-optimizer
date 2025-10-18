@@ -41,10 +41,13 @@ class ConversationLengthExperimentWithEvolution:
                            dummies: List[AIDummy], 
                            max_rounds: int = 10, 
                            milestones: List[int] = [2, 5, 8, 10],
-                           base_prompt: str = "You are a helpful peer mentor for college students. Be supportive and provide practical advice.",
+                           base_prompt: str = None,  # Loaded from YAML in main() - see line 467
                            save_details: bool = True,
                            enable_assessments: bool = True) -> Dict[str, Any]:
         """Run conversation length experiment with personality evolution tracking"""
+        
+        if base_prompt is None:
+            raise ValueError("base_prompt is required. Load from YAML using prompt_loader.get_prompt()")
         
         print(f"🧬 Starting Conversation Length Experiment WITH Personality Evolution")
         print(f"📊 Configuration:")

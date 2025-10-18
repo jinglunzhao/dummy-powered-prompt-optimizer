@@ -42,41 +42,36 @@ crossover_prompt: |
   Example format: You are a helpful social skills coach who...
 
 synthesis_analysis_prompt: |
-  Analyze the following conversation performance data to create a synthesis analysis:
+  You are an expert social skills coach analyzing a peer mentor AI system prompt across multiple conversations. Provide a concise synthesis analysis.
   
-  PROMPT: "{prompt_text}"
+  SYSTEM PROMPT: "{prompt_text}"
+  PERFORMANCE: {conversation_count} conversations, {avg_improvement:+.2f} avg improvement, Gen {generation}
   
-  PERFORMANCE METRICS:
-  {metrics_summary}
+  CONVERSATION REFLECTIONS:
+  {conversation_summaries}
   
-  SAMPLE CONVERSATIONS:
-  {conversation_samples}
+  TASK: Provide a focused synthesis (3-4 sentences) covering:
+  - Key strengths that work across students
+  - Main weaknesses to address
+  - Specific improvement recommendations
+  - Priority areas for evolution
   
-  Provide a comprehensive analysis covering:
-  1. What worked well in the conversations
-  2. What didn't work or could be improved  
-  3. Specific patterns observed across different student types
-  4. Concrete recommendations for prompt improvement
-  
-  Focus on actionable insights based on actual conversation quality, not just scores.
+  Be concise and actionable. No verbose analysis.
 
 reflection_prompt: |
-  Analyze this coaching conversation and identify what worked and what didn't:
+  You are an expert social skills coach analyzing a conversation between a peer mentor (AI) and a student. Provide a concise, actionable reflection.
+  
+  STUDENT: {student_name} (Extraversion: {extraversion}/10, Anxiety: {anxiety_level}/10, Improvement: {improvement:+.2f} points)
+  
+  SYSTEM PROMPT: "{prompt_text}"
   
   CONVERSATION:
   {conversation_text}
   
-  STUDENT PROFILE:
-  - Personality: {personality_summary}
-  - Anxiety Level: {anxiety_level}/10
-  - Key Challenges: {challenges}
+  TASK: Provide a brief, focused reflection (2-3 sentences) covering:
+  - What worked well with this student
+  - What didn't work or could be improved
+  - Key coaching insight for similar students
   
-  IMPROVEMENT: {improvement:+.2f} points
-  
-  Provide:
-  1. What coaching approaches were effective
-  2. What approaches were less effective
-  3. Specific suggestions for improvement
-  
-  Be specific and actionable in your analysis.
+  Be concise and actionable. No templates or verbose analysis.
 
