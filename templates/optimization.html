@@ -169,6 +169,9 @@
             info.style.display = 'block';
         }
 
+        // Store currently loaded experiment globally
+        let currentExperimentFile = null;
+        
         function loadSelectedExperiment() {
             const select = document.getElementById('experiment-select');
             const filename = select.value;
@@ -177,6 +180,9 @@
                 alert('Please select an experiment to load.');
                 return;
             }
+            
+            // Store for later use
+            currentExperimentFile = filename;
             
             // Show loading state
             document.getElementById('generationsContainer').innerHTML = `
@@ -501,7 +507,12 @@
         }
 
         function viewGeneration(generationNum) {
-            window.location.href = `/generation/${generationNum}`;
+            // Pass the current experiment file as a query parameter
+            if (currentExperimentFile) {
+                window.location.href = `/generation/${generationNum}?experiment=${encodeURIComponent(currentExperimentFile)}`;
+            } else {
+                window.location.href = `/generation/${generationNum}`;
+            }
         }
 
         function viewPromptDetails(promptId) {

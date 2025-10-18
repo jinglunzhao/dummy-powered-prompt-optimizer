@@ -317,8 +317,25 @@ def api_optimization():
 @app.route('/api/generation/<int:generation_num>')
 def api_generation(generation_num):
     """API endpoint to get specific generation data"""
-    data = load_data()
-    optimization_data = data.get('optimization', {})
+    # Get experiment filename from query parameter
+    experiment_file = request.args.get('experiment')
+    
+    if experiment_file:
+        # Load specific experiment
+        file_path = os.path.join('data/experiments', experiment_file)
+        if os.path.exists(file_path):
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                optimization_data = data.get('optimization', {})
+            except Exception as e:
+                return jsonify({'error': f'Failed to load experiment: {e}'}), 500
+        else:
+            return jsonify({'error': 'Experiment file not found'}), 404
+    else:
+        # Fallback to old behavior for backwards compatibility
+        data = load_data()
+        optimization_data = data.get('optimization', {})
     
     # Filter prompts by generation - use all_prompts instead of pareto_frontier
     if 'all_prompts' in optimization_data:

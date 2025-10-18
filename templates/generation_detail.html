@@ -77,13 +77,23 @@
     <script>
         const generationNum = {{ generation_num }};
         
+        // Get experiment file from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const experimentFile = urlParams.get('experiment');
+        
         // Load generation data on page load
         document.addEventListener('DOMContentLoaded', function() {
             loadGenerationData(generationNum);
         });
 
         function loadGenerationData(genNum) {
-            fetch(`/api/generation/${genNum}`)
+            // Add experiment parameter if available
+            let url = `/api/generation/${genNum}`;
+            if (experimentFile) {
+                url += `?experiment=${encodeURIComponent(experimentFile)}`;
+            }
+            
+            fetch(url)
                 .then(response => response.json())
                 .then(data => {
                     displayGenerationPrompts(data);
