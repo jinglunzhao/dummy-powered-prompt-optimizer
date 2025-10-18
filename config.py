@@ -4,6 +4,7 @@ Configuration file for the AI Dummy Social Skills Testing System
 import os
 from typing import Dict, Any
 from dotenv import load_dotenv
+from prompts.prompt_loader import prompt_loader
 
 # Load environment variables
 # load_dotenv()  # Disabled to avoid encoding issues
@@ -18,7 +19,8 @@ class Config:
     DEEPSEEK_REASONER_MODEL = "deepseek-v3-0324"  # Use for prompt generation, reflections, synthesis (Tencent Cloud DeepSeek V3)
     TENCENT_BASE_URL = "https://api.lkeap.cloud.tencent.com/v1"  # Tencent Cloud DeepSeek base URL
     
-    # Default System Prompt
+    # Default System Prompt - Simple constant for backwards compatibility
+    # Full default prompts are in prompts/default_prompts.yaml
     SYSTEM_PROMPT = "You are a supportive AI assistant helping students improve their social skills. Be encouraging, provide practical advice, and help them build confidence gradually."
     
     # System Configuration

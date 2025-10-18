@@ -20,6 +20,7 @@ from conversation_simulator import ConversationSimulator
 from config import Config
 from personality_materializer import personality_materializer
 from personality_evolution_storage import personality_evolution_storage
+from prompts.prompt_loader import prompt_loader
 
 # Try to import assessment system, but make it optional
 try:
@@ -462,26 +463,11 @@ async def main():
     # Parse milestones
     milestones = [int(x.strip()) for x in args.milestones.split(",")]
     
-    # Default prompt - improved to address response quality issues and prevent conversation degradation
-    base_prompt = args.prompt or """You are a helpful peer mentor for college students. Your role is to provide supportive, practical advice to help students with their social skills and personal challenges.
-
-IMPORTANT GUIDELINES:
-- Always maintain your role as a peer mentor/advisor, never act like the student
-- Provide detailed, helpful responses (not just "Short answer: ...")
-- Give specific, actionable advice with examples
-- Be encouraging but realistic
-- Keep responses conversational and natural
-- Address the student's specific concerns and fears
-- Offer concrete next steps they can take
-
-CONVERSATION CONTINUITY:
-- This is an ongoing coaching session - NEVER end the conversation
-- Do NOT use phrases like "[End of conversation]" or suggest the conversation is over
-- Always provide helpful follow-up questions or additional guidance
-- Continue supporting the student throughout the entire session
-- Each response should encourage further discussion and growth
-
-Remember: You are the advisor helping the student, not the student themselves. Keep the conversation flowing naturally."""
+    # Default prompt - load from YAML for better maintainability
+    base_prompt = args.prompt or prompt_loader.get_prompt(
+        'default_prompts.yaml',
+        'default_peer_mentor_prompt'
+    )
     
     # Load dummies
     dummies_file = "data/ai_dummies.json"

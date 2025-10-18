@@ -22,6 +22,7 @@ from typing import List, Dict, Any, Optional, Tuple
 from datetime import datetime
 from models import AIDummy, Assessment, AssessmentResponse, PersonalityProfile, SocialAnxietyProfile, Conversation, ConversationTurn
 import aiohttp
+from prompts.prompt_loader import prompt_loader
 
 class AssessmentSystemLLMBased:
     """LLM-based self-assessment simulation system"""
@@ -98,36 +99,10 @@ class AssessmentSystemLLMBased:
     
     def _create_assessment_system_prompt(self) -> str:
         """Create system prompt with objective assessment methodology"""
-        return """You are administering a social skills self-assessment questionnaire. Your role is to help a student evaluate themselves honestly and consistently.
-
-ASSESSMENT METHODOLOGY:
-- This is a self-assessment with 20 questions about social skills
-- Each question should be rated on a scale of 1-4:
-  * 1 = Not true of me (I rarely/never do this)
-  * 2 = Somewhat true of me (I do this sometimes)
-  * 3 = Mostly true of me (I do this often)
-  * 4 = Very true of me (I almost always do this)
-
-IMPORTANT INSTRUCTIONS:
-1. Be consistent with the student's personality and baseline traits
-2. Consider how coaching conversations might have influenced their self-perception
-3. Responses should reflect genuine self-reflection, not external assessment
-4. Maintain personality consistency while allowing for growth from coaching
-5. Each question should receive exactly one integer score from 1-4
-6. For POST-COACHING assessments: Compare against baseline scores to determine if coaching helped
-7. Small improvements (0.5-1 point increase) are realistic; dramatic changes are unlikely
-
-RESPONSE FORMAT:
-For each of the 20 questions, provide only the numeric score (1-4) followed by a brief explanation (1-2 sentences) of why the student would rate themselves that way.
-
-Example:
-1. I ask for help when I need it.
-Score: 2
-Explanation: I usually try to figure things out myself first, but I'm getting better at asking for help when I'm really stuck.
-
-2. I stay calm when dealing with problems.
-Score: 3
-Explanation: I've learned some strategies to stay calm, though I still get stressed with really big problems."""
+        return prompt_loader.get_prompt(
+            'assessment_prompts.yaml',
+            'assessment_system_prompt'
+        )
 
     def _create_baseline_user_prompt(self, dummy: AIDummy) -> str:
         """Create user prompt for baseline assessment with dummy profile"""
@@ -139,29 +114,20 @@ Explanation: I've learned some strategies to stay calm, though I still get stres
         personality_desc = self._get_personality_description(current_profile["big_five"])
         anxiety_desc = self._get_anxiety_description_evolved(current_profile)
         
-        return f"""STUDENT PROFILE:
-Name: {dummy.name}
-Age: {dummy.age}
-Major: {dummy.major}
-University: {dummy.university}
-
-PERSONALITY TRAITS:
-{personality_desc}
-
-SOCIAL ANXIETY:
-{anxiety_desc}
-
-PERSONAL DETAILS:
-- Fears: {', '.join(current_profile["fears"])}
-- Goals: {', '.join(dummy.goals)}
-- Challenges: {', '.join(current_profile["challenges"])}
-- Behaviors: {', '.join(current_profile["behaviors"])}
-
-BASELINE ASSESSMENT:
-This is {dummy.name}'s initial self-assessment before any coaching conversations. Please help them evaluate themselves honestly based on their current personality traits, anxiety level, and typical behaviors.
-
-Rate each of the 20 social skills questions from 1-4 based on how {dummy.name} would realistically assess themselves given their personality profile."""
-
+        return prompt_loader.get_prompt(
+            'assessment_prompts.yaml',
+            'baseline_assessment_prompt',
+            student_name=dummy.name,
+            age=dummy.age,
+            major=dummy.major,
+            university=dummy.university,
+            personality_desc=personality_desc,
+            anxiety_desc=anxiety_desc,
+            fears=', '.join(current_profile["fears"]),
+            goals=', '.join(dummy.goals),
+            challenges=', '.join(current_profile["challenges"]),
+            behaviors=', '.join(current_profile["behaviors"])
+        )
     def _create_post_conversation_user_prompt(self, dummy: AIDummy, conversation: Conversation, 
                                             pre_assessment: Assessment) -> str:
         """Create user prompt for post-conversation assessment with conversation history"""
@@ -179,42 +145,22 @@ Rate each of the 20 social skills questions from 1-4 based on how {dummy.name} w
         # Get baseline scores for reference
         baseline_scores = self._get_baseline_scores_summary(pre_assessment)
         
-        return f"""STUDENT PROFILE:
-Name: {dummy.name}
-Age: {dummy.age}
-Major: {dummy.major}
-University: {dummy.university}
-
-PERSONALITY TRAITS (CURRENT EVOLVED STATE):
-{personality_desc}
-
-SOCIAL ANXIETY (CURRENT EVOLVED STATE):
-{anxiety_desc}
-
-PERSONAL DETAILS (CURRENT EVOLVED STATE):
-- Fears: {', '.join(current_profile["fears"])}
-- Goals: {', '.join(dummy.goals)}
-- Challenges: {', '.join(current_profile["challenges"])}
-- Behaviors: {', '.join(current_profile["behaviors"])}
-
-COACHING CONVERSATION SUMMARY:
-{conversation_summary}
-
-BASELINE ASSESSMENT REFERENCE:
-{baseline_scores}
-
-POST-COACHING ASSESSMENT:
-This is {dummy.name}'s self-assessment after having coaching conversations. The coaching has materialized their abstract fears and challenges into concrete situations, which may have influenced their self-perception, confidence, and awareness of their social skills.
-
-EVALUATION GUIDELINES:
-1. Compare each question against the baseline score provided above
-2. Consider realistic improvements: 0.5-1 point increases are normal, dramatic changes are unlikely
-3. Think about how the coaching conversation specifically addressed each skill area
-4. Consider how materialized fears/challenges may have changed their self-assessment
-5. Maintain consistency with their evolved personality traits while allowing for growth
-6. Consider the cumulative effect of multiple coaching sessions, focus on incremental progress rather than dramatic fluctuations
-
-Rate each of the 20 social skills questions from 1-4 based on how {dummy.name} would assess themselves after this coaching experience. Consider whether coaching helped them improve from their baseline scores."""
+        return prompt_loader.get_prompt(
+            'assessment_prompts.yaml',
+            'post_conversation_assessment_prompt',
+            student_name=dummy.name,
+            age=dummy.age,
+            major=dummy.major,
+            university=dummy.university,
+            personality_desc=personality_desc,
+            anxiety_desc=anxiety_desc,
+            fears=', '.join(current_profile["fears"]),
+            goals=', '.join(dummy.goals),
+            challenges=', '.join(current_profile["challenges"]),
+            behaviors=', '.join(current_profile["behaviors"]),
+            baseline_scores=baseline_scores,
+            conversation_summary=conversation_summary
+        )
 
     def _get_personality_description(self, personality: PersonalityProfile) -> str:
         """Create personality description for LLM context"""
