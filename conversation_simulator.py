@@ -120,8 +120,46 @@ class ConversationSimulator:
                 result = await response.json()
                 return result['choices'][0]['message']['content'].strip()
     
+    async def _generate_conversation_memo(self, conversation: Conversation, dummy: AIDummy) -> str:
+        """Generate a memo of key points from conversation for AI coach's reference"""
+        
+        # Get conversation text
+        conversation_text = ""
+        for turn in conversation.turns:
+            speaker_label = "Assistant" if turn.speaker == "ai" else dummy.name
+            conversation_text += f"{speaker_label}: {turn.message}\n"
+        
+        # Load memo generation prompt
+        memo_prompt = prompt_loader.get_prompt(
+            'conversation_prompts.yaml',
+            'conversation_memo_generation_prompt',
+            conversation_text=conversation_text
+        )
+        
+        try:
+            from config import Config
+            async with aiohttp.ClientSession() as session:
+                async with session.post(
+                    "https://api.lkeap.cloud.tencent.com/v1/chat/completions",
+                    headers={
+                        "Authorization": f"Bearer {self.api_key}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "model": Config.OPENAI_MODEL,
+                        "messages": [{"role": "user", "content": memo_prompt}],
+                        "max_tokens": 200,
+                        "temperature": 0.3
+                    }
+                ) as response:
+                    result = await response.json()
+                    return result['choices'][0]['message']['content'].strip()
+        except Exception as e:
+            print(f"   ⚠️ Memo generation failed: {e}")
+            return "No previous conversation memo available."
+    
     async def _generate_ai_response_async(self, conversation: Conversation, system_prompt: str, dummy: AIDummy) -> str:
-        """Generate AI response using the custom system prompt"""
+        """Generate AI response - AI only knows what student has shared in conversation"""
         
         # Load AI coach system addition from YAML
         system_addition = prompt_loader.get_prompt(
@@ -129,21 +167,33 @@ class ConversationSimulator:
             'ai_coach_system_addition'
         )
         
-        # Prepare conversation history
+        # Prepare conversation context - all in "user" role
         messages = [
-            {"role": "system", "content": system_prompt + system_addition},
-            {"role": "user", "content": f"Student Profile: {dummy.get_character_summary()}"}
+            {"role": "system", "content": system_prompt + system_addition}
         ]
         
-        # Add conversation history - properly label who said what
-        # DeepSeek API: student messages = "user", AI responses = "assistant"
-        for turn in conversation.turns[-6:]:  # Last 6 turns for context
-            if turn.speaker == "dummy":
-                # Student's message
-                messages.append({"role": "user", "content": f"{dummy.name}: {turn.message}"})
-            else:
-                # AI coach's previous response
-                messages.append({"role": "assistant", "content": turn.message})
+        # Build user message - NO detailed personality profile for AI
+        # AI should only know what student shares in conversation
+        user_content = f"You are meeting with {dummy.name}, a student seeking help with social skills.\n\n"
+        
+        # Add conversation memo if conversation has progressed enough
+        if len(conversation.turns) >= 6:  # After 6+ turns, generate memo
+            memo = await self._generate_conversation_memo(conversation, dummy)
+            user_content += f"{memo}\n\n"
+        
+        # Add recent conversation history as formatted transcript
+        if conversation.turns:
+            user_content += "Recent Conversation:\n"
+            for turn in conversation.turns[-6:]:  # Last 6 turns for context
+                if turn.speaker == "dummy":
+                    user_content += f"{dummy.name}: {turn.message}\n"
+                else:
+                    user_content += f"Assistant: {turn.message}\n"
+            user_content += f"\nProvide your next response to {dummy.name}."
+        else:
+            user_content += f"{dummy.name} is about to speak with you. Prepare to listen and help."
+        
+        messages.append({"role": "user", "content": user_content})
         
         async with aiohttp.ClientSession() as session:
             async with session.post(
@@ -178,22 +228,24 @@ class ConversationSimulator:
             character_context=character_context
         )
         
-        # Prepare conversation history (same as AI - last 6 turns for context)
+        # Prepare conversation context - all in "user" role
         messages = [
-            {"role": "system", "content": system_content},
-            {"role": "user", "content": f"Student Profile: {dummy.get_character_summary()}"}
+            {"role": "system", "content": system_content}
         ]
         
-        # Add conversation history - properly label who said what
-        # Student's own messages = "assistant" (what they said before)
-        # AI mentor's messages = "user" (what they're responding to)
-        for turn in conversation.turns[-6:]:  # Last 6 turns for context
-            if turn.speaker == "dummy":
-                # Student's own previous message
-                messages.append({"role": "assistant", "content": turn.message})
-            else:
-                # AI mentor's message that student is responding to
-                messages.append({"role": "user", "content": f"Mentor: {turn.message}"})
+        # Build user message with profile and conversation history
+        user_content = f"Student Profile: {dummy.get_character_summary()}\n\n"
+        
+        # Add conversation history as formatted transcript if exists
+        if conversation.turns:
+            user_content += "Conversation History:\n"
+            for turn in conversation.turns[-6:]:  # Last 6 turns for context
+                if turn.speaker == "dummy":
+                    user_content += f"{dummy.name}: {turn.message}\n"
+                else:
+                    user_content += f"Mentor: {turn.message}\n"
+        
+        messages.append({"role": "user", "content": user_content})
         
         async with aiohttp.ClientSession() as session:
             async with session.post(

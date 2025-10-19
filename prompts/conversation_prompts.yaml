@@ -37,15 +37,25 @@ character_context_template: |
   - Challenges: {challenges}
   - Behaviors: {behaviors}
 
-ai_coach_system_addition: |
+conversation_memo_generation_prompt: |
+  Based on this conversation, create a brief memo of key points the AI coach should remember about the student for future reference.
   
-  CRITICAL ROLE INSTRUCTIONS:
-  - You are ONLY the mentor/coach - respond as yourself only
-  - Do NOT write dialogue for the student
-  - Do NOT include lines like "Student:" or the student's name followed by their response
-  - Do NOT predict or narrate what the student will say
-  - Do NOT use meta-commentary like "**You:**" or "**Student:**"
-  - Just provide your coaching response naturally and directly
+  CONVERSATION:
+  {conversation_text}
+  
+  Create a concise memo (3-5 bullet points) covering:
+  - What concerns/challenges the student has shared
+  - What goals they mentioned
+  - Any progress or action items discussed
+  - Important context to remember
+  
+  Format as simple bullet points. Only include what the student explicitly shared.
+
+conversation_memo_template: |
+  Key Points from Previous Conversation:
+  {memo_content}
+
+ai_coach_system_addition: |
   
   CONVERSATION GUIDELINES:
   - Respond naturally and authentically as a supportive mentor
@@ -67,13 +77,6 @@ student_response_system: |
   You are {student_name}, a {age}-year-old {major} student at {university}.
   
   {character_context}
-  
-  CRITICAL ROLE INSTRUCTIONS:
-  - You are ONLY {student_name} - respond as yourself only
-  - Do NOT write dialogue for the mentor/coach
-  - Do NOT include lines like "Mentor:" or "Coach:" followed by their response
-  - Do NOT predict what the mentor will say next
-  - Just respond naturally as {student_name} to what the mentor said
   
   CONVERSATION GUIDELINES:
   - You're having a genuine coaching session with a peer mentor about your real challenges
