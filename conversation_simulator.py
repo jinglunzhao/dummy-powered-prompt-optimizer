@@ -83,6 +83,24 @@ class ConversationSimulator:
             ai_response = await self._generate_ai_response_async(conversation, system_prompt_text, dummy)
             conversation.add_turn("ai", ai_response, {"round": round_num + 1})
             
+            # Generate memo after reaching milestone turns (6, 12, 18...)
+            if len(conversation.turns) >= Config.MEMO_UPDATE_INTERVAL and len(conversation.turns) % Config.MEMO_UPDATE_INTERVAL == 0:
+                print(f"\n📝 Generating memo after turn {len(conversation.turns)}...", end="", flush=True)
+                self.current_memo = await self._generate_conversation_memo(conversation, dummy)
+                self.last_memo_at_turn = len(conversation.turns)
+                print(" ✓", flush=True)
+            
+            # Check for natural ending after AI response (not after dummy response)
+            # Only check after we have meaningful conversation:
+            # Turn 1: opening, Turns 2-3: exchange 1, Turns 4-5: exchange 2, Turn 6+: check starts
+            # First check at turn 6 = after opening + 2 complete exchanges
+            if len(conversation.turns) >= 6:
+                should_end = await self.check_conversation_should_end(conversation)
+                if should_end:
+                    turn_count = len(conversation.turns)
+                    print(f"\n✅ Natural ending detected at turn {turn_count}")
+                    break
+            
             # Dummy response based on character
             print(".", end="", flush=True)  # Show progress dot
             dummy_response = await self._generate_character_response_async(conversation, dummy, round_num + 1)
@@ -95,15 +113,6 @@ class ConversationSimulator:
                     turn_count = len(conversation.turns)
                     print(f"\n⚠️  Conversation quality issue detected: {reason}")
                     print(f"   Ending conversation early at turn {turn_count}")
-                    break
-            
-            # Check for natural ending after each complete round (AI + dummy)
-            # Only check after we have at least 2 rounds (4 turns total)
-            if len(conversation.turns) >= 6:  # Initial turn + 2 complete rounds
-                should_end = await self.check_conversation_should_end(conversation)
-                if should_end:
-                    turn_count = len(conversation.turns)
-                    print(f"\n✅ Natural ending detected at turn {turn_count}")
                     break
         
         print()  # New line after conversation progress
@@ -204,19 +213,7 @@ class ConversationSimulator:
         # AI should only know what student shares in conversation
         user_content = f"You are meeting with {dummy.name}, a student seeking help with social skills.\n\n"
         
-        # Milestone-based memo generation (at turns 6, 12, 18, etc.)
-        num_turns = len(conversation.turns)
-        memo_interval = Config.MEMO_UPDATE_INTERVAL
-        window_size = Config.CONVERSATION_WINDOW_SIZE
-        
-        # Check if we should generate/update memo
-        if num_turns >= memo_interval and num_turns % memo_interval == 0:
-            # We're at a memo milestone - generate new memo
-            print(f"📝 Generating memo at turn {num_turns}...", end="", flush=True)
-            self.current_memo = await self._generate_conversation_memo(conversation, dummy)
-            self.last_memo_at_turn = num_turns
-            print(" ✓", flush=True)
-        
+        # Memo is generated in the main loop after reaching milestones (6, 12, 18... turns)
         # Add cached memo if it exists (covers earlier context)
         if self.current_memo:
             user_content += f"Key Points from Earlier Conversation:\n{self.current_memo}\n\n"
@@ -225,7 +222,7 @@ class ConversationSimulator:
         # If memo exists, this avoids duplication since memo covers earlier parts
         if conversation.turns:
             user_content += "Recent Conversation:\n"
-            for turn in conversation.turns[-window_size:]:  # Configurable window size
+            for turn in conversation.turns[-Config.CONVERSATION_WINDOW_SIZE:]:  # Configurable window size
                 if turn.speaker == "dummy":
                     user_content += f"{dummy.name}: {turn.message}\n"
                 else:

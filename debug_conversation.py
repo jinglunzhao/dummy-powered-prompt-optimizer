@@ -1,15 +1,36 @@
 #!/usr/bin/env python3
 """
 Debug script to examine FULL EXPERIMENT WORKFLOW step-by-step.
-Shows ALL prompts sent to LLM including conversations, assessments, and materializations.
-Press Enter to continue to next step.
 
-This uses the REAL conversation_length_experiment implementation.
+USAGE:
+    python debug_conversation.py --dummy "Greg Moore"
+    python debug_conversation.py --dummy "Sarah" --file data/experiments/continuous_conversation_with_evolution_exp_20251021_120000.json
+
+WHAT THIS DOES:
+    1. Loads a specific dummy from the latest experiment results
+    2. Re-runs the EXACT SAME workflow: pre-assessment → conversation → milestones → post-assessment
+    3. Shows EVERY prompt sent to the LLM and EVERY response received
+    4. Pauses after each LLM call so you can examine the interaction
+
+KEY FEATURES:
+    - Uses the REAL ConversationLengthExperimentWithEvolution.run_dummy_experiment() method
+    - Debug wrappers intercept LLM calls to display prompts/responses without changing logic
+    - Matches the exact experiment workflow including memo generation, milestone assessments, etc.
+
+WHY USE THIS:
+    - Understand why a conversation produced unexpected results (e.g., negative improvement scores)
+    - See exactly what prompts are being sent to the LLM at each step
+    - Debug assessment scoring logic
+    - Verify conversation quality and turn-taking behavior
+
+IMPORTANT: Debug wrappers reimplement LLM-calling methods to add visibility.
+They MUST be kept in sync with the parent classes (ConversationSimulator, AssessmentSystemLLMBased).
 """
 
 import asyncio
 import json
 import re
+import glob
 import aiohttp
 from datetime import datetime
 from typing import Optional, Dict, Any
@@ -91,7 +112,13 @@ async def debug_api_call(url: str, headers: dict, json_data: dict, role: str):
 
 
 class DebugConversationSimulator(ConversationSimulator):
-    """Debug wrapper for conversation simulator."""
+    """
+    Debug wrapper for conversation simulator.
+    
+    IMPORTANT: This class reimplements the LLM-calling methods to add debug output.
+    The logic MUST be kept in sync with ConversationSimulator in conversation_simulator.py.
+    Any changes to the parent class methods should be reflected here.
+    """
     
     def __init__(self, api_key: str):
         """Initialize with memo tracking."""
@@ -144,17 +171,8 @@ class DebugConversationSimulator(ConversationSimulator):
     
     async def _generate_ai_response_async(self, conversation: Conversation, system_prompt: str, dummy: AIDummy) -> str:
         """Override with debug output."""
-        num_turns = len(conversation.turns)
-        
-        # Debug: Always show turn count when generating AI response  
-        memo_due = (num_turns >= Config.MEMO_UPDATE_INTERVAL and num_turns % Config.MEMO_UPDATE_INTERVAL == 0)
-        print(f"\n   [DEBUG: Before AI response generation - Turn {num_turns}, Memo due? {memo_due}, Current memo exists? {self.current_memo is not None}]", flush=True)
-        
-        if memo_due:
-            print(f"\n📝 Generating memo at turn {num_turns}...", flush=True)
-            self.current_memo = await self._generate_conversation_memo(conversation, dummy)
-            self.last_memo_at_turn = num_turns
-            print(f"   ✅ Memo generated successfully\n", flush=True)
+        # Memo is now generated in main loop after turn 6, 12, 18... are added
+        # This method just uses the memo if it exists
         
         system_addition = prompt_loader.get_prompt('conversation_prompts.yaml', 'ai_coach_system_addition')
         messages = [{"role": "system", "content": system_prompt + system_addition}]
@@ -210,10 +228,15 @@ class DebugConversationSimulator(ConversationSimulator):
 
 
 class DebugAssessmentSystem(AssessmentSystemLLMBased):
-    """Debug wrapper for assessment system."""
+    """
+    Debug wrapper for assessment system.
+    
+    IMPORTANT: This class reimplements _get_llm_assessment to add debug output.
+    The logic MUST match AssessmentSystemLLMBased in assessment_system_llm_based.py.
+    """
     
     async def _get_llm_assessment(self, system_prompt: str, user_prompt: str, dummy: AIDummy) -> str:
-        """Override with debug output."""
+        """Override with debug output - matches parent implementation exactly."""
         
         # Extract a short description for the step label
         step_label = "ASSESSMENT"
@@ -257,11 +280,11 @@ class DebugAssessmentSystem(AssessmentSystemLLMBased):
         return result['choices'][0]['message']['content'].strip()
 
 
-async def debug_sarah_brooks_full_workflow():
-    """Debug Sarah Brooks with FULL experiment workflow including assessments."""
+async def debug_dummy_full_workflow(dummy_name: str = None, experiment_file: str = None):
+    """Debug a specific dummy with FULL experiment workflow including assessments."""
     
     print("\n" + "="*80)
-    print("FULL EXPERIMENT WORKFLOW DEBUG - Sarah Brooks")
+    print(f"FULL EXPERIMENT WORKFLOW DEBUG - {dummy_name or 'Dummy'}")
     print("="*80)
     print("\nThis uses the EXACT SAME workflow as conversation_length_experiment_with_evolution.py:")
     print("\n🔄 WORKFLOW:")
@@ -280,36 +303,62 @@ async def debug_sarah_brooks_full_workflow():
     
     input("Press Enter to start...")
     
+    # Find the experiment file to load
+    if not experiment_file:
+        files = glob.glob('/home/zhaojinglun/edu_chatbot/data/experiments/continuous_conversation_with_evolution_exp_*.json')
+        if not files:
+            print("❌ No experiment files found!")
+            return
+        experiment_file = max(files)  # Get the latest one
+        print(f"📁 Using latest experiment: {experiment_file}")
+    
     # Load experiment data
-    with open('/home/zhaojinglun/edu_chatbot/data/experiments/continuous_conversation_with_evolution_exp_20251020_230620.json', 'r') as f:
+    with open(experiment_file, 'r') as f:
         exp_data = json.load(f)
     
-    sarah_data = None
-    for result in exp_data['results']:
-        if result['dummy_name'] == 'Sarah Brooks':
-            sarah_data = result
-            break
+    # Find the dummy
+    dummy_data = None
+    if dummy_name:
+        for result in exp_data['results']:
+            if dummy_name.lower() in result['dummy_name'].lower():
+                dummy_data = result
+                break
     
-    if not sarah_data:
-        print("❌ Sarah Brooks not found!")
+    if not dummy_data:
+        print(f"\n❌ Dummy '{dummy_name}' not found in experiment!")
+        print("\nAvailable dummies:")
+        for result in exp_data['results']:
+            print(f"   - {result['dummy_name']}")
         return
     
-    print(f"\n✅ Found Sarah Brooks")
+    print(f"\n✅ Found {dummy_data['dummy_name']}")
+    print(f"   Original result: {dummy_data['total_conversation_turns']} turns")
+    print(f"   Pre-assessment: {dummy_data['pre_assessment_score']:.2f}")
+    print(f"   Post-assessment: {dummy_data['final_assessment_score']:.2f}")
+    print(f"   Improvement: {dummy_data['final_improvement']:+.3f}")
     
-    # Create dummy
-    dummy = AIDummy(
-        id=sarah_data['dummy_id'], name=sarah_data['dummy_name'],
-        age=20, gender="Female", university="State University", major="Mathematics", student_type="Undergraduate",
-        personality=PersonalityProfile(extraversion=3, agreeableness=8, conscientiousness=4, neuroticism=8, openness=5),
-        social_anxiety=SocialAnxietyProfile(anxiety_level=8, communication_style="Indirect",
-                                           triggers=["Networking events", "Campus social events", "Office hours"], social_comfort=6),
-        goals=["Learn about different cultures", "Learn a new language"],
-        fears=["Choosing the right career path", "Social anxiety in large lecture halls"],
-        challenges=["Preparing for presentations", "Developing effective study habits", "Overcoming procrastination", "Making friends in a new environment"],
-        behaviors=["Exercises regularly", "Uses social media for networking", "Stays up late studying"]
-    )
+    # Load the full dummy from ai_dummies.json
+    try:
+        with open('data/ai_dummies.json', 'r') as f:
+            dummies_data = json.load(f)
+            all_dummies = [AIDummy(**d) for d in dummies_data]
+    except FileNotFoundError:
+        print(f"❌ Could not find data/ai_dummies.json")
+        return
+    
+    dummy = None
+    for d in all_dummies:
+        if d.id == dummy_data['dummy_id']:
+            dummy = d
+            break
+    
+    if not dummy:
+        print(f"❌ Could not find dummy {dummy_data['dummy_id']} in ai_dummies.json")
+        print(f"   Looking for ID: {dummy_data['dummy_id']}")
+        return
     
     print(f"   Anxiety: {dummy.social_anxiety.anxiety_level}/10")
+    print(f"   Communication: {dummy.social_anxiety.communication_style}")
     
     system_prompt = exp_data['experiment_info']['base_prompt']
     
@@ -363,4 +412,17 @@ async def debug_sarah_brooks_full_workflow():
 
 
 if __name__ == "__main__":
-    asyncio.run(debug_sarah_brooks_full_workflow())
+    import argparse
+    parser = argparse.ArgumentParser(description="Debug a specific dummy's conversation flow step-by-step")
+    parser.add_argument("--dummy", "-d", type=str, help="Dummy name to debug (e.g., 'Greg Moore', 'Sarah Brooks')")
+    parser.add_argument("--file", "-f", type=str, help="Experiment file to load (default: latest)")
+    args = parser.parse_args()
+    
+    if not args.dummy:
+        print("❌ Please specify a dummy name with --dummy")
+        print("\nExample:")
+        print("  python debug_conversation.py --dummy 'Greg Moore'")
+        print("  python debug_conversation.py --dummy 'Sarah' --file data/experiments/continuous_conversation_with_evolution_exp_20251021_120000.json")
+        exit(1)
+    
+    asyncio.run(debug_dummy_full_workflow(dummy_name=args.dummy, experiment_file=args.file))
