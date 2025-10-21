@@ -74,7 +74,8 @@ class AssessmentSystemLLMBased:
         return assessment
     
     async def generate_post_assessment(self, dummy: AIDummy, pre_assessment: Assessment, 
-                                     conversation: Conversation = None) -> Assessment:
+                                     conversation: Conversation = None,
+                                     conversation_simulator = None) -> Assessment:
         """Generate post-conversation assessment using LLM to simulate dummy's self-assessment after coaching"""
         
         if not conversation:
@@ -85,8 +86,19 @@ class AssessmentSystemLLMBased:
         # Create system prompt for assessment method
         system_prompt = self._create_assessment_system_prompt()
         
-        # Create user prompt with dummy profile and conversation history
-        user_prompt = self._create_post_conversation_user_prompt(dummy, conversation, pre_assessment)
+        # Generate conversation memo using the same method as during conversation
+        conversation_memo = None
+        if conversation_simulator:
+            # Use the conversation simulator's memo generation method
+            conversation_memo = await conversation_simulator._generate_conversation_memo(conversation, dummy)
+        else:
+            # Fallback: Create a temporary conversation simulator instance
+            from conversation_simulator import ConversationSimulator
+            temp_simulator = ConversationSimulator(api_key=self.api_key)
+            conversation_memo = await temp_simulator._generate_conversation_memo(conversation, dummy)
+        
+        # Create user prompt with dummy profile and conversation memo
+        user_prompt = self._create_post_conversation_user_prompt(dummy, conversation, pre_assessment, conversation_memo)
         
         # Get LLM assessment
         assessment_data = await self._get_llm_assessment(system_prompt, user_prompt, dummy)
@@ -128,9 +140,10 @@ class AssessmentSystemLLMBased:
             challenges=', '.join(current_profile["challenges"]),
             behaviors=', '.join(current_profile["behaviors"])
         )
+    
     def _create_post_conversation_user_prompt(self, dummy: AIDummy, conversation: Conversation, 
-                                            pre_assessment: Assessment) -> str:
-        """Create user prompt for post-conversation assessment with conversation history"""
+                                            pre_assessment: Assessment, conversation_memo: str = None) -> str:
+        """Create user prompt for post-conversation assessment with conversation memo"""
         
         # Get current evolved profile
         current_profile = dummy.get_current_profile_for_assessment()
@@ -139,8 +152,8 @@ class AssessmentSystemLLMBased:
         personality_desc = self._get_personality_description(current_profile["big_five"])
         anxiety_desc = self._get_anxiety_description_evolved(current_profile)
         
-        # Summarize conversation
-        conversation_summary = self._summarize_conversation(conversation)
+        # Use provided memo or fallback to old summary method
+        conversation_summary = conversation_memo if conversation_memo else self._summarize_conversation(conversation)
         
         # Get baseline scores for reference
         baseline_scores = self._get_baseline_scores_summary(pre_assessment)

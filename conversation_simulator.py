@@ -185,7 +185,7 @@ class ConversationSimulator:
                     json={
                         "model": Config.OPENAI_MODEL,
                         "messages": [{"role": "user", "content": memo_prompt}],
-                        "max_tokens": 200,
+                        "max_tokens": 300,  # Increased to avoid truncation
                         "temperature": 0.3
                     }
                 ) as response:
@@ -385,7 +385,8 @@ class ConversationSimulator:
             return False
             
         # Get recent conversation context for LLM-based detection
-        recent_turns = conversation.turns[-4:]  # Last 4 turns (2 rounds)
+        # Only look at last 2 turns (most recent exchange) to avoid confusion from earlier content
+        recent_turns = conversation.turns[-2:]  # Last AI response + Last dummy response
         conversation_text = "\n".join([f"{turn.speaker}: {turn.message}" for turn in recent_turns])
         
         headers = {

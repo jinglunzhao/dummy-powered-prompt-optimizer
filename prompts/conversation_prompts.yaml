@@ -79,33 +79,26 @@ student_response_system: |
   4. FORMAT: Speak directly - NO name prefix (don't start with "{student_name}:").
 
 conversation_end_detection_prompt: |
-  You are analyzing a coaching conversation between a student and an AI mentor.
+  Analyze the MENTOR'S LAST MESSAGE (most recent) to determine if the conversation is ending.
   
-  Recent conversation:
+  Recent exchange:
   {conversation_text}
   
-  Determine if this conversation has reached a natural ending. Look for these signals:
+  SAY "YES" IF MENTOR'S LAST MESSAGE INCLUDES:
+  - Wrap-up language ("Good luck!", "See you", "You've got this!", "Sounds like a plan")
+  - Final encouragement without further questions
+  - Signals conversation is concluding
   
-  EXPLICIT ENDINGS:
-  1. Student expressing thanks, satisfaction, or saying goodbye
-  2. Student indicating they're leaving or ending the session
-  3. Any action descriptions indicating departure (exits, leaves, walks away, etc.)
+  SAY "NO" IF MENTOR'S LAST MESSAGE:
+  - Asks a question (even if also providing encouragement)
+  - Requests follow-up or check-in
+  - Suggests more practice or conversation
   
-  SUBTLE/IMPLICIT ENDINGS (IMPORTANT - these count as ready to end):
-  4. Student has a concrete plan ("I'll try X", "I think I'll do Y", "I'll be okay")
-  5. Student expresses confidence or readiness ("that makes sense", "I can do that")
-  6. Student acknowledges advice positively ("great idea", "you're right", "that helps")
-  7. Student has received actionable next steps and seems satisfied
-  8. Conversation feels complete - main concerns addressed, student seems content
-  
-  Be sensitive to these signals! Even if the student doesn't explicitly say "goodbye", if they have:
-  - A clear plan of action
-  - Expressed confidence
-  - Acknowledged the mentor's help positively
-  Then the conversation is ready to end. Say YES.
+  BE CONSERVATIVE: "Want to check in after...?" = NO (requesting follow-up).
+  Only say YES when mentor gives pure closing encouragement with no questions.
   
   Answer with exactly "YES" or "NO".
 
 end_detection_system: |
-  You are an expert conversation analyst. Detect natural conversation endings accurately. Be sensitive to departure signals.
+  You are a conservative conversation analyst. Only detect CLEAR endings - when in doubt, let the conversation continue.
 

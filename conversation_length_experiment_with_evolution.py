@@ -185,7 +185,10 @@ class ConversationLengthExperimentWithEvolution:
             if conversation_completed_all_rounds:
                 # Conversation finished normally - run post-assessment
                 print(f"   📊 Running post-assessment...")
-                post_assessment = await self.assessment_system.generate_post_assessment(dummy, pre_assessment, conversation)
+                post_assessment = await self.assessment_system.generate_post_assessment(
+                    dummy, pre_assessment, conversation, 
+                    conversation_simulator=self.conversation_simulator
+                )
                 print(f"   📊 Post-assessment: {post_assessment.average_score:.2f}")
                 
                 # Update the evolution stage with final assessment
@@ -230,15 +233,14 @@ class ConversationLengthExperimentWithEvolution:
                                 notes="Inherited from last milestone"
                             ))
                     
-                    # Calculate scores from responses
-                    score_data = Assessment.calculate_scores(inherited_responses)
-                    
+                    # Use the milestone_score directly, not recalculated from responses
+                    # (responses might average differently due to rounding)
                     post_assessment = Assessment(
                         dummy_id=dummy.id,
                         timestamp=datetime.now(),
                         responses=inherited_responses,
-                        total_score=score_data['total_score'],
-                        average_score=score_data['average_score'],
+                        total_score=last_score * 20,  # Use milestone score directly
+                        average_score=last_score,  # Use milestone score directly
                         improvement_areas=last_milestone['detailed_assessment'].get('improvement_areas', []) if last_milestone.get('detailed_assessment') else []
                     )
                     print(f"   📊 Post-assessment (inherited): {post_assessment.average_score:.2f}")
@@ -467,7 +469,8 @@ class ConversationLengthExperimentWithEvolution:
                 )
                 
                 milestone_assessment = await self.assessment_system.generate_post_assessment(
-                    dummy, milestone_pre_assessment, milestone_conversation
+                    dummy, milestone_pre_assessment, milestone_conversation,
+                    conversation_simulator=self.conversation_simulator
                 )
                 
                 # Update evolution stage with milestone assessment score

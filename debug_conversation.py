@@ -231,36 +231,50 @@ class DebugAssessmentSystem(AssessmentSystemLLMBased):
     """
     Debug wrapper for assessment system.
     
-    IMPORTANT: This class reimplements _get_llm_assessment to add debug output.
+    IMPORTANT: This class reimplements LLM-calling methods to add debug output.
     The logic MUST match AssessmentSystemLLMBased in assessment_system_llm_based.py.
     """
+    
+    def __init__(self, api_key: str):
+        super().__init__(api_key=api_key)
+        self._current_conversation = None  # Track current conversation being assessed
+    
+    async def generate_post_assessment(self, dummy, pre_assessment, conversation=None, conversation_simulator=None):
+        """Override to track conversation being assessed."""
+        self._current_conversation = conversation
+        result = await super().generate_post_assessment(dummy, pre_assessment, conversation, conversation_simulator)
+        self._current_conversation = None
+        return result
     
     async def _get_llm_assessment(self, system_prompt: str, user_prompt: str, dummy: AIDummy) -> str:
         """Override with debug output - matches parent implementation exactly."""
         
         # Extract a short description for the step label
+        # Use conversation ID to detect milestone assessments
         step_label = "ASSESSMENT"
-        
-        # Check for different assessment types
         user_lower = user_prompt.lower()
         system_lower = system_prompt.lower()
         
-        if "baseline assessment" in user_lower or "baseline assessment" in system_lower:
-            step_label = "PRE-ASSESSMENT (Baseline)"
-        elif "post-conversation" in user_lower or "post-conversation" in system_lower:
-            if "inherited" in user_lower:
-                step_label = "POST-ASSESSMENT (Inherited)"
-            else:
-                step_label = "POST-ASSESSMENT"
-        elif "milestone" in user_lower or "at round" in user_lower:
-            # Try to extract milestone number
-            match = re.search(r'round (\d+)', user_lower)
+        # Check conversation ID for milestone marker
+        is_milestone = self._current_conversation and "milestone" in self._current_conversation.id
+        
+        if is_milestone:
+            # Extract milestone info from conversation ID
+            match = re.search(r'milestone_(\d+)', self._current_conversation.id)
             if match:
-                step_label = f"MILESTONE {match.group(1)} ASSESSMENT"
+                milestone_round = int(match.group(1))
+                milestone_turn = 1 + milestone_round * 2
+                step_label = f"MILESTONE ASSESSMENT at Turn {milestone_turn} (~{milestone_round} exchanges)"
             else:
                 step_label = "MILESTONE ASSESSMENT"
+        # Then check for baseline
+        elif "baseline assessment" in user_lower or "baseline assessment" in system_lower:
+            step_label = "PRE-ASSESSMENT (Baseline)"
         elif "baseline" in user_lower or "baseline" in system_lower:
             step_label = "PRE-ASSESSMENT"
+        # Finally check for post-conversation (final assessment)
+        elif "post-conversation" in user_lower or "post-conversation" in system_lower:
+            step_label = "FINAL POST-ASSESSMENT"
         
         result = await debug_api_call(
             "https://api.lkeap.cloud.tencent.com/v1/chat/completions",
