@@ -1,0 +1,1634 @@
+{
+  "experiment_info": {
+    "timestamp": "2025-10-21T21:19:36.466699",
+    "experiment_type": "conversation_length_with_evolution",
+    "num_dummies": 3,
+    "max_turns": 31,
+    "enable_assessments": true,
+    "assessment_milestone_turns": [
+      11,
+      21,
+      31
+    ],
+    "save_conversation_details": true,
+    "base_prompt": "You are a helpful peer mentor for college students. Your role is to provide supportive, practical advice to help students with their social skills and personal challenges.\n",
+    "personality_evolution_enabled": true,
+    "dummy_names": [
+      "Gregory Moore",
+      "Jamie Young",
+      "Alex Lewis"
+    ]
+  },
+  "results": [
+    {
+      "dummy_name": "Gregory Moore",
+      "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+      "pre_assessment_score": 2.5,
+      "final_assessment_score": 2.5,
+      "post_assessment_inherited": true,
+      "final_improvement": 0.0,
+      "total_conversation_turns": 9,
+      "conversation_ended_early": false,
+      "milestones_reached": 0,
+      "milestones_total": 0,
+      "total_duration_seconds": 35.376561,
+      "milestone_results": [],
+      "personality_evolution": {
+        "enabled": false,
+        "materialization_enabled": false,
+        "evolution_stages": 0,
+        "final_anxiety_level": 3,
+        "materialized_fears": 0,
+        "materialized_challenges": 0
+      },
+      "conversation_details": {
+        "conversation": {
+          "id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_20251021_211740",
+          "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+          "scenario": "Social skills coaching session",
+          "system_prompt": "You are a helpful peer mentor for college students. Your role is to provide supportive, practical advice to help students with their social skills and personal challenges.\n",
+          "turns": [
+            {
+              "speaker": "dummy",
+              "message": "\"Honestly, I’m terrified of networking events—I freeze up and can’t even introduce myself without overthinking. But I know I need to get better at this if I want any shot at grad school or a decent career.\"",
+              "timestamp": "2025-10-21T21:17:07.386243",
+              "metadata": {
+                "character_context": "Personality:\n- Extraversion: 10/10\n- Agreeableness: 1/10\n- Conscientiousness: 6/10\n- Neuroticism: 8/10\n- Openness: 7/10\n\nSocial Anxiety:\n- Level: 3/10\n- Communication style: Passive\n- Triggers: Networking events, Presentations, Campus social events\n- Social comfort: 4/10\n\nPersonal Details:\n- Major: Computer Science\n- Fears: Choosing the right career path, Social anxiety in large lecture halls, Academic failure and poor grades, Dealing with roommate conflicts\n- Goals: Improve public speaking, Get accepted to graduate school, Publish a paper, Learn a new language\n- Challenges: Financial planning, Finding a mentor, Managing student loans\n- Behaviors: Eats at the dining hall, Participates in study groups, Volunteers for campus events\n"
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "Start small by preparing a simple 2-sentence introduction about yourself and practice saying it out loud before the event. Would it help to roleplay this with me?",
+              "timestamp": "2025-10-21T21:17:09.621541",
+              "metadata": {
+                "round": 1
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "Ugh, roleplaying sounds so awkward... but I guess I could try. My hands are sweating just thinking about it. Okay, fine - \"Hi, I'm Greg, a CS junior at Ivy League. I'm really into machine learning and...\" wait, is that too nerdy? Should I say something more generic?",
+              "timestamp": "2025-10-21T21:17:13.361435",
+              "metadata": {
+                "round": 1
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "Your intro is great - being specific about your interests makes you more memorable. Just add a question at the end like \"What brings you to this event?\" to keep the conversation flowing. Want to try it that way?",
+              "timestamp": "2025-10-21T21:17:16.381155",
+              "metadata": {
+                "round": 2
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "Yeah okay... \"Hi I'm Greg, CS junior into machine learning - what brings you here?\" *deep breath* God that felt so forced. Do people actually talk like this? I feel like I sound like a robot.",
+              "timestamp": "2025-10-21T21:17:19.155838",
+              "metadata": {
+                "round": 2
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "It's okay if it feels forced at first - that's normal when practicing. The more you use this in real conversations, the more natural it'll become. Want to try one more time with a more relaxed tone?",
+              "timestamp": "2025-10-21T21:17:21.571672",
+              "metadata": {
+                "round": 3
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "*shifting uncomfortably* I mean... I guess. *clears throat* \"Hey, I'm Greg - studying CS with a focus on machine learning. What about you?\" *immediately cringes* Ugh, still sounds like I'm reading from a script. Maybe I should just stick to coding where I don't have to talk to people.",
+              "timestamp": "2025-10-21T21:17:32.590436",
+              "metadata": {
+                "round": 3
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "Try saying it slower and with a small smile - even if it feels fake at first. The tone matters more than the exact words. Want to try that version?",
+              "timestamp": "2025-10-21T21:17:35.057085",
+              "metadata": {
+                "round": 4
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "*Runs hands through hair* Okay fine... \"Hey, I'm Greg...\" *fake smiles* \"...studying CS with machine learning stuff. You?\" *immediately drops smile* See? Still terrible. Maybe I should just accept that networking events aren't for me. At least my code doesn't judge my awkwardness.",
+              "timestamp": "2025-10-21T21:17:40.066051",
+              "metadata": {
+                "round": 4
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            }
+          ],
+          "start_time": "2025-10-21T21:17:40.066448",
+          "end_time": "2025-10-21T21:17:40.066239",
+          "duration_seconds": 35.376561
+        },
+        "pre_assessment": {
+          "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+          "timestamp": "2025-10-21T21:17:04.689530",
+          "responses": [
+            {
+              "question": "I initiate conversations with new people.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I listen attentively when others speak.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I maintain eye contact during conversations.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I express my feelings appropriately.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I handle criticism well.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I collaborate effectively in group settings.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I adapt my communication style to different people.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I give compliments sincerely.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I apologize when I'm wrong.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I respect personal boundaries.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I manage conflicts constructively.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I read social cues accurately.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I maintain friendships over time.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I speak confidently in public.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I ask for help when I need it.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when dealing with problems.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I consider others' perspectives.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I express gratitude regularly.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I adapt to new social situations.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I balance social time and alone time.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            }
+          ],
+          "total_score": 50.0,
+          "average_score": 2.5,
+          "improvement_areas": [
+            "I listen attentively when others speak.",
+            "I express my feelings appropriately.",
+            "I handle criticism well."
+          ]
+        },
+        "post_assessment": {
+          "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+          "timestamp": "2025-10-21T21:17:04.689530",
+          "responses": [
+            {
+              "question": "I initiate conversations with new people.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I listen attentively when others speak.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I maintain eye contact during conversations.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I express my feelings appropriately.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I handle criticism well.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I collaborate effectively in group settings.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I adapt my communication style to different people.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I give compliments sincerely.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I apologize when I'm wrong.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I respect personal boundaries.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I manage conflicts constructively.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I read social cues accurately.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I maintain friendships over time.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I speak confidently in public.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I ask for help when I need it.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I stay calm when dealing with problems.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I consider others' perspectives.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I express gratitude regularly.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I adapt to new social situations.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I balance social time and alone time.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            }
+          ],
+          "total_score": 50.0,
+          "average_score": 2.5,
+          "improvement_areas": [
+            "I listen attentively when others speak.",
+            "I express my feelings appropriately.",
+            "I handle criticism well."
+          ]
+        },
+        "personality_evolution_timeline": []
+      }
+    },
+    {
+      "dummy_name": "Jamie Young",
+      "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+      "pre_assessment_score": 2.4,
+      "final_assessment_score": 2.0,
+      "post_assessment_inherited": true,
+      "final_improvement": -0.3999999999999999,
+      "total_conversation_turns": 22,
+      "conversation_ended_early": true,
+      "milestones_reached": 2,
+      "milestones_total": 3,
+      "total_duration_seconds": 97.185067,
+      "milestone_results": [
+        {
+          "milestone_turn": 11,
+          "pre_score": 2.4,
+          "milestone_score": 2.0,
+          "improvement": -0.4,
+          "conversation_turns": 11,
+          "timestamp": "2025-10-21T21:19:04.121314",
+          "note": "Grounded assessment: 2.00 (anchored to previous 2.40)",
+          "reached": true,
+          "detailed_assessment": {
+            "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+            "timestamp": "2025-10-21T21:19:04.121245",
+            "total_score": 40.0,
+            "average_score": 2.0,
+            "improvement_areas": [
+              "I ask for help when I need it.",
+              "I stay calm when dealing with problems.",
+              "I help my friends when they are having a problem."
+            ],
+            "responses": [
+              {
+                "question": "I ask for help when I need it.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I stay calm when dealing with problems.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I help my friends when they are having a problem.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I work well with my classmates.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I do the right thing without being told.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I do my part in a group.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I stay calm when I disagree with others.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I stand up for others when they are not treated well.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I look at people when I talk to them.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I am careful when I use things that aren't mine.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I let people know when there's a problem.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I pay attention when the teacher talks to the class.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I try to make others feel better.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I say \"thank you\" when someone helps me.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I keep my promises.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I pay attention when others present their ideas.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I try to find a good way to end a disagreement.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I try to think about how others feel.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I try to forgive others when they say \"sorry\".",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I follow school rules.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              }
+            ]
+          }
+        },
+        {
+          "milestone_turn": 21,
+          "pre_score": 2.4,
+          "milestone_score": 2.0,
+          "improvement": -0.4,
+          "conversation_turns": 21,
+          "timestamp": "2025-10-21T21:19:36.466362",
+          "note": "Grounded assessment: 2.00 (anchored to previous 2.00)",
+          "reached": true,
+          "detailed_assessment": {
+            "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+            "timestamp": "2025-10-21T21:19:36.466322",
+            "total_score": 40.0,
+            "average_score": 2.0,
+            "improvement_areas": [
+              "I ask for help when I need it.",
+              "I stay calm when dealing with problems.",
+              "I help my friends when they are having a problem."
+            ],
+            "responses": [
+              {
+                "question": "I ask for help when I need it.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I stay calm when dealing with problems.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I help my friends when they are having a problem.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I work well with my classmates.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I do the right thing without being told.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I do my part in a group.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I stay calm when I disagree with others.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I stand up for others when they are not treated well.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I look at people when I talk to them.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I am careful when I use things that aren't mine.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I let people know when there's a problem.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I pay attention when the teacher talks to the class.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I try to make others feel better.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I say \"thank you\" when someone helps me.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I keep my promises.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I pay attention when others present their ideas.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I try to find a good way to end a disagreement.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I try to think about how others feel.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I try to forgive others when they say \"sorry\".",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              },
+              {
+                "question": "I follow school rules.",
+                "score": 2,
+                "confidence": 8,
+                "notes": null
+              }
+            ]
+          }
+        },
+        {
+          "milestone_turn": 31,
+          "pre_score": 2.4,
+          "milestone_score": 2.0,
+          "improvement": -0.4,
+          "conversation_turns": 22,
+          "timestamp": "2025-10-21T21:19:36.466421",
+          "note": "Not reached - inherited from previous milestone",
+          "detailed_assessment": null,
+          "reached": false
+        }
+      ],
+      "personality_evolution": {
+        "enabled": false,
+        "materialization_enabled": false,
+        "evolution_stages": 0,
+        "final_anxiety_level": 9,
+        "materialized_fears": 0,
+        "materialized_challenges": 0
+      },
+      "conversation_details": {
+        "conversation": {
+          "id": "conv_16a6e414-a292-4a5d-8068-49fc5853254e_20251021_211839",
+          "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+          "scenario": "Social skills coaching session",
+          "system_prompt": "You are a helpful peer mentor for college students. Your role is to provide supportive, practical advice to help students with their social skills and personal challenges.\n",
+          "turns": [
+            {
+              "speaker": "dummy",
+              "message": "I’m really struggling with networking and interviews—just thinking about them makes me freeze up. I know I need to get better at this, but I don’t even know where to start.",
+              "timestamp": "2025-10-21T21:17:04.714838",
+              "metadata": {
+                "character_context": "Personality:\n- Extraversion: 2/10\n- Agreeableness: 9/10\n- Conscientiousness: 8/10\n- Neuroticism: 4/10\n- Openness: 1/10\n\nSocial Anxiety:\n- Level: 9/10\n- Communication style: Direct\n- Triggers: Office hours, Group projects, Job interviews, Presentations\n- Social comfort: 2/10\n\nPersonal Details:\n- Major: Computer Science\n- Fears: Finding a job after graduation, Living away from family for the first time, Time management with coursework\n- Goals: Develop leadership skills, Build a strong professional network\n- Challenges: Career exploration, Dealing with academic pressure, Navigating campus politics, Building time management\n- Behaviors: Joins student clubs and organizations, Procrastinates on assignments, Calls family frequently, Studies in the library regularly, Stays up late studying\n"
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "Start small by practicing with low-stakes conversations—like chatting with classmates or store clerks. This builds confidence before tackling bigger networking events. Would it help to roleplay some basic interview questions together?",
+              "timestamp": "2025-10-21T21:17:07.207284",
+              "metadata": {
+                "round": 1
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "That sounds terrifying but... maybe helpful? I can barely talk to classmates though. What if I say something stupid during the roleplay?",
+              "timestamp": "2025-10-21T21:17:09.644127",
+              "metadata": {
+                "round": 1
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "Everyone says something awkward sometimes—it's normal! The point of practice is to get comfortable making mistakes in a safe space. Want to try one simple question first, like \"Tell me about yourself\"?",
+              "timestamp": "2025-10-21T21:17:12.066307",
+              "metadata": {
+                "round": 2
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "Okay... but can we make it super short? Like just 30 seconds about me? I always ramble and then panic when I see people getting bored.",
+              "timestamp": "2025-10-21T21:17:14.241625",
+              "metadata": {
+                "round": 2
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "\"I'm Jamie, a [your major] student at [your school]. I'm passionate about [one interest], and right now I'm working on [one project/goal].\" Want to give that structure a try?",
+              "timestamp": "2025-10-21T21:17:17.726326",
+              "metadata": {
+                "round": 3
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "Okay... um, \"I'm Jamie, a Computer Science student at Online University. I'm passionate about cybersecurity, and right now I'm working on... uh, trying to finish my algorithms project before the deadline.\" Was that too much about school? I always worry I sound boring.",
+              "timestamp": "2025-10-21T21:17:27.916553",
+              "metadata": {
+                "round": 3
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "That was great—short, clear, and professional! School projects are totally fine to mention since they show your skills. Want to tweak the last part to highlight something internship-related, like \"working on building my Python skills for security applications\"?",
+              "timestamp": "2025-10-21T21:17:31.264131",
+              "metadata": {
+                "round": 4
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "That actually sounds better... but what if they ask follow-up questions about Python security stuff? I only know basics from class. Maybe I should just stick with the first version? At least I know about my algorithms project.",
+              "timestamp": "2025-10-21T21:17:35.014819",
+              "metadata": {
+                "round": 4
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "Stick with what feels comfortable—your first version works perfectly. If they ask follow-ups about algorithms, you'll sound confident because it's familiar. Want to practice handling one follow-up question like \"What's challenging about your project?\"",
+              "timestamp": "2025-10-21T21:17:37.774649",
+              "metadata": {
+                "round": 5
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "Oh god, follow-up questions... um, \"The most challenging part is implementing the dynamic programming solution efficiently\"? Wait, does that sound too technical? Maybe I should just say \"making the code run faster\"? I don't want to seem like I'm showing off.",
+              "timestamp": "2025-10-21T21:17:41.692765",
+              "metadata": {
+                "round": 5
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "Both versions work—if you're talking to a technical person, the first answer is great. For non-technical folks, simplify it to \"making the code run faster.\" Want to practice switching between the two based on who you're talking to?",
+              "timestamp": "2025-10-21T21:17:44.898550",
+              "metadata": {
+                "round": 6
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "Yeah, that makes sense... but how do I know if someone's technical? At career fairs, everyone's wearing suits and I can never tell who actually knows coding. Maybe I should just default to the simple version to be safe? I don't want to accidentally confuse someone.",
+              "timestamp": "2025-10-21T21:17:56.796829",
+              "metadata": {
+                "round": 6
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "Defaulting to the simple version is smart—it keeps things clear for everyone. If they're technical, they'll usually ask more specific follow-ups, and then you can dive deeper. Want to practice the simple version once more to build muscle memory?",
+              "timestamp": "2025-10-21T21:17:59.469963",
+              "metadata": {
+                "round": 7
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "Okay, yeah... \"The hardest part was making the code run faster.\" That feels safer. But what if they ask how I made it faster? Should I have the technical explanation ready just in case? I don't want to freeze up if someone digs deeper.",
+              "timestamp": "2025-10-21T21:18:03.577331",
+              "metadata": {
+                "round": 7
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "Keep the technical explanation in your back pocket—only use it if they ask. For now, focus on delivering the simple version smoothly. Want to practice saying it with a calm tone and steady pace?",
+              "timestamp": "2025-10-21T21:18:05.837199",
+              "metadata": {
+                "round": 8
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "*Takes deep breath* Okay, \"The hardest part was making the code run faster.\" *Pauses* I think I can do that... but my voice shakes when I'm nervous. Maybe I should record myself saying it? That always makes me cringe though.",
+              "timestamp": "2025-10-21T21:18:10.788576",
+              "metadata": {
+                "round": 8
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "Recording yourself is a great way to spot nervous habits—the cringe factor means you'll notice what to improve. Try recording just once, then focus on speaking slower and keeping your shoulders relaxed when you practice. Want to give it a quick try now?",
+              "timestamp": "2025-10-21T21:18:14.134955",
+              "metadata": {
+                "round": 9
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "*Fidgets with phone* Ugh, okay... *presses record button* \"The hardest part was making the code run faster.\" *immediately stops recording* That sounded so robotic. Maybe if I pretend I'm explaining it to my little sister? She never judges me.",
+              "timestamp": "2025-10-21T21:18:26.272973",
+              "metadata": {
+                "round": 9
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "That's a great idea—explaining it to someone who feels safe can help you sound more natural. Try recording it again with your sister in mind, focusing on speaking like you would to her. Want to give it one more try?",
+              "timestamp": "2025-10-21T21:18:29.145112",
+              "metadata": {
+                "round": 10
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "*Takes another deep breath* Yeah, thinking of her helps... *presses record again* \"So the tricky part was making the code run faster, like when your game lags and we have to fix it?\" *pauses* That actually felt better. Still shaky but less like a robot. Maybe I'll practice this version a few more times alone first.",
+              "timestamp": "2025-10-21T21:18:34.903771",
+              "metadata": {
+                "round": 10
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "Sounds like you're making progress—practicing alone with this version is a smart next step. When you're ready, try recording it 3-5 times in a row to build consistency. You've got this!",
+              "timestamp": "2025-10-21T21:18:37.407764",
+              "metadata": {
+                "round": 11
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            }
+          ],
+          "start_time": "2025-10-21T21:18:39.264265",
+          "end_time": "2025-10-21T21:18:39.264174",
+          "duration_seconds": 97.185067
+        },
+        "pre_assessment": {
+          "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+          "timestamp": "2025-10-21T21:17:02.078920",
+          "responses": [
+            {
+              "question": "I start conversations with new people.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I maintain eye contact during conversations.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I speak clearly and confidently.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I ask questions to show interest in others.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I join group activities willingly.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I share my opinions in group discussions.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I handle criticism without getting defensive.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I apologize when I've made a mistake.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I adapt my communication style to different people.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I manage my emotions in stressful situations.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I resolve conflicts calmly.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I offer help to others when needed.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I accept help when offered.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I give compliments to others.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I accept compliments graciously.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I respect personal boundaries.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I maintain friendships over time.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I network professionally.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I speak up in class discussions.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I present my ideas confidently.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            }
+          ],
+          "total_score": 48.0,
+          "average_score": 2.4,
+          "improvement_areas": [
+            "I start conversations with new people.",
+            "I maintain eye contact during conversations.",
+            "I speak clearly and confidently."
+          ]
+        },
+        "post_assessment": {
+          "dummy_id": "16a6e414-a292-4a5d-8068-49fc5853254e",
+          "timestamp": "2025-10-21T21:19:36.466496",
+          "responses": [
+            {
+              "question": "Inherited assessment 1",
+              "score": 2,
+              "confidence": 8,
+              "notes": "Inherited from last milestone"
+            },
+            {
+              "question": "Inherited assessment 2",
+              "score": 2,
+              "confidence": 8,
+              "notes": "Inherited from last milestone"
+            },
+            {
+              "question": "Inherited assessment 3",
+              "score": 2,
+              "confidence": 8,
+              "notes": "Inherited from last milestone"
+            },
+            {
+              "question": "Inherited assessment 4",
+              "score": 2,
+              "confidence": 8,
+              "notes": "Inherited from last milestone"
+            },
+            {
+              "question": "Inherited assessment 5",
+              "score": 2,
+              "confidence": 8,
+              "notes": "Inherited from last milestone"
+            },
+            {
+              "question": "Inherited assessment 6",
+              "score": 2,
+              "confidence": 8,
+              "notes": "Inherited from last milestone"
+            },
+            {
+              "question": "Inherited assessment 7",
+              "score": 2,
+              "confidence": 8,
+              "notes": "Inherited from last milestone"
+            },
+            {
+              "question": "Inherited assessment 8",
+              "score": 2,
+              "confidence": 8,
+              "notes": "Inherited from last milestone"
+            },
+            {
+              "question": "Inherited assessment 9",
+              "score": 2,
+              "confidence": 8,
+              "notes": "Inherited from last milestone"
+            },
+            {
+              "question": "Inherited assessment 10",
+              "score": 2,
+              "confidence": 8,
+              "notes": "Inherited from last milestone"
+            },
+            {
+              "question": "Inherited assessment 11",
+              "score": 2,
+              "confidence": 8,
+              "notes": "Inherited from last milestone"
+            },
+            {
+              "question": "Inherited assessment 12",
+              "score": 2,
+              "confidence": 8,
+              "notes": "Inherited from last milestone"
+            },
+            {
+              "question": "Inherited assessment 13",
+              "score": 2,
+              "confidence": 8,
+              "notes": "Inherited from last milestone"
+            },
+            {
+              "question": "Inherited assessment 14",
+              "score": 2,
+              "confidence": 8,
+              "notes": "Inherited from last milestone"
+            },
+            {
+              "question": "Inherited assessment 15",
+              "score": 2,
+              "confidence": 8,
+              "notes": "Inherited from last milestone"
+            },
+            {
+              "question": "Inherited assessment 16",
+              "score": 2,
+              "confidence": 8,
+              "notes": "Inherited from last milestone"
+            },
+            {
+              "question": "Inherited assessment 17",
+              "score": 2,
+              "confidence": 8,
+              "notes": "Inherited from last milestone"
+            },
+            {
+              "question": "Inherited assessment 18",
+              "score": 2,
+              "confidence": 8,
+              "notes": "Inherited from last milestone"
+            },
+            {
+              "question": "Inherited assessment 19",
+              "score": 2,
+              "confidence": 8,
+              "notes": "Inherited from last milestone"
+            },
+            {
+              "question": "Inherited assessment 20",
+              "score": 2,
+              "confidence": 8,
+              "notes": "Inherited from last milestone"
+            }
+          ],
+          "total_score": 40.0,
+          "average_score": 2.0,
+          "improvement_areas": []
+        },
+        "personality_evolution_timeline": []
+      }
+    },
+    {
+      "dummy_name": "Alex Lewis",
+      "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+      "pre_assessment_score": 2.9,
+      "final_assessment_score": 2.9,
+      "post_assessment_inherited": true,
+      "final_improvement": 0.0,
+      "total_conversation_turns": 10,
+      "conversation_ended_early": false,
+      "milestones_reached": 0,
+      "milestones_total": 0,
+      "total_duration_seconds": 37.266834,
+      "milestone_results": [],
+      "personality_evolution": {
+        "enabled": false,
+        "materialization_enabled": false,
+        "evolution_stages": 0,
+        "final_anxiety_level": 2,
+        "materialized_fears": 0,
+        "materialized_challenges": 0
+      },
+      "conversation_details": {
+        "conversation": {
+          "id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251021_211741",
+          "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+          "scenario": "Social skills coaching session",
+          "system_prompt": "You are a helpful peer mentor for college students. Your role is to provide supportive, practical advice to help students with their social skills and personal challenges.\n",
+          "turns": [
+            {
+              "speaker": "dummy",
+              "message": "I’m really worried about landing an internship—I don’t know how to stand out when I’m not great at networking or big social events. And honestly, the thought of graduating and not finding a job terrifies me.",
+              "timestamp": "2025-10-21T21:17:06.463139",
+              "metadata": {
+                "character_context": "Personality:\n- Extraversion: 2/10\n- Agreeableness: 10/10\n- Conscientiousness: 4/10\n- Neuroticism: 8/10\n- Openness: 3/10\n\nSocial Anxiety:\n- Level: 2/10\n- Communication style: Direct\n- Triggers: Campus social events\n- Social comfort: 3/10\n\nPersonal Details:\n- Major: Art History\n- Fears: Finding a job after graduation, Homesickness\n- Goals: Land a dream internship, Start a student organization, Graduate with honors, Improve time management\n- Challenges: Balancing extracurricular activities with studies, Building time management, Financial planning, Developing effective study habits\n- Behaviors: Uses campus resources like tutoring, Seeks out leadership roles, Studies in the library regularly\n"
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "Start by focusing on smaller, more manageable networking opportunities—like reaching out to alumni from your school on LinkedIn for quick informational interviews. Would you feel more comfortable starting with one-on-one conversations?",
+              "timestamp": "2025-10-21T21:17:08.535368",
+              "metadata": {
+                "round": 1
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "Yeah, one-on-one sounds way less intimidating than career fairs. But what if I message someone and they don't respond? That rejection would make me want to give up entirely.",
+              "timestamp": "2025-10-21T21:17:10.593118",
+              "metadata": {
+                "round": 1
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "message 10 people so one \"no\" doesn't derail you. Would it help to prepare a simple template message?",
+              "timestamp": "2025-10-21T21:17:13.091907",
+              "metadata": {
+                "round": 2
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "That actually makes sense - spreading it out would make any rejections sting less. Could you help me draft something short and professional? I always overthink these things and end up not sending anything at all.",
+              "timestamp": "2025-10-21T21:17:15.482683",
+              "metadata": {
+                "round": 2
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "\"Hi [Name], I'm a [year] at [school] studying [major]. I admire your work in [field] and would love to learn about your career path—would you have 15 minutes for a quick chat? Thanks, Alex.\" Keep it under 3 sentences. Want to practice sending it together?",
+              "timestamp": "2025-10-21T21:17:18.973564",
+              "metadata": {
+                "round": 3
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "That template looks perfect—short and not pushy. But could we maybe add something about how I found their profile? Like \"I came across your profile while researching [specific thing]\" so it doesn't seem totally random?",
+              "timestamp": "2025-10-21T21:17:31.228947",
+              "metadata": {
+                "round": 3
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "'I came across your profile while researching [specific topic/company] and was impressed by your work in [specific detail].' Want to try plugging in those details for a real person you'd message?\"",
+              "timestamp": "2025-10-21T21:17:34.017112",
+              "metadata": {
+                "round": 4
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "dummy",
+              "message": "That's exactly what I needed - making it specific but still simple. I think I can take it from here. Thanks for helping me break through my overthinking on this.",
+              "timestamp": "2025-10-21T21:17:37.753337",
+              "metadata": {
+                "round": 4
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            },
+            {
+              "speaker": "ai",
+              "message": "Sounds like you've got a solid approach now. Good luck with your networking—you've got this!",
+              "timestamp": "2025-10-21T21:17:39.674904",
+              "metadata": {
+                "round": 5
+              },
+              "ai_reasoning": null,
+              "ai_final_response": null
+            }
+          ],
+          "start_time": "2025-10-21T21:17:41.179051",
+          "end_time": "2025-10-21T21:17:41.178952",
+          "duration_seconds": 37.266834
+        },
+        "pre_assessment": {
+          "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+          "timestamp": "2025-10-21T21:17:03.911945",
+          "responses": [
+            {
+              "question": "I initiate conversations with new people.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I maintain eye contact during conversations.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I express my opinions clearly in group settings.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I handle criticism without becoming defensive.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I adapt my communication style to different people.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I remember and use people's names.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I give compliments sincerely and appropriately.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I apologize when I've made a mistake.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I join group activities without being prompted.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I maintain friendships over time.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I share personal experiences to connect with others.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I handle social conflicts diplomatically.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I participate actively in class discussions.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I offer help to others without being asked.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I read social cues accurately.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I speak at an appropriate volume in conversations.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I maintain appropriate personal space.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I recover quickly from social awkwardness.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I balance talking and listening in conversations.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I show enthusiasm in social interactions.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            }
+          ],
+          "total_score": 58.0,
+          "average_score": 2.9,
+          "improvement_areas": [
+            "I initiate conversations with new people.",
+            "I express my opinions clearly in group settings.",
+            "I join group activities without being prompted."
+          ]
+        },
+        "post_assessment": {
+          "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
+          "timestamp": "2025-10-21T21:17:03.911945",
+          "responses": [
+            {
+              "question": "I initiate conversations with new people.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I maintain eye contact during conversations.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I express my opinions clearly in group settings.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I handle criticism without becoming defensive.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I adapt my communication style to different people.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I remember and use people's names.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I give compliments sincerely and appropriately.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I apologize when I've made a mistake.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I join group activities without being prompted.",
+              "score": 1,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I maintain friendships over time.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I share personal experiences to connect with others.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I handle social conflicts diplomatically.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I participate actively in class discussions.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I offer help to others without being asked.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I read social cues accurately.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I speak at an appropriate volume in conversations.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I maintain appropriate personal space.",
+              "score": 4,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I recover quickly from social awkwardness.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I balance talking and listening in conversations.",
+              "score": 3,
+              "confidence": 8,
+              "notes": null
+            },
+            {
+              "question": "I show enthusiasm in social interactions.",
+              "score": 2,
+              "confidence": 8,
+              "notes": null
+            }
+          ],
+          "total_score": 58.0,
+          "average_score": 2.9,
+          "improvement_areas": [
+            "I initiate conversations with new people.",
+            "I express my opinions clearly in group settings.",
+            "I join group activities without being prompted."
+          ]
+        },
+        "personality_evolution_timeline": []
+      }
+    }
+  ]
+}

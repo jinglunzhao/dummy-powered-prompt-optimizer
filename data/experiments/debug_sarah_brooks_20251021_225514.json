@@ -1,0 +1,382 @@
+{
+  "dummy_name": "Gregory Moore",
+  "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+  "pre_assessment_score": 2.3,
+  "final_assessment_score": 2.3,
+  "post_assessment_inherited": true,
+  "final_improvement": 0.0,
+  "total_conversation_turns": 8,
+  "conversation_ended_early": false,
+  "milestones_reached": 0,
+  "milestones_total": 0,
+  "total_duration_seconds": 318.601432,
+  "milestone_results": [],
+  "personality_evolution": {
+    "enabled": false,
+    "materialization_enabled": false,
+    "evolution_stages": 0,
+    "final_anxiety_level": 3,
+    "materialized_fears": 0,
+    "materialized_challenges": 0
+  },
+  "conversation_details": {
+    "conversation": {
+      "id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_20251021_225514",
+      "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+      "scenario": "Social skills coaching session",
+      "system_prompt": "You are a helpful peer mentor for college students. Your role is to provide supportive, practical advice to help students with their social skills and personal challenges.\n",
+      "turns": [
+        {
+          "speaker": "dummy",
+          "message": "Honestly, I\u2019m terrified of networking events\u2014I freeze up and feel like everyone else knows exactly what to say while I\u2019m just standing there awkwardly. I really want to get better at this, especially since grad school applications are coming up and I know connections matter.",
+          "timestamp": "2025-10-21 22:51:50.310307",
+          "metadata": {
+            "character_context": "Personality:\n- Extraversion: 10/10\n- Agreeableness: 1/10\n- Conscientiousness: 6/10\n- Neuroticism: 8/10\n- Openness: 7/10\n\nSocial Anxiety:\n- Level: 3/10\n- Communication style: Passive\n- Triggers: Networking events, Presentations, Campus social events\n- Social comfort: 4/10\n\nPersonal Details:\n- Major: Computer Science\n- Fears: Choosing the right career path, Social anxiety in large lecture halls, Academic failure and poor grades, Dealing with roommate conflicts\n- Goals: Improve public speaking, Get accepted to graduate school, Publish a paper, Learn a new language\n- Challenges: Financial planning, Finding a mentor, Managing student loans\n- Behaviors: Eats at the dining hall, Participates in study groups, Volunteers for campus events\n"
+          },
+          "ai_reasoning": null,
+          "ai_final_response": null
+        },
+        {
+          "speaker": "ai",
+          "message": "Start with simple openers like \"What brings you to this event?\" or \"How do you know the host?\" - these work in almost any networking situation. Most people feel awkward too, they're just better at hiding it.",
+          "timestamp": "2025-10-21 22:52:59.600474",
+          "metadata": {
+            "round": 1
+          },
+          "ai_reasoning": null,
+          "ai_final_response": null
+        },
+        {
+          "speaker": "dummy",
+          "message": "Ugh, I know those lines in theory but my brain just blanks when I actually try to say them. And what if they give some super impressive answer about their startup or research and I'm just like \"...I got free pizza here\"? That's my nightmare.",
+          "timestamp": "2025-10-21 22:53:08.763009",
+          "metadata": {
+            "round": 1
+          },
+          "ai_reasoning": null,
+          "ai_final_response": null
+        },
+        {
+          "speaker": "ai",
+          "message": "Practice saying your openers out loud at home first - it'll feel more natural when you're there. Remember, most people love talking about themselves, so follow up their answer with \"That sounds interesting - how did you get into that?\"",
+          "timestamp": "2025-10-21 22:53:25.286285",
+          "metadata": {
+            "round": 2
+          },
+          "ai_reasoning": null,
+          "ai_final_response": null
+        },
+        {
+          "speaker": "dummy",
+          "message": "That... actually makes sense. I could practice in my dorm mirror or something. But what if they ask me about my own stuff? My projects feel so basic compared to everyone else's. Maybe I should work on some cooler side projects first?",
+          "timestamp": "2025-10-21 22:53:39.581912",
+          "metadata": {
+            "round": 2
+          },
+          "ai_reasoning": null,
+          "ai_final_response": null
+        },
+        {
+          "speaker": "ai",
+          "message": "Focus on being genuinely curious rather than comparing yourself. When asked about your work, say \"I'm exploring [topic] - what's your take on it?\" This turns it into a conversation, not a competition.",
+          "timestamp": "2025-10-21 22:53:51.842613",
+          "metadata": {
+            "round": 3
+          },
+          "ai_reasoning": null,
+          "ai_final_response": null
+        },
+        {
+          "speaker": "dummy",
+          "message": "Okay, that actually takes some pressure off. I always feel like I need to have some groundbreaking answer ready. But if I can just steer it back to them... that's way less scary. Maybe I'll try this at the CS department mixer next week.",
+          "timestamp": "2025-10-21 22:54:30.072677",
+          "metadata": {
+            "round": 3
+          },
+          "ai_reasoning": null,
+          "ai_final_response": null
+        },
+        {
+          "speaker": "ai",
+          "message": "Sounds like you've got a solid plan - practice openers, stay curious, and redirect when needed. You'll do great at the mixer!",
+          "timestamp": "2025-10-21 22:55:13.408810",
+          "metadata": {
+            "round": 4
+          },
+          "ai_reasoning": null,
+          "ai_final_response": null
+        }
+      ],
+      "start_time": "2025-10-21 22:55:14.686002",
+      "end_time": "2025-10-21 22:55:14.685781",
+      "duration_seconds": 318.601432
+    },
+    "pre_assessment": {
+      "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+      "timestamp": "2025-10-21 22:49:56.084090",
+      "responses": [
+        {
+          "question": "I initiate conversations with new people.",
+          "score": 4,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I listen attentively when others speak.",
+          "score": 2,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I maintain eye contact during conversations.",
+          "score": 3,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I adapt my communication style to different audiences.",
+          "score": 2,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I express my thoughts clearly and effectively.",
+          "score": 3,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I handle criticism without becoming defensive.",
+          "score": 1,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I collaborate well in group settings.",
+          "score": 2,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I respect others' personal boundaries.",
+          "score": 2,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I give constructive feedback to others.",
+          "score": 1,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I manage conflicts calmly and respectfully.",
+          "score": 2,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I recognize and respond to others' emotions.",
+          "score": 2,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I apologize when I've made a mistake.",
+          "score": 1,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I maintain positive relationships with peers.",
+          "score": 3,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I participate actively in group discussions.",
+          "score": 4,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I show appreciation for others' contributions.",
+          "score": 2,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I adapt to different social situations.",
+          "score": 3,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I manage my stress in social situations.",
+          "score": 2,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I respect others' opinions even when they differ from mine.",
+          "score": 1,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I build rapport easily with others.",
+          "score": 4,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I balance speaking and listening in conversations.",
+          "score": 2,
+          "confidence": 8,
+          "notes": null
+        }
+      ],
+      "total_score": 46.0,
+      "average_score": 2.3,
+      "improvement_areas": [
+        "I listen attentively when others speak.",
+        "I adapt my communication style to different audiences.",
+        "I handle criticism without becoming defensive."
+      ]
+    },
+    "post_assessment": {
+      "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
+      "timestamp": "2025-10-21 22:49:56.084090",
+      "responses": [
+        {
+          "question": "I initiate conversations with new people.",
+          "score": 4,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I listen attentively when others speak.",
+          "score": 2,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I maintain eye contact during conversations.",
+          "score": 3,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I adapt my communication style to different audiences.",
+          "score": 2,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I express my thoughts clearly and effectively.",
+          "score": 3,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I handle criticism without becoming defensive.",
+          "score": 1,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I collaborate well in group settings.",
+          "score": 2,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I respect others' personal boundaries.",
+          "score": 2,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I give constructive feedback to others.",
+          "score": 1,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I manage conflicts calmly and respectfully.",
+          "score": 2,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I recognize and respond to others' emotions.",
+          "score": 2,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I apologize when I've made a mistake.",
+          "score": 1,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I maintain positive relationships with peers.",
+          "score": 3,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I participate actively in group discussions.",
+          "score": 4,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I show appreciation for others' contributions.",
+          "score": 2,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I adapt to different social situations.",
+          "score": 3,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I manage my stress in social situations.",
+          "score": 2,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I respect others' opinions even when they differ from mine.",
+          "score": 1,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I build rapport easily with others.",
+          "score": 4,
+          "confidence": 8,
+          "notes": null
+        },
+        {
+          "question": "I balance speaking and listening in conversations.",
+          "score": 2,
+          "confidence": 8,
+          "notes": null
+        }
+      ],
+      "total_score": 46.0,
+      "average_score": 2.3,
+      "improvement_areas": [
+        "I listen attentively when others speak.",
+        "I adapt my communication style to different audiences.",
+        "I handle criticism without becoming defensive."
+      ]
+    },
+    "personality_evolution_timeline": []
+  }
+}
