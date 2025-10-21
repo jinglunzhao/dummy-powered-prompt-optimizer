@@ -410,7 +410,20 @@ class AssessmentSystemLLMBased:
             # Check if this is a score line
             elif line.startswith('Score:'):
                 try:
-                    current_score = int(line.split(':', 1)[1].strip())
+                    score_text = line.split(':', 1)[1].strip()
+                    
+                    # Handle transition format: "2 → 3" or "2 -> 3"
+                    # Extract the FINAL score (after the arrow)
+                    if '→' in score_text or '->' in score_text:
+                        # Split on arrow and take the last part
+                        if '→' in score_text:
+                            parts = score_text.split('→')
+                        else:
+                            parts = score_text.split('->')
+                        score_text = parts[-1].strip()
+                    
+                    # Now extract the numeric score
+                    current_score = int(score_text)
                     # Ensure score is within bounds
                     current_score = max(1, min(4, current_score))
                 except (ValueError, IndexError):
