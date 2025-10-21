@@ -4,6 +4,7 @@ Removes hardcoded scenarios and fallback templates in favor of AI-generated conv
 """
 import json
 import os
+import re
 import asyncio
 import aiohttp
 from typing import List, Dict, Any, Optional
@@ -21,13 +22,36 @@ class ConversationSimulator:
         if not self.api_key:
             raise ValueError("API key is required for conversation simulator")
         
+        # Conversation context management
+        self.current_memo = None  # Cache memo to avoid regenerating every turn
+        self.last_memo_at_turn = 0  # Track when memo was last generated
+        
         print("✅ Conversation Simulator initialized")
+    
+    @staticmethod
+    def _clean_name_prefixes(response_text: str) -> str:
+        """Remove name prefixes that LLM might add despite instructions.
+        
+        Removes patterns like:
+        - "**Name:**" (bold format)
+        - "Name:" (plain format)
+        - "*Name:*" (italic format)
+        """
+        # Remove bold name prefixes: **Name:**
+        response_text = re.sub(r'^\*\*[^:]+:\*\*\s*', '', response_text)
+        # Remove plain name prefixes: Name:
+        response_text = re.sub(r'^[^:]+:\s*', '', response_text)
+        return response_text
     
     async def simulate_conversation_async(self, dummy: AIDummy, 
                                         scenario: str = None, 
                                         num_rounds: int = 5,
                                         custom_system_prompt: str = None) -> Conversation:
         """Simulate a character-driven conversation between dummy and AI"""
+        
+        # Reset memo cache for new conversation
+        self.current_memo = None
+        self.last_memo_at_turn = 0
         
         # Create conversation with rich character context
         system_prompt_text = custom_system_prompt or Config.SYSTEM_PROMPT
@@ -118,7 +142,8 @@ class ConversationSimulator:
                 }
             ) as response:
                 result = await response.json()
-                return result['choices'][0]['message']['content'].strip()
+                response_text = result['choices'][0]['message']['content'].strip()
+                return self._clean_name_prefixes(response_text)
     
     async def _generate_conversation_memo(self, conversation: Conversation, dummy: AIDummy) -> str:
         """Generate a memo of key points from conversation for AI coach's reference"""
@@ -176,15 +201,28 @@ class ConversationSimulator:
         # AI should only know what student shares in conversation
         user_content = f"You are meeting with {dummy.name}, a student seeking help with social skills.\n\n"
         
-        # Add conversation memo if conversation has progressed enough
-        if len(conversation.turns) >= 6:  # After 6+ turns, generate memo
-            memo = await self._generate_conversation_memo(conversation, dummy)
-            user_content += f"{memo}\n\n"
+        # Milestone-based memo generation (at turns 6, 12, 18, etc.)
+        num_turns = len(conversation.turns)
+        memo_interval = Config.MEMO_UPDATE_INTERVAL
+        window_size = Config.CONVERSATION_WINDOW_SIZE
         
-        # Add recent conversation history as formatted transcript
+        # Check if we should generate/update memo
+        if num_turns >= memo_interval and num_turns % memo_interval == 0:
+            # We're at a memo milestone - generate new memo
+            print(f"📝 Generating memo at turn {num_turns}...", end="", flush=True)
+            self.current_memo = await self._generate_conversation_memo(conversation, dummy)
+            self.last_memo_at_turn = num_turns
+            print(" ✓", flush=True)
+        
+        # Add cached memo if it exists (covers earlier context)
+        if self.current_memo:
+            user_content += f"Key Points from Earlier Conversation:\n{self.current_memo}\n\n"
+        
+        # Always add recent conversation (last N turns based on window size)
+        # If memo exists, this avoids duplication since memo covers earlier parts
         if conversation.turns:
             user_content += "Recent Conversation:\n"
-            for turn in conversation.turns[-6:]:  # Last 6 turns for context
+            for turn in conversation.turns[-window_size:]:  # Configurable window size
                 if turn.speaker == "dummy":
                     user_content += f"{dummy.name}: {turn.message}\n"
                 else:
@@ -205,12 +243,14 @@ class ConversationSimulator:
                 json={
                     "model": "deepseek-v3-0324",
                     "messages": messages,
-                    "max_tokens": 200,  # Allow slightly longer for complete thoughts
+                    "max_tokens": 500,  # Sufficient for detailed, complete coaching responses
                     "temperature": 0.6  # Reduced from 0.7 to be more focused and less creative
                 }
             ) as response:
                     result = await response.json()
-            return result['choices'][0]['message']['content'].strip()
+                    response_text = result['choices'][0]['message']['content'].strip()
+                    
+            return self._clean_name_prefixes(response_text)
     
     async def _generate_character_response_async(self, conversation: Conversation, dummy: AIDummy, round_num: int) -> str:
         """Generate character-authentic response based on dummy's profile"""
@@ -233,17 +273,20 @@ class ConversationSimulator:
             {"role": "system", "content": system_content}
         ]
         
-        # Build user message with profile and conversation history
-        user_content = f"Student Profile: {dummy.get_character_summary()}\n\n"
+        # Build user message with conversation history only (profile already in system message)
+        user_content = ""
         
         # Add conversation history as formatted transcript if exists
+        window_size = Config.CONVERSATION_WINDOW_SIZE
         if conversation.turns:
-            user_content += "Conversation History:\n"
-            for turn in conversation.turns[-6:]:  # Last 6 turns for context
+            user_content += "Recent conversation:\n"
+            for turn in conversation.turns[-window_size:]:  # Use configurable window size
                 if turn.speaker == "dummy":
                     user_content += f"{dummy.name}: {turn.message}\n"
                 else:
-                    user_content += f"Mentor: {turn.message}\n"
+                    user_content += f"Assistant: {turn.message}\n"
+        
+        user_content += f"\nRespond naturally as {dummy.name}."
         
         messages.append({"role": "user", "content": user_content})
         
@@ -257,12 +300,13 @@ class ConversationSimulator:
                 json={
                     "model": "deepseek-v3-0324",
                     "messages": messages,
-                    "max_tokens": 150,  # Keep student responses concise
+                    "max_tokens": 300,  # Allow natural, complete student responses
                     "temperature": 0.7  # Reduced from 0.8 to be more focused
                 }
             ) as response:
                 result = await response.json()
-                return result['choices'][0]['message']['content'].strip()
+                response_text = result['choices'][0]['message']['content'].strip()
+                return self._clean_name_prefixes(response_text)
     
     def _check_conversation_quality(self, conversation: Conversation) -> tuple[bool, str]:
         """Check if conversation is maintaining quality and staying on-topic"""

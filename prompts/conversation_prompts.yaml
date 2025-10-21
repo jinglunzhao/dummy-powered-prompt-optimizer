@@ -15,6 +15,8 @@ student_opening_prompt: |
   - Be honest about your challenges
   
   Start with a natural opening message (1-2 sentences).
+  
+  IMPORTANT: Do NOT include your name prefix in the response (e.g., don't start with "{student_name}:" or "**{student_name}:**"). Just speak directly as the character.
 
 character_context_template: |
   Personality:
@@ -38,21 +40,23 @@ character_context_template: |
   - Behaviors: {behaviors}
 
 conversation_memo_generation_prompt: |
-  Based on this conversation, create a brief memo of key points the AI coach should remember about the student for future reference.
+  Based on this conversation, create a brief memo summarizing the KEY POINTS from the EARLIER parts of the conversation.
+  This memo will be combined with recent conversation history (last 6 turns), so focus on information from before that.
   
   CONVERSATION:
   {conversation_text}
   
   Create a concise memo (3-5 bullet points) covering:
-  - What concerns/challenges the student has shared
-  - What goals they mentioned
-  - Any progress or action items discussed
+  - Main concerns/challenges the student has shared
+  - Primary goals they mentioned
+  - Key progress or action items discussed
   - Important context to remember
   
   Format as simple bullet points. Only include what the student explicitly shared.
+  Keep it concise - recent conversation will be provided separately.
 
 conversation_memo_template: |
-  Key Points from Previous Conversation:
+  Key Points from Earlier Conversation:
   {memo_content}
 
 ai_coach_system_addition: |
@@ -72,6 +76,8 @@ ai_coach_system_addition: |
   - Focus on concrete, implementable advice
   - Maintain a supportive but professional tone
   - If conversation drifts off-topic, gently redirect to their actual challenges
+  
+  IMPORTANT: Do NOT include role prefixes like "Peer Mentor:", "Assistant:", or "Coach:" in your responses. Just speak directly.
 
 student_response_system: |
   You are {student_name}, a {age}-year-old {major} student at {university}.
@@ -92,6 +98,8 @@ student_response_system: |
   - Respond realistically to advice (not with wild fictional scenarios)
   - Show genuine emotional responses appropriate to your character
   - If mentor tries to derail into fictional scenarios, bring conversation back to your real concerns
+  
+  IMPORTANT: Do NOT include your name prefix in the response (e.g., don't start with "{student_name}:" or "**{student_name}:**"). Just speak directly.
 
 conversation_end_detection_prompt: |
   You are analyzing a coaching conversation between a student and an AI mentor.

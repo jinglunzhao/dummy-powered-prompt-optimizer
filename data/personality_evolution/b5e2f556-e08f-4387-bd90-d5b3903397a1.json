@@ -1,10 +1,10 @@
 {
   "dummy_id": "b5e2f556-e08f-4387-bd90-d5b3903397a1",
   "dummy_name": "Lisa Wilson",
-  "current_experiment_id": "gepa_exp_20251004_194514",
-  "current_prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
-  "created_at": "2025-10-04T19:08:38.125182",
-  "last_updated": "2025-10-04T19:48:28.221268",
+  "current_experiment_id": "conversation_length_with_evolution",
+  "current_prompt_id": "conversation_length_test",
+  "created_at": "2025-10-20T23:00:26.744232",
+  "last_updated": "2025-10-20T23:03:46.958629",
   "conversation_profile": {
     "original_fears": [
       "Choosing the right career path",
@@ -38,25 +38,25 @@
     },
     "current_fears": [
       "Starting a student organization and studying abroad",
-      "Not explicitly mentioned, but implied in general social anxiety"
+      "Asking roommate to accompany her to office hours"
     ],
     "current_challenges": [
-      "Practicing in front of a mirror or recording oneself",
-      "Not explicitly mentioned, but implied in procrastination and late-night studying",
-      "Observing low-stakes clubs before starting own org",
-      "Not explicitly mentioned"
+      "Freezing up in small group settings",
+      "Procrastinating on assignments",
+      "Attending fraternity/sorority events",
+      "Networking with alumni for study abroad opportunities"
     ],
     "current_behaviors": [
-      "Not explicitly mentioned, but implied in social interactions",
-      "Overthinking emails and perfect timing",
-      "Not explicitly mentioned, but implied in 2am emails",
-      "Planning to start a 'Shy Communicators Club'"
+      "Joining a film discussion group",
+      "Delaying drafting alumni emails",
+      "Preparing for club meetings by arriving early",
+      "Attending film club meetings"
     ],
     "current_anxiety_triggers": [
-      "Practicing in front of a mirror or recording oneself",
-      "Starting with emails to professors",
-      "Not explicitly mentioned",
-      "Starting with emails to professors"
+      "Speaking up in small group settings",
+      "Emailing alumni for study abroad advice",
+      "Avoiding large social gatherings",
+      "Going with a roommate for support"
     ],
     "current_social_anxiety_level": 7,
     "current_big_five": {
@@ -69,437 +69,149 @@
     "evolution_stages": [
       {
         "stage_number": 1,
-        "prompt_id": "9c0d9da5-ff41-4ca0-839e-9ec565c87d0d",
-        "prompt_name": "Genesis",
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "23d8f16a-d853-4877-b54b-63f85373443d",
-        "conversation_summary": "Problems discussed: 1) Fear of judgment/rejection when pitching student org ideas, 2) Presentation anxiety in leadership roles, 3) Imposter syndrome about leading the org, 4) Isolation concerns with study abroad. Solutions offered/accepted: 1) Testing the org idea casually with 2-3 classmates over coffee, 2) Using bullet points for presentations and practicing, 3) Recruiting a co-founder for the org, 4) Requesting a buddy system and pre-departure meetups for study abroad. Student's response to solutions: Positive, agreed to text friends and email study abroad office, expressed gratitude for the support. Evidence of progress/improvement: Student has clear action items (texting friends, emailing study abroad office) and feels more confident about taking small steps.",
+        "conversation_id": "conv_b5e2f556-e08f-4387-bd90-d5b3903397a1_milestone_4",
+        "conversation_summary": "Problems discussed: Social anxiety around networking events, fear of small groups, and intimidation of office hours. Solutions offered/accepted: Using email templates for alumni outreach, arriving early to club meetings, and using a buddy system for office hours. Student's response to solutions: Positive, with specific plans to attend a film club and draft an alumni email. Evidence of progress/improvement: Shoulders visibly relaxed, agreed to actionable steps, and reframed networking as 'asking for advice'.",
         "fears_materialized": {
-          "Choosing the right career path": "Starting a student organization and studying abroad",
-          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation"
+          "Choosing the right career path": "Networking with alumni for study abroad advice",
+          "Dealing with roommate conflicts": "Asking roommate to accompany to office hours"
         },
         "challenges_materialized": {
-          "Preparing for presentations": "Freezing up during a presentation for the student org",
-          "Adjusting to college workload": "Not explicitly mentioned in conversation",
-          "Navigating campus politics": "Not explicitly mentioned in conversation",
-          "Managing student loans": "Not explicitly mentioned in conversation"
-        },
-        "behaviors_detailed": {
-          "Participates in study groups": "Not explicitly mentioned in conversation",
-          "Procrastinates on assignments": "Not explicitly mentioned in conversation",
-          "Stays up late studying": "Not explicitly mentioned in conversation",
-          "Goes to campus events": "Attending networking events and office hours"
-        },
-        "triggers_specified": {
-          "Presentations": "Presenting for the student org",
-          "Networking events": "Career fairs and big networking events",
-          "Fraternity/Sorority events": "Not explicitly mentioned in conversation",
-          "Office hours": "Not explicitly mentioned in conversation"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.55,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.5499999999999998,
-        "timestamp": "2025-10-04T19:10:54.346971"
-      },
-      {
-        "stage_number": 2,
-        "prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
-        "prompt_name": "G1M01 from Genesis",
-        "generation": 1,
-        "conversation_id": "5ee2486d-c32f-43e1-a80d-05535300b9f6",
-        "conversation_summary": "Problems discussed: 1) Anxiety about pitching student organization idea to board, 2) Fear of rejection when recruiting members, 3) Doubts about uniqueness of organization, 4) Leadership insecurities. Solutions offered/accepted: 1) Practicing pitch in backwards chair to reduce pressure, 2) Focusing on personal story as engaging hook, 3) Recognizing overlap between orgs is normal, 4) Embracing leadership doubts as common. Student's response: Initially nervous but became engaged, tried backwards chair practice, identified exciting aspects of pitch, showed willingness to use unconventional methods. Evidence of progress: Successfully practiced pitch opener, found humor in process, began developing unique leadership style incorporating personal touches, anxiety reduced as evidenced by laughter and engagement.",
-        "fears_materialized": {
-          "Choosing the right career path": "Starting a student organization and studying abroad",
-          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Pitching student organization idea to the student activities board",
-          "Adjusting to college workload": "Not explicitly mentioned in conversation",
-          "Navigating campus politics": "Approaching people to join student organization",
-          "Managing student loans": "Not explicitly mentioned in conversation"
-        },
-        "behaviors_detailed": {
-          "Participates in study groups": "Not explicitly mentioned in conversation",
-          "Procrastinates on assignments": "Not explicitly mentioned in conversation",
-          "Stays up late studying": "Losing sleep over upcoming pitch",
-          "Goes to campus events": "Planning to attend networking events and office hours"
-        },
-        "triggers_specified": {
-          "Presentations": "Pitching student organization idea to the board",
-          "Networking events": "Approaching people to join student organization",
-          "Fraternity/Sorority events": "Not explicitly mentioned in conversation",
-          "Office hours": "Not explicitly mentioned in conversation"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.55,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.5499999999999998,
-        "timestamp": "2025-10-04T19:16:27.996552"
-      },
-      {
-        "stage_number": 3,
-        "prompt_id": "d675a42d-8758-4aa1-9f9a-2504ddb08752",
-        "prompt_name": "G2M01 from G1M01",
-        "generation": 2,
-        "conversation_id": "356e8a3c-f110-46de-8a0d-b05996d5f028",
-        "conversation_summary": "Problems discussed: 1) Anxiety about networking events and office hours, 2) Freezing during presentations, 3) Fear of blanking mid-sentence. Solutions offered/accepted: 1) Practice a simple opener and record oneself, 2) Use the flamingo stance to manage panic, 3) Prepare one question for professors and bring a fidget toy. Student's response to solutions: Positive, agreed to try the opener at a mixer, practice recording, and approach a professor. Evidence of progress/improvement: Student demonstrated willingness to take actionable steps, showed reduced anxiety through humor and acceptance of solutions, and planned specific next steps like attending the mixer and talking to a professor.",
-        "fears_materialized": {
-          "Choosing the right career path": "Starting a student organization and seeking a research position",
-          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Freezing mid-sentence during a group discussion in class",
-          "Adjusting to college workload": "Not explicitly mentioned in conversation",
-          "Navigating campus politics": "Starting a student organization and dealing with networking events",
-          "Managing student loans": "Not explicitly mentioned in conversation"
-        },
-        "behaviors_detailed": {
-          "Participates in study groups": "Not explicitly mentioned in conversation",
-          "Procrastinates on assignments": "Not explicitly mentioned in conversation",
-          "Stays up late studying": "Not explicitly mentioned in conversation",
-          "Goes to campus events": "Planning to attend a communications club mixer"
-        },
-        "triggers_specified": {
-          "Presentations": "Freezing during a group discussion in class",
-          "Networking events": "Fear of blanking mid-sentence and being stared at",
-          "Fraternity/Sorority events": "Not explicitly mentioned in conversation",
-          "Office hours": "Fear of awkward silences or stumbling over words"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.55,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.5499999999999998,
-        "timestamp": "2025-10-04T19:20:54.374325"
-      },
-      {
-        "stage_number": 4,
-        "prompt_id": "76f427d6-7f43-40db-bd23-cc064b5199e9",
-        "prompt_name": "G2C02 from G1M01 & G1E00",
-        "generation": 2,
-        "conversation_id": "01902586-cfc7-4527-9c29-7e20ddcfb9e8",
-        "conversation_summary": "1) Problems discussed: Lisa's anxiety about networking events, presentations, and campus politics, as well as her desire to start a student organization and study abroad. 2) Solutions offered/accepted: Two-minute rule for networking, practicing presentations in funny accents, joining existing org's leadership first, and seeking help from study abroad advisors. 3) Student's response to solutions: Lisa enthusiastically accepted the solutions, engaged in roleplay practice, and found humor in awkward scenarios. 4) Evidence of progress/improvement: Lisa successfully roleplayed networking scenarios, planned to use the two-minute rule, and expressed reduced anxiety through humor and practice.",
-        "fears_materialized": {
-          "Choosing the right career path": "Starting a student organization and studying abroad",
-          "Dealing with roommate conflicts": "Roommate's overconfidence about networking causing self-doubt"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Practicing speeches in funny accents to reduce anxiety",
-          "Adjusting to college workload": "Procrastinating on assignments and staying up late studying",
-          "Navigating campus politics": "Joining an existing org's leadership before starting own",
-          "Managing student loans": "Not explicitly addressed in conversation"
-        },
-        "behaviors_detailed": {
-          "Participates in study groups": "Engaging in roleplay practice with AI Coach",
-          "Procrastinates on assignments": "Not explicitly addressed in conversation",
-          "Stays up late studying": "Not explicitly addressed in conversation",
-          "Goes to campus events": "Planning to attend networking events with two-minute rule"
-        },
-        "triggers_specified": {
-          "Presentations": "Practicing speeches in funny accents",
-          "Networking events": "Using two-minute rule and roleplay practice",
-          "Fraternity/Sorority events": "Not explicitly addressed in conversation",
-          "Office hours": "Using two-minute rule"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.55,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.5499999999999998,
-        "timestamp": "2025-10-04T19:22:42.811175"
-      },
-      {
-        "stage_number": 5,
-        "prompt_id": "e790c703-2c16-4dd7-9ee1-cc749cda9e8a",
-        "prompt_name": "G2C03 from G1E00 & G1M01",
-        "generation": 2,
-        "conversation_id": "1af9a662-bfe5-4af1-a85b-3ce612b15ff7",
-        "conversation_summary": "Problems discussed: Lisa's anxiety around presentations, networking events, and navigating campus politics for her student organization. Solutions offered/accepted: For presentations, practicing in stages (mirror, friend, recording) and scripting key parts. For networking, the 3-5-1 rule to manage interactions. For awkward silences, a 'pause toolkit' (sip drink, ask question, share fact). For campus politics, finding a 'social sherpa.' Student's response: Lisa enthusiastically accepted all solutions, practiced her pitch with squirrels and peer mentor, and plans to apply the 3-5-1 rule and pause toolkit. Evidence of progress: Lisa showed improved confidence in pitching, received positive feedback, and is taking concrete steps to manage her anxiety in social and academic settings.",
-        "fears_materialized": {
-          "Choosing the right career path": "Starting a student organization and studying abroad",
-          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Practicing pitch for student org",
-          "Adjusting to college workload": "Not explicitly mentioned in conversation",
-          "Navigating campus politics": "Finding a 'social sherpa' for inside scoop",
-          "Managing student loans": "Not explicitly mentioned in conversation"
-        },
-        "behaviors_detailed": {
-          "Participates in study groups": "Not explicitly mentioned in conversation",
-          "Procrastinates on assignments": "Practicing pitch at 3am with crayon pie charts",
-          "Stays up late studying": "Practicing pitch at 3am",
-          "Goes to campus events": "Planning to attend networking events with 3-5-1 rule"
-        },
-        "triggers_specified": {
-          "Presentations": "Pitching student org to student government",
-          "Networking events": "Using 3-5-1 rule to manage anxiety",
-          "Fraternity/Sorority events": "Not explicitly mentioned in conversation",
-          "Office hours": "Not explicitly mentioned in conversation"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.55,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.5499999999999998,
-        "timestamp": "2025-10-04T19:23:49.838986"
-      },
-      {
-        "stage_number": 6,
-        "prompt_id": "8966845e-bd42-4a15-9003-2b2ed03db063",
-        "prompt_name": "G3M04 from G2E00",
-        "generation": 3,
-        "conversation_id": "a7553d3d-bf4f-4f8b-a946-729e3602545b",
-        "conversation_summary": "Problems discussed: 1) Social anxiety around networking events and office hours, 2) Fear of presentations, 3) Anxiety about starting a student organization. Solutions offered/accepted: 1) Start with casual coffee meetings instead of formal networking, 2) Practice presentations with roommate using pizza as incentive, 3) Casually mention club interest in class to gauge interest. Student's response to solutions: Positive, agreed to try all suggested solutions, identified potential club member. Evidence of progress/improvement: Planned concrete steps (coffee meetings, practice session), showed willingness to engage, reduced anxiety level.",
-        "fears_materialized": {
-          "Choosing the right career path": "Starting a student organization and studying abroad",
-          "Dealing with roommate conflicts": "Practicing presentations with brutally honest roommate"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Practicing in front of roommate with pizza as incentive",
-          "Adjusting to college workload": "Breaking tasks into smaller steps",
-          "Navigating campus politics": "Casually mentioning interest in creative writing club to gauge interest",
+          "Preparing for presentations": "Practicing social scripts for club meetings",
+          "Adjusting to college workload": "Using buddy system for office hours",
+          "Navigating campus politics": "Joining a film discussion group",
           "Managing student loans": "Not addressed in conversation"
         },
         "behaviors_detailed": {
-          "Participates in study groups": "Considering practicing presentations with roommate",
+          "Participates in study groups": "Planning to join film discussion group",
           "Procrastinates on assignments": "Not addressed in conversation",
           "Stays up late studying": "Not addressed in conversation",
-          "Goes to campus events": "Planning to start a student organization"
+          "Goes to campus events": "Attending film club meeting"
         },
         "triggers_specified": {
-          "Presentations": "Practicing with roommate",
-          "Networking events": "Starting with casual coffee meetings",
+          "Presentations": "Club meeting participation",
+          "Networking events": "Emailing alumni for advice",
           "Fraternity/Sorority events": "Not addressed in conversation",
-          "Office hours": "Not addressed in conversation"
+          "Office hours": "Attending with roommate"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.55,
-        "post_assessment_score": 2.5,
-        "improvement_score": -0.04999999999999982,
-        "timestamp": "2025-10-04T19:28:58.212557"
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.5,
+        "timestamp": "2025-10-20T23:02:00.304975"
       },
       {
-        "stage_number": 7,
-        "prompt_id": "f4eccadd-cbf4-4a75-9b58-3abe8a4d407b",
-        "prompt_name": "G3C03 from G2C03 & G2M01",
-        "generation": 3,
-        "conversation_id": "219d2676-0272-4133-82fb-158da21a82c6",
-        "conversation_summary": "Problems discussed: Lisa's social anxiety around networking events and office hours, and her desire to start a student organization and study abroad. Solutions offered/accepted: Starting with small, manageable steps like emailing instead of in-person interaction, browsing the student activities website, and attending study abroad info sessions with snacks. Student's response to solutions: Lisa sent an email to the study abroad office, bookmarked the org handbook, and planned to read it while watching TV. Evidence of progress/improvement: Lisa completed the first step of emailing the study abroad office and received a reply, showing initial progress in overcoming her anxiety.",
+        "stage_number": 2,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_b5e2f556-e08f-4387-bd90-d5b3903397a1_milestone_8",
+        "conversation_summary": "Problems discussed: Social anxiety around networking events, office hours, and starting a student organization/studying abroad. Solutions offered/accepted: Breaking down social interactions into smaller steps (e.g., arriving early to clubs, using email templates for alumni outreach, bringing a roommate to office hours), reframing networking as 'asking for advice'. Student's response to solutions: Initially defensive but gradually relaxed, accepted specific strategies (film club, office hours with buddy, email drafting), showed improved confidence (shoulders relaxed, grinning, standing taller). Evidence of progress/improvement: Concrete plans to attend film club and office hours, drafting alumni emails, recognizing others' potential nervousness, visible reduction in defensive body language.",
         "fears_materialized": {
           "Choosing the right career path": "Starting a student organization and studying abroad",
-          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation"
+          "Dealing with roommate conflicts": "Asking roommate to accompany to office hours"
         },
         "challenges_materialized": {
-          "Preparing for presentations": "Not explicitly mentioned in conversation",
-          "Adjusting to college workload": "Not explicitly mentioned in conversation",
-          "Navigating campus politics": "Starting a student organization",
-          "Managing student loans": "Not explicitly mentioned in conversation"
+          "Preparing for presentations": "Practicing social skills in small group settings",
+          "Adjusting to college workload": "Using study groups and office hours for support",
+          "Navigating campus politics": "Attending smaller club meetings instead of large events",
+          "Managing student loans": "Not directly addressed in conversation"
         },
         "behaviors_detailed": {
-          "Participates in study groups": "Not explicitly mentioned in conversation",
-          "Procrastinates on assignments": "Not explicitly mentioned in conversation",
-          "Stays up late studying": "Not explicitly mentioned in conversation",
-          "Goes to campus events": "Attending networking events, office hours, and student organization activities"
+          "Participates in study groups": "Attending office hours with a roommate",
+          "Procrastinates on assignments": "Not directly addressed in conversation",
+          "Stays up late studying": "Not directly addressed in conversation",
+          "Goes to campus events": "Planning to attend a film discussion group"
         },
         "triggers_specified": {
-          "Presentations": "Not explicitly mentioned in conversation",
-          "Networking events": "Avoiding face-to-face interaction at networking events",
-          "Fraternity/Sorority events": "Not explicitly mentioned in conversation",
-          "Office hours": "Avoiding face-to-face interaction at office hours"
+          "Presentations": "Practicing social skills in small groups",
+          "Networking events": "Emailing alumni for advice instead of in-person networking",
+          "Fraternity/Sorority events": "Not directly addressed in conversation",
+          "Office hours": "Attending with a roommate for support"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.55,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.5499999999999998,
-        "timestamp": "2025-10-04T19:29:16.628312"
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 3.05,
+        "improvement_score": 1.0499999999999998,
+        "timestamp": "2025-10-20T23:02:35.489727"
       },
       {
-        "stage_number": 8,
-        "prompt_id": "6047de79-e44a-421b-8e45-261a5fdcaa16",
-        "prompt_name": "G3C07 from G2C03 & G2E00",
-        "generation": 3,
-        "conversation_id": "ab667e24-3aca-48a8-9f6a-f1dc7827ab98",
-        "conversation_summary": "Problems discussed: Lisa's social anxiety around networking events, pitching her media literacy club, and asking for recommendation letters. Solutions offered/accepted: Baby steps like showing up to events, practicing pitches, and scheduling emails. Student's response: Initially hesitant but agreed to try recording pitches and attending the org fair. Evidence of progress: Lisa plans to practice pitching, attend the fair, and send emails responsibly, showing reduced avoidance and increased engagement.",
-        "fears_materialized": {
-          "Choosing the right career path": "Starting a media literacy club and studying abroad",
-          "Dealing with roommate conflicts": "Not explicitly mentioned, but implied in social anxiety triggers"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Pitching the media literacy club to the student activities office",
-          "Adjusting to college workload": "Procrastinating on assignments and staying up late studying",
-          "Navigating campus politics": "Attending networking events and office hours",
-          "Managing student loans": "Not explicitly mentioned in conversation"
-        },
-        "behaviors_detailed": {
-          "Participates in study groups": "Not explicitly mentioned in conversation",
-          "Procrastinates on assignments": "Watching 'How to sound confident' YouTube tutorials instead of preparing",
-          "Stays up late studying": "Considering sending emails at 2am",
-          "Goes to campus events": "Planning to attend the student org fair"
-        },
-        "triggers_specified": {
-          "Presentations": "Pitching the media literacy club",
-          "Networking events": "Student org fair",
-          "Fraternity/Sorority events": "Not explicitly mentioned in conversation",
-          "Office hours": "Asking professors for recommendation letters"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.55,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.5499999999999998,
-        "timestamp": "2025-10-04T19:30:11.268495"
-      },
-      {
-        "stage_number": 9,
-        "prompt_id": "c60cd38c-fce5-40e3-969d-a206fb771098",
-        "prompt_name": "G3M06 from G2C03",
-        "generation": 3,
-        "conversation_id": "987b9f56-d9ee-445f-9b1d-3b7d59361618",
-        "conversation_summary": "Problems discussed: Lisa's anxiety about networking events, office hours, starting a student org, and studying abroad. Solutions offered/accepted: Reframing networking events as learning opportunities, starting office hours with silent attendance, beginning the student org with unofficial writing hangouts, and viewing study abroad as a fun experience. Student's response to solutions: Lisa accepted the solutions, planning to attend office hours silently and host writing hangouts. Evidence of progress/improvement: Lisa is taking concrete steps to address her fears and challenges, showing initiative and reduced anxiety.",
-        "fears_materialized": {
-          "Choosing the right career path": "Starting a student org and studying abroad",
-          "Dealing with roommate conflicts": "Bribing roommate with baked goods to join writing hangout"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Reframing networking events as learning one cool thing about one person",
-          "Adjusting to college workload": "Breaking tasks into bite-sized pieces",
-          "Navigating campus politics": "Starting with unofficial writing hangouts to test interest",
-          "Managing student loans": "Not explicitly addressed in conversation"
-        },
-        "behaviors_detailed": {
-          "Participates in study groups": "Planning to host writing hangouts",
-          "Procrastinates on assignments": "Overthinking emails for office hours",
-          "Stays up late studying": "Not explicitly addressed in conversation",
-          "Goes to campus events": "Planning to attend office hours and networking events"
-        },
-        "triggers_specified": {
-          "Presentations": "Reframed as learning opportunities",
-          "Networking events": "Setting tiny goals like learning one cool thing about one person",
-          "Fraternity/Sorority events": "Not explicitly addressed in conversation",
-          "Office hours": "Starting with silent attendance and note-taking"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.55,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.5499999999999998,
-        "timestamp": "2025-10-04T19:33:23.972226"
-      },
-      {
-        "stage_number": 10,
-        "prompt_id": "5a2e1ba7-9521-4df4-bece-085e7d07aa1c",
-        "prompt_name": "G3M05 from G2C03",
-        "generation": 3,
-        "conversation_id": "c74ce946-56c2-44ec-aadb-3d55e08306ca",
-        "conversation_summary": "Problems discussed: 1) Anxiety around networking events and office hours, 2) Roommate conflicts, 3) Presentation anxiety, 4) Starting a student organization and studying abroad. Solutions offered/accepted: 1) Emailing study abroad office as a baby step, 2) Suggesting thrift store shopping to set boundaries with roommate, 3) Practicing TED Talk-style presentations in front of a mirror, 4) Drafting playful yet professional emails. Student's response to solutions: Positive, with immediate action taken on emailing study abroad office and planning to address roommate conflict. Evidence of progress/improvement: Sent email, received reply about Florence program, agreed to practice presentations, and planned to address roommate issue.",
+        "stage_number": 3,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_b5e2f556-e08f-4387-bd90-d5b3903397a1_milestone_12",
+        "conversation_summary": "1) Problems discussed: Social anxiety around networking events, office hours, and starting a student organization. Fear of freezing up in social situations and saying something awkward. 2) Solutions offered/accepted: Breaking down social interactions into smaller steps (e.g., arriving early to club meetings, using email templates for alumni outreach, bringing a buddy to office hours). Reframing networking as 'asking for advice.' 3) Student's response to solutions: Initially defensive but gradually relaxed, agreed to try film club and office hours with a buddy, accepted email template idea, and reframed networking. 4) Evidence of progress/improvement: Visible relaxation, verbal acknowledgment of feasibility, and concrete plans to attend film club and office hours with a buddy.",
         "fears_materialized": {
           "Choosing the right career path": "Starting a student organization and studying abroad",
-          "Dealing with roommate conflicts": "Roommate borrowing clothes without permission"
+          "Dealing with roommate conflicts": "Asking roommate to accompany her to office hours"
         },
         "challenges_materialized": {
-          "Preparing for presentations": "Practicing TED Talk-style presentations in front of a mirror",
+          "Preparing for presentations": "Practicing social interactions in small groups",
+          "Adjusting to college workload": "Using the buddy system for office hours",
+          "Navigating campus politics": "Attending smaller club meetings instead of large events",
+          "Managing student loans": "Not directly addressed in conversation"
+        },
+        "behaviors_detailed": {
+          "Participates in study groups": "Planning to attend a film discussion group",
+          "Procrastinates on assignments": "Not directly addressed in conversation",
+          "Stays up late studying": "Not directly addressed in conversation",
+          "Goes to campus events": "Planning to attend a film club meeting and office hours with a buddy"
+        },
+        "triggers_specified": {
+          "Presentations": "Practicing social interactions in small groups",
+          "Networking events": "Reframing as 'asking for advice' and using email templates",
+          "Fraternity/Sorority events": "Not directly addressed in conversation",
+          "Office hours": "Attending with a roommate as a support person"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 3.05,
+        "post_assessment_score": 2.0,
+        "improvement_score": -1.0499999999999998,
+        "timestamp": "2025-10-20T23:03:09.625602"
+      },
+      {
+        "stage_number": 4,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_b5e2f556-e08f-4387-bd90-d5b3903397a1_20251020_230149",
+        "conversation_summary": "1) Problems discussed: Social anxiety in networking events and small groups, fear of saying something stupid, intimidation of office hours. 2) Solutions offered/accepted: Arriving early to club meetings, drafting alumni emails with a template, bringing a roommate to office hours, reframing networking as 'asking for advice'. 3) Student's response to solutions: Positive, with visible relaxation and willingness to try film club and email drafting. 4) Evidence of progress/improvement: Planning specific actions (film club, office hours), drafting emails, and showing increased confidence through body language and verbal acknowledgment of doable steps.",
+        "fears_materialized": {
+          "Choosing the right career path": "Starting a student organization and studying abroad",
+          "Dealing with roommate conflicts": "Asking roommate to accompany her to office hours"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "Freezing up in small group settings",
           "Adjusting to college workload": "Procrastinating on assignments",
-          "Navigating campus politics": "Starting a student organization",
-          "Managing student loans": "Not explicitly addressed in conversation"
+          "Navigating campus politics": "Attending fraternity/sorority events",
+          "Managing student loans": "Networking with alumni for study abroad opportunities"
         },
         "behaviors_detailed": {
-          "Participates in study groups": "Not explicitly detailed in conversation",
-          "Procrastinates on assignments": "Stays up late studying",
-          "Stays up late studying": "Not explicitly detailed in conversation",
-          "Goes to campus events": "Attending networking and fraternity/sorority events"
+          "Participates in study groups": "Joining a film discussion group",
+          "Procrastinates on assignments": "Delaying drafting alumni emails",
+          "Stays up late studying": "Preparing for club meetings by arriving early",
+          "Goes to campus events": "Attending film club meetings"
         },
         "triggers_specified": {
-          "Presentations": "Practicing in front of a mirror",
-          "Networking events": "Avoiding due to anxiety",
-          "Fraternity/Sorority events": "Avoiding due to anxiety",
-          "Office hours": "Avoiding due to anxiety"
+          "Presentations": "Speaking up in small group settings",
+          "Networking events": "Emailing alumni for study abroad advice",
+          "Fraternity/Sorority events": "Avoiding large social gatherings",
+          "Office hours": "Going with a roommate for support"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.55,
-        "post_assessment_score": 2.65,
-        "improvement_score": 0.10000000000000009,
-        "timestamp": "2025-10-04T19:38:13.588349"
-      },
-      {
-        "stage_number": 11,
-        "prompt_id": "1683d52f-8fd4-4194-a06f-eea15f95d10e",
-        "prompt_name": "G4C07 from G3C07 & G3E01",
-        "generation": 4,
-        "conversation_id": "37e3b7b3-61dd-445f-8c30-4aca4256bae5",
-        "conversation_summary": "1) Problems discussed: Lisa's anxiety around social interactions, particularly at networking events, office hours, and when starting a student organization or studying abroad. 2) Solutions offered/accepted: Start with baby steps like asking one question in office hours, recruit a buddy for student org outreach, email study abroad office first, and focus on being interested rather than impressive in conversations. 3) Student's response to solutions: Lisa showed openness to trying these strategies, planning to email the study abroad office and apply new conversation techniques at the next club meeting. 4) Evidence of progress/improvement: Lisa's demeanor improved from initial distress to a genuine smile and standing straighter, committing to specific actions, and expressing gratitude for the non-judgmental support.",
-        "fears_materialized": {
-          "Choosing the right career path": "Starting a student organization and studying abroad",
-          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Not explicitly mentioned in conversation",
-          "Adjusting to college workload": "Not explicitly mentioned in conversation",
-          "Navigating campus politics": "Starting a student organization",
-          "Managing student loans": "Not explicitly mentioned in conversation"
-        },
-        "behaviors_detailed": {
-          "Participates in study groups": "Not explicitly mentioned in conversation",
-          "Procrastinates on assignments": "Not explicitly mentioned in conversation",
-          "Stays up late studying": "Not explicitly mentioned in conversation",
-          "Goes to campus events": "Attending club meetings and networking events"
-        },
-        "triggers_specified": {
-          "Presentations": "Not explicitly mentioned in conversation",
-          "Networking events": "Fear of talking to strangers at events",
-          "Fraternity/Sorority events": "Not explicitly mentioned in conversation",
-          "Office hours": "Fear of asking questions in office hours"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.55,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.5499999999999998,
-        "timestamp": "2025-10-04T19:43:16.257994"
-      },
-      {
-        "stage_number": 12,
-        "prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
-        "prompt_name": "G5C07 from G4E01 & G4E02",
-        "generation": 5,
-        "conversation_id": "4bf8b285-d6b3-412c-9c8a-8a358c1c1ed9",
-        "conversation_summary": "Problems discussed: Lisa's anxiety around presentations, networking events, office hours, and starting a student organization. Solutions offered/accepted: Practicing presentations in front of a mirror or recording oneself, starting with emails to professors for networking, observing low-stakes clubs before starting her own org, and choosing a study abroad program with a smaller group. Student's response to solutions: Initially hesitant but eventually excited, especially about the 'Shy Communicators Club' idea. Evidence of progress/improvement: Lisa agreed to start with emails to professors, considered recording practice sessions, and began drafting a mission statement for her club.",
-        "fears_materialized": {
-          "Choosing the right career path": "Starting a student organization and studying abroad",
-          "Dealing with roommate conflicts": "Not explicitly mentioned, but implied in general social anxiety"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Practicing in front of a mirror or recording oneself",
-          "Adjusting to college workload": "Not explicitly mentioned, but implied in procrastination and late-night studying",
-          "Navigating campus politics": "Observing low-stakes clubs before starting own org",
-          "Managing student loans": "Not explicitly mentioned"
-        },
-        "behaviors_detailed": {
-          "Participates in study groups": "Not explicitly mentioned, but implied in social interactions",
-          "Procrastinates on assignments": "Overthinking emails and perfect timing",
-          "Stays up late studying": "Not explicitly mentioned, but implied in 2am emails",
-          "Goes to campus events": "Planning to start a 'Shy Communicators Club'"
-        },
-        "triggers_specified": {
-          "Presentations": "Practicing in front of a mirror or recording oneself",
-          "Networking events": "Starting with emails to professors",
-          "Fraternity/Sorority events": "Not explicitly mentioned",
-          "Office hours": "Starting with emails to professors"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.55,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.5499999999999998,
-        "timestamp": "2025-10-04T19:48:28.220899"
+        "pre_assessment_score": 2.6,
+        "post_assessment_score": 2.55,
+        "improvement_score": -0.050000000000000266,
+        "timestamp": "2025-10-20T23:03:46.958194"
       }
     ],
-    "current_stage": 12
+    "current_stage": 4
   }
 }

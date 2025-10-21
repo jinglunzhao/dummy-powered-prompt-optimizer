@@ -1,10 +1,10 @@
 {
   "dummy_id": "2f5e4720-22f1-4de6-b897-98a67b167ae0",
   "dummy_name": "Gregory Moore",
-  "current_experiment_id": "gepa_exp_20251004_194514",
-  "current_prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
-  "created_at": "2025-10-04T19:08:38.120107",
-  "last_updated": "2025-10-04T19:48:07.855655",
+  "current_experiment_id": "conversation_length_with_evolution",
+  "current_prompt_id": "conversation_length_test",
+  "created_at": "2025-10-20T23:00:26.736015",
+  "last_updated": "2025-10-20T23:03:30.993435",
   "conversation_profile": {
     "original_fears": [
       "Choosing the right career path",
@@ -36,27 +36,27 @@
       "openness": 7
     },
     "current_fears": [
-      "Worrying about getting into grad school due to poor networking skills",
-      "Fear of presenting in CS lectures with 200 people",
-      "Concern about blanking during presentations affecting grades",
-      "Not explicitly mentioned in conversation"
+      "Panicking about an upcoming career fair",
+      "Freezing up during networking events",
+      "Fear of presenting in front of CS class",
+      "Practicing networking questions with roommate"
     ],
     "current_challenges": [
-      "Not explicitly mentioned in conversation",
-      "Struggling to connect with potential mentors at networking events",
-      "Not explicitly mentioned in conversation"
+      "Managing student loans",
+      "Seeking advice at networking events",
+      "Not explicitly addressed in conversation"
     ],
     "current_behaviors": [
-      "Not explicitly mentioned in conversation",
-      "Comfortable discussing algorithms with study group (Kevin from Data Structures)",
-      "Not explicitly mentioned in conversation"
+      "Not explicitly addressed in conversation",
+      "Practicing presentations with study partners",
+      "Attending career fair and networking events"
     ],
     "current_anxiety_triggers": [
-      "Career fairs where recruiters ask unexpected questions",
-      "CS lectures requiring public speaking",
-      "Not explicitly mentioned in conversation"
+      "Career fair and small talk anxiety",
+      "CS class presentation fear",
+      "Not explicitly addressed in conversation"
     ],
-    "current_social_anxiety_level": 5,
+    "current_social_anxiety_level": 7,
     "current_big_five": {
       "extraversion": 10,
       "agreeableness": 1,
@@ -67,425 +67,145 @@
     "evolution_stages": [
       {
         "stage_number": 1,
-        "prompt_id": "9c0d9da5-ff41-4ca0-839e-9ec565c87d0d",
-        "prompt_name": "Genesis",
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "59c51028-3086-446d-9770-3bb0e188c062",
-        "conversation_summary": "Gregory discussed his fears of bombing presentations in large CS lectures and the stress of grad school applications. Solutions offered included practicing public speaking in lower-stakes settings like study groups, attending an ACM workshop on technical communication, and exploring Toastmasters. Gregory responded positively, agreeing to attend the workshop despite it being after his midterm, and scheduled a debrief with the coach. Evidence of progress includes his willingness to face his fear of public speaking and his proactive approach to improving his skills for grad school.",
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_4",
+        "conversation_summary": "1) Problems discussed: Gregory expressed anxiety about networking events and class presentations, particularly fearing awkward silences and being perceived as a fraud. 2) Solutions offered/accepted: The AI Coach suggested a 3-step approach for networking (prepared questions, limited conversations, breaks), the echo technique for silences, and writing questions on resume copies. For presentations, practicing with smaller groups and focusing on expertise was recommended. 3) Student's response to solutions: Gregory responded positively, refining questions, planning to practice with his roommate, and using sticky notes in his portfolio. 4) Evidence of progress/improvement: Gregory felt less terrified, more prepared, and confident about not bombing the career fair, showing significant reduction in anxiety.",
         "fears_materialized": {
-          "Choosing the right career path": "Grad school applications",
-          "Social anxiety in large lecture halls": "Bombing presentations in CS lectures",
-          "Academic failure and poor grades": "Fear of poor performance in algorithms midterm",
-          "Dealing with roommate conflicts": "Not mentioned in conversation"
+          "Choosing the right career path": "Panicking about an upcoming career fair",
+          "Social anxiety in large lecture halls": "Freezing up during networking events",
+          "Academic failure and poor grades": "Wanting to drop out due to presentation anxiety",
+          "Dealing with roommate conflicts": "Practicing networking questions with roommate"
         },
         "challenges_materialized": {
-          "Financial planning": "Not mentioned in conversation",
-          "Finding a mentor": "Not mentioned in conversation",
-          "Managing student loans": "Not mentioned in conversation"
+          "Financial planning": "Managing student loans",
+          "Finding a mentor": "Seeking advice at networking events",
+          "Managing student loans": "Not explicitly mentioned in conversation"
         },
         "behaviors_detailed": {
-          "Eats at the dining hall": "Not mentioned in conversation",
-          "Participates in study groups": "Joined a study group last semester",
-          "Volunteers for campus events": "Considering attending ACM workshop"
+          "Eats at the dining hall": "Not explicitly mentioned in conversation",
+          "Participates in study groups": "Practicing presentations with study partners",
+          "Volunteers for campus events": "Attending career fairs and networking events"
         },
         "triggers_specified": {
-          "Networking events": "Fear of speaking up in class or at networking events",
-          "Presentations": "Fear of bombing presentations in CS lectures",
-          "Campus social events": "Not mentioned in conversation"
+          "Networking events": "Career fair next week",
+          "Presentations": "Presenting in front of CS class",
+          "Campus social events": "Not explicitly mentioned in conversation"
         },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 2.5,
-        "pre_assessment_score": 2.0,
-        "post_assessment_score": 2.8,
-        "improvement_score": 0.7999999999999998,
-        "timestamp": "2025-10-04T19:10:46.753173"
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 0.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.5,
+        "improvement_score": 0.0,
+        "timestamp": "2025-10-20T23:01:53.046578"
       },
       {
         "stage_number": 2,
-        "prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
-        "prompt_name": "G1M01 from Genesis",
-        "generation": 1,
-        "conversation_id": "96b6abac-7831-4496-9366-6be3b8e73d05",
-        "conversation_summary": "Gregory discussed his overwhelming feelings about grad school applications and networking, particularly freezing up at CS mixers and fearing inauthenticity. Solutions offered included starting with low-stakes 'micro-networking,' practicing with self-recordings, and using quirky questions to steer conversations. Gregory responded positively, successfully practicing a mock networking scenario and demonstrating improved confidence and conversation skills. Evidence of progress includes his ability to pivot conversations humorously and effectively, and his readiness to apply these strategies in real networking events.",
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_8",
+        "conversation_summary": "Problems discussed: 1) Freezing up during networking events, 2) Fear of presenting in CS class. Solutions offered/accepted: 1) 3-step networking approach (prepared questions, limited conversations, breaks), 2) Echo technique for conversation lulls, 3) Writing questions on resume copies, 4) Natural break strategies. Student's response: Positive engagement, workshopped specific questions, planned practice with roommate. Evidence of progress: Shifted mindset from 'fraud' to 'researcher,' concrete preparation steps taken, reduced self-deprecation.",
         "fears_materialized": {
-          "Choosing the right career path": "Feeling overwhelmed by grad school applications and networking pressure",
-          "Social anxiety in large lecture halls": "Freezing up and forgetting how to form sentences at CS mixers",
-          "Academic failure and poor grades": "Not mentioned directly, but implied by the stress of grad school apps",
-          "Dealing with roommate conflicts": "Not mentioned in the conversation"
+          "Choosing the right career path": "Panicking about an upcoming career fair",
+          "Social anxiety in large lecture halls": "Freezing up during networking events",
+          "Academic failure and poor grades": "Fear of presenting in front of CS class",
+          "Dealing with roommate conflicts": "Practicing networking questions with roommate"
         },
         "challenges_materialized": {
-          "Financial planning": "Not mentioned in the conversation",
-          "Finding a mentor": "Not mentioned directly, but implied by the need for networking",
-          "Managing student loans": "Not mentioned in the conversation"
+          "Financial planning": "Not directly addressed in conversation",
+          "Finding a mentor": "Networking at career fair to find potential mentors",
+          "Managing student loans": "Not directly addressed in conversation"
         },
         "behaviors_detailed": {
-          "Eats at the dining hall": "Not mentioned in the conversation",
-          "Participates in study groups": "Not mentioned in the conversation",
-          "Volunteers for campus events": "Not mentioned in the conversation"
+          "Eats at the dining hall": "Not directly addressed in conversation",
+          "Participates in study groups": "Practicing presentations with study partners",
+          "Volunteers for campus events": "Not directly addressed in conversation"
         },
         "triggers_specified": {
-          "Networking events": "CS mixers where Gregory freezes up",
-          "Presentations": "Not mentioned in the conversation",
-          "Campus social events": "Not mentioned in the conversation"
+          "Networking events": "Upcoming career fair",
+          "Presentations": "CS class presentation",
+          "Campus social events": "Not directly addressed in conversation"
         },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 2.5,
-        "pre_assessment_score": 2.0,
-        "post_assessment_score": 2.7,
-        "improvement_score": 0.7000000000000002,
-        "timestamp": "2025-10-04T19:16:01.554480"
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.5,
+        "timestamp": "2025-10-20T23:02:24.422763"
       },
       {
         "stage_number": 3,
-        "prompt_id": "d675a42d-8758-4aa1-9f9a-2504ddb08752",
-        "prompt_name": "G2M01 from G1M01",
-        "generation": 2,
-        "conversation_id": "737cd209-7ae4-4ff8-aff3-874cfee76fde",
-        "conversation_summary": "Problems discussed: Gregory expressed overwhelm with grad school applications, public speaking anxiety, and networking difficulties. Solutions offered/accepted: Breaking down public speaking into low-stakes practice (explaining coding to non-tech friends), arriving early to networking events to ease social anxiety, and emailing a professor for career guidance. Student's response to solutions: Gregory positively accepted the solutions, committing to email a professor and practice explaining a coding project to his roommate. Evidence of progress/improvement: Gregory left the conversation with a lighter posture, showing reduced anxiety and a clear action plan for the week.",
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_milestone_12",
+        "conversation_summary": "1) Problems discussed: Networking anxiety at upcoming career fair and fear of class presentations. 2) Solutions offered/accepted: 3-step networking approach, echo technique for conversations, writing questions on materials, break strategies. For presentations: practicing with smaller groups. 3) Student's response: Enthusiastically adopted question-crafting, recognized value of preparation, reframed networking as research. 4) Evidence of progress: Created specific questions, planned practice with roommate, reduced self-perception as fraud.",
         "fears_materialized": {
-          "Choosing the right career path": "Grad school applications and career uncertainty",
-          "Social anxiety in large lecture halls": "Networking events and presentations",
-          "Academic failure and poor grades": "Pressure to perform well in grad school applications",
-          "Dealing with roommate conflicts": "Explaining coding projects to non-tech roommate"
+          "Choosing the right career path": "Panicking about an upcoming career fair",
+          "Social anxiety in large lecture halls": "Freezing up during networking events",
+          "Academic failure and poor grades": "Fear of presenting in front of CS class",
+          "Dealing with roommate conflicts": "Practicing networking questions with roommate"
         },
         "challenges_materialized": {
-          "Financial planning": "Managing student loans and grad school costs",
-          "Finding a mentor": "Lack of guidance on career paths",
-          "Managing student loans": "Financial stress related to grad school"
+          "Financial planning": "Not directly addressed in conversation",
+          "Finding a mentor": "Networking at career fair as potential mentor source",
+          "Managing student loans": "Not directly addressed in conversation"
         },
         "behaviors_detailed": {
-          "Eats at the dining hall": "Regular meals with peers",
-          "Participates in study groups": "Collaborative learning with classmates",
-          "Volunteers for campus events": "Engagement in community activities"
+          "Eats at the dining hall": "Not directly addressed in conversation",
+          "Participates in study groups": "Suggested practicing presentations with study partners",
+          "Volunteers for campus events": "Not directly addressed in conversation"
         },
         "triggers_specified": {
-          "Networking events": "Large social gatherings with strangers",
-          "Presentations": "Public speaking in academic settings",
-          "Campus social events": "Informal mingling with peers"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 2.5,
-        "pre_assessment_score": 2.0,
-        "post_assessment_score": 2.9,
-        "improvement_score": 0.8999999999999999,
-        "timestamp": "2025-10-04T19:18:55.197322"
-      },
-      {
-        "stage_number": 4,
-        "prompt_id": "76f427d6-7f43-40db-bd23-cc064b5199e9",
-        "prompt_name": "G2C02 from G1M01 & G1E00",
-        "generation": 2,
-        "conversation_id": "3ffb209d-7f48-4642-b2e5-f5f0b0195815",
-        "conversation_summary": "Problems discussed: 1) Anxiety about public speaking in large lecture halls, 2) Stress over choosing between AI ethics and cybersecurity for grad school, 3) Fear of cold-emailing professors for mentorship, 4) Confusion about student loan repayment. Solutions offered/accepted: 1) 'Speak to one person' trick for lecture halls, 2) Cold-email template for professors, 3) Financial literacy workshops, 4) Presenting grad app research to study group. Student's response to solutions: Positive engagement, commits to trying the speaking trick, sending an email by Friday, and attending workshops. Evidence of progress/improvement: Student shows willingness to face fears, plans concrete actions (email, presentation), and expresses excitement about growth despite nervousness.",
-        "fears_materialized": {
-          "Choosing the right career path": "Torn between AI ethics and cybersecurity for grad school",
-          "Social anxiety in large lecture halls": "Fear of asking questions in front of 200 people",
-          "Academic failure and poor grades": "Stress about grad school applications",
-          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation"
-        },
-        "challenges_materialized": {
-          "Financial planning": "Difficulty understanding student loan fine print",
-          "Finding a mentor": "Fear of cold-emailing professors",
-          "Managing student loans": "Anxiety about loan repayment"
-        },
-        "behaviors_detailed": {
-          "Eats at the dining hall": "Not explicitly mentioned in conversation",
-          "Participates in study groups": "Plans to present grad app research to study group",
-          "Volunteers for campus events": "Not explicitly mentioned in conversation"
-        },
-        "triggers_specified": {
-          "Networking events": "Cold-emailing professors",
-          "Presentations": "Public speaking in lecture halls",
-          "Campus social events": "Not explicitly mentioned in conversation"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 2.5,
-        "pre_assessment_score": 2.0,
-        "post_assessment_score": 2.0,
-        "improvement_score": 0.0,
-        "timestamp": "2025-10-04T19:20:08.423786"
-      },
-      {
-        "stage_number": 5,
-        "prompt_id": "e790c703-2c16-4dd7-9ee1-cc749cda9e8a",
-        "prompt_name": "G2C03 from G1E00 & G1M01",
-        "generation": 2,
-        "conversation_id": "825c9550-c5d0-4fcd-b4a1-bf48a5197ba3",
-        "conversation_summary": "Gregory discussed his fears about choosing the right career path, social anxiety in networking events, and public speaking mishaps. Solutions offered included starting with low-stakes networking (emailing a TA), practicing public speaking in a fun, low-pressure setting, and exploring cost-saving hacks for grad school visits. Gregory responded positively, drafting an email opener and agreeing to practice pitches. Evidence of progress includes his willingness to take small steps and his humorous approach to overcoming fears.",
-        "fears_materialized": {
-          "Choosing the right career path": "Obsessively checking Stanford's human-computer interaction program at 2am",
-          "Social anxiety in large lecture halls": "Feeling overwhelmed by networking events and grad school applications",
-          "Academic failure and poor grades": "Accidentally calling a linked list a \"daisy chain\" during a lab demo",
-          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation"
-        },
-        "challenges_materialized": {
-          "Financial planning": "Loan statements looking like a phone number and concerns about affording grad school visits",
-          "Finding a mentor": "Considering emailing a TA who wears Zelda socks as a low-stakes first step",
-          "Managing student loans": "Expressed concern about loan statements and grad school costs"
-        },
-        "behaviors_detailed": {
-          "Eats at the dining hall": "Not explicitly mentioned in conversation",
-          "Participates in study groups": "Not explicitly mentioned in conversation",
-          "Volunteers for campus events": "Not explicitly mentioned in conversation"
-        },
-        "triggers_specified": {
-          "Networking events": "Feeling the need to hide in dorm instead of attending networking events",
-          "Presentations": "Fear of public speaking, especially during lab demos",
-          "Campus social events": "Not explicitly mentioned in conversation"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 2.5,
-        "pre_assessment_score": 2.0,
-        "post_assessment_score": 2.6,
-        "improvement_score": 0.6000000000000001,
-        "timestamp": "2025-10-04T19:22:49.345568"
-      },
-      {
-        "stage_number": 6,
-        "prompt_id": "c60cd38c-fce5-40e3-969d-a206fb771098",
-        "prompt_name": "G3M06 from G2C03",
-        "generation": 3,
-        "conversation_id": "3bd715f5-cde8-49f4-8b04-89b9f41ffdb7",
-        "conversation_summary": "Problems discussed: 1) Stress about grad school applications and feeling like a fraud when writing SOP, 2) Social anxiety in large lecture halls and networking events, 3) Worrying about student loans. Solutions offered/accepted: 1) Reframing 'mediocre' projects as 'foundational' for SOP, 2) Visualization trick (pretending audience is potatoes) and focusing on one interesting person for social anxiety, 3) 'Greg’s Snack-Based Connection Strategy' for networking, 4) Agreement to not check loan balance until next session. Student's response to solutions: Positive, with laughter and agreement to try the visualization trick, acknowledgment of the reframing idea, and sharing a positive networking experience. Evidence of progress/improvement: Student promised to draft SOP bullet points, use visualization trick, and avoid checking loan balance, showing reduced anxiety and increased confidence.",
-        "fears_materialized": {
-          "Choosing the right career path": "Stressing about grad school applications",
-          "Social anxiety in large lecture halls": "Panicking at networking events and big lecture hall Q&As",
-          "Academic failure and poor grades": "Feeling like a fraud when writing SOP",
-          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation"
-        },
-        "challenges_materialized": {
-          "Financial planning": "Worrying about student loans",
-          "Finding a mentor": "Not explicitly mentioned in conversation",
-          "Managing student loans": "Checking loan balance causing stress"
-        },
-        "behaviors_detailed": {
-          "Eats at the dining hall": "Not explicitly mentioned in conversation",
-          "Participates in study groups": "Not explicitly mentioned in conversation",
-          "Volunteers for campus events": "Not explicitly mentioned in conversation"
-        },
-        "triggers_specified": {
-          "Networking events": "Career fair with recruiters",
-          "Presentations": "Big lecture hall Q&A",
-          "Campus social events": "Not explicitly mentioned in conversation"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 2.5,
-        "pre_assessment_score": 2.0,
-        "post_assessment_score": 2.8,
-        "improvement_score": 0.7999999999999998,
-        "timestamp": "2025-10-04T19:28:06.324818"
-      },
-      {
-        "stage_number": 7,
-        "prompt_id": "6047de79-e44a-421b-8e45-261a5fdcaa16",
-        "prompt_name": "G3C07 from G2C03 & G2E00",
-        "generation": 3,
-        "conversation_id": "9ad482bb-be0f-41b2-a065-2f3e619ef18e",
-        "conversation_summary": "Problems discussed: 1) Anxiety about large lecture halls, 2) Stress over grad school applications and public speaking, 3) Financial stress about student loans. Solutions offered/accepted: 1) Sitting in the same spot in lecture halls to reduce anxiety, 2) Recording a casual explanation of research for grad school applications, 3) Attending financial literacy workshops. Student's response to solutions: Positive, with immediate action planned (recording research explanation, attending workshops). Evidence of progress/improvement: Student identified a personal story (pajama story) to start their application, recognized their strength in one-on-one explanations, and showed reduced anxiety by the end of the conversation.",
-        "fears_materialized": {
-          "Choosing the right career path": "Struggling with grad school applications and doubting suitability for grad school",
-          "Social anxiety in large lecture halls": "Feeling intimidated and overwhelmed in large lecture halls",
-          "Academic failure and poor grades": "Fear of not meeting grad school application standards",
-          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation"
-        },
-        "challenges_materialized": {
-          "Financial planning": "Stress about managing student loans",
-          "Finding a mentor": "Not explicitly mentioned in conversation",
-          "Managing student loans": "Concern about financial literacy and loan management"
-        },
-        "behaviors_detailed": {
-          "Eats at the dining hall": "Not explicitly mentioned in conversation",
-          "Participates in study groups": "Mentioned attending a study group after the conversation",
-          "Volunteers for campus events": "Not explicitly mentioned in conversation"
-        },
-        "triggers_specified": {
-          "Networking events": "Not explicitly mentioned in conversation",
-          "Presentations": "Anxiety about public speaking and explaining research",
-          "Campus social events": "Not explicitly mentioned in conversation"
+          "Networking events": "Upcoming career fair",
+          "Presentations": "CS class presentation",
+          "Campus social events": "Not directly addressed in conversation"
         },
         "anxiety_change": -2.5,
         "new_anxiety_level": 7.5,
         "pre_assessment_score": 2.0,
-        "post_assessment_score": 2.65,
-        "improvement_score": 0.6499999999999999,
-        "timestamp": "2025-10-04T19:28:33.745326"
+        "post_assessment_score": 2.2,
+        "improvement_score": 0.20000000000000018,
+        "timestamp": "2025-10-20T23:03:00.624781"
       },
       {
-        "stage_number": 8,
-        "prompt_id": "5a2e1ba7-9521-4df4-bece-085e7d07aa1c",
-        "prompt_name": "G3M05 from G2C03",
-        "generation": 3,
-        "conversation_id": "cc1097a1-9fb8-4d5f-8ce2-c2485c67665a",
-        "conversation_summary": "Gregory discussed his fears about grad school applications, networking, and public speaking. Solutions offered included focusing on learning one interesting thing from each person to reduce networking pressure, joining Toastmasters for public speaking practice, and laughing off awkward moments. Gregory responded positively, showing interest in Toastmasters and adopting the one-interesting-thing approach. Evidence of progress includes his willingness to engage with previously avoided resources and his humorous acceptance of his own awkwardness.",
+        "stage_number": 4,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_2f5e4720-22f1-4de6-b897-98a67b167ae0_20251020_230135",
+        "conversation_summary": "Problems discussed: 1) Freezing up during networking events and fear of presentations in CS class. Solutions offered/accepted: 1) 3-step networking approach (prepared questions, limited conversations, breaks), 2) Presentation strategies (small group practice, focus on expertise), 3) Echo technique and question preparation. Student's response to solutions: Positive engagement, refining questions, planning to practice with roommate. Evidence of progress/improvement: Shift from panic to proactive preparation, crafting specific questions, adopting follow-up template, and reframing networking mindset.",
         "fears_materialized": {
-          "Choosing the right career path": "Grad school applications and networking pressure",
-          "Social anxiety in large lecture halls": "Networking events and presentations",
-          "Academic failure and poor grades": "Worrying about blanking mid-conversation with professors",
-          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation"
+          "Choosing the right career path": "Panicking about an upcoming career fair",
+          "Social anxiety in large lecture halls": "Freezing up during networking events",
+          "Academic failure and poor grades": "Fear of presenting in front of CS class",
+          "Dealing with roommate conflicts": "Practicing networking questions with roommate"
         },
         "challenges_materialized": {
-          "Financial planning": "Not explicitly mentioned in conversation",
-          "Finding a mentor": "Seeking potential advisors and professors for grad school",
-          "Managing student loans": "Not explicitly mentioned in conversation"
+          "Financial planning": "Managing student loans",
+          "Finding a mentor": "Seeking advice at networking events",
+          "Managing student loans": "Not explicitly addressed in conversation"
         },
         "behaviors_detailed": {
-          "Eats at the dining hall": "Not explicitly mentioned in conversation",
-          "Participates in study groups": "Not explicitly mentioned in conversation",
-          "Volunteers for campus events": "Mentioned interest in Toastmasters club"
+          "Eats at the dining hall": "Not explicitly addressed in conversation",
+          "Participates in study groups": "Practicing presentations with study partners",
+          "Volunteers for campus events": "Attending career fair and networking events"
         },
         "triggers_specified": {
-          "Networking events": "Fear of saying something dumb and being judged",
-          "Presentations": "Worrying about blanking mid-conversation",
-          "Campus social events": "Mentioned Toastmasters club as a potential resource"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 2.5,
-        "pre_assessment_score": 2.0,
-        "post_assessment_score": 2.7,
-        "improvement_score": 0.7000000000000002,
-        "timestamp": "2025-10-04T19:33:20.739918"
-      },
-      {
-        "stage_number": 9,
-        "prompt_id": "f4eccadd-cbf4-4a75-9b58-3abe8a4d407b",
-        "prompt_name": "G3C03 from G2C03 & G2M01",
-        "generation": 3,
-        "conversation_id": "842a04ba-4e93-4887-b97f-fd9da842f5e2",
-        "conversation_summary": "Problems discussed: 1) Stress about grad school applications and networking events, 2) Difficulty cold-emailing professors, 3) Intimidation at networking events. Solutions offered/accepted: 1) Arrive early to events and use programming language debates as conversation starters, 2) Include specific research references in emails to professors, 3) Rehearse a 10-second elevator pitch. Student's response to solutions: Positive and enthusiastic, showing creativity in proposing solutions. Evidence of progress/improvement: Student developed a humorous yet effective elevator pitch and acknowledged the value of specific, research-focused emails.",
-        "fears_materialized": {
-          "Choosing the right career path": "Stressing about grad school applications",
-          "Social anxiety in large lecture halls": "Feeling intimidated at networking events",
-          "Academic failure and poor grades": "Overthinking emails to professors",
-          "Dealing with roommate conflicts": "Not mentioned in conversation"
-        },
-        "challenges_materialized": {
-          "Financial planning": "Not mentioned in conversation",
-          "Finding a mentor": "Difficulty cold-emailing professors",
-          "Managing student loans": "Not mentioned in conversation"
-        },
-        "behaviors_detailed": {
-          "Eats at the dining hall": "Not mentioned in conversation",
-          "Participates in study groups": "Not mentioned in conversation",
-          "Volunteers for campus events": "Not mentioned in conversation"
-        },
-        "triggers_specified": {
-          "Networking events": "Feeling intimidated by others at networking events",
-          "Presentations": "Not mentioned in conversation",
-          "Campus social events": "Not mentioned in conversation"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 2.5,
-        "pre_assessment_score": 2.0,
-        "post_assessment_score": 2.65,
-        "improvement_score": 0.6499999999999999,
-        "timestamp": "2025-10-04T19:35:56.144495"
-      },
-      {
-        "stage_number": 10,
-        "prompt_id": "8966845e-bd42-4a15-9003-2b2ed03db063",
-        "prompt_name": "G3M04 from G2E00",
-        "generation": 3,
-        "conversation_id": "d81570e4-5c7b-4cb8-bd42-0aa00560788a",
-        "conversation_summary": "Gregory discussed his fears about grad school applications, public speaking, and networking events. Solutions offered included practicing public speaking in smaller groups, sitting in consistent spots in lecture halls, and preparing specific openers for networking. Gregory responded positively, demonstrating progress by successfully presenting to his study group, finding a comfortable seat in lecture, and practicing networking openers with the coach. Evidence of improvement includes his willingness to roleplay and his development of strategies to manage anxiety in these situations.",
-        "fears_materialized": {
-          "Choosing the right career path": "Grad school applications and public speaking improvement",
-          "Social anxiety in large lecture halls": "300-person algorithms lecture",
-          "Academic failure and poor grades": "Presenting coding project to study group",
-          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation"
-        },
-        "challenges_materialized": {
-          "Financial planning": "Not explicitly mentioned in conversation",
-          "Finding a mentor": "Not explicitly mentioned in conversation",
-          "Managing student loans": "Not explicitly mentioned in conversation"
-        },
-        "behaviors_detailed": {
-          "Eats at the dining hall": "Not explicitly mentioned in conversation",
-          "Participates in study groups": "Presenting coding project to study group",
-          "Volunteers for campus events": "Not explicitly mentioned in conversation"
-        },
-        "triggers_specified": {
-          "Networking events": "Career fair panic and circling the room",
-          "Presentations": "Public speaking in large lecture halls",
-          "Campus social events": "Not explicitly mentioned in conversation"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 2.5,
-        "pre_assessment_score": 2.0,
-        "post_assessment_score": 2.7,
-        "improvement_score": 0.7000000000000002,
-        "timestamp": "2025-10-04T19:38:12.591051"
-      },
-      {
-        "stage_number": 11,
-        "prompt_id": "1683d52f-8fd4-4194-a06f-eea15f95d10e",
-        "prompt_name": "G4C07 from G3C07 & G3E01",
-        "generation": 4,
-        "conversation_id": "b060c391-bbff-43f2-acca-98d2ee08e27b",
-        "conversation_summary": "Gregory discussed his fears of choosing the wrong career path, social anxiety in large lecture halls, and conflicts with his roommate. Solutions offered included treating lectures as improv stages, viewing career changes as plot twists, and using humor to address roommate issues. Gregory responded positively, planning to ask an absurd question in lecture and reframing his resume approach. Evidence of progress includes his willingness to engage in lecture and his humorous coping mechanism for roommate conflicts.",
-        "fears_materialized": {
-          "Choosing the right career path": "Fear of diving into AI research and later realizing a dislike for matrices",
-          "Social anxiety in large lecture halls": "Freezing up during networking events and presentations",
-          "Academic failure and poor grades": "Worrying about making mistakes in academic settings",
-          "Dealing with roommate conflicts": "Conflict with roommate over reheating fish at odd hours"
-        },
-        "challenges_materialized": {
-          "Financial planning": "Managing student loans and budgeting",
-          "Finding a mentor": "Seeking guidance for grad school applications",
-          "Managing student loans": "Balancing financial responsibilities"
-        },
-        "behaviors_detailed": {
-          "Eats at the dining hall": "Regularly eats meals at the campus dining hall",
-          "Participates in study groups": "Engages in collaborative learning with peers",
-          "Volunteers for campus events": "Actively participates in campus activities"
-        },
-        "triggers_specified": {
-          "Networking events": "Anxiety during professional networking opportunities",
-          "Presentations": "Stress when presenting in front of large groups",
-          "Campus social events": "Discomfort in large social gatherings"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 2.5,
-        "pre_assessment_score": 2.0,
-        "post_assessment_score": 2.75,
-        "improvement_score": 0.75,
-        "timestamp": "2025-10-04T19:42:41.909009"
-      },
-      {
-        "stage_number": 12,
-        "prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
-        "prompt_name": "G5C07 from G4E01 & G4E02",
-        "generation": 5,
-        "conversation_id": "e08c9fe4-d1d8-4c5d-b07d-a635e8d73c3d",
-        "conversation_summary": "Problems discussed: 1) Fear of public speaking in lectures, 2) Networking anxiety at career fairs, 3) Overpreparation leading to blanking under pressure. Solutions offered/accepted: 1) Eye contact hack to reduce lecture hall anxiety, 2) Simple, relatable answers for networking, 3) Embracing authenticity over perfection. Student's response: Enthusiastically accepted solutions (\"genius\", \"revolutionary\"), used humor to commit to trying them. Evidence of progress: Willingness to implement eye contact strategy, plans to use regex story at next career fair, reframed failures as learning opportunities.",
-        "fears_materialized": {
-          "Choosing the right career path": "Worrying about getting into grad school due to poor networking skills",
-          "Social anxiety in large lecture halls": "Fear of presenting in CS lectures with 200 people",
-          "Academic failure and poor grades": "Concern about blanking during presentations affecting grades",
-          "Dealing with roommate conflicts": "Not explicitly mentioned in conversation"
-        },
-        "challenges_materialized": {
-          "Financial planning": "Not explicitly mentioned in conversation",
-          "Finding a mentor": "Struggling to connect with potential mentors at networking events",
-          "Managing student loans": "Not explicitly mentioned in conversation"
-        },
-        "behaviors_detailed": {
-          "Eats at the dining hall": "Not explicitly mentioned in conversation",
-          "Participates in study groups": "Comfortable discussing algorithms with study group (Kevin from Data Structures)",
-          "Volunteers for campus events": "Not explicitly mentioned in conversation"
-        },
-        "triggers_specified": {
-          "Networking events": "Career fairs where recruiters ask unexpected questions",
-          "Presentations": "CS lectures requiring public speaking",
-          "Campus social events": "Not explicitly mentioned in conversation"
+          "Networking events": "Career fair and small talk anxiety",
+          "Presentations": "CS class presentation fear",
+          "Campus social events": "Not explicitly addressed in conversation"
         },
         "anxiety_change": -2.5,
-        "new_anxiety_level": 5.5,
-        "pre_assessment_score": 2.0,
-        "post_assessment_score": 2.7,
-        "improvement_score": 0.7000000000000002,
-        "timestamp": "2025-10-04T19:48:07.855383"
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.25,
+        "post_assessment_score": 2.0,
+        "improvement_score": -0.25,
+        "timestamp": "2025-10-20T23:03:30.993100"
       }
     ],
-    "current_stage": 12
+    "current_stage": 4
   }
 }

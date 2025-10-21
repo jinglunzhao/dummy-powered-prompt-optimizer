@@ -1,10 +1,10 @@
 {
   "dummy_id": "40bb2243-655e-45e1-911d-b8e933b89a69",
   "dummy_name": "Sarah Brooks",
-  "current_experiment_id": "gepa_exp_20251004_194514",
-  "current_prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
-  "created_at": "2025-10-04T19:08:38.125595",
-  "last_updated": "2025-10-04T19:46:05.043609",
+  "current_experiment_id": "conversation_length_with_evolution",
+  "current_prompt_id": "conversation_length_test",
+  "created_at": "2025-10-20T23:00:26.744829",
+  "last_updated": "2025-10-20T23:06:01.037144",
   "conversation_profile": {
     "original_fears": [
       "Choosing the right career path",
@@ -35,24 +35,24 @@
       "openness": 5
     },
     "current_fears": [
-      "Uncertainty about law school suitability",
-      "Freezing during small group discussions"
+      "Avoiding networking events due to fear of making wrong connections",
+      "Freezing up when needing to ask questions or participate"
     ],
     "current_challenges": [
-      "Mind going blank when speaking",
+      "Mind going blank when trying to start conversations",
       "Staying up late studying inefficiently",
-      "Skipping study group meetings",
-      "Fear of being perceived as weird by peers"
+      "Avoiding office hours due to anxiety",
+      "Struggling to approach classmates in the library"
     ],
     "current_behaviors": [
-      "Uses gym sessions to avoid social interactions",
-      "Passively observes discussions without participating",
-      "Cramming due to daytime avoidance behaviors"
+      "Uses exercise as a stress relief but it doesn't address social anxiety",
+      "Prefers digital interactions over face-to-face",
+      "Compensates for daytime avoidance behaviors"
     ],
     "current_anxiety_triggers": [
-      "Study group meetings",
-      "Pre-class small talk",
-      "One-on-one conversations with professors"
+      "Career fairs where she feels pressured to perform",
+      "Large gatherings where she doesn't know anyone",
+      "One-on-one interactions with professors"
     ],
     "current_social_anxiety_level": 7,
     "current_big_five": {
@@ -65,413 +65,141 @@
     "evolution_stages": [
       {
         "stage_number": 1,
-        "prompt_id": "9c0d9da5-ff41-4ca0-839e-9ec565c87d0d",
-        "prompt_name": "Genesis",
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "05fe0c89-21f1-4c21-b070-d7191c6876bc",
-        "conversation_summary": "Problems discussed: Social anxiety in large lecture halls and networking events, fear of judgment during presentations, and avoiding social interactions. Solutions offered/accepted: Sit closer to the front in lectures, initiate small talk with a friendly classmate, use deep breathing techniques, and start with low-pressure questions. Student's response to solutions: Agreed to try sitting closer and initiating one small conversation, recognized overthinking, and expressed gratitude. Evidence of progress/improvement: Student felt slightly more prepared to take social risks and planned concrete steps for the next lecture.",
+        "conversation_id": "conv_40bb2243-655e-45e1-911d-b8e933b89a69_milestone_4",
+        "conversation_summary": "Problems discussed: 1) Freezing up in social/academic interactions, 2) Fear of judgment when asking questions, 3) Avoidance of networking/office hours. Solutions offered/accepted: 1) Scripting low-pressure conversation starters, 2) Reframing 'dumb question' anxiety, 3) Role-playing scenarios (e.g., library seat request). Student's response: Initially hesitant but agreed to practice and acknowledged small past successes. Evidence of progress: Willingness to role-play, self-awareness about rehearsal habits, and plan to initiate one interaction this week.",
         "fears_materialized": {
-          "Choosing the right career path": "Networking events where career paths are discussed",
-          "Social anxiety in large lecture halls": "Sitting in the back of large lecture halls, feeling isolated"
+          "Choosing the right career path": "Avoiding networking events due to uncertainty about career direction",
+          "Social anxiety in large lecture halls": "Freezing up when needing to speak to unfamiliar peers or professors"
         },
         "challenges_materialized": {
-          "Preparing for presentations": "Mind blanking out during presentations due to fear of judgment",
-          "Developing effective study habits": "Staying up late studying, leading to fatigue",
-          "Overcoming procrastination": "Delaying preparation for presentations and networking events",
-          "Making friends in a new environment": "Avoiding social interactions in lectures and campus events"
+          "Preparing for presentations": "Mind going blank when trying to start conversations",
+          "Developing effective study habits": "Staying up late studying inefficiently",
+          "Overcoming procrastination": "Delaying attending office hours or networking events",
+          "Making friends in a new environment": "Struggling to approach classmates or share study spaces"
         },
         "behaviors_detailed": {
-          "Exercises regularly": "Uses exercise as a stress-relief mechanism",
-          "Uses social media for networking": "Engages in online networking to avoid in-person interactions",
-          "Stays up late studying": "Late-night study sessions affecting next-day energy"
+          "Exercises regularly": "Uses physical activity as a stress reliever but doesn't connect it to social opportunities",
+          "Uses social media for networking": "Prefers digital interactions over face-to-face due to anxiety",
+          "Stays up late studying": "Compensates for daytime avoidance of social or academic interactions"
         },
         "triggers_specified": {
-          "Networking events": "Fear of initiating conversations with strangers",
-          "Campus social events": "Avoidance due to social anxiety",
-          "Office hours": "Uncertainty about how to approach professors"
+          "Networking events": "Fear of judgment or awkward silences when meeting professionals",
+          "Campus social events": "Overwhelm in crowded settings with unfamiliar people",
+          "Office hours": "Anxiety about asking 'dumb questions' or taking up the professor's time"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 7.5,
-        "pre_assessment_score": 1.8,
-        "post_assessment_score": 2.75,
-        "improvement_score": 0.95,
-        "timestamp": "2025-10-04T19:10:09.243380"
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.6,
+        "improvement_score": 0.10000000000000009,
+        "timestamp": "2025-10-20T23:04:14.208622"
       },
       {
         "stage_number": 2,
-        "prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
-        "prompt_name": "G1M01 from Genesis",
-        "generation": 1,
-        "conversation_id": "408721b4-b2bf-4d2e-8338-e6225dd99dc4",
-        "conversation_summary": "Problems discussed: 1) Social anxiety in class settings, particularly speaking up and making friends, 2) Fear of blanking during presentations. Solutions offered/accepted: 1) Starting with basic comments to classmates (\"problem three?\") and introducing herself, 2) Using a scripted pause phrase during presentations, 3) Alternative small talk about granola bars if seating is too crowded. Student's response: Sarah showed visible relief (giggling, relaxed shoulders), agreed to try the strategies, and wrote them down as a commitment. Evidence of progress: Sarah moved from extreme nervousness to expressing hope and making a concrete plan, demonstrating reduced anxiety through body language and verbal agreement to implement solutions.",
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_40bb2243-655e-45e1-911d-b8e933b89a69_milestone_8",
+        "conversation_summary": "Problems discussed: 1) Social freezing during networking/office hours, 2) Fear of judgment when asking questions, 3) Physical anxiety symptoms. Solutions offered/accepted: 1) Scripted low-pressure openers, 2) Role-played scenarios with tweaks for voice/body language, 3) Planned rejection responses. Student's response: Initially hesitant but engaged in 3 practice rounds with observable improvement in speech pace and posture. Evidence of progress: Willingness to attempt real-world library interaction tomorrow using practiced techniques, plus insight that 'shaking is normal'.",
         "fears_materialized": {
-          "Choosing the right career path": "Not explicitly addressed in this conversation",
-          "Social anxiety in large lecture halls": "Speaking up in class or making comments to peers"
+          "Choosing the right career path": "Avoiding networking events due to fear of judgment",
+          "Social anxiety in large lecture halls": "Freezing up when approaching strangers in social settings"
         },
         "challenges_materialized": {
-          "Preparing for presentations": "Fear of blanking out during presentations",
-          "Developing effective study habits": "Not explicitly addressed in this conversation",
-          "Overcoming procrastination": "Not explicitly addressed in this conversation",
-          "Making friends in a new environment": "Initiating conversations with classmates"
+          "Preparing for presentations": "Fear of blanking out during conversations",
+          "Developing effective study habits": "Staying up late studying due to procrastination",
+          "Overcoming procrastination": "Delaying social interactions like asking for a seat",
+          "Making friends in a new environment": "Struggling to initiate conversations with classmates"
         },
         "behaviors_detailed": {
-          "Exercises regularly": "Not explicitly addressed in this conversation",
-          "Uses social media for networking": "Not explicitly addressed in this conversation",
-          "Stays up late studying": "Not explicitly addressed in this conversation"
-        },
-        "triggers_specified": {
-          "Networking events": "Not explicitly addressed in this conversation",
-          "Campus social events": "Not explicitly addressed in this conversation",
-          "Office hours": "Not explicitly addressed in this conversation"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 1.8,
-        "post_assessment_score": 2.65,
-        "improvement_score": 0.8499999999999999,
-        "timestamp": "2025-10-04T19:15:06.416631"
-      },
-      {
-        "stage_number": 3,
-        "prompt_id": "e790c703-2c16-4dd7-9ee1-cc749cda9e8a",
-        "prompt_name": "G2C03 from G1E00 & G1M01",
-        "generation": 2,
-        "conversation_id": "768c913c-860e-4743-b25c-3b033f3c6a5d",
-        "conversation_summary": "Problems discussed: Sarah expressed anxiety about presentations, procrastination, and social interactions in study groups. Solutions offered/accepted: Practicing presentations by recording herself and starting with small groups, scheduling study sessions to avoid procrastination, and informing her study group about her practice goals. Student's response to solutions: Sarah agreed to try recording her practice runs and scheduled time with her study group, showing willingness to implement new strategies. Evidence of progress/improvement: Sarah's slight smile and agreement to take action indicate reduced anxiety and a positive step toward overcoming her challenges.",
-        "fears_materialized": {
-          "Choosing the right career path": "Deciding between math and law career paths",
-          "Social anxiety in large lecture halls": "Presenting in front of the class"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Procrastinating due to anxiety about presenting",
-          "Developing effective study habits": "Staying up late studying",
-          "Overcoming procrastination": "Delaying preparation for presentations",
-          "Making friends in a new environment": "Nervousness in study groups"
-        },
-        "behaviors_detailed": {
-          "Exercises regularly": "Uses exercise as a stress reliever",
-          "Uses social media for networking": "Connects with peers online",
-          "Stays up late studying": "Late-night study sessions leading to fatigue"
-        },
-        "triggers_specified": {
-          "Networking events": "Fear of meeting new people",
-          "Campus social events": "Anxiety in large gatherings",
-          "Office hours": "Nervousness about asking for help"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 1.8,
-        "post_assessment_score": 2.95,
-        "improvement_score": 1.1500000000000001,
-        "timestamp": "2025-10-04T19:18:35.150170"
-      },
-      {
-        "stage_number": 4,
-        "prompt_id": "76f427d6-7f43-40db-bd23-cc064b5199e9",
-        "prompt_name": "G2C02 from G1M01 & G1E00",
-        "generation": 2,
-        "conversation_id": "4599dc49-42cc-45c6-9c3f-95afbcd7c5b0",
-        "conversation_summary": "Problems discussed: Sarah expressed anxiety about speaking up in class and making friends, fearing judgment and feeling out of place. Solutions offered/accepted: The coach suggested small, manageable steps like scripting a class contribution and complimenting a classmate's band tee. Sarah's response to solutions: She agreed to try the shoe/band tee compliment the next day and showed reduced tension after breathing exercises. Evidence of progress/improvement: Sarah laughed, agreed to a specific action, and showed hope when realizing others might also be faking confidence.",
-        "fears_materialized": {
-          "Choosing the right career path": "Expressed anxiety about law school being harder due to social struggles",
-          "Social anxiety in large lecture halls": "Fear of speaking up in class due to judgment or being wrong"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Fear of contributing in study groups or class discussions",
-          "Developing effective study habits": "Stays up late studying, possibly due to procrastination",
-          "Overcoming procrastination": "Not explicitly mentioned but inferred from late-night studying",
-          "Making friends in a new environment": "Difficulty in study groups and social interactions"
-        },
-        "behaviors_detailed": {
-          "Exercises regularly": "Not explicitly detailed in conversation",
-          "Uses social media for networking": "Not explicitly detailed in conversation",
-          "Stays up late studying": "Studying late, possibly due to anxiety or procrastination"
-        },
-        "triggers_specified": {
-          "Networking events": "Not explicitly detailed in conversation",
-          "Campus social events": "Fear of social interactions, e.g., study groups",
-          "Office hours": "Not explicitly detailed in conversation"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 1.8,
-        "post_assessment_score": 2.9,
-        "improvement_score": 1.0999999999999999,
-        "timestamp": "2025-10-04T19:22:42.332641"
-      },
-      {
-        "stage_number": 5,
-        "prompt_id": "d675a42d-8758-4aa1-9f9a-2504ddb08752",
-        "prompt_name": "G2M01 from G1M01",
-        "generation": 2,
-        "conversation_id": "61fdb6f3-ecc8-4ab0-a3fd-56fe86b303b3",
-        "conversation_summary": "Problems discussed: Sarah expressed fears about social anxiety in large lecture halls and networking events, challenges with presentations, making friends, and phone distraction. Solutions offered/accepted: Using subtle physical cues (thumb press) to reset during presentations, recognizing others' self-consciousness, and leaving phone zipped in bag. Student's response: Sarah laughed, relaxed, and planned to implement the thumb trick and intentional pauses. Evidence of progress: Sarah acknowledged overemphasis on personal awkwardness, accepted minor imperfections, and showed willingness to engage socially.",
-        "fears_materialized": {
-          "Choosing the right career path": "Nervous about networking events and presentations impacting career prospects",
-          "Social anxiety in large lecture halls": "Panicking when speaking in class or attending campus social events"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Forgetting thesis mid-sentence during a presentation",
-          "Developing effective study habits": "Staying up late studying, leading to exhaustion",
-          "Overcoming procrastination": "Checking phone for messages as a distraction",
-          "Making friends in a new environment": "Fear of saying something awkward in small group discussions"
-        },
-        "behaviors_detailed": {
-          "Exercises regularly": "Uses physical activity as a stress reliever",
-          "Uses social media for networking": "Attempts to connect but feels inadequate",
+          "Exercises regularly": "Uses physical activity to manage stress",
+          "Uses social media for networking": "Prefers digital over face-to-face interactions",
           "Stays up late studying": "Compensates for daytime anxiety by studying at night"
         },
         "triggers_specified": {
-          "Networking events": "Freezing up and feeling overwhelmed",
-          "Campus social events": "Fear of being judged or saying something awkward",
-          "Office hours": "Anxiety about asking for help or appearing unprepared"
+          "Networking events": "Fear of awkward silences and judgment",
+          "Campus social events": "Avoidance due to lack of conversational scripts",
+          "Office hours": "Anxiety about asking 'dumb questions'"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 7.5,
-        "pre_assessment_score": 1.8,
-        "post_assessment_score": 2.9,
-        "improvement_score": 1.0999999999999999,
-        "timestamp": "2025-10-04T19:24:48.051456"
+        "pre_assessment_score": 2.6,
+        "post_assessment_score": 2.7,
+        "improvement_score": 0.10000000000000009,
+        "timestamp": "2025-10-20T23:04:47.383853"
       },
       {
-        "stage_number": 6,
-        "prompt_id": "5a2e1ba7-9521-4df4-bece-085e7d07aa1c",
-        "prompt_name": "G3M05 from G2C03",
-        "generation": 3,
-        "conversation_id": "169f8acb-e5eb-4263-8684-a400628585c7",
-        "conversation_summary": "Sarah discussed her fear of speaking in class due to social anxiety and freezing up when called on. Solutions offered included preparing one sentence for a yes/no question, observing others' participation to normalize mistakes, and reframing potential bloopers as humorous. Sarah responded positively, agreeing to prepare a sentence for the next class and showing reduced anxiety through laughter and a small smile. Evidence of progress includes her willingness to take a small step toward participation and a shift in perspective about others' mistakes.",
+        "stage_number": 3,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_40bb2243-655e-45e1-911d-b8e933b89a69_milestone_12",
+        "conversation_summary": "1) Problems discussed: Social anxiety in initiating conversations, fear of judgment in academic settings, and avoidance behaviors. 2) Solutions offered/accepted: Role-playing specific scenarios (library seat request), cognitive reframing techniques, physical anchoring methods, and the 5-second action rule. 3) Student's response: Initially hesitant but engaged in multiple practice rounds, demonstrated willingness to try strategies in real-life (planned library attempt), and identified a personal reward system. 4) Evidence of progress: Successfully modified speech patterns during practice, developed contingency plans for rejection scenarios, and verbalized commitment to implementation with specific time/place details.",
         "fears_materialized": {
-          "Choosing the right career path": "Fear of making a wrong career choice in law school",
-          "Social anxiety in large lecture halls": "Freezing up when called on in class, sitting in the back to avoid participation"
+          "Choosing the right career path": "Avoiding networking events due to uncertainty about career direction",
+          "Social anxiety in large lecture halls": "Freezing up when needing to ask questions or participate"
         },
         "challenges_materialized": {
-          "Preparing for presentations": "Fear of voice cracking or tripping during presentations",
-          "Developing effective study habits": "Staying up late studying, possibly due to procrastination",
-          "Overcoming procrastination": "Not specified in conversation, but implied by late-night studying",
-          "Making friends in a new environment": "Struggling to connect with peers in law school"
-        },
-        "behaviors_detailed": {
-          "Exercises regularly": "Not specified in conversation",
-          "Uses social media for networking": "Not specified in conversation",
-          "Stays up late studying": "Studying late at night, possibly leading to fatigue"
-        },
-        "triggers_specified": {
-          "Networking events": "Not specified in conversation",
-          "Campus social events": "Not specified in conversation",
-          "Office hours": "Not specified in conversation"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 1.8,
-        "post_assessment_score": 2.95,
-        "improvement_score": 1.1500000000000001,
-        "timestamp": "2025-10-04T19:31:09.353157"
-      },
-      {
-        "stage_number": 7,
-        "prompt_id": "c60cd38c-fce5-40e3-969d-a206fb771098",
-        "prompt_name": "G3M06 from G2C03",
-        "generation": 3,
-        "conversation_id": "d98940e2-bce5-4d8a-882e-78024a81ec53",
-        "conversation_summary": "Problems discussed: Sarah expressed fears about social anxiety in casual conversations and presentations, as well as challenges in making friends and preparing for law school. Solutions offered/accepted: Low-stakes social experiments (one-sentence conversations), silly pre-game rituals (mismatched socks), joining a language exchange, and creating a panic script for presentations. Student's response to solutions: Sarah laughed nervously but agreed to try the suggestions, showing openness and relief. Evidence of progress/improvement: Sarah planned specific actions (coffee conversation, mismatched socks) and expressed gratitude for the non-judgmental support, indicating reduced anxiety and increased confidence.",
-        "fears_materialized": {
-          "Choosing the right career path": "Navigating law school and networking events",
-          "Social anxiety in large lecture halls": "Casual conversations before class and presentations"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Panicking for weeks before presentations",
-          "Developing effective study habits": "Staying up late studying",
-          "Overcoming procrastination": "Delaying preparation for presentations",
-          "Making friends in a new environment": "Freezing up in casual conversations with peers"
-        },
-        "behaviors_detailed": {
-          "Exercises regularly": "Maintains physical health despite stress",
-          "Uses social media for networking": "Attempts to connect with peers online",
-          "Stays up late studying": "Compensates for anxiety by over-preparing"
-        },
-        "triggers_specified": {
-          "Networking events": "Fear of casual conversations and making mistakes",
-          "Campus social events": "Anxiety about fitting in and socializing",
-          "Office hours": "Nervousness about seeking help from professors"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 1.8,
-        "post_assessment_score": 2.9,
-        "improvement_score": 1.0999999999999999,
-        "timestamp": "2025-10-04T19:32:06.858731"
-      },
-      {
-        "stage_number": 8,
-        "prompt_id": "6047de79-e44a-421b-8e45-261a5fdcaa16",
-        "prompt_name": "G3C07 from G2C03 & G2E00",
-        "generation": 3,
-        "conversation_id": "6da7e803-5d5c-4d38-be2a-f97680bbdc55",
-        "conversation_summary": "Problems discussed: 1) Social anxiety in large lectures and making friends, 2) Procrastination and fear of asking questions in class. Solutions offered/accepted: 1) Recognizing peers' similar anxieties, 2) Initiating small social interactions (e.g., saying hi to a classmate), 3) Joining a study group with a 'one and done' approach, 4) Using humor to ask questions. Student's response to solutions: Positive engagement, laughter, and willingness to try suggested actions. Evidence of progress/improvement: Student formulated a question for class, planned a social interaction, and agreed to attend a study group session.",
-        "fears_materialized": {
-          "Choosing the right career path": "Feeling overwhelmed in law school",
-          "Social anxiety in large lecture halls": "Worrying about saying something dumb in front of peers"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Anxiety about speaking up in class",
-          "Developing effective study habits": "Procrastinating joining study groups",
-          "Overcoming procrastination": "Falling behind due to fear of asking questions",
-          "Making friends in a new environment": "Fear of rejection when initiating conversations"
-        },
-        "behaviors_detailed": {
-          "Exercises regularly": "Uses exercise as a stress reliever",
-          "Uses social media for networking": "Engages with peers online but struggles in person",
-          "Stays up late studying": "Late-night study sessions due to procrastination"
-        },
-        "triggers_specified": {
-          "Networking events": "Fear of awkward interactions",
-          "Campus social events": "Avoidance due to social anxiety",
-          "Office hours": "Reluctance to ask for help"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 1.8,
-        "post_assessment_score": 2.9,
-        "improvement_score": 1.0999999999999999,
-        "timestamp": "2025-10-04T19:33:04.074323"
-      },
-      {
-        "stage_number": 9,
-        "prompt_id": "f4eccadd-cbf4-4a75-9b58-3abe8a4d407b",
-        "prompt_name": "G3C03 from G2C03 & G2M01",
-        "generation": 3,
-        "conversation_id": "480fc494-a769-4629-964f-9a843a44aa89",
-        "conversation_summary": "Problems discussed: 1) Social anxiety in networking events and office hours, 2) Ineffective study habits due to perfectionism. Solutions offered/accepted: 1) Say one sentence to professor during office hours, 2) Create intentionally messy notes with non-dominant hand. Student's response to solutions: Positive, agreed to try both solutions and recognized perfectionism as a problem. Evidence of progress/improvement: Student showed willingness to take small steps and embraced the idea of imperfection as a learning tool.",
-        "fears_materialized": {
-          "Choosing the right career path": "Worrying about social anxiety holding her back in law school",
-          "Social anxiety in large lecture halls": "Fear of speaking up in class and making friends"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Anxiety about voice shaking or blanking during office hours",
-          "Developing effective study habits": "Rewriting notes excessively instead of memorizing",
-          "Overcoming procrastination": "Avoiding testing knowledge by rewriting notes",
-          "Making friends in a new environment": "Struggling with small talk at networking events"
-        },
-        "behaviors_detailed": {
-          "Exercises regularly": "Uses exercise as a coping mechanism",
-          "Uses social media for networking": "Attempts to connect but feels anxious",
-          "Stays up late studying": "Late-night rewriting of notes"
-        },
-        "triggers_specified": {
-          "Networking events": "Fear of small talk and socializing",
-          "Campus social events": "Anxiety about making friends",
-          "Office hours": "Nervousness about speaking to professors"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 1.8,
-        "post_assessment_score": 2.9,
-        "improvement_score": 1.0999999999999999,
-        "timestamp": "2025-10-04T19:34:38.540186"
-      },
-      {
-        "stage_number": 10,
-        "prompt_id": "8966845e-bd42-4a15-9003-2b2ed03db063",
-        "prompt_name": "G3M04 from G2E00",
-        "generation": 3,
-        "conversation_id": "7261a7dd-298d-455c-8037-81eee935ff38",
-        "conversation_summary": "Problems discussed: Social anxiety in lectures, difficulty joining study groups, and sitting alone at lunch. Solutions offered/accepted: Starting small by answering one question in class, approaching one classmate for study help, role-playing conversations, and choosing a strategic lunch spot. Student's response to solutions: Positive engagement, practiced role-playing, and committed to trying the interaction the next day. Evidence of progress/improvement: Demonstrated willingness to take actionable steps, reduced anxiety through practice, and set a clear plan for immediate action.",
-        "fears_materialized": {
-          "Choosing the right career path": "Uncertainty about law school social dynamics",
-          "Social anxiety in large lecture halls": "Freezing up when answering questions in lectures"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Fear of speaking up in class",
-          "Developing effective study habits": "Procrastinating joining study groups",
-          "Overcoming procrastination": "Delaying social interactions",
-          "Making friends in a new environment": "Sitting alone at lunch"
-        },
-        "behaviors_detailed": {
-          "Exercises regularly": "Uses exercise as a stress reliever",
-          "Uses social media for networking": "Avoids in-person networking",
-          "Stays up late studying": "Compensates for daytime anxiety"
-        },
-        "triggers_specified": {
-          "Networking events": "Avoids due to social anxiety",
-          "Campus social events": "Feels overwhelmed by large groups",
-          "Office hours": "Uncertain how to approach professors"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 1.8,
-        "post_assessment_score": 2.55,
-        "improvement_score": 0.7499999999999998,
-        "timestamp": "2025-10-04T19:36:35.972816"
-      },
-      {
-        "stage_number": 11,
-        "prompt_id": "1683d52f-8fd4-4194-a06f-eea15f95d10e",
-        "prompt_name": "G4C07 from G3C07 & G3E01",
-        "generation": 4,
-        "conversation_id": "29591a79-3b20-4c2b-abd0-30009d389265",
-        "conversation_summary": "Problems discussed: 1) Social anxiety in lecture halls and study groups, 2) Fear of freezing up or saying something dumb during academic conversations. Solutions offered/accepted: 1) Sit near the front in lectures and prepare questions, 2) Start with silent study sessions to ease into group settings, 3) Use pre-written scripts (e.g., citing textbook examples) to sound confident. Student's response: Positively engaged—practiced a script, agreed to try silent study, and requested accountability (puppy gifs). Evidence of progress: Willingness to test strategies, demonstrated by rehearsing a script and committing to actionable steps.",
-        "fears_materialized": {
-          "Choosing the right career path": "Navigating law school social dynamics",
-          "Social anxiety in large lecture halls": "Fear of being cold-called by professors"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Fear of saying something dumb in study groups",
-          "Developing effective study habits": "Procrastination leading to late-night studying",
-          "Overcoming procrastination": "Struggling to start homework due to anxiety",
-          "Making friends in a new environment": "Difficulty initiating conversations in study groups"
-        },
-        "behaviors_detailed": {
-          "Exercises regularly": "Uses exercise as a stress reliever",
-          "Uses social media for networking": "Connects with peers online to avoid in-person interactions",
-          "Stays up late studying": "Late-night cramming due to procrastination"
-        },
-        "triggers_specified": {
-          "Networking events": "Fear of small talk and judgment",
-          "Campus social events": "Overwhelming crowds and unfamiliar faces",
-          "Office hours": "Anxiety about asking questions one-on-one"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 1.8,
-        "post_assessment_score": 2.8,
-        "improvement_score": 0.9999999999999998,
-        "timestamp": "2025-10-04T19:43:53.357817"
-      },
-      {
-        "stage_number": 12,
-        "prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
-        "prompt_name": "G5C07 from G4E01 & G4E02",
-        "generation": 5,
-        "conversation_id": "f1a04708-3566-4b42-b549-4eae28a54b78",
-        "conversation_summary": "1) Problems discussed: Freezing during discussions, fear of peer judgment, avoidance behaviors. 2) Solutions offered/accepted: Breathing techniques, reframing group dynamics, micro-challenges. 3) Student's response: Initially hesitant but engaged with practical strategies; showed self-awareness. 4) Evidence of progress: Recognized study group's inclusive intent, planned to implement techniques, requested follow-up.",
-        "fears_materialized": {
-          "Choosing the right career path": "Uncertainty about law school suitability",
-          "Social anxiety in large lecture halls": "Freezing during small group discussions"
-        },
-        "challenges_materialized": {
-          "Preparing for presentations": "Mind going blank when speaking",
+          "Preparing for presentations": "Over-rehearsing to the point of exhaustion",
           "Developing effective study habits": "Staying up late studying inefficiently",
-          "Overcoming procrastination": "Skipping study group meetings",
-          "Making friends in a new environment": "Fear of being perceived as weird by peers"
+          "Overcoming procrastination": "Delaying starting assignments due to perfectionism",
+          "Making friends in a new environment": "Struggling to initiate conversations with classmates"
         },
         "behaviors_detailed": {
-          "Exercises regularly": "Uses gym sessions to avoid social interactions",
-          "Uses social media for networking": "Passively observes discussions without participating",
-          "Stays up late studying": "Cramming due to daytime avoidance behaviors"
+          "Exercises regularly": "Uses running as a stress reliever but skips when anxious",
+          "Uses social media for networking": "Lurks on professional groups but doesn't post",
+          "Stays up late studying": "Pulls all-nighters before exams despite daytime free time"
         },
         "triggers_specified": {
-          "Networking events": "Study group meetings",
-          "Campus social events": "Pre-class small talk",
+          "Networking events": "Career fairs where she feels underprepared",
+          "Campus social events": "Club meetings where she doesn't know anyone",
           "Office hours": "One-on-one conversations with professors"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 7.5,
-        "pre_assessment_score": 1.8,
-        "post_assessment_score": 2.85,
-        "improvement_score": 1.05,
-        "timestamp": "2025-10-04T19:46:05.043253"
+        "pre_assessment_score": 2.7,
+        "post_assessment_score": 2.9,
+        "improvement_score": 0.19999999999999973,
+        "timestamp": "2025-10-20T23:05:22.083554"
+      },
+      {
+        "stage_number": 4,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_40bb2243-655e-45e1-911d-b8e933b89a69_20251020_230357",
+        "conversation_summary": "Problems discussed: 1) Social freezing during interactions, 2) Fear of judgment in academic settings, 3) Avoidance of social opportunities. Solutions offered/accepted: 1) Scripted conversation starters, 2) Physical anchoring techniques, 3) 5-second action rule, 4) Normalization of awkward moments. Student's response: Initially hesitant but engaged in multiple role-play rounds, demonstrated measurable improvement in delivery, and committed to real-world attempt. Evidence of progress: Transitioned from 'I always sit alone' to creating concrete implementation plan with self-reward system, showing both cognitive and behavioral shifts.",
+        "fears_materialized": {
+          "Choosing the right career path": "Avoiding networking events due to fear of making wrong connections",
+          "Social anxiety in large lecture halls": "Freezing up when needing to ask questions or participate"
+        },
+        "challenges_materialized": {
+          "Preparing for presentations": "Mind going blank when trying to start conversations",
+          "Developing effective study habits": "Staying up late studying inefficiently",
+          "Overcoming procrastination": "Avoiding office hours due to anxiety",
+          "Making friends in a new environment": "Struggling to approach classmates in the library"
+        },
+        "behaviors_detailed": {
+          "Exercises regularly": "Uses exercise as a stress relief but it doesn't address social anxiety",
+          "Uses social media for networking": "Prefers digital interactions over face-to-face",
+          "Stays up late studying": "Compensates for daytime avoidance behaviors"
+        },
+        "triggers_specified": {
+          "Networking events": "Career fairs where she feels pressured to perform",
+          "Campus social events": "Large gatherings where she doesn't know anyone",
+          "Office hours": "One-on-one interactions with professors"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.0,
+        "improvement_score": 0.0,
+        "timestamp": "2025-10-20T23:06:01.036745"
       }
     ],
-    "current_stage": 12
+    "current_stage": 4
   }
 }

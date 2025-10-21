@@ -29,6 +29,10 @@ class Config:
     MAX_TOKENS_PER_RESPONSE = 300  # Increased for DeepSeek R1 reasoning
     MAX_POPULATION_SIZE = 20  # Maximum number of prompts per generation
     
+    # Conversation Context Management
+    CONVERSATION_WINDOW_SIZE = 6  # Number of recent turns to include in context
+    MEMO_UPDATE_INTERVAL = 6  # Generate/update memo every N turns (at turns 6, 12, 18, etc.)
+    
     # Feature Toggles
     ENABLE_PERSONALITY_EVOLUTION = True  # Toggle for dummy personality evolution during conversations
     

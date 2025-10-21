@@ -1,10 +1,10 @@
 {
   "dummy_id": "a4eb5d12-4d19-4a4c-b623-5b48bc223175",
   "dummy_name": "Alex Lewis",
-  "current_experiment_id": "gepa_exp_20251004_194514",
-  "current_prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
-  "created_at": "2025-10-04T19:08:38.122982",
-  "last_updated": "2025-10-04T19:46:00.321439",
+  "current_experiment_id": "conversation_length_with_evolution",
+  "current_prompt_id": "conversation_length_test",
+  "created_at": "2025-10-20T23:00:26.740202",
+  "last_updated": "2025-10-20T23:04:57.370014",
   "conversation_profile": {
     "original_fears": [
       "Finding a job after graduation",
@@ -33,24 +33,24 @@
       "openness": 3
     },
     "current_fears": [
-      "Concern about securing an internship",
-      "Not explicitly addressed in conversation"
+      "Networking at a career fair for museum internships",
+      "Not explicitly addressed in this conversation"
     ],
     "current_challenges": [
-      "Struggling to manage time between studies, social events, and starting a student organization",
-      "Feeling overwhelmed by multiple commitments",
-      "Not explicitly addressed in conversation",
-      "Regular library study sessions but seeking better focus"
+      "Not explicitly addressed in this conversation",
+      "Managing 90-second interactions at a career fair",
+      "Not explicitly addressed in this conversation",
+      "Not explicitly addressed in this conversation"
     ],
     "current_behaviors": [
-      "Not explicitly mentioned in conversation",
-      "Ambition to start a student organization",
-      "Evening study block mentioned"
+      "Practicing networking strategies with AI Coach",
+      "Preparing to lead conversations at career fairs",
+      "Not explicitly addressed in this conversation"
     ],
     "current_anxiety_triggers": [
-      "Big social events are exhausting, prefers smaller gatherings like department meetups or study groups"
+      "Career fair networking scenarios"
     ],
-    "current_social_anxiety_level": 1,
+    "current_social_anxiety_level": 7,
     "current_big_five": {
       "extraversion": 2,
       "agreeableness": 10,
@@ -61,387 +61,133 @@
     "evolution_stages": [
       {
         "stage_number": 1,
-        "prompt_id": "9c0d9da5-ff41-4ca0-839e-9ec565c87d0d",
-        "prompt_name": "Genesis",
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "1629a37e-2c1c-4ee8-bda6-ea1cbc6122f0",
-        "conversation_summary": "Alex discussed feeling overwhelmed by balancing studies, extracurriculars, and job search anxieties. Solutions offered included themed time blocks for better time management and low-pressure networking strategies like attending department events. Alex responded positively, planning to block study times and casually browse internships. Evidence of progress includes Alex's relief and actionable steps, showing reduced overwhelm and proactive planning.",
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_4",
+        "conversation_summary": "Alex discussed their fear of freezing up in social situations, particularly when networking for internships or leading student groups. Solutions offered included the 3-Question Rule, Active Listening Focus, and 5-Second Reset techniques, as well as structured question preparation (specialized and bridge questions) and the ARE method for follow-ups. Alex responded positively, practicing role-playing scenarios and showing relief in having a concrete plan. Evidence of progress includes successfully refining questions, using the ARE method, and demonstrating increased confidence in handling specific and unfamiliar topics during practice.",
         "fears_materialized": {
-          "Finding a job after graduation": "Worrying about securing a job post-graduation and feeling unprepared for networking",
-          "Homesickness": "Not explicitly mentioned in the conversation, but implied as part of feeling overwhelmed"
+          "Finding a job after graduation": "Networking at a museum internship career fair",
+          "Homesickness": "Not explicitly addressed in this conversation"
         },
         "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Struggling to manage time between classes, clubs, and personal time",
-          "Building time management": "Difficulty organizing study and activity schedules effectively",
-          "Financial planning": "Not explicitly mentioned in the conversation",
-          "Developing effective study habits": "Studying in the library but needing more structured time"
+          "Balancing extracurricular activities with studies": "Not explicitly addressed in this conversation",
+          "Building time management": "Not explicitly addressed in this conversation",
+          "Financial planning": "Not explicitly addressed in this conversation",
+          "Developing effective study habits": "Not explicitly addressed in this conversation"
         },
         "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Not explicitly mentioned in the conversation",
-          "Seeks out leadership roles": "Not explicitly mentioned in the conversation",
-          "Studies in the library regularly": "Uses the library for quiet study time"
+          "Uses campus resources like tutoring": "Not explicitly addressed in this conversation",
+          "Seeks out leadership roles": "Expressed interest in leading student groups",
+          "Studies in the library regularly": "Not explicitly addressed in this conversation"
         },
         "triggers_specified": {
-          "Campus social events": "Not explicitly mentioned in the conversation"
+          "Campus social events": "Career fair networking scenario"
         },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 1.5,
-        "pre_assessment_score": 2.45,
-        "post_assessment_score": 3.15,
-        "improvement_score": 0.6999999999999997,
-        "timestamp": "2025-10-04T19:09:44.882513"
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.85,
+        "improvement_score": 0.3500000000000001,
+        "timestamp": "2025-10-20T23:03:24.910700"
       },
       {
         "stage_number": 2,
-        "prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
-        "prompt_name": "G1M01 from Genesis",
-        "generation": 1,
-        "conversation_id": "92c9db00-0ac9-4e3b-9b57-1c299f9a7bb4",
-        "conversation_summary": "1) Problems discussed: Alex expressed fears about post-graduation job prospects, time management issues, and social confidence at campus events. 2) Solutions offered/accepted: The AI Coach suggested setting timers for art history research to manage time better, encouraged Alex to explore the Getty Museum internship without pressure, and recommended time management workshops. 3) Student's response to solutions: Alex showed enthusiasm for the timer idea and agreed to try it, and also considered looking at the Getty application page. 4) Evidence of progress/improvement: Alex's willingness to implement the timer technique and explore the internship opportunity indicates reduced anxiety and proactive steps toward improvement.",
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_8",
+        "conversation_summary": "Alex discussed freezing during networking for museum internships. Solutions offered included the 3-Question Rule, 5-Second Reset, ARE method, and 90-second timing strategy. Alex responded positively, practicing immediately with roleplays for both historical and contemporary museum scenarios. Evidence of progress includes developing tiered questions, successfully implementing the ARE method, and self-correcting when becoming too technical. The session concluded with timed practice using the 90-second rule, which Alex initially rushed but quickly adapted to.",
         "fears_materialized": {
-          "original_fear": "Finding a job after graduation",
-          "specific_situation": "Worrying about not being qualified for the Getty Museum’s conservation program"
+          "Finding a job after graduation": "Networking at a museum internship career fair",
+          "Homesickness": "Not explicitly addressed in this conversation"
         },
         "challenges_materialized": {
-          "original_challenge": "Balancing extracurricular activities with studies",
-          "specific_scenario": "Spending excessive time on art history rabbit holes instead of working on assignments"
+          "Balancing extracurricular activities with studies": "Not explicitly addressed in this conversation",
+          "Building time management": "Managing 90-second networking interactions at career fair",
+          "Financial planning": "Not explicitly addressed in this conversation",
+          "Developing effective study habits": "Not explicitly addressed in this conversation"
         },
         "behaviors_detailed": {
-          "original_behavior": "Uses campus resources like tutoring",
-          "specific_behavior": "Considering attending time management workshops"
+          "Uses campus resources like tutoring": "Not explicitly addressed in this conversation",
+          "Seeks out leadership roles": "Practicing leadership in networking scenarios",
+          "Studies in the library regularly": "Not explicitly addressed in this conversation"
         },
         "triggers_specified": {
-          "original_trigger": "Campus social events",
-          "specific_context": "Fear of being the clueless one in social or workshop settings"
+          "Campus social events": "Museum internship career fair networking"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 1.5,
-        "pre_assessment_score": 2.45,
-        "post_assessment_score": 3.2,
-        "improvement_score": 0.75,
-        "timestamp": "2025-10-04T19:15:25.231271"
+        "pre_assessment_score": 2.85,
+        "post_assessment_score": 3.15,
+        "improvement_score": 0.2999999999999998,
+        "timestamp": "2025-10-20T23:03:53.988654"
       },
       {
         "stage_number": 3,
-        "prompt_id": "76f427d6-7f43-40db-bd23-cc064b5199e9",
-        "prompt_name": "G2C02 from G1M01 & G1E00",
-        "generation": 2,
-        "conversation_id": "d02a1dd0-0835-46bc-bff8-c393588b6b87",
-        "conversation_summary": "Problems discussed: 1) Overwhelm from juggling coursework, internship hunting, and starting a student org, 2) Stress about staring blankly at museum applications, 3) Anxiety about campus social events for student org. Solutions offered/accepted: 1) Time-blocking with color-coded calendar, 2) Breaking internship research into 'Three Bullet Points' and 'Weird Research Timer', 3) Starting student org by finding one person via coffee chat. Student's response to solutions: Positive, planning to implement time-blocking, focusing on the Getty for internship research, and feeling task is doable. Evidence of progress/improvement: Shoulders relaxing, choosing specific museum to research, planning immediate action with timer.",
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_milestone_12",
+        "conversation_summary": "Alex expressed fear about networking at museum internship career fairs and freezing during conversations. The coach provided concrete strategies: 1) 3-Question Rule for preparation, 2) ARE method for conversation flow, 3) 5-Second Reset for awkward moments, and 4) 90-second rule for time management. Alex responded positively, practicing these techniques in roleplays for different museum types (natural history and contemporary art). Evidence of progress includes: successfully implementing the ARE method, developing specialized questions, practicing timed interactions, and demonstrating improved self-awareness by recognizing and adjusting overly technical questions. Alex showed measurable reduction in anxiety through the session.",
         "fears_materialized": {
-          "Finding a job after graduation": "Staring at museum application pages makes brain go blank",
-          "Homesickness": "Not explicitly mentioned in conversation"
+          "Finding a job after graduation": "Networking at a museum internship career fair",
+          "Homesickness": "Not explicitly addressed in this conversation"
         },
         "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Juggling art history coursework, internship hunting, and starting a student org",
-          "Building time management": "Feeling overwhelmed with tasks blending together",
-          "Financial planning": "Not explicitly mentioned in conversation",
-          "Developing effective study habits": "Not explicitly mentioned in conversation"
+          "Balancing extracurricular activities with studies": "Not explicitly addressed in this conversation",
+          "Building time management": "Managing 90-second networking interactions at career fair",
+          "Financial planning": "Not explicitly addressed in this conversation",
+          "Developing effective study habits": "Not explicitly addressed in this conversation"
         },
         "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Considering library study habit workshops",
-          "Seeks out leadership roles": "Wanting to start a student organization",
-          "Studies in the library regularly": "Not explicitly mentioned in conversation"
+          "Uses campus resources like tutoring": "Not explicitly addressed in this conversation",
+          "Seeks out leadership roles": "Preparing for leadership in student groups through networking practice",
+          "Studies in the library regularly": "Not explicitly addressed in this conversation"
         },
         "triggers_specified": {
-          "Campus social events": "Stress about starting a student org and attending events"
+          "Campus social events": "Museum internship career fair networking"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 1.5,
-        "pre_assessment_score": 2.45,
-        "post_assessment_score": 3.15,
-        "improvement_score": 0.6999999999999997,
-        "timestamp": "2025-10-04T19:19:48.561276"
+        "pre_assessment_score": 3.15,
+        "post_assessment_score": 2.0,
+        "improvement_score": -1.15,
+        "timestamp": "2025-10-20T23:04:25.641158"
       },
       {
         "stage_number": 4,
-        "prompt_id": "d675a42d-8758-4aa1-9f9a-2504ddb08752",
-        "prompt_name": "G2M01 from G1M01",
-        "generation": 2,
-        "conversation_id": "df9eff6f-186e-46fc-87f9-a049cd73d6cb",
-        "conversation_summary": "Problems discussed: 1) Balancing extracurricular activities with studies, 2) Building time management, 3) Fear of appearing unreliable to internship recruiters. Solutions offered/accepted: 1) Ruthless prioritization, 2) Blocking weekly 'power hours' for focused work, 3) Starting small with delegation. Student's response to solutions: Positive, with immediate action (blocking time in planner, considering delegation). Evidence of progress/improvement: Started using a planner, blocked time for internship research, expressed willingness to delegate.",
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_a4eb5d12-4d19-4a4c-b623-5b48bc223175_20251020_230314",
+        "conversation_summary": "1) Problems discussed: Alex expressed fear about networking at career fairs, specifically freezing up and overthinking conversations. 2) Solutions offered/accepted: The AI Coach provided concrete techniques including the 3-Question Rule, ARE method, and 90-second timing rule. 3) Student's response to solutions: Alex actively implemented these strategies in role-play scenarios, showing immediate improvement in conversation flow and confidence. 4) Evidence of progress/improvement: Alex successfully practiced multiple scenarios, adjusted pacing with a timer, and developed specialized questions for their field of interest, demonstrating measurable growth in networking skills.",
         "fears_materialized": {
-          "Finding a job after graduation": "Worrying about landing a good internship and appearing unreliable to recruiters",
-          "Homesickness": "Not explicitly mentioned in conversation, but implied through seeking stability via planning"
+          "Finding a job after graduation": "Networking at a career fair for museum internships",
+          "Homesickness": "Not explicitly addressed in this conversation"
         },
         "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Struggling to manage time between starting a student org and internship applications",
-          "Building time management": "Overcommitting and risking doing everything halfway",
-          "Financial planning": "Not explicitly mentioned in conversation",
-          "Developing effective study habits": "Using a planner but feeling it's messy"
+          "Balancing extracurricular activities with studies": "Not explicitly addressed in this conversation",
+          "Building time management": "Managing 90-second interactions at a career fair",
+          "Financial planning": "Not explicitly addressed in this conversation",
+          "Developing effective study habits": "Not explicitly addressed in this conversation"
         },
         "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Not explicitly mentioned in conversation",
-          "Seeks out leadership roles": "Desire to start a student organization",
-          "Studies in the library regularly": "Not explicitly mentioned in conversation"
+          "Uses campus resources like tutoring": "Practicing networking strategies with AI Coach",
+          "Seeks out leadership roles": "Preparing to lead conversations at career fairs",
+          "Studies in the library regularly": "Not explicitly addressed in this conversation"
         },
         "triggers_specified": {
-          "Campus social events": "Not explicitly mentioned in conversation"
+          "Campus social events": "Career fair networking scenarios"
         },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 1.5,
-        "pre_assessment_score": 2.45,
-        "post_assessment_score": 3.2,
-        "improvement_score": 0.75,
-        "timestamp": "2025-10-04T19:22:28.420474"
-      },
-      {
-        "stage_number": 5,
-        "prompt_id": "e790c703-2c16-4dd7-9ee1-cc749cda9e8a",
-        "prompt_name": "G2C03 from G1E00 & G1M01",
-        "generation": 2,
-        "conversation_id": "0d23fc76-73ce-4513-99f3-f6495e615ae3",
-        "conversation_summary": "Problems discussed: Alex expressed feeling overwhelmed by balancing commitments and securing an internship, particularly due to networking anxiety and fear of cold-emailing. Solutions offered/accepted: The coach suggested starting small with LinkedIn, using email templates, personalizing emails with specific exhibit references, and planning friendly follow-ups. Student's response to solutions: Alex positively engaged with the advice, drafting and sending a personalized email with a unique subject line and content, showing a shift from fear to genuine excitement. Evidence of progress/improvement: Alex completed and sent the email, demonstrating decisive action and reduced self-doubt by embracing their authentic reactions to art.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Struggling to secure an internship due to lack of experience and networking skills",
-          "Homesickness": "Not explicitly mentioned in conversation, but implied in overall stress"
-        },
-        "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Feeling overwhelmed by multiple commitments",
-          "Building time management": "Not explicitly detailed, but implied in feeling overwhelmed",
-          "Financial planning": "Not discussed in this conversation",
-          "Developing effective study habits": "Not discussed in this conversation"
-        },
-        "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Not explicitly mentioned in this conversation",
-          "Seeks out leadership roles": "Not explicitly mentioned in this conversation",
-          "Studies in the library regularly": "Not explicitly mentioned in this conversation"
-        },
-        "triggers_specified": {
-          "Campus social events": "Networking events causing stress due to fear of awkward interactions"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 1.5,
-        "pre_assessment_score": 2.45,
-        "post_assessment_score": 3.2,
-        "improvement_score": 0.75,
-        "timestamp": "2025-10-04T19:24:13.865734"
-      },
-      {
-        "stage_number": 6,
-        "prompt_id": "8966845e-bd42-4a15-9003-2b2ed03db063",
-        "prompt_name": "G3M04 from G2E00",
-        "generation": 3,
-        "conversation_id": "b0d09644-f0de-400a-b2c8-73929cb5efc5",
-        "conversation_summary": "Alex discussed struggles with balancing classes, extracurriculars, and future planning, specifically mentioning time management and networking. Solutions offered included time-blocking schedules, attending a student exhibit for low-pressure networking, and researching internships. Alex responded positively, planning to schedule library sessions, attend the exhibit, and set reminders for internship research. Evidence of progress includes Alex's willingness to take small steps, such as observing at the exhibit and researching internships, and their relaxed demeanor at the end of the conversation.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Worrying about internship applications for next summer",
-          "Homesickness": "Feeling overwhelmed by an unstructured schedule"
-        },
-        "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Juggling classes, extracurriculars, and future planning",
-          "Building time management": "Randomly scribbling tasks in planner, feeling overwhelmed",
-          "Financial planning": "Not explicitly mentioned but implied in internship concerns",
-          "Developing effective study habits": "Struggling to finish readings on time"
-        },
-        "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Not explicitly mentioned in conversation",
-          "Seeks out leadership roles": "Not explicitly mentioned in conversation",
-          "Studies in the library regularly": "Planning to schedule library sessions after 10 AM lecture"
-        },
-        "triggers_specified": {
-          "Campus social events": "Student exhibit as a low-pressure networking opportunity"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 1.5,
-        "pre_assessment_score": 2.45,
-        "post_assessment_score": 3.15,
-        "improvement_score": 0.6999999999999997,
-        "timestamp": "2025-10-04T19:30:03.437281"
-      },
-      {
-        "stage_number": 7,
-        "prompt_id": "c60cd38c-fce5-40e3-969d-a206fb771098",
-        "prompt_name": "G3M06 from G2C03",
-        "generation": 3,
-        "conversation_id": "317cd38c-5b56-458f-8987-4ca90d54fb7c",
-        "conversation_summary": "Problems discussed: 1) Time management struggles, 2) Pressure to attend all social events for networking, 3) Overwhelm about starting student organization. Solutions offered/accepted: 1) Color-coded time-blocking method, 2) Validating short event attendance as sufficient, 3) Starting organization small with casual meetups. Student's response: Immediately adopted scheduling method, reframed social expectations, committed to sending recruitment message. Evidence of progress: Concrete plan to implement solutions next day, visible enthusiasm about approach, decreased avoidance behaviors.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Avoiding career fair posters while studying",
-          "Homesickness": "Not explicitly mentioned in conversation"
-        },
-        "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Feeling overwhelmed by social events",
-          "Building time management": "Struggling to schedule activities effectively",
-          "Financial planning": "Not explicitly mentioned in conversation",
-          "Developing effective study habits": "Studying Botticelli slides in library"
-        },
-        "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Not explicitly mentioned in conversation",
-          "Seeks out leadership roles": "Planning to start art conservation student organization",
-          "Studies in the library regularly": "Studying Botticelli slides in library"
-        },
-        "triggers_specified": {
-          "Campus social events": "Feeling pressured to network at all events"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 1.5,
-        "pre_assessment_score": 2.45,
+        "anxiety_change": -2.5,
+        "new_anxiety_level": 7.5,
+        "pre_assessment_score": 2.7,
         "post_assessment_score": 3.1,
-        "improvement_score": 0.6499999999999999,
-        "timestamp": "2025-10-04T19:30:20.451031"
-      },
-      {
-        "stage_number": 8,
-        "prompt_id": "6047de79-e44a-421b-8e45-261a5fdcaa16",
-        "prompt_name": "G3C07 from G2C03 & G2E00",
-        "generation": 3,
-        "conversation_id": "265832c9-cd99-4266-bc46-a887e3f0a7ae",
-        "conversation_summary": "Alex discussed fears about post-graduation jobs and homesickness, along with challenges in balancing studies, extracurriculars, and time management. Solutions offered included breaking down the internship search into steps, creating a structured weekly schedule, and utilizing campus resources like the career center. Alex responded positively, agreeing to schedule mock interviews, map out time blocks, and start a student org ('Art History in the Wild'). Evidence of progress includes Alex's improved posture, excitement about social events ('Baroque-aoke'), and clutching an internship spreadsheet as a security blanket.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Worry about not securing a good internship",
-          "Homesickness": "Feeling isolated or missing home while on campus"
-        },
-        "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Struggling to manage time between art history classes and leadership roles",
-          "Building time management": "Difficulty scheduling study and social time effectively",
-          "Financial planning": "Not explicitly mentioned but implied by internship concerns",
-          "Developing effective study habits": "Studying in the library but feeling overwhelmed"
-        },
-        "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Utilizing the career center for mock interviews",
-          "Seeks out leadership roles": "Planning to start a student org like 'Art History in the Wild'",
-          "Studies in the library regularly": "Frequenting the library and finding a secret spot for comfort"
-        },
-        "triggers_specified": {
-          "Campus social events": "Interest in creating social events like 'Baroque-aoke' nights"
-        },
-        "anxiety_change": -2.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.45,
-        "post_assessment_score": 2.9,
-        "improvement_score": 0.44999999999999973,
-        "timestamp": "2025-10-04T19:30:21.773547"
-      },
-      {
-        "stage_number": 9,
-        "prompt_id": "5a2e1ba7-9521-4df4-bece-085e7d07aa1c",
-        "prompt_name": "G3M05 from G2C03",
-        "generation": 3,
-        "conversation_id": "e265c28f-87b8-44d9-8dba-4e105e335c26",
-        "conversation_summary": "Problems discussed: 1) Time management (overcommitting), 2) Internship anxiety (targeting large institutions), 3) Stress relief (procrastination), 4) Homesickness. Solutions offered/accepted: 1) 24-hour rule for commitments, 2) Focusing on smaller indie galleries and casual outreach, 3) Pairing sketchbook time with productivity bursts, 4) Recreating home rituals. Student's response: Excited about gallery outreach, committed to time management hack, and planning first org event. Evidence of progress: Concrete internship plan, event idea, and stress-relief strategy adopted.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Worry about securing an internship in art history, especially in large institutions",
-          "Homesickness": "Missing home comforts like mom's banana bread and specific tea rituals"
-        },
-        "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Double-booking study time by overcommitting to help friends",
-          "Building time management": "Struggling with deadlines and overcommitting",
-          "Financial planning": "Not explicitly discussed but implied in internship concerns",
-          "Developing effective study habits": "Procrastinating on papers despite regular library use"
-        },
-        "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Not explicitly mentioned but implied in seeking help",
-          "Seeks out leadership roles": "Desire to start a student art history organization",
-          "Studies in the library regularly": "Mentioned but struggles with procrastination"
-        },
-        "triggers_specified": {
-          "Campus social events": "Anxiety about big social events but desire to improve for student org"
-        },
-        "anxiety_change": -2.5,
-        "new_anxiety_level": 7.5,
-        "pre_assessment_score": 2.45,
-        "post_assessment_score": 3.05,
-        "improvement_score": 0.5999999999999996,
-        "timestamp": "2025-10-04T19:35:00.420907"
-      },
-      {
-        "stage_number": 10,
-        "prompt_id": "f4eccadd-cbf4-4a75-9b58-3abe8a4d407b",
-        "prompt_name": "G3C03 from G2C03 & G2M01",
-        "generation": 3,
-        "conversation_id": "0d61797c-9894-4a38-9c12-7e2230961801",
-        "conversation_summary": "Problems discussed: Overwhelm from classes, internship search, and time management; scheduling errors like missing mom's birthday call; study group attendance issues. Solutions offered/accepted: Time-blocking with phone calendar starting with three key blocks; breaking internship search into 'micro-missions'; setting alarms and accountability texts for study group; scheduling a weekly 'Oh Crap' buffer hour. Student's response to solutions: Initially hesitant but engaged positively, implemented 'ART HISTORY OR DEATH' block and 'Future Alex’s Fancy Job' block, texted study buddy. Evidence of progress/improvement: Scheduled study group and internship blocks, received positive feedback from study buddy, recognized ideal times for tasks, reduced anxiety.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Struggling to land an internship",
-          "Homesickness": "Missing mom's birthday call due to poor scheduling"
-        },
-        "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Art History study group conflicts",
-          "Building time management": "Forgetting to check planners, scheduling errors",
-          "Financial planning": "Not mentioned directly but implied in internship/job search",
-          "Developing effective study habits": "Study group attendance issues"
-        },
-        "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Not mentioned directly",
-          "Seeks out leadership roles": "Not mentioned directly",
-          "Studies in the library regularly": "Not mentioned directly"
-        },
-        "triggers_specified": {
-          "Campus social events": "Not mentioned directly"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 1.5,
-        "pre_assessment_score": 2.45,
-        "post_assessment_score": 3.3,
-        "improvement_score": 0.8499999999999996,
-        "timestamp": "2025-10-04T19:35:06.388653"
-      },
-      {
-        "stage_number": 11,
-        "prompt_id": "1683d52f-8fd4-4194-a06f-eea15f95d10e",
-        "prompt_name": "G4C07 from G3C07 & G3E01",
-        "generation": 4,
-        "conversation_id": "702a7f3f-2efa-4796-b6ca-b0a15ec2e6d0",
-        "conversation_summary": "Problems discussed: 1) Balancing classes and extracurriculars, 2) Hesitation in applying for internships due to feeling underqualified, 3) Poor time management with planner. Solutions offered/accepted: 1) Tailor internship applications to exciting roles, block time for drafting without overthinking, 2) Color-code planner by energy level, focus on fewer deep commitments. Student's response to solutions: Positive; commits to drafting application and reorganizing planner. Evidence of progress/improvement: Student has clear action steps for internship application and time management, feels empowered and relieved.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Worry about not securing a good internship",
-          "Homesickness": "Not explicitly mentioned in conversation"
-        },
-        "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Struggling to manage time between classes and applying for internships",
-          "Building time management": "Ignoring planner when assignments pile up",
-          "Financial planning": "Not explicitly mentioned in conversation",
-          "Developing effective study habits": "Not explicitly mentioned in conversation"
-        },
-        "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Not explicitly mentioned in conversation",
-          "Seeks out leadership roles": "Interest in joining the campus museum's curation team",
-          "Studies in the library regularly": "Not explicitly mentioned in conversation"
-        },
-        "triggers_specified": {
-          "Campus social events": "Not explicitly mentioned in conversation"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 1.5,
-        "pre_assessment_score": 2.45,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.4500000000000002,
-        "timestamp": "2025-10-04T19:41:55.140812"
-      },
-      {
-        "stage_number": 12,
-        "prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
-        "prompt_name": "G5C07 from G4E01 & G4E02",
-        "generation": 5,
-        "conversation_id": "38bde90c-adfe-426e-ae3f-0772aaaa726e",
-        "conversation_summary": "Alex discussed struggles with time management and feeling overwhelmed by social events. Solutions offered included the 'Power Hour' technique for focused work and attending smaller, interest-based gatherings like art history study groups. Alex responded positively, scheduling a Power Hour and expressing interest in purposeful socializing. Evidence of progress includes immediate scheduling of the Power Hour and a plan to engage in smaller, relevant social events.",
-        "fears_materialized": {
-          "Finding a job after graduation": "Concern about securing an internship",
-          "Homesickness": "Not explicitly addressed in conversation"
-        },
-        "challenges_materialized": {
-          "Balancing extracurricular activities with studies": "Struggling to manage time between studies, social events, and starting a student organization",
-          "Building time management": "Feeling overwhelmed by multiple commitments",
-          "Financial planning": "Not explicitly addressed in conversation",
-          "Developing effective study habits": "Regular library study sessions but seeking better focus"
-        },
-        "behaviors_detailed": {
-          "Uses campus resources like tutoring": "Not explicitly mentioned in conversation",
-          "Seeks out leadership roles": "Ambition to start a student organization",
-          "Studies in the library regularly": "Evening study block mentioned"
-        },
-        "triggers_specified": {
-          "Campus social events": "Big social events are exhausting, prefers smaller gatherings like department meetups or study groups"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 1.5,
-        "pre_assessment_score": 2.45,
-        "post_assessment_score": 3.2,
-        "improvement_score": 0.75,
-        "timestamp": "2025-10-04T19:46:00.321044"
+        "improvement_score": 0.3999999999999999,
+        "timestamp": "2025-10-20T23:04:57.369622"
       }
     ],
-    "current_stage": 12
+    "current_stage": 4
   }
 }

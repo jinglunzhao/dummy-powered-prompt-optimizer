@@ -1,10 +1,10 @@
 {
   "dummy_id": "fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc",
   "dummy_name": "Lisa Smith",
-  "current_experiment_id": "gepa_exp_20251004_194514",
-  "current_prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
-  "created_at": "2025-10-04T19:08:38.126087",
-  "last_updated": "2025-10-04T19:46:22.249851",
+  "current_experiment_id": "conversation_length_with_evolution",
+  "current_prompt_id": "conversation_length_test",
+  "created_at": "2025-10-20T23:00:26.745275",
+  "last_updated": "2025-10-20T23:03:40.635496",
   "conversation_profile": {
     "original_fears": [
       "Time management with coursework",
@@ -33,22 +33,22 @@
       "openness": 10
     },
     "current_fears": [
-      "Struggling to balance GRE prep, TA meetings, and coursework",
-      "Not explicitly mentioned but implied in competitive behavior",
-      "Freezing up in large lectures affecting participation grades",
-      "Not explicitly mentioned but implied in competitive behavior"
+      "Struggling to prioritize assignments and study effectively",
+      "Worrying about repaying loans while managing academic workload",
+      "Freezing up in lectures and not participating, leading to poor performance",
+      "Uncertainty about future career due to academic struggles"
     ],
     "current_challenges": [
-      "Not explicitly mentioned",
-      "Not explicitly mentioned"
+      "Feeling isolated and stressed without family support",
+      "Balancing part-time work and studies to reduce debt"
     ],
     "current_behaviors": [
-      "Not explicitly mentioned",
-      "Not explicitly mentioned",
-      "Not explicitly mentioned"
+      "Pulling all-nighters to catch up on assignments",
+      "Relying on quick meals due to time constraints",
+      "Delaying work until the last minute, increasing stress"
     ],
     "current_anxiety_triggers": [
-      "Freezing up and not participating in large lectures"
+      "Feeling overwhelmed and unable to participate in big classes"
     ],
     "current_social_anxiety_level": 5,
     "current_big_five": {
@@ -61,389 +61,133 @@
     "evolution_stages": [
       {
         "stage_number": 1,
-        "prompt_id": "9c0d9da5-ff41-4ca0-839e-9ec565c87d0d",
-        "prompt_name": "Genesis",
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
         "generation": 0,
-        "conversation_id": "1f6847e2-2884-4179-818f-e2de0b107f98",
-        "conversation_summary": "Problems discussed: 1) Freezing up in large lectures affecting participation grades, 2) Aggressive communication hindering networking for research positions. Solutions offered/accepted: 1) Front row + '3-second rule' and prep triggers for lectures, 2) 'Disrupt then build' approach and targeting professors 1:1 for networking. Student's response to solutions: Positive, with aggressive note-taking and commitment to try strategies. Evidence of progress/improvement: Plans to implement 3-second rule and approach Dr. Reynolds, showing proactive steps to address challenges.",
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_4",
+        "conversation_summary": "1) Problems discussed: Lisa expressed frustration with coursework stress and freezing up in lectures. 2) Solutions offered/accepted: For coursework, breaking tasks into smaller chunks and active learning; for lectures, scripting questions, using the 5-second rule, and prepping flexible backups. 3) Student's response to solutions: Initially skeptical but agreed to try scripting questions and starred terms, and adopted time management techniques. 4) Evidence of progress/improvement: Lisa committed to testing the strategies in the next two lectures and noted the practicality of the solutions, showing openness to change.",
         "fears_materialized": {
-          "Time management with coursework": "Staying up late studying and procrastinating on assignments",
-          "Student loan debt and financial stress": "Managing student loans while balancing academic workload",
-          "Academic failure and poor grades": "Freezing up in large lectures affecting participation grades",
-          "Choosing the right career path": "Networking aggressively for research positions"
+          "Time management with coursework": "Struggling to prioritize assignments and study effectively",
+          "Student loan debt and financial stress": "Worrying about repayment while managing academic workload",
+          "Academic failure and poor grades": "Freezing up in lectures and underperforming",
+          "Choosing the right career path": "Uncertainty about future career decisions"
         },
         "challenges_materialized": {
-          "Dealing with homesickness": "Not explicitly mentioned in conversation",
-          "Managing student loans": "Balancing financial stress with academic performance"
+          "Dealing with homesickness": "Feeling isolated and missing family support",
+          "Managing student loans": "Balancing part-time work and studies to minimize debt"
         },
         "behaviors_detailed": {
-          "Stays up late studying": "Procrastinates on assignments, leading to late-night study sessions",
-          "Eats at the dining hall": "Not explicitly mentioned in conversation",
-          "Procrastinates on assignments": "Delays work until the last minute, causing stress"
+          "Stays up late studying": "Pulling all-nighters due to poor time management",
+          "Eats at the dining hall": "Relying on convenience meals instead of cooking",
+          "Procrastinates on assignments": "Delaying work until the last minute"
         },
         "triggers_specified": {
-          "Large lecture halls": "Freezing up and not participating due to anxiety"
+          "Large lecture halls": "Anxiety spikes when required to participate in front of many peers"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 5.5,
-        "pre_assessment_score": 2.85,
-        "post_assessment_score": 2.0,
-        "improvement_score": -0.8500000000000001,
-        "timestamp": "2025-10-04T19:10:26.778716"
+        "pre_assessment_score": 2.5,
+        "post_assessment_score": 2.85,
+        "improvement_score": 0.3500000000000001,
+        "timestamp": "2025-10-20T23:01:58.725290"
       },
       {
         "stage_number": 2,
-        "prompt_id": "40288edd-a016-44fd-bf1d-acff858c515f",
-        "prompt_name": "G1M01 from Genesis",
-        "generation": 1,
-        "conversation_id": "1b6af303-3eab-418c-a34b-1b23cbd339d7",
-        "conversation_summary": "Problems discussed: 1) Procrastination due to perfectionism, 2) Aggressive communication in group projects, 3) Anxiety in large lecture halls. Solutions offered/accepted: 1) \"One and done\" rule for assignments, 2) Acknowledging fear of judgment and committing to sharing ideas, 3) Normalizing lecture hall anxiety with humor. Student's response to solutions: Positive, agreed to try \"one and done\" and recognized irrational fears. Evidence of progress/improvement: Committed to action plan, showed self-awareness, and used humor to cope.",
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_8",
+        "conversation_summary": "Problems discussed: 1) Overwhelm with coursework and procrastination, 2) Anxiety in large lectures leading to participation freeze, 3) Frustration with lack of progress. Solutions offered/accepted: 1) Chunking assignments and active learning techniques, 2) Scripting questions and using the 5-second rule for participation, 3) Prepping backup questions and starring key terms for improvisation. Student's response to solutions: Initially skeptical but agreed to test scripting and the 5-second rule, showing a pragmatic shift. Evidence of progress/improvement: Commitment to trying new strategies, willingness to document failures, and reduced anxiety level from 6/10 to 5.5/10.",
         "fears_materialized": {
-          "Time management with coursework": "Staying up until 2am overthinking and rewriting assignments",
-          "Student loan debt and financial stress": "Not explicitly mentioned in conversation",
-          "Academic failure and poor grades": "Fear of ideas being trash compared to engineering majors",
-          "Choosing the right career path": "Not explicitly mentioned in conversation"
+          "Time management with coursework": "Struggling to complete assignments on time due to procrastination",
+          "Student loan debt and financial stress": "Worrying about repayment while managing daily expenses",
+          "Academic failure and poor grades": "Freezing up in lectures and performing poorly on exams",
+          "Choosing the right career path": "Uncertainty about future job prospects and relevance of current studies"
         },
         "challenges_materialized": {
-          "Dealing with homesickness": "Not explicitly mentioned in conversation",
-          "Managing student loans": "Not explicitly mentioned in conversation"
+          "Dealing with homesickness": "Feeling isolated and missing family support",
+          "Managing student loans": "Balancing part-time work with studies to cover expenses"
         },
         "behaviors_detailed": {
-          "Stays up late studying": "Rewriting a lesson plan four times until 2am",
-          "Eats at the dining hall": "Not explicitly mentioned in conversation",
-          "Procrastinates on assignments": "Overthinking and delaying work due to perfectionism"
+          "Stays up late studying": "Pulling all-nighters before deadlines",
+          "Eats at the dining hall": "Relying on meal plans due to limited cooking time",
+          "Procrastinates on assignments": "Delaying tasks until the last minute, leading to rushed work"
         },
         "triggers_specified": {
-          "Large lecture halls": "Makes her want to bolt, feels overwhelming"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 5.5,
-        "pre_assessment_score": 2.85,
-        "post_assessment_score": 3.15,
-        "improvement_score": 0.2999999999999998,
-        "timestamp": "2025-10-04T19:14:30.488284"
-      },
-      {
-        "stage_number": 3,
-        "prompt_id": "76f427d6-7f43-40db-bd23-cc064b5199e9",
-        "prompt_name": "G2C02 from G1M01 & G1E00",
-        "generation": 2,
-        "conversation_id": "6af4d6aa-ea17-4a45-bbb7-bed2c109c399",
-        "conversation_summary": "Problems discussed: 1) Lecture hall anxiety, 2) Procrastination, 3) Aggressive communication in groups, 4) Financial stress from loans. Solutions offered/accepted: 1) 5-minute rule for lectures, 2) Scheduled procrastination time, 3) 'What if we...' phrasing in groups, 4) Inbox 'rage-clean' before loan payments. Student's response: Engaged and willing to test all strategies, particularly the 5-minute rule and inbox cleanup. Evidence of progress: Immediate commitment to action plans (e.g., checking in on the 15th for financial progress) and reframing aggression as debate energy.",
-        "fears_materialized": {
-          "Time management with coursework": "Procrastinating on assignments until the last minute",
-          "Student loan debt and financial stress": "Spiraling into anxiety when loan statements arrive",
-          "Academic failure and poor grades": "Fear of large lecture halls leading to avoidance",
-          "Choosing the right career path": "Aggressive communication in group projects sabotaging relationships"
-        },
-        "challenges_materialized": {
-          "Dealing with homesickness": "Not explicitly mentioned in conversation",
-          "Managing student loans": "Anxiety spikes when loan payment reminders appear"
-        },
-        "behaviors_detailed": {
-          "Stays up late studying": "Cramming due to procrastination",
-          "Eats at the dining hall": "Not explicitly mentioned in conversation",
-          "Procrastinates on assignments": "Delays work until deadlines loom"
-        },
-        "triggers_specified": {
-          "Large lecture halls": "Feeling overwhelmed and wanting to bolt from class"
+          "Large lecture halls": "Anxiety spikes when required to participate in front of many peers"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 5.5,
         "pre_assessment_score": 2.85,
         "post_assessment_score": 2.0,
         "improvement_score": -0.8500000000000001,
-        "timestamp": "2025-10-04T19:19:18.358757"
+        "timestamp": "2025-10-20T23:02:32.051577"
+      },
+      {
+        "stage_number": 3,
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_milestone_12",
+        "conversation_summary": "1) Problems discussed: Lisa expressed frustration with managing coursework stress and freezing up in lectures. 2) Solutions offered/accepted: For coursework, prioritizing tasks and active learning techniques were suggested. For lectures, scripting questions, using the 5-second rule, and prepping backup questions were proposed. 3) Student's response to solutions: Lisa agreed to try scripting questions and using starred terms for improvisation, showing openness to concrete strategies. 4) Evidence of progress/improvement: Lisa's willingness to implement these tactics in the next two lectures indicates initial progress in addressing her participation anxiety.",
+        "fears_materialized": {
+          "Time management with coursework": "Struggling to prioritize assignments and study effectively",
+          "Student loan debt and financial stress": "Worrying about repayment while managing academic workload",
+          "Academic failure and poor grades": "Freezing up in lectures and struggling to participate",
+          "Choosing the right career path": "Uncertainty about future career decisions"
+        },
+        "challenges_materialized": {
+          "Dealing with homesickness": "Feeling isolated and missing family support",
+          "Managing student loans": "Balancing part-time work and studies to reduce debt"
+        },
+        "behaviors_detailed": {
+          "Stays up late studying": "Pulling all-nighters to complete assignments",
+          "Eats at the dining hall": "Relying on convenient but unhealthy meal options",
+          "Procrastinates on assignments": "Delaying work until the last minute"
+        },
+        "triggers_specified": {
+          "Large lecture halls": "Feeling overwhelmed and unable to participate in discussions"
+        },
+        "anxiety_change": -0.5,
+        "new_anxiety_level": 5.5,
+        "pre_assessment_score": 2.0,
+        "post_assessment_score": 2.0,
+        "improvement_score": 0.0,
+        "timestamp": "2025-10-20T23:03:10.959015"
       },
       {
         "stage_number": 4,
-        "prompt_id": "e790c703-2c16-4dd7-9ee1-cc749cda9e8a",
-        "prompt_name": "G2C03 from G1E00 & G1M01",
-        "generation": 2,
-        "conversation_id": "2a78868a-2113-4859-8a14-e4b319d22464",
-        "conversation_summary": "Problems discussed: 1) Procrastination on a 15-page paper, 2) Financial stress from student loans, 3) Disengagement in large lectures. Solutions offered/accepted: 1) 'Two-minute rule' to combat procrastination, 2) Scheduling a weekly 'worry hour' for financial stress, 3) Prepping questions for lectures to improve engagement. Student's response to solutions: Initially skeptical but ultimately accepted and committed to trying the solutions. Evidence of progress/improvement: Reduced financial anxiety after realizing the daily interest cost, commitment to implementing the 'two-minute rule', and willingness to prep lecture questions.",
+        "prompt_id": "conversation_length_test",
+        "prompt_name": "Conversation Length Test",
+        "generation": 0,
+        "conversation_id": "conv_fc9c87bc-3fe6-4cf0-bc8a-efcb9e54a4dc_20251020_230144",
+        "conversation_summary": "Problems discussed: 1) Overwhelm with coursework and poor time management, 2) Freezing up in large lectures and inability to participate. Solutions offered/accepted: 1) Breaking coursework into smaller chunks and using active learning techniques, 2) Scripting questions and using the 5-second rule to participate in lectures. Student's response to solutions: Initially skeptical but agreed to try scripting questions and using starred terms for improvisation. Evidence of progress/improvement: Student committed to testing the two-question approach and noted the practicality of the solution, showing willingness to engage with the strategies despite initial resistance.",
         "fears_materialized": {
-          "Time management with coursework": "Staring down a 15-page paper",
-          "Student loan debt and financial stress": "Constantly stressing about student loans while trying to study",
-          "Academic failure and poor grades": "Procrastination leading to poor performance",
-          "Choosing the right career path": "Desire for a research position and graduating with honors"
+          "Time management with coursework": "Struggling to prioritize assignments and study effectively",
+          "Student loan debt and financial stress": "Worrying about repaying loans while managing academic workload",
+          "Academic failure and poor grades": "Freezing up in lectures and not participating, leading to poor performance",
+          "Choosing the right career path": "Uncertainty about future career due to academic struggles"
         },
         "challenges_materialized": {
-          "Dealing with homesickness": "Not explicitly mentioned in conversation",
-          "Managing student loans": "Anxiety about racking up debt while studying"
+          "Dealing with homesickness": "Feeling isolated and stressed without family support",
+          "Managing student loans": "Balancing part-time work and studies to reduce debt"
         },
         "behaviors_detailed": {
-          "Stays up late studying": "Procrastinating on a 15-page paper",
-          "Eats at the dining hall": "Not explicitly mentioned in conversation",
-          "Procrastinates on assignments": "Avoiding starting a 15-page paper"
+          "Stays up late studying": "Pulling all-nighters to catch up on assignments",
+          "Eats at the dining hall": "Relying on quick meals due to time constraints",
+          "Procrastinates on assignments": "Delaying work until the last minute, increasing stress"
         },
         "triggers_specified": {
-          "Large lecture halls": "Aggressive communication style and disengagement in large lectures"
-        },
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 4.5,
-        "pre_assessment_score": 2.85,
-        "post_assessment_score": 3.1,
-        "improvement_score": 0.25,
-        "timestamp": "2025-10-04T19:20:36.704917"
-      },
-      {
-        "stage_number": 4,
-        "prompt_id": "d675a42d-8758-4aa1-9f9a-2504ddb08752",
-        "prompt_name": "G2M01 from G1M01",
-        "generation": 2,
-        "conversation_id": "bbe42e91-f407-40f2-aee3-5a0e2a240d48",
-        "conversation_summary": "Problems discussed: 1) Anxiety in large lecture halls, 2) Procrastination on assignments, 3) Social isolation. Solutions offered/accepted: 1) Smiling at one person in class to ease social anxiety, 2) Framing tasks as a competition with past self to combat procrastination, 3) Using shared experiences (e.g., dining hall food) to build connections. Student's response to solutions: Positive engagement, willingness to try suggested strategies, and humor in accepting the approach. Evidence of progress/improvement: Commitment to specific actions (smiling experiment, early work on assignments) and recognition of potential benefits (forming research teams, accountability).",
-        "fears_materialized": {
-          "Time management with coursework": "Procrastinating on a literature review",
-          "Student loan debt and financial stress": "Worrying about post-graduation financial stability",
-          "Academic failure and poor grades": "Fear of asking questions in large lecture halls",
-          "Choosing the right career path": "Uncertainty about securing a research position"
-        },
-        "challenges_materialized": {
-          "Dealing with homesickness": "Feeling isolated in large lecture halls",
-          "Managing student loans": "Stress about future financial obligations"
-        },
-        "behaviors_detailed": {
-          "Stays up late studying": "Pulling all-nighters to finish assignments",
-          "Eats at the dining hall": "Using meal times as a social avoidance tactic",
-          "Procrastinates on assignments": "Delaying work on a literature review"
-        },
-        "triggers_specified": {
-          "Large lecture halls": "Anxiety about speaking up or asking questions"
+          "Large lecture halls": "Feeling overwhelmed and unable to participate in big classes"
         },
         "anxiety_change": -0.5,
         "new_anxiety_level": 5.5,
-        "pre_assessment_score": 2.85,
-        "post_assessment_score": 3.15,
-        "improvement_score": 0.2999999999999998,
-        "timestamp": "2025-10-04T19:20:36.705185"
-      },
-      {
-        "stage_number": 6,
-        "prompt_id": "5a2e1ba7-9521-4df4-bece-085e7d07aa1c",
-        "prompt_name": "G3M05 from G2C03",
-        "generation": 3,
-        "conversation_id": "a7eb1898-3119-4071-9f02-609587e9c035",
-        "conversation_summary": "Problems discussed: 1) Anxiety in large lecture halls, 2) Procrastination/perfectionism blocking research opportunities, 3) Distraction during lectures. Solutions offered/accepted: 1) Strategic seating (front row near exit) + breathing techniques for lectures, 2) Sending one imperfect email immediately to bypass perfectionism, 3) 'Messy action' mindset shift. Student's response: Enthusiastically adopted all solutions—committed to sending email, changed seating plan, and left with immediate action. Evidence of progress: Reduced anxiety (self-reported energy shift), concrete plan for email/lectures, demonstrated behavioral change (joining study group on time, drafting email while walking out).",
-        "fears_materialized": {
-          "Time management with coursework": "Procrastinating on assignments, staying up late studying",
-          "Student loan debt and financial stress": "Managing student loans",
-          "Academic failure and poor grades": "Fear of poor performance in large lecture halls",
-          "Choosing the right career path": "Anxiety about securing a research position"
-        },
-        "challenges_materialized": {
-          "Dealing with homesickness": "Not explicitly mentioned in conversation",
-          "Managing student loans": "Financial stress impacting academic focus"
-        },
-        "behaviors_detailed": {
-          "Stays up late studying": "Cramming due to procrastination",
-          "Eats at the dining hall": "Not explicitly mentioned in conversation",
-          "Procrastinates on assignments": "Drafting 'perfect' emails for days without sending"
-        },
-        "triggers_specified": {
-          "Large lecture halls": "Anxiety leading to desire to leave or zone out"
-        },
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 4.5,
-        "pre_assessment_score": 2.85,
-        "post_assessment_score": 3.05,
-        "improvement_score": 0.19999999999999973,
-        "timestamp": "2025-10-04T19:27:14.546822"
-      },
-      {
-        "stage_number": 7,
-        "prompt_id": "c60cd38c-fce5-40e3-969d-a206fb771098",
-        "prompt_name": "G3M06 from G2C03",
-        "generation": 3,
-        "conversation_id": "2d5d48bd-35a2-4fba-a22f-77b631a4bc38",
-        "conversation_summary": "Problems discussed: 1) Freezing in large lectures, 2) Networking for research positions, 3) Time management/perfectionism, 4) Student loan stress. Solutions offered/accepted: 1) Prep one question before lectures, 2) Frame networking as curiosity, 3) Use 'good enough' standards and early deadlines, 4) Pursue TA roles. Student's response: Positive engagement with solutions (e.g., calling the one-question trick 'doable,' agreeing to experiment with 'half-assing'). Evidence of progress: Reduced anxiety (from 6/10 to 4.5/10), concrete plans to implement strategies.",
-        "fears_materialized": {
-          "Time management with coursework": "Hyperfixating on making lit reviews 'perfect', leading to wasted hours",
-          "Student loan debt and financial stress": "Feeling pressure to secure TA positions to cover tuition",
-          "Academic failure and poor grades": "Freezing up in large lectures, affecting participation grades",
-          "Choosing the right career path": "Networking for research positions without coming off as overeager"
-        },
-        "challenges_materialized": {
-          "Dealing with homesickness": "Not explicitly mentioned in conversation",
-          "Managing student loans": "Considering TA roles but feeling overwhelmed by applications"
-        },
-        "behaviors_detailed": {
-          "Stays up late studying": "Hyperfixating on perfectionism in assignments",
-          "Eats at the dining hall": "Not explicitly mentioned in conversation",
-          "Procrastinates on assignments": "Group projects exploding due to poor time management"
-        },
-        "triggers_specified": {
-          "Large lecture halls": "Freezing up during participation, impacting grades"
-        },
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 4.5,
-        "pre_assessment_score": 2.85,
-        "post_assessment_score": 3.1,
-        "improvement_score": 0.25,
-        "timestamp": "2025-10-04T19:28:33.745096"
-      },
-      {
-        "stage_number": 8,
-        "prompt_id": "8966845e-bd42-4a15-9003-2b2ed03db063",
-        "prompt_name": "G3M04 from G2E00",
-        "generation": 3,
-        "conversation_id": "3272ee47-c2e0-4597-8e03-a5a5dc7ff3f2",
-        "conversation_summary": "1) Problems discussed: Lecture hall anxiety, competitive group dynamics, career positioning. 2) Solutions offered/accepted: Grounding techniques, strategic seating, 3-second rule reframed as a power move. 3) Student's response: Initially skeptical but engaged after advice was tied to winning (e.g., 'weaponizing patience'). 4) Evidence of progress: Lisa committed to testing the 3-second rule in her study group and reframing her approach as strategic dominance.",
-        "fears_materialized": {
-          "Time management with coursework": "Struggling to balance study time with assignments in large lecture courses",
-          "Student loan debt and financial stress": "Worrying about post-graduation financial stability due to loans",
-          "Academic failure and poor grades": "Fear of falling behind in large lecture halls and losing competitive edge",
-          "Choosing the right career path": "Concern about securing a research position that aligns with competitive goals"
-        },
-        "challenges_materialized": {
-          "Dealing with homesickness": "Feeling isolated in large lecture halls, missing familiar support systems",
-          "Managing student loans": "Stress over budgeting and future repayments impacting focus"
-        },
-        "behaviors_detailed": {
-          "Stays up late studying": "Pulling all-nighters to catch up on missed lecture content",
-          "Eats at the dining hall": "Using meal times as a break but often distracted by financial worries",
-          "Procrastinates on assignments": "Delaying work until the last minute due to anxiety about perfection"
-        },
-        "triggers_specified": {
-          "Large lecture halls": "Feeling overwhelmed and anonymous in 300+ student classes"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 5.5,
-        "pre_assessment_score": 2.85,
-        "post_assessment_score": 3.05,
-        "improvement_score": 0.19999999999999973,
-        "timestamp": "2025-10-04T19:29:47.965062"
-      },
-      {
-        "stage_number": 9,
-        "prompt_id": "f4eccadd-cbf4-4a75-9b58-3abe8a4d407b",
-        "prompt_name": "G3C03 from G2C03 & G2M01",
-        "generation": 3,
-        "conversation_id": "66a5d283-db0b-4d05-9cfa-aeddbbff6f5b",
-        "conversation_summary": "Lisa discussed her struggles with group project dynamics, freezing in large lecture halls, and financial stress. Solutions offered included structured leadership with Gantt charts, starting small with easy questions in lectures, and planning to address student loans. Lisa responded positively, agreeing to try these strategies and showing willingness to improve her diet. Evidence of progress includes her commitment to ask a question in the next lecture and her openness to discussing financial stress in the next session.",
-        "fears_materialized": {
-          "Time management with coursework": "Staying up late studying and procrastinating on assignments",
-          "Student loan debt and financial stress": "Calculating interest rates and feeling overwhelmed",
-          "Academic failure and poor grades": "Freezing up in large lecture halls, affecting chances at a research position",
-          "Choosing the right career path": "Concerns about securing a research spot due to behavior in seminars"
-        },
-        "challenges_materialized": {
-          "Dealing with homesickness": "Not explicitly mentioned in conversation",
-          "Managing student loans": "Calculating interest rates and feeling stressed about financial situation"
-        },
-        "behaviors_detailed": {
-          "Stays up late studying": "Preparing for TA job and coursework",
-          "Eats at the dining hall": "Eating instant ramen due to financial stress",
-          "Procrastinates on assignments": "Delaying tasks until the last minute"
-        },
-        "triggers_specified": {
-          "Large lecture halls": "Freezing up when trying to ask questions, affecting academic performance"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 5.5,
-        "pre_assessment_score": 2.85,
-        "post_assessment_score": 3.05,
-        "improvement_score": 0.19999999999999973,
-        "timestamp": "2025-10-04T19:30:41.975688"
-      },
-      {
-        "stage_number": 10,
-        "prompt_id": "6047de79-e44a-421b-8e45-261a5fdcaa16",
-        "prompt_name": "G3C07 from G2C03 & G2E00",
-        "generation": 3,
-        "conversation_id": "bff1b603-d742-4ac7-90a9-c72127e5b7b5",
-        "conversation_summary": "Lisa discussed multiple stressors including lecture focus issues, overwhelming coursework deadlines, difficulty securing research positions, and upcoming student loan payments. Solutions offered included using physical cues to maintain lecture focus, breaking assignments into manageable 'good enough' chunks, in-person networking with professors, and investigating income-driven loan repayment. Lisa responded positively to these concrete suggestions, agreeing to try the focus techniques, adopt a more practical approach to assignments, target a specific professor for networking, and research financial options. Evidence of progress includes her willingness to implement these strategies, a slight reduction in overwhelmed demeanor, and specific action plans for immediate next steps.",
-        "fears_materialized": {
-          "Time management with coursework": "Struggling to complete 3 papers due next week",
-          "Student loan debt and financial stress": "Student loan payments starting next month",
-          "Academic failure and poor grades": "Risk of bombing next quiz due to lack of focus in lectures",
-          "Choosing the right career path": "Difficulty securing a research position despite multiple attempts"
-        },
-        "challenges_materialized": {
-          "Dealing with homesickness": "Not explicitly mentioned but implied in overall stress",
-          "Managing student loans": "Upcoming loan payments causing additional stress"
-        },
-        "behaviors_detailed": {
-          "Stays up late studying": "Pulling all-nighters to keep up with coursework",
-          "Eats at the dining hall": "Not explicitly mentioned",
-          "Procrastinates on assignments": "Staring at Pomodoro timer instead of working"
-        },
-        "triggers_specified": {
-          "Large lecture halls": "Missing half a stats lecture due to counting hoodies"
-        },
-        "anxiety_change": -1.5,
-        "new_anxiety_level": 4.5,
-        "pre_assessment_score": 2.85,
-        "post_assessment_score": 3.0,
-        "improvement_score": 0.1499999999999999,
-        "timestamp": "2025-10-04T19:37:55.360248"
-      },
-      {
-        "stage_number": 11,
-        "prompt_id": "1683d52f-8fd4-4194-a06f-eea15f95d10e",
-        "prompt_name": "G4C07 from G3C07 & G3E01",
-        "generation": 4,
-        "conversation_id": "e4072772-7a45-480d-8b57-a7f51bbcabc3",
-        "conversation_summary": "Problems discussed: 1) Social anxiety during presentations in large lecture halls, 2) Time management with coursework and research applications, 3) Mental fatigue from workload, 4) Post-presentation jitters. Solutions offered/accepted: 1) Prep presentations like conversations, use power pauses, reframe intensity as passion; 2) Time-blocking and prioritizing research apps; 3) Strategic rebellion (breaks, snacks) for mental fatigue; 4) 3-step autopsy for post-presentation jitters. Student's response to solutions: Positive, with immediate adoption of power pauses, time-blocking, and strategic rebellion. Evidence of progress/improvement: Student is actively seeking TA positions, implementing time-blocking, and using new techniques to manage presentation anxiety and mental fatigue.",
-        "fears_materialized": {
-          "Time management with coursework": "Juggling coursework and research applications",
-          "Student loan debt and financial stress": "Managing student loans and seeking TA positions",
-          "Academic failure and poor grades": "Pressure from presentations in large lecture halls",
-          "Choosing the right career path": "Balancing research goals with academic workload"
-        },
-        "challenges_materialized": {
-          "Dealing with homesickness": "Not explicitly addressed in conversation",
-          "Managing student loans": "Seeking TA positions or fellowships for financial relief"
-        },
-        "behaviors_detailed": {
-          "Stays up late studying": "Time-blocking and prioritizing research applications",
-          "Eats at the dining hall": "Not explicitly addressed in conversation",
-          "Procrastinates on assignments": "Using strategic rebellion to combat mental fatigue"
-        },
-        "triggers_specified": {
-          "Large lecture halls": "Presenting in front of large audiences"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 5.5,
-        "pre_assessment_score": 2.85,
-        "post_assessment_score": 3.1,
-        "improvement_score": 0.25,
-        "timestamp": "2025-10-04T19:43:14.012053"
-      },
-      {
-        "stage_number": 12,
-        "prompt_id": "4b3f663a-a6f2-4558-8c0e-23d32ca8f03c",
-        "prompt_name": "G5C07 from G4E01 & G4E02",
-        "generation": 5,
-        "conversation_id": "c945f52e-9297-4ea7-ae04-52d02a433806",
-        "conversation_summary": "Problems discussed: 1) Freezing up in large lectures affecting participation grades, 2) Competitive behavior leading to perceived arrogance, 3) Struggle to balance being respected and liked. Solutions offered/accepted: 1) Start small with participation in lectures, 2) Channel competitiveness into collaboration, 3) Reframe questions as 'strategic curiosity'. Student's response to solutions: Positive, with plans to implement strategies in upcoming lectures and interactions. Evidence of progress/improvement: Student acknowledged the need for change, planned specific actions, and showed increased self-awareness and willingness to adapt.",
-        "fears_materialized": {
-          "Time management with coursework": "Struggling to balance GRE prep, TA meetings, and coursework",
-          "Student loan debt and financial stress": "Not explicitly mentioned but implied in competitive behavior",
-          "Academic failure and poor grades": "Freezing up in large lectures affecting participation grades",
-          "Choosing the right career path": "Not explicitly mentioned but implied in competitive behavior"
-        },
-        "challenges_materialized": {
-          "Dealing with homesickness": "Not explicitly mentioned",
-          "Managing student loans": "Not explicitly mentioned"
-        },
-        "behaviors_detailed": {
-          "Stays up late studying": "Not explicitly mentioned",
-          "Eats at the dining hall": "Not explicitly mentioned",
-          "Procrastinates on assignments": "Not explicitly mentioned"
-        },
-        "triggers_specified": {
-          "Large lecture halls": "Freezing up and not participating in large lectures"
-        },
-        "anxiety_change": -0.5,
-        "new_anxiety_level": 5.5,
-        "pre_assessment_score": 2.85,
-        "post_assessment_score": 3.05,
-        "improvement_score": 0.19999999999999973,
-        "timestamp": "2025-10-04T19:46:22.249462"
+        "pre_assessment_score": 3.0,
+        "post_assessment_score": 2.0,
+        "improvement_score": -1.0,
+        "timestamp": "2025-10-20T23:03:40.635167"
       }
     ],
-    "current_stage": 12
+    "current_stage": 4
   }
 }

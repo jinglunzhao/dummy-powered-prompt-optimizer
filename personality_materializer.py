@@ -22,10 +22,7 @@ class PersonalityMaterializer:
         if not self.api_key:
             raise ValueError("API key is required for personality materializer")
         
-        # Add rate limiting to prevent API issues
-        self._semaphore = asyncio.Semaphore(3)  # Max 3 concurrent calls
-        
-        print("✅ Personality Materializer initialized with rate limiting (max 3 concurrent calls)")
+        print("✅ Personality Materializer initialized")
     
     async def materialize_personality_from_conversation(self, 
                                                       dummy, 
@@ -42,93 +39,92 @@ class PersonalityMaterializer:
         # Create materialization prompt
         materialization_prompt = self._create_materialization_prompt(dummy, conversation)
         
-        # Use rate limiting to prevent API overload
-        async with self._semaphore:
-            for attempt in range(3):  # Retry up to 3 times
-                try:
-                    print(f"   🔄 Attempt {attempt + 1}/3 for {dummy.name}")
-                    
-                    # Call DeepSeek Reasoner for materialization
-                    async with aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=300)) as session:
-                        async with session.post(
-                            "https://api.lkeap.cloud.tencent.com/v1/chat/completions",
-                            headers={
-                                "Authorization": f"Bearer {self.api_key}",
-                                "Content-Type": "application/json"
-                            },
-                            json={
-                                "model": "deepseek-v3-0324",
-                                "messages": [{"role": "user", "content": materialization_prompt}],
-                                "temperature": 0.3,  # Low temperature for focused analysis
-                                "max_tokens": 2000   # Enough for detailed materialization
-                            },
-                            timeout=aiohttp.ClientTimeout(total=300)
-                        ) as response:
+        # Try to materialize with retries
+        for attempt in range(3):  # Retry up to 3 times
+            try:
+                print(f"   🔄 Attempt {attempt + 1}/3 for {dummy.name}")
+                
+                # Call DeepSeek Reasoner for materialization
+                async with aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=300)) as session:
+                    async with session.post(
+                        "https://api.lkeap.cloud.tencent.com/v1/chat/completions",
+                        headers={
+                            "Authorization": f"Bearer {self.api_key}",
+                            "Content-Type": "application/json"
+                        },
+                        json={
+                            "model": "deepseek-v3-0324",
+                            "messages": [{"role": "user", "content": materialization_prompt}],
+                            "temperature": 0.3,  # Low temperature for focused analysis
+                            "max_tokens": 2000   # Enough for detailed materialization
+                        },
+                        timeout=aiohttp.ClientTimeout(total=300)
+                    ) as response:
+                        
+                        if response.status == 200:
+                            result = await response.json()
+                            print(f"🔍 API Response received: {len(str(result))} chars")
                             
-                            if response.status == 200:
-                                result = await response.json()
-                                print(f"🔍 API Response received: {len(str(result))} chars")
+                            if 'choices' in result and len(result['choices']) > 0:
+                                message = result['choices'][0]['message']
+                                # DeepSeek Reasoner puts the actual JSON response in 'content', reasoning in 'reasoning_content'
+                                materialization_text = (message.get('content') or message.get('reasoning_content') or '').strip()
+                                print(f"📝 Materialization text: {len(materialization_text)} chars")
+                                print(f"📄 Text preview: {materialization_text[:200]}...")
                                 
-                                if 'choices' in result and len(result['choices']) > 0:
-                                    message = result['choices'][0]['message']
-                                    # DeepSeek Reasoner puts the actual JSON response in 'content', reasoning in 'reasoning_content'
-                                    materialization_text = (message.get('content') or message.get('reasoning_content') or '').strip()
-                                    print(f"📝 Materialization text: {len(materialization_text)} chars")
-                                    print(f"📄 Text preview: {materialization_text[:200]}...")
+                                # Parse the materialization response
+                                materialization_data = self._parse_materialization_response(materialization_text)
+                                print(f"🔍 Parsed data keys: {list(materialization_data.keys())}")
+                                
+                                # Create evolution stage
+                                evolution_stage = EvolutionStage(
+                                    stage_number=dummy.personality_evolution.conversation_profile.current_stage + 1 if dummy.personality_evolution else 1,
+                                    prompt_id=prompt_id,
+                                    prompt_name=prompt_name,
+                                    generation=generation,
+                                    conversation_id=conversation.id,
+                                    conversation_summary=materialization_data.get("conversation_summary", "No summary available"),
                                     
-                                    # Parse the materialization response
-                                    materialization_data = self._parse_materialization_response(materialization_text)
-                                    print(f"🔍 Parsed data keys: {list(materialization_data.keys())}")
+                                    fears_materialized=materialization_data.get("fears_materialized", {}),
+                                    challenges_materialized=materialization_data.get("challenges_materialized", {}),
+                                    behaviors_detailed=materialization_data.get("behaviors_detailed", {}),
+                                    triggers_specified=materialization_data.get("triggers_specified", {}),
                                     
-                                    # Create evolution stage
-                                    evolution_stage = EvolutionStage(
-                                        stage_number=dummy.personality_evolution.conversation_profile.current_stage + 1 if dummy.personality_evolution else 1,
-                                        prompt_id=prompt_id,
-                                        prompt_name=prompt_name,
-                                        generation=generation,
-                                        conversation_id=conversation.id,
-                                        conversation_summary=materialization_data.get("conversation_summary", "No summary available"),
-                                        
-                                        fears_materialized=materialization_data.get("fears_materialized", {}),
-                                        challenges_materialized=materialization_data.get("challenges_materialized", {}),
-                                        behaviors_detailed=materialization_data.get("behaviors_detailed", {}),
-                                        triggers_specified=materialization_data.get("triggers_specified", {}),
-                                        
-                                        accepted_solutions=materialization_data.get("accepted_solutions", {}),
-                                        progress_indicators=materialization_data.get("progress_indicators", {}),
-                                        action_plans=materialization_data.get("action_plans", {}),
-                                        
-                                        anxiety_change=materialization_data.get("anxiety_change", 0.0),
-                                        new_anxiety_level=materialization_data.get("new_anxiety_level", dummy.social_anxiety.anxiety_level),
-                                        
-                                        pre_assessment_score=pre_assessment_score,
-                                        post_assessment_score=post_assessment_score,
-                                        improvement_score=post_assessment_score - pre_assessment_score
-                                    )
+                                    accepted_solutions=materialization_data.get("accepted_solutions", {}),
+                                    progress_indicators=materialization_data.get("progress_indicators", {}),
+                                    action_plans=materialization_data.get("action_plans", {}),
                                     
-                                    print(f"✅ Materialized {dummy.name}'s personality: {evolution_stage.conversation_summary[:50]}...")
-                                    return evolution_stage
-                                else:
-                                    print(f"❌ No materialization response from DeepSeek Reasoner")
-                                    print(f"🔍 Response structure: {list(result.keys()) if isinstance(result, dict) else 'Not a dict'}")
-                                    return None
+                                    anxiety_change=materialization_data.get("anxiety_change", 0.0),
+                                    new_anxiety_level=materialization_data.get("new_anxiety_level", dummy.social_anxiety.anxiety_level),
+                                    
+                                    pre_assessment_score=pre_assessment_score,
+                                    post_assessment_score=post_assessment_score,
+                                    improvement_score=post_assessment_score - pre_assessment_score
+                                )
+                                
+                                print(f"✅ Materialized {dummy.name}'s personality: {evolution_stage.conversation_summary[:50]}...")
+                                return evolution_stage
                             else:
-                                error_text = await response.text()
-                                print(f"❌ DeepSeek Reasoner API Error: {response.status}")
-                                print(f"🔍 Error details: {error_text[:500]}")
+                                print(f"❌ No materialization response from DeepSeek Reasoner")
+                                print(f"🔍 Response structure: {list(result.keys()) if isinstance(result, dict) else 'Not a dict'}")
                                 return None
-                    
-                except Exception as e:
-                    print(f"   ⚠️  Personality materialization API call failed: {e}")
-                    if attempt < 2:  # Not the last attempt
-                        wait_time = 2 ** attempt  # Exponential backoff: 1s, 2s, 4s
-                        print(f"   ⏳ Waiting {wait_time}s before retry...")
-                        await asyncio.sleep(wait_time)
-                    else:
-                        print(f"   ❌ Materialization returned None for {dummy.name} (attempt {attempt + 1})")
-                        return None
-            
-            return None
+                        else:
+                            error_text = await response.text()
+                            print(f"❌ DeepSeek Reasoner API Error: {response.status}")
+                            print(f"🔍 Error details: {error_text[:500]}")
+                            return None
+                
+            except Exception as e:
+                print(f"   ⚠️  Personality materialization API call failed: {e}")
+                if attempt < 2:  # Not the last attempt
+                    wait_time = 2 ** attempt  # Exponential backoff: 1s, 2s, 4s
+                    print(f"   ⏳ Waiting {wait_time}s before retry...")
+                    await asyncio.sleep(wait_time)
+                else:
+                    print(f"   ❌ Materialization returned None for {dummy.name} (attempt {attempt + 1})")
+                    return None
+        
+        return None
     
     def _create_materialization_prompt(self, dummy, conversation: Conversation) -> str:
         """Create prompt for personality materialization"""
