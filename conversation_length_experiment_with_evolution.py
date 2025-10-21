@@ -419,7 +419,9 @@ class ConversationLengthExperimentWithEvolution:
                 if result:
                     valid_milestone_assessments.append(result)
                     previous_result = result  # Update for next milestone
-                    print(f"   ✅ Milestone at turn {milestone_turn} completed: {result['milestone_score']:.2f} (improvement: {result['improvement']:+.3f})")
+                    # Show incremental improvement in logs (more intuitive for debugging)
+                    incr = result.get('incremental_improvement', result['improvement'])
+                    print(f"   ✅ Milestone at turn {milestone_turn} completed: {result['milestone_score']:.2f} (Δ{incr:+.3f} from previous, {result['improvement']:+.3f} total)")
                 else:
                     print(f"   ⚠️  Milestone at turn {milestone_turn} returned no result")
                     
@@ -453,12 +455,15 @@ class ConversationLengthExperimentWithEvolution:
             # Inherit from previous milestone
             if previous_milestone_result is not None:
                 previous_score = previous_milestone_result['milestone_score']
+                # Inherit the cumulative improvement from previous milestone
+                cumulative_improvement = previous_milestone_result['improvement']
                 print(f"   📋 Inheriting score from previous milestone: {previous_score:.2f}")
                 return {
                     "milestone_turn": milestone_turn,
                     "pre_score": previous_score,
                     "milestone_score": previous_score,
-                    "improvement": 0.0,
+                    "improvement": cumulative_improvement,  # Inherit cumulative improvement
+                    "incremental_improvement": 0.0,  # No incremental change (inherited)
                     "conversation_turns": actual_turns,
                     "timestamp": datetime.now().isoformat(),
                     "note": f"Not reached - inherited from previous milestone",
@@ -552,14 +557,18 @@ class ConversationLengthExperimentWithEvolution:
                     evolution_stage.improvement_score = milestone_assessment.average_score - previous_assessment.average_score
                     personality_evolution_storage.save_personality_evolution(dummy)
                 
-                # Calculate improvement from previous assessment (grounded comparison)
-                improvement = milestone_assessment.average_score - previous_assessment.average_score
+                # Calculate improvements:
+                # - incremental: from previous assessment (for grounded comparison)
+                # - cumulative: from baseline pre-assessment (for visualization)
+                incremental_improvement = milestone_assessment.average_score - previous_assessment.average_score
+                cumulative_improvement = milestone_assessment.average_score - pre_assessment.average_score
                 
                 milestone_result = {
                     "milestone_turn": milestone_turn,
                     "pre_score": previous_assessment.average_score,
                     "milestone_score": round(milestone_assessment.average_score, 2),
-                    "improvement": round(improvement, 3),
+                    "improvement": round(cumulative_improvement, 3),  # Store cumulative for visualization
+                    "incremental_improvement": round(incremental_improvement, 3),  # Store incremental for analysis
                     "conversation_turns": len(milestone_conversation.turns),
                     "timestamp": datetime.now().isoformat(),
                     "note": f"Grounded assessment: {milestone_assessment.average_score:.2f} (anchored to previous {previous_assessment.average_score:.2f})",
