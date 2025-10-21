@@ -34,7 +34,9 @@ class Config:
     MEMO_UPDATE_INTERVAL = 6  # Generate/update memo every N turns (at turns 6, 12, 18, etc.)
     
     # Feature Toggles
-    ENABLE_PERSONALITY_EVOLUTION = True  # Toggle for dummy personality evolution during conversations
+    ENABLE_PERSONALITY_EVOLUTION = False  # Toggle for dummy personality evolution during conversations
+    ENABLE_PERSONALITY_MATERIALIZATION = False  # Toggle for LLM-based personality materialization (requires ENABLE_PERSONALITY_EVOLUTION)
+    ENABLE_MATERIALIZATION_QUALITY_ENHANCEMENT = False  # Disable automatic enhancement of poor quality materializations
     
     # Character Generation Parameters
     PERSONALITY_DIMENSIONS = {

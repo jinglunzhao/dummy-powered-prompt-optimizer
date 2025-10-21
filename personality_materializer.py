@@ -12,12 +12,12 @@ from typing import Dict, List, Any, Optional
 from datetime import datetime
 from models import EvolutionStage, Conversation
 from prompts.prompt_loader import prompt_loader
+from config import Config
 
 class PersonalityMaterializer:
     """LLM-based service for materializing personality traits from conversations"""
     
     def __init__(self, api_key: str = None):
-        from config import Config
         self.api_key = api_key or Config.DEEPSEEK_API_KEY
         if not self.api_key:
             raise ValueError("API key is required for personality materializer")
@@ -238,7 +238,7 @@ class PersonalityMaterializer:
                     materialization_data[field] = {}
             
             # Check for poor quality materialization (empty or too generic)
-            if self._is_poor_quality_materialization(materialization_data):
+            if Config.ENABLE_MATERIALIZATION_QUALITY_ENHANCEMENT and self._is_poor_quality_materialization(materialization_data):
                 print("⚠️  Detected poor quality materialization, enhancing with fallback data")
                 materialization_data = self._enhance_poor_materialization(materialization_data)
             

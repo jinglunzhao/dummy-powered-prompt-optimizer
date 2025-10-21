@@ -75,7 +75,8 @@ class ConversationSimulator:
             # Add grounding reminder every 5 rounds to keep conversation focused
             if round_num > 0 and round_num % 5 == 0:
                 # Inject a reminder into the system context (will be seen by next AI response)
-                print(f"\n🎯 Grounding checkpoint at round {round_num}", flush=True)
+                turn_count = len(conversation.turns)
+                print(f"\n🎯 Grounding checkpoint at turn {turn_count}", flush=True)
             
             # AI response
             print(".", end="", flush=True)  # Show progress dot
@@ -91,8 +92,9 @@ class ConversationSimulator:
             if round_num > 0 and round_num % 3 == 0:
                 quality_ok, reason = self._check_conversation_quality(conversation)
                 if not quality_ok:
+                    turn_count = len(conversation.turns)
                     print(f"\n⚠️  Conversation quality issue detected: {reason}")
-                    print(f"   Ending conversation early at round {round_num + 1}")
+                    print(f"   Ending conversation early at turn {turn_count}")
                     break
             
             # Check for natural ending after each complete round (AI + dummy)
@@ -100,7 +102,8 @@ class ConversationSimulator:
             if len(conversation.turns) >= 6:  # Initial turn + 2 complete rounds
                 should_end = await self.check_conversation_should_end(conversation)
                 if should_end:
-                    print(f"\n✅ Natural ending detected at round {round_num + 1}")
+                    turn_count = len(conversation.turns)
+                    print(f"\n✅ Natural ending detected at turn {turn_count}")
                     break
         
         print()  # New line after conversation progress

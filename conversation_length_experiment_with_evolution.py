@@ -143,7 +143,8 @@ class ConversationLengthExperimentWithEvolution:
             print(f"   📊 Pre-assessment: {pre_assessment.average_score:.2f}")
         
         # Start conversation with milestone assessments
-        print(f"   💬 Starting conversation (up to {max_rounds} rounds)...")
+        max_turns = 1 + max_rounds * 2  # Initial turn + rounds * 2
+        print(f"   💬 Starting conversation (up to {max_turns} turns, ~{max_rounds} exchanges)...")
         conversation, milestone_assessments = await self._simulate_conversation_with_milestones(
             dummy=dummy,
             base_prompt=base_prompt,
@@ -152,10 +153,10 @@ class ConversationLengthExperimentWithEvolution:
             enable_assessments=enable_assessments
         )
         
-        # Materialize personality evolution from conversation (only if no milestones were processed)
+        # Materialize personality evolution from conversation (only if enabled and no milestones were processed)
         # If milestones were processed, personality evolution was already materialized at each milestone
         evolution_stage = None
-        if not milestones or max_rounds not in milestones:
+        if Config.ENABLE_PERSONALITY_MATERIALIZATION and (not milestones or max_rounds not in milestones):
             print(f"   🧠 Materializing personality evolution...")
             evolution_stage = await personality_materializer.materialize_personality_from_conversation(
                 dummy=dummy,
@@ -170,29 +171,80 @@ class ConversationLengthExperimentWithEvolution:
             if evolution_stage:
                 dummy.add_evolution_stage(evolution_stage)
                 personality_evolution_storage.save_personality_evolution(dummy)
-                print(f"   ✅ Personality evolution captured: {len(dummy.personality_evolution.conversation_profile.evolution_stages)} stages")
-        else:
+                if dummy.personality_evolution:
+                    print(f"   ✅ Personality evolution captured: {len(dummy.personality_evolution.conversation_profile.evolution_stages)} stages")
+        elif dummy.personality_evolution:
             print(f"   ✅ Personality evolution already captured at milestones: {len(dummy.personality_evolution.conversation_profile.evolution_stages)} stages")
         
         # Post-assessment
+        # Only run if conversation completed all rounds; otherwise inherit from last milestone
         post_assessment = None
+        conversation_completed_all_rounds = (len(conversation.turns) >= (1 + max_rounds * 2))
+        
         if enable_assessments and self.assessment_system:
-            print(f"   📊 Running post-assessment...")
-            post_assessment = await self.assessment_system.generate_post_assessment(dummy, pre_assessment, conversation)
-            print(f"   📊 Post-assessment: {post_assessment.average_score:.2f}")
-            
-            # Update the evolution stage with final assessment
-            if evolution_stage:
-                # We created a new evolution stage, update it with post-assessment
-                evolution_stage.post_assessment_score = post_assessment.average_score
-                evolution_stage.improvement_score = post_assessment.average_score - (pre_assessment.average_score if pre_assessment else 0.0)
-                personality_evolution_storage.save_personality_evolution(dummy)
-            elif dummy.personality_evolution and dummy.personality_evolution.conversation_profile.evolution_stages:
-                # We used milestone evolution stages, update the last one with final post-assessment
-                last_stage = dummy.personality_evolution.conversation_profile.evolution_stages[-1]
-                last_stage.post_assessment_score = post_assessment.average_score
-                last_stage.improvement_score = post_assessment.average_score - (pre_assessment.average_score if pre_assessment else 0.0)
-                personality_evolution_storage.save_personality_evolution(dummy)
+            if conversation_completed_all_rounds:
+                # Conversation finished normally - run post-assessment
+                print(f"   📊 Running post-assessment...")
+                post_assessment = await self.assessment_system.generate_post_assessment(dummy, pre_assessment, conversation)
+                print(f"   📊 Post-assessment: {post_assessment.average_score:.2f}")
+                
+                # Update the evolution stage with final assessment
+                if evolution_stage:
+                    # We created a new evolution stage, update it with post-assessment
+                    evolution_stage.post_assessment_score = post_assessment.average_score
+                    evolution_stage.improvement_score = post_assessment.average_score - (pre_assessment.average_score if pre_assessment else 0.0)
+                    personality_evolution_storage.save_personality_evolution(dummy)
+                elif dummy.personality_evolution and dummy.personality_evolution.conversation_profile.evolution_stages:
+                    # We used milestone evolution stages, update the last one with final post-assessment
+                    last_stage = dummy.personality_evolution.conversation_profile.evolution_stages[-1]
+                    last_stage.post_assessment_score = post_assessment.average_score
+                    last_stage.improvement_score = post_assessment.average_score - (pre_assessment.average_score if pre_assessment else 0.0)
+                    personality_evolution_storage.save_personality_evolution(dummy)
+            else:
+                # Conversation ended early - inherit from last milestone
+                if milestone_assessments:
+                    last_milestone = milestone_assessments[-1]
+                    last_score = last_milestone['milestone_score']
+                    print(f"   📋 Conversation ended early - inheriting post-assessment from last milestone: {last_score:.2f}")
+                    
+                    # Create a mock assessment with inherited score
+                    from assessment_system_llm_based import Assessment, AssessmentResponse
+                    
+                    # Inherit responses from last milestone
+                    inherited_responses = []
+                    if last_milestone.get('detailed_assessment') and last_milestone['detailed_assessment']:
+                        for resp in last_milestone['detailed_assessment']['responses']:
+                            inherited_responses.append(AssessmentResponse(
+                                question=resp['question'],
+                                score=resp['score'],
+                                confidence=resp['confidence'],
+                                notes=resp.get('notes')
+                            ))
+                    else:
+                        # Fallback: create generic responses with inherited score
+                        for i in range(20):
+                            inherited_responses.append(AssessmentResponse(
+                                question=f"Inherited assessment {i+1}",
+                                score=int(round(last_score)),
+                                confidence=8,
+                                notes="Inherited from last milestone"
+                            ))
+                    
+                    # Calculate scores from responses
+                    score_data = Assessment.calculate_scores(inherited_responses)
+                    
+                    post_assessment = Assessment(
+                        dummy_id=dummy.id,
+                        timestamp=datetime.now(),
+                        responses=inherited_responses,
+                        total_score=score_data['total_score'],
+                        average_score=score_data['average_score'],
+                        improvement_areas=last_milestone['detailed_assessment'].get('improvement_areas', []) if last_milestone.get('detailed_assessment') else []
+                    )
+                    print(f"   📊 Post-assessment (inherited): {post_assessment.average_score:.2f}")
+                else:
+                    print(f"   ⚠️  No milestones to inherit from - using pre-assessment")
+                    post_assessment = pre_assessment
         
         # Use real milestone assessments from conversation simulation
         milestone_results = milestone_assessments if enable_assessments else []
@@ -203,18 +255,27 @@ class ConversationLengthExperimentWithEvolution:
                 milestone["pre_score"] = pre_assessment.average_score
                 milestone["improvement"] = round(milestone["milestone_score"] - pre_assessment.average_score, 3)
         
+        # Count reached vs unreached milestones
+        reached_milestones = [m for m in milestone_results if m.get("reached", True)]
+        unreached_milestones = [m for m in milestone_results if not m.get("reached", True)]
+        
         # Prepare result
         result = {
             "dummy_name": dummy.name,
             "dummy_id": dummy.id,
             "pre_assessment_score": pre_assessment.average_score if pre_assessment else 2.5,
             "final_assessment_score": post_assessment.average_score if post_assessment else 2.5,
+            "post_assessment_inherited": not conversation_completed_all_rounds and enable_assessments,
             "final_improvement": (post_assessment.average_score if post_assessment else 2.5) - (pre_assessment.average_score if pre_assessment else 2.5),
             "total_conversation_turns": len(conversation.turns),
-            "total_duration_seconds": 120.0,  # Estimated
+            "conversation_ended_early": len(unreached_milestones) > 0,
+            "milestones_reached": len(reached_milestones),
+            "milestones_total": len(milestone_results),
+            "total_duration_seconds": conversation.duration_seconds if hasattr(conversation, 'duration_seconds') else 120.0,
             "milestone_results": milestone_results,
             "personality_evolution": {
-                "enabled": True,
+                "enabled": Config.ENABLE_PERSONALITY_EVOLUTION,
+                "materialization_enabled": Config.ENABLE_PERSONALITY_MATERIALIZATION,
                 "evolution_stages": len(dummy.personality_evolution.conversation_profile.evolution_stages) if dummy.personality_evolution else 0,
                 "final_anxiety_level": dummy.personality_evolution.conversation_profile.current_social_anxiety_level if dummy.personality_evolution else dummy.social_anxiety.anxiety_level,
                 "materialized_fears": len(dummy.personality_evolution.conversation_profile.current_fears) if dummy.personality_evolution else 0,
@@ -259,7 +320,8 @@ class ConversationLengthExperimentWithEvolution:
     async def _run_continuous_conversation(self, dummy: AIDummy, base_prompt: str, max_rounds: int) -> Conversation:
         """Run conversation continuously with end detection using the latest conversation simulator"""
         
-        print(f"   🔄 Running conversation with end detection (max {max_rounds} rounds)...")
+        max_turns = 1 + max_rounds * 2
+        print(f"   🔄 Running conversation with end detection (max {max_turns} turns)...")
         
         # Use the latest conversation simulator with end detection
         conversation = await self.conversation_simulator.simulate_conversation_async(
@@ -276,7 +338,12 @@ class ConversationLengthExperimentWithEvolution:
         conversation.scenario = "Social skills coaching session"
         conversation.start_time = datetime.now()
         
-        print(f"   ✅ Conversation completed: {len(conversation.turns)} turns")
+        actual_turns = len(conversation.turns)
+        expected_turns = 1 + max_rounds * 2
+        if actual_turns < expected_turns:
+            print(f"   ⏹️  Conversation ended early: {actual_turns} turns (expected {expected_turns})")
+        else:
+            print(f"   ✅ Conversation completed: {actual_turns} turns")
         
         return conversation
     
@@ -289,7 +356,8 @@ class ConversationLengthExperimentWithEvolution:
         previous_score = None  # Start with no previous score (will use initial baseline)
         
         for milestone_round in milestones:
-            print(f"   🔄 Processing milestone {milestone_round} with progressive scoring...")
+            milestone_turns = 1 + milestone_round * 2
+            print(f"   🔄 Processing milestone at turn {milestone_turns} (~{milestone_round} exchanges)...")
             
             try:
                 result = await self._process_single_milestone(
@@ -299,19 +367,46 @@ class ConversationLengthExperimentWithEvolution:
                 if result:
                     valid_milestone_assessments.append(result)
                     previous_score = result['milestone_score']  # Update for next milestone
-                    print(f"   ✅ Milestone {milestone_round} completed: {result['milestone_score']:.2f} (improvement: {result['improvement']:+.3f})")
+                    print(f"   ✅ Milestone at turn {milestone_turns} completed: {result['milestone_score']:.2f} (improvement: {result['improvement']:+.3f})")
                 else:
-                    print(f"   ⚠️  Milestone {milestone_round} returned no result")
+                    print(f"   ⚠️  Milestone at turn {milestone_turns} returned no result")
                     
             except Exception as e:
-                print(f"   ❌ Milestone {milestone_round} failed: {e}")
+                print(f"   ❌ Milestone at turn {milestone_turns} failed: {e}")
         
         return valid_milestone_assessments
     
     async def _process_single_milestone(self, dummy: AIDummy, conversation: Conversation, milestone_round: int, previous_milestone_score: float = None) -> Optional[Dict[str, Any]]:
         """Process a single milestone: materialization + assessment"""
         
-        print(f"   📊 Processing milestone {milestone_round}...")
+        # Check if conversation actually reached this milestone
+        # Initial turn (1) + milestone_round * 2 turns (each round = dummy + AI)
+        # Example: milestone 5 needs 1 + 5*2 = 11 turns
+        required_turns = 1 + milestone_round * 2
+        actual_turns = len(conversation.turns)
+        
+        print(f"   📊 Assessing at turn {required_turns}...")
+        
+        if actual_turns < required_turns:
+            print(f"   ⏭️  Turn {required_turns} not reached (conversation ended at {actual_turns} turns)")
+            
+            # Inherit from previous milestone
+            if previous_milestone_score is not None:
+                print(f"   📋 Inheriting score from previous milestone: {previous_milestone_score:.2f}")
+                return {
+                    "milestone_rounds": milestone_round,
+                    "pre_score": previous_milestone_score,
+                    "milestone_score": previous_milestone_score,
+                    "improvement": 0.0,
+                    "conversation_turns": actual_turns,
+                    "timestamp": datetime.now().isoformat(),
+                    "note": f"Conversation ended early - inherited score from previous milestone",
+                    "detailed_assessment": None,
+                    "reached": False  # Mark as unreached
+                }
+            else:
+                print(f"   ⚠️  No previous milestone to inherit from - skipping")
+                return None
         
         # Create conversation up to milestone point
         milestone_conversation = Conversation(
@@ -329,22 +424,24 @@ class ConversationLengthExperimentWithEvolution:
             baseline_score = previous_milestone_score if previous_milestone_score is not None else 2.5
             print(f"   📈 Using baseline score: {baseline_score:.2f} ({'previous milestone' if previous_milestone_score else 'initial baseline'})")
             
-            # Materialize personality evolution at this milestone
-            print(f"   🧠 Materializing personality evolution at milestone {milestone_round}...")
-            evolution_stage = await personality_materializer.materialize_personality_from_conversation(
-                dummy=dummy,
-                conversation=milestone_conversation,
-                prompt_id="conversation_length_test",
-                prompt_name="Conversation Length Test",
-                generation=0,
-                pre_assessment_score=baseline_score,  # Use progressive baseline
-                post_assessment_score=0.0  # Will be updated after milestone assessment
-            )
-            
-            if evolution_stage:
-                dummy.add_evolution_stage(evolution_stage)
-                personality_evolution_storage.save_personality_evolution(dummy)
-                print(f"   ✅ Personality evolution captured at milestone {milestone_round}")
+            # Materialize personality evolution at this milestone (if enabled)
+            evolution_stage = None
+            if Config.ENABLE_PERSONALITY_MATERIALIZATION:
+                print(f"   🧠 Materializing personality evolution at turn {required_turns}...")
+                evolution_stage = await personality_materializer.materialize_personality_from_conversation(
+                    dummy=dummy,
+                    conversation=milestone_conversation,
+                    prompt_id="conversation_length_test",
+                    prompt_name="Conversation Length Test",
+                    generation=0,
+                    pre_assessment_score=baseline_score,  # Use progressive baseline
+                    post_assessment_score=0.0  # Will be updated after milestone assessment
+                )
+                
+                if evolution_stage:
+                    dummy.add_evolution_stage(evolution_stage)
+                    personality_evolution_storage.save_personality_evolution(dummy)
+                    print(f"   ✅ Personality evolution captured at turn {required_turns}")
             
             # Run milestone assessment (using current evolved personality)
             if self.assessment_system:
@@ -390,6 +487,7 @@ class ConversationLengthExperimentWithEvolution:
                     "conversation_turns": len(milestone_conversation.turns),
                     "timestamp": datetime.now().isoformat(),
                     "note": f"Progressive assessment: {milestone_assessment.average_score:.2f} vs {baseline_score:.2f} baseline ({'previous milestone' if previous_milestone_score else 'initial'})",
+                    "reached": True,  # Mark as actually reached
                     "detailed_assessment": {
                         "dummy_id": milestone_assessment.dummy_id,
                         "timestamp": milestone_assessment.timestamp.isoformat(),
@@ -411,7 +509,7 @@ class ConversationLengthExperimentWithEvolution:
                 return milestone_result
             
         except Exception as e:
-            print(f"   ❌ Error processing milestone {milestone_round}: {e}")
+            print(f"   ❌ Error processing milestone at turn {1 + milestone_round * 2}: {e}")
             return None
         
         return None
@@ -432,13 +530,22 @@ class ConversationLengthExperimentWithEvolution:
         print(f"   • Best improvement: +{best_improvement:.3f} points")
         print(f"   • Worst improvement: +{worst_improvement:.3f} points")
         
+        # Conversation completion stats
+        early_endings = sum(1 for r in results if r.get("conversation_ended_early", False))
+        avg_turns = sum(r["total_conversation_turns"] for r in results) / len(results)
+        
+        print(f"\n💬 Conversation Completion:")
+        print(f"   • Early endings: {early_endings}/{len(results)} conversations")
+        print(f"   • Average turns: {avg_turns:.1f}")
+        
         # Personality evolution stats
         evolution_enabled_count = sum(1 for r in results if r["personality_evolution"]["enabled"])
         avg_evolution_stages = sum(r["personality_evolution"]["evolution_stages"] for r in results) / len(results)
         avg_final_anxiety = sum(r["personality_evolution"]["final_anxiety_level"] for r in results) / len(results)
         
         print(f"\n🧬 Personality Evolution:")
-        print(f"   • Dummies with evolution: {evolution_enabled_count}/{len(results)}")
+        print(f"   • Evolution enabled: {evolution_enabled_count}/{len(results)}")
+        print(f"   • Materialization enabled: {results[0]['personality_evolution']['materialization_enabled']}")
         print(f"   • Average evolution stages: {avg_evolution_stages:.1f}")
         print(f"   • Average final anxiety level: {avg_final_anxiety:.1f}/10")
         
@@ -446,10 +553,17 @@ class ConversationLengthExperimentWithEvolution:
         print(f"\n👥 Individual Results:")
         for result in results:
             evolution = result["personality_evolution"]
-            print(f"   • {result['dummy_name']}: +{result['final_improvement']:.3f} points")
+            early_marker = " 🔚" if result.get("conversation_ended_early", False) else ""
+            inherited_marker = " (inherited)" if result.get("post_assessment_inherited", False) else ""
+            print(f"   • {result['dummy_name']}: +{result['final_improvement']:.3f} points ({result['total_conversation_turns']} turns){early_marker}")
+            if result.get("conversation_ended_early"):
+                print(f"     - Milestones reached: {result['milestones_reached']}/{result['milestones_total']}")
+            if result.get("post_assessment_inherited"):
+                print(f"     - Post-assessment: inherited from last milestone")
             print(f"     - Evolution stages: {evolution['evolution_stages']}")
             print(f"     - Final anxiety: {evolution['final_anxiety_level']:.1f}/10")
-            print(f"     - Materialized traits: {evolution['materialized_fears']} fears, {evolution['materialized_challenges']} challenges")
+            if evolution['materialization_enabled']:
+                print(f"     - Materialized traits: {evolution['materialized_fears']} fears, {evolution['materialized_challenges']} challenges")
 
 async def main():
     """Main function to run the experiment"""
