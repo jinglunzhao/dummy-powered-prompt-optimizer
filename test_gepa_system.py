@@ -45,7 +45,7 @@ def save_experiment_result(experiment_id, results, status, config):
         'experiment_id': experiment_id,
         'status': status,
         'dummies_count': config.get('dummies_count', 0),
-        'conversation_rounds': config.get('conversation_rounds', 0),
+        'conversation_turns': config.get('conversation_turns', config.get('conversation_rounds', 0)),  # Support both old and new format
         'generations': config.get('generations', 0),
         'population_size': config.get('population_size', 0),
         'mutation_rate': config.get('mutation_rate', 0),
@@ -78,7 +78,7 @@ async def run_gepa_test(config: Dict[str, Any] = None):
     default_config = {
         "test_name": "Enhanced GEPA System",
         "dummies_count": 10,
-        "conversation_rounds": 15,  
+        "conversation_turns": 31,  # ~15 exchanges
         "generations": 6,
         "population_size": 1,
         "mutation_rate": 0.3,
@@ -101,7 +101,7 @@ async def run_gepa_test(config: Dict[str, Any] = None):
     print("=" * 60)
     print("📊 Configuration:")
     print(f"   • {config['dummies_count']} AI Dummies")
-    print(f"   • {config['conversation_rounds']} conversation rounds per test")
+    print(f"   • {config['conversation_turns']} conversation turns per test")
     print(f"   • {config['generations']} generations of evolution")
     print(f"   • Population size: {config['population_size']}")
     print(f"   • Max population size: {Config.MAX_POPULATION_SIZE}")
@@ -111,7 +111,7 @@ async def run_gepa_test(config: Dict[str, Any] = None):
     
     # Calculate expected duration
     total_tests = config['generations'] * 2  # Rough estimate
-    total_api_calls = total_tests * config['conversation_rounds'] * config['dummies_count']
+    total_api_calls = total_tests * config['conversation_turns'] * config['dummies_count']
     estimated_minutes = total_api_calls * 0.5  # ~30 seconds per API call
     
     print(f"⏱️  Estimated duration: ~{estimated_minutes:.1f} minutes")
@@ -203,8 +203,11 @@ async def run_gepa_test(config: Dict[str, Any] = None):
     
     start_time = time.time()
     
-    # Run the optimization with SAME dummies
-    best_prompt = await optimizer.run_optimization_async(ai_dummies)
+    # Run the optimization with SAME dummies and configured conversation turns
+    best_prompt = await optimizer.run_optimization_async(
+        ai_dummies, 
+        max_turns=config['conversation_turns']
+    )
     
     end_time = time.time()
     duration = end_time - start_time
@@ -250,7 +253,7 @@ async def run_gepa_test(config: Dict[str, Any] = None):
         "test_config": {
             "test_name": config['test_name'],
             "dummies_count": len(dummies),
-            "conversation_rounds": config['conversation_rounds'],
+            "conversation_turns": config['conversation_turns'],
             "generations": config['generations'],
             "population_size": config['population_size'],
             "mutation_rate": config['mutation_rate'],
@@ -287,15 +290,15 @@ async def run_gepa_test(config: Dict[str, Any] = None):
         "dummies": [dummy.model_dump() for dummy in ai_dummies],
         "statistics": {
             "total_tests": len(optimizer.optimization_history),
-            "total_api_calls": len(optimizer.optimization_history) * config['conversation_rounds'] * config['dummies_count'],
+            "total_api_calls": len(optimizer.optimization_history) * config['conversation_turns'] * config['dummies_count'],
             "average_improvement": sum(p.performance_metrics.get('avg_improvement', 0) for p in pareto_frontier) / len(pareto_frontier) if pareto_frontier else 0,
             "pareto_frontier_size": len(pareto_frontier)
         }
     }
     
     # Create experiment with proper versioning
-    experiment_name = f"{config['test_name']} - {config['dummies_count']}d{config['conversation_rounds']}r{config['generations']}g"
-    experiment_description = f"GEPA test with {config['dummies_count']} dummies, {config['conversation_rounds']} rounds, {config['generations']} generations"
+    experiment_name = f"{config['test_name']} - {config['dummies_count']}d{config['conversation_turns']}t{config['generations']}g"
+    experiment_description = f"GEPA test with {config['dummies_count']} dummies, {config['conversation_turns']} turns, {config['generations']} generations"
     
     experiment_id = create_experiment(experiment_name, config, experiment_description)
     
@@ -388,7 +391,7 @@ def view_test_history():
             
             print(f"\n🧪 Test {i+1}: {test.get('timestamp', 'Unknown time')}")
             print(f"   • Experiment ID: {test.get('experiment_id', 'Unknown')}")
-            print(f"   • Configuration: {config.get('dummies_count', '?')}d {config.get('conversation_rounds', '?')}r {config.get('generations', '?')}g")
+            print(f"   • Configuration: {config.get('dummies_count', '?')}d {config.get('conversation_turns', config.get('conversation_rounds', '?'))}t {config.get('generations', '?')}g")
             print(f"   • Duration: {config.get('duration_seconds', 0):.1f}s")
             print(f"   • API Calls: {stats.get('total_api_calls', 0)}")
             print(f"   • Pareto Solutions: {stats.get('pareto_frontier_size', 0)}")
@@ -403,7 +406,7 @@ def get_preset_configs():
         "quick_validation": {
             "test_name": "Quick Validation Test",
             "dummies_count": 10,
-            "conversation_rounds": 25,  # Enhanced: 25 rounds
+            "conversation_turns": 51,  # Enhanced: ~25 exchanges
             "generations": 6,
             "population_size": 1,
             "mutation_rate": 0.3,
@@ -418,7 +421,7 @@ def get_preset_configs():
         "small_scale": {
             "test_name": "Small Scale Test",
             "dummies_count": 10,
-            "conversation_rounds": 25,  # Enhanced: 25 rounds
+            "conversation_turns": 51,  # Enhanced: ~25 exchanges
             "generations": 5,
             "population_size": 1,
             "mutation_rate": 0.3,
@@ -433,7 +436,7 @@ def get_preset_configs():
         "medium_scale": {
             "test_name": "Medium Scale Test",
             "dummies_count": 25,
-            "conversation_rounds": 25,  # Enhanced: 25 rounds
+            "conversation_turns": 51,  # Enhanced: ~25 exchanges
             "generations": 6,
             "population_size": 1,
             "mutation_rate": 0.3,
@@ -448,7 +451,7 @@ def get_preset_configs():
         "full_scale": {
             "test_name": "Full Scale Test",
             "dummies_count": 50,
-            "conversation_rounds": 25,  # Enhanced: 25 rounds
+            "conversation_turns": 51,  # Enhanced: ~25 exchanges
             "generations": 8,
             "population_size": 1,
             "mutation_rate": 0.3,
@@ -469,7 +472,8 @@ if __name__ == "__main__":
     parser.add_argument("--preset", choices=["quick_validation", "small_scale", "medium_scale", "full_scale"], 
                        default="quick_validation", help="Use preset configuration")
     parser.add_argument("--dummies", type=int, help="Number of dummies")
-    parser.add_argument("--rounds", type=int, help="Conversation rounds per test")
+    parser.add_argument("--turns", type=int, help="Conversation turns per test")
+    parser.add_argument("--rounds", type=int, help="[DEPRECATED] Use --turns instead")
     parser.add_argument("--generations", type=int, help="Number of generations")
     parser.add_argument("--output", type=str, help="Output file path")
     parser.add_argument("--history", action="store_true", help="View test history instead of running a test")
@@ -488,15 +492,18 @@ if __name__ == "__main__":
     # Override with command line arguments
     if args.dummies:
         config["dummies_count"] = args.dummies
-    if args.rounds:
-        config["conversation_rounds"] = args.rounds
+    if args.turns:
+        config["conversation_turns"] = args.turns
+    elif args.rounds:
+        print(f"⚠️  Warning: --rounds is deprecated, use --turns instead")
+        config["conversation_turns"] = args.rounds
     if args.generations:
         config["generations"] = args.generations
     if args.output:
         config["output_file"] = args.output
     
     print(f"🎯 Using configuration: {config['test_name']}")
-    print(f"📊 Custom parameters: {args.dummies or 'default'} dummies, {args.rounds or 'default'} rounds, {args.generations or 'default'} generations")
+    print(f"📊 Custom parameters: {args.dummies or 'default'} dummies, {args.turns or args.rounds or 'default'} turns, {args.generations or 'default'} generations")
     
     try:
         results = asyncio.run(run_gepa_test(config))

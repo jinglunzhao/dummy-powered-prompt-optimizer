@@ -239,10 +239,17 @@ class DebugAssessmentSystem(AssessmentSystemLLMBased):
         super().__init__(api_key=api_key)
         self._current_conversation = None  # Track current conversation being assessed
     
-    async def generate_post_assessment(self, dummy, pre_assessment, conversation=None, conversation_simulator=None):
+    async def generate_milestone_assessment(self, dummy, previous_assessment, conversation, conversation_simulator=None, turns_so_far=None):
         """Override to track conversation being assessed."""
         self._current_conversation = conversation
-        result = await super().generate_post_assessment(dummy, pre_assessment, conversation, conversation_simulator)
+        result = await super().generate_milestone_assessment(dummy, previous_assessment, conversation, conversation_simulator, turns_so_far)
+        self._current_conversation = None
+        return result
+    
+    async def generate_post_assessment(self, dummy, pre_assessment, conversation=None, conversation_simulator=None, previous_milestone_assessment=None):
+        """Override to track conversation being assessed."""
+        self._current_conversation = conversation
+        result = await super().generate_post_assessment(dummy, pre_assessment, conversation, conversation_simulator, previous_milestone_assessment)
         self._current_conversation = None
         return result
     
@@ -260,13 +267,20 @@ class DebugAssessmentSystem(AssessmentSystemLLMBased):
         
         if is_milestone:
             # Extract milestone info from conversation ID
-            match = re.search(r'milestone_(\d+)', self._current_conversation.id)
+            # Format: conv_{id}_milestone_turn11 or conv_{id}_milestone_5 (old format)
+            match = re.search(r'milestone_turn(\d+)', self._current_conversation.id)
             if match:
-                milestone_round = int(match.group(1))
-                milestone_turn = 1 + milestone_round * 2
-                step_label = f"MILESTONE ASSESSMENT at Turn {milestone_turn} (~{milestone_round} exchanges)"
+                milestone_turn = int(match.group(1))
+                step_label = f"MILESTONE ASSESSMENT at Turn {milestone_turn}"
             else:
-                step_label = "MILESTONE ASSESSMENT"
+                # Fallback for old format
+                match = re.search(r'milestone_(\d+)', self._current_conversation.id)
+                if match:
+                    milestone_round = int(match.group(1))
+                    milestone_turn = 1 + milestone_round * 2
+                    step_label = f"MILESTONE ASSESSMENT at Turn {milestone_turn}"
+                else:
+                    step_label = "MILESTONE ASSESSMENT"
         # Then check for baseline
         elif "baseline assessment" in user_lower or "baseline assessment" in system_lower:
             step_label = "PRE-ASSESSMENT (Baseline)"
@@ -394,9 +408,9 @@ async def debug_dummy_full_workflow(dummy_name: str = None, experiment_file: str
     print("\n🎬 Starting FULL experiment workflow...")
     print("="*80)
     
-    # Run experiment
+    # Run experiment with milestones at turns 11, 21, 31 (exchanges 5, 10, 15)
     result = await experiment.run_dummy_experiment(
-        dummy=dummy, max_rounds=15, milestones=[5, 10, 15],
+        dummy=dummy, max_turns=31, milestone_turns=[11, 21, 31],
         base_prompt=system_prompt, save_details=True, enable_assessments=True
     )
     
@@ -415,8 +429,8 @@ async def debug_dummy_full_workflow(dummy_name: str = None, experiment_file: str
     print("\n📋 Milestones:")
     for m in result['milestone_results']:
         marker = "✅" if m.get('reached', True) else "⏭️"
-        milestone_turns = 1 + m['milestone_rounds'] * 2
-        print(f"   {marker} Turn {milestone_turns}: {m['milestone_score']:.2f} (Δ{m['improvement']:+.3f}) - {m['note']}")
+        milestone_turn = m.get('milestone_turn', m.get('milestone_rounds', 0))  # Support both formats
+        print(f"   {marker} Turn {milestone_turn}: {m['milestone_score']:.2f} (Δ{m['improvement']:+.3f}) - {m['note']}")
     
     # Save
     output_file = f"data/experiments/debug_sarah_brooks_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"

@@ -18,8 +18,13 @@ assessment_system_prompt: |
   3. Responses should reflect genuine self-reflection, not external assessment
   4. Maintain personality consistency while allowing for growth from coaching
   5. Each question should receive exactly one integer score from 1-4
-  6. For POST-COACHING assessments: Compare against baseline scores to determine if coaching helped
+  6. CRITICAL: When previous assessment scores are provided, USE THEM AS YOUR ANCHOR
+     - Previous scores represent this student's established self-perception
+     - Only change scores if the coaching conversation specifically addressed that area
+     - Changes should be small (±1 point maximum per conversation)
+     - If nothing in the conversation addressed a skill, keep the previous score
   7. Small improvements (0.5-1 point increase) are realistic; dramatic changes are unlikely
+  8. Maintain scoring consistency: don't penalize honesty or vulnerability shown in conversations
   
   RESPONSE FORMAT:
   For each of the 20 questions, provide only the numeric score (1-4) followed by a brief explanation (1-2 sentences) of why the student would rate themselves that way.
@@ -57,6 +62,44 @@ baseline_assessment_prompt: |
   
   Rate each of the 20 social skills questions from 1-4 based on how {student_name} would realistically assess themselves given their personality profile.
 
+milestone_assessment_prompt: |
+  STUDENT PROFILE:
+  Name: {student_name}
+  Age: {age}
+  Major: {major}
+  University: {university}
+  
+  PERSONALITY TRAITS:
+  {personality_desc}
+  
+  SOCIAL ANXIETY:
+  {anxiety_desc}
+  
+  PERSONAL DETAILS:
+  - Fears: {fears}
+  - Goals: {goals}
+  - Challenges: {challenges}
+  - Behaviors: {behaviors}
+  
+  PREVIOUS ASSESSMENT SCORES (USE AS YOUR ANCHOR - only change if coaching addressed that specific skill):
+  {previous_scores}
+  
+  CONVERSATION SO FAR:
+  {conversation_summary}
+  
+  MILESTONE ASSESSMENT:
+  {student_name} is re-evaluating themselves after {turns_so_far} turns of coaching conversation.
+  
+  CRITICAL GROUNDING RULES:
+  1. START with the previous assessment scores shown above - these are your baseline
+  2. ONLY adjust scores for skills that were SPECIFICALLY discussed or practiced in the conversation
+  3. If a skill wasn't mentioned in the conversation, KEEP the previous score unchanged
+  4. Maximum change per assessment: ±1 point
+  5. Do NOT penalize the student for being honest about struggles in the conversation
+  6. The student showing vulnerability is growth, not regression
+  
+  Rate each of the 20 social skills questions from 1-4, anchoring to the previous scores and only adjusting where the coaching specifically helped.
+
 post_conversation_assessment_prompt: |
   STUDENT PROFILE:
   Name: {student_name}
@@ -76,18 +119,22 @@ post_conversation_assessment_prompt: |
   - Challenges: {challenges}
   - Behaviors: {behaviors}
   
-  BASELINE SCORES (for reference):
-  {baseline_scores}
+  PREVIOUS ASSESSMENT SCORES (USE AS YOUR ANCHOR - only change if coaching addressed that specific skill):
+  {previous_scores}
   
   CONVERSATION SUMMARY:
   {conversation_summary}
   
-  POST-CONVERSATION ASSESSMENT:
-  After this coaching conversation, please help {student_name} re-evaluate themselves. Consider:
-  1. How the coaching conversation addressed their specific concerns
-  2. Whether they gained new insights or strategies
-  3. If their self-perception has shifted (even slightly) due to the conversation
-  4. Realistic progress: small improvements (0.5-1 point) are expected, dramatic changes are unlikely
+  FINAL ASSESSMENT:
+  After this complete coaching conversation, please help {student_name} re-evaluate themselves.
   
-  Rate each of the 20 social skills questions from 1-4 based on how {student_name} would assess themselves after this coaching experience. Consider whether coaching helped them improve from their baseline scores.
+  CRITICAL GROUNDING RULES:
+  1. START with the previous assessment scores shown above - these are your baseline
+  2. ONLY adjust scores for skills that were SPECIFICALLY discussed or practiced in the conversation
+  3. If a skill wasn't mentioned in the conversation, KEEP the previous score unchanged
+  4. Maximum change since previous assessment: ±1 point
+  5. Do NOT penalize the student for being honest about struggles
+  6. Showing vulnerability and seeking help demonstrates growth
+  
+  Rate each of the 20 social skills questions from 1-4, anchoring to the previous assessment and only adjusting where coaching specifically helped.
 

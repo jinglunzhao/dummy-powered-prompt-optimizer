@@ -558,7 +558,7 @@
                                 <strong>Timestamp:</strong> ${experimentInfo?.timestamp || 'Unknown'}<br>
                                 <strong>Experiment Type:</strong> ${experimentInfo?.experiment_type || 'Unknown'}<br>
                                 <strong>Number of Dummies:</strong> ${experimentInfo?.num_dummies || 'Unknown'}<br>
-                                <strong>Max Rounds:</strong> ${experimentInfo?.max_rounds || 'Unknown'}
+                                <strong>Max Turns:</strong> ${experimentInfo?.max_turns || (experimentInfo?.max_rounds ? (1 + experimentInfo.max_rounds * 2) : 'Unknown')}
                             </div>
                             <div class="prompt-content">${prompt}</div>
                         </div>
@@ -592,21 +592,21 @@
             processExperimentData(experiment) {
                 this.chartData = experiment.results.map(result => {
                     const milestones = result.milestone_results.map(milestone => ({
-                        round: milestone.milestone_rounds,
+                        turn: milestone.milestone_turn || (1 + (milestone.milestone_rounds || 0) * 2),  // Support both formats
                         improvement: milestone.improvement,
                         score: milestone.milestone_score
                     }));
                     
-                    // Add initial point (0 rounds, 0 improvement)
+                    // Add initial point (turn 0, 0 improvement)
                     milestones.unshift({
-                        round: 0,
+                        turn: 0,
                         improvement: 0,
                         score: result.pre_assessment_score
                     });
                     
                     return {
                         name: result.dummy_name,
-                        data: milestones.sort((a, b) => a.round - b.round),
+                        data: milestones.sort((a, b) => a.turn - b.turn),
                         // Include evolution data if available
                         personality_evolution: result.personality_evolution,
                         conversation_details: result.conversation_details
@@ -659,11 +659,11 @@
                 }
                 
                 // Calculate scales
-                const allRounds = displayData.flatMap(d => d.data.map(p => p.round));
+                const allTurns = displayData.flatMap(d => d.data.map(p => p.turn));
                 const allImprovements = displayData.flatMap(d => d.data.map(p => p.improvement));
                 
                 const xScale = d3.scaleLinear()
-                    .domain(d3.extent(allRounds))
+                    .domain(d3.extent(allTurns))
                     .range([0, width]);
                 
                 const yScale = d3.scaleLinear()
@@ -672,7 +672,7 @@
                 
                 // Create line generator
                 const line = d3.line()
-                    .x(d => xScale(d.round))
+                    .x(d => xScale(d.turn))
                     .y(d => yScale(d.improvement))
                     .curve(d3.curveMonotoneX);
                 
@@ -695,7 +695,7 @@
                             .data(dummy.data)
                             .enter().append('circle')
                             .attr('class', `dot-${i}`)
-                            .attr('cx', d => xScale(d.round))
+                            .attr('cx', d => xScale(d.turn))
                             .attr('cy', d => yScale(d.improvement))
                             .attr('r', 4)
                             .attr('fill', this.colors[i % this.colors.length])
@@ -704,26 +704,28 @@
                             .style('cursor', 'pointer')
                             .on('click', (event, d) => {
                                 console.log('=== CLICK EVENT ===');
-                                console.log('Clicked round:', d.round);
-                                console.log('Final point round:', finalPoint.round);
+                                console.log('Clicked turn:', d.turn);
+                                console.log('Final point turn:', finalPoint.turn);
                                 console.log('Dummy name:', dummy.name);
-                                console.log('Are they equal?', d.round === finalPoint.round);
+                                console.log('Are they equal?', d.turn === finalPoint.turn);
                                 
-                                // Check if this is a milestone round
+                                // Check if this is a milestone turn
                                 const dummyData = this.currentExperiment?.results?.find(r => r.dummy_name === dummy.name);
                                 console.log('Dummy data found:', !!dummyData);
                                 
-                                const milestone = dummyData?.milestone_results?.find(m => m.milestone_rounds === d.round);
+                                const milestone = dummyData?.milestone_results?.find(m => 
+                                    (m.milestone_turn || (1 + (m.milestone_rounds || 0) * 2)) === d.turn
+                                );
                                 console.log('Is milestone:', !!milestone);
                                 
                                 if (milestone) {
                                     console.log('Showing milestone assessment details');
-                                    // Show assessment details for milestone rounds
-                                    this.showMilestoneAssessmentDetails(dummy.name, d.round);
+                                    // Show assessment details for milestone turns
+                                    this.showMilestoneAssessmentDetails(dummy.name, d.turn);
                                 } else {
-                                    console.log('Showing evolution for non-milestone round');
-                                    // Show evolution for non-milestone rounds
-                                    this.showPersonalityEvolutionAtRound(dummy.name, d.round);
+                                    console.log('Showing evolution for non-milestone turn');
+                                    // Show evolution for non-milestone turns
+                                    this.showPersonalityEvolutionAtTurn(dummy.name, d.turn);
                                 }
                             })
                             .on('mouseover', function(event, d) {
@@ -738,7 +740,7 @@
                                     .style('opacity', 1)
                                     .style('left', (event.pageX + 10) + 'px')
                                     .style('top', (event.pageY - 10) + 'px')
-                                    .html(`Round ${d.round}<br/>Improvement: +${d.improvement.toFixed(3)} points<br/>Click to see personality evolution`);
+                                    .html(`Turn ${d.turn}<br/>Improvement: +${d.improvement.toFixed(3)} points<br/>Click to see personality evolution`);
                             })
                             .on('mouseout', function(event, d) {
                                 // Hide tooltip
@@ -754,7 +756,7 @@
                         const finalPoint = dummy.data[dummy.data.length - 1];
                         if (finalPoint && dummy.conversation_details && dummy.conversation_details.personality_evolution_timeline) {
                             g.append('text')
-                                .attr('x', xScale(finalPoint.round))
+                                .attr('x', xScale(finalPoint.turn))
                                 .attr('y', yScale(finalPoint.improvement) - 15)
                                 .attr('text-anchor', 'middle')
                                 .attr('font-size', '12px')
@@ -784,7 +786,7 @@
                     .attr('y', 40)
                     .attr('fill', 'black')
                     .style('text-anchor', 'middle')
-                    .text('Conversation Rounds');
+                    .text('Conversation Turns');
                 
                 g.append('g')
                     .call(d3.axisLeft(yScale))
@@ -802,7 +804,7 @@
             
             
             
-            showEvolutionDetails(dummyName, evolutionTimeline, returnToAssessment = false, returnRound = null) {
+            showEvolutionDetails(dummyName, evolutionTimeline, returnToAssessment = false, returnTurn = null) {
                 console.log('showEvolutionDetails called with:', dummyName, evolutionTimeline?.length, 'stages');
                 const modal = document.getElementById('conversation-modal');
                 const modalBody = document.getElementById('modal-content-body');
@@ -815,8 +817,8 @@
                     <div class="conversation-header">
                         <div class="conversation-title-row">
                             <div class="conversation-title">🧬 ${dummyName} - Personality Evolution Details</div>
-                            ${returnToAssessment && returnRound ? `
-                                <button class="return-button" onclick="visualizer.showMilestoneAssessmentDetails('${dummyName}', ${returnRound}); this.closest('.modal').remove();">
+                            ${returnToAssessment && returnTurn ? `
+                                <button class="return-button" onclick="visualizer.showMilestoneAssessmentDetails('${dummyName}', ${returnTurn}); this.closest('.modal').remove();">
                                     📊 Back to Assessment
                                 </button>
                             ` : ''}
@@ -920,24 +922,24 @@
             }
             
             renderAverageLine(g, data, xScale, yScale, line) {
-                // Calculate average improvements at each round
-                const roundMap = new Map();
+                // Calculate average improvements at each turn
+                const turnMap = new Map();
                 
                 data.forEach(dummy => {
                     dummy.data.forEach(point => {
-                        if (!roundMap.has(point.round)) {
-                            roundMap.set(point.round, []);
+                        if (!turnMap.has(point.turn)) {
+                            turnMap.set(point.turn, []);
                         }
-                        roundMap.get(point.round).push(point.improvement);
+                        turnMap.get(point.turn).push(point.improvement);
                     });
                 });
                 
-                const averageData = Array.from(roundMap.entries())
-                    .map(([round, improvements]) => ({
-                        round: round,
+                const averageData = Array.from(turnMap.entries())
+                    .map(([turn, improvements]) => ({
+                        turn: turn,
                         improvement: d3.mean(improvements)
                     }))
-                    .sort((a, b) => a.round - b.round);
+                    .sort((a, b) => a.turn - b.turn);
                 
                 g.append('path')
                     .datum(averageData)
@@ -952,7 +954,7 @@
                     .data(averageData)
                     .enter().append('circle')
                     .attr('class', 'avg-dot')
-                    .attr('cx', d => xScale(d.round))
+                    .attr('cx', d => xScale(d.turn))
                     .attr('cy', d => yScale(d.improvement))
                     .attr('r', 6)
                     .attr('fill', '#e74c3c')
@@ -1032,7 +1034,7 @@
                 errorDiv.style.display = 'block';
             }
             
-            showConversationHistory(dummyName, maxRound = null) {
+            showConversationHistory(dummyName, maxTurn = null) {
                 // First try to get conversation details from current experiment results
                 let dummyDetails = this.currentExperiment?.results?.find(r => r.dummy_name === dummyName);
                 
@@ -1058,17 +1060,15 @@
                     return;
                 }
                 
-                // Filter turns if maxRound is specified
+                // Filter turns if maxTurn is specified
                 let displayTurns = conversation.turns;
-                if (maxRound !== null) {
-                    // Find turns up to the specified round
-                    displayTurns = conversation.turns.filter(turn => {
-                        return !turn.metadata || !turn.metadata.round || turn.metadata.round <= maxRound;
-                    });
+                if (maxTurn !== null) {
+                    // Find turns up to the specified turn
+                    displayTurns = conversation.turns.slice(0, maxTurn);
                 }
                 
-                const title = maxRound !== null ? 
-                    `💬 ${dummyName} - Conversation History (Up to Round ${maxRound})` :
+                const title = maxTurn !== null ? 
+                    `💬 ${dummyName} - Conversation History (Up to Turn ${maxTurn})` :
                     `💬 ${dummyName} - Complete Conversation History`;
                 
                 let html = `
@@ -1086,29 +1086,36 @@
                     <div class="conversation-turns">
                 `;
                 
+                // Track which milestones we've already displayed
+                const displayedMilestones = new Set();
+                
                 displayTurns.forEach((turn, index) => {
+                    const currentTurnNumber = index + 1;
+                    
                     html += `
                         <div class="turn ${turn.speaker}">
                             <div class="turn-header">
                                 <span class="turn-speaker">${turn.speaker === 'ai' ? '🤖 AI Coach' : '👤 ' + dummyName}</span>
-                                <span class="turn-round">Turn ${index + 1}</span>
+                                <span class="turn-round">Turn ${currentTurnNumber}</span>
                             </div>
                             <div class="turn-message">${turn.message}</div>
                         </div>
                     `;
                     
-                    // Check if this is a milestone (display after AI response completes the round)
-                    let milestone = null;
-                    if (turn.speaker === 'ai' && turn.metadata && turn.metadata.round) {
-                        milestone = milestones.find(m => m.milestone_rounds === turn.metadata.round);
-                    }
-                    if (milestone) {
-                        html += `
-                            <div class="milestone-marker" onclick="visualizer.showMilestoneAssessmentDetails('${dummyName}', ${milestone.milestone_rounds})" style="cursor: pointer;">
-                                📊 Assessment Milestone: ${milestone.milestone_rounds} rounds → +${milestone.improvement.toFixed(3)} points (Click for details)
-                            </div>
-                        `;
-                    }
+                    // Check if we've reached any milestone turns
+                    // Display milestone marker after we've shown that turn
+                    milestones.forEach(m => {
+                        const milestoneTurn = m.milestone_turn || (1 + (m.milestone_rounds || 0) * 2);
+                        // Show milestone if we just completed that turn and haven't shown it yet
+                        if (currentTurnNumber === milestoneTurn && !displayedMilestones.has(milestoneTurn)) {
+                            displayedMilestones.add(milestoneTurn);
+                            html += `
+                                <div class="milestone-marker" onclick="visualizer.showMilestoneAssessmentDetails('${dummyName}', ${milestoneTurn})" style="cursor: pointer;">
+                                    📊 Assessment Milestone: Turn ${milestoneTurn} → ${m.improvement >= 0 ? '+' : ''}${m.improvement.toFixed(3)} points (Click for details)
+                                </div>
+                            `;
+                        }
+                    });
                 });
                 
                 html += '</div>';
@@ -1116,38 +1123,44 @@
                 modal.style.display = 'block';
             }
             
-            showConversationHistoryAtRound(dummyName, round) {
-                this.showConversationHistory(dummyName, round);
+            showConversationHistoryAtTurn(dummyName, turn) {
+                this.showConversationHistory(dummyName, turn);
             }
             
-            showPersonalityEvolutionAtRound(dummyName, round, returnToAssessment = false, returnRound = null) {
+            showPersonalityEvolutionAtTurn(dummyName, turn, returnToAssessment = false, returnTurn = null) {
                 // Get dummy data
                 const dummyData = this.currentExperiment?.results?.find(r => r.dummy_name === dummyName);
                 if (!dummyData || !dummyData.conversation_details?.personality_evolution_timeline) {
-                    alert('No personality evolution data available for this dummy at this round.');
+                    alert('No personality evolution data available for this dummy at this turn.');
                     return;
                 }
                 
                 const evolutionTimeline = dummyData.conversation_details.personality_evolution_timeline;
                 const milestoneResults = dummyData.milestone_results || [];
                 
-                // Find the milestone that corresponds to this round
-                const milestone = milestoneResults.find(m => m.milestone_rounds === round);
+                // Find the milestone that corresponds to this turn
+                const milestone = milestoneResults.find(m => {
+                    const milestoneTurn = m.milestone_turn || (1 + (m.milestone_rounds || 0) * 2);
+                    return milestoneTurn === turn;
+                });
                 
                 if (!milestone) {
-                    // If this is not a milestone round, find the most recent milestone
-                    const recentMilestones = milestoneResults.filter(m => m.milestone_rounds <= round);
+                    // If this is not a milestone turn, find the most recent milestone
+                    const recentMilestones = milestoneResults.filter(m => {
+                        const milestoneTurn = m.milestone_turn || (1 + (m.milestone_rounds || 0) * 2);
+                        return milestoneTurn <= turn;
+                    });
                     if (recentMilestones.length > 0) {
                         const recentMilestone = recentMilestones[recentMilestones.length - 1];
                         // Find the evolution stage index that corresponds to this milestone
                         const milestoneIndex = milestoneResults.indexOf(recentMilestone);
                         if (milestoneIndex >= 0 && milestoneIndex < evolutionTimeline.length) {
                             const stage = evolutionTimeline[milestoneIndex];
-                            this.showEvolutionDetails(dummyName, [stage], returnToAssessment, returnRound);
+                            this.showEvolutionDetails(dummyName, [stage], returnToAssessment, returnTurn);
                             return;
                         }
                     }
-                    alert('No evolution data available for this round.');
+                    alert('No evolution data available for this turn.');
                     return;
                 }
                 
@@ -1155,13 +1168,13 @@
                 const milestoneIndex = milestoneResults.indexOf(milestone);
                 if (milestoneIndex >= 0 && milestoneIndex < evolutionTimeline.length) {
                     const stage = evolutionTimeline[milestoneIndex];
-                    this.showEvolutionDetails(dummyName, [stage], returnToAssessment, returnRound);
+                    this.showEvolutionDetails(dummyName, [stage], returnToAssessment, returnTurn);
                 } else {
                     alert('No evolution data available for this milestone.');
                 }
             }
             
-            showMilestoneAssessmentDetails(dummyName, round) {
+            showMilestoneAssessmentDetails(dummyName, turn) {
                 // Get dummy data
                 const dummyData = this.currentExperiment?.results?.find(r => r.dummy_name === dummyName);
                 if (!dummyData || !dummyData.milestone_results) {
@@ -1169,8 +1182,11 @@
                     return;
                 }
                 
-                // Find the milestone that corresponds to this round
-                const milestone = dummyData.milestone_results.find(m => m.milestone_rounds === round);
+                // Find the milestone that corresponds to this turn
+                const milestone = dummyData.milestone_results.find(m => {
+                    const milestoneTurn = m.milestone_turn || (1 + (m.milestone_rounds || 0) * 2);
+                    return milestoneTurn === turn;
+                });
                 
                 if (!milestone || !milestone.detailed_assessment) {
                     alert('No detailed assessment data available for this milestone.');
@@ -1182,8 +1198,15 @@
                 
                 // Find previous milestone for comparison
                 const sortedMilestones = dummyData.milestone_results
-                    .filter(m => m.milestone_rounds < round)
-                    .sort((a, b) => b.milestone_rounds - a.milestone_rounds);
+                    .filter(m => {
+                        const milestoneTurn = m.milestone_turn || (1 + (m.milestone_rounds || 0) * 2);
+                        return milestoneTurn < turn;
+                    })
+                    .sort((a, b) => {
+                        const aTurn = a.milestone_turn || (1 + (a.milestone_rounds || 0) * 2);
+                        const bTurn = b.milestone_turn || (1 + (b.milestone_rounds || 0) * 2);
+                        return bTurn - aTurn;
+                    });
                 
                 const previousMilestone = sortedMilestones.length > 0 ? sortedMilestones[0] : null;
                 
@@ -1201,7 +1224,7 @@
                         <div class="modal-header">
                             <div class="modal-title-row">
                                 <h2>📊 Assessment Details - ${dummyName}</h2>
-                                <button class="evolution-button" onclick="visualizer.showPersonalityEvolutionAtRound('${dummyName}', ${round}, true, ${round}); this.closest('.modal').remove();">
+                                <button class="evolution-button" onclick="visualizer.showPersonalityEvolutionAtTurn('${dummyName}', ${turn}, true, ${turn}); this.closest('.modal').remove();">
                                     🧬 View Evolution
                                 </button>
                             </div>
@@ -1209,7 +1232,7 @@
                         </div>
                         <div class="modal-body">
                             <div class="conversation-header">
-                                <div class="conversation-title">Milestone ${round} Rounds Assessment</div>
+                                <div class="conversation-title">Milestone Turn ${turn} Assessment</div>
                                 <div class="conversation-meta">
                                     ${previousMilestone ? 
                                         `<div><strong>Previous Milestone:</strong> ${previousMilestone.detailed_assessment.average_score.toFixed(2)} points</div>

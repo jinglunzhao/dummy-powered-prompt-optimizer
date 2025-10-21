@@ -302,8 +302,14 @@ class PromptOptimizer:
     async def test_prompt_with_dummy_async(self, 
                                           prompt: OptimizedPrompt, 
                                           dummy: AIDummy,
-                                          num_rounds: int = 25) -> OptimizationResult:
-        """Test a specific prompt with a specific dummy"""
+                                          max_turns: int = 51) -> OptimizationResult:
+        """Test a specific prompt with a specific dummy
+        
+        Args:
+            prompt: The prompt to test
+            dummy: The AI dummy to test with
+            max_turns: Maximum conversation turns (default 51 = ~25 exchanges)
+        """
         print(f"🧪 Testing prompt '{prompt.name}' with {dummy.name}...")
         
         # Initialize personality evolution for this dummy if enabled
@@ -321,6 +327,9 @@ class PromptOptimizer:
         else:
             print(f"📋 Using cached baseline assessment for {dummy.name}")
             pre_assessment = self.baseline_assessments[dummy.id]
+        
+        # Convert turns to rounds for internal simulator (which still uses rounds)
+        num_rounds = (max_turns - 1) // 2
         
         # Simulate conversation with optimal ending point detection
         conversation, optimal_ending_point = await self._simulate_conversation_with_optimal_ending(
@@ -823,12 +832,17 @@ CONVERSATION WITH {dummy_name}:
                 
                 component.success_rate = new_success_rate
     
-    async def evaluate_population_async(self, dummies: List[AIDummy], sample_size: int = None) -> None:
+    async def evaluate_population_async(self, dummies: List[AIDummy], sample_size: int = None, max_turns: int = 51) -> None:
         """Evaluate the current population of prompts with parallel processing
         
         This method implements two levels of parallelization:
         1. Prompt-level: All untested prompts are tested concurrently
         2. Dummy-level: All dummies for each prompt are tested concurrently
+        
+        Args:
+            dummies: List of AI dummies to test with
+            sample_size: Number of dummies to use (None = use all)
+            max_turns: Maximum conversation turns per test (default 51 = ~25 exchanges)
         
         Uses semaphore for API rate limiting to prevent overwhelming the API.
         """
@@ -890,7 +904,7 @@ CONVERSATION WITH {dummy_name}:
                 # Create tasks for parallel execution
                 tasks = []
                 for dummy in evaluation_dummies:
-                    task = self.test_prompt_with_dummy_async(prompt, dummy)
+                    task = self.test_prompt_with_dummy_async(prompt, dummy, max_turns=max_turns)
                     tasks.append(task)
                 
                 # Run all tests in parallel
@@ -1531,12 +1545,18 @@ CONVERSATION WITH {dummy_name}:
     
     # Old end detection methods removed - now using simple API-based detection in conversation simulator
     
-    async def run_optimization_async(self, dummies: List[AIDummy]) -> OptimizedPrompt:
-        """Run the complete optimization process"""
+    async def run_optimization_async(self, dummies: List[AIDummy], max_turns: int = 51) -> OptimizedPrompt:
+        """Run the complete optimization process
+        
+        Args:
+            dummies: List of AI dummies to test prompts with
+            max_turns: Maximum conversation turns per test (default 51 = ~25 exchanges)
+        """
         print("🚀 Starting GEPA-inspired prompt optimization...")
         print(f"📊 Population size: {self.population_size}")
         print(f"🧬 Generations: {self.generations}")
         print(f"👥 Dummies: {len(dummies)}")
+        print(f"💬 Max turns per conversation: {max_turns}")
         print()
         
         # Generate initial population
@@ -1550,7 +1570,7 @@ CONVERSATION WITH {dummy_name}:
             print("=" * 50)
             
             # Evaluate current population
-            await self.evaluate_population_async(dummies)
+            await self.evaluate_population_async(dummies, max_turns=max_turns)
             
             # Find best prompt in current generation
             generation_best_prompt = None

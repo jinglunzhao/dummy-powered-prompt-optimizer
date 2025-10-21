@@ -52,13 +52,24 @@ def get_experiments():
                 evolution_enabled = exp_info.get('personality_evolution_enabled', False)
                 evolution_text = " (with Evolution)" if evolution_enabled else ""
                 
+                # Get turns (new format) or convert from rounds (old format)
+                max_turns = exp_info.get('max_turns')
+                if max_turns is None and 'max_rounds' in exp_info:
+                    max_turns = 1 + exp_info['max_rounds'] * 2  # Convert old format
+                
+                # Get milestone turns (new format) or convert from exchanges (old format)
+                milestone_turns = exp_info.get('assessment_milestone_turns')
+                if milestone_turns is None and 'assessment_milestones' in exp_info:
+                    # Old format: exchange numbers
+                    milestone_turns = [1 + m*2 for m in exp_info['assessment_milestones']]
+                
                 experiments.append({
                     'filename': os.path.basename(file_path),
-                    'name': f"Experiment ({exp_info.get('num_dummies', '?')} dummies, {exp_info.get('max_rounds', '?')} rounds){evolution_text}",
+                    'name': f"Experiment ({exp_info.get('num_dummies', '?')} dummies, {max_turns or '?'} turns){evolution_text}",
                     'date': date_str,
                     'dummies': exp_info.get('num_dummies', 0),
-                    'max_rounds': exp_info.get('max_rounds', 0),
-                    'milestones': exp_info.get('assessment_milestones', []),
+                    'max_turns': max_turns or 0,
+                    'milestones': milestone_turns or [],
                     'personality_evolution_enabled': evolution_enabled
                 })
             except Exception as e:

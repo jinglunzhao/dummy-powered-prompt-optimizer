@@ -73,15 +73,66 @@ class AssessmentSystemLLMBased:
         print(f"✅ {dummy.name} completed baseline assessment: {assessment.average_score:.2f} average")
         return assessment
     
+    async def generate_milestone_assessment(self, dummy: AIDummy, previous_assessment: Assessment,
+                                          conversation: Conversation,
+                                          conversation_simulator = None,
+                                          turns_so_far: int = None) -> Assessment:
+        """Generate milestone assessment using previous assessment as anchor for grounding
+        
+        Args:
+            dummy: The AI dummy being assessed
+            previous_assessment: The previous assessment (baseline or previous milestone) to use as anchor
+            conversation: The conversation up to this milestone
+            conversation_simulator: Optional simulator for memo generation
+            turns_so_far: Number of turns completed so far
+        """
+        
+        # Create system prompt for assessment method
+        system_prompt = self._create_assessment_system_prompt()
+        
+        # Generate conversation memo
+        conversation_memo = None
+        if conversation_simulator:
+            conversation_memo = await conversation_simulator._generate_conversation_memo(conversation, dummy)
+        else:
+            from conversation_simulator import ConversationSimulator
+            temp_simulator = ConversationSimulator(api_key=self.api_key)
+            conversation_memo = await temp_simulator._generate_conversation_memo(conversation, dummy)
+        
+        # Create user prompt with previous scores as anchor
+        user_prompt = self._create_milestone_assessment_user_prompt(
+            dummy, conversation, previous_assessment, conversation_memo, turns_so_far
+        )
+        
+        # Get LLM assessment
+        assessment_data = await self._get_llm_assessment(system_prompt, user_prompt, dummy)
+        
+        # Parse and create assessment object
+        assessment = self._parse_assessment_response(assessment_data, dummy, "milestone")
+        
+        return assessment
+    
     async def generate_post_assessment(self, dummy: AIDummy, pre_assessment: Assessment, 
                                      conversation: Conversation = None,
-                                     conversation_simulator = None) -> Assessment:
-        """Generate post-conversation assessment using LLM to simulate dummy's self-assessment after coaching"""
+                                     conversation_simulator = None,
+                                     previous_milestone_assessment: Assessment = None) -> Assessment:
+        """Generate post-conversation assessment using LLM to simulate dummy's self-assessment after coaching
+        
+        Args:
+            dummy: The AI dummy being assessed
+            pre_assessment: The baseline pre-assessment
+            conversation: The full conversation
+            conversation_simulator: Optional simulator for memo generation
+            previous_milestone_assessment: If available, use as anchor instead of pre_assessment
+        """
         
         if not conversation:
             return await self.generate_pre_assessment(dummy)
         
         # print(f"📝 {dummy.name} is taking the post-conversation assessment...")
+        
+        # Use previous milestone as anchor if available, otherwise use baseline
+        anchor_assessment = previous_milestone_assessment if previous_milestone_assessment else pre_assessment
         
         # Create system prompt for assessment method
         system_prompt = self._create_assessment_system_prompt()
@@ -97,8 +148,8 @@ class AssessmentSystemLLMBased:
             temp_simulator = ConversationSimulator(api_key=self.api_key)
             conversation_memo = await temp_simulator._generate_conversation_memo(conversation, dummy)
         
-        # Create user prompt with dummy profile and conversation memo
-        user_prompt = self._create_post_conversation_user_prompt(dummy, conversation, pre_assessment, conversation_memo)
+        # Create user prompt with previous assessment as anchor
+        user_prompt = self._create_post_conversation_user_prompt(dummy, conversation, anchor_assessment, conversation_memo)
         
         # Get LLM assessment
         assessment_data = await self._get_llm_assessment(system_prompt, user_prompt, dummy)
@@ -142,8 +193,15 @@ class AssessmentSystemLLMBased:
         )
     
     def _create_post_conversation_user_prompt(self, dummy: AIDummy, conversation: Conversation, 
-                                            pre_assessment: Assessment, conversation_memo: str = None) -> str:
-        """Create user prompt for post-conversation assessment with conversation memo"""
+                                            previous_assessment: Assessment, conversation_memo: str = None) -> str:
+        """Create user prompt for post-conversation assessment with previous scores for grounding
+        
+        Args:
+            dummy: The AI dummy being assessed
+            conversation: The conversation to assess
+            previous_assessment: The most recent assessment (milestone or baseline) to use as anchor
+            conversation_memo: Optional memo summarizing the conversation
+        """
         
         # Get current evolved profile
         current_profile = dummy.get_current_profile_for_assessment()
@@ -155,8 +213,8 @@ class AssessmentSystemLLMBased:
         # Use provided memo or fallback to old summary method
         conversation_summary = conversation_memo if conversation_memo else self._summarize_conversation(conversation)
         
-        # Get baseline scores for reference
-        baseline_scores = self._get_baseline_scores_summary(pre_assessment)
+        # Get previous scores for grounding (replaces baseline_scores)
+        previous_scores = self._get_previous_scores_summary(previous_assessment)
         
         return prompt_loader.get_prompt(
             'assessment_prompts.yaml',
@@ -171,8 +229,52 @@ class AssessmentSystemLLMBased:
             goals=', '.join(dummy.goals),
             challenges=', '.join(current_profile["challenges"]),
             behaviors=', '.join(current_profile["behaviors"]),
-            baseline_scores=baseline_scores,
+            previous_scores=previous_scores,
             conversation_summary=conversation_summary
+        )
+    
+    def _create_milestone_assessment_user_prompt(self, dummy: AIDummy, conversation: Conversation,
+                                                previous_assessment: Assessment, conversation_memo: str = None,
+                                                turns_so_far: int = None) -> str:
+        """Create user prompt for milestone assessment with previous scores for grounding
+        
+        Args:
+            dummy: The AI dummy being assessed
+            conversation: The conversation up to this milestone
+            previous_assessment: The previous assessment (baseline or previous milestone) to use as anchor
+            conversation_memo: Optional memo summarizing the conversation
+            turns_so_far: Number of turns completed so far
+        """
+        
+        # Get current evolved profile
+        current_profile = dummy.get_current_profile_for_assessment()
+        
+        # Get personality description using evolved profile
+        personality_desc = self._get_personality_description(current_profile["big_five"])
+        anxiety_desc = self._get_anxiety_description_evolved(current_profile)
+        
+        # Use provided memo or fallback to old summary method
+        conversation_summary = conversation_memo if conversation_memo else self._summarize_conversation(conversation)
+        
+        # Get previous scores for grounding
+        previous_scores = self._get_previous_scores_summary(previous_assessment)
+        
+        return prompt_loader.get_prompt(
+            'assessment_prompts.yaml',
+            'milestone_assessment_prompt',
+            student_name=dummy.name,
+            age=dummy.age,
+            major=dummy.major,
+            university=dummy.university,
+            personality_desc=personality_desc,
+            anxiety_desc=anxiety_desc,
+            fears=', '.join(current_profile["fears"]),
+            goals=', '.join(dummy.goals),
+            challenges=', '.join(current_profile["challenges"]),
+            behaviors=', '.join(current_profile["behaviors"]),
+            previous_scores=previous_scores,
+            conversation_summary=conversation_summary,
+            turns_so_far=turns_so_far or len(conversation.turns)
         )
 
     def _get_personality_description(self, personality: PersonalityProfile) -> str:
@@ -223,18 +325,20 @@ class AssessmentSystemLLMBased:
         
         return summary
 
-    def _get_baseline_scores_summary(self, pre_assessment: Assessment) -> str:
-        """Get baseline scores for each question for precise reference"""
-        summary = f"Baseline average score: {pre_assessment.average_score:.2f}/4.0\n\n"
-        summary += "BASELINE SCORES FOR EACH QUESTION:\n"
-        summary += "For each question below, consider the baseline score when evaluating improvement:\n\n"
+    def _get_previous_scores_summary(self, previous_assessment: Assessment) -> str:
+        """Get previous assessment scores for each question for grounding/anchoring"""
+        summary = f"Previous average score: {previous_assessment.average_score:.2f}/4.0\n\n"
+        summary += "PREVIOUS SCORES FOR EACH QUESTION (Your anchor - only change if coaching addressed this):\n"
         
-        for i, question in enumerate(self.questions, 1):
-            # Find the baseline score for this question
-            baseline_response = next((r for r in pre_assessment.responses if r.question == question), None)
-            baseline_score = baseline_response.score if baseline_response else 2
+        for i, question in enumerate(self.questions):
+            # Match by index (0-based), not by question text (safer against text variations)
+            if i < len(previous_assessment.responses):
+                previous_score = previous_assessment.responses[i].score
+            else:
+                previous_score = 2  # Fallback if responses are missing
             
-            summary += f"{i}. {question} (Baseline: {baseline_score}/4)\n"
+            summary += f"{i+1}. {question}\n"
+            summary += f"   Previous score: {previous_score}/4\n"
         
         return summary
 

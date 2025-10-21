@@ -268,11 +268,11 @@ def api_gepa_experiments():
             
             experiments.append({
                 'filename': os.path.basename(file_path),
-                'name': f"GEPA {exp_info.get('test_name', 'Experiment')} ({exp_info.get('dummies_count', '?')}d {exp_info.get('conversation_rounds', '?')}r {exp_info.get('generations', '?')}g)",
+                'name': f"GEPA {exp_info.get('test_name', 'Experiment')} ({exp_info.get('dummies_count', '?')}d {exp_info.get('conversation_turns', exp_info.get('conversation_rounds', '?'))}t {exp_info.get('generations', '?')}g)",
                 'date': date_str,
                 'generations': exp_info.get('generations', 0),
                 'dummies_count': exp_info.get('dummies_count', 0),
-                'conversation_rounds': exp_info.get('conversation_rounds', 0),
+                'conversation_turns': exp_info.get('conversation_turns', exp_info.get('conversation_rounds', 0)),
                 'population_size': exp_info.get('population_size', 0),
                 'test_name': exp_info.get('test_name', 'Unknown')
             })
