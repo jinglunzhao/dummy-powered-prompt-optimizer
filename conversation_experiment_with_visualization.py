@@ -25,7 +25,7 @@ from prompts.prompt_loader import prompt_loader
 
 # Try to import assessment system, but make it optional
 try:
-    from assessment_system_llm_based import AssessmentSystemLLMBased as AssessmentSystem
+    from assessment_system import AssessmentSystemLLMBased as AssessmentSystem
     ASSESSMENT_AVAILABLE = True
 except ImportError:
     ASSESSMENT_AVAILABLE = False
@@ -193,7 +193,7 @@ class ConversationLengthExperimentWithEvolution:
                     if valid_milestones:
                         last_milestone_result = valid_milestones[-1]
                         # Reconstruct Assessment object from detailed_assessment
-                        from assessment_system_llm_based import Assessment, AssessmentResponse
+                        from assessment_system import Assessment, AssessmentResponse
                         last_detailed = last_milestone_result['detailed_assessment']
                         last_milestone_assessment = Assessment(
                             dummy_id=last_detailed['dummy_id'],
@@ -242,7 +242,7 @@ class ConversationLengthExperimentWithEvolution:
                     print(f"   📋 Conversation ended early - inheriting post-assessment from last milestone: {last_score:.2f}")
                     
                     # Create a mock assessment with inherited score
-                    from assessment_system_llm_based import Assessment, AssessmentResponse
+                    from assessment_system import Assessment, AssessmentResponse
                     
                     # Inherit responses from last milestone
                     inherited_responses = []
@@ -511,7 +511,7 @@ class ConversationLengthExperimentWithEvolution:
             
             # Run milestone assessment with grounded scoring (using current evolved personality)
             if self.assessment_system:
-                from assessment_system_llm_based import Assessment, AssessmentResponse
+                from assessment_system import Assessment, AssessmentResponse
                 
                 # Get the previous assessment to use as anchor
                 # If we have a previous milestone result with detailed assessment, use that

@@ -3,8 +3,8 @@
 Debug script to examine FULL EXPERIMENT WORKFLOW step-by-step.
 
 USAGE:
-    python debug_conversation.py --dummy "Greg Moore"
-    python debug_conversation.py --dummy "Sarah" --file data/experiments/continuous_conversation_with_evolution_exp_20251021_120000.json
+    python single_conversation_experiment.py --dummy "Greg Moore"
+    python single_conversation_experiment.py --dummy "Sarah" --file data/experiments/continuous_conversation_with_evolution_exp_20251021_120000.json
 
 WHAT THIS DOES:
     1. Loads a specific dummy from the latest experiment results
@@ -38,7 +38,7 @@ from typing import Optional, Dict, Any
 from models import AIDummy, PersonalityProfile, SocialAnxietyProfile, Conversation, Assessment
 from config import Config
 from conversation_simulator import ConversationSimulator
-from assessment_system_llm_based import AssessmentSystemLLMBased
+from assessment_system import AssessmentSystemLLMBased
 from personality_materializer import PersonalityMaterializer
 from prompts.prompt_loader import prompt_loader
 
@@ -314,7 +314,7 @@ async def debug_dummy_full_workflow(dummy_name: str = None, experiment_file: str
     print("\n" + "="*80)
     print(f"FULL EXPERIMENT WORKFLOW DEBUG - {dummy_name or 'Dummy'}")
     print("="*80)
-    print("\nThis uses the EXACT SAME workflow as conversation_length_experiment_with_evolution.py:")
+    print("\nThis uses the EXACT SAME workflow as conversation_experiment_with_visualization.py:")
     print("\n🔄 WORKFLOW:")
     print("  1. Pre-assessment (baseline)")
     print("  2. Full conversation run:")
@@ -398,7 +398,7 @@ async def debug_dummy_full_workflow(dummy_name: str = None, experiment_file: str
     input("Press Enter to begin full workflow...")
     
     # Import experiment class
-    from conversation_length_experiment_with_evolution import ConversationLengthExperimentWithEvolution
+    from conversation_experiment_with_visualization import ConversationLengthExperimentWithEvolution
     
     # Create experiment with debug components
     experiment = ConversationLengthExperimentWithEvolution()
@@ -449,8 +449,8 @@ if __name__ == "__main__":
     if not args.dummy:
         print("❌ Please specify a dummy name with --dummy")
         print("\nExample:")
-        print("  python debug_conversation.py --dummy 'Greg Moore'")
-        print("  python debug_conversation.py --dummy 'Sarah' --file data/experiments/continuous_conversation_with_evolution_exp_20251021_120000.json")
+        print("  python single_conversation_experiment.py --dummy 'Greg Moore'")
+        print("  python single_conversation_experiment.py --dummy 'Sarah' --file data/experiments/continuous_conversation_with_evolution_exp_20251021_120000.json")
         exit(1)
     
     asyncio.run(debug_dummy_full_workflow(dummy_name=args.dummy, experiment_file=args.file))

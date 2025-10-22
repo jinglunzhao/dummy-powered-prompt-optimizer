@@ -18,7 +18,7 @@ from dataclasses import dataclass, asdict
 from dotenv import load_dotenv
 
 from models import AIDummy, Assessment, Conversation
-from assessment_system_llm_based import AssessmentSystemLLMBased as AssessmentSystem
+from assessment_system import AssessmentSystemLLMBased as AssessmentSystem
 from conversation_simulator import ConversationSimulator
 from conversation_storage import conversation_storage
 from personality_evolution_storage import personality_evolution_storage

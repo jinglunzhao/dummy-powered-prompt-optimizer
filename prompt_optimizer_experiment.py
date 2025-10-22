@@ -20,7 +20,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from config import Config
 from prompt_optimizer import PromptOptimizer
 # CharacterGenerator removed - using existing dummies only
-from assessment_system_llm_based import AssessmentSystemLLMBased as AssessmentSystem
+from assessment_system import AssessmentSystemLLMBased as AssessmentSystem
 from conversation_simulator import ConversationSimulator
 # experiment_manager removed - using direct file operations
 
