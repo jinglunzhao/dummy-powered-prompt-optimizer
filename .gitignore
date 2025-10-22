@@ -33,6 +33,7 @@ venv.bak/
 # IDE
 .vscode/
 .idea/
+.cursor/
 *.swp
 *.swo
 *~
@@ -52,6 +53,7 @@ Thumbs.db
 .ignore_me/
 backups/
 temp/
+markdowns/
 
 # Data files - experiments can be regenerated, keeping only structure
 data/experiments/*.json
